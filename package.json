@@ -1,0 +1,9 @@
+{
+  "name": "avni-impl-bundles",
+  "version": "1.0.0",
+  "description": "Implementation bundles utilities",
+  "main": "make-multi-line.js",
+  "dependencies": {
+    "glob": "^10.3.10"
+  }
+}
