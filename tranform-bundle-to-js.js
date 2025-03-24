@@ -58,6 +58,7 @@ function processJsonNodes(jsonObj, targetPaths) {
     targetPaths.forEach(path => {
         const value = getValueByPath(jsonObj, path);
         if (typeof value === 'string') {
+            // Remove surrounding double quotes if they exist
             const processedValue = value.replace(/^"(.*)"$/, '$1');
             setValueByPath(jsonObj, path, processedValue);
         }
@@ -66,7 +67,7 @@ function processJsonNodes(jsonObj, targetPaths) {
     return jsonObj;
 }
 
-function processJsonFiles(directory) {
+function replaceJsonNodesHavingJSCode(directory) {
     const results = {};
     
     try {
@@ -80,12 +81,22 @@ function processJsonFiles(directory) {
 
         files.forEach(file => {
             try {
+                console.log(`Processing file: ${file}`);
                 const content = fs.readFileSync(file, 'utf8');
                 const jsonContent = JSON.parse(content);
                 const jsPaths = findJavaScriptPaths(jsonContent);
                 
                 if (jsPaths.length > 0) {
-                    results[path.relative(directory, file)] = jsPaths;
+                    // Process the found JavaScript paths to remove quotes
+                    const paths = jsPaths.map(item => item.path);
+                    const processedJson = processJsonNodes(jsonContent, paths);
+                    
+                    // Write back to the file
+                    fs.writeFileSync(file, JSON.stringify(processedJson, null, 2));
+                    console.log(`Successfully processed ${paths.length} paths in: ${file}`);
+                    
+                    // Store the results
+                    results[path.relative(directory, file)] = paths;
                 }
             } catch (err) {
                 console.error(`Error processing ${file}:`, err.message);
@@ -124,20 +135,19 @@ function renameJsonToJs(folderPath) {
 
 // Main execution
 const directory = 'csj-uat';
-const results = processJsonFiles(directory);
 
-// Print results in a readable format and collect all unique paths
-const uniquePaths = new Set();
+// First process the files to remove quotes from JavaScript paths
+console.log('Processing JSON files to remove quotes from JavaScript paths...');
+const results = replaceJsonNodesHavingJSCode(directory);
+
+// Print summary of processed paths
+console.log('\nSummary of processed files:');
 Object.entries(results).forEach(([file, paths]) => {
     console.log(`\nFile: ${file}`);
-    paths.forEach(({path}) => {
-        uniquePaths.add(path);
-        console.log(`  Path: ${path}`);
-    });
+    console.log('Processed paths:');
+    paths.forEach(path => console.log(`  ${path}`));
 });
 
-console.log('\nUnique JavaScript paths found:');
-console.log(Array.from(uniquePaths).join('\n'));
-
-// Only rename files after analysis
-// renameJsonToJs(directory);
+// Finally rename the files
+console.log('\nRenaming files...');
+renameJsonToJs(directory);
