@@ -1,2 +1,5 @@
-1. this is a node js project
+1. this is a project which has javascript code present within java object structure
 2. do not put comments unless asked
+3. the data model is expressed in the files under */forms/* folder. these are called Forms.
+4. Each element of the Form has a form element groups. Form Element has concept uuid. The concepts are present in */concepts.json file.
+5. Concept has unique uuid and name which identifies a concept.

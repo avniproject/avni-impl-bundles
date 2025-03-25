@@ -72,7 +72,7 @@ function findAndReplaceJSStrings(jsonString, jsPaths) {
     
     let processed = jsonString;
     jsKeys.forEach(key => {
-        const pattern = `"${key}" : "'use strict';`;
+        const pattern = new RegExp(`"${key}"\\s*:\\s*"[\\s\\n]*'use strict';`, 'g');
         console.log(`replacing pattern: ${pattern}`);
         processed = processed.replace("//SAMPLE RULE EXAMPLE", "");
         processed = processed.replace(/};\\n"/g, '}\n');
