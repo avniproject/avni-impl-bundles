@@ -4,3 +4,6 @@ recopy-csj:
 
 transform-csj:
 	node tranform-bundle-to-js.js
+
+copy-sample:
+	cp csj-uat/subjectTypes.js subjectTypes.js
