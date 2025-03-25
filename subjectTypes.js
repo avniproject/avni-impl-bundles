@@ -1,9 +1,10 @@
-[ {
-  "name" : "Influencing State",
-  "uuid" : "cffd3a47-d8cb-4a6f-99fc-21fddfa94b44",
-  "active" : true,
-  "type" : "Individual",
-  "subjectSummaryRule" : 
+[
+  {
+    "name": "Influencing State",
+    "uuid": "cffd3a47-d8cb-4a6f-99fc-21fddfa94b44",
+    "active": true,
+    "type": "Individual",
+    "subjectSummaryRule" : 
 
 ({ params, imports }) => {
     const { summaries, individual } = params;
@@ -51,132 +52,138 @@ addSummary("Date to capture date of the event", "Date to capture date of the eve
     return summaries;
 }
 ,
-  "programEligibilityCheckRule" : "",
-  "allowEmptyLocation" : false,
-  "allowMiddleName" : false,
-  "lastNameOptional" : false,
-  "allowProfilePicture" : false,
-  "uniqueName" : false,
-  "shouldSyncByLocation" : true,
-  "settings" : {
-    "displayRegistrationDetails" : true,
-    "displayPlannedEncounters" : false
+    "programEligibilityCheckRule": "",
+    "allowEmptyLocation": false,
+    "allowMiddleName": false,
+    "lastNameOptional": false,
+    "allowProfilePicture": false,
+    "uniqueName": false,
+    "shouldSyncByLocation": true,
+    "settings": {
+      "displayRegistrationDetails": true,
+      "displayPlannedEncounters": false
+    },
+    "household": false,
+    "group": false,
+    "directlyAssignable": false,
+    "voided": false
   },
-  "household" : false,
-  "group" : false,
-  "directlyAssignable" : false,
-  "voided" : false
-}, {
-  "name" : "Intern",
-  "uuid" : "92bf310a-6ddb-4010-8d44-d7cb009cbc9c",
-  "active" : true,
-  "type" : "Individual",
-  "subjectSummaryRule" : "",
-  "programEligibilityCheckRule" : "",
-  "allowEmptyLocation" : false,
-  "allowMiddleName" : false,
-  "lastNameOptional" : false,
-  "allowProfilePicture" : false,
-  "uniqueName" : false,
-  "shouldSyncByLocation" : true,
-  "settings" : {
-    "displayRegistrationDetails" : true,
-    "displayPlannedEncounters" : false
+  {
+    "name": "Intern",
+    "uuid": "92bf310a-6ddb-4010-8d44-d7cb009cbc9c",
+    "active": true,
+    "type": "Individual",
+    "subjectSummaryRule": "",
+    "programEligibilityCheckRule": "",
+    "allowEmptyLocation": false,
+    "allowMiddleName": false,
+    "lastNameOptional": false,
+    "allowProfilePicture": false,
+    "uniqueName": false,
+    "shouldSyncByLocation": true,
+    "settings": {
+      "displayRegistrationDetails": true,
+      "displayPlannedEncounters": false
+    },
+    "household": false,
+    "group": false,
+    "directlyAssignable": false,
+    "voided": false
   },
-  "household" : false,
-  "group" : false,
-  "directlyAssignable" : false,
-  "voided" : false
-}, {
-  "name" : "Recognitions",
-  "uuid" : "c26ea079-e6f5-451f-ba38-1ed55f5860a9",
-  "active" : true,
-  "type" : "Individual",
-  "subjectSummaryRule" : "",
-  "programEligibilityCheckRule" : "",
-  "allowEmptyLocation" : false,
-  "allowMiddleName" : false,
-  "lastNameOptional" : false,
-  "allowProfilePicture" : false,
-  "uniqueName" : false,
-  "shouldSyncByLocation" : true,
-  "settings" : {
-    "displayRegistrationDetails" : true,
-    "displayPlannedEncounters" : false
+  {
+    "name": "Recognitions",
+    "uuid": "c26ea079-e6f5-451f-ba38-1ed55f5860a9",
+    "active": true,
+    "type": "Individual",
+    "subjectSummaryRule": "",
+    "programEligibilityCheckRule": "",
+    "allowEmptyLocation": false,
+    "allowMiddleName": false,
+    "lastNameOptional": false,
+    "allowProfilePicture": false,
+    "uniqueName": false,
+    "shouldSyncByLocation": true,
+    "settings": {
+      "displayRegistrationDetails": true,
+      "displayPlannedEncounters": false
+    },
+    "household": false,
+    "group": false,
+    "directlyAssignable": false,
+    "voided": false
   },
-  "household" : false,
-  "group" : false,
-  "directlyAssignable" : false,
-  "voided" : false
-}, {
-  "name" : "Campaign",
-  "uuid" : "0ab6edd4-2a80-4ce9-9bfa-0464cb4ae6b0",
-  "active" : true,
-  "type" : "Individual",
-  "subjectSummaryRule" : "",
-  "programEligibilityCheckRule" : "",
-  "allowEmptyLocation" : false,
-  "allowMiddleName" : false,
-  "lastNameOptional" : false,
-  "allowProfilePicture" : false,
-  "uniqueName" : false,
-  "shouldSyncByLocation" : true,
-  "settings" : {
-    "displayRegistrationDetails" : true,
-    "displayPlannedEncounters" : false
+  {
+    "name": "Campaign",
+    "uuid": "0ab6edd4-2a80-4ce9-9bfa-0464cb4ae6b0",
+    "active": true,
+    "type": "Individual",
+    "subjectSummaryRule": "",
+    "programEligibilityCheckRule": "",
+    "allowEmptyLocation": false,
+    "allowMiddleName": false,
+    "lastNameOptional": false,
+    "allowProfilePicture": false,
+    "uniqueName": false,
+    "shouldSyncByLocation": true,
+    "settings": {
+      "displayRegistrationDetails": true,
+      "displayPlannedEncounters": false
+    },
+    "household": false,
+    "group": false,
+    "directlyAssignable": false,
+    "voided": false
   },
-  "household" : false,
-  "group" : false,
-  "directlyAssignable" : false,
-  "voided" : false
-}, {
-  "name" : "Volunteer",
-  "uuid" : "b3b98338-35af-4f29-a74d-3c8999d92165",
-  "active" : true,
-  "type" : "Individual",
-  "subjectSummaryRule" : "",
-  "programEligibilityCheckRule" : "",
-  "allowEmptyLocation" : false,
-  "allowMiddleName" : false,
-  "lastNameOptional" : false,
-  "allowProfilePicture" : false,
-  "uniqueName" : false,
-  "shouldSyncByLocation" : true,
-  "settings" : {
-    "displayRegistrationDetails" : true,
-    "displayPlannedEncounters" : false
+  {
+    "name": "Volunteer",
+    "uuid": "b3b98338-35af-4f29-a74d-3c8999d92165",
+    "active": true,
+    "type": "Individual",
+    "subjectSummaryRule": "",
+    "programEligibilityCheckRule": "",
+    "allowEmptyLocation": false,
+    "allowMiddleName": false,
+    "lastNameOptional": false,
+    "allowProfilePicture": false,
+    "uniqueName": false,
+    "shouldSyncByLocation": true,
+    "settings": {
+      "displayRegistrationDetails": true,
+      "displayPlannedEncounters": false
+    },
+    "household": false,
+    "group": false,
+    "directlyAssignable": false,
+    "voided": false
   },
-  "household" : false,
-  "group" : false,
-  "directlyAssignable" : false,
-  "voided" : false
-}, {
-  "name" : "Outreach",
-  "uuid" : "a92cdaae-19cd-4778-920c-235e30c5ecdf",
-  "active" : true,
-  "type" : "Group",
-  "subjectSummaryRule" : "",
-  "programEligibilityCheckRule" : "",
-  "allowEmptyLocation" : false,
-  "allowMiddleName" : false,
-  "lastNameOptional" : false,
-  "allowProfilePicture" : false,
-  "uniqueName" : false,
-  "shouldSyncByLocation" : true,
-  "settings" : {
-    "displayRegistrationDetails" : true,
-    "displayPlannedEncounters" : false
+  {
+    "name": "Outreach",
+    "uuid": "a92cdaae-19cd-4778-920c-235e30c5ecdf",
+    "active": true,
+    "type": "Group",
+    "subjectSummaryRule": "",
+    "programEligibilityCheckRule": "",
+    "allowEmptyLocation": false,
+    "allowMiddleName": false,
+    "lastNameOptional": false,
+    "allowProfilePicture": false,
+    "uniqueName": false,
+    "shouldSyncByLocation": true,
+    "settings": {
+      "displayRegistrationDetails": true,
+      "displayPlannedEncounters": false
+    },
+    "household": false,
+    "group": true,
+    "directlyAssignable": false,
+    "voided": false
   },
-  "household" : false,
-  "group" : true,
-  "directlyAssignable" : false,
-  "voided" : false
-}, {
-  "name" : "Training",
-  "uuid" : "816da5ca-d4df-449d-bcd4-8eef62930d5a",
-  "active" : true,
-  "type" : "Individual",
-  "subjectSummaryRule" : 
+  {
+    "name": "Training",
+    "uuid": "816da5ca-d4df-449d-bcd4-8eef62930d5a",
+    "active": true,
+    "type": "Individual",
+    "subjectSummaryRule" : 
 
 ({ params, imports }) => {
   const { summaries, individual } = params;
@@ -285,103 +292,108 @@ addSummary("Date to capture date of the event", "Date to capture date of the eve
   return summaries;
 }
 ,
-  "programEligibilityCheckRule" : "",
-  "allowEmptyLocation" : false,
-  "allowMiddleName" : false,
-  "lastNameOptional" : false,
-  "allowProfilePicture" : false,
-  "uniqueName" : false,
-  "shouldSyncByLocation" : true,
-  "settings" : {
-    "displayRegistrationDetails" : true,
-    "displayPlannedEncounters" : false
+    "programEligibilityCheckRule": "",
+    "allowEmptyLocation": false,
+    "allowMiddleName": false,
+    "lastNameOptional": false,
+    "allowProfilePicture": false,
+    "uniqueName": false,
+    "shouldSyncByLocation": true,
+    "settings": {
+      "displayRegistrationDetails": true,
+      "displayPlannedEncounters": false
+    },
+    "household": false,
+    "group": false,
+    "directlyAssignable": false,
+    "voided": false
   },
-  "household" : false,
-  "group" : false,
-  "directlyAssignable" : false,
-  "voided" : false
-}, {
-  "name" : "Court",
-  "uuid" : "cadc8363-b121-4cd4-bbbf-5bee4fd620d1",
-  "active" : true,
-  "type" : "Individual",
-  "subjectSummaryRule" : "",
-  "programEligibilityCheckRule" : "",
-  "allowEmptyLocation" : false,
-  "allowMiddleName" : false,
-  "lastNameOptional" : false,
-  "allowProfilePicture" : false,
-  "uniqueName" : false,
-  "shouldSyncByLocation" : true,
-  "settings" : {
-    "displayRegistrationDetails" : true,
-    "displayPlannedEncounters" : true
+  {
+    "name": "Court",
+    "uuid": "cadc8363-b121-4cd4-bbbf-5bee4fd620d1",
+    "active": true,
+    "type": "Individual",
+    "subjectSummaryRule": "",
+    "programEligibilityCheckRule": "",
+    "allowEmptyLocation": false,
+    "allowMiddleName": false,
+    "lastNameOptional": false,
+    "allowProfilePicture": false,
+    "uniqueName": false,
+    "shouldSyncByLocation": true,
+    "settings": {
+      "displayRegistrationDetails": true,
+      "displayPlannedEncounters": true
+    },
+    "household": false,
+    "group": false,
+    "directlyAssignable": false,
+    "voided": false
   },
-  "household" : false,
-  "group" : false,
-  "directlyAssignable" : false,
-  "voided" : false
-}, {
-  "name" : "Case",
-  "uuid" : "0bc1dbf5-6790-4c9b-b5eb-d241ec6b0379",
-  "active" : true,
-  "type" : "Individual",
-  "subjectSummaryRule" : "",
-  "programEligibilityCheckRule" : "",
-  "allowEmptyLocation" : false,
-  "allowMiddleName" : false,
-  "lastNameOptional" : false,
-  "allowProfilePicture" : false,
-  "uniqueName" : false,
-  "shouldSyncByLocation" : true,
-  "settings" : {
-    "displayRegistrationDetails" : true,
-    "displayPlannedEncounters" : false
+  {
+    "name": "Case",
+    "uuid": "0bc1dbf5-6790-4c9b-b5eb-d241ec6b0379",
+    "active": true,
+    "type": "Individual",
+    "subjectSummaryRule": "",
+    "programEligibilityCheckRule": "",
+    "allowEmptyLocation": false,
+    "allowMiddleName": false,
+    "lastNameOptional": false,
+    "allowProfilePicture": false,
+    "uniqueName": false,
+    "shouldSyncByLocation": true,
+    "settings": {
+      "displayRegistrationDetails": true,
+      "displayPlannedEncounters": false
+    },
+    "household": false,
+    "group": false,
+    "directlyAssignable": false,
+    "voided": false
   },
-  "household" : false,
-  "group" : false,
-  "directlyAssignable" : false,
-  "voided" : false
-}, {
-  "name" : "Training (voided~1741)",
-  "uuid" : "7c618fef-b244-47bc-9e7c-773198b03d94",
-  "active" : true,
-  "type" : "Individual",
-  "subjectSummaryRule" : "",
-  "programEligibilityCheckRule" : "",
-  "allowEmptyLocation" : false,
-  "allowMiddleName" : false,
-  "lastNameOptional" : false,
-  "allowProfilePicture" : false,
-  "uniqueName" : false,
-  "shouldSyncByLocation" : true,
-  "settings" : {
-    "displayRegistrationDetails" : true,
-    "displayPlannedEncounters" : true
+  {
+    "name": "Training (voided~1741)",
+    "uuid": "7c618fef-b244-47bc-9e7c-773198b03d94",
+    "active": true,
+    "type": "Individual",
+    "subjectSummaryRule": "",
+    "programEligibilityCheckRule": "",
+    "allowEmptyLocation": false,
+    "allowMiddleName": false,
+    "lastNameOptional": false,
+    "allowProfilePicture": false,
+    "uniqueName": false,
+    "shouldSyncByLocation": true,
+    "settings": {
+      "displayRegistrationDetails": true,
+      "displayPlannedEncounters": true
+    },
+    "household": false,
+    "group": false,
+    "directlyAssignable": false,
+    "voided": true
   },
-  "household" : false,
-  "group" : false,
-  "directlyAssignable" : false,
-  "voided" : true
-}, {
-  "name" : "Claim",
-  "uuid" : "cd93d6db-d4be-47a0-9f84-d25391f90e77",
-  "active" : true,
-  "type" : "Individual",
-  "subjectSummaryRule" : "",
-  "programEligibilityCheckRule" : "",
-  "allowEmptyLocation" : false,
-  "allowMiddleName" : false,
-  "lastNameOptional" : false,
-  "allowProfilePicture" : false,
-  "uniqueName" : false,
-  "shouldSyncByLocation" : true,
-  "settings" : {
-    "displayRegistrationDetails" : true,
-    "displayPlannedEncounters" : false
-  },
-  "household" : false,
-  "group" : false,
-  "directlyAssignable" : false,
-  "voided" : false
-} ]
+  {
+    "name": "Claim",
+    "uuid": "cd93d6db-d4be-47a0-9f84-d25391f90e77",
+    "active": true,
+    "type": "Individual",
+    "subjectSummaryRule": "",
+    "programEligibilityCheckRule": "",
+    "allowEmptyLocation": false,
+    "allowMiddleName": false,
+    "lastNameOptional": false,
+    "allowProfilePicture": false,
+    "uniqueName": false,
+    "shouldSyncByLocation": true,
+    "settings": {
+      "displayRegistrationDetails": true,
+      "displayPlannedEncounters": false
+    },
+    "household": false,
+    "group": false,
+    "directlyAssignable": false,
+    "voided": false
+  }
+]

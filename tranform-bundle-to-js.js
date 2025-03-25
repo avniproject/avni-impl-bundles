@@ -37,40 +37,42 @@ function findJavaScriptPaths(obj, currentPath = '', paths = []) {
     return paths;
 }
 
-function getValueByPath(obj, path) {
-    return path.split('.').reduce((current, key) => current && current[key], obj);
-}
+function processNonJsStrings(jsonString, jsKeys, filePath) {
+    const jsonObj = JSON.parse(jsonString);
 
-function setValueByPath(obj, path, value) {
-    const keys = path.split('.');
-    const lastKey = keys.pop();
-    const target = keys.reduce((current, key) => current && current[key], obj);
-    if (target && typeof target === 'object') {
-        target[lastKey] = value;
-    }
-}
-
-function processPaths(jsonObj, targetPaths) {
-    if (!jsonObj || typeof obj !== 'object') return jsonObj;
-
-    targetPaths.forEach(path => {
-        const value = getValueByPath(jsonObj, path);
-        if (typeof value === 'string') {
-            console.log(`old value: ${value}`);
-            const processedValue = value.replace(/^"(.*)"$/, '$1');
-            console.log(`new processed value: ${processedValue}`);
-            setValueByPath(jsonObj, path, processedValue);
+    function processValue(obj, parentKey) {
+        if (Array.isArray(obj)) {
+            return obj.map(item => processValue(item, parentKey));
+        } else if (typeof obj === 'object' && obj !== null) {
+            const result = {};
+            for (const [key, value] of Object.entries(obj)) {
+                const fullKey = parentKey ? `${parentKey}.${key}` : key;
+                if (!jsKeys.includes(key)) {
+                    result[key] = processValue(value, fullKey);
+                } else {
+                    result[key] = value;
+                }
+            }
+            return result;
+        } else if (typeof obj === 'string') {
+            return obj.replace("\n", '');
         }
-    });
+        return obj;
+    }
 
-    return jsonObj;
+    const processedObj = processValue(jsonObj);
+    const newJsonContent = JSON.stringify(processedObj, null, 2);
+    fs.writeFileSync(filePath, newJsonContent, 'utf8');
+    return newJsonContent;
 }
 
-function findAndReplaceJSStrings(jsonString, jsPaths) {
+function findAndReplaceJSStrings(jsonString, jsPaths, filePath) {
     const jsKeys = jsPaths.map(p => p.path.split('.').pop());
-    console.log('Keys to process:', jsKeys);
-    
-    let processed = jsonString;
+
+    // First, handle non-JavaScript strings by removing newlines
+    let processed = processNonJsStrings(jsonString, jsKeys, filePath);
+
+    // Then handle JavaScript code
     jsKeys.forEach(key => {
         const pattern = new RegExp(`"${key}"\\s*:\\s*"[\\s\\n]*'use strict';`, 'g');
         console.log(`replacing pattern: ${pattern}`);
@@ -79,8 +81,9 @@ function findAndReplaceJSStrings(jsonString, jsPaths) {
         processed = processed.replace(pattern, `"${key}" : `);
         processed = processed.replace(/\\n/g, '\n');
         processed = processed.replace(/\\"/g, '"');
+        processed = processed.replace("};\",", "},");
     });
-    
+
     return processed;
 }
 
@@ -98,35 +101,38 @@ function renameJsonToJs(file) {
 
 function replaceJsonNodesHavingJSCode(directory) {
     const results = {};
-    
+
     try {
         let files = glob.sync(`${directory}/**/*.json`);
-        
+
         if (files.length === 0) {
             console.log(`No JSON files found in: ${directory}`);
             return results;
         }
 
         files.forEach(file => {
+            // if (file !== "csj-uat/reportCard.json")
+            //     return;
+
             try {
                 console.log(`\nProcessing file: ${file}`);
                 const content = fs.readFileSync(file, 'utf8');
                 const jsonContent = JSON.parse(content);
                 const jsPaths = findJavaScriptPaths(jsonContent);
-                
+
                 if (jsPaths.length > 0) {
                     console.log(`Found ${jsPaths.length} JavaScript paths in ${file}:`);
-                    
-                    const processedContent = findAndReplaceJSStrings(content, jsPaths);
+
+                    const processedContent = findAndReplaceJSStrings(content, jsPaths, file);
                     fs.writeFileSync(file, processedContent);
                     console.log(`Successfully processed file: ${file}`);
-                    
+
                     const newFileName = renameJsonToJs(file);
                     if (!newFileName) {
                         console.error(`Error renaming file ${file}`);
                         return;
                     }
-                    
+
                     results[path.relative(directory, newFileName)] = jsPaths.map(p => p.path);
                 } else {
                     console.log(`No JavaScript paths found in ${file}`);
@@ -138,7 +144,7 @@ function replaceJsonNodesHavingJSCode(directory) {
     } catch (err) {
         console.error('Error:', err.message);
     }
-    
+
     return results;
 }
 
