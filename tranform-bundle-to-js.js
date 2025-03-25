@@ -72,16 +72,17 @@ function findAndReplaceJSStrings(jsonString, jsPaths, filePath) {
     // First, handle non-JavaScript strings by removing newlines
     let processed = processNonJsStrings(jsonString, jsKeys, filePath);
 
+    const uniqueKeys = [...new Set(jsKeys)];
     // Then handle JavaScript code
-    jsKeys.forEach(key => {
-        const pattern = new RegExp(`"${key}"\\s*:\\s*"[\\s\\n]*'use strict';`, 'g');
+    uniqueKeys.forEach(key => {
+        const pattern = new RegExp(`"${key}"\\s*:[\\s\\S]*?'use strict';`, 'g');
         console.log(`replacing pattern: ${pattern}`);
         processed = processed.replace("//SAMPLE RULE EXAMPLE", "");
         processed = processed.replace(/};\\n"/g, '}\n');
         processed = processed.replace(pattern, `"${key}" : `);
         processed = processed.replace(/\\n/g, '\n');
         processed = processed.replace(/\\"/g, '"');
-        processed = processed.replace("};\",", "},");
+        processed = processed.replace(/};",/g, "},");
     });
 
     return processed;
@@ -148,13 +149,7 @@ function replaceJsonNodesHavingJSCode(directory) {
     return results;
 }
 
-const directory = 'csj-uat';
 console.log('Processing JSON files...');
-const results = replaceJsonNodesHavingJSCode(directory);
-
-console.log('\nSummary of processed files:');
-Object.entries(results).forEach(([file, paths]) => {
-    console.log(`\nFile: ${file}`);
-    console.log('Processed paths:');
-    paths.forEach(path => console.log(`  ${path}`));
-});
+replaceJsonNodesHavingJSCode('csj-uat');
+replaceJsonNodesHavingJSCode('goonj');
+replaceJsonNodesHavingJSCode('apf');
