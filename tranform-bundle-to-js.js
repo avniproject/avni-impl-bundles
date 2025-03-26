@@ -150,6 +150,11 @@ function replaceJsonNodesHavingJSCode(directory) {
 }
 
 console.log('Processing JSON files...');
-replaceJsonNodesHavingJSCode('csj-uat');
-replaceJsonNodesHavingJSCode('goonj');
-replaceJsonNodesHavingJSCode('apf');
+
+const directory = process.argv[2];
+if (!directory) {
+    console.error('Please provide a directory name as an argument');
+    process.exit(1);
+}
+
+replaceJsonNodesHavingJSCode(directory);
