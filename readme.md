@@ -1,3 +1,4 @@
+### Setup
 - Clone this repository
 - Install node version 20 or higher
 - Download bundle
