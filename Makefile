@@ -11,3 +11,6 @@ transform-csj:
 
 copy-sample:
 	cp csj-uat/subjectTypes.js subjectTypes.js
+
+transform-bundle:
+	node tools/tranform-bundle-to-js.js
