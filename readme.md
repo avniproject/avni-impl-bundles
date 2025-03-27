@@ -9,5 +9,5 @@
 ### IDE
 Currently, this tool works in windsurf IDE and not in IntelliJ.
 
-### Windsurf Recommendation
+### Recommendation
 - **When prompting ask windsurf to create code in a new JavaScript file**
