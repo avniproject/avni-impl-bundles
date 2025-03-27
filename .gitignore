@@ -1,7 +1,6 @@
 # Dependencies
 node_modules/
 package-lock.json
-development/*
 
 # Logs
 logs
@@ -28,5 +27,3 @@ pids
 ._*
 .Spotlight-V100
 .Trashes
-
-# bundles
