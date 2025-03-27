@@ -3,7 +3,8 @@
 - Install node version 20 or higher
 - Download bundle
 - Unzip bundle under development folder, without locations. e.g. if you downloaded Gram Seva Trust bundle then your files should be like development/gst/formMappings.json, development/gst/identifierSource.json and so on. Recommended to use short names for bundle folders.
-- Open terminal and navigate to avni-impl-bundles (root) folder 
+- Open terminal and navigate to avni-impl-bundles (root) folder
+  - run `npm i`
   - run `make transform-bundle bundle=gst`
 
 ### IDE
