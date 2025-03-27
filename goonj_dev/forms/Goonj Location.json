@@ -1,0 +1,81 @@
+{
+  "checklistsRule": "",
+  "decisionConcepts": [],
+  "decisionRule": "",
+  "formElementGroups": [
+    {
+      "display": "Goonj Location Details",
+      "displayOrder": 1,
+      "formElements": [
+        {
+          "concept": {
+            "active": true,
+            "answers": [],
+            "dataType": "Numeric",
+            "name": "Village Code",
+            "uuid": "6f78932a-d503-49fe-b8aa-ccd541ffa66a"
+          },
+          "displayOrder": 1,
+          "keyValues": [],
+          "mandatory": false,
+          "name": "Village Code",
+          "type": "SingleSelect",
+          "uuid": "9554d176-dff3-4b06-9e78-1d6cc07b4a5d"
+        },
+        {
+          "concept": {
+            "active": true,
+            "answers": [],
+            "dataType": "Numeric",
+            "name": "Block Code",
+            "uuid": "115d2ce2-e810-4745-bf9b-d4ac7ffe6565"
+          },
+          "displayOrder": 2,
+          "keyValues": [],
+          "mandatory": false,
+          "name": "Block Code",
+          "type": "SingleSelect",
+          "uuid": "a257169b-8d42-4dda-acdc-61c9e89d23bf"
+        },
+        {
+          "concept": {
+            "active": true,
+            "answers": [],
+            "dataType": "Numeric",
+            "name": "District Code",
+            "uuid": "297e2f95-2fb1-4fa9-a090-74ae7faa0b2e"
+          },
+          "displayOrder": 3,
+          "keyValues": [],
+          "mandatory": false,
+          "name": "District Code",
+          "type": "SingleSelect",
+          "uuid": "837494a3-c039-4024-a366-97302e509c2d"
+        },
+        {
+          "concept": {
+            "active": true,
+            "answers": [],
+            "dataType": "Numeric",
+            "name": "State Code",
+            "uuid": "d035fa05-abf6-4771-915a-7ea5c308a612"
+          },
+          "displayOrder": 4,
+          "keyValues": [],
+          "mandatory": false,
+          "name": "State Code",
+          "type": "SingleSelect",
+          "uuid": "f42cd6ec-d030-4d88-944d-212e24d8ff9f"
+        }
+      ],
+      "name": "Goonj Location Details",
+      "timed": false,
+      "uuid": "5789c521-4d0a-48bb-b4c9-16bd2cdaa3a2"
+    }
+  ],
+  "formType": "Location",
+  "name": "Goonj Location",
+  "uuid": "0919999b-c859-4f89-8219-0a66388af6e7",
+  "validationRule": "",
+  "visitScheduleRule": ""
+}

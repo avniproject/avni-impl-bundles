@@ -1,0 +1,35 @@
+[
+  {
+    "id": 2365,
+    "level": 4,
+    "name": "State",
+    "uuid": "fda77dde-6346-47b9-84e0-25e7f171f55a"
+  },
+  {
+    "id": 2366,
+    "level": 3,
+    "name": "District",
+    "parent": {
+      "uuid": "fda77dde-6346-47b9-84e0-25e7f171f55a"
+    },
+    "uuid": "6b0db0bd-93ad-4f54-b09a-a8f935ba4d85"
+  },
+  {
+    "id": 2367,
+    "level": 2,
+    "name": "Block",
+    "parent": {
+      "uuid": "6b0db0bd-93ad-4f54-b09a-a8f935ba4d85"
+    },
+    "uuid": "3410e7a2-cefe-4fc7-94b4-6631656c548c"
+  },
+  {
+    "id": 2368,
+    "level": 1,
+    "name": "Village",
+    "parent": {
+      "uuid": "3410e7a2-cefe-4fc7-94b4-6631656c548c"
+    },
+    "uuid": "47a9e070-090d-46f8-8f06-834c193b8bec"
+  }
+]

@@ -1,0 +1,318 @@
+[
+  {
+    "id": 2241,
+    "individualAIsToBRelation": {
+      "genders": [
+        "Male"
+      ],
+      "id": 2645,
+      "name": "Husband",
+      "uuid": "20e08130-9cfa-438d-88f8-480266aded89"
+    },
+    "individualBIsToARelation": {
+      "genders": [
+        "Female"
+      ],
+      "id": 2646,
+      "name": "Wife",
+      "uuid": "c5e9a158-4e5c-42c1-90b2-f9039f50d29f"
+    },
+    "uuid": "f78d7dc0-4fea-4be6-b29a-ac84a706da87"
+  },
+  {
+    "id": 2242,
+    "individualAIsToBRelation": {
+      "genders": [
+        "Male"
+      ],
+      "id": 2643,
+      "name": "Father",
+      "uuid": "8df68252-61e0-484f-8a95-c6689e7b7ea5"
+    },
+    "individualBIsToARelation": {
+      "genders": [
+        "Female"
+      ],
+      "id": 2648,
+      "name": "Daughter",
+      "uuid": "70b7969e-d4b4-4087-961e-76092d0c7b61"
+    },
+    "uuid": "842c2e0f-6754-4d6a-b024-aba1d0d30043"
+  },
+  {
+    "id": 2243,
+    "individualAIsToBRelation": {
+      "genders": [
+        "Female"
+      ],
+      "id": 2644,
+      "name": "Mother",
+      "uuid": "1244382c-d649-481a-9f7c-99e38995a434"
+    },
+    "individualBIsToARelation": {
+      "genders": [
+        "Female"
+      ],
+      "id": 2648,
+      "name": "Daughter",
+      "uuid": "70b7969e-d4b4-4087-961e-76092d0c7b61"
+    },
+    "uuid": "a8dca1e2-ff7a-44dd-9d25-9d002081a539"
+  },
+  {
+    "id": 2244,
+    "individualAIsToBRelation": {
+      "genders": [
+        "Female"
+      ],
+      "id": 2644,
+      "name": "Mother",
+      "uuid": "1244382c-d649-481a-9f7c-99e38995a434"
+    },
+    "individualBIsToARelation": {
+      "genders": [
+        "Male"
+      ],
+      "id": 2647,
+      "name": "Son",
+      "uuid": "8933f1fb-a65f-4bda-9a17-ae1665e457c0"
+    },
+    "uuid": "b0ecc0bf-bfc8-491a-b100-3ba56a56cee3"
+  },
+  {
+    "id": 2245,
+    "individualAIsToBRelation": {
+      "genders": [
+        "Male"
+      ],
+      "id": 2643,
+      "name": "Father",
+      "uuid": "8df68252-61e0-484f-8a95-c6689e7b7ea5"
+    },
+    "individualBIsToARelation": {
+      "genders": [
+        "Male"
+      ],
+      "id": 2647,
+      "name": "Son",
+      "uuid": "8933f1fb-a65f-4bda-9a17-ae1665e457c0"
+    },
+    "uuid": "ed9cc124-2b5d-4be3-bad9-e088a09a5b51"
+  },
+  {
+    "id": 2246,
+    "individualAIsToBRelation": {
+      "genders": [
+        "Female"
+      ],
+      "id": 2649,
+      "name": "Mother in law",
+      "uuid": "7230ac87-6400-4571-b023-fac99a012c6b"
+    },
+    "individualBIsToARelation": {
+      "genders": [
+        "Female"
+      ],
+      "id": 2650,
+      "name": "Daughter in law",
+      "uuid": "1f8efa2a-46c1-4ae9-919e-cac680ad6e75"
+    },
+    "uuid": "93f30eae-9472-4984-afa6-2aeec5f6ecc2"
+  },
+  {
+    "id": 2247,
+    "individualAIsToBRelation": {
+      "genders": [
+        "Male"
+      ],
+      "id": 2651,
+      "name": "Father in law",
+      "uuid": "25043353-8b6a-4d55-8d39-9b1f7429a1c1"
+    },
+    "individualBIsToARelation": {
+      "genders": [
+        "Female"
+      ],
+      "id": 2650,
+      "name": "Daughter in law",
+      "uuid": "1f8efa2a-46c1-4ae9-919e-cac680ad6e75"
+    },
+    "uuid": "f5eabbc9-82db-45f3-8274-389e0ef0a6d9"
+  },
+  {
+    "id": 2248,
+    "individualAIsToBRelation": {
+      "genders": [
+        "Male"
+      ],
+      "id": 2652,
+      "name": "Maternal grandfather",
+      "uuid": "34280702-bf79-49bf-8ed8-33c5987cadbc"
+    },
+    "individualBIsToARelation": {
+      "genders": [
+        "Male"
+      ],
+      "id": 2653,
+      "name": "Maternal grandson",
+      "uuid": "b0a6fbd2-7df3-498d-b554-a485726926d4"
+    },
+    "uuid": "1c850e1b-15c8-4fc8-8391-c115dff9709b"
+  },
+  {
+    "id": 2249,
+    "individualAIsToBRelation": {
+      "genders": [
+        "Female"
+      ],
+      "id": 2654,
+      "name": "Maternal grandmother",
+      "uuid": "344d25a6-82be-4086-aed0-8c524eea0db2"
+    },
+    "individualBIsToARelation": {
+      "genders": [
+        "Male"
+      ],
+      "id": 2653,
+      "name": "Maternal grandson",
+      "uuid": "b0a6fbd2-7df3-498d-b554-a485726926d4"
+    },
+    "uuid": "57ba8c14-2e3a-45b0-ba2b-ccb9a332a874"
+  },
+  {
+    "id": 2250,
+    "individualAIsToBRelation": {
+      "genders": [
+        "Male"
+      ],
+      "id": 2652,
+      "name": "Maternal grandfather",
+      "uuid": "34280702-bf79-49bf-8ed8-33c5987cadbc"
+    },
+    "individualBIsToARelation": {
+      "genders": [],
+      "id": 2655,
+      "name": "Maternal granddaughter",
+      "uuid": "b51fe5d4-8fcb-464c-bb15-1d22bf5ed47d"
+    },
+    "uuid": "6a0ad503-727f-4b98-af89-e3c03d8ccb50"
+  },
+  {
+    "id": 2251,
+    "individualAIsToBRelation": {
+      "genders": [
+        "Female"
+      ],
+      "id": 2654,
+      "name": "Maternal grandmother",
+      "uuid": "344d25a6-82be-4086-aed0-8c524eea0db2"
+    },
+    "individualBIsToARelation": {
+      "genders": [],
+      "id": 2655,
+      "name": "Maternal granddaughter",
+      "uuid": "b51fe5d4-8fcb-464c-bb15-1d22bf5ed47d"
+    },
+    "uuid": "62760523-ba1a-4f9d-b9e7-df10bc932bb3"
+  },
+  {
+    "id": 2252,
+    "individualAIsToBRelation": {
+      "genders": [
+        "Male"
+      ],
+      "id": 2656,
+      "name": "Grandfather",
+      "uuid": "5c8ed14f-5379-44be-b5c2-0eb5508317d0"
+    },
+    "individualBIsToARelation": {
+      "genders": [
+        "Male"
+      ],
+      "id": 2657,
+      "name": "Grandson",
+      "uuid": "2a85b151-e907-4c8f-ba50-f6a22a3fdfeb"
+    },
+    "uuid": "9d7d429e-d3ae-4078-94f2-aa91a6bbbc6f"
+  },
+  {
+    "id": 2253,
+    "individualAIsToBRelation": {
+      "genders": [
+        "Male"
+      ],
+      "id": 2656,
+      "name": "Grandfather",
+      "uuid": "5c8ed14f-5379-44be-b5c2-0eb5508317d0"
+    },
+    "individualBIsToARelation": {
+      "genders": [
+        "Female"
+      ],
+      "id": 2658,
+      "name": "Granddaughter",
+      "uuid": "956a49ce-f92d-4671-ac6d-68e2cb998441"
+    },
+    "uuid": "85ec7c01-d4ef-40e8-ab07-f30a05ec1d0e"
+  },
+  {
+    "id": 2254,
+    "individualAIsToBRelation": {
+      "genders": [
+        "Female"
+      ],
+      "id": 2659,
+      "name": "Grandmother",
+      "uuid": "9cfe39c5-d50d-4b31-a4bc-e71fa6158d79"
+    },
+    "individualBIsToARelation": {
+      "genders": [
+        "Male"
+      ],
+      "id": 2657,
+      "name": "Grandson",
+      "uuid": "2a85b151-e907-4c8f-ba50-f6a22a3fdfeb"
+    },
+    "uuid": "c7a93510-3dea-487c-b6e3-4f1fd2936879"
+  },
+  {
+    "id": 2255,
+    "individualAIsToBRelation": {
+      "genders": [
+        "Male"
+      ],
+      "id": 2660,
+      "name": "Brother",
+      "uuid": "50c589a9-27ad-417a-a5da-1136abc5b5c1"
+    },
+    "individualBIsToARelation": {
+      "genders": [
+        "Female"
+      ],
+      "id": 2662,
+      "name": "Sister in law",
+      "uuid": "507f1a9c-dc46-4861-8eed-b5efe14d5936"
+    },
+    "uuid": "d8e154de-5a94-4cdb-b463-b46c9d1abef9"
+  },
+  {
+    "id": 2256,
+    "individualAIsToBRelation": {
+      "genders": [
+        "Female"
+      ],
+      "id": 2661,
+      "name": "Sister",
+      "uuid": "79fc55f0-d9b8-4a31-9b09-3adf78deeba7"
+    },
+    "individualBIsToARelation": {
+      "genders": [
+        "Male"
+      ],
+      "id": 2663,
+      "name": "Brother in law",
+      "uuid": "4f15ab6f-e3a5-4340-938b-6d4a0fbd3d61"
+    },
+    "uuid": "e4563121-1037-41f8-99bd-16278d154c30"
+  }
+]
