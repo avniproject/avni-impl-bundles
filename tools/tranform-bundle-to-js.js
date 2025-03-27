@@ -149,12 +149,11 @@ function replaceJsonNodesHavingJSCode(directory) {
     return results;
 }
 
-console.log('Processing JSON files...');
-
 const directory = process.argv[2];
 if (!directory) {
     console.error('Please provide a directory name as an argument');
     process.exit(1);
 }
 
+console.log('Processing JSON files in ...', directory);
 replaceJsonNodesHavingJSCode(directory);

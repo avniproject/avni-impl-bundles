@@ -13,4 +13,9 @@ copy-sample:
 	cp csj-uat/subjectTypes.js subjectTypes.js
 
 transform-bundle:
-	node tools/tranform-bundle-to-js.js
+ifndef bundle
+	@echo "Please provide bundle param"
+	exit 1
+else
+	node tools/tranform-bundle-to-js.js development/$(bundle)
+endif
