@@ -6,3 +6,6 @@
 6. Concept has unique uuid, name, dataType, answers, which are of use to us. Each concept is like a field in an entity or column in database table.
 7. the reference code is present in */reference/* folder which can be used as context. in reference folder there are multiple projects as child folder.
 8. reportCards.js is present in */reportCards.js* file and this uses mongo realm database querying
+9. program summmary is same as enrolment summary
+10. offline dashboard report is same as report card
+11. don't add exports to javascript generated code
