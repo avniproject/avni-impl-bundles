@@ -9,3 +9,8 @@
 9. program summmary is same as enrolment summary
 10. offline dashboard report is same as report card
 11. don't add exports to javascript generated code
+12. individual is like @Individual in openchs-models
+13. programEnrolment and enrolment is like @ProgramEnrolment in openchs-models
+14. programEncounter is like @ProgramEncounter in openchs-models
+15. encounter is like @Encounter in openchs-models
+16. db is the Realm database instance
