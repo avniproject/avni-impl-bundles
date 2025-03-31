@@ -8,7 +8,7 @@
   - run `make transform-bundle bundle=gst`
 
 ### IDE
-Currently, this tool works in windsurf IDE and not in IntelliJ.
+Currently, this tool works in windsurf IDE and not in IntelliJ. Since the JavaScript files created from json shows in error in IntelliJ.
 
 ### Recommendation
 - **When prompting ask windsurf to create code in a new JavaScript file**

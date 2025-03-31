@@ -1,4 +1,4 @@
-1. this is a project which has javascript code present within java object structure
+1. this is a javascript project
 2. do not put comments unless asked
 3. the data model is expressed in the files under */forms/* folder. these are called Forms.
 4. Each Form has form-element-groups. Each form element group has form-element. Each form element links to a concept. The full definition of concepts are present in */concepts.json file.
@@ -14,3 +14,4 @@
 14. programEncounter is like @ProgramEncounter in openchs-models
 15. encounter is like @Encounter in openchs-models
 16. db is the Realm database instance
+17. There is no SQL database, so queries always mean Realm queries
