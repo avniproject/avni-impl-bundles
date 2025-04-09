@@ -7,10 +7,25 @@ recopy:
 	cp -r ~/Downloads/goonj/* goonj/
 
 transform-csj:
-	node tranform-bundle-to-js.js
+	node tranform-bundle-to-js.js csj-uat
+
+transform-apf:
+	node tranform-bundle-to-js.js apf
+
+transform-goonj:
+	node tranform-bundle-to-js.js goonj	
+
+transform-goonj-dev:
+	node tranform-bundle-to-js.js goonj_dev	
 
 copy-sample:
 	cp csj-uat/subjectTypes.js subjectTypes.js
+
+deps:
+	npm install
+
+clean:
+	rm -rf node_modules
 
 transform-bundle:
 ifndef bundle
