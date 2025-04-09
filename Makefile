@@ -24,6 +24,9 @@ copy-sample:
 deps:
 	npm install
 
+clean:
+	rm -rf node_modules
+
 transform-bundle:
 ifndef bundle
 	@echo "Please provide bundle param"
