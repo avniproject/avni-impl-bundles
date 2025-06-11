@@ -46,4 +46,8 @@
   "id" : 1542,
   "name" : "AllPermissions",
   "voided" : true
+}, {
+  "uuid" : "1422c5c0-5ca0-48ec-93c4-399265eccc79",
+  "id" : 2689,
+  "name" : "Metabase Users"
 } ]

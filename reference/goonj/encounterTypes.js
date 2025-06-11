@@ -1,7 +1,7 @@
 [
   {
-    "name": "Village Form",
-    "uuid": "770d8de1-9a52-4e54-875a-fba268a7732c",
+    "name": "Activity",
+    "uuid": "639605f9-a202-48dd-b42f-082dc2d172ff",
     "entityEligibilityCheckRule" : 
 ({params, imports}) => {
   const individual = params.entity;
@@ -115,6 +115,13 @@
   
   return eligibility;
 },
+    "active": true,
+    "immutable": false
+  },
+  {
+    "name": "Village Assessment Form",
+    "uuid": "770d8de1-9a52-4e54-875a-fba268a7732c",
+    "entityEligibilityCheckRule": "",
     "active": true,
     "immutable": false
   }

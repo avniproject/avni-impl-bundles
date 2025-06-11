@@ -1,4 +1,59 @@
 [ {
+  "name" : "100-500",
+  "uuid" : "b80349be-4055-4f50-9146-0d0e57b2d976",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "1000-5000",
+  "uuid" : "114e16fc-d589-43b7-9564-d8fef4ea501d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "2-5 km",
+  "uuid" : "e3d49ccb-2221-4c3a-8c9f-549890153c9e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "50-100",
+  "uuid" : "9363412a-872f-4ad8-8887-30b4c1ad60a0",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "500-1000",
+  "uuid" : "b9285313-2488-49de-be21-0f2f52c4f623",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "<2 km",
+  "uuid" : "cf9b4ce3-2526-4768-939b-6f7cb1aeca82",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "<50",
+  "uuid" : "843fd664-5afe-45d1-a801-95ec4a0e0235",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "<500",
+  "uuid" : "9733c22a-1a80-4058-9a6f-f72d5b56dc73",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : ">5 km",
+  "uuid" : "1ca3bc67-4d64-4ef3-ac25-b0777cb25f3d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : ">500",
+  "uuid" : "da6fb88e-4fd7-4be3-a6e0-4e60d0a3445a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : ">5000",
+  "uuid" : "0277ebfa-a55f-4653-b6f7-a69988a5faa0",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "A",
   "uuid" : "9e0f3a28-ca42-45e7-8d62-384d86ce8dd8",
   "dataType" : "NA",
@@ -661,6 +716,11 @@
     "value" : "fda77dde-6346-47b9-84e0-25e7f171f55a"
   } ]
 }, {
+  "name" : "Adivasis",
+  "uuid" : "0211094b-254a-4120-bd3f-940731663eb4",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Adolescents",
   "uuid" : "7cf699d9-0a47-4111-95ce-b0c5df581762",
   "dataType" : "NA",
@@ -676,8 +736,18 @@
   "dataType" : "Numeric",
   "active" : true
 }, {
+  "name" : "Agricultural Labourers",
+  "uuid" : "b1d97768-c4b4-42b8-ae28-7e872a6a8ac2",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Agricultural Related",
   "uuid" : "84adcd3a-c177-418e-88ea-ca3a1cdb56f5",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Agriculture & Allied Activities",
+  "uuid" : "3cbb2149-8379-4620-bb2a-9325c295bf52",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -769,6 +839,11 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Anemia",
+  "uuid" : "4609b23b-0eab-45aa-a1a5-cedc55e1d790",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Anganwadi",
   "uuid" : "db17de4f-d7f6-4ab3-afd6-6231a874890a",
   "dataType" : "NA",
@@ -783,6 +858,34 @@
   "uuid" : "dcc2bb17-ea3b-4a36-9325-0304fce3d6ea",
   "dataType" : "NA",
   "active" : true
+}, {
+  "name" : "Any Migration Patterns",
+  "uuid" : "ee29af76-bcdc-4381-ab54-69a38d327af3",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "303d5ad1-ffa2-4096-ba7c-a86876ca9d12",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "40f13680-bc05-46ef-8223-e56cf20b8d0a",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Any NGO is working there?",
+  "uuid" : "19bec586-93ab-47f9-9ef6-08a41742adb4",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "303d5ad1-ffa2-4096-ba7c-a86876ca9d12",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "40f13680-bc05-46ef-8223-e56cf20b8d0a",
+    "order" : 1.0
+  } ]
 }, {
   "name" : "Any other",
   "uuid" : "f903963d-1c98-4f85-827c-c15a0930b845",
@@ -814,6 +917,11 @@
   "dataType" : "Text",
   "active" : true
 }, {
+  "name" : "April–June",
+  "uuid" : "4af87e34-a6f1-410b-96b4-48cc21ae6c99",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Area",
   "uuid" : "96452733-db5e-4e82-8e75-8ef8a308ea8a",
   "dataType" : "NA",
@@ -829,8 +937,18 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Artisans / Handicraft Workers",
+  "uuid" : "a8efe4ce-094c-4fdc-b718-d4d3da7218a5",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Arunachal Pradesh",
   "uuid" : "d8803c72-4ea4-4200-921d-de185ab10c9e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "ASHA Worker",
+  "uuid" : "643801a6-3495-4bc6-9b64-a8559c60a55b",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -839,10 +957,55 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Assessment Date",
+  "uuid" : "c9871602-2104-4c92-8c99-800efffa533e",
+  "dataType" : "Date",
+  "active" : true
+}, {
   "name" : "Aurangabad",
   "uuid" : "a3be2255-6ed1-45eb-a20e-ed0ca98c8b1a",
   "dataType" : "NA",
   "active" : true
+}, {
+  "name" : "Availability of ASHA/Health Worker",
+  "uuid" : "30cc5574-ba4a-462c-add1-23a01f1245f9",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "303d5ad1-ffa2-4096-ba7c-a86876ca9d12",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "40f13680-bc05-46ef-8223-e56cf20b8d0a",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Available Drinking Water Sources",
+  "uuid" : "5c77128c-e684-4182-99b4-986510c392d8",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Piped Water",
+    "uuid" : "9940604d-7036-4ddc-9151-0e5613842f83",
+    "order" : 0.0
+  }, {
+    "name" : "Borewell",
+    "uuid" : "84e56498-2ef7-45b1-be9e-3e502d08e4f0",
+    "order" : 1.0
+  }, {
+    "name" : "Well",
+    "uuid" : "a7b922a1-a389-4ba1-94ca-59baf7a961d0",
+    "order" : 2.0
+  }, {
+    "name" : "River/Pond",
+    "uuid" : "e16eb815-df2e-489b-b571-dd2c35927632",
+    "order" : 3.0
+  }, {
+    "name" : "Other",
+    "uuid" : "df625e4f-b11f-40bd-b846-422af836f273",
+    "order" : 4.0
+  } ]
 }, {
   "name" : "B",
   "uuid" : "d4d7519d-8247-464b-a136-c29147aeb34d",
@@ -860,8 +1023,18 @@
   "active" : true,
   "voided" : true
 }, {
+  "name" : "Baiga",
+  "uuid" : "f0b5a15a-7315-40c6-8ab1-75430ad175af",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Bandstand",
   "uuid" : "f599df1e-a5e6-4f3e-b985-a196d55a3c73",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Banjara / Trading Community",
+  "uuid" : "a0a67e84-e00d-4b7d-9684-c28a1ed461b0",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -889,6 +1062,57 @@
   "uuid" : "e15c4581-5b88-42f1-81a7-fb022e237c16",
   "dataType" : "NA",
   "active" : true
+}, {
+  "name" : "Bhil",
+  "uuid" : "ee9a09a9-61cb-45b4-a67a-6a17020aa1d8",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Biggest Challenges Faced by the Village",
+  "uuid" : "52340496-30d3-4d2f-8c71-f29108ef5fda",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Lack of Water",
+    "uuid" : "13afaa79-cb55-4d42-952e-3d8d37736f46",
+    "order" : 0.0
+  }, {
+    "name" : "Poor Roads & Connectivity",
+    "uuid" : "fbebacfe-f8e5-4389-a449-0fffdcf70f02",
+    "order" : 1.0
+  }, {
+    "name" : "Unemployment & Lack of Job Opportunities",
+    "uuid" : "e506e31a-4a10-4b9d-956a-3f4bfa3e47f1",
+    "order" : 2.0
+  }, {
+    "name" : "Poor Healthcare Facilities",
+    "uuid" : "4610308f-458b-4cb3-9071-cf002de4142b",
+    "order" : 3.0
+  }, {
+    "name" : "Education Gaps & Lack of Schools",
+    "uuid" : "ba448088-da67-4fad-af43-8d34aeaacbd0",
+    "order" : 4.0
+  }, {
+    "name" : "Poor Sanitation & Waste Management",
+    "uuid" : "0a48dc8f-8bbf-4501-8885-ef0cb3713346",
+    "order" : 5.0
+  }, {
+    "name" : "Lack of Irrigation Facilities for Farmers",
+    "uuid" : "7c494ade-d488-4bf3-a4d6-cfae170be2b0",
+    "order" : 6.0
+  }, {
+    "name" : "Deforestation & Environmental Issues",
+    "uuid" : "cc1f0968-a75f-40e5-a486-918f6d3aff11",
+    "order" : 7.0
+  }, {
+    "name" : "Migration of Youth to Cities",
+    "uuid" : "282da639-e28d-4dcc-a8da-eda2375afb35",
+    "order" : 8.0
+  }, {
+    "name" : "Other",
+    "uuid" : "df625e4f-b11f-40bd-b846-422af836f273",
+    "order" : 9.0
+  } ]
 }, {
   "name" : "Bihar",
   "uuid" : "c1517eef-dcd1-4090-b45b-7ac709b3708b",
@@ -922,6 +1146,11 @@
   "name" : "Block Code",
   "uuid" : "115d2ce2-e810-4745-bf9b-d4ac7ffe6565",
   "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Block Development Office",
+  "uuid" : "f1be93f0-81ba-49a5-840d-d9c9aa13046d",
+  "dataType" : "NA",
   "active" : true
 }, {
   "name" : "Block list (voided~220545)",
@@ -1213,6 +1442,16 @@
     "order" : 2.0
   } ]
 }, {
+  "name" : "Bodo",
+  "uuid" : "4a37a9c8-ece3-408e-a78d-85205c5a1e3f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Borewell",
+  "uuid" : "84e56498-2ef7-45b1-be9e-3e502d08e4f0",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Breadth",
   "uuid" : "1197d309-c9a1-4d65-8e45-61bfd6f01aee",
   "dataType" : "Numeric",
@@ -1263,6 +1502,11 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Cancer",
+  "uuid" : "ab990230-aecf-41d1-be05-a2691c4019f9",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Carpenter Kit",
   "uuid" : "1855ccd4-9005-4ef4-af39-ee526425aa67",
   "dataType" : "NA",
@@ -1275,6 +1519,11 @@
 }, {
   "name" : "CCT",
   "uuid" : "f246f297-f123-4b7a-b06f-d8c22a10bac2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Census of India",
+  "uuid" : "9e3c2f3c-d155-47a3-bc4d-0c453c1d1650",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -1313,6 +1562,11 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Chakma",
+  "uuid" : "15223fd2-a804-4ff0-b69a-0d0d787e678d",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Chandigarh",
   "uuid" : "974d1af4-8ea4-4941-83ce-bafcc6a7c870",
   "dataType" : "NA",
@@ -1343,6 +1597,11 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Chikungunya",
+  "uuid" : "6035eefd-4e87-4e75-b21b-5a3b98163e35",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Children",
   "uuid" : "d46b9822-d3c3-492d-a2a3-9ab623cfd802",
   "dataType" : "NA",
@@ -1363,6 +1622,11 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Cholera",
+  "uuid" : "ac0fdcdb-48ea-4d4d-be47-4a937eeb71d0",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Cleaning",
   "uuid" : "cf0e9df1-cc8d-48e9-94b6-6ec3a13b09a3",
   "dataType" : "NA",
@@ -1376,6 +1640,77 @@
   "name" : "Cobbler Kit",
   "uuid" : "05a6aa27-1676-4a29-95a3-75ad8d6fe81b",
   "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Common Health Issues",
+  "uuid" : "ea8c5fd6-71f8-4f50-a24b-4fcd172ec1e8",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Malnutrition",
+    "uuid" : "761be3c9-8c15-4b59-99b2-880bb5cce559",
+    "order" : 0.0
+  }, {
+    "name" : "Maternal Health",
+    "uuid" : "24d6a068-066c-47df-94eb-bc9b7da64168",
+    "order" : 1.0
+  }, {
+    "name" : "Waterborne Diseases",
+    "uuid" : "74b8582b-11c5-4926-8e67-0b5cb8e87232",
+    "order" : 2.0
+  }, {
+    "name" : "Typhoid",
+    "uuid" : "2495e6a2-7f3d-4a86-9a00-6f307be2a239",
+    "order" : 3.0
+  }, {
+    "name" : "Cholera",
+    "uuid" : "ac0fdcdb-48ea-4d4d-be47-4a937eeb71d0",
+    "order" : 4.0
+  }, {
+    "name" : "Anemia",
+    "uuid" : "4609b23b-0eab-45aa-a1a5-cedc55e1d790",
+    "order" : 5.0
+  }, {
+    "name" : "Tuberculosis",
+    "uuid" : "03947563-dac5-4770-b545-481c4e229825",
+    "order" : 6.0
+  }, {
+    "name" : "Cancer",
+    "uuid" : "ab990230-aecf-41d1-be05-a2691c4019f9",
+    "order" : 7.0
+  }, {
+    "name" : "HIV",
+    "uuid" : "c1823911-05e8-4a42-aa99-1b77605cec0b",
+    "order" : 8.0
+  }, {
+    "name" : "Poor menstrual hygiene",
+    "uuid" : "b7d2c002-9006-4234-b500-405168ce0d24",
+    "order" : 9.0
+  }, {
+    "name" : "Dengue",
+    "uuid" : "ca9b358f-6da1-483a-af4c-6096fe8b0a2c",
+    "order" : 10.0
+  }, {
+    "name" : "Malaria",
+    "uuid" : "84208c03-9602-437e-8616-bff854982a9e",
+    "order" : 11.0
+  }, {
+    "name" : "Chikungunya",
+    "uuid" : "6035eefd-4e87-4e75-b21b-5a3b98163e35",
+    "order" : 12.0
+  }, {
+    "name" : "Silcosis",
+    "uuid" : "905c19bf-b60d-44f6-b66a-e4d98b7bec6b",
+    "order" : 13.0
+  }, {
+    "name" : "Other",
+    "uuid" : "df625e4f-b11f-40bd-b846-422af836f273",
+    "order" : 14.0
+  } ]
+}, {
+  "name" : "Community Culture and Aspects",
+  "uuid" : "49972842-5716-42f1-9783-b7eff30e3b1d",
+  "dataType" : "Text",
   "active" : true
 }, {
   "name" : "Community farming",
@@ -1398,6 +1733,64 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Community Types",
+  "uuid" : "fb43296b-9bbc-4cfc-9668-e9764be5ca42",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Farmers",
+    "uuid" : "13f1642b-2d34-401b-9dc8-188fe365bf47",
+    "order" : 0.0
+  }, {
+    "name" : "Agricultural Labourers",
+    "uuid" : "b1d97768-c4b4-42b8-ae28-7e872a6a8ac2",
+    "order" : 1.0
+  }, {
+    "name" : "Artisans / Handicraft Workers",
+    "uuid" : "a8efe4ce-094c-4fdc-b718-d4d3da7218a5",
+    "order" : 2.0
+  }, {
+    "name" : "Fishermen",
+    "uuid" : "d811b297-104e-46fc-864e-5317bc056ad2",
+    "order" : 3.0
+  }, {
+    "name" : "Daily Wage Workers",
+    "uuid" : "f1c15574-6802-4358-ad22-cbe4e3038eb1",
+    "order" : 4.0
+  }, {
+    "name" : "Government Employees",
+    "uuid" : "5b746982-c42d-46dd-a7aa-1ddf84862bd1",
+    "order" : 5.0
+  }, {
+    "name" : "Private Sector Employees",
+    "uuid" : "4072445b-370e-447c-a249-329cc83f0c52",
+    "order" : 6.0
+  }, {
+    "name" : "Weavers / Handloom Workers",
+    "uuid" : "a9aed7ef-ca77-410c-8395-d32850f68516",
+    "order" : 7.0
+  }, {
+    "name" : "Construction Workers",
+    "uuid" : "dc154c12-b594-459d-8f53-7b5e0a04eb5e",
+    "order" : 8.0
+  }, {
+    "name" : "Industrial Workers",
+    "uuid" : "841e1dea-b929-4a38-9cdc-ba8ef2627666",
+    "order" : 9.0
+  }, {
+    "name" : "Scheduled Tribe",
+    "uuid" : "1af456ea-b84d-41d5-972d-52f134e33599",
+    "order" : 10.0
+  }, {
+    "name" : "Migrant Community",
+    "uuid" : "5f3d5be1-288d-484d-ac7b-d8deb363e5d5",
+    "order" : 11.0
+  }, {
+    "name" : "Missed Out Communities",
+    "uuid" : "17bbd941-a6d3-4729-8f8d-3928c5331f76",
+    "order" : 12.0
+  } ]
+}, {
   "name" : "Compost Pit",
   "uuid" : "798e61fa-8d8d-43b4-8738-251be7bdc5b4",
   "dataType" : "NA",
@@ -1405,6 +1798,11 @@
 }, {
   "name" : "Compost pit",
   "uuid" : "b462ddf4-977b-4bc5-8157-7f0132c5245d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Construction Workers",
+  "uuid" : "dc154c12-b594-459d-8f53-7b5e0a04eb5e",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -1485,6 +1883,11 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Daily Wage Workers",
+  "uuid" : "f1c15574-6802-4358-ad22-cbe4e3038eb1",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Daily Wagers",
   "uuid" : "a45cf0ac-7200-49a2-be31-a7317aaa46b6",
   "dataType" : "NA",
@@ -1502,6 +1905,16 @@
 }, {
   "name" : "Dapoli",
   "uuid" : "6797c0d8-1056-4745-9326-073efd09e5aa",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Date of Survey",
+  "uuid" : "5e078416-587c-4ad8-93e6-37cd6e7df8b6",
+  "dataType" : "Date",
+  "active" : true
+}, {
+  "name" : "Deforestation & Environmental Issues",
+  "uuid" : "cc1f0968-a75f-40e5-a486-918f6d3aff11",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -1536,6 +1949,11 @@
   "dataType" : "Text",
   "active" : true
 }, {
+  "name" : "Dengue",
+  "uuid" : "ca9b358f-6da1-483a-af4c-6096fe8b0a2c",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Depth",
   "uuid" : "ad7e9f42-d8b9-420b-b281-f5fc9cee43ef",
   "dataType" : "Numeric",
@@ -1547,8 +1965,18 @@
   "active" : true,
   "voided" : true
 }, {
+  "name" : "Detail of previous work",
+  "uuid" : "64520152-2df6-4abe-9330-18c626bedfc7",
+  "dataType" : "Text",
+  "active" : true
+}, {
   "name" : "Details for Any other (SI)",
   "uuid" : "fc4a9ce4-fe0e-4067-b848-e0dd9d6be2c7",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Details of Disaster Vulnerability",
+  "uuid" : "e0c6b0cc-7111-46b8-84c4-9bb59a85f407",
   "dataType" : "Text",
   "active" : true
 }, {
@@ -1598,6 +2026,20 @@
   "uuid" : "50bd6eb9-cce1-4eff-b4c2-e7177256e83f",
   "dataType" : "NA",
   "active" : true
+}, {
+  "name" : "Disaster Vulnerability?",
+  "uuid" : "62c90c8c-9ea1-494e-a433-09e81ff10c97",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "303d5ad1-ffa2-4096-ba7c-a86876ca9d12",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "40f13680-bc05-46ef-8223-e56cf20b8d0a",
+    "order" : 1.0
+  } ]
 }, {
   "name" : "Dispatch Date",
   "uuid" : "1a1097bc-c06a-493b-a7da-63f9e70f4ae0",
@@ -1879,6 +2321,11 @@
     "order" : 2.0
   } ]
 }, {
+  "name" : "Dongria Kondh",
+  "uuid" : "a2976f1d-91f7-40d4-a00a-d60203ab7a2f",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Drainage",
   "uuid" : "3f0bd027-abf0-4beb-a7e7-9967d1994852",
   "dataType" : "NA",
@@ -1900,6 +2347,12 @@
   "uuid" : "1b0285e1-0bc8-4461-b8cd-22e4b62d960f",
   "dataType" : "NA",
   "active" : true
+}, {
+  "name" : "dsvc",
+  "uuid" : "f72f4de6-47be-4980-a285-c5c3af339ee6",
+  "dataType" : "Text",
+  "active" : true,
+  "keyValues" : [ ]
 }, {
   "name" : "Dugwell/Chua/Jalkhund",
   "uuid" : "8cb3d890-db22-4c8b-885d-0cd71a0e4aad",
@@ -1942,6 +2395,35 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Education",
+  "uuid" : "44fbe13a-a45b-47fe-be31-b791ce46c1cb",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Education And Health",
+  "uuid" : "0064568c-3eb7-43fa-b485-3072ac6546cd",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "303d5ad1-ffa2-4096-ba7c-a86876ca9d12",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "40f13680-bc05-46ef-8223-e56cf20b8d0a",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Education and Health",
+  "uuid" : "00e97494-a65b-482b-b919-aab58d52e5b8",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Education Gaps & Lack of Schools",
+  "uuid" : "ba448088-da67-4fad-af43-8d34aeaacbd0",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Egg Shop Kit",
   "uuid" : "365114d4-1272-41fb-85f0-8bc96aa22f7a",
   "dataType" : "NA",
@@ -1967,6 +2449,16 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Emergency Contact Name",
+  "uuid" : "9e5b6c81-82e3-43af-9b1b-59b840cf7f60",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Emergency Contact Number",
+  "uuid" : "4459e712-b942-4527-8c88-852a90c2ff0e",
+  "dataType" : "Text",
+  "active" : true
+}, {
   "name" : "External",
   "uuid" : "b11b31da-323d-47a4-97a7-d0790dc9e782",
   "dataType" : "NA",
@@ -1989,6 +2481,11 @@
 }, {
   "name" : "Farmer Kit",
   "uuid" : "1df1a87d-c6a7-4db6-b12b-31aa946c05a9",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Farmers",
+  "uuid" : "13f1642b-2d34-401b-9dc8-188fe365bf47",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -2022,12 +2519,17 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Fishermen",
+  "uuid" : "d811b297-104e-46fc-864e-5317bc056ad2",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Fishery Community",
   "uuid" : "3b2e8baf-a7aa-4969-b6fe-0027e4343e25",
   "dataType" : "NA",
   "active" : true
 }, {
-  "name" : "Flash floods",
+  "name" : "Flash Flood",
   "uuid" : "5ffe578b-9cf5-464b-aeb9-a4454e3b297d",
   "dataType" : "NA",
   "active" : true
@@ -2061,6 +2563,11 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Garo",
+  "uuid" : "fa1844d8-87bf-4a1d-be0a-2157befdb9ab",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Gender",
   "uuid" : "4b8c5d72-1ed5-45a2-8b51-2becf9e1bff9",
   "dataType" : "Coded",
@@ -2089,6 +2596,11 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Gond",
+  "uuid" : "502edfcc-2858-4fbc-8a69-27624c78e25d",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Gondia",
   "uuid" : "3484a0f4-1171-4c7a-99ae-294990cbea08",
   "dataType" : "NA",
@@ -2096,6 +2608,31 @@
 }, {
   "name" : "Goonj product",
   "uuid" : "73e4cab9-b0d5-49a8-9cf2-c42f41523143",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Government Employees",
+  "uuid" : "5b746982-c42d-46dd-a7aa-1ddf84862bd1",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Government School",
+  "uuid" : "4288291c-759b-4241-bdb3-de4dca65afd2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Gram Panchayat",
+  "uuid" : "e716b999-70a3-46e6-a6ce-fa41af07b7d2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Gram Panchayat Name",
+  "uuid" : "abd267d7-2c9f-4d72-aabe-fc59ce4c877f",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Gravel/Dirt",
+  "uuid" : "bcaa403c-be8f-4b97-84f0-e60867185d9a",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -2121,6 +2658,11 @@
 }, {
   "name" : "Gujarat",
   "uuid" : "892f0fac-999b-4051-916c-430715a13604",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Handicrafts / Artisans",
+  "uuid" : "a1c330da-6b53-422c-b4db-274fce7598b5",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -2173,6 +2715,11 @@
   "active" : true,
   "voided" : true
 }, {
+  "name" : "hidden",
+  "uuid" : "16b34bfc-00e6-4021-9dbe-1ee569475e37",
+  "dataType" : "Text",
+  "active" : true
+}, {
   "name" : "Himachal Pradesh",
   "uuid" : "21cf7f3b-28ec-4e1c-921f-4c98de39a2a5",
   "dataType" : "NA",
@@ -2183,14 +2730,56 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "HIV",
+  "uuid" : "c1823911-05e8-4a42-aa99-1b77605cec0b",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "HIV affected",
   "uuid" : "8df338a9-de53-4c13-8dd5-b869c3d45f2d",
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "HIV Patients",
+  "uuid" : "fc9319be-272a-4651-9d43-06ad9cd442e3",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Ho",
+  "uuid" : "f8ef3367-bc39-4baf-bc70-18e707d4dc8a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Households",
+  "uuid" : "83c0fdbf-43cb-470d-af30-478d31eb2786",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "<50",
+    "uuid" : "843fd664-5afe-45d1-a801-95ec4a0e0235",
+    "order" : 0.0
+  }, {
+    "name" : "50-100",
+    "uuid" : "9363412a-872f-4ad8-8887-30b4c1ad60a0",
+    "order" : 1.0
+  }, {
+    "name" : "100-500",
+    "uuid" : "b80349be-4055-4f50-9146-0d0e57b2d976",
+    "order" : 2.0
+  }, {
+    "name" : ">500",
+    "uuid" : "da6fb88e-4fd7-4be3-a6e0-4e60d0a3445a",
+    "order" : 3.0
+  } ]
+}, {
   "name" : "How the Material Makes a Difference",
   "uuid" : "dbb0e4fe-78a5-46de-b2bf-b2f1525268e1",
   "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Hunting & Gathering",
+  "uuid" : "9a08fa2a-dedf-44e8-8ec0-fb7d6f84d1e2",
+  "dataType" : "NA",
   "active" : true
 }, {
   "name" : "Images (voided~207570)",
@@ -2227,6 +2816,16 @@
 }, {
   "name" : "Individuals",
   "uuid" : "495f1001-01c9-4057-ac84-8b003d35f48a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Industrial Workers",
+  "uuid" : "841e1dea-b929-4a38-9cdc-ba8ef2627666",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Infrastructure Development",
+  "uuid" : "0f678bde-b26d-4948-9a40-4d59659788e3",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -2268,6 +2867,34 @@
   "uuid" : "6a21fa2e-f99d-43dd-8ef7-64a5c172db3a",
   "dataType" : "NA",
   "active" : true
+}, {
+  "name" : "Is Assessment Done?",
+  "uuid" : "348a795a-bbae-4353-be30-db9ae106d4f3",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "303d5ad1-ffa2-4096-ba7c-a86876ca9d12",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "40f13680-bc05-46ef-8223-e56cf20b8d0a",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Is drinking water available year-round?",
+  "uuid" : "c434f9a6-6308-4cda-b2f3-a58ddb47da38",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "303d5ad1-ffa2-4096-ba7c-a86876ca9d12",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "40f13680-bc05-46ef-8223-e56cf20b8d0a",
+    "order" : 1.0
+  } ]
 }, {
   "name" : "Is the activity available for linking?",
   "uuid" : "7b23c3ff-dafc-4c9e-9395-e5e718d759b1",
@@ -2318,8 +2945,18 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "January–March",
+  "uuid" : "8d2d2e42-dc85-4320-8862-1ff966ba8dc7",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Jharkhand",
   "uuid" : "dea8a4cb-01b3-4ba6-9a63-b629f7ade606",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "July–September",
+  "uuid" : "de7871cc-b5b0-488f-b087-0935c4d38a35",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -2330,6 +2967,11 @@
 }, {
   "name" : "Kerala",
   "uuid" : "c4b35916-0f29-42c3-a96a-db7741bb7995",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Khasi",
+  "uuid" : "3cdc5f9b-bbd7-4d35-9c93-a4af91a9318a",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -2621,6 +3263,16 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Koya",
+  "uuid" : "05af3568-8bc2-492e-8bb4-fcb1a61d009c",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Kui",
+  "uuid" : "fe828276-fe36-4c7b-8307-087fbf3b9251",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Kumbhavade",
   "uuid" : "f4a1efc2-5c3b-47c5-8931-f120285cadae",
   "dataType" : "NA",
@@ -2641,6 +3293,11 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Labor & Daily Wage Work",
+  "uuid" : "75c26640-722b-4123-bd2d-989b27127a61",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Labor Kit",
   "uuid" : "90d580bd-f76c-4633-bb5b-4b92bc057c86",
   "dataType" : "NA",
@@ -2648,6 +3305,16 @@
 }, {
   "name" : "Labour Kit",
   "uuid" : "4a29b8af-dc91-44b8-b820-586568a02870",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Lack of Irrigation Facilities for Farmers",
+  "uuid" : "7c494ade-d488-4bf3-a4d6-cfae170be2b0",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Lack of Water",
+  "uuid" : "13afaa79-cb55-4d42-952e-3d8d37736f46",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -2699,13 +3366,33 @@
   "active" : true,
   "voided" : true
 }, {
+  "name" : "Lepchaw",
+  "uuid" : "3b4b3c7f-b905-40f6-9373-d0594d6373bf",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Leprosy affected",
   "uuid" : "4af95ec9-9da1-4367-a2fa-2a8392822cc8",
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Leprosy Patients",
+  "uuid" : "0aadd471-cbc5-4f08-a053-f16204189c9e",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Library",
   "uuid" : "443a0184-64e8-4d07-af2a-6c2af26551c2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Livelihood Support",
+  "uuid" : "e0089787-8825-46f0-bf7c-811904863375",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Livestock & Animal Husbandry",
+  "uuid" : "f57f7db9-bd08-4df2-8bba-1e2c61ab142f",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -2790,6 +3477,11 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Malaria",
+  "uuid" : "84208c03-9602-437e-8616-bff854982a9e",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Male",
   "uuid" : "8674b5ec-b08a-4c6d-acb0-989bc7344dfd",
   "dataType" : "NA",
@@ -2797,6 +3489,11 @@
 }, {
   "name" : "Malewadi",
   "uuid" : "301b306d-c09a-4c03-b672-cc4f694a0da2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Malnutrition",
+  "uuid" : "761be3c9-8c15-4b59-99b2-880bb5cce559",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -2972,6 +3669,11 @@
   "dataType" : "QuestionGroup",
   "active" : true
 }, {
+  "name" : "Maternal Health",
+  "uuid" : "24d6a068-066c-47df-94eb-bc9b7da64168",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Maternity Homes",
   "uuid" : "abc61217-d875-46f7-85f4-bb49eb324279",
   "dataType" : "NA",
@@ -3010,6 +3712,11 @@
     "order" : 4.0
   } ]
 }, {
+  "name" : "Meena",
+  "uuid" : "110a54e4-c191-4cce-a8a9-75af467a8f16",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Meghalaya",
   "uuid" : "48ea97d2-9dd8-474f-974b-cf27190bb74c",
   "dataType" : "NA",
@@ -3020,8 +3727,27 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Migrant Community",
+  "uuid" : "5f3d5be1-288d-484d-ac7b-d8deb363e5d5",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Work-Based",
+    "uuid" : "51853a79-68a9-4241-baf6-38b4c289a514",
+    "order" : 0.0
+  }, {
+    "name" : "Nomadic/Displaced",
+    "uuid" : "263fdbce-40cc-4ca0-96cb-bba62cbbaeb2",
+    "order" : 1.0
+  } ]
+}, {
   "name" : "Migrant workers",
   "uuid" : "0ee9a1f6-c598-47ae-9c84-64aae903cc9b",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Migration of Youth to Cities",
+  "uuid" : "282da639-e28d-4dcc-a8da-eda2375afb35",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -3052,6 +3778,40 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Missed Out Communities",
+  "uuid" : "17bbd941-a6d3-4729-8f8d-3928c5331f76",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Transgenders",
+    "uuid" : "bb9b146f-d1df-49d9-82eb-dab38c2bc8c8",
+    "order" : 0.0
+  }, {
+    "name" : "Sex workers",
+    "uuid" : "9160545f-e051-4d6f-b2c2-fcb2d17ac533",
+    "order" : 1.0
+  }, {
+    "name" : "Leprosy Patients",
+    "uuid" : "0aadd471-cbc5-4f08-a053-f16204189c9e",
+    "order" : 2.0
+  }, {
+    "name" : "HIV Patients",
+    "uuid" : "fc9319be-272a-4651-9d43-06ad9cd442e3",
+    "order" : 3.0
+  }, {
+    "name" : "Silicosis Patient",
+    "uuid" : "5842c985-284f-4887-aaf5-cd469111a81c",
+    "order" : 4.0
+  }, {
+    "name" : "Artisans",
+    "uuid" : "73d1cedb-66f4-425b-9da4-7b22e87df967",
+    "order" : 5.0
+  }, {
+    "name" : "Other",
+    "uuid" : "df625e4f-b11f-40bd-b846-422af836f273",
+    "order" : 6.0
+  } ]
+}, {
   "name" : "Mizoram",
   "uuid" : "97a6c404-ca7c-4380-9355-486a56010cf0",
   "dataType" : "NA",
@@ -3079,6 +3839,11 @@
 }, {
   "name" : "Mumbai Suburban",
   "uuid" : "d64dcae8-9aab-4481-8eba-02e6d7e55ac6",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Munda",
+  "uuid" : "861b19dc-c59a-43ff-87df-2351535af76b",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -3112,8 +3877,23 @@
   "dataType" : "Text",
   "active" : true
 }, {
+  "name" : "Name of NGO",
+  "uuid" : "bc923dbe-dd46-48b4-b719-a1fc6e4c485a",
+  "dataType" : "Text",
+  "active" : true
+}, {
   "name" : "Name of POC",
   "uuid" : "1dc4c483-3497-47d2-8088-507fe7f08ec5",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Name of Surveyor",
+  "uuid" : "62e46ab7-a829-4e66-946b-ba21b468d99b",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Names of SHGs",
+  "uuid" : "b4c8f40f-1e35-49b0-a461-ae3e095f9f95",
   "dataType" : "Text",
   "active" : true
 }, {
@@ -3131,6 +3911,51 @@
   "uuid" : "203dbdd0-7484-44e0-8aea-6a70e4482e6b",
   "dataType" : "NA",
   "active" : true
+}, {
+  "name" : "Nearest Health Facility",
+  "uuid" : "678c1f38-27cb-449f-8cb0-ccbc3c2f4616",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Primary Health Center",
+    "uuid" : "e1fde7d1-3576-4759-ab6b-b629428dc6e5",
+    "order" : 0.0
+  }, {
+    "name" : "Sub-Center",
+    "uuid" : "d4f524b7-cbf6-432c-88d4-089390bf0d6c",
+    "order" : 1.0
+  }, {
+    "name" : "Private Clinic",
+    "uuid" : "4dc9f36f-23a7-4a71-850a-224721ce4b9b",
+    "order" : 2.0
+  }, {
+    "name" : "None",
+    "uuid" : "ba835221-04c0-4e55-a08f-e6e25bb6719c",
+    "unique" : true,
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Nearest Primary School",
+  "uuid" : "e9a8d309-f78d-406f-a807-adbc3bca3200",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Within Village",
+    "uuid" : "23a260c5-245f-48d7-8af2-604f2f5545dc",
+    "order" : 0.0
+  }, {
+    "name" : "<2 km",
+    "uuid" : "cf9b4ce3-2526-4768-939b-6f7cb1aeca82",
+    "order" : 1.0
+  }, {
+    "name" : "2-5 km",
+    "uuid" : "e3d49ccb-2221-4c3a-8c9f-549890153c9e",
+    "order" : 2.0
+  }, {
+    "name" : ">5 km",
+    "uuid" : "1ca3bc67-4d64-4ef3-ac25-b0777cb25f3d",
+    "order" : 3.0
+  } ]
 }, {
   "name" : "Net quantity (voided~207369)",
   "uuid" : "964bdf93-a65c-410f-8f42-a76e46a5bfab",
@@ -3192,6 +4017,16 @@
   "dataType" : "Numeric",
   "active" : true
 }, {
+  "name" : "No Road",
+  "uuid" : "5b301da0-dbc6-4658-8424-cb6e9703ae81",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Nomadic/Displaced",
+  "uuid" : "263fdbce-40cc-4ca0-96cb-bba62cbbaeb2",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Non-Kit",
   "uuid" : "6e47adc2-7143-475e-bae5-29c58f593c32",
   "dataType" : "Numeric",
@@ -3225,6 +4060,11 @@
 }, {
   "name" : "Not Applicable",
   "uuid" : "ca098686-79b0-4219-8f33-479363f8a69a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Not Available",
+  "uuid" : "e1f66ad7-7070-4d21-930d-29372b5e1159",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -3417,6 +4257,18 @@
   "active" : true,
   "voided" : true,
   "keyValues" : [ ]
+}, {
+  "name" : "Number of students (Female)",
+  "uuid" : "9bb209c9-c2fe-4c72-8d60-030522e53bb2",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Number of students (Male)",
+  "uuid" : "f0e7c823-6586-45eb-a687-9ad4f7e0375d",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
 }, {
   "name" : "Numbers",
   "uuid" : "23598869-15a8-43d3-a8f3-4f75b372cdc1",
@@ -3664,6 +4516,16 @@
   "active" : true,
   "voided" : true
 }, {
+  "name" : "Occasional",
+  "uuid" : "4ec22149-b2d2-435c-a161-d1209d60a1f7",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "October–December",
+  "uuid" : "820bfabb-6bbb-4b36-a8a6-b63b1734e6a3",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Odisha",
   "uuid" : "7c4fc833-8e8c-46f2-a6e5-46e630aaa1a6",
   "dataType" : "NA",
@@ -3704,6 +4566,16 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Oraon",
+  "uuid" : "0dc50f5d-6b23-4108-b0a1-701e80f5fd9f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Organization Name",
+  "uuid" : "8f735d4d-bbd3-4190-bf05-72574fda5a93",
+  "dataType" : "Text",
+  "active" : true
+}, {
   "name" : "Osmanabad",
   "uuid" : "913c34ac-f70f-4ea7-b771-1a70c55ad9ee",
   "dataType" : "NA",
@@ -3712,6 +4584,16 @@
   "name" : "Other",
   "uuid" : "df625e4f-b11f-40bd-b846-422af836f273",
   "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Other available Drinking Water Sources",
+  "uuid" : "1c0c34e2-7ec0-4a7a-b8da-ca35f3efa1f0",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other Biggest Challenges",
+  "uuid" : "dce8869f-d77a-4072-bd86-675bd88b4195",
+  "dataType" : "Text",
   "active" : true
 }, {
   "name" : "Other Block",
@@ -3725,6 +4607,11 @@
   "active" : true,
   "voided" : true
 }, {
+  "name" : "Other Health Issues",
+  "uuid" : "049a8310-207d-468d-aa03-01ec1e282a40",
+  "dataType" : "Text",
+  "active" : true
+}, {
   "name" : "Other Kit Details",
   "uuid" : "3461ef7c-f5f3-4cb2-ab10-7a4d57a85fed",
   "dataType" : "Text",
@@ -3735,8 +4622,33 @@
   "dataType" : "Text",
   "active" : true
 }, {
+  "name" : "Other Missed Out Communities",
+  "uuid" : "08a43a82-c5b0-41ee-abbe-5fa48c18e3ad",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other Occupation",
+  "uuid" : "b8bf80f1-1d0e-4ccc-87cb-b5f273eb8d60",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "other schedule tribe",
+  "uuid" : "2474e9d2-b8dc-4295-819f-4ce9655b0b11",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other Source of Data",
+  "uuid" : "182ee5d3-4544-45ab-8456-a34e70377cc0",
+  "dataType" : "Text",
+  "active" : true
+}, {
   "name" : "Other Village",
   "uuid" : "16b4db7c-e0a8-41f1-ac67-07470a762d9f",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other Work Needed",
+  "uuid" : "2bb09e63-c8f1-49bf-9dd6-4009f9bb18ac",
   "dataType" : "Text",
   "active" : true
 }, {
@@ -3770,8 +4682,18 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Paved",
+  "uuid" : "7827ac5f-8465-4662-b9bf-0e514ee4eead",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Percolation pit",
   "uuid" : "1162b0e5-7ccf-4eac-92b4-6e71898fa268",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Performing Arts (Folk Dance, Music)",
+  "uuid" : "fdecb849-4370-42d7-897f-9c5eb86037c6",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -3787,6 +4709,11 @@
   "name" : "Photograph",
   "uuid" : "ed133199-dbae-4ba7-8c5c-2f23f119edf5",
   "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Piped Water",
+  "uuid" : "9940604d-7036-4ddc-9151-0e5613842f83",
+  "dataType" : "NA",
   "active" : true
 }, {
   "name" : "Plantation",
@@ -3818,15 +4745,145 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Poor Healthcare Facilities",
+  "uuid" : "4610308f-458b-4cb3-9071-cf002de4142b",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Poor menstrual hygiene",
+  "uuid" : "b7d2c002-9006-4234-b500-405168ce0d24",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Poor Roads & Connectivity",
+  "uuid" : "fbebacfe-f8e5-4389-a449-0fffdcf70f02",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Poor Sanitation & Waste Management",
+  "uuid" : "0a48dc8f-8bbf-4501-8885-ef0cb3713346",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Population",
+  "uuid" : "ca5575f7-e11c-4917-b291-a0c4ec88c33f",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "<500",
+    "uuid" : "9733c22a-1a80-4058-9a6f-f72d5b56dc73",
+    "order" : 0.0
+  }, {
+    "name" : "500-1000",
+    "uuid" : "b9285313-2488-49de-be21-0f2f52c4f623",
+    "order" : 1.0
+  }, {
+    "name" : "1000-5000",
+    "uuid" : "114e16fc-d589-43b7-9564-d8fef4ea501d",
+    "order" : 2.0
+  }, {
+    "name" : ">5000",
+    "uuid" : "0277ebfa-a55f-4653-b6f7-a69988a5faa0",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Preferred quarter for working",
+  "uuid" : "8d33076f-cfd5-41b9-a233-f6b89fcc417f",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "April–June",
+    "uuid" : "4af87e34-a6f1-410b-96b4-48cc21ae6c99",
+    "order" : 0.0
+  }, {
+    "name" : "July–September",
+    "uuid" : "de7871cc-b5b0-488f-b087-0935c4d38a35",
+    "order" : 1.0
+  }, {
+    "name" : "October–December",
+    "uuid" : "820bfabb-6bbb-4b36-a8a6-b63b1734e6a3",
+    "order" : 2.0
+  }, {
+    "name" : "January–March",
+    "uuid" : "8d2d2e42-dc85-4320-8862-1ff966ba8dc7",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Presence of SHGs",
+  "uuid" : "bd34eac8-7086-4ce2-abcf-89b806844665",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "303d5ad1-ffa2-4096-ba7c-a86876ca9d12",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "40f13680-bc05-46ef-8223-e56cf20b8d0a",
+    "order" : 1.0
+  } ]
+}, {
   "name" : "Present Occupation",
   "uuid" : "1b557e4e-60df-45cc-8cf8-007c9f03d461",
   "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Previous Work in This Village?",
+  "uuid" : "642d5b6d-c5a3-4c7e-8552-b9dc048ee714",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "303d5ad1-ffa2-4096-ba7c-a86876ca9d12",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "40f13680-bc05-46ef-8223-e56cf20b8d0a",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Primary Health Center",
+  "uuid" : "e1fde7d1-3576-4759-ab6b-b629428dc6e5",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Primary Health Center (PHC) / Sub-Center",
+  "uuid" : "266cb503-dbed-4a1c-9f3f-4ea18b20c607",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Private Clinic",
+  "uuid" : "4dc9f36f-23a7-4a71-850a-224721ce4b9b",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Private Sector Employees",
+  "uuid" : "4072445b-370e-447c-a249-329cc83f0c52",
+  "dataType" : "NA",
   "active" : true
 }, {
   "name" : "Protection wall for roads",
   "uuid" : "62f4b7d6-4a4a-4064-aa0e-a0c21053eec2",
   "dataType" : "NA",
   "active" : true
+}, {
+  "name" : "Public Transport Availability",
+  "uuid" : "714e0107-0f8a-4ab9-b564-f2503511dc39",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Regular",
+    "uuid" : "0a8b9e9a-84eb-4829-9c58-091a8827ff4d",
+    "order" : 0.0
+  }, {
+    "name" : "Occasional",
+    "uuid" : "4ec22149-b2d2-435c-a161-d1209d60a1f7",
+    "order" : 1.0
+  }, {
+    "name" : "Not Available",
+    "uuid" : "e1f66ad7-7070-4d21-930d-29372b5e1159",
+    "order" : 2.0
+  } ]
 }, {
   "name" : "Puchase/High Value",
   "uuid" : "815ac13f-396b-4e2a-8e64-8c66b8c59441",
@@ -3974,6 +5031,11 @@
   "active" : true,
   "voided" : true
 }, {
+  "name" : "Rabha",
+  "uuid" : "a340af0e-b8b7-4ade-9f6a-9f863209d86d",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Ragpickers",
   "uuid" : "27818169-2925-4895-b4ea-6cc30cedc5b0",
   "dataType" : "NA",
@@ -4028,9 +5090,19 @@
   "dataType" : "Image",
   "active" : true
 }, {
+  "name" : "Regular",
+  "uuid" : "0a8b9e9a-84eb-4829-9c58-091a8827ff4d",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Related Distribution",
   "uuid" : "bba1a9f8-398f-4ae7-b19d-c75821afbb65",
   "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Related Village",
+  "uuid" : "329b8c41-b497-4616-86e2-3efe148b1795",
+  "dataType" : "GroupAffiliation",
   "active" : true
 }, {
   "name" : "Remarks",
@@ -4068,6 +5140,11 @@
     "order" : 1.0
   } ]
 }, {
+  "name" : "Revenue Department",
+  "uuid" : "94730d21-8f45-49e7-a677-8dd123cb4136",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Rickshaw Pullers",
   "uuid" : "43803088-d89d-425e-991f-1343ddbd66c4",
   "dataType" : "NA",
@@ -4083,6 +5160,11 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "River/Pond",
+  "uuid" : "e16eb815-df2e-489b-b571-dd2c35927632",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Road",
   "uuid" : "f98bacd7-701e-49ce-a268-b3e83d8f194f",
   "dataType" : "NA",
@@ -4095,6 +5177,11 @@
 }, {
   "name" : "Rohingya community",
   "uuid" : "508b8292-894a-4ed2-b090-96283dccaff0",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Rural Development/Community Assets Development",
+  "uuid" : "8cd268c9-ec39-42b9-a821-c335e0809f10",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -4191,8 +5278,117 @@
     "order" : 12.0
   } ]
 }, {
+  "name" : "Santhal",
+  "uuid" : "bf7daa0c-843b-4676-ba4d-a170b7b51d29",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Satara",
   "uuid" : "13025832-19f6-42cb-a5e5-41e023591f4f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Saura",
+  "uuid" : "0e6f7b15-06e1-43df-bdb8-7cf64e023f6b",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "schedule tribe type",
+  "uuid" : "26018a42-6d69-418e-a73f-ac8c169f3a7b",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Gond",
+    "uuid" : "502edfcc-2858-4fbc-8a69-27624c78e25d",
+    "order" : 0.0
+  }, {
+    "name" : "Bhil",
+    "uuid" : "ee9a09a9-61cb-45b4-a67a-6a17020aa1d8",
+    "order" : 1.0
+  }, {
+    "name" : "Santhal",
+    "uuid" : "bf7daa0c-843b-4676-ba4d-a170b7b51d29",
+    "order" : 2.0
+  }, {
+    "name" : "Munda",
+    "uuid" : "861b19dc-c59a-43ff-87df-2351535af76b",
+    "order" : 3.0
+  }, {
+    "name" : "Oraon",
+    "uuid" : "0dc50f5d-6b23-4108-b0a1-701e80f5fd9f",
+    "order" : 4.0
+  }, {
+    "name" : "Ho",
+    "uuid" : "f8ef3367-bc39-4baf-bc70-18e707d4dc8a",
+    "order" : 5.0
+  }, {
+    "name" : "Bodo",
+    "uuid" : "4a37a9c8-ece3-408e-a78d-85205c5a1e3f",
+    "order" : 6.0
+  }, {
+    "name" : "Khasi",
+    "uuid" : "3cdc5f9b-bbd7-4d35-9c93-a4af91a9318a",
+    "order" : 7.0
+  }, {
+    "name" : "Garo",
+    "uuid" : "fa1844d8-87bf-4a1d-be0a-2157befdb9ab",
+    "order" : 8.0
+  }, {
+    "name" : "Meena",
+    "uuid" : "110a54e4-c191-4cce-a8a9-75af467a8f16",
+    "order" : 9.0
+  }, {
+    "name" : "Baiga",
+    "uuid" : "f0b5a15a-7315-40c6-8ab1-75430ad175af",
+    "order" : 10.0
+  }, {
+    "name" : "Tharu",
+    "uuid" : "ae3f809e-5315-44ab-b6e0-61cd1cf984ef",
+    "order" : 11.0
+  }, {
+    "name" : "Dongria Kondh",
+    "uuid" : "a2976f1d-91f7-40d4-a00a-d60203ab7a2f",
+    "order" : 12.0
+  }, {
+    "name" : "Koya",
+    "uuid" : "05af3568-8bc2-492e-8bb4-fcb1a61d009c",
+    "order" : 13.0
+  }, {
+    "name" : "Siddi",
+    "uuid" : "b3c15b45-b30e-49a2-a310-ea48a330e860",
+    "order" : 14.0
+  }, {
+    "name" : "Rabha",
+    "uuid" : "a340af0e-b8b7-4ade-9f6a-9f863209d86d",
+    "order" : 15.0
+  }, {
+    "name" : "Chakma",
+    "uuid" : "15223fd2-a804-4ff0-b69a-0d0d787e678d",
+    "order" : 16.0
+  }, {
+    "name" : "Toto",
+    "uuid" : "b4aa91cf-e524-4531-bba4-284631adca81",
+    "order" : 17.0
+  }, {
+    "name" : "Lepchaw",
+    "uuid" : "3b4b3c7f-b905-40f6-9373-d0594d6373bf",
+    "order" : 18.0
+  }, {
+    "name" : "Kui",
+    "uuid" : "fe828276-fe36-4c7b-8307-087fbf3b9251",
+    "order" : 19.0
+  }, {
+    "name" : "Saura",
+    "uuid" : "0e6f7b15-06e1-43df-bdb8-7cf64e023f6b",
+    "order" : 20.0
+  }, {
+    "name" : "Other",
+    "uuid" : "df625e4f-b11f-40bd-b846-422af836f273",
+    "order" : 21.0
+  } ]
+}, {
+  "name" : "Scheduled Tribe",
+  "uuid" : "1af456ea-b84d-41d5-972d-52f134e33599",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -4211,6 +5407,11 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "School Name",
+  "uuid" : "14e404cd-7e56-443d-afbd-350e8cf61fb4",
+  "dataType" : "Text",
+  "active" : true
+}, {
   "name" : "sdfdfssfdfsf",
   "uuid" : "338b08aa-765b-48fd-966e-3dd4713ebfcb",
   "dataType" : "QuestionGroup",
@@ -4221,8 +5422,55 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Select the top three occupations in this village",
+  "uuid" : "c58fa8fb-606a-4714-aa5a-95b7036efaca",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Agriculture & Allied Activities",
+    "uuid" : "3cbb2149-8379-4620-bb2a-9325c295bf52",
+    "order" : 0.0
+  }, {
+    "name" : "Livestock & Animal Husbandry",
+    "uuid" : "f57f7db9-bd08-4df2-8bba-1e2c61ab142f",
+    "order" : 1.0
+  }, {
+    "name" : "Labor & Daily Wage Work",
+    "uuid" : "75c26640-722b-4123-bd2d-989b27127a61",
+    "order" : 2.0
+  }, {
+    "name" : "Banjara / Trading Community",
+    "uuid" : "a0a67e84-e00d-4b7d-9684-c28a1ed461b0",
+    "order" : 3.0
+  }, {
+    "name" : "Performing Arts (Folk Dance, Music)",
+    "uuid" : "fdecb849-4370-42d7-897f-9c5eb86037c6",
+    "order" : 4.0
+  }, {
+    "name" : "Hunting & Gathering",
+    "uuid" : "9a08fa2a-dedf-44e8-8ec0-fb7d6f84d1e2",
+    "order" : 5.0
+  }, {
+    "name" : "Handicrafts / Artisans",
+    "uuid" : "a1c330da-6b53-422c-b4db-274fce7598b5",
+    "order" : 6.0
+  }, {
+    "name" : "Weaving & Textile",
+    "uuid" : "58d676ee-3a0a-4a7c-bd8b-e193d9e31146",
+    "order" : 7.0
+  }, {
+    "name" : "Other",
+    "uuid" : "df625e4f-b11f-40bd-b846-422af836f273",
+    "order" : 8.0
+  } ]
+}, {
   "name" : "Senior Citizens",
   "uuid" : "b4f90cb7-1cd7-4f72-aba0-49f961fc27ea",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Sex workers",
+  "uuid" : "9160545f-e051-4d6f-b2c2-fcb2d17ac533",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -4246,8 +5494,23 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "Siddi",
+  "uuid" : "b3c15b45-b30e-49a2-a310-ea48a330e860",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Sikkim",
   "uuid" : "2c4c41d9-c750-4226-8364-5dc4d45579a0",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Silcosis",
+  "uuid" : "905c19bf-b60d-44f6-b66a-e4d98b7bec6b",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Silicosis Patient",
+  "uuid" : "5842c985-284f-4887-aaf5-cd469111a81c",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -4270,6 +5533,48 @@
   "uuid" : "98913e69-ab32-48aa-9f50-cf539779ccf8",
   "dataType" : "Text",
   "active" : true
+}, {
+  "name" : "Source of Data",
+  "uuid" : "3d21abcf-ef54-493c-8424-ea09fe0bdd9b",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Gram Panchayat",
+    "uuid" : "e716b999-70a3-46e6-a6ce-fa41af07b7d2",
+    "order" : 0.0
+  }, {
+    "name" : "ASHA Worker",
+    "uuid" : "643801a6-3495-4bc6-9b64-a8559c60a55b",
+    "order" : 1.0
+  }, {
+    "name" : "Census of India",
+    "uuid" : "9e3c2f3c-d155-47a3-bc4d-0c453c1d1650",
+    "order" : 2.0
+  }, {
+    "name" : "Government School",
+    "uuid" : "4288291c-759b-4241-bdb3-de4dca65afd2",
+    "order" : 3.0
+  }, {
+    "name" : "Anganwadi Center",
+    "uuid" : "82e8ad09-8323-4eb5-8c36-6c5665581fab",
+    "order" : 4.0
+  }, {
+    "name" : "Primary Health Center (PHC) / Sub-Center",
+    "uuid" : "266cb503-dbed-4a1c-9f3f-4ea18b20c607",
+    "order" : 5.0
+  }, {
+    "name" : "Block Development Office",
+    "uuid" : "f1be93f0-81ba-49a5-840d-d9c9aa13046d",
+    "order" : 6.0
+  }, {
+    "name" : "Revenue Department",
+    "uuid" : "94730d21-8f45-49e7-a677-8dd123cb4136",
+    "order" : 7.0
+  }, {
+    "name" : "Other",
+    "uuid" : "df625e4f-b11f-40bd-b846-422af836f273",
+    "order" : 8.0
+  } ]
 }, {
   "name" : "Specific Initiative",
   "uuid" : "54d27687-374e-4988-ad81-e4d26bf02bf3",
@@ -4702,6 +6007,11 @@
   "active" : true,
   "voided" : true
 }, {
+  "name" : "Sub-Center",
+  "uuid" : "d4f524b7-cbf6-432c-88d4-089390bf0d6c",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Sub-Type",
   "uuid" : "edc2c868-9380-4855-b670-7193e9ccad94",
   "dataType" : "Coded",
@@ -4886,73 +6196,77 @@
   "dataType" : "Coded",
   "active" : true,
   "answers" : [ {
+    "name" : "Adivasis",
+    "uuid" : "0211094b-254a-4120-bd3f-940731663eb4",
+    "order" : 0.0
+  }, {
     "name" : "Adolescents",
     "uuid" : "7cf699d9-0a47-4111-95ce-b0c5df581762",
-    "order" : 0.0
+    "order" : 1.0
   }, {
     "name" : "Agricultural Related",
     "uuid" : "84adcd3a-c177-418e-88ea-ca3a1cdb56f5",
-    "order" : 1.0
+    "order" : 2.0
   }, {
     "name" : "Artisans",
     "uuid" : "73d1cedb-66f4-425b-9da4-7b22e87df967",
-    "order" : 2.0
+    "order" : 3.0
   }, {
     "name" : "Children",
     "uuid" : "d46b9822-d3c3-492d-a2a3-9ab623cfd802",
-    "order" : 3.0
+    "order" : 4.0
   }, {
     "name" : "Construction workers",
     "uuid" : "bc660964-f0c1-422a-a275-c308bbc86a9e",
-    "order" : 4.0
+    "order" : 5.0
   }, {
     "name" : "Daily Wagers",
     "uuid" : "a45cf0ac-7200-49a2-be31-a7317aaa46b6",
-    "order" : 5.0
+    "order" : 6.0
   }, {
     "name" : "Devdasi community",
     "uuid" : "1b6229ca-3360-4ba8-b858-1048f64f8d6b",
-    "order" : 6.0
+    "order" : 7.0
   }, {
     "name" : "Differently Abled",
     "uuid" : "81f059e7-7a88-4e9e-883e-a9bfb8ef468a",
-    "order" : 7.0
+    "order" : 8.0
   }, {
     "name" : "Embroidery workers",
     "uuid" : "0016afc5-47a2-46e0-867d-75ac3b0edfa0",
-    "order" : 8.0
+    "order" : 9.0
   }, {
     "name" : "Fisher community",
     "uuid" : "10d355b7-d81e-4937-8a5c-39e30c4e130b",
-    "order" : 9.0
+    "order" : 10.0
   }, {
     "name" : "Health workers and sweepers",
     "uuid" : "a87c0a89-9a65-43ab-8f94-daee22093c3b",
-    "order" : 10.0
+    "order" : 11.0
   }, {
     "name" : "HIV affected",
     "uuid" : "8df338a9-de53-4c13-8dd5-b869c3d45f2d",
-    "order" : 11.0
+    "order" : 12.0
   }, {
     "name" : "Leprosy affected",
     "uuid" : "4af95ec9-9da1-4367-a2fa-2a8392822cc8",
-    "order" : 12.0
+    "order" : 13.0
   }, {
     "name" : "lohar",
     "uuid" : "8585d735-9b9e-4801-adc8-c9c8c0b89518",
-    "order" : 13.0
+    "order" : 14.0
   }, {
     "name" : "Mentally Challenged",
     "uuid" : "c40880c6-cac6-4fd8-b30c-395f532d0a9c",
-    "order" : 14.0
+    "order" : 15.0
   }, {
     "name" : "Migrant workers",
     "uuid" : "0ee9a1f6-c598-47ae-9c84-64aae903cc9b",
-    "order" : 15.0
+    "order" : 16.0
   }, {
     "name" : "Puppeteers",
     "uuid" : "7720a9df-4c19-437d-8c47-0b55183af349",
-    "order" : 16.0
+    "order" : 17.0
   }, {
     "name" : "PWD",
     "uuid" : "dc6278fa-b9f5-457d-b5a4-807189ac26e6",
@@ -5145,6 +6459,11 @@
 }, {
   "name" : "Thane",
   "uuid" : "4f746cbf-fa51-4b34-aa2a-29369bf81d7d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Tharu",
+  "uuid" : "ae3f809e-5315-44ab-b6e0-61cd1cf984ef",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -5380,6 +6699,11 @@
   "dataType" : "Numeric",
   "active" : true
 }, {
+  "name" : "Toto",
+  "uuid" : "b4aa91cf-e524-4531-bba4-284631adca81",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Transgenders",
   "uuid" : "bb9b146f-d1df-49d9-82eb-dab38c2bc8c8",
   "dataType" : "NA",
@@ -5412,6 +6736,11 @@
 }, {
   "name" : "Tsunami",
   "uuid" : "9d7d7bc1-0c39-4d2d-afaf-4f4f53f6fc8f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Tuberculosis",
+  "uuid" : "03947563-dac5-4770-b545-481c4e229825",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -5726,7 +7055,7 @@
     "unique" : true,
     "order" : 5.0
   }, {
-    "name" : "Flash floods",
+    "name" : "Flash Flood",
     "uuid" : "5ffe578b-9cf5-464b-aeb9-a4454e3b297d",
     "unique" : true,
     "order" : 6.0
@@ -5784,24 +7113,6 @@
     "order" : 2.0
   } ]
 }, {
-  "name" : "Type of initiative",
-  "uuid" : "5df1e2e2-2bd1-40ee-a430-9dd3f9618eeb",
-  "dataType" : "Coded",
-  "active" : true,
-  "answers" : [ {
-    "name" : "CFW",
-    "uuid" : "85eda3f4-ee7c-4123-b330-77b4a7f817fd",
-    "order" : 0.0
-  }, {
-    "name" : "S2S",
-    "uuid" : "9fd9d626-faf7-4833-a3ab-47ec3b4388f6",
-    "order" : 1.0
-  }, {
-    "name" : "NJPC",
-    "uuid" : "6404fcaf-31de-4322-9620-c1b958f9c548",
-    "order" : 2.0
-  } ]
-}, {
   "name" : "Type of Initiative",
   "uuid" : "d04d6382-91d2-468c-b45f-d3afce94cba2",
   "dataType" : "Coded",
@@ -5841,27 +7152,49 @@
   }, {
     "name" : "Specific Initiative",
     "uuid" : "54d27687-374e-4988-ad81-e4d26bf02bf3",
-    "order" : 10.0
+    "order" : 7.0
   }, {
     "name" : "Vaapsi",
     "uuid" : "971c7a76-d296-4d47-9a90-47a612ceb4ca",
-    "order" : 11.0
+    "order" : 8.0
   }, {
     "name" : "CFW",
     "uuid" : "85eda3f4-ee7c-4123-b330-77b4a7f817fd",
-    "order" : 12.0
+    "order" : 9.0
   }, {
     "name" : "NJPC",
     "uuid" : "6404fcaf-31de-4322-9620-c1b958f9c548",
-    "order" : 13.0
+    "order" : 10.0
   }, {
     "name" : "S2S",
     "uuid" : "9fd9d626-faf7-4833-a3ab-47ec3b4388f6",
-    "order" : 14.0
+    "order" : 11.0
   }, {
     "name" : "Rahat",
     "uuid" : "cbf0805f-aac1-40b9-b78c-1c568b86ef24",
-    "order" : 15.0
+    "order" : 12.0
+  }, {
+    "name" : "Education and Health",
+    "uuid" : "00e97494-a65b-482b-b919-aab58d52e5b8",
+    "order" : 13.0
+  } ]
+}, {
+  "name" : "Type of initiative",
+  "uuid" : "5df1e2e2-2bd1-40ee-a430-9dd3f9618eeb",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "CFW",
+    "uuid" : "85eda3f4-ee7c-4123-b330-77b4a7f817fd",
+    "order" : 0.0
+  }, {
+    "name" : "S2S",
+    "uuid" : "9fd9d626-faf7-4833-a3ab-47ec3b4388f6",
+    "order" : 1.0
+  }, {
+    "name" : "NJPC",
+    "uuid" : "6404fcaf-31de-4322-9620-c1b958f9c548",
+    "order" : 2.0
   } ]
 }, {
   "name" : "Type of Material",
@@ -6016,9 +7349,37 @@
     "order" : 2.0
   } ]
 }, {
+  "name" : "Type of Road Connectivity",
+  "uuid" : "f3e401e1-712c-43d6-808f-77c997b38cdb",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Paved",
+    "uuid" : "7827ac5f-8465-4662-b9bf-0e514ee4eead",
+    "order" : 0.0
+  }, {
+    "name" : "Gravel/Dirt",
+    "uuid" : "bcaa403c-be8f-4b97-84f0-e60867185d9a",
+    "order" : 1.0
+  }, {
+    "name" : "No Road",
+    "uuid" : "5b301da0-dbc6-4658-8424-cb6e9703ae81",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Typhoid",
+  "uuid" : "2495e6a2-7f3d-4a86-9a00-6f307be2a239",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Undertaking Form Photographs",
   "uuid" : "a4f35739-40bf-4c8a-98b5-cd8a2ac37913",
   "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Unemployment & Lack of Job Opportunities",
+  "uuid" : "e506e31a-4a10-4b9d-956a-3f4bfa3e47f1",
+  "dataType" : "NA",
   "active" : true
 }, {
   "name" : "Unit",
@@ -6119,6 +7480,11 @@
   "dataType" : "Numeric",
   "active" : true
 }, {
+  "name" : "Village GA",
+  "uuid" : "67ff5633-a941-440c-8795-154431317cf4",
+  "dataType" : "GroupAffiliation",
+  "active" : true
+}, {
   "name" : "Villagers especially women and children were spending too much time in collecting waters",
   "uuid" : "0c1c43ae-9509-4f61-bc20-99ffb21fb3cc",
   "dataType" : "NA",
@@ -6184,6 +7550,11 @@
 }, {
   "name" : "Washim",
   "uuid" : "fb40f2d8-4db7-41e3-92ef-c0e6148fe3bd",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Water & Sanitation",
+  "uuid" : "e502a412-543f-4442-afed-755a0fb9271b",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -6374,6 +7745,11 @@
     "order" : 14.0
   } ]
 }, {
+  "name" : "Waterborne Diseases",
+  "uuid" : "74b8582b-11c5-4926-8e67-0b5cb8e87232",
+  "dataType" : "NA",
+  "active" : true
+}, {
   "name" : "Waterfall/Jharna/Spring Water/Dhara",
   "uuid" : "a5f019c6-17a0-4536-8222-67935d482774",
   "dataType" : "NA",
@@ -6381,6 +7757,16 @@
 }, {
   "name" : "Weavers",
   "uuid" : "95867a1b-bb19-469e-b21c-313016f3725d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Weavers / Handloom Workers",
+  "uuid" : "a9aed7ef-ca77-410c-8395-d32850f68516",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Weaving & Textile",
+  "uuid" : "58d676ee-3a0a-4a7c-bd8b-e193d9e31146",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -6394,6 +7780,40 @@
   "dataType" : "NA",
   "active" : true
 }, {
+  "name" : "What Kind of Work is Needed?",
+  "uuid" : "94fb42ee-5940-4472-ac95-e3f377ff3c39",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Education",
+    "uuid" : "44fbe13a-a45b-47fe-be31-b791ce46c1cb",
+    "order" : 0.0
+  }, {
+    "name" : "Water & Sanitation",
+    "uuid" : "e502a412-543f-4442-afed-755a0fb9271b",
+    "order" : 1.0
+  }, {
+    "name" : "Livelihood Support",
+    "uuid" : "e0089787-8825-46f0-bf7c-811904863375",
+    "order" : 2.0
+  }, {
+    "name" : "Infrastructure Development",
+    "uuid" : "0f678bde-b26d-4948-9a40-4d59659788e3",
+    "order" : 3.0
+  }, {
+    "name" : "Women’s Health",
+    "uuid" : "aee9cb88-3faf-4a1e-9073-2dcf31719103",
+    "order" : 4.0
+  }, {
+    "name" : "Rural Development/Community Assets Development",
+    "uuid" : "8cd268c9-ec39-42b9-a821-c335e0809f10",
+    "order" : 5.0
+  }, {
+    "name" : "Other",
+    "uuid" : "df625e4f-b11f-40bd-b846-422af836f273",
+    "order" : 6.0
+  } ]
+}, {
   "name" : "Whitewash/ painting",
   "uuid" : "654e67f1-9d45-444e-aab5-20a980733ca4",
   "dataType" : "NA",
@@ -6406,6 +7826,16 @@
 }, {
   "name" : "Winter",
   "uuid" : "a359a1d4-5a81-491d-84bd-aac0f819555f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Within Village",
+  "uuid" : "23a260c5-245f-48d7-8af2-604f2f5545dc",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Women’s Health",
+  "uuid" : "aee9cb88-3faf-4a1e-9073-2dcf31719103",
   "dataType" : "NA",
   "active" : true
 }, {
@@ -6627,6 +8057,11 @@
     "order" : 52.0
   } ],
   "keyValues" : [ ]
+}, {
+  "name" : "Work-Based",
+  "uuid" : "51853a79-68a9-4241-baf6-38b4c289a514",
+  "dataType" : "NA",
+  "active" : true
 }, {
   "name" : "X",
   "uuid" : "687c20b4-617a-4ae6-ac46-e686aa1283f1",

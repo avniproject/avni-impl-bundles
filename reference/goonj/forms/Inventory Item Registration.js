@@ -1340,6 +1340,21 @@
           "mandatory": false
         },
         {
+          "name": "Remarks",
+          "uuid": "2c71d10c-6bd7-4595-8801-9bc7f6be85ae",
+          "keyValues": [],
+          "concept": {
+            "name": "Remarks",
+            "uuid": "e132e4fe-7c7a-4612-b086-426b9f74147b",
+            "dataType": "Text",
+            "answers": [],
+            "active": true
+          },
+          "displayOrder": 25,
+          "type": "SingleSelect",
+          "mandatory": false
+        },
+        {
           "name": "Kit details",
           "uuid": "d0136679-7559-4aaa-b807-5cf46d865828",
           "keyValues": [],
@@ -1350,7 +1365,7 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 25,
+          "displayOrder": 26,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -1415,7 +1430,7 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 26,
+          "displayOrder": 27,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -1480,7 +1495,7 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 27,
+          "displayOrder": 28,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -1545,7 +1560,7 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 28,
+          "displayOrder": 29,
           "type": "SingleSelect",
           "parentFormElementUuid": "309ee062-5996-49d4-9980-37dddd1483db",
           "voided": true,
@@ -1562,7 +1577,7 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 29,
+          "displayOrder": 30,
           "type": "SingleSelect",
           "parentFormElementUuid": "309ee062-5996-49d4-9980-37dddd1483db",
           "voided": true,
@@ -1579,7 +1594,7 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 30,
+          "displayOrder": 31,
           "type": "SingleSelect",
           "parentFormElementUuid": "309ee062-5996-49d4-9980-37dddd1483db",
           "voided": true,
@@ -1596,7 +1611,7 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 31,
+          "displayOrder": 32,
           "type": "SingleSelect",
           "parentFormElementUuid": "309ee062-5996-49d4-9980-37dddd1483db",
           "voided": true,
@@ -1613,7 +1628,7 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 32,
+          "displayOrder": 33,
           "type": "SingleSelect",
           "parentFormElementUuid": "309ee062-5996-49d4-9980-37dddd1483db",
           "voided": true,
@@ -1630,7 +1645,7 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 33,
+          "displayOrder": 34,
           "type": "SingleSelect",
           "parentFormElementUuid": "309ee062-5996-49d4-9980-37dddd1483db",
           "voided": true,
@@ -1647,7 +1662,7 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 34,
+          "displayOrder": 35,
           "type": "SingleSelect",
           "parentFormElementUuid": "6b7f4d12-1cc0-45c2-8ee2-126f3b5446d6",
           "voided": true,
@@ -1664,7 +1679,7 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 35,
+          "displayOrder": 36,
           "type": "SingleSelect",
           "parentFormElementUuid": "6b7f4d12-1cc0-45c2-8ee2-126f3b5446d6",
           "voided": true,
@@ -1681,7 +1696,7 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 36,
+          "displayOrder": 37,
           "type": "SingleSelect",
           "parentFormElementUuid": "d0136679-7559-4aaa-b807-5cf46d865828",
           "voided": true,
@@ -1698,7 +1713,7 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 37,
+          "displayOrder": 38,
           "type": "SingleSelect",
           "parentFormElementUuid": "d0136679-7559-4aaa-b807-5cf46d865828",
           "voided": true,
@@ -1715,7 +1730,7 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 38,
+          "displayOrder": 39,
           "type": "SingleSelect",
           "parentFormElementUuid": "d0136679-7559-4aaa-b807-5cf46d865828",
           "voided": true,

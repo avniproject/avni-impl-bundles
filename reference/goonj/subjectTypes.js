@@ -25,9 +25,9 @@
       "displayRegistrationDetails": true,
       "displayPlannedEncounters": true
     },
+    "syncRegistrationConcept1Usable": true,
     "household": false,
     "group": false,
-    "syncRegistrationConcept1Usable": true,
     "directlyAssignable": false,
     "voided": false
   },
@@ -58,9 +58,9 @@
       "displayRegistrationDetails": true,
       "displayPlannedEncounters": true
     },
+    "syncRegistrationConcept1Usable": true,
     "household": false,
     "group": false,
-    "syncRegistrationConcept1Usable": true,
     "directlyAssignable": false,
     "voided": false
   },
@@ -82,9 +82,9 @@
       "displayRegistrationDetails": true,
       "displayPlannedEncounters": true
     },
+    "syncRegistrationConcept1Usable": true,
     "household": false,
     "group": false,
-    "syncRegistrationConcept1Usable": true,
     "directlyAssignable": false,
     "voided": false
   },
@@ -106,9 +106,9 @@
       "displayRegistrationDetails": true,
       "displayPlannedEncounters": true
     },
+    "syncRegistrationConcept1Usable": true,
     "household": false,
     "group": false,
-    "syncRegistrationConcept1Usable": true,
     "directlyAssignable": false,
     "voided": false
   },
@@ -116,7 +116,7 @@
     "name": "Village",
     "uuid": "c781319c-e47f-49f1-9ed7-7c85cd2bd16a",
     "active": true,
-    "type": "Individual",
+    "type": "Group",
     "subjectSummaryRule": "",
     "programEligibilityCheckRule": "",
     "allowEmptyLocation": false,
@@ -129,8 +129,9 @@
       "displayRegistrationDetails": true,
       "displayPlannedEncounters": true
     },
+    "syncRegistrationConcept1Usable": false,
     "household": false,
-    "group": false,
+    "group": true,
     "directlyAssignable": false,
     "voided": false
   }

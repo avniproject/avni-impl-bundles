@@ -1185,7 +1185,15 @@ if(imports.moment(distriutionDate).isAfter(visitDate, 'date'))
                 "uuid": "c40880c6-cac6-4fd8-b30c-395f532d0a9c",
                 "dataType": "NA",
                 "answers": [],
-                "order": 14,
+                "order": 15,
+                "active": true
+              },
+              {
+                "name": "Adivasis",
+                "uuid": "0211094b-254a-4120-bd3f-940731663eb4",
+                "dataType": "NA",
+                "answers": [],
+                "order": 0,
                 "active": true
               },
               {
@@ -1193,7 +1201,7 @@ if(imports.moment(distriutionDate).isAfter(visitDate, 'date'))
                 "uuid": "1b6229ca-3360-4ba8-b858-1048f64f8d6b",
                 "dataType": "NA",
                 "answers": [],
-                "order": 6,
+                "order": 7,
                 "active": true
               },
               {
@@ -1225,7 +1233,7 @@ if(imports.moment(distriutionDate).isAfter(visitDate, 'date'))
                 "uuid": "8df338a9-de53-4c13-8dd5-b869c3d45f2d",
                 "dataType": "NA",
                 "answers": [],
-                "order": 11,
+                "order": 12,
                 "active": true
               },
               {
@@ -1233,7 +1241,7 @@ if(imports.moment(distriutionDate).isAfter(visitDate, 'date'))
                 "uuid": "0016afc5-47a2-46e0-867d-75ac3b0edfa0",
                 "dataType": "NA",
                 "answers": [],
-                "order": 8,
+                "order": 9,
                 "active": true
               },
               {
@@ -1249,7 +1257,7 @@ if(imports.moment(distriutionDate).isAfter(visitDate, 'date'))
                 "uuid": "a45cf0ac-7200-49a2-be31-a7317aaa46b6",
                 "dataType": "NA",
                 "answers": [],
-                "order": 5,
+                "order": 6,
                 "active": true
               },
               {
@@ -1257,7 +1265,7 @@ if(imports.moment(distriutionDate).isAfter(visitDate, 'date'))
                 "uuid": "7cf699d9-0a47-4111-95ce-b0c5df581762",
                 "dataType": "NA",
                 "answers": [],
-                "order": 0,
+                "order": 1,
                 "active": true
               },
               {
@@ -1265,15 +1273,7 @@ if(imports.moment(distriutionDate).isAfter(visitDate, 'date'))
                 "uuid": "84adcd3a-c177-418e-88ea-ca3a1cdb56f5",
                 "dataType": "NA",
                 "answers": [],
-                "order": 1,
-                "active": true
-              },
-              {
-                "name": "Fisher community",
-                "uuid": "10d355b7-d81e-4937-8a5c-39e30c4e130b",
-                "dataType": "NA",
-                "answers": [],
-                "order": 9,
+                "order": 2,
                 "active": true
               },
               {
@@ -1285,6 +1285,14 @@ if(imports.moment(distriutionDate).isAfter(visitDate, 'date'))
                 "active": true
               },
               {
+                "name": "Fisher community",
+                "uuid": "10d355b7-d81e-4937-8a5c-39e30c4e130b",
+                "dataType": "NA",
+                "answers": [],
+                "order": 10,
+                "active": true
+              },
+              {
                 "name": "Tribal Community",
                 "uuid": "3fdad012-1109-4684-907c-0a268e6d1e9b",
                 "dataType": "NA",
@@ -1293,19 +1301,19 @@ if(imports.moment(distriutionDate).isAfter(visitDate, 'date'))
                 "active": true
               },
               {
-                "name": "Artisans",
-                "uuid": "73d1cedb-66f4-425b-9da4-7b22e87df967",
-                "dataType": "NA",
-                "answers": [],
-                "order": 2,
-                "active": true
-              },
-              {
                 "name": "Tea garden workers",
                 "uuid": "0640170e-b58f-4aac-a30c-01f5ad908a0a",
                 "dataType": "NA",
                 "answers": [],
                 "order": 26,
+                "active": true
+              },
+              {
+                "name": "Artisans",
+                "uuid": "73d1cedb-66f4-425b-9da4-7b22e87df967",
+                "dataType": "NA",
+                "answers": [],
+                "order": 3,
                 "active": true
               },
               {
@@ -1321,7 +1329,7 @@ if(imports.moment(distriutionDate).isAfter(visitDate, 'date'))
                 "uuid": "4af95ec9-9da1-4367-a2fa-2a8392822cc8",
                 "dataType": "NA",
                 "answers": [],
-                "order": 12,
+                "order": 13,
                 "active": true
               },
               {
@@ -1329,7 +1337,7 @@ if(imports.moment(distriutionDate).isAfter(visitDate, 'date'))
                 "uuid": "d46b9822-d3c3-492d-a2a3-9ab623cfd802",
                 "dataType": "NA",
                 "answers": [],
-                "order": 3,
+                "order": 4,
                 "active": true
               },
               {
@@ -1337,7 +1345,7 @@ if(imports.moment(distriutionDate).isAfter(visitDate, 'date'))
                 "uuid": "bc660964-f0c1-422a-a275-c308bbc86a9e",
                 "dataType": "NA",
                 "answers": [],
-                "order": 4,
+                "order": 5,
                 "active": true
               },
               {
@@ -1385,7 +1393,7 @@ if(imports.moment(distriutionDate).isAfter(visitDate, 'date'))
                 "uuid": "8585d735-9b9e-4801-adc8-c9c8c0b89518",
                 "dataType": "NA",
                 "answers": [],
-                "order": 13,
+                "order": 14,
                 "active": true
               },
               {
@@ -1393,7 +1401,7 @@ if(imports.moment(distriutionDate).isAfter(visitDate, 'date'))
                 "uuid": "0ee9a1f6-c598-47ae-9c84-64aae903cc9b",
                 "dataType": "NA",
                 "answers": [],
-                "order": 15,
+                "order": 16,
                 "active": true
               },
               {
@@ -1409,7 +1417,7 @@ if(imports.moment(distriutionDate).isAfter(visitDate, 'date'))
                 "uuid": "81f059e7-7a88-4e9e-883e-a9bfb8ef468a",
                 "dataType": "NA",
                 "answers": [],
-                "order": 7,
+                "order": 8,
                 "active": true
               },
               {
@@ -1417,7 +1425,7 @@ if(imports.moment(distriutionDate).isAfter(visitDate, 'date'))
                 "uuid": "a87c0a89-9a65-43ab-8f94-daee22093c3b",
                 "dataType": "NA",
                 "answers": [],
-                "order": 10,
+                "order": 11,
                 "active": true
               },
               {
@@ -1425,7 +1433,7 @@ if(imports.moment(distriutionDate).isAfter(visitDate, 'date'))
                 "uuid": "7720a9df-4c19-437d-8c47-0b55183af349",
                 "dataType": "NA",
                 "answers": [],
-                "order": 16,
+                "order": 17,
                 "active": true
               },
               {
@@ -1632,19 +1640,19 @@ if(imports.moment(distriutionDate).isAfter(visitDate, 'date'))
                 "active": true
               },
               {
-                "name": "Specific Initiative",
-                "uuid": "54d27687-374e-4988-ad81-e4d26bf02bf3",
-                "dataType": "NA",
-                "answers": [],
-                "order": 10,
-                "active": true
-              },
-              {
                 "name": "CFW-Rahat",
                 "uuid": "231a6748-7677-4eb1-8a37-15a0ab207d67",
                 "dataType": "NA",
                 "answers": [],
                 "order": 4,
+                "active": true
+              },
+              {
+                "name": "Specific Initiative",
+                "uuid": "54d27687-374e-4988-ad81-e4d26bf02bf3",
+                "dataType": "NA",
+                "answers": [],
+                "order": 7,
                 "active": true
               },
               {
@@ -1660,7 +1668,7 @@ if(imports.moment(distriutionDate).isAfter(visitDate, 'date'))
                 "uuid": "6404fcaf-31de-4322-9620-c1b958f9c548",
                 "dataType": "NA",
                 "answers": [],
-                "order": 13,
+                "order": 10,
                 "active": true
               },
               {
@@ -1700,7 +1708,15 @@ if(imports.moment(distriutionDate).isAfter(visitDate, 'date'))
                 "uuid": "9fd9d626-faf7-4833-a3ab-47ec3b4388f6",
                 "dataType": "NA",
                 "answers": [],
-                "order": 14,
+                "order": 11,
+                "active": true
+              },
+              {
+                "name": "Education and Health",
+                "uuid": "00e97494-a65b-482b-b919-aab58d52e5b8",
+                "dataType": "NA",
+                "answers": [],
+                "order": 13,
                 "active": true
               },
               {
@@ -1708,7 +1724,7 @@ if(imports.moment(distriutionDate).isAfter(visitDate, 'date'))
                 "uuid": "cbf0805f-aac1-40b9-b78c-1c568b86ef24",
                 "dataType": "NA",
                 "answers": [],
-                "order": 15,
+                "order": 12,
                 "active": true
               },
               {
@@ -1716,7 +1732,7 @@ if(imports.moment(distriutionDate).isAfter(visitDate, 'date'))
                 "uuid": "85eda3f4-ee7c-4123-b330-77b4a7f817fd",
                 "dataType": "NA",
                 "answers": [],
-                "order": 12,
+                "order": 9,
                 "active": true
               },
               {
@@ -1724,7 +1740,7 @@ if(imports.moment(distriutionDate).isAfter(visitDate, 'date'))
                 "uuid": "971c7a76-d296-4d47-9a90-47a612ceb4ca",
                 "dataType": "NA",
                 "answers": [],
-                "order": 11,
+                "order": 8,
                 "active": true
               }
             ],
@@ -1833,7 +1849,7 @@ if(imports.moment(distriutionDate).isAfter(visitDate, 'date'))
                 "active": true
               },
               {
-                "name": "Flash floods",
+                "name": "Flash Flood",
                 "uuid": "5ffe578b-9cf5-464b-aeb9-a4454e3b297d",
                 "dataType": "NA",
                 "answers": [],

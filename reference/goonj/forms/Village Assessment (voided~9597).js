@@ -523,19 +523,19 @@
                 "active": true
               },
               {
-                "name": "Specific Initiative",
-                "uuid": "54d27687-374e-4988-ad81-e4d26bf02bf3",
-                "dataType": "NA",
-                "answers": [],
-                "order": 10,
-                "active": true
-              },
-              {
                 "name": "CFW-Rahat",
                 "uuid": "231a6748-7677-4eb1-8a37-15a0ab207d67",
                 "dataType": "NA",
                 "answers": [],
                 "order": 4,
+                "active": true
+              },
+              {
+                "name": "Specific Initiative",
+                "uuid": "54d27687-374e-4988-ad81-e4d26bf02bf3",
+                "dataType": "NA",
+                "answers": [],
+                "order": 7,
                 "active": true
               },
               {
@@ -551,7 +551,7 @@
                 "uuid": "6404fcaf-31de-4322-9620-c1b958f9c548",
                 "dataType": "NA",
                 "answers": [],
-                "order": 13,
+                "order": 10,
                 "active": true
               },
               {
@@ -591,7 +591,15 @@
                 "uuid": "9fd9d626-faf7-4833-a3ab-47ec3b4388f6",
                 "dataType": "NA",
                 "answers": [],
-                "order": 14,
+                "order": 11,
+                "active": true
+              },
+              {
+                "name": "Education and Health",
+                "uuid": "00e97494-a65b-482b-b919-aab58d52e5b8",
+                "dataType": "NA",
+                "answers": [],
+                "order": 13,
                 "active": true
               },
               {
@@ -599,7 +607,7 @@
                 "uuid": "cbf0805f-aac1-40b9-b78c-1c568b86ef24",
                 "dataType": "NA",
                 "answers": [],
-                "order": 15,
+                "order": 12,
                 "active": true
               },
               {
@@ -607,7 +615,7 @@
                 "uuid": "85eda3f4-ee7c-4123-b330-77b4a7f817fd",
                 "dataType": "NA",
                 "answers": [],
-                "order": 12,
+                "order": 9,
                 "active": true
               },
               {
@@ -615,7 +623,7 @@
                 "uuid": "971c7a76-d296-4d47-9a90-47a612ceb4ca",
                 "dataType": "NA",
                 "answers": [],
-                "order": 11,
+                "order": 8,
                 "active": true
               }
             ],

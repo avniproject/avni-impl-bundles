@@ -324,7 +324,7 @@
       "displayOrder": 3,
       "formElements": [
         {
-          "name": "​",
+          "name": "​Please Proceed To Next Page",
           "uuid": "f6b9f1c1-695a-42c3-a066-26dc1acf62fb",
           "keyValues": [],
           "concept": {
@@ -400,12 +400,24 @@
   const formElement = params.formElement;
   const _ = imports.lodash;
   let visibility = false;
+  let value = null;
+  let answersToSkip = [];
+  let validationErrors = [];
 
   const isDefined = individual && 
                     individual.lowestAddressLevel && 
                     (Array.isArray(individual.lowestAddressLevel.locationMappings) && 
                      !_.isEmpty(individual.lowestAddressLevel.locationMappings) || 
                      !_.isEmpty(individual.lowestAddressLevel.titleLineage));
+                     
+    function toStartCase(str) {
+        return str
+        .toLowerCase()
+        .split(/[\\s_-]+/)
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+    }  
+                     
 
   if (isDefined) {
         let block = undefined;
@@ -428,8 +440,10 @@
 
         visibility = block === 'Other';
     }
+
+        
     
-  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility);
+  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility,value, answersToSkip, validationErrors);
 },
           "mandatory": true
         },
@@ -453,6 +467,10 @@
   const formElement = params.formElement;
   const _ = imports.lodash;
   let visibility = false;
+  let value = null;
+  let answersToSkip = [];
+  let validationErrors = [];
+  
   
   const isDefined = individual && 
                     individual.lowestAddressLevel && 
@@ -461,28 +479,23 @@
                      !_.isEmpty(individual.lowestAddressLevel.titleLineage));
 
   if (isDefined) {
-      let village = undefined;
-  
-      if (
-        Array.isArray(individual.lowestAddressLevel.locationMappings) &&
-        !_.isEmpty(individual.lowestAddressLevel.locationMappings) &&
-        individual.lowestAddressLevel.locationMappings[0] &&
-        individual.lowestAddressLevel.locationMappings[0].child &&
-        individual.lowestAddressLevel.locationMappings[0].child.name
-      ) {
-        village = individual.lowestAddressLevel.locationMappings[0].child.name;
-      } else if (
-        individual.lowestAddressLevel &&
-        individual.lowestAddressLevel.titleLineage
-      ) {
-        const titleParts = _.split(individual.lowestAddressLevel.titleLineage, ', ');
-        village = titleParts.length > 3 ? titleParts[3] : undefined;
-      }
-  
-      visibility = village === 'Other';
+    const village = Array.isArray(individual.lowestAddressLevel.locationMappings) && 
+                    !_.isEmpty(individual.lowestAddressLevel.locationMappings) && 
+                    individual.lowestAddressLevel.locationMappings[0] && 
+                    individual.lowestAddressLevel.locationMappings[0].child && 
+                    individual.lowestAddressLevel.locationMappings[0].child.name 
+                    || _.split(individual.lowestAddressLevel.titleLineage, ', ')[3];
+    
+    if (village === 'Other') {
+      visibility = true;
+    } else {
+      visibility = false;
+    }
   }
 
-  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility);
+  
+
+  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility,value, answersToSkip, validationErrors);
 },
           "mandatory": true
         },
@@ -569,6 +582,244 @@
           "mandatory": true
         },
         {
+          "name": "Education And Health",
+          "uuid": "b9e08d93-8de1-4e8f-9b84-0e715857c351",
+          "keyValues": [],
+          "concept": {
+            "name": "Education And Health",
+            "uuid": "0064568c-3eb7-43fa-b485-3072ac6546cd",
+            "dataType": "Coded",
+            "answers": [
+              {
+                "name": "No",
+                "uuid": "40f13680-bc05-46ef-8223-e56cf20b8d0a",
+                "dataType": "NA",
+                "answers": [],
+                "order": 1,
+                "active": true
+              },
+              {
+                "name": "Yes",
+                "uuid": "303d5ad1-ffa2-4096-ba7c-a86876ca9d12",
+                "dataType": "NA",
+                "answers": [],
+                "order": 0,
+                "active": true
+              }
+            ],
+            "active": true
+          },
+          "displayOrder": 9,
+          "type": "SingleSelect",
+          "rule" : 
+({params, imports}) => {
+  const individual = params.entity;
+  const moment = imports.moment;
+  const formElement = params.formElement;
+  const _ = imports.lodash;
+  let visibility = true;
+  let value = null;
+  let answersToSkip = [];
+  let validationErrors = [];
+  
+  const condition11 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("5df1e2e2-2bd1-40ee-a430-9dd3f9618eeb").containsAnswerConceptName("6404fcaf-31de-4322-9620-c1b958f9c548").matches();
+  
+  visibility = condition11 ;
+  
+  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);
+},
+          "declarativeRule": [
+            {
+              "actions": [
+                {
+                  "actionType": "showFormElement"
+                },
+                {}
+              ],
+              "conditions": [
+                {
+                  "compoundRule": {
+                    "rules": [
+                      {
+                        "lhs": {
+                          "type": "concept",
+                          "scope": "registration",
+                          "conceptName": "Type of initiative",
+                          "conceptUuid": "5df1e2e2-2bd1-40ee-a430-9dd3f9618eeb",
+                          "conceptDataType": "Coded"
+                        },
+                        "rhs": {
+                          "type": "answerConcept",
+                          "answerConceptNames": [
+                            "NJPC"
+                          ],
+                          "answerConceptUuids": [
+                            "6404fcaf-31de-4322-9620-c1b958f9c548"
+                          ]
+                        },
+                        "operator": "containsAnswerConceptName"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "mandatory": true
+        },
+        {
+          "name": "School Name",
+          "uuid": "53c6aa5c-9858-42d2-826b-e0ff911219ac",
+          "keyValues": [],
+          "concept": {
+            "name": "School Name",
+            "uuid": "14e404cd-7e56-443d-afbd-350e8cf61fb4",
+            "dataType": "Text",
+            "answers": [],
+            "active": true
+          },
+          "displayOrder": 10,
+          "type": "SingleSelect",
+          "rule" : 
+({params, imports}) => {
+  const individual = params.entity;
+  const moment = imports.moment;
+  const formElement = params.formElement;
+  const _ = imports.lodash;
+  let visibility = true;
+  let value = null;
+  let answersToSkip = [];
+  let validationErrors = [];
+  
+  const condition11 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("0064568c-3eb7-43fa-b485-3072ac6546cd").containsAnswerConceptName("303d5ad1-ffa2-4096-ba7c-a86876ca9d12").matches();
+  
+  visibility = condition11 ;
+  
+  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);
+},
+          "declarativeRule": [
+            {
+              "actions": [
+                {
+                  "actionType": "showFormElement"
+                },
+                {}
+              ],
+              "conditions": [
+                {
+                  "compoundRule": {
+                    "rules": [
+                      {
+                        "lhs": {
+                          "type": "concept",
+                          "scope": "registration",
+                          "conceptName": "Education and Health",
+                          "conceptUuid": "0064568c-3eb7-43fa-b485-3072ac6546cd",
+                          "conceptDataType": "Coded"
+                        },
+                        "rhs": {
+                          "type": "answerConcept",
+                          "answerConceptNames": [
+                            "Yes"
+                          ],
+                          "answerConceptUuids": [
+                            "303d5ad1-ffa2-4096-ba7c-a86876ca9d12"
+                          ]
+                        },
+                        "operator": "containsAnswerConceptName"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "voided": true,
+          "mandatory": true
+        },
+        {
+          "name": "Number of students (Male)",
+          "uuid": "7a4a27ba-4f43-4fbf-add7-acfc0d77441e",
+          "keyValues": [],
+          "concept": {
+            "name": "Number of students (Male)",
+            "uuid": "f0e7c823-6586-45eb-a687-9ad4f7e0375d",
+            "dataType": "Numeric",
+            "answers": [],
+            "lowAbsolute": 0,
+            "active": true
+          },
+          "displayOrder": 11,
+          "type": "SingleSelect",
+          "rule" : 
+({params, imports}) => {
+  const individual = params.entity;
+  const moment = imports.moment;
+  const formElement = params.formElement;
+  const _ = imports.lodash;
+  let visibility = true;
+  let value = null;
+  let answersToSkip = [];
+  let validationErrors = [];
+  
+  const condition11 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("0064568c-3eb7-43fa-b485-3072ac6546cd").containsAnswerConceptName("303d5ad1-ffa2-4096-ba7c-a86876ca9d12").matches();
+  
+  visibility = condition11 ;
+  
+  if(visibility){
+      let male = individual.getObservationReadableValue("f0e7c823-6586-45eb-a687-9ad4f7e0375d") || 0;
+      let female = individual.getObservationReadableValue("9bb209c9-c2fe-4c72-8d60-030522e53bb2") || 0;
+      if(male+female == 0){
+          validationErrors.push("Total participant should be greater than 0");
+      }
+  }
+  
+  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);
+},
+          "mandatory": true
+        },
+        {
+          "name": "Number of students (Female)",
+          "uuid": "948cbb26-0ff2-45c5-a04a-caf4245d7c6c",
+          "keyValues": [],
+          "concept": {
+            "name": "Number of students (Female)",
+            "uuid": "9bb209c9-c2fe-4c72-8d60-030522e53bb2",
+            "dataType": "Numeric",
+            "answers": [],
+            "lowAbsolute": 0,
+            "active": true
+          },
+          "displayOrder": 12,
+          "type": "SingleSelect",
+          "rule" : 
+({params, imports}) => {
+  const individual = params.entity;
+  const moment = imports.moment;
+  const formElement = params.formElement;
+  const _ = imports.lodash;
+  let visibility = true;
+  let value = null;
+  let answersToSkip = [];
+  let validationErrors = [];
+  
+  const condition11 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("0064568c-3eb7-43fa-b485-3072ac6546cd").containsAnswerConceptName("303d5ad1-ffa2-4096-ba7c-a86876ca9d12").matches();
+  
+  visibility = condition11 ;
+  
+  if(visibility){
+      let male = individual.getObservationReadableValue("f0e7c823-6586-45eb-a687-9ad4f7e0375d") || 0;
+      let female = individual.getObservationReadableValue("9bb209c9-c2fe-4c72-8d60-030522e53bb2") || 0;
+      if(male+female == 0){
+          validationErrors.push("Total participant should be greater than 0");
+      }
+  }
+  
+  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);
+},
+          "mandatory": true
+        },
+        {
           "name": "Type of initiative",
           "uuid": "014e577a-6dcf-4c40-a485-96bdebd04b24",
           "keyValues": [],
@@ -586,19 +837,19 @@
                 "active": true
               },
               {
-                "name": "Specific Initiative",
-                "uuid": "54d27687-374e-4988-ad81-e4d26bf02bf3",
-                "dataType": "NA",
-                "answers": [],
-                "order": 10,
-                "active": true
-              },
-              {
                 "name": "CFW-Rahat",
                 "uuid": "231a6748-7677-4eb1-8a37-15a0ab207d67",
                 "dataType": "NA",
                 "answers": [],
                 "order": 4,
+                "active": true
+              },
+              {
+                "name": "Specific Initiative",
+                "uuid": "54d27687-374e-4988-ad81-e4d26bf02bf3",
+                "dataType": "NA",
+                "answers": [],
+                "order": 7,
                 "active": true
               },
               {
@@ -614,7 +865,7 @@
                 "uuid": "6404fcaf-31de-4322-9620-c1b958f9c548",
                 "dataType": "NA",
                 "answers": [],
-                "order": 13,
+                "order": 10,
                 "active": true
               },
               {
@@ -654,7 +905,15 @@
                 "uuid": "9fd9d626-faf7-4833-a3ab-47ec3b4388f6",
                 "dataType": "NA",
                 "answers": [],
-                "order": 14,
+                "order": 11,
+                "active": true
+              },
+              {
+                "name": "Education and Health",
+                "uuid": "00e97494-a65b-482b-b919-aab58d52e5b8",
+                "dataType": "NA",
+                "answers": [],
+                "order": 13,
                 "active": true
               },
               {
@@ -662,7 +921,7 @@
                 "uuid": "cbf0805f-aac1-40b9-b78c-1c568b86ef24",
                 "dataType": "NA",
                 "answers": [],
-                "order": 15,
+                "order": 12,
                 "active": true
               },
               {
@@ -670,7 +929,7 @@
                 "uuid": "85eda3f4-ee7c-4123-b330-77b4a7f817fd",
                 "dataType": "NA",
                 "answers": [],
-                "order": 12,
+                "order": 9,
                 "active": true
               },
               {
@@ -678,13 +937,13 @@
                 "uuid": "971c7a76-d296-4d47-9a90-47a612ceb4ca",
                 "dataType": "NA",
                 "answers": [],
-                "order": 11,
+                "order": 8,
                 "active": true
               }
             ],
             "active": true
           },
-          "displayOrder": 9,
+          "displayOrder": 13,
           "type": "SingleSelect",
           "voided": true,
           "mandatory": true
@@ -714,7 +973,7 @@
               }
             ]
           },
-          "displayOrder": 10,
+          "displayOrder": 14,
           "type": "SingleSelect",
           "voided": true,
           "mandatory": false
@@ -730,7 +989,7 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 11,
+          "displayOrder": 15,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -764,7 +1023,7 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 12,
+          "displayOrder": 16,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -807,7 +1066,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "answers": [],
             "active": true
           },
-          "displayOrder": 13,
+          "displayOrder": 17,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -862,7 +1121,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "answers": [],
             "active": true
           },
-          "displayOrder": 14,
+          "displayOrder": 18,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -913,7 +1172,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "answers": [],
             "active": true
           },
-          "displayOrder": 16,
+          "displayOrder": 20,
           "type": "SingleSelect",
           "parentFormElementUuid": "f3539ada-8120-4b24-a9fc-187a93b6a976",
           "voided": true,
@@ -930,7 +1189,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "answers": [],
             "active": true
           },
-          "displayOrder": 17,
+          "displayOrder": 21,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -1037,7 +1296,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "answers": [],
             "active": true
           },
-          "displayOrder": 18,
+          "displayOrder": 22,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -1143,7 +1402,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "answers": [],
             "active": true
           },
-          "displayOrder": 19,
+          "displayOrder": 23,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -1159,6 +1418,8 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
   const condition11 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("5df1e2e2-2bd1-40ee-a430-9dd3f9618eeb").containsAnswerConceptNameOtherThan("9fd9d626-faf7-4833-a3ab-47ec3b4388f6").matches();
 
   visibility = condition11;
+  
+
 
   const isCFW = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("5df1e2e2-2bd1-40ee-a430-9dd3f9618eeb").containsAnswerConceptName("85eda3f4-ee7c-4123-b330-77b4a7f817fd").matches();
 
@@ -1198,7 +1459,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "answers": [],
             "active": true
           },
-          "displayOrder": 20,
+          "displayOrder": 24,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -1254,7 +1515,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "answers": [],
             "active": true
           },
-          "displayOrder": 21,
+          "displayOrder": 25,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -1318,7 +1579,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "answers": [],
             "active": true
           },
-          "displayOrder": 22,
+          "displayOrder": 26,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -1333,15 +1594,8 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
 
   const condition11 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("5df1e2e2-2bd1-40ee-a430-9dd3f9618eeb").containsAnswerConceptNameOtherThan("9fd9d626-faf7-4833-a3ab-47ec3b4388f6").matches();
 
-  const condition12 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("5df1e2e2-2bd1-40ee-a430-9dd3f9618eeb").containsAnswerConceptName("6404fcaf-31de-4322-9620-c1b958f9c548").matches();
-
-  const condition22 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("2966afcc-2c07-44cf-8711-3fc23f52a6b5").lessThanOrEqualTo(0).matches();
-
   visibility = condition11 ;
-
-  if(condition12 && condition22 ){
-    validationErrors.push("Number of female participants in NJPC cannot be 0 or negative");
-  }
+  
 
   const isCFW = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("5df1e2e2-2bd1-40ee-a430-9dd3f9618eeb").containsAnswerConceptName("85eda3f4-ee7c-4123-b330-77b4a7f817fd").matches();
 
@@ -1381,7 +1635,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "answers": [],
             "active": true
           },
-          "displayOrder": 23,
+          "displayOrder": 27,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -1437,7 +1691,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "answers": [],
             "active": true
           },
-          "displayOrder": 24,
+          "displayOrder": 28,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -1453,6 +1707,8 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
   const condition11 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("5df1e2e2-2bd1-40ee-a430-9dd3f9618eeb").containsAnswerConceptNameOtherThan("9fd9d626-faf7-4833-a3ab-47ec3b4388f6").matches();
 
   visibility = condition11 ;
+
+  
 
   const isCFW = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("5df1e2e2-2bd1-40ee-a430-9dd3f9618eeb").containsAnswerConceptName("85eda3f4-ee7c-4123-b330-77b4a7f817fd").matches();
 
@@ -1937,7 +2193,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             ],
             "active": true
           },
-          "displayOrder": 25,
+          "displayOrder": 29,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -2353,7 +2609,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             ],
             "active": true
           },
-          "displayOrder": 26,
+          "displayOrder": 30,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -2991,7 +3247,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "answers": [],
             "active": true
           },
-          "displayOrder": 27,
+          "displayOrder": 31,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -3126,7 +3382,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             ],
             "active": true
           },
-          "displayOrder": 28,
+          "displayOrder": 32,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -3572,7 +3828,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "answers": [],
             "active": true
           },
-          "displayOrder": 29,
+          "displayOrder": 33,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -3646,7 +3902,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "active": true,
             "voided": true
           },
-          "displayOrder": 30,
+          "displayOrder": 34,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -3773,7 +4029,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             ],
             "active": true
           },
-          "displayOrder": 32,
+          "displayOrder": 36,
           "type": "MultiSelect",
           "rule" : 
 ({params, imports}) => {
@@ -3843,7 +4099,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "answers": [],
             "active": true
           },
-          "displayOrder": 33,
+          "displayOrder": 37,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -3932,7 +4188,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "answers": [],
             "active": true
           },
-          "displayOrder": 34,
+          "displayOrder": 38,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -4026,7 +4282,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             ],
             "active": true
           },
-          "displayOrder": 35,
+          "displayOrder": 39,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -4096,7 +4352,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "answers": [],
             "active": true
           },
-          "displayOrder": 36,
+          "displayOrder": 40,
           "type": "MultiSelect",
           "rule" : 
 ({params, imports}) => {
@@ -4577,7 +4833,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "active": true,
             "keyValues": []
           },
-          "displayOrder": 37,
+          "displayOrder": 41,
           "type": "MultiSelect",
           "rule" : 
 ({params, imports}) => {
@@ -5776,7 +6032,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             ],
             "active": true
           },
-          "displayOrder": 38,
+          "displayOrder": 42,
           "type": "MultiSelect",
           "rule" : 
 ({params, imports}) => {
@@ -6544,7 +6800,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "answers": [],
             "active": true
           },
-          "displayOrder": 39,
+          "displayOrder": 43,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -6658,7 +6914,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             ],
             "active": true
           },
-          "displayOrder": 40,
+          "displayOrder": 44,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -6727,7 +6983,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "answers": [],
             "active": true
           },
-          "displayOrder": 41,
+          "displayOrder": 45,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -6742,7 +6998,9 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
   
   const typeOfInitiativeIsCfwOrS2S = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("5df1e2e2-2bd1-40ee-a430-9dd3f9618eeb").containsAnyAnswerConceptName("9fd9d626-faf7-4833-a3ab-47ec3b4388f6","85eda3f4-ee7c-4123-b330-77b4a7f817fd").matches();
   
-  visibility = typeOfInitiativeIsCfwOrS2S ;
+  const isEducationAndHealth = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("0064568c-3eb7-43fa-b485-3072ac6546cd").containsAnswerConceptName("303d5ad1-ffa2-4096-ba7c-a86876ca9d12").matches();
+  
+  visibility = typeOfInitiativeIsCfwOrS2S || isEducationAndHealth ;
   
     const typeOfInitiativeIsCfw = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("5df1e2e2-2bd1-40ee-a430-9dd3f9618eeb").containsAnswerConceptName("85eda3f4-ee7c-4123-b330-77b4a7f817fd").matches();
     
@@ -6786,7 +7044,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             ],
             "active": true
           },
-          "displayOrder": 42,
+          "displayOrder": 46,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -6799,11 +7057,18 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
   let answersToSkip = [];
   let validationErrors = [];
   
-  const condition11 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("1a90cfd0-5b70-4425-ae76-84d6ea589088").notDefined.matches();
+  const condition11 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("5df1e2e2-2bd1-40ee-a430-9dd3f9618eeb").containsAnyAnswerConceptName("9fd9d626-faf7-4833-a3ab-47ec3b4388f6","6404fcaf-31de-4322-9620-c1b958f9c548").matches();
   
-  if(condition11 ){
-    value = "No";  
-}
+  visibility = !(condition11 );
+  
+  if(visibility){
+      const isPresent = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("1a90cfd0-5b70-4425-ae76-84d6ea589088").notDefined.matches();
+      
+      if(isPresent){
+        value = "No";          
+      }
+  }
+  
   
   return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);
 },
@@ -6845,7 +7110,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             ],
             "active": true
           },
-          "displayOrder": 43,
+          "displayOrder": 47,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -6989,7 +7254,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "active": true,
             "voided": true
           },
-          "displayOrder": 44,
+          "displayOrder": 48,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -7165,7 +7430,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             ],
             "active": true
           },
-          "displayOrder": 45,
+          "displayOrder": 49,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -7293,7 +7558,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "active": true,
             "voided": true
           },
-          "displayOrder": 46,
+          "displayOrder": 50,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -7413,7 +7678,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             ],
             "active": true
           },
-          "displayOrder": 47,
+          "displayOrder": 51,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -7516,7 +7781,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             ],
             "active": true
           },
-          "displayOrder": 48,
+          "displayOrder": 52,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -7586,7 +7851,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "answers": [],
             "active": true
           },
-          "displayOrder": 49,
+          "displayOrder": 53,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -7657,7 +7922,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "active": true,
             "voided": true
           },
-          "displayOrder": 50,
+          "displayOrder": 54,
           "type": "SingleSelect",
           "voided": true,
           "mandatory": true
@@ -7699,7 +7964,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             "active": true,
             "voided": true
           },
-          "displayOrder": 51,
+          "displayOrder": 55,
           "type": "SingleSelect",
           "parentFormElementUuid": "5d8aa3b7-ef6c-488b-bb1a-19572054868d",
           "voided": true,
@@ -7821,7 +8086,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             ],
             "active": true
           },
-          "displayOrder": 52,
+          "displayOrder": 56,
           "type": "SingleSelect",
           "parentFormElementUuid": "5d8aa3b7-ef6c-488b-bb1a-19572054868d",
           "voided": true,
@@ -7943,7 +8208,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             ],
             "active": true
           },
-          "displayOrder": 53,
+          "displayOrder": 57,
           "type": "SingleSelect",
           "parentFormElementUuid": "5d8aa3b7-ef6c-488b-bb1a-19572054868d",
           "voided": true,
@@ -8081,7 +8346,7 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             ],
             "active": true
           },
-          "displayOrder": 54,
+          "displayOrder": 58,
           "type": "SingleSelect",
           "parentFormElementUuid": "5d8aa3b7-ef6c-488b-bb1a-19572054868d",
           "voided": true,
@@ -8211,78 +8476,14 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
             ],
             "active": true
           },
-          "displayOrder": 55,
+          "displayOrder": 59,
           "type": "SingleSelect",
           "parentFormElementUuid": "5d8aa3b7-ef6c-488b-bb1a-19572054868d",
           "voided": true,
           "mandatory": true
         }
       ],
-      "display": "Activity Details",
-      "timed": false
-    },
-    {
-      "uuid": "76d294bc-eee0-495b-a698-f7551247e96d",
-      "name": "Measurement",
-      "displayOrder": 5,
-      "formElements": [
-        {
-          "name": "Measurements type",
-          "uuid": "4952ad67-05bb-4ef3-8987-1f7f092de647",
-          "keyValues": [],
-          "concept": {
-            "name": "Measurements Type",
-            "uuid": "c0d271f6-ec81-4c09-9dbf-a99f559788e5",
-            "dataType": "Coded",
-            "answers": [
-              {
-                "name": "Numbers (voided~207563)",
-                "uuid": "d4c428d1-512f-4881-87f0-611d7746dd6c",
-                "dataType": "Numeric",
-                "answers": [],
-                "order": 3,
-                "active": true,
-                "voided": true
-              },
-              {
-                "name": "Volume",
-                "uuid": "700c0785-7f52-43b4-917d-e1c482c62db2",
-                "dataType": "NA",
-                "answers": [],
-                "order": 4,
-                "active": true
-              },
-              {
-                "name": "Numbers",
-                "uuid": "23598869-15a8-43d3-a8f3-4f75b372cdc1",
-                "dataType": "NA",
-                "answers": [],
-                "order": 1,
-                "active": true
-              },
-              {
-                "name": "Area",
-                "uuid": "96452733-db5e-4e82-8e75-8ef8a308ea8a",
-                "dataType": "NA",
-                "answers": [],
-                "order": 0,
-                "active": true
-              },
-              {
-                "name": "Numbers (voided~207468)",
-                "uuid": "61848cd7-b583-4640-b426-331de38417ee",
-                "dataType": "NA",
-                "answers": [],
-                "order": 2,
-                "active": true,
-                "voided": true
-              }
-            ],
-            "active": true
-          },
-          "displayOrder": 1,
-          "type": "SingleSelect",
-          "rule" : 
+      "rule" : 
 ({params, imports}) => {
   const individual = params.entity;
   const moment = imports.moment;
@@ -10946,6 +11147,60 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
           },
           "displayOrder": 2,
           "type": "SingleSelect",
+          "rule" : 
+({ params, imports }) => {
+  const individual = params.entity;
+  const moment = imports.moment;
+  const formElement = params.formElement;
+  const _ = imports.lodash;
+  const individualService = params.services.individualService;
+  let visibility = true;
+  let value = null;
+  let answersToSkip = [];
+  let validationErrors = [];
+  
+  // If Remarks is not present
+  const remarks = individual.getObservationReadableValue('e132e4fe-7c7a-4612-b086-426b9f74147b');
+  const condition21 = !remarks || remarks.trim().length === 0;
+  
+  let isAssessed = false;
+  if (condition21) {
+    const loc = individual.lowestAddressLevel;
+    if (loc) {
+      const isAssesmentDoneValue = loc.getObservationReadableValue("348a795a-bbae-4353-be30-db9ae106d4f3");
+      if (isAssesmentDoneValue && isAssesmentDoneValue === 'Yes') {
+        isAssessed = true;
+      }
+    }
+    const villages = individualService.getSubjectsInLocation(individual.lowestAddressLevel, 'Village');
+    
+    if (villages && villages.length > 0 && !isAssessed) {
+
+      const size = villages.filter(({ voided,encounters }) =>!voided && encounters.length > 0)
+                           .filter( ({ encounters }) =>{ 
+                             const encounterLength = encounters.filter( ({ voided, encounterDateTime }) => !voided && !_.isNull(encounterDateTime)  ).length 
+                             return encounterLength>0;
+                           }).length;
+
+      if (size > 0) {
+        isAssessed = true;
+      }
+    }
+  }
+
+  if (condition21 && !isAssessed) {
+    validationErrors.push("Please provide remarks for not performing village assessment");
+  }
+
+  return new imports.rulesConfig.FormElementStatus(
+    formElement.uuid,
+    visibility,
+    value,
+    answersToSkip,
+    validationErrors
+  );
+}
+,
           "mandatory": false
         }
       ],
@@ -10953,7 +11208,44 @@ const condition12 = new imports.rulesConfig.RuleCondition({individual, formEleme
       "timed": false
     }
   ],
-  "decisionRule": "",
+  "decisionRule": ""use strict";
+({params, imports}) => {
+    const individual = params.entity;
+    const moment = imports.moment;
+    const decisions = params.decisions;
+    const enrolmentDecisions = [];
+    const encounterDecisions = [];
+    const registrationDecisions = [];
+    
+    function toStartCase(str) {
+        return str
+        .trim()
+        .toLowerCase()
+        .split(/[\\s]+/)
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+    }  
+      
+    const tola = individual.getObservationReadableValue("5e259bfe-07a8-4c88-a712-d22b9a612429");
+    const block = individual.getObservationReadableValue("e2d35dee-c34f-4f54-a68b-f32ee81835b6");
+    const village = individual.getObservationReadableValue("16b4db7c-e0a8-41f1-ac67-07470a762d9f");
+  
+    if(tola){
+        registrationDecisions.push({name: "Tola / Mohalla", value:toStartCase(tola) });  
+    }
+    if(block){
+        registrationDecisions.push({name: "Other Block", value:toStartCase(block) });  
+    }
+    if(village){
+        registrationDecisions.push({name: "Other Village", value:toStartCase(village) });  
+    }
+
+  
+    decisions.enrolmentDecisions.push(...enrolmentDecisions);
+    decisions.encounterDecisions.push(...encounterDecisions);
+    decisions.registrationDecisions.push(...registrationDecisions);
+    return decisions;
+},
   "visitScheduleRule": "",
   "validationRule": "",
   "checklistsRule": "",

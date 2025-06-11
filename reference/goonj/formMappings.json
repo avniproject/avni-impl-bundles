@@ -13,7 +13,7 @@
   "encounterTypeUUID" : "770d8de1-9a52-4e54-875a-fba268a7732c",
   "subjectTypeUUID" : "c781319c-e47f-49f1-9ed7-7c85cd2bd16a",
   "formType" : "Encounter",
-  "formName" : "Village Form Encounter",
+  "formName" : "Village Assessment Encounter Form",
   "enableApproval" : false
 }, {
   "uuid" : "f2726d37-ee05-44b5-b244-1b8086db797d",

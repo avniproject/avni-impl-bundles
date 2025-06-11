@@ -615,6 +615,156 @@
     "voided": false
   },
   {
+    "uuid": "6085c2f4-52e7-4b08-85b6-d6b2612b4cf5",
+    "id": 4639,
+    "name": "Scheduled visits",
+    "color": "#388e3c",
+    "nested": false,
+    "count": 1,
+    "standardReportCardType": "27020b32-c21b-43a4-81bd-7b88ad3a6ef0",
+    "standardReportCardInputSubjectTypes": [],
+    "standardReportCardInputPrograms": [],
+    "standardReportCardInputEncounterTypes": [],
+    "voided": false
+  },
+  {
+    "uuid": "85ce7239-e8b5-4e57-b07d-66c18cee47b2",
+    "id": 4640,
+    "name": "Overdue visits",
+    "color": "#d32f2f",
+    "nested": false,
+    "count": 1,
+    "standardReportCardType": "9f88bee5-2ab9-4ac4-ae19-d07e9715bdb5",
+    "standardReportCardInputSubjectTypes": [],
+    "standardReportCardInputPrograms": [],
+    "standardReportCardInputEncounterTypes": [],
+    "voided": false
+  },
+  {
+    "uuid": "a1673f8a-c394-4bcf-8b6f-63d83a5443e2",
+    "id": 4641,
+    "name": "Total",
+    "color": "#ffffff",
+    "nested": false,
+    "count": 1,
+    "standardReportCardType": "1fbcadf3-bf1a-439e-9e13-24adddfbf6c0",
+    "standardReportCardInputSubjectTypes": [],
+    "standardReportCardInputPrograms": [],
+    "standardReportCardInputEncounterTypes": [],
+    "voided": false
+  },
+  {
+    "uuid": "f366f35a-5c4f-4ff7-b510-2dc9f5f88847",
+    "id": 4642,
+    "name": "Recent registrations",
+    "color": "#ffffff",
+    "nested": false,
+    "count": 1,
+    "standardReportCardType": "88a7514c-48c0-4d5d-a421-d074e43bb36c",
+    "standardReportCardInputSubjectTypes": [],
+    "standardReportCardInputPrograms": [],
+    "standardReportCardInputEncounterTypes": [],
+    "standardReportCardInputRecentDuration": "{"value":"1","unit":"days"}",
+    "voided": false
+  },
+  {
+    "uuid": "e1036b69-df46-4351-9916-10cd4cfcb6bd",
+    "id": 4643,
+    "name": "Recent enrolments",
+    "color": "#ffffff",
+    "nested": false,
+    "count": 1,
+    "standardReportCardType": "a5efc04c-317a-4823-a203-e62603454a65",
+    "standardReportCardInputSubjectTypes": [],
+    "standardReportCardInputPrograms": [],
+    "standardReportCardInputEncounterTypes": [],
+    "standardReportCardInputRecentDuration": "{"value":"1","unit":"days"}",
+    "voided": false
+  },
+  {
+    "uuid": "dd961ee1-9d4e-4ec9-99f0-99b36672be7c",
+    "id": 4644,
+    "name": "Recent visits",
+    "color": "#ffffff",
+    "nested": false,
+    "count": 1,
+    "standardReportCardType": "77b5b3fa-de35-4f24-996b-2842492ea6e0",
+    "standardReportCardInputSubjectTypes": [],
+    "standardReportCardInputPrograms": [],
+    "standardReportCardInputEncounterTypes": [],
+    "standardReportCardInputRecentDuration": "{"value":"1","unit":"days"}",
+    "voided": false
+  },
+  {
+    "uuid": "a96daf6a-09a7-43a7-ab4d-32c4b3335678",
+    "id": 4645,
+    "name": "Village Assessment Completed",
+    "query" : 
+({params, imports}) => {
+    const _= imports.lodash;
+    const moment = imports.moment;
+    
+    let inds = params.db.objects('Individual').filtered(`subjectType.name = "Village" AND voided = false`);
+    
+    if (params.ruleInput) {
+        //Account filter is not applicable for Village SubjectType
+        let addressFilter = params.ruleInput.filter(rule => rule.type === "Address");
+        let registrationDateFilter = params.ruleInput.filter(rule => rule.type === "RegistrationDate");
+                
+        
+        if(registrationDateFilter.length>0 && registrationDateFilter[0].filterValue){
+            let startDate = moment(registrationDateFilter[0].filterValue.minValue).startOf('day').toDate();
+            let endDate = moment(registrationDateFilter[0].filterValue.maxValue).endOf('day').toDate();                                   
+            
+            inds = inds.filtered(`registrationDate >= $0 AND registrationDate <= $1`,startDate,endDate);
+        }    
+
+
+        if (addressFilter.length > 0 && addressFilter[0].filterValue) {
+            let addressValue = addressFilter[0].filterValue.filter((add) => add.type == "Village").map(add => add.uuid);
+
+            if (addressValue.length > 0) {
+                let addressValueString = "{\\"" + addressValue.join("\\", \\"") + "\\"}";
+                inds = inds.filtered(`lowestAddressLevel.uuid in ${addressValueString}`);
+            }
+        }
+    }   
+    
+    
+    let completedAssessments = inds.filter(individual => {
+        if (!individual || !individual.getEncounters) return false;
+        
+        // Check location properties for isAssessmentDone
+        const loc = individual.lowestAddressLevel;
+        if (loc) {
+            const isAssessmentDone = loc.getObservationReadableValue("348a795a-bbae-4353-be30-db9ae106d4f3");
+            if (isAssessmentDone === 'Yes') {
+                return true;
+            }
+        }
+        
+        // If location doesn't indicate assessment is done, check encounters
+        const encounters = individual.getEncounters();
+        return encounters && encounters.some(enc => 
+            enc.encounterType.name === 'Village Assessment Form' && 
+            enc.encounterDateTime != null && 
+            !enc.voided
+        );
+    });
+    
+    return _.orderBy(completedAssessments, ind => ind.registrationDate, 'desc');
+
+},
+    "description": "",
+    "color": "#0d5707",
+    "nested": false,
+    "count": 1,
+    "standardReportCardInputSubjectTypes": [],
+    "standardReportCardInputPrograms": [],
+    "standardReportCardInputEncounterTypes": [],
+    "voided": false
+  },
+  {
     "uuid": "eed05543-ac8e-4262-897a-530da00a31f0",
     "id": 2036,
     "name": " Activities done",

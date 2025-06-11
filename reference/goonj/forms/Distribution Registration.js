@@ -1138,21 +1138,6 @@
           },
           "displayOrder": 1,
           "type": "SingleSelect",
-          "mandatory": false
-        },
-        {
-          "name": "Other Block",
-          "uuid": "3ff5be80-eba6-4722-94c2-c993f6db61a3",
-          "keyValues": [],
-          "concept": {
-            "name": "Other Block",
-            "uuid": "e2d35dee-c34f-4f54-a68b-f32ee81835b6",
-            "dataType": "Text",
-            "answers": [],
-            "active": true
-          },
-          "displayOrder": 2,
-          "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
   const individual = params.entity;
@@ -1160,6 +1145,9 @@
   const formElement = params.formElement;
   const _ = imports.lodash;
   let visibility = false;
+  let value = null;
+  let answersToSkip = [];
+  let validationErrors = [];
 
   const isDefined = individual && 
                     individual.lowestAddressLevel && 
@@ -1188,8 +1176,9 @@
 
         visibility = block === 'Other';
     }
+    
 
-  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility);
+  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility,value, answersToSkip, validationErrors);
 },
           "mandatory": true
         },
@@ -1213,6 +1202,10 @@
   const formElement = params.formElement;
   const _ = imports.lodash;
   let visibility = false;
+  let value = null;
+  let answersToSkip = [];
+  let validationErrors = [];
+  
   
   const isDefined = individual && 
                     individual.lowestAddressLevel && 
@@ -1235,7 +1228,8 @@
     }
   }
 
-  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility);
+
+  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility,value, answersToSkip, validationErrors);
 },
           "mandatory": true
         },
@@ -1267,6 +1261,31 @@
           "mandatory": false
         },
         {
+          "name": "Village GA",
+          "uuid": "e4ce4d7a-9851-4fb6-b330-737042d94022",
+          "keyValues": [
+            {
+              "key": "groupSubjectTypeUUID",
+              "value": "c781319c-e47f-49f1-9ed7-7c85cd2bd16a"
+            },
+            {
+              "key": "groupSubjectRoleUUID",
+              "value": "c0a9e4af-fe58-4585-a445-079035040768"
+            }
+          ],
+          "concept": {
+            "name": "Village GA",
+            "uuid": "67ff5633-a941-440c-8795-154431317cf4",
+            "dataType": "GroupAffiliation",
+            "answers": [],
+            "active": true
+          },
+          "displayOrder": 5,
+          "type": "SingleSelect",
+          "voided": true,
+          "mandatory": true
+        },
+        {
           "name": "Distribution date",
           "uuid": "64553a0f-3010-4516-96fc-0cb60c42bee1",
           "keyValues": [],
@@ -1277,7 +1296,7 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 5,
+          "displayOrder": 6,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -1312,7 +1331,7 @@
             "active": true,
             "voided": true
           },
-          "displayOrder": 6,
+          "displayOrder": 7,
           "type": "SingleSelect",
           "voided": true,
           "mandatory": true
@@ -1328,7 +1347,135 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 7,
+          "displayOrder": 8,
+          "type": "SingleSelect",
+          "mandatory": true
+        },
+        {
+          "name": "Type of Initiative",
+          "uuid": "1793038d-8ae7-4b31-ab19-3ca5e52362ee",
+          "keyValues": [],
+          "concept": {
+            "name": "Type of Initiative",
+            "uuid": "d04d6382-91d2-468c-b45f-d3afce94cba2",
+            "dataType": "Coded",
+            "answers": [
+              {
+                "name": "CFW-S2S",
+                "uuid": "4db0c307-9053-4bd4-b917-580d00e43f1d",
+                "dataType": "NA",
+                "answers": [],
+                "order": 6,
+                "active": true
+              },
+              {
+                "name": "CFW-Rahat",
+                "uuid": "231a6748-7677-4eb1-8a37-15a0ab207d67",
+                "dataType": "NA",
+                "answers": [],
+                "order": 4,
+                "active": true
+              },
+              {
+                "name": "Specific Initiative",
+                "uuid": "54d27687-374e-4988-ad81-e4d26bf02bf3",
+                "dataType": "NA",
+                "answers": [],
+                "order": 7,
+                "active": true
+              },
+              {
+                "name": "Only S2S",
+                "uuid": "abbd4c79-e71e-403d-b263-e49259180f5f",
+                "dataType": "NA",
+                "answers": [],
+                "order": 3,
+                "active": true
+              },
+              {
+                "name": "NJPC",
+                "uuid": "6404fcaf-31de-4322-9620-c1b958f9c548",
+                "dataType": "NA",
+                "answers": [],
+                "order": 10,
+                "active": true
+              },
+              {
+                "name": "Only Rahat",
+                "uuid": "118ad0b3-0e16-46f2-902c-15722d6047c9",
+                "dataType": "NA",
+                "answers": [],
+                "order": 2,
+                "active": true
+              },
+              {
+                "name": "Only NJPC",
+                "uuid": "6b5b0f34-c925-4ff8-bbf8-a72baf4e0f32",
+                "dataType": "NA",
+                "answers": [],
+                "order": 1,
+                "active": true
+              },
+              {
+                "name": "CFW-NJPC",
+                "uuid": "820b5991-7002-4be5-89db-f1a4e10d4cd6",
+                "dataType": "NA",
+                "answers": [],
+                "order": 5,
+                "active": true
+              },
+              {
+                "name": "Only CFW",
+                "uuid": "18aee17d-bc4e-4e84-b5bd-df28961acf77",
+                "dataType": "NA",
+                "answers": [],
+                "order": 0,
+                "active": true
+              },
+              {
+                "name": "S2S",
+                "uuid": "9fd9d626-faf7-4833-a3ab-47ec3b4388f6",
+                "dataType": "NA",
+                "answers": [],
+                "order": 11,
+                "active": true
+              },
+              {
+                "name": "Education and Health",
+                "uuid": "00e97494-a65b-482b-b919-aab58d52e5b8",
+                "dataType": "NA",
+                "answers": [],
+                "order": 13,
+                "active": true
+              },
+              {
+                "name": "Rahat",
+                "uuid": "cbf0805f-aac1-40b9-b78c-1c568b86ef24",
+                "dataType": "NA",
+                "answers": [],
+                "order": 12,
+                "active": true
+              },
+              {
+                "name": "CFW",
+                "uuid": "85eda3f4-ee7c-4123-b330-77b4a7f817fd",
+                "dataType": "NA",
+                "answers": [],
+                "order": 9,
+                "active": true
+              },
+              {
+                "name": "Vaapsi",
+                "uuid": "971c7a76-d296-4d47-9a90-47a612ceb4ca",
+                "dataType": "NA",
+                "answers": [],
+                "order": 8,
+                "active": true
+              }
+            ],
+            "active": true
+          },
+          "displayOrder": 9,
           "type": "SingleSelect",
           "mandatory": true
         },
@@ -1339,8 +1486,8 @@
             {
               "key": "ExcludedAnswers",
               "value": [
-                "Third Gender",
-                "Differently Abled"
+                "Differently Abled",
+                "Third Gender"
               ]
             }
           ],
@@ -1617,450 +1764,205 @@
             "active": true,
             "keyValues": []
           },
-          "displayOrder": 8,
-          "type": "MultiSelect",
-          "mandatory": true
-        },
-        {
-          "name": "Account code",
-          "uuid": "9f5d6a44-4bc4-4e16-8a63-ba2d19bdd566",
-          "keyValues": [],
-          "concept": {
-            "name": "Account code",
-            "uuid": "2fb51840-9356-4b24-85e8-76135a6492bb",
-            "dataType": "Text",
-            "answers": [],
-            "active": true
-          },
-          "displayOrder": 9,
-          "type": "SingleSelect",
-          "voided": true,
-          "mandatory": false
-        },
-        {
-          "name": "Account  name",
-          "uuid": "f5480204-d5d0-4504-a2ea-f9dc142640bd",
-          "keyValues": [],
-          "concept": {
-            "name": "Account  name",
-            "uuid": "2978117c-a297-4171-99c6-23c3522ca0f8",
-            "dataType": "Text",
-            "answers": [],
-            "active": true
-          },
           "displayOrder": 10,
-          "type": "SingleSelect",
-          "voided": true,
-          "mandatory": true
-        },
-        {
-          "name": "Target Community",
-          "uuid": "b274ac99-214b-4e30-81ec-69442943c295",
-          "keyValues": [
+          "type": "MultiSelect",
+          "rule" : 
+({params, imports}) => {
+  const individual = params.entity;
+  const moment = imports.moment;
+  const formElement = params.formElement;
+  const _ = imports.lodash;
+  let visibility = true;
+  let value = null;
+  let answersToSkip = [];
+  let validationErrors = [];
+  
+  const condition11 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("d04d6382-91d2-468c-b45f-d3afce94cba2").containsAnswerConceptName("00e97494-a65b-482b-b919-aab58d52e5b8").matches();
+  
+  visibility = condition11 ;
+  
+  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);
+},
+          "declarativeRule": [
             {
-              "key": "ExcludedAnswers",
-              "value": [
-                "Third Gender",
-                "Differently Abled"
+              "actions": [
+                {
+                  "actionType": "showFormElement"
+                },
+                {}
+              ],
+              "conditions": [
+                {
+                  "compoundRule": {
+                    "rules": [
+                      {
+                        "lhs": {
+                          "type": "concept",
+                          "scope": "registration",
+                          "conceptName": "Type of Initiative",
+                          "conceptUuid": "d04d6382-91d2-468c-b45f-d3afce94cba2",
+                          "conceptDataType": "Coded"
+                        },
+                        "rhs": {
+                          "type": "answerConcept",
+                          "answerConceptNames": [
+                            "Education And Health"
+                          ],
+                          "answerConceptUuids": [
+                            "00e97494-a65b-482b-b919-aab58d52e5b8"
+                          ]
+                        },
+                        "operator": "containsAnswerConceptName"
+                      }
+                    ]
+                  }
+                }
               ]
             }
           ],
-          "concept": {
-            "name": "Target Community",
-            "uuid": "8c87be17-2564-41d2-a6a4-1239e06ef9d2",
-            "dataType": "Coded",
-            "answers": [
-              {
-                "name": "Mentally Challenged",
-                "uuid": "c40880c6-cac6-4fd8-b30c-395f532d0a9c",
-                "dataType": "NA",
-                "answers": [],
-                "order": 14,
-                "active": true
-              },
-              {
-                "name": "Devdasi community",
-                "uuid": "1b6229ca-3360-4ba8-b858-1048f64f8d6b",
-                "dataType": "NA",
-                "answers": [],
-                "order": 6,
-                "active": true
-              },
-              {
-                "name": "Senior Citizens",
-                "uuid": "b4f90cb7-1cd7-4f72-aba0-49f961fc27ea",
-                "dataType": "NA",
-                "answers": [],
-                "order": 22,
-                "active": true
-              },
-              {
-                "name": "Tailor Cutting",
-                "uuid": "a3e19465-bebb-427a-8df2-7d58e28c5091",
-                "dataType": "NA",
-                "answers": [],
-                "order": 25,
-                "active": true
-              },
-              {
-                "name": "PWD",
-                "uuid": "dc6278fa-b9f5-457d-b5a4-807189ac26e6",
-                "dataType": "NA",
-                "answers": [],
-                "order": 18,
-                "active": true
-              },
-              {
-                "name": "HIV affected",
-                "uuid": "8df338a9-de53-4c13-8dd5-b869c3d45f2d",
-                "dataType": "NA",
-                "answers": [],
-                "order": 11,
-                "active": true
-              },
-              {
-                "name": "Embroidery workers",
-                "uuid": "0016afc5-47a2-46e0-867d-75ac3b0edfa0",
-                "dataType": "NA",
-                "answers": [],
-                "order": 8,
-                "active": true
-              },
-              {
-                "name": "Rohingya community",
-                "uuid": "508b8292-894a-4ed2-b090-96283dccaff0",
-                "dataType": "NA",
-                "answers": [],
-                "order": 21,
-                "active": true
-              },
-              {
-                "name": "Daily Wagers",
-                "uuid": "a45cf0ac-7200-49a2-be31-a7317aaa46b6",
-                "dataType": "NA",
-                "answers": [],
-                "order": 5,
-                "active": true
-              },
-              {
-                "name": "Adolescents",
-                "uuid": "7cf699d9-0a47-4111-95ce-b0c5df581762",
-                "dataType": "NA",
-                "answers": [],
-                "order": 0,
-                "active": true
-              },
-              {
-                "name": "Agricultural Related",
-                "uuid": "84adcd3a-c177-418e-88ea-ca3a1cdb56f5",
-                "dataType": "NA",
-                "answers": [],
-                "order": 1,
-                "active": true
-              },
-              {
-                "name": "Fisher community",
-                "uuid": "10d355b7-d81e-4937-8a5c-39e30c4e130b",
-                "dataType": "NA",
-                "answers": [],
-                "order": 9,
-                "active": true
-              },
-              {
-                "name": "Rickshaw Pullers",
-                "uuid": "43803088-d89d-425e-991f-1343ddbd66c4",
-                "dataType": "NA",
-                "answers": [],
-                "order": 20,
-                "active": true
-              },
-              {
-                "name": "Tribal Community",
-                "uuid": "3fdad012-1109-4684-907c-0a268e6d1e9b",
-                "dataType": "NA",
-                "answers": [],
-                "order": 29,
-                "active": true
-              },
-              {
-                "name": "Artisans",
-                "uuid": "73d1cedb-66f4-425b-9da4-7b22e87df967",
-                "dataType": "NA",
-                "answers": [],
-                "order": 2,
-                "active": true
-              },
-              {
-                "name": "Tea garden workers",
-                "uuid": "0640170e-b58f-4aac-a30c-01f5ad908a0a",
-                "dataType": "NA",
-                "answers": [],
-                "order": 26,
-                "active": true
-              },
-              {
-                "name": "Third Gender",
-                "uuid": "e179e806-3487-433e-ba5f-9b341db3ed20",
-                "dataType": "NA",
-                "answers": [],
-                "order": 27,
-                "active": true
-              },
-              {
-                "name": "Leprosy affected",
-                "uuid": "4af95ec9-9da1-4367-a2fa-2a8392822cc8",
-                "dataType": "NA",
-                "answers": [],
-                "order": 12,
-                "active": true
-              },
-              {
-                "name": "Children",
-                "uuid": "d46b9822-d3c3-492d-a2a3-9ab623cfd802",
-                "dataType": "NA",
-                "answers": [],
-                "order": 3,
-                "active": true
-              },
-              {
-                "name": "Construction workers",
-                "uuid": "bc660964-f0c1-422a-a275-c308bbc86a9e",
-                "dataType": "NA",
-                "answers": [],
-                "order": 4,
-                "active": true
-              },
-              {
-                "name": "Unorganized sector",
-                "uuid": "cf177b27-87c3-4dc1-8255-68ffe549b9f4",
-                "dataType": "NA",
-                "answers": [],
-                "order": 30,
-                "active": true
-              },
-              {
-                "name": "Transgenders",
-                "uuid": "bb9b146f-d1df-49d9-82eb-dab38c2bc8c8",
-                "dataType": "NA",
-                "answers": [],
-                "order": 28,
-                "active": true
-              },
-              {
-                "name": "Street Vendors",
-                "uuid": "c792d850-6ff6-46d6-b62b-1f7a91c3952f",
-                "dataType": "NA",
-                "answers": [],
-                "order": 24,
-                "active": true
-              },
-              {
-                "name": "Sex Workers",
-                "uuid": "c913f919-19bb-4789-948f-1ce239452da2",
-                "dataType": "NA",
-                "answers": [],
-                "order": 23,
-                "active": true
-              },
-              {
-                "name": "Weavers",
-                "uuid": "95867a1b-bb19-469e-b21c-313016f3725d",
-                "dataType": "NA",
-                "answers": [],
-                "order": 31,
-                "active": true
-              },
-              {
-                "name": "lohar",
-                "uuid": "8585d735-9b9e-4801-adc8-c9c8c0b89518",
-                "dataType": "NA",
-                "answers": [],
-                "order": 13,
-                "active": true
-              },
-              {
-                "name": "Migrant workers",
-                "uuid": "0ee9a1f6-c598-47ae-9c84-64aae903cc9b",
-                "dataType": "NA",
-                "answers": [],
-                "order": 15,
-                "active": true
-              },
-              {
-                "name": "Widows",
-                "uuid": "e0c9a937-415b-4bcc-be63-e7a41fa3c0d6",
-                "dataType": "NA",
-                "answers": [],
-                "order": 32,
-                "active": true
-              },
-              {
-                "name": "Differently Abled",
-                "uuid": "81f059e7-7a88-4e9e-883e-a9bfb8ef468a",
-                "dataType": "NA",
-                "answers": [],
-                "order": 7,
-                "active": true
-              },
-              {
-                "name": "Health workers and sweepers",
-                "uuid": "a87c0a89-9a65-43ab-8f94-daee22093c3b",
-                "dataType": "NA",
-                "answers": [],
-                "order": 10,
-                "active": true
-              },
-              {
-                "name": "Puppeteers",
-                "uuid": "7720a9df-4c19-437d-8c47-0b55183af349",
-                "dataType": "NA",
-                "answers": [],
-                "order": 16,
-                "active": true
-              },
-              {
-                "name": "None",
-                "uuid": "ba835221-04c0-4e55-a08f-e6e25bb6719c",
-                "dataType": "NA",
-                "answers": [],
-                "order": 33,
-                "unique": true,
-                "active": true
-              },
-              {
-                "name": "Ragpickers",
-                "uuid": "27818169-2925-4895-b4ea-6cc30cedc5b0",
-                "dataType": "NA",
-                "answers": [],
-                "order": 19,
-                "active": true
-              }
-            ],
-            "active": true
-          },
-          "displayOrder": 11,
-          "type": "MultiSelect",
           "voided": true,
           "mandatory": true
         },
         {
-          "name": "Type of Initiative",
-          "uuid": "1793038d-8ae7-4b31-ab19-3ca5e52362ee",
+          "name": "Number of students (Male)",
+          "uuid": "d022b1a3-6552-4b29-8e99-64b2c54f24bf",
           "keyValues": [],
           "concept": {
-            "name": "Type of Initiative",
-            "uuid": "d04d6382-91d2-468c-b45f-d3afce94cba2",
-            "dataType": "Coded",
-            "answers": [
-              {
-                "name": "CFW-S2S",
-                "uuid": "4db0c307-9053-4bd4-b917-580d00e43f1d",
-                "dataType": "NA",
-                "answers": [],
-                "order": 6,
-                "active": true
-              },
-              {
-                "name": "Specific Initiative",
-                "uuid": "54d27687-374e-4988-ad81-e4d26bf02bf3",
-                "dataType": "NA",
-                "answers": [],
-                "order": 10,
-                "active": true
-              },
-              {
-                "name": "CFW-Rahat",
-                "uuid": "231a6748-7677-4eb1-8a37-15a0ab207d67",
-                "dataType": "NA",
-                "answers": [],
-                "order": 4,
-                "active": true
-              },
-              {
-                "name": "Only S2S",
-                "uuid": "abbd4c79-e71e-403d-b263-e49259180f5f",
-                "dataType": "NA",
-                "answers": [],
-                "order": 3,
-                "active": true
-              },
-              {
-                "name": "NJPC",
-                "uuid": "6404fcaf-31de-4322-9620-c1b958f9c548",
-                "dataType": "NA",
-                "answers": [],
-                "order": 13,
-                "active": true
-              },
-              {
-                "name": "Only Rahat",
-                "uuid": "118ad0b3-0e16-46f2-902c-15722d6047c9",
-                "dataType": "NA",
-                "answers": [],
-                "order": 2,
-                "active": true
-              },
-              {
-                "name": "Only NJPC",
-                "uuid": "6b5b0f34-c925-4ff8-bbf8-a72baf4e0f32",
-                "dataType": "NA",
-                "answers": [],
-                "order": 1,
-                "active": true
-              },
-              {
-                "name": "CFW-NJPC",
-                "uuid": "820b5991-7002-4be5-89db-f1a4e10d4cd6",
-                "dataType": "NA",
-                "answers": [],
-                "order": 5,
-                "active": true
-              },
-              {
-                "name": "Only CFW",
-                "uuid": "18aee17d-bc4e-4e84-b5bd-df28961acf77",
-                "dataType": "NA",
-                "answers": [],
-                "order": 0,
-                "active": true
-              },
-              {
-                "name": "S2S",
-                "uuid": "9fd9d626-faf7-4833-a3ab-47ec3b4388f6",
-                "dataType": "NA",
-                "answers": [],
-                "order": 14,
-                "active": true
-              },
-              {
-                "name": "Rahat",
-                "uuid": "cbf0805f-aac1-40b9-b78c-1c568b86ef24",
-                "dataType": "NA",
-                "answers": [],
-                "order": 15,
-                "active": true
-              },
-              {
-                "name": "CFW",
-                "uuid": "85eda3f4-ee7c-4123-b330-77b4a7f817fd",
-                "dataType": "NA",
-                "answers": [],
-                "order": 12,
-                "active": true
-              },
-              {
-                "name": "Vaapsi",
-                "uuid": "971c7a76-d296-4d47-9a90-47a612ceb4ca",
-                "dataType": "NA",
-                "answers": [],
-                "order": 11,
-                "active": true
-              }
-            ],
+            "name": "Number of students (Male)",
+            "uuid": "f0e7c823-6586-45eb-a687-9ad4f7e0375d",
+            "dataType": "Numeric",
+            "answers": [],
+            "lowAbsolute": 0,
             "active": true
           },
-          "displayOrder": 12,
+          "displayOrder": 15,
           "type": "SingleSelect",
+          "rule" : 
+({params, imports}) => {
+  const individual = params.entity;
+  const moment = imports.moment;
+  const formElement = params.formElement;
+  const _ = imports.lodash;
+  let visibility = true;
+  let value = null;
+  let answersToSkip = [];
+  let validationErrors = [];
+  
+  const condition11 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("d04d6382-91d2-468c-b45f-d3afce94cba2").containsAnswerConceptName("00e97494-a65b-482b-b919-aab58d52e5b8").matches();
+  
+  visibility = condition11 ;
+  
+  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);
+},
+          "declarativeRule": [
+            {
+              "actions": [
+                {
+                  "actionType": "showFormElement"
+                },
+                {}
+              ],
+              "conditions": [
+                {
+                  "compoundRule": {
+                    "rules": [
+                      {
+                        "lhs": {
+                          "type": "concept",
+                          "scope": "registration",
+                          "conceptName": "Type of Initiative",
+                          "conceptUuid": "d04d6382-91d2-468c-b45f-d3afce94cba2",
+                          "conceptDataType": "Coded"
+                        },
+                        "rhs": {
+                          "type": "answerConcept",
+                          "answerConceptNames": [
+                            "Education And Health"
+                          ],
+                          "answerConceptUuids": [
+                            "00e97494-a65b-482b-b919-aab58d52e5b8"
+                          ]
+                        },
+                        "operator": "containsAnswerConceptName"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "voided": true,
+          "mandatory": true
+        },
+        {
+          "name": "Number of students (Female)",
+          "uuid": "964c5eab-f333-47d1-8ca8-1a823c7c6e05",
+          "keyValues": [],
+          "concept": {
+            "name": "Number of students (Female)",
+            "uuid": "9bb209c9-c2fe-4c72-8d60-030522e53bb2",
+            "dataType": "Numeric",
+            "answers": [],
+            "lowAbsolute": 0,
+            "active": true
+          },
+          "displayOrder": 16,
+          "type": "SingleSelect",
+          "rule" : 
+({params, imports}) => {
+  const individual = params.entity;
+  const moment = imports.moment;
+  const formElement = params.formElement;
+  const _ = imports.lodash;
+  let visibility = true;
+  let value = null;
+  let answersToSkip = [];
+  let validationErrors = [];
+  
+  const condition11 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("d04d6382-91d2-468c-b45f-d3afce94cba2").containsAnswerConceptName("00e97494-a65b-482b-b919-aab58d52e5b8").matches();
+  
+  visibility = condition11 ;
+  
+  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);
+},
+          "declarativeRule": [
+            {
+              "actions": [
+                {
+                  "actionType": "showFormElement"
+                },
+                {}
+              ],
+              "conditions": [
+                {
+                  "compoundRule": {
+                    "rules": [
+                      {
+                        "lhs": {
+                          "type": "concept",
+                          "scope": "registration",
+                          "conceptName": "Type of Initiative",
+                          "conceptUuid": "d04d6382-91d2-468c-b45f-d3afce94cba2",
+                          "conceptDataType": "Coded"
+                        },
+                        "rhs": {
+                          "type": "answerConcept",
+                          "answerConceptNames": [
+                            "Education And Health"
+                          ],
+                          "answerConceptUuids": [
+                            "00e97494-a65b-482b-b919-aab58d52e5b8"
+                          ]
+                        },
+                        "operator": "containsAnswerConceptName"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "voided": true,
           "mandatory": true
         },
         {
@@ -2099,7 +2001,7 @@
             ],
             "active": true
           },
-          "displayOrder": 13,
+          "displayOrder": 17,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -2112,7 +2014,7 @@
   let answersToSkip = [];
   let validationErrors = [];
   
-  const condition11 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("d04d6382-91d2-468c-b45f-d3afce94cba2").containsAnyAnswerConceptName("4db0c307-9053-4bd4-b917-580d00e43f1d","9fd9d626-faf7-4833-a3ab-47ec3b4388f6").matches();
+  const condition11 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("d04d6382-91d2-468c-b45f-d3afce94cba2").containsAnyAnswerConceptName("4db0c307-9053-4bd4-b917-580d00e43f1d","9fd9d626-faf7-4833-a3ab-47ec3b4388f6","00e97494-a65b-482b-b919-aab58d52e5b8").matches();
   
   visibility = condition11 ;
   
@@ -2142,11 +2044,13 @@
                           "type": "answerConcept",
                           "answerConceptNames": [
                             "CFW-S2S",
-                            "S2S"
+                            "S2S",
+                            "Education and Health"
                           ],
                           "answerConceptUuids": [
                             "4db0c307-9053-4bd4-b917-580d00e43f1d",
-                            "9fd9d626-faf7-4833-a3ab-47ec3b4388f6"
+                            "9fd9d626-faf7-4833-a3ab-47ec3b4388f6",
+                            "00e97494-a65b-482b-b919-aab58d52e5b8"
                           ]
                         },
                         "operator": "containsAnyAnswerConceptName"
@@ -2170,7 +2074,7 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 14,
+          "displayOrder": 18,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -2183,9 +2087,9 @@
   let answersToSkip = [];
   let validationErrors = [];
   
-  const typeOfInitiativeisCfws2sOrS2s = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("d04d6382-91d2-468c-b45f-d3afce94cba2").containsAnyAnswerConceptName("4db0c307-9053-4bd4-b917-580d00e43f1d","9fd9d626-faf7-4833-a3ab-47ec3b4388f6").matches();
+  const typeOfInitiativeisCfws2sOrS2sOrEducationHealth = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("d04d6382-91d2-468c-b45f-d3afce94cba2").containsAnyAnswerConceptName("4db0c307-9053-4bd4-b917-580d00e43f1d","9fd9d626-faf7-4833-a3ab-47ec3b4388f6","00e97494-a65b-482b-b919-aab58d52e5b8").matches();
   
-  visibility = typeOfInitiativeisCfws2sOrS2s ;
+  visibility = typeOfInitiativeisCfws2sOrS2sOrEducationHealth ;
   
   const typeOfInitiativeIsCfws2s = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("d04d6382-91d2-468c-b45f-d3afce94cba2").containsAnswerConceptName("4db0c307-9053-4bd4-b917-580d00e43f1d").matches();
   
@@ -2196,6 +2100,8 @@
     value = 'None';
     
     };
+
+
   
   return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);
 },
@@ -2307,7 +2213,7 @@
                 "active": true
               },
               {
-                "name": "Flash floods",
+                "name": "Flash Flood",
                 "uuid": "5ffe578b-9cf5-464b-aeb9-a4454e3b297d",
                 "dataType": "NA",
                 "answers": [],
@@ -2345,7 +2251,7 @@
             ],
             "active": true
           },
-          "displayOrder": 15,
+          "displayOrder": 19,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -2416,7 +2322,7 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 16,
+          "displayOrder": 20,
           "type": "MultiSelect",
           "rule" : 
 ({params, imports}) => {
@@ -2428,36 +2334,40 @@
   let value = null;
   let answersToSkip = [];
   let validationErrors = [];
+
+  const condition11 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration("d04d6382-91d2-468c-b45f-d3afce94cba2").containsAnyAnswerConceptName("cbf0805f-aac1-40b9-b78c-1c568b86ef24","9fd9d626-faf7-4833-a3ab-47ec3b4388f6","6404fcaf-31de-4322-9620-c1b958f9c548","971c7a76-d296-4d47-9a90-47a612ceb4ca","54d27687-374e-4988-ad81-e4d26bf02bf3","00e97494-a65b-482b-b919-aab58d52e5b8").matches();
   
+  visibility = !(condition11 );
+  
+  if(visibility){
  
-  const currentImage = individual.getObservationReadableValue("a4f35739-40bf-4c8a-98b5-cd8a2ac37913");
+      const currentImage = individual.getObservationReadableValue("a4f35739-40bf-4c8a-98b5-cd8a2ac37913");
+
   
-  if(currentImage && currentImage.length > 0){
+      if(currentImage && currentImage.length > 0){
 
-      const imagerestriction = {
-        "CFW-Rahat":1,
-        "CFW-NJPC":1,
-        "CFW-S2S":1,
-        "Specific Initiative":1,
-        "Vaapsi":null,
-        "CFW":1,
-        "NJPC":null,
-        "S2S":null,
-        "Rahat":null  
-      };    
+          const imagerestriction = {
+            "CFW-Rahat":1,
+            "CFW-NJPC":1,
+            "CFW-S2S":1,
+            "Specific Initiative":1,
+            "Vaapsi":null,
+            "CFW":1,
+            "NJPC":null,
+            "S2S":null,
+            "Rahat":null  
+          };    
 
-      const initiative = individual.getObservationReadableValue("Type of Initiative");
-      
-      const restrictionLength = imagerestriction[initiative];
+          const initiative = individual.getObservationReadableValue("Type of Initiative");
+          
+          const restrictionLength = imagerestriction[initiative];
 
-      if(restrictionLength && currentImage.length > restrictionLength){
-        validationErrors.push(`you can select max ${restrictionLength} photographs`);
+          if(restrictionLength && currentImage.length > restrictionLength){
+            validationErrors.push(`you can select max ${restrictionLength} photographs`);
+          }    
+          
       }
-
-      
-      
-   }
-  
+  }
   return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);
 
 },
@@ -2491,7 +2401,7 @@
             ],
             "active": true
           },
-          "displayOrder": 17,
+          "displayOrder": 21,
           "type": "SingleSelect",
           "voided": true,
           "mandatory": true
@@ -2507,7 +2417,7 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 18,
+          "displayOrder": 22,
           "type": "SingleSelect",
           "voided": true,
           "mandatory": false
@@ -2538,7 +2448,7 @@
             ],
             "voided": true
           },
-          "displayOrder": 19,
+          "displayOrder": 23,
           "type": "MultiSelect",
           "rule" : 
 ({ params, imports }) => {
@@ -2583,7 +2493,7 @@
               }
             ]
           },
-          "displayOrder": 20,
+          "displayOrder": 24,
           "type": "SingleSelect",
           "voided": true,
           "mandatory": true
@@ -2615,7 +2525,7 @@
               }
             ]
           },
-          "displayOrder": 21,
+          "displayOrder": 25,
           "type": "SingleSelect",
           "voided": true,
           "mandatory": true
@@ -2777,7 +2687,7 @@
             "active": true,
             "voided": true
           },
-          "displayOrder": 22,
+          "displayOrder": 26,
           "type": "SingleSelect",
           "voided": true,
           "mandatory": true
@@ -2808,7 +2718,7 @@
             ],
             "voided": true
           },
-          "displayOrder": 23,
+          "displayOrder": 27,
           "type": "MultiSelect",
           "voided": true,
           "mandatory": true
@@ -2824,7 +2734,7 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 24,
+          "displayOrder": 28,
           "type": "SingleSelect",
           "voided": true,
           "mandatory": false
@@ -2845,7 +2755,7 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 25,
+          "displayOrder": 29,
           "type": "MultiSelect",
           "rule" : 
 ({params, imports}) => {
@@ -2903,7 +2813,7 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 26,
+          "displayOrder": 30,
           "type": "MultiSelect",
           "rule" : 
 ({params, imports}) => {
@@ -2961,7 +2871,7 @@
             "answers": [],
             "active": true
           },
-          "displayOrder": 27,
+          "displayOrder": 31,
           "type": "SingleSelect",
           "voided": true,
           "mandatory": false
@@ -5565,47 +5475,49 @@
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
-    const individual = params.entity;
-    const individualService = params.services.individualService;
-    const moment = imports.moment;
-    const formElement = params.formElement;
-    const _ = imports.lodash;
-    let visibility = true;
-    let value = null;
-    let answersToSkip = [];
-    let validationErrors = [];
-    const condition11 = new imports.rulesConfig.RuleCondition({
-        individual,
-        formElement
-    }).when.questionGroupValueInRegistration("ccf1fbd6-d59c-40d3-a05a-f31cd6ac2cad", "bafb80ac-6088-4649-8ed3-0501e1296c6e", params.questionGroupIndex).defined.matches();
-    if (condition11) {
-        let groupedObservation = individual.findGroupedObservation('bafb80ac-6088-4649-8ed3-0501e1296c6e');
-        let inventoryIds = [];
-        groupedObservation.forEach(subArray => {
-            let obs = subArray.groupObservations.filter(obj => obj.concept.uuid === "ccf1fbd6-d59c-40d3-a05a-f31cd6ac2cad");
-            if (obs) {
-                obs = obs[0];
-                if (obs) {
-                    let uuid = obs.valueJSON.answer;                    
-                    inventoryIds.push(uuid);
-                    let hasDuplicates = inventoryIds.length !== new Set(inventoryIds).size;
-                    if (hasDuplicates) {
-                        validationErrors.push("The same inventory item cannot be selected again.");
-                    }
-                                        const dispatchDate = individualService.getSubjectByUUID(uuid).getObservationReadableValue("78f9d6cb-356e-45dc-90d5-216185784fe6");
-                                        const distributionDate = moment(individual.getObservationReadableValue("cef5b862-672e-4e94-8ebc-3299a55f416f"));
+  const individual = params.entity;
+  const individualService = params.services.individualService;
+  const moment = imports.moment;
+  const formElement = params.formElement;
+  const _ = imports.lodash;
+  let visibility = true;
+  let value = null;
+  let answersToSkip = [];
+  let validationErrors = [];
+  const condition11 = new imports.rulesConfig.RuleCondition({
+    individual,
+    formElement
+  }).when.questionGroupValueInRegistration("ccf1fbd6-d59c-40d3-a05a-f31cd6ac2cad", "bafb80ac-6088-4649-8ed3-0501e1296c6e", params.questionGroupIndex).defined.matches();
+  if (condition11) {
+    let groupedObservation = individual.findGroupedObservation('bafb80ac-6088-4649-8ed3-0501e1296c6e');
+    let inventoryIds = [];
+    groupedObservation.forEach((subArray, index) => {
+      let obs = subArray.groupObservations.filter(obj => obj.concept.uuid === "ccf1fbd6-d59c-40d3-a05a-f31cd6ac2cad");
+      if (obs) {
+        obs = obs[0];
+        if (obs) {
+          let uuid = obs.valueJSON.answer;
+          inventoryIds.push(uuid);
+          let hasDuplicates = inventoryIds.length !== new Set(inventoryIds).size;
+          if (hasDuplicates) {
+            validationErrors.push("The same inventory item cannot be selected again.");
+          }
+          if(index === params.questionGroupIndex) {
+            const dispatchDate = individualService.getSubjectByUUID(uuid).getObservationReadableValue("78f9d6cb-356e-45dc-90d5-216185784fe6");
+            const distributionDate = moment(individual.getObservationReadableValue("cef5b862-672e-4e94-8ebc-3299a55f416f"));
 
-                    if(dispatchDate && moment(dispatchDate.toISOString()).isAfter(distributionDate)){
-                        console.log(`this is error`);
-                        validationErrors.push("Inventory received date is after distribution date");
-                    }
-                }
+            if(dispatchDate && moment(dispatchDate.toISOString()).isAfter(distributionDate)){
+              console.log(`this is error`);
+              validationErrors.push("Inventory received date is after distribution date");
             }
-            // let uuid = subArray.groupObservations.filter(obj => obj.concept.uuid === "ccf1fbd6-d59c-40d3-a05a-f31cd6ac2cad")[0]?.valueJSON?.answer;
-        });
-    }
-    console.log('validationErrors',validationErrors);
-    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);
+          }
+        }
+      }
+      // let uuid = subArray.groupObservations.filter(obj => obj.concept.uuid === "ccf1fbd6-d59c-40d3-a05a-f31cd6ac2cad")[0]?.valueJSON?.answer;
+    });
+  }
+  console.log('validationErrors',validationErrors);
+  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);
 },
           "parentFormElementUuid": "c18d20b8-e254-425f-b12b-00f3567f6b36",
           "mandatory": true
@@ -5639,6 +5551,115 @@
             "active": true
           },
           "displayOrder": 7,
+          "type": "SingleSelect",
+          "rule" : 
+({params, imports}) => {
+    const individual = params.entity;
+    const individualService = params.services.individualService;
+    const formElement = params.formElement;
+    const _ = imports.lodash;
+    let visibility = true;
+    let value = null;
+    let answersToSkip = [];
+    let validationErrors = [];
+
+    const condition11 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.questionGroupValueInRegistration("ccf1fbd6-d59c-40d3-a05a-f31cd6ac2cad", "bafb80ac-6088-4649-8ed3-0501e1296c6e", params.questionGroupIndex).defined.matches();
+    visibility = condition11;
+
+     
+    if (condition11) {
+
+        let inventoryUUID = individual.findGroupedObservation('bafb80ac-6088-4649-8ed3-0501e1296c6e')[params.questionGroupIndex].findObservationByConceptUUID('ccf1fbd6-d59c-40d3-a05a-f31cd6ac2cad').getReadableValue();
+
+        // console.log(`dt params.questionGroupIndex ${params.questionGroupIndex} inventoryUUID`,inventoryUUID);
+
+        if(inventoryUUID) {
+            const kitType= individualService.getSubjectByUUID(inventoryUUID).getObservationReadableValue("944cb7a1-a537-4e4f-bd15-74db621abefa"); 
+            const subType= individualService.getSubjectByUUID(inventoryUUID).getObservationReadableValue("1b637749-2537-42d5-a5a4-b7e522967855");                    
+
+            // console.log(`dt params.questionGroupIndex ${params.questionGroupIndex} kitType ${kitType} subType ${subType}`);
+
+            if(kitType){
+                if(subType && kitType === "CFW" && _.includes(["A","B","C","X"],subType)){
+                    _.forEach(["495f1001-01c9-4057-ac84-8b003d35f48a"], (answer) => {
+                        const answerToSkip = formElement.getAnswerWithConceptUuid(answer);
+                        if (answerToSkip) answersToSkip.push(answerToSkip);
+                    });                
+                }
+                else if(kitType === "Other" || kitType === "Vaapsi"){
+
+                }    
+                else{
+                    _.forEach(["15707d6a-47f0-430e-a43f-0ced5205e05a"], (answer) => {
+                        const answerToSkip = formElement.getAnswerWithConceptUuid(answer);
+                        if (answerToSkip) answersToSkip.push(answerToSkip);
+                    });                
+                }
+            }
+                                    
+        }
+    }
+
+    // let que = individual.findGroupedObservation('bafb80ac-6088-4649-8ed3-0501e1296c6e')[params.questionGroupIndex];
+    // if(que){
+    //   let obs = que.findObservationByConceptUUID('ef952d55-f879-4c34-99e2-722c680ed2e2');
+    //   if(obs && obs.getValue() === value) {
+    //      return null;
+    //    }   
+    // }
+
+    
+    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);
+},
+          "parentFormElementUuid": "c18d20b8-e254-425f-b12b-00f3567f6b36",
+          "mandatory": true
+        },
+        {
+          "name": "Distributed to",
+          "uuid": "3eee41a8-e339-4c08-9b42-5b559830a307",
+          "keyValues": [],
+          "concept": {
+            "name": "Distributed to",
+            "uuid": "ef952d55-f879-4c34-99e2-722c680ed2e2",
+            "dataType": "Coded",
+            "answers": [
+              {
+                "name": "Families",
+                "uuid": "15707d6a-47f0-430e-a43f-0ced5205e05a",
+                "dataType": "NA",
+                "answers": [],
+                "order": 0,
+                "active": true
+              },
+              {
+                "name": "Individuals",
+                "uuid": "495f1001-01c9-4057-ac84-8b003d35f48a",
+                "dataType": "NA",
+                "answers": [],
+                "order": 1,
+                "active": true
+              }
+            ],
+            "active": true
+          },
+          "displayOrder": 8,
+          "type": "SingleSelect",
+          "parentFormElementUuid": "c18d20b8-e254-425f-b12b-00f3567f6b36",
+          "voided": true,
+          "mandatory": true
+        },
+        {
+          "name": "Number of distributions",
+          "uuid": "da12e512-55a0-45b4-bb96-4923228e44a5",
+          "keyValues": [],
+          "concept": {
+            "name": "Number of distributions",
+            "uuid": "663f2d2e-4a9a-4b3c-a421-d4939a0b700e",
+            "dataType": "Numeric",
+            "answers": [],
+            "active": true
+          },
+          "displayOrder": 9,
           "type": "SingleSelect",
           "rule" : 
 ({params, imports}) => {
@@ -5942,36 +5963,83 @@
           "rule" : 
 ({params, imports}) => {
   const individual = params.entity;
-  const moment = imports.moment;
+  const individualService = params.services.individualService;
   const formElement = params.formElement;
   const _ = imports.lodash;
   let visibility = true;
   let value = null;
   let answersToSkip = [];
   let validationErrors = [];
-  
+
+  const OtherLocations = [
+    {name:"Tola / Mohalla",uuid:"5e259bfe-07a8-4c88-a712-d22b9a612429"},
+    {name:"Other Block",uuid:"e2d35dee-c34f-4f54-a68b-f32ee81835b6"},
+    {name:"Other Village",uuid:"16b4db7c-e0a8-41f1-ac67-07470a762d9f"}
+  ]
+
+  function toStartCase(str) {
+    return str
+      .trim()
+      .toLowerCase()
+      .split(/[\\s]+/)
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+  }
+
+  const isLocationMismatch = (e1,e2,location) => {
+    const {uuid,name} = location;
+    const loc1 = e1.getObservationReadableValue(uuid) || "";
+    const loc2 = e2.getObservationReadableValue(uuid) || "";
+    console.log(`value of ${name} ${loc1} ${loc2}`);
+    return toStartCase(loc1) !== toStartCase(loc2)
+  }
+
   const condition11 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.questionGroupValueInRegistration("fba0fa43-307a-4c48-8cbb-552362e7efd4", "3fb0d2c5-0210-49be-a31c-a6a134131af3", params.questionGroupIndex).defined.matches();
-  
+
   if (condition11) {
-        let groupedObservation = individual.findGroupedObservation('3fb0d2c5-0210-49be-a31c-a6a134131af3');
-        let inventoryIds = [];
-        groupedObservation.forEach(subArray => {
-            let obs = subArray.groupObservations.filter(obj => obj.concept.uuid === "fba0fa43-307a-4c48-8cbb-552362e7efd4");
-            if (obs) {
-                obs = obs[0];
-                if (obs) {
-                    let uuid = obs.valueJSON.answer;
-                    inventoryIds.push(uuid);
-                    let hasDuplicates = inventoryIds.length !== new Set(inventoryIds).size;
-                    if (hasDuplicates) {
-                        validationErrors.push("The same activity cannot be selected again.");
-                    }
+    let groupedObservation = individual.findGroupedObservation('3fb0d2c5-0210-49be-a31c-a6a134131af3');
+    let inventoryIds = [];
+    const addressUUID = individual.lowestAddressLevel.uuid;
+    const titleLineage = individual.lowestAddressLevel.titleLineage;
+
+    groupedObservation.forEach(subArray => {
+      let obs = subArray.groupObservations.filter(obj => obj.concept.uuid === "fba0fa43-307a-4c48-8cbb-552362e7efd4");
+      if (obs) {
+        obs = obs[0];
+        if (obs) {
+          let uuid = obs.valueJSON.answer;
+          inventoryIds.push(uuid);
+          let hasDuplicates = inventoryIds.length !== new Set(inventoryIds).size;
+          if (hasDuplicates) {
+            validationErrors.push("The same activity cannot be selected again.");
+          }else{
+            let sub = individualService.getSubjectByUUID(uuid, true);
+            if (sub && sub.addressLevel && sub.addressLevel !== titleLineage) {
+              if(titleLineage.endsWith(sub.addressLevel)) {
+                  validationErrors.push("Refresh Activity, to load additional information.");
+              } else {
+                  validationErrors.push("Geography not matching.");
+              }
+            } else {
+              sub = individualService.getSubjectByUUID(uuid);
+              if (sub && ((sub.lowestAddressLevel && sub.lowestAddressLevel.uuid && sub.lowestAddressLevel.uuid != addressUUID) || (sub.addressLevelUUID && sub.addressLevelUUID != addressUUID))) {
+                validationErrors.push("Geography not matching");
+              } else if (!sub || !sub.lowestAddressLevel) {
+                validationErrors.push("Refresh Activity, to load additional information.");
+              } else{
+                const erroredLocation = OtherLocations.filter(location => isLocationMismatch(individual,sub,location)).map(location=>location.name);
+                if(erroredLocation && erroredLocation.length > 0){
+                  validationErrors.push(`Geography not matching for ${erroredLocation.join(" & ")}`);
                 }
+              }
             }
-        });
+          }
+        }
+        }
+      });
     }
-  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);
-},
+    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);
+  },
           "parentFormElementUuid": "3649402e-6549-421c-a804-969d036ff36b",
           "mandatory": true
         },
@@ -6017,13 +6085,18 @@
                 value = subject.getObservationReadableValue('f5cc0324-9b14-42d8-b704-8cb2c5592a48');
                 visibility = true;
             } else {
-                let numberOfMaleParticipants = subject.getObservationReadableValue('526b0d5d-51cc-4004-8c12-7a6c71c6c516');
-                let numberOfFemaleParticipants = subject.getObservationReadableValue('2966afcc-2c07-44cf-8711-3fc23f52a6b5');
-                let numberOfOtherParticipants = subject.getObservationReadableValue('a043fea3-1658-4b5e-becd-ee55ab305a03');
+                let numberOfMaleParticipants = subject.getObservationReadableValue('526b0d5d-51cc-4004-8c12-7a6c71c6c516') || 0;
+                let numberOfFemaleParticipants = subject.getObservationReadableValue('2966afcc-2c07-44cf-8711-3fc23f52a6b5') || 0;
+                let numberOfOtherParticipants = subject.getObservationReadableValue('a043fea3-1658-4b5e-becd-ee55ab305a03') || 0;
+                let numberOfMaleStudent = subject.getObservationReadableValue('f0e7c823-6586-45eb-a687-9ad4f7e0375d') || 0;
+                let numberOfFemaleStudent = subject.getObservationReadableValue('9bb209c9-c2fe-4c72-8d60-030522e53bb2') || 0;
 // let numberOfParticipantsObs = subject.getObservationReadableValue('1157c7c8-9f27-410d-9115-ef36191fba06');
 // value = numberOfParticipantsObs.flatMap(obj => Object.values(obj))
 //  .reduce((sum, num)=> sum + num, 0);
-                value = numberOfMaleParticipants + numberOfFemaleParticipants + numberOfOtherParticipants;
+                console.log(`numberOfMaleParticipants ${numberOfMaleParticipants} numberOfFemaleParticipants ${numberOfFemaleParticipants} numberOfOtherParticipants ${numberOfOtherParticipants} numberOfMaleStudent ${numberOfMaleStudent} numberOfFemaleStudent ${numberOfFemaleStudent} ${_.sum(numberOfMaleParticipants,numberOfFemaleParticipants,numberOfOtherParticipants,numberOfMaleStudent,numberOfFemaleStudent)}`); 
+                value = numberOfMaleParticipants + numberOfFemaleParticipants + numberOfOtherParticipants + numberOfMaleStudent + numberOfFemaleStudent;
+                console.log(`numberOfMaleParticipants ${numberOfMaleParticipants} numberOfFemaleParticipants ${numberOfFemaleParticipants} numberOfOtherParticipants ${numberOfOtherParticipants} numberOfMaleStudent ${numberOfMaleStudent} numberOfFemaleStudent ${numberOfFemaleStudent} ${value}`); 
+                
                 visibility = true;
             }
         }
@@ -6157,27 +6230,71 @@
           "mandatory": true
         }
       ],
-      "display": "Activities Done",
-      "timed": false
-    },
-    {
-      "uuid": "8452abc1-3384-4bd6-8efa-3610433f7459",
-      "name": "Other details",
-      "displayOrder": 17,
-      "formElements": [
-        {
-          "name": "Remarks",
-          "uuid": "b11f3045-27cc-4fc9-a57e-5f1809959bbd",
-          "keyValues": [],
-          "concept": {
-            "name": "Remarks",
-            "uuid": "e132e4fe-7c7a-4612-b086-426b9f74147b",
-            "dataType": "Text",
-            "answers": [],
-            "active": true
-          },
-          "displayOrder": 1,
-          "type": "SingleSelect",
+      "rule" : 
+({ params, imports }) => {
+  const individual = params.entity;
+  const moment = imports.moment;
+  const formElement = params.formElement;
+  const _ = imports.lodash;
+  const individualService = params.services.individualService;
+  let visibility = true;
+  let value = null;
+  let answersToSkip = [];
+  let validationErrors = [];
+  let isError = false;  
+  
+  // Education and Health and S2S
+  const condition11 = new imports.rulesConfig.RuleCondition({ individual, formElement })
+    .when.valueInRegistration("d04d6382-91d2-468c-b45f-d3afce94cba2")
+    .containsAnyAnswerConceptName("00e97494-a65b-482b-b919-aab58d52e5b8", "9fd9d626-faf7-4833-a3ab-47ec3b4388f6")
+    .matches();
+  
+  const remarks = individual.getObservationReadableValue('e132e4fe-7c7a-4612-b086-426b9f74147b');
+  const condition21 = !remarks || remarks.trim().length === 0;
+   
+  if (condition11 && condition21) {
+    isError = true;
+    validationErrors.push("Please provide remarks");
+  }
+
+  let isAssessed = false;
+  if (condition21 && !isError) {
+    const loc = individual.lowestAddressLevel;
+    if (loc) {
+      const isAssesmentDoneValue = loc.getObservationReadableValue("348a795a-bbae-4353-be30-db9ae106d4f3");
+      if (isAssesmentDoneValue && isAssesmentDoneValue === 'Yes') {
+        isAssessed = true;
+      }
+    }
+    const villages = individualService.getSubjectsInLocation(individual.lowestAddressLevel, 'Village');
+    
+    if (villages && villages.length > 0 && !isAssessed) {
+
+      const size = villages.filter(({ voided,encounters }) =>!voided && encounters.length > 0)
+                           .filter( ({ encounters }) =>{ 
+                             const encounterLength = encounters.filter( ({ voided, encounterDateTime }) => !voided && !_.isNull(encounterDateTime)  ).length 
+                             return encounterLength>0;
+                           }).length;
+
+      if (size > 0) {
+        isAssessed = true;
+      }
+    }
+  }
+  if(condition21 && !isAssessed) {
+    isError = true;
+    validationErrors.push("Please provide remarks for not performing village assessment");
+  }
+
+  return new imports.rulesConfig.FormElementStatus(
+    formElement.uuid,
+    visibility,
+    value,
+    answersToSkip,
+    validationErrors
+  );
+}
+,
           "mandatory": false
         },
         {
@@ -10657,7 +10774,44 @@
       "timed": false
     }
   ],
-  "decisionRule": "",
+  "decisionRule": ""use strict";
+({params, imports}) => {
+    const individual = params.entity;
+    const moment = imports.moment;
+    const decisions = params.decisions;
+    const enrolmentDecisions = [];
+    const encounterDecisions = [];
+    const registrationDecisions = [];
+    
+    function toStartCase(str) {
+        return str
+        .trim()
+        .toLowerCase()
+        .split(/[\\s]+/)
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+    }
+          
+    const tola = individual.getObservationReadableValue("5e259bfe-07a8-4c88-a712-d22b9a612429");
+    const block = individual.getObservationReadableValue("e2d35dee-c34f-4f54-a68b-f32ee81835b6");
+    const village = individual.getObservationReadableValue("16b4db7c-e0a8-41f1-ac67-07470a762d9f");
+  
+    if(tola){
+        registrationDecisions.push({name: "Tola / Mohalla", value:toStartCase(tola) });  
+    }
+    if(block){
+        registrationDecisions.push({name: "Other Block", value:toStartCase(block) });  
+    }
+    if(village){
+        registrationDecisions.push({name: "Other Village", value:toStartCase(village) });  
+    }
+    
+  
+    decisions.enrolmentDecisions.push(...enrolmentDecisions);
+    decisions.encounterDecisions.push(...encounterDecisions);
+    decisions.registrationDecisions.push(...registrationDecisions);
+    return decisions;
+},
   "visitScheduleRule": "",
   "validationRule": "",
   "checklistsRule": "",
