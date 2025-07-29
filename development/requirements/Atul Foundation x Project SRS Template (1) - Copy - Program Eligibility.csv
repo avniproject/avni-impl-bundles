@@ -1,0 +1,17 @@
+Enrolment Eligibility,,,
+,,,
+On press of enrol on Subject Type,"Include/Exclude Program (Choose One)
+(use program name or enrolment form name which is intuitive to understand)",Logic,Additional comments/notes
+Individual,Pregnancy Program,"If age between 12-50 years of age, and gender should be female.
+",
+Individual,Child,Children of 0-2 years of age,
+Individual,Community Screening Program,"Individuals who are not added as a member of School Subject Registration
+
+or
+
+In School Screening Follow Up cancellation forrm, if reason for cancellation is = 12th pass, show Community Screening Enrolment
+
+and
+
+Age Female: 10 - 49 years of age.
+Male : 10 - 19 years of age.",
