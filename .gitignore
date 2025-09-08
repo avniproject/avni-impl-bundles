@@ -27,3 +27,11 @@ pids
 ._*
 .Spotlight-V100
 .Trashes
+
+# Development folder - ignore all files for active development
+development/
+
+# MCP sensitive files
+.mcp/gcp-oauth.keys.json
+.mcp/tokens/
+.mcp/*.token
