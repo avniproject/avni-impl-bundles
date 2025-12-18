@@ -1,0 +1,41 @@
+How to fill in this sheet,,SRS Activity,Status
+"Start with the Project Summary, go ahead with the W3H tab, add in sheets for each form separately and then fill in the Reports section",,Project Summary,Not started
+"You will have access to the complete directory on Google Sheets. Please attach any pdf, excel etc that might help explain things better",,User Persona,Not started
+"Help Text is available on multiple cells to give more information on a field. If you hover over a field or click on it, these will be visible. For example, this cell has a helptext. However over the cell to view it",,W3H,Not started
+,,Forms,Not started
+,,Reports,Not started
+,,,
+Tab,Column,Description,
+User persona,User Type,"List the different people in your organization who will use or interact with Avni (e.g., field staff, data entry staff, managers, administrators, M&E team)",
+User persona,Description,"
+1. The user's background, 
+2. Their work responsibilities and 
+3. How the system will help them, and what activities they should be able to do with it",
+User persona,Number,Number of users in each User Type,
+W3H,What,"This is an activity that is performed, and a part of data is being collected. 
+
+Examples: Beneficiary Registration (the What)",
+W3H,When,"When is the activity described under "What" conducted. eg: 
+1. "When the field worker does a monthly household visit"
+2. "When a beneficiary calls mentioning there is an emergency"",
+W3H,Who,"This tells which person or role is responsible for doing the activity.
+
+It should match with one of the user personas (like Field Worker, Coordinator etc.)
+
+Think of “Who” as: Which person is doing this work?",
+W3H,How,"Avni has a few modes of data entry. 
+1. Field app (Android app)
+2. Data Entry App (Browser based app)",
+Form,Datatype,https://avni.readme.io/docs/concepts,
+Form,Mandatory,If that particular question mandatorly needs to be answered without which you cannot save the form. If Mandatory is No user can save the form without filling the details,
+Form,User entered / System generated,"Indicates whether a question must be answered before the form can be saved.
+
+If Mandatory = Yes, the user cannot save the form without filling in this field.
+
+If Mandatory = No, the user can save the form even if the field is left blank.",
+Form,Option condition/Validation,"Include any field-level conditions, validations, or rules.
+Examples:
+
+“Show this field only if Gender = Female”
+
+“Mandatory if age < 5 years”",

@@ -1,0 +1,39 @@
+,,,,,Numeric Datatype,,,,Date Datatype,,,Pre added Options Datatype,,,,,
+Page Name,Field Name,Data Type,Mandatory (default No),User entered / System generated,"
+
+Allow Negative values","
+
+Allow Decimal?",Max and Min Limit,"Unit (In kg, INR, ml etc)",Allow Current Date?,Allow Future Date?,Allow Past Date?,Pre added Options Selection Type,OPTIONS (needed for Single Select and Multi Select),Unique option for multi-select (nothing else can be selected when this option is chosen. e.g. None),Option condition/Validation,When to show (do not specify if to be shown always),When NOT to show (do not specify if to be shown always)
+Adolescent club meeting,Name,Subject,Yes,User entered ,,,,,,,,,,,,,
+Adolescent club meeting,No. of. Participants,Numeric,Yes,User entered ,No,No,,,,,,,,,,,
+Adolescent club meeting,Topic discussed,Pre added Options ,Yes,User entered ,,,,,,,,,"SRHR
+Lifeskill
+CFAM
+Other",,,,
+Adolescent club meeting,Young women who start earning through a job or self-employment/ business,Subject,Yes,User entered ,,,,,,,,,,,,,
+Adolescent club meeting,No. of young women who start earning through a job or self-employment/ business,Numeric,Yes,User entered ,No,No,,,,,,,,,,,
+Adolescent club meeting,Girls who avail relevant public services/ entitlements/government schemes ,Subject,Yes,User entered ,,,,,,,,,,,,,
+Adolescent club meeting,Number of girls who avail relevant public services/ entitlements/government schemes ,Numeric,Yes,User entered ,No,No,,,,,,,,,,,
+Adolescent club meeting,Girls start safe usage and disposal of menstrual management products (Sanitary napkins/Cloth pads/Cups/any other),Subject,Yes,User entered ,,,,,,,,,,,,,
+Adolescent club meeting,Number of Girls start safe usage and disposal of menstrual management products (Sanitary napkins/Cloth pads/Cups/any other),Numeric,Yes,User entered ,No,No,,,,,,,,,,,
+Adolescent club meeting,Girls who access Public health centres/ adoloscent clinics/ reach out to ASHA for support ,Subject,Yes,User entered ,,,,,,,,,,,,,
+Adolescent club meeting,Number of Girls who access Public health centres/ adoloscent clinics/ reach out to ASHA for support ,Numeric,Yes,User entered ,No,No,,,,,,,,,,,
+- Child sexual abuse,Name,Subject,Yes,User entered ,,,,,,,,,,,,,
+,Number,Numeric,Yes,User entered ,No,No,,,,,,,,,,,
+- Trafficking,Name,Subject,Yes,User entered ,,,,,,,,,,,,,
+,Number,Numeric,Yes,User entered ,No,No,,,,,,,,,,,
+- Domestic violence,Name,Subject,Yes,User entered ,,,,,,,,,,,,,
+,Number,Numeric,Yes,User entered ,No,No,,,,,,,,,,,
+- Child forced marriage,Name,Subject,Yes,User entered ,,,,,,,,,,,,,
+,Number,Numeric,Yes,User entered ,No,No,,,,,,,,,,,
+Education support ,Name,Subject,Yes,User entered ,,,,,,,,,,,,,
+,Number,Numeric,Yes,User entered ,No,No,,,,,,,,,,,
+"Received immediate medical care
+ ",Name,Subject,Yes,User entered ,,,,,,,,,,,,,
+,Number,Numeric,Yes,User entered ,No,No,,,,,,,,,,,
+Accessed shelter home,Name,Subject,Yes,User entered ,,,,,,,,,,,,,
+,Number,Numeric,Yes,User entered ,No,No,,,,,,,,,,,
+- Child labour,Name,Subject,Yes,User entered ,,,,,,,,,,,,,
+,Number,Numeric,Yes,User entered ,No,No,,,,,,,,,,,
+Received legal support,Name,Subject,Yes,User entered ,,,,,,,,,,,,,
+,Number,Numeric,Yes,User entered ,No,No,,,,,,,,,,,

@@ -1,0 +1,16 @@
+type,name,label::English (en),label::Tamil (ta),hint::English (en),hint::Tamil (ta),required,parameters
+start,start,,,,,,
+end,end,,,,,,
+begin_group,group_cq9wl28,Survey Details,கணக்கெடுப்பு விவரங்கள்,,,false,
+text,enumerator_name,Enumerator Name,விவரம் சேகரிப்பவர் பெயர்,Name of the person taking the pitching details,பிட்ச்சிங் விவரங்களை எடுக்கும் நபரின் பெயர்,true,
+text,gas_agency_name,Gas Agency Name / Code,எரிவாயு முகமையின் பெயர் / குறியீடு,Name of the Gas Agency,எரிவாயு முகமையின் பெயர்,true,
+text,state_name,State Name,மாநிலப் பெயர்,Name of the State,மாநிலத்தின் பெயர்,true,
+text,gas_agency_location_area,Gas Agency Location/ Area,எரிவாயு முகமை இருப்பிடம்/பகுதி,Location of the Gas Agency,எரிவாயு முகமையின் இருப்பிடம்,true,
+end_group,,,,,,,
+begin_group,group_xm4qv54,Vyapaari Details,வியாபாரி விவரங்கள்,,,false,
+text,vyapaari_name,Vyapaari Name,வியாபாரி தொலைபேசி எண்,Name of the Vyapaari,வியாபாரி பெயர்,true,
+integer,vyapaari_phone_number,Vyapaari Phone Number,வியாபாரி தொலைபேசி எண்,Phone Number of the Vyapaari,வியாபாரி தொலைபேசி எண்,true,
+geopoint,vyapaari_location,Vyapaari Location,வியாபாரி இருப்பிடம்,Location Coordinates of the Vyapaari,வியாபாரி இருப்பிட ஒருங்கிணைப்புகள்,true,
+image,vyapaari_photo,Vyapaari Photo,வியாபாரி புகைப்படம்,,,true,max-pixels=1024
+end_group,,,,,,,
+text,Additional_Notes,Additional Notes,கூடுதல் குறிப்புகள்,Add on Information from Vyapaari or Enumerator,வியாபாரி அல்லது விவரம் சேகரிப்பவர் சேகரிப்பவரிடமிருந்து கூடுதல் தகவல்கள் ,false,

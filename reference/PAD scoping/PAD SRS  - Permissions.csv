@@ -1,0 +1,100 @@
+Form ,Entity Type,Privileges,Community organizer
+Data Entry App,,View Or Edit Entities On DataEntry App,No
+,,,
+SRHR training,Subject,Assign ,Yes
+,,View ,Yes
+,,Register ,Yes
+,,Edit ,Yes
+,,Void/Delete ,Yes
+,,Approve ,No
+,,,
+Life skill training,Subject,Assign ,Yes
+,,View ,Yes
+,,Register ,Yes
+,,Edit ,Yes
+,,Void/Delete ,Yes
+,,Approve ,No
+,,,
+Anemia camp,Subject,Assign ,Yes
+,,View ,Yes
+,,Register ,Yes
+,,Edit ,Yes
+,,Void/Delete ,Yes
+,,Approve ,No
+,,,
+Interface meeting,Subject,Assign ,Yes
+,,View ,Yes
+,,Register ,Yes
+,,Edit ,Yes
+,,Void/Delete ,Yes
+,,Approve ,No
+,,,
+Leadership,Subject,Assign ,Yes
+,,View ,Yes
+,,Register ,Yes
+,,Edit ,Yes
+,,Void/Delete ,Yes
+,,Approve ,No
+,,,
+CFAM,Subject,Assign ,Yes
+,,View ,Yes
+,,Register ,Yes
+,,Edit ,Yes
+,,Void/Delete ,Yes
+,,Approve ,No
+,,,
+Important day,Subject,Assign ,Yes
+,,View ,Yes
+,,Register ,Yes
+,,Edit ,Yes
+,,Void/Delete ,Yes
+,,Approve ,No
+,,,
+Bio-Intensive Garden,Subject,Assign ,Yes
+,,View ,Yes
+,,Register ,Yes
+,,Edit ,Yes
+,,Void/Delete ,Yes
+,,Approve ,No
+,,,
+Resource centre,Subject,Assign ,Yes
+,,View ,Yes
+,,Register ,Yes
+,,Edit ,Yes
+,,Void/Delete ,Yes
+,,Approve ,No
+,,,
+Demands,Subject,Assign ,Yes
+,,View ,Yes
+,,Register ,Yes
+,,Edit ,Yes
+,,Void/Delete ,Yes
+,,Approve ,No
+,,,
+"VLCPC, BLCPC, DLCPC",Subject,Assign ,Yes
+,,View ,Yes
+,,Register ,Yes
+,,Edit ,Yes
+,,Void/Delete ,Yes
+,,Approve ,No
+,,,
+Adolescent club ,Subject,Assign ,Yes
+,,View ,Yes
+,,Register ,Yes
+,,Edit ,Yes
+,,Void/Delete ,Yes
+,,Approve ,No
+,,,
+Community support gorup,Subject,Assign ,Yes
+,,View ,Yes
+,,Register ,Yes
+,,Edit ,Yes
+,,Void/Delete ,Yes
+,,Approve ,No
+,,,
+Parents meeting,Subject,Assign ,Yes
+,,View ,Yes
+,,Register ,Yes
+,,Edit ,Yes
+,,Void/Delete ,Yes
+,,Approve ,No

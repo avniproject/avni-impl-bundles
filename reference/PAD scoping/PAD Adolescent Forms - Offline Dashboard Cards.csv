@@ -1,0 +1,35 @@
+User Group Name,Dashboar,Report Cards,Logic,Form Name,Type,,,
+,,Number of Adolescents Registered in Club 1,,Adolescent Girls Club,Custom,,,
+,,Number of Adolescents Registered in Club 2,,Adolescent Girls Club,Custom,,,
+,,No of Adolescent girls enrolled,,Adolescent Enrolment ,Standard,,,
+,TOT,Number of TOT Members,,Sexual Reproductive Health Rights (SRHR) training,Standard,,,
+,TOT,Sexual and Reproductive Health Rights (SRHR) Training Due,"“Due” means that a visit, meeting, or training needs to be done within the current time window for completion
+
+example: if an activity is supposed to happen between the 1st and 15th of every month, then:
+
+From the 1st day of the month, it will show as Due till 15th of the month",Sexual Reproductive Health Rights (SRHR) training,Standard,,,
+,TOT,Sexual and Reproductive Health Rights (SRHR) Training Overdue,"Overdue” means that the scheduled visit, meeting, or training was not completed within the expected period.
+
+From the 16th day of the month onward, any activity that was not done will automatically change its status from “Due” to “Overdue.”",Sexual Reproductive Health Rights (SRHR) training,Standard,,,
+,TOT,Life Skills Training Due,,Life skill training,Standard,,,
+,TOT,Life Skills Training Overdue,,Life skill training,Standard,,,
+,TOT,Leadership Training Due,,Leadership trainning,Standard,,,
+,TOT,Leadership Training Overdue,,Leadership trainning,Standard,,,
+,Anemia,Bio-Intensive Garden Visit Due,,Bio Intensive Garden ,Standard,,,
+,Anemia,Bio-Intensive Garden Visit Overdue,,Anemic camp ,Standard,,,
+,Anemia,Number of Anemic Patients Identified from Anemia Camp,,Anemic camp ,Standard,,,
+,Meeting,Parents Meeting Due,,Parents Meeting,Standard,,,
+,Meeting,Parents Meeting Overdue,,Parents Meeting,Standard,,,18 of 26 rows displayed
+,Meeting,Community support group Meeting Due,,Community support group Meeting,Standard,,,
+,Meeting,Community support group Meeting Overdue,,Community support group Meeting,Standard,,,
+,Adolescent Girls,Number of Girls Enrolled in the Adolescent Program,,Adolescent Program Enrolment,Standard,,,
+,Adolescent Girls,Child Rights Training Due,,Child righrts training ,Standard,,,
+,Adolescent Girls,Child Rights Training Overdue,,Child righrts training ,Standard,,,
+,Adolescent Girls,CFAM (Child-Friendly Accountable Mechanism) Due,,CFAM,Standard,,,
+,Adolescent Girls,CFAM (Child-Friendly Accountable Mechanism) Overdue,,CFAM,Standard,,,
+,Adolescent Girls,Interface Meeting (CSG Members with Adolescent Girls) Due,,Interface Meeting ,Standard,,,
+,Adolescent Girls,Interface Meeting (CSG Members with Adolescent Girls) Overdue,,Interface Meeting ,Standard,,,
+,Adolescent Girls,Couselling follow up due,,Couselling,Standard,,,
+,Adolescent Girls,Couselling follow up overdue,,Couselling,Standard,,,
+,Adolescent Boys,Training for Adolescent Boys Due,,Training for Adolescent Boys ,Standard,,,
+,Adolescent Boys,Training for Adolescent Boys Overdue,,Training for Adolescent Boys ,Standard,,,

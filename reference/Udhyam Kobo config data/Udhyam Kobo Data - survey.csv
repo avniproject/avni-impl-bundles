@@ -1,0 +1,284 @@
+type,name,label,hint,required,constraint,constraint_message,calculation,relevant,file,choice_filter,appearance
+start,start,,,,,,,,,,
+end,end,,,,,,,,,,
+username,username,,,,,,,,,,
+xml-external,rural_first_contact,File_name,,false,,,,,,,
+text,Enter_Phone_Number,Enter Phone Number,,false,"regex(., '^[0-9]{10}$')",Must be a 10-digit phone number,,,,,
+calculate,matched_count,,,false,,,count(instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number}]),,,,
+note,error_no_data,Please verify the phone number is correct - same as recorded in onboarding form,,false,,,,${matched_count} = 0 and ${Enter_Phone_Number} != '',,,
+note,error_no_data_001,"If you're sure it's correct, use Enketo and refresh the browser, or go to the KoBoCollect app → General Settings → Form Management, then "Reset forms and data" and re-download the blank form.",,false,,,,${matched_count} = 0 and ${Enter_Phone_Number} != '',,,
+begin_group,group_cz7uu13,Baseline Details,,false,,,,,,,
+calculate,matched_single_name,,,false,,,instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number}]/group_zy0zg27/group_ss62k10/Vyapaari_Name,${matched_count} = 1,,,
+note,Vyapaari_Name,Vyapaari Name : ${matched_single_name},,false,,,,${matched_count} = 1,,,
+calculate,udhyam_vyapaari_id,,,false,,,instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number}]/group_business_details/uvr_id,${matched_count} = 1,,,
+note,show_uvr_id,Udhyam Vyapaari ID : ${udhyam_vyapaari_id},,false,,,,${matched_count} = 1,,,
+calculate,enumerator_name,,,false,,,instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number}]/Survey_Details/Enumerator_Name,${matched_count} = 1,,,
+note,show_enumerator_Name,Enumerator Name : ${enumerator_name},,false,,,,${matched_count} = 1,,,
+calculate,fetched_location,,,false,,,instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number}]/Survey_Details/Survey_Location,${matched_count} = 1,,,
+note,Survey_Location,Survey Location: ${fetched_location},,false,,,,${matched_count} = 1,,,
+calculate,fetched_zone,,,false,,,instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number}]/Survey_Details/Survey_Zone,${matched_count} = 1,,,
+note,Survey_Zone,Survey Zone: ${fetched_zone},,false,,,,${matched_count} = 1,,,
+calculate,fetched_village,,,false,,,instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number}]/Survey_Details/Vyapaari_Village_Name,${matched_count} = 1,,,
+note,Vyapaari_Village_Name,Vyapaari Village: ${fetched_village},,false,,,,${matched_count} = 1,,,
+calculate,fetched_primary_type,,,false,,,instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number}]/group_zy0zg27/group_ss62k10/Bussiness_Type,${matched_count} = 1,,,
+note,Business_Type_Primary,Business Type: ${fetched_primary_type},,false,,,,${matched_count} = 1,,,
+calculate,fetched_primary_income,,,false,,,instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number}]/Primary_Business_Baseline_Deta/Monthly_Income_In_Rupees,${matched_count} = 1,,,
+note,Baseline_Income,Baseline Primary Business Monthly Income: ₹${fetched_primary_income},,false,,,,${matched_count} = 1,,,
+calculate,fetched_secondary_type,,,false,,,instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number}]/group_zy0zg27/group_ss62k10/Secondary_Bussiness_Type,${matched_count} = 1,,,
+note,Business_Type_Secondary,Secondary Business Type: ${fetched_secondary_type},,false,,,,string-length(${fetched_secondary_type}) > 0,,,
+calculate,fetched_secondary_income,,,false,,,instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number}]/Secondary_Business_Baseline_De/Monthly_Income_In_R_r_Secondary_business,${matched_count} = 1,,,
+note,Baseline_Income_Secondary,Baseline Secondary Business Monthly Income: ₹${fetched_secondary_income},,false,,,,string-length(${fetched_secondary_income}) > 0,,,
+calculate,fetched_onboarding_type,,,false,,,instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number}]/Type_of_Vyapaari_Onboarding1,${matched_count} = 1,,,
+note,onboarding_type,Onboarded as Group/Individual : ${fetched_onboarding_type},,false,,,,${matched_count} = 1,,,
+calculate,fetched_group_shg_onboarded,,FALSE,false,,,"if(${fetched_onboarding_type} = 'group_shg', instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number}]/Group_SHG_Onboarded1, '')",${matched_count} = 1,,,
+calculate,fetched_number_of_members_shg,,,false,,,"if(${fetched_onboarding_type} = 'group_shg', instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number}]/Number_of_Members_in_Gro_SHG1, '')",${matched_count} = 1,,,
+note,show_group_shg_onboarded,Group/SHG Onboarded: ${fetched_group_shg_onboarded},,false,,,,${fetched_onboarding_type} = 'group_shg',,,
+note,show_group_shg_onboarded_001,Number of Members in Group/SHG: ${fetched_number_of_members_shg},,false,,,,${fetched_onboarding_type} = 'group_shg',,,
+calculate,matched_names,,,false,,,"join(', ', instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number}]/group_zy0zg27/group_ss62k10/Vyapaari_Name)",${matched_count} > 1,,,
+note,multiple_vyapaari_name,${matched_count} vyapaaris found for this number: ${matched_names},,false,,,,${matched_count} > 1,,,
+text,input_vyapaari_name,Enter Vyapaari Name (copy from above),Make sure spelling is right as given above,false,,,,${matched_count} > 1,"regex(${matched_names}, concat('(^|.*,\\s?)', ${input_vyapaari_name}, '($|,.*)'))",Please enter a name from above list,
+calculate,matched_name_2,,,false,,,instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number=${Enter_Phone_Number} and  group_zy0zg27/group_ss62k10/Vyapaari_Name = ${input_vyapaari_name}]/group_zy0zg27/group_ss62k10/Vyapaari_Name,${matched_count} > 1,,,
+note,Vyapaari_Name_2,Vyapaari Name : ${matched_name_2},,false,,,,${matched_count} > 1,,,
+calculate,udhyam_vyapaari_id_2,,,false,,,"instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number} and
+  group_zy0zg27/group_ss62k10/Vyapaari_Name = ${matched_name_2}]/group_business_details/uvr_id",${matched_count} > 1,,,
+note,show_uvr_id_2,Udhyam Vyapaari ID : ${udhyam_vyapaari_id_2},,false,,,,${matched_count} > 1,,,
+calculate,enumerator_name_2,,,false,,,"instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number} and
+  group_zy0zg27/group_ss62k10/Vyapaari_Name = ${matched_name_2}]/Survey_Details/Enumerator_Name",${matched_count} > 1,,,
+note,show_enumerator_Name_2,Enumerator Name : ${enumerator_name_2},,false,,,,${matched_count} > 1,,,
+calculate,fetched_location_2,,,false,,,"instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number} and
+  group_zy0zg27/group_ss62k10/Vyapaari_Name = ${matched_name_2}]/Survey_Details/Survey_Location",${matched_count} > 1,,,
+note,Survey_Location_2,Survey Location: ${fetched_location_2},,false,,,,${matched_count} > 1,,,
+calculate,fetched_zone_2,,,false,,,instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number}and  group_zy0zg27/group_ss62k10/Vyapaari_Name = ${matched_name_2}]/Survey_Details/Survey_Zone,${matched_count} > 1,,,
+note,Survey_Zone_2,Survey Zone: ${fetched_zone_2},,false,,,,${matched_count} > 1,,,
+calculate,fetched_village_2,,,false,,,instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number}and  group_zy0zg27/group_ss62k10/Vyapaari_Name = ${matched_name_2}]/Survey_Details/Vyapaari_Village_Name,${matched_count} > 1,,,
+note,Vyapaari_Village_Name_2,Vyapaari Village: ${fetched_village_2},,false,,,,${matched_count} > 1,,,
+calculate,fetched_primary_type_2,,,false,,,instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number}and  group_zy0zg27/group_ss62k10/Vyapaari_Name = ${matched_name_2}]/group_zy0zg27/group_ss62k10/Bussiness_Type,${matched_count} > 1,,,
+note,Business_Type_Primary_2,Business Type: ${fetched_primary_type_2},,false,,,,${matched_count} > 1,,,
+calculate,fetched_primary_income_2,,,false,,,instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number} and  group_zy0zg27/group_ss62k10/Vyapaari_Name = ${matched_name_2}]/Primary_Business_Baseline_Deta/Monthly_Income_In_Rupees,${matched_count} > 1,,,
+note,Baseline_Income_2,Baseline Primary Business Monthly Income: ₹${fetched_primary_income_2},,false,,,,${matched_count} > 1,,,
+calculate,fetched_secondary_type_2,,,false,,,instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number}and  group_zy0zg27/group_ss62k10/Vyapaari_Name = ${matched_name_2}]/group_zy0zg27/group_ss62k10/Secondary_Bussiness_Type,${matched_count} > 1,,,
+note,Business_Type_Secondary_2,Business Type Secondary : ${fetched_secondary_type_2},,false,,,,string-length(${fetched_secondary_type_2}) > 0,,,
+calculate,fetched_secondary_income_2,,,false,,,instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number} and group_zy0zg27/group_ss62k10/Vyapaari_Name = ${matched_name_2}]/Secondary_Business_Baseline_De/Monthly_Income_In_R_r_Secondary_business,${matched_count} > 1,,,
+note,Baseline_Income_Secondary_2,Baseline Income Secondary Business: ${fetched_secondary_income_2},,false,,,,string-length(${fetched_secondary_type_2}) > 0,,,
+calculate,fetched_onboarding_type_2,,,false,,,instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number} and group_zy0zg27/group_ss62k10/Vyapaari_Name = ${matched_name_2}]/Type_of_Vyapaari_Onboarding1,${matched_count} > 1,,,
+note,onboarding_type_2,Onboarded as Group/Individual : ${fetched_onboarding_type_2},,false,,,,${matched_count} > 1,,,
+calculate,fetched_group_shg_onboarded_2,,FALSE,false,,,"if(${fetched_onboarding_type_2} = 'group_shg', instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number} and group_zy0zg27/group_ss62k10/Vyapaari_Name = ${matched_name_2}]/Group_SHG_Onboarded1, '')",${matched_count} > 1,,,
+calculate,fetched_number_members_shg_2,,,false,,,"if(${fetched_onboarding_type_2} = 'group_shg', instance('rural_first_contact')/root/data[group_business_details/Vyapaari_Phone_Number = ${Enter_Phone_Number} and group_zy0zg27/group_ss62k10/Vyapaari_Name = ${matched_name_2}]/Number_of_Members_in_Gro_SHG1, '')",${matched_count} > 1,,,
+note,show_group_shg_onboarded_002,Group/SHG Onboarded: ${fetched_group_shg_onboarded_2},,false,,,,${fetched_onboarding_type_2} = 'group_shg',,,
+note,show_group_shg_onboarded_003,Number of Members in Group/SHG: ${fetched_number_members_shg_2},,false,,,,${fetched_onboarding_type_2} = 'group_shg',,,
+end_group,,,,,,,,,,,
+select_one vx1ax35,Mode_of_Solutioning,Mode of Solutioning,,true,,,,,,,
+calculate,group_year,,,false,,,"format-date(today(), '%y')",${Mode_of_Solutioning} = 'group',,,
+calculate,location_code,,,false,,,"if(${fetched_location}='maharashtra','MH', if(${fetched_location}='Madhya_Pradesh','MP', if(${fetched_location}='delhi','DL','OT')))",${matched_count} = 1 and ${Mode_of_Solutioning} = 'group',,,
+calculate,zone_code,,,false,,,"if(${fetched_zone}='Zone-1_(Indore)','I', if(${fetched_zone}='Zone-2_(Khandwa)','K', if(${fetched_zone}='Zone-3_(Ujjain)','U', if(${fetched_zone}='Zone-4_(Dhar_/Barwani)','B', if(${fetched_zone}='Zone-5_(Dhule)','D', if(${fetched_zone}='Zone-6_(Nandurbar)','N','OT'))))))",${matched_count} = 1 and ${Mode_of_Solutioning} = 'group',,,
+calculate,location_code_2,,,false,,,"if(${fetched_location_2}='maharashtra','MH', if(${fetched_location_2}='Madhya_Pradesh','MP', if(${fetched_location_2}='delhi','DL','OT')))",${matched_count} > 1 and ${Mode_of_Solutioning} = 'group',,,
+calculate,zone_code_2,,,false,,,"if(${fetched_zone_2}='Zone-1_(Indore)','I', if(${fetched_zone_2}='Zone-2_(Khandwa)','K', if(${fetched_zone_2}='Zone-3_(Ujjain)','U', if(${fetched_zone_2}='Zone-4_(Dhar_/Barwani)','B', if(${fetched_zone_2}='Zone-5_(Dhule)','D', if(${fetched_zone_2}='Zone-6_(Nandurbar)','N','OT'))))))",${matched_count} > 1 and ${Mode_of_Solutioning} = 'group',,,
+integer,group_number,Enter Group Number (manual input),,true,,,,${Mode_of_Solutioning} = 'group',,,
+calculate,group_code,,,false,,,"concat(${location_code}, ${group_year}, ${zone_code}, '-', ${group_number})",${matched_count} = 1 and ${Mode_of_Solutioning} = 'group',,,
+calculate,group_code_2,,,false,,,"concat(${location_code_2}, ${group_year}, ${zone_code_2}, '-', ${group_number})",${matched_count} > 1 and ${Mode_of_Solutioning} = 'group',,,
+note,show_group,Your Group Code: ${group_code},,false,,,,${matched_count} = 1 and ${Mode_of_Solutioning} = 'group',,,
+note,show_group_001,Your Group Code: ${group_code_2},,false,,,,${matched_count} > 1 and ${Mode_of_Solutioning} = 'group',,,
+integer,Total_Members_in_the_group,Total Members in the group,,true,,,,${Mode_of_Solutioning} = 'group',,,
+note,_Note_For_the_Solu_XbXsiES54OgXZeFrrSLw,"[Note : For the Solution Matrix,do refer this link](https://drive.google.com/drive/folders/1wz69p8V7i4v8XbXsiES54OgXZeFrrSLw)",,false,,,,,,,
+select_one qi5ks83,foundational_solutions_propose,Is Foundational Solutions Implemented?,,true,,,,,,,
+select_multiple lu6ee61,foundational_solutions_tried,Foundational Solutions Tried,,true,,,,${foundational_solutions_propose} = 'yes',,,
+select_one qe0bz67,Has_the_Business_Solutioning_S,Has the Business Solutioning Started?,,true,,,,,,,
+text,If_No_Mention_the_reason,"If No,Mention the reason",,true,,,,${Has_the_Business_Solutioning_S} = 'no',,,
+begin_group,group_ke1td90,Solutioning - Primary Business,,false,,,,${Has_the_Business_Solutioning_S} = 'yes',,,
+date,Primary_Solutioning_date,Solutioning date for Primary Business,,true,,,,,,,
+note,Business_Type_Primary_002,Business Type: ${fetched_primary_type},,false,,,,${matched_count} = 1,,,
+note,Business_Type_Primary_2_001,Business Type: ${fetched_primary_type_2},,false,,,,${matched_count} > 1,,,
+select_multiple wu2ag48,Solutions_Proposed_for_Primary,Solutions Proposed for Primary Business,,true,,,,,,,
+text,Mention_Solution_Primary_other,Mention the Solution (Primary),,true,,,,"selected(${Solutions_Proposed_for_Primary}, 'others')",,,
+text,Additional_notes_solutioning_if_any,Additional notes - solutioning (if any),,true,,,,,,,
+end_group,,,,,,,,,,,
+begin_group,group_rl1jo26,Solutioning - Secondary business,,false,,,,${Has_the_Business_Solutioning_S} = 'yes' and string-length(${fetched_secondary_type}) > 0 or string-length(${fetched_secondary_type_2}) > 0,,,
+date,Primary_Solutioning_date_001,Solutioning date for Secondary Business,,true,,,,,,,
+note,Business_Type_Primary_2_002,Business Type: ${fetched_secondary_type},,false,,,,${matched_count} > 1,,,
+note,Business_Type_Secondary_2_001,Business Type Secondary : ${fetched_secondary_type_2},,false,,,,string-length(${fetched_secondary_type_2}) > 0,,,
+select_multiple category,category_secondary,Solutions Proposed for Secondary Business,,true,,,,,,,
+text,Mention_Solution_secondary_oth,Mention the Solution (Secondary),,true,,,,"selected(${category_secondary}, 'others')",,,
+text,Additional_notes_solutioning_if_any_001,Additional notes - solutioning (if any),,true,,,,,,,
+end_group,,,,,,,,,,,
+select_one fn2dk78,Income_Uplift_Status,Has the Vyapaari Observed an Income Uplift?,,true,,,,${Has_the_Business_Solutioning_S} = 'yes',,,
+select_multiple su3sm37,Business_Type_for_Impacted_Bus,Business Type for Impacted Business,,true,,,,${Income_Uplift_Status} = 'yes' and ${Has_the_Business_Solutioning_S} = 'yes',,,
+begin_group,Impact_Solutions_Primary,Solutions leading to Income Uplift for Primary Business,,false,,,,"${Income_Uplift_Status} = 'yes' and selected(${Business_Type_for_Impacted_Bus}, 'primary_business') and ${Has_the_Business_Solutioning_S} = 'yes'",,,
+date,Impact_Date_for_Primary_Busine,Date of First Income Uplift  for Primary Business,,true,,,,,,,
+select_multiple wu2ag48,Income_Uplift_Solutions,Solution leading to Income Uplift for Primary Business?,,true,,,,,,"selected(${Solutions_Proposed_for_Primary}, name)",
+note,show_primary_other_note,Other Solution (Primary): ${Mention_Solution_Primary_other},,false,,,,"selected(${Solutions_Proposed_for_Primary}, 'others')",,,
+select_multiple ti7ys58,Growth_Events_Primary_Business,Growth Events leading to Income Uplift for Primary Business,,true,,,,${Income_Uplift_Status} = 'yes',,,minimal
+text,Additional_Notes_primary_Im,Additional Notes (if any),,true,,,,,,,
+end_group,,,,,,,,,,,
+begin_group,Impact_Solution_Secondary,Solutions leading to Income Uplift for Secondary Business,,false,,,,"${Income_Uplift_Status} = 'yes' and selected(${Business_Type_for_Impacted_Bus}, 'secondary_business')",,,
+date,Impact_Date_for_Secondary_Busi,Date for first income uplift for Secondary Business,,false,,,,,,,
+select_multiple wu2ag48,Income_Uplift_Solutions_001,Solution leading to Income Uplift for Secondary Business,,false,,,,,,"selected(${category_secondary}, name)",
+note,show_primary_other_note_001,Other Solution (Primary): ${Mention_Solution_secondary_oth},,false,,,,"selected(${category_secondary}, 'others')",,,
+select_multiple ti7ys58,Growth_Events_Secondary_Busine,Growth Events leading to Income Uplift for Secondary Business,,false,,,,${Income_Uplift_Status} = 'yes',,,minimal
+text,Additional_Notes_secondary_imp,Additional Notes (if any),,true,,,,,,,
+end_group,,,,,,,,,,,
+acknowledge,Enter_Impacted_Business_Detail,Enter Impacted Business Details,,false,,,,${Income_Uplift_Status} = 'yes' and ${Has_the_Business_Solutioning_S} = 'yes',,,
+begin_group,Impacted_Primary_Business_Data,Impacted Primary Business Details,,false,,,,"${Enter_Impacted_Business_Detail} != '' and selected(${Business_Type_for_Impacted_Bus}, 'primary_business') and ${Has_the_Business_Solutioning_S} = 'yes'",,,
+note,Baseline_Income_001,Baseline Primary Business Monthly Income: ₹${fetched_primary_income},,false,,,,${matched_count} = 1,,,
+note,Baseline_Income_001_001,Baseline Primary Business Monthly Income: ₹${fetched_primary_income_2},,false,,,,${matched_count} > 1,,,
+date,Income_Uplift_observ_for_Primary_Business,Income Uplift observed date for Primary Business,,true,,,,,,,
+begin_group,group_ag3lt78_header,,,false,,,,,,,w5
+note,group_ag3lt78_header_note,**Monthly Income Uplift  Details For Primary Business**,,false,,,,,,,w1
+note,group_ag3lt78_header_month_and_year,**Month and Year**,Format ex: "Aug 25",false,,,,,,,w1
+note,group_ag3lt78_header_monthly_revenue,**Monthly Revenue**,,false,,,,,,,w1
+note,group_ag3lt78_header_monthly_expense,**Monthly Expense**,,false,,,,,,,w1
+note,group_ag3lt78_header_monthly_income,**Monthly Income**,,false,,,,,,,w1
+end_group,,,,,,,,,,,
+begin_group,group_ag3lt78_month_1,,,false,,,,,,,w5
+note,group_ag3lt78_month_1_note,##### Month-1,,false,,,,,,,w1
+text,group_ag3lt78_month_1_month_and_year,<span style="display:none">month_1-Month and Year</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_1_monthly_revenue,<span style="display:none">month_1-Monthly Revenue</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_1_monthly_expense,<span style="display:none">month_1-Monthly Expense</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_1_monthly_income,<span style="display:none">month_1-Monthly Income</span>,,false,,,,,,,w1 no-label
+end_group,,,,,,,,,,,
+begin_group,group_ag3lt78_month_2,,,false,,,,,,,w5
+note,group_ag3lt78_month_2_note,##### Month-2,,false,,,,,,,w1
+text,group_ag3lt78_month_2_month_and_year,<span style="display:none">month_2-Month and Year</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_2_monthly_revenue,<span style="display:none">month_2-Monthly Revenue</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_2_monthly_expense,<span style="display:none">month_2-Monthly Expense</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_2_monthly_income,<span style="display:none">month_2-Monthly Income</span>,,false,,,,,,,w1 no-label
+end_group,,,,,,,,,,,
+begin_group,group_ag3lt78_month_3,,,false,,,,,,,w5
+note,group_ag3lt78_month_3_note,##### Month-3,,false,,,,,,,w1
+text,group_ag3lt78_month_3_month_and_year,<span style="display:none">month_3-Month and Year</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_3_monthly_revenue,<span style="display:none">month_3-Monthly Revenue</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_3_monthly_expense,<span style="display:none">month_3-Monthly Expense</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_3_monthly_income,<span style="display:none">month_3-Monthly Income</span>,,false,,,,,,,w1 no-label
+end_group,,,,,,,,,,,
+begin_group,group_ag3lt78_month_4,,,false,,,,,,,w5
+note,group_ag3lt78_month_4_note,##### Month-4,,false,,,,,,,w1
+text,group_ag3lt78_month_4_month_and_year,<span style="display:none">month_4-Month and Year</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_4_monthly_revenue,<span style="display:none">month_4-Monthly Revenue</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_4_monthly_expense,<span style="display:none">month_4-Monthly Expense</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_4_monthly_income,<span style="display:none">month_4-Monthly Income</span>,,false,,,,,,,w1 no-label
+end_group,,,,,,,,,,,
+begin_group,group_ag3lt78_month_5,,,false,,,,,,,w5
+note,group_ag3lt78_month_5_note,##### Month-5,,false,,,,,,,w1
+text,group_ag3lt78_month_5_month_and_year,<span style="display:none">month_5-Month and Year</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_5_monthly_revenue,<span style="display:none">month_5-Monthly Revenue</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_5_monthly_expense,<span style="display:none">month_5-Monthly Expense</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_5_monthly_income,<span style="display:none">month_5-Monthly Income</span>,,false,,,,,,,w1 no-label
+end_group,,,,,,,,,,,
+begin_group,group_ag3lt78_month_6,,,false,,,,,,,w5
+note,group_ag3lt78_month_6_note,##### Month-6,,false,,,,,,,w1
+text,group_ag3lt78_month_6_month_and_year,<span style="display:none">month_6-Month and Year</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_6_monthly_revenue,<span style="display:none">month_6-Monthly Revenue</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_6_monthly_expense,<span style="display:none">month_6-Monthly Expense</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_6_monthly_income,<span style="display:none">month_6-Monthly Income</span>,,false,,,,,,,w1 no-label
+end_group,,,,,,,,,,,
+begin_group,group_ag3lt78_month_7,,,false,,,,,,,w5
+note,group_ag3lt78_month_7_note,##### Month-7,,false,,,,,,,w1
+text,group_ag3lt78_month_7_month_and_year,<span style="display:none">month_7-Month and Year</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_7_monthly_revenue,<span style="display:none">month_7-Monthly Revenue</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_7_monthly_expense,<span style="display:none">month_7-Monthly Expense</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_7_monthly_income,<span style="display:none">month_7-Monthly Income</span>,,false,,,,,,,w1 no-label
+end_group,,,,,,,,,,,
+begin_group,group_ag3lt78_month_8,,,false,,,,,,,w5
+note,group_ag3lt78_month_8_note,##### Month-8,,false,,,,,,,w1
+text,group_ag3lt78_month_8_month_and_year,<span style="display:none">month_8-Month and Year</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_8_monthly_revenue,<span style="display:none">month_8-Monthly Revenue</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_8_monthly_expense,<span style="display:none">month_8-Monthly Expense</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_8_monthly_income,<span style="display:none">month_8-Monthly Income</span>,,false,,,,,,,w1 no-label
+end_group,,,,,,,,,,,
+begin_group,group_ag3lt78_month_9,,,false,,,,,,,w5
+note,group_ag3lt78_month_9_note,##### Month-9,,false,,,,,,,w1
+text,group_ag3lt78_month_9_month_and_year,<span style="display:none">month_9-Month and Year</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_9_monthly_revenue,<span style="display:none">month_9-Monthly Revenue</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_9_monthly_expense,<span style="display:none">month_9-Monthly Expense</span>,,false,,,,,,,w1 no-label
+integer,group_ag3lt78_month_9_monthly_income,<span style="display:none">month_9-Monthly Income</span>,,false,,,,,,,w1 no-label
+end_group,,,,,,,,,,,
+end_group,,,,,,,,,,,
+begin_group,Impacted_Primary_Business_Data_001,Impacted Secondary Business Details,,false,,,,"${Income_Uplift_Status} = 'yes' and ${Enter_Impacted_Business_Detail} != '' and selected(${Business_Type_for_Impacted_Bus}, 'secondary_business') and ${Has_the_Business_Solutioning_S} = 'yes'",,,
+note,Baseline_Income_Secondary_001_001,Baseline Secondary Business Monthly Income: ₹${fetched_secondary_income_2},,false,,,,string-length(${fetched_secondary_income_2}) > 0,,,
+note,Baseline_Income_Secondary_001,Baseline Secondary Business Monthly Income: ₹${fetched_secondary_income},,false,,,,string-length(${fetched_secondary_income}) > 0,,,
+date,Income_Uplift_observ_for_Primary_Business_001,Income Uplift observed date for Primary Business,,true,,,,,,,
+begin_group,group_ov3ot39_header,,,false,,,,,,,w5
+note,group_ov3ot39_header_note,**Monthly Income Uplift  Details For Secondary Business**,,false,,,,,,,w1
+note,group_ov3ot39_header_name_year_1,**Month Name and Year**,Format ex: "Aug 25",false,,,,,,,w1
+note,group_ov3ot39_header_revenue_1,**Monthly Revenue**,,false,,,,,,,w1
+note,group_ov3ot39_header_expense_1,**Monthly Expense**,,false,,,,,,,w1
+note,group_ov3ot39_header_income_1,**Monthly Income**,,false,,,,,,,w1
+end_group,,,,,,,,,,,
+begin_group,group_ov3ot39_month_1,,,false,,,,,,,w5
+note,group_ov3ot39_month_1_note,##### Month-1 (Sec),,false,,,,,,,w1
+text,group_ov3ot39_month_1_name_year_1,<span style="display:none">month_1-Month Name and Year</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_1_revenue_1,<span style="display:none">month_1-Monthly Revenue</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_1_expense_1,<span style="display:none">month_1-Monthly Expense</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_1_income_1,<span style="display:none">month_1-Monthly Income</span>,,false,,,,,,,w1 no-label
+end_group,,,,,,,,,,,
+begin_group,group_ov3ot39_month_2,,,false,,,,,,,w5
+note,group_ov3ot39_month_2_note,##### Month-2 (Sec),,false,,,,,,,w1
+text,group_ov3ot39_month_2_name_year_1,<span style="display:none">month_2-Month Name and Year</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_2_revenue_1,<span style="display:none">month_2-Monthly Revenue</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_2_expense_1,<span style="display:none">month_2-Monthly Expense</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_2_income_1,<span style="display:none">month_2-Monthly Income</span>,,false,,,,,,,w1 no-label
+end_group,,,,,,,,,,,
+begin_group,group_ov3ot39_month_3,,,false,,,,,,,w5
+note,group_ov3ot39_month_3_note,##### Month-3 (Sec),,false,,,,,,,w1
+text,group_ov3ot39_month_3_name_year_1,<span style="display:none">month_3-Month Name and Year</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_3_revenue_1,<span style="display:none">month_3-Monthly Revenue</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_3_expense_1,<span style="display:none">month_3-Monthly Expense</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_3_income_1,<span style="display:none">month_3-Monthly Income</span>,,false,,,,,,,w1 no-label
+end_group,,,,,,,,,,,
+begin_group,group_ov3ot39_month_4,,,false,,,,,,,w5
+note,group_ov3ot39_month_4_note,##### Month-4 (Sec),,false,,,,,,,w1
+text,group_ov3ot39_month_4_name_year_1,<span style="display:none">month_4-Month Name and Year</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_4_revenue_1,<span style="display:none">month_4-Monthly Revenue</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_4_expense_1,<span style="display:none">month_4-Monthly Expense</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_4_income_1,<span style="display:none">month_4-Monthly Income</span>,,false,,,,,,,w1 no-label
+end_group,,,,,,,,,,,
+begin_group,group_ov3ot39_month_5,,,false,,,,,,,w5
+note,group_ov3ot39_month_5_note,##### Month-5 (Sec),,false,,,,,,,w1
+text,group_ov3ot39_month_5_name_year_1,<span style="display:none">month_5-Month Name and Year</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_5_revenue_1,<span style="display:none">month_5-Monthly Revenue</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_5_expense_1,<span style="display:none">month_5-Monthly Expense</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_5_income_1,<span style="display:none">month_5-Monthly Income</span>,,false,,,,,,,w1 no-label
+end_group,,,,,,,,,,,
+begin_group,group_ov3ot39_month_6,,,false,,,,,,,w5
+note,group_ov3ot39_month_6_note,##### Month-6 (Sec),,false,,,,,,,w1
+text,group_ov3ot39_month_6_name_year_1,<span style="display:none">month_6-Month Name and Year</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_6_revenue_1,<span style="display:none">month_6-Monthly Revenue</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_6_expense_1,<span style="display:none">month_6-Monthly Expense</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_6_income_1,<span style="display:none">month_6-Monthly Income</span>,,false,,,,,,,w1 no-label
+end_group,,,,,,,,,,,
+begin_group,group_ov3ot39_month_7,,,false,,,,,,,w5
+note,group_ov3ot39_month_7_note,##### Month-7 (Sec),,false,,,,,,,w1
+text,group_ov3ot39_month_7_name_year_1,<span style="display:none">month_7-Month Name and Year</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_7_revenue_1,<span style="display:none">month_7-Monthly Revenue</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_7_expense_1,<span style="display:none">month_7-Monthly Expense</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_7_income_1,<span style="display:none">month_7-Monthly Income</span>,,false,,,,,,,w1 no-label
+end_group,,,,,,,,,,,
+begin_group,group_ov3ot39_month_8,,,false,,,,,,,w5
+note,group_ov3ot39_month_8_note,##### Month-8 (Sec),,false,,,,,,,w1
+text,group_ov3ot39_month_8_name_year_1,<span style="display:none">month_8-Month Name and Year</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_8_revenue_1,<span style="display:none">month_8-Monthly Revenue</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_8_expense_1,<span style="display:none">month_8-Monthly Expense</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_8_income_1,<span style="display:none">month_8-Monthly Income</span>,,false,,,,,,,w1 no-label
+end_group,,,,,,,,,,,
+begin_group,group_ov3ot39_month_9,,,false,,,,,,,w5
+note,group_ov3ot39_month_9_note,##### Month-9 (Sec),,false,,,,,,,w1
+text,group_ov3ot39_month_9_name_year_1,<span style="display:none">month_9-Month Name and Year</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_9_revenue_1,<span style="display:none">month_9-Monthly Revenue</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_9_expense_1,<span style="display:none">month_9-Monthly Expense</span>,,false,,,,,,,w1 no-label
+integer,group_ov3ot39_month_9_income_1,<span style="display:none">month_9-Monthly Income</span>,,false,,,,,,,w1 no-label
+end_group,,,,,,,,,,,
+end_group,,,,,,,,,,,
+text,_Worksheet_for_Baseline,[Worksheet for Impact details](https://drive.google.com/drive/folders/1K-RFcF0kMcIGypTETs5aH3cgkK32XIpi),Upload the working calculation proofs to the drive linked above,false,"regex(., '^https?:\/\/(drive|docs)\.google\.com\/(drive|file|open)\S*$')",Enter a Valid URL,,${Enter_Impacted_Business_Detail} != '' and ${Has_the_Business_Solutioning_S} = 'yes',,,
+begin_group,Validation_Status,Validation Details,,false,,,,${Enter_Impacted_Business_Detail} != '' and ${Has_the_Business_Solutioning_S} = 'yes',,,
+note,Important_Note,"Important Note : For the questions below, ensure that the Impacted revenue,income,expenses,solutions and worksheet calculations have been addressed and validated.",Validation to be done by Managers only,false,,,,${Enter_Impacted_Business_Detail} != '',,,
+note,Project_Incharge_Validation,Project Incharge Validation,,false,,,,,,,
+select_one py8ai49,Incharge_Validation_Process,"Is the Impacted (Primary and Secondary) bussiness data,solutions and worksheet validated ?",,true,,,,,,,
+date,Date_of_validation_Incharge,Date of validation (Incharge),,true,,,,${Incharge_Validation_Process} = 'yes',,,
+select_one qq0hm91,Data_validated_Incharge,Data validated by : (Incharge),,true,,,,${Incharge_Validation_Process} = 'yes',,,
+text,Additional_details_i_if_any_Incharge,Additional details/input (if any) - [Incharge],,false,,,,${Incharge_Validation_Process} = 'yes',,,
+note,Project_Manager_Validation,Project Manager Validation,,false,,,,${Incharge_Validation_Process} = 'yes',,,
+select_one xk97l82,Manager_validation,"Is the Impacted (Primary and Secondary) business data,solutions and worksheet validated and approved?",,true,,,,${Incharge_Validation_Process} = 'yes',,,
+date,Date_of_validation_Manager,Date of validation (Manager),,true,,,,${Manager_validation} = 'yes',,,
+select_one kw0gz62,Data_validated_by_Manager,Data validated by : (Manager),,true,,,,${Manager_validation} = 'yes',,,
+text,Additional_details_i_if_any_Manager,Additional details/input (if any) - [Manager],,false,,,,${Manager_validation} = 'yes' or ${Manager_validation} = 'no',,,
+end_group,,,,,,,,,,,
+text,Any_other_details_ab_on_with_the_vyapaari,Any other details about the business or from the conversation with the vyapaari?,,false,,,,,,,

@@ -1,0 +1,11 @@
+,,,,,Numeric Datatype,,,,Date Datatype,,,Pre added Options Datatype,,,,,
+Page Name,Field Name,Data Type,Mandatory (default No),User entered / System generated,"
+
+Allow Negative values","
+
+Allow Decimal?",Max and Min Limit,"Unit (In kg, INR, ml etc)",Allow Current Date?,Allow Future Date?,Allow Past Date?,Pre added Options Selection Type,OPTIONS (needed for Single Select and Multi Select),Unique option for multi-select (nothing else can be selected when this option is chosen. e.g. None),Option condition/Validation,When to show (do not specify if to be shown always),When NOT to show (do not specify if to be shown always)
+Resource centre,Date of visit,Date,Yes,User entered ,,,Date ,,Yes,,Yes,,,,,,
+Resource centre,Centre name,Text,Yes,User entered ,,,Text,,,,,,,,,,
+Resource centre,Location ,Text,Yes,User entered ,,,Text,,,,,Single Select,,,,,
+Resource centre,No. Of. visitors (monthly),Numeric,Yes,User entered ,No,No,Number,,,,,,,,,,
+Resource centre,Facilites available,Pre added Options ,Yes,User entered ,,,Multi select,,,,,Multi Select,"Library, Computer access, IEC material",,,,

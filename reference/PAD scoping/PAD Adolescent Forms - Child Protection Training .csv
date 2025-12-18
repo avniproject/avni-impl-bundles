@@ -1,0 +1,39 @@
+,,,,,Numeric Datatype,,,,Date Datatype,,,Pre added Options Datatype,,,,,
+Page Name,Field Name,Data Type,Mandatory (default No),User entered / System generated,"
+
+Allow Negative values","
+
+Allow Decimal?",Max and Min Limit,"Unit (In kg, INR, ml etc)",Allow Current Date?,Allow Future Date?,Allow Past Date?,Pre added Options Selection Type,OPTIONS (needed for Single Select and Multi Select),Unique option for multi-select (nothing else can be selected when this option is chosen. e.g. None),Option condition/Validation,When to show (do not specify if to be shown always),When NOT to show (do not specify if to be shown always)
+Village Level Child Protection Commitee,Meeting Date,Pre added Options ,Yes,User entered ,,,Text,Multi select,,,,,Meeting Happening where? = Village,,,Meeting Happening where? = Village,
+,Meeting Happening where?,Pre added Options ,Yes,User entered ,,,Text,Multi select,,,,,"Village
+Block
+District",,,,
+,Village,Pre added Options ,Yes,User entered ,,,Text,Address,,,,,,,,Meeting Happening where? = Village,
+,No. of. parcipants,Numeric,Yes,User entered ,,,Text,Number,,,,,,,,Meeting Happening where? = Village,
+,Training/Orientation Topics,Pre added Options ,Yes,User entered ,,,Text,Multi select,,,,Single Select,"
+- Child sexual abuse
+- Trafficking
+- Domestic violence
+- Child forced marriage
+- Child labour
+ -",,,Meeting Happening where? = Village,
+Block Level Child Protection Commitee,Meeting Date,Date,Yes,User entered ,,,Text,Multi select,,,,,,,,Meeting Happening where? = Block,
+,Village,Pre added Options ,Yes,User entered ,,,Text,Address,,,,,,,,Meeting Happening where? = Block,
+,No. of. parcipants,Numeric,Yes,User entered ,,,Text,Number,,,,,,,,Meeting Happening where? = Block,
+,Training/Orientation Topics,Pre added Options ,Yes,User entered ,,,Text,Multi select,,,,Single Select,"
+- Child sexual abuse
+- Trafficking
+- Domestic violence
+- Child forced marriage
+- Child labour
+ -",,,Meeting Happening where? = Block,
+District Level Child Protection Commitee,Meeting Date,Date,Yes,User entered ,,,Text,Multi select,,,,,,,,Meeting Happening where? = District,
+,Village,Pre added Options ,Yes,User entered ,,,Text,Address,,,,,,,,Meeting Happening where? = District,
+,No. of. parcipants,Numeric,Yes,User entered ,,,Text,Number,,,,,,,,Meeting Happening where? = District,
+,Training/Orientation Topics,Pre added Options ,Yes,User entered ,,,Text,Multi select,,,,Single Select,"
+- Child sexual abuse
+- Trafficking
+- Domestic violence
+- Child forced marriage
+- Child labour
+ -",,,Meeting Happening where? = District,

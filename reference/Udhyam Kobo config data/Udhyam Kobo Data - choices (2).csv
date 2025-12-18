@@ -1,0 +1,124 @@
+list_name,name,label,order
+fk5ib99,rohith,Rohit,
+fk5ib99,dharamveer,Dharamveer,1
+fk5ib99,santhosh,Santosh,2
+fk5ib99,option_7,Abdul Muktdir,3
+fk5ib99,shabab,Shabab,4
+fk5ib99,others,Others ,5
+qu8un16,kanpur,Kanpur,
+qu8un16,lucknow,Lucknow,1
+qu8un16,other,Other (specify manually),2
+gi6dk24,kanpur,Kanpur,
+gi6dk24,kanpur_dehat,Kanpur-Dehat,
+gi6dk24,lucknow,Lucknow,
+gi6dk24,others,Others,
+uy9wl27,option_3,Udhyam ,
+uy9wl27,others,Others,1
+lw1ab88,male,Male,
+lw1ab88,female,Female,1
+lw1ab88,other,Other,2
+gt3wv48,yes,Yes,
+gt3wv48,no,No,
+mt4da19,lack_of_space_to_safely_store_,Lack of space to safely store LPG Cylinder ,
+mt4da19,restrictions_placed_on_usage_o,Restrictions placed on usage of LPG iron by Society/ RWA / Market Associations ,
+mt4da19,customers_don_t_prefer_lpg_iro,Customers don't prefer LPG ironed clothes ,
+mt4da19,received_negative_feedback_on_,Received negative feedback on LPG iron from fellow vyapaaris (eg. bad odour due to gas leakage),
+mt4da19,lack_of_readily_available_afte,Lack of readily available after-sales support services,
+mt4da19,financial_constraints,Financial constraints ,
+mt4da19,others__specify_,Others (specify) ,
+de7cw56,own_cart,Own Cart,
+de7cw56,rented_cart,Rented Cart,1
+de7cw56,own_shop,Own Shop,2
+de7cw56,rented_shop,Rented Shop,3
+de7cw56,mobile_cart,Mobile Cart,4
+de7cw56,home,Home ,5
+de7cw56,outside_premises,Outside Premises,6
+de7cw56,other__specify_manually,Other (specify Manually),7
+bx5qd38,coal,Coal,
+bx5qd38,electric,Electric,1
+bx5qd38,lpg,LPG,2
+ce3kp87,yes,Yes,
+ce3kp87,no,No,
+vm3ze86,fellow_istri_vyapaaris,Fellow Istri Vyapaaris ,
+vm3ze86,family,Family,
+vm3ze86,friends,Friends,
+vm3ze86,neighbours,Neighbours ,
+vm3ze86,internet,Internet ,
+vm3ze86,others__please_specify,Others (please specify),
+oe8lw83,none,None,
+oe8lw83,low_heat_time,Heats up in less than 2 mins,1
+oe8lw83,no_cloth_damage,No damages to clothes,2
+oe8lw83,easy_temp_control,Temperature can be easily controlled,3
+oe8lw83,low_ironing_cost,Cost per cloth ironed reduces,4
+oe8lw83,easy_fuel_access,Easy access to the fuel,5
+oe8lw83,less_emission_exposure,Lesser exposure to emissions,6
+oe8lw83,other,Other (specify manually) ,7
+dx1un52,yes,Yes,
+dx1un52,no,No,
+xz4rg60,yes,Yes,
+xz4rg60,no,No,
+kw72q82,yes,Yes,
+kw72q82,no,No,
+sa5qh71,yes,Yes,
+sa5qh71,no,No,
+sa5qh71,shared,Shared,
+ox4jx23,kanpur,Kanpur,
+ox4jx23,option_5,Lucknow,1
+ox4jx23,others,Others,2
+jw32z18,yes,Yes,
+jw32z18,no,No,
+rf7fb47,yes,Yes,
+rf7fb47,no,No,
+tb6hb03,yes,Yes,
+tb6hb03,no,No,
+js3cq13,yes,Yes,
+js3cq13,no,No,
+xi3rk57,cast_iron_box,Cast Iron Box,
+xi3rk57,brass_iron_box,Brass Iron Box,
+ym6on41,yes,Yes,
+ym6on41,no,No,
+md5qv10,yes,Yes,
+md5qv10,no,No,
+kk3iz64,full_time,Full Time ,
+kk3iz64,partial_time,Part time,
+tn4xn47,yes,Yes,
+tn4xn47,no,No,
+iy3db53,istri___pressing_business,Pressing / Istri  Business,
+iy3db53,others,Others,
+pd3ic48,yes,Yes,
+pd3ic48,no,No,
+bb2mb37,rohith,Rohit,
+bb2mb37,dharamveer,Dharamveer,1
+bb2mb37,santhosh,Santosh,2
+bb2mb37,abdul_muktdir,Abdul Muktdir,3
+bb2mb37,shabab,Shabab,4
+bb2mb37,others,Others,5
+we2xv33,cohort_1,Cohort-1,
+we2xv33,cohort_2,Cohort-2,
+we2xv33,cohort_3,Cohort-3,
+we2xv33,cohort_4,Cohort-4,
+we2xv33,cohort_5,Cohort-5,
+we2xv33,cohort_6,Cohort-6,
+we2xv33,cohort_7,Cohort-7,
+we2xv33,cohort_8,Cohort-8,
+we2xv33,cohort_9,Cohort-9,
+we2xv33,cohort_10,Cohort-10,
+we2xv33,cohort_11,Cohort-11,
+we2xv33,cohort_12,Cohort-12,
+we2xv33,cohort_13,Cohort-13,
+we2xv33,cohort_14,Cohort-14,
+we2xv33,cohort_15,Cohort-15,
+cd4or97,sandhu_engineering_works,Sandhu Engineering Works,
+cd4or97,others,Others,3
+we2au49,cast_iron_box,Cast Iron Box,
+we2au49,brass_iron_box,Brass Iron Box,
+dz9hn74,yes,Yes ,
+dz9hn74,no,No,
+np2am71,yes,Yes,
+np2am71,no,No,
+ms0hf24,abdul_muktdir,Abdul Muktdir,
+ms0hf24,vishnu,Vishnu,
+ri5yq77,photo_of_distribution,Photo of Distribution,
+ri5yq77,photo_of_acknowledgement,Photo of Acknowledgement,
+ri5yq77,photo_of_bill__retailer_bill,Photo of Bill (Retailer Bill),
+ri5yq77,lpg_usage_photo,LPG Usage Photo,

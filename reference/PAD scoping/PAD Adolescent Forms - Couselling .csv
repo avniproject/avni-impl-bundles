@@ -1,0 +1,18 @@
+,,,,,Numeric Datatype,,,,Date Datatype,,,Pre added Options Datatype,,,,,
+Page Name,Field Name,Data Type,Mandatory (default No),User entered / System generated,"
+
+Allow Negative values","
+
+Allow Decimal?",Max and Min Limit,"Unit (In kg, INR, ml etc)",Allow Current Date?,Allow Future Date?,Allow Past Date?,Pre added Options Selection Type,OPTIONS (needed for Single Select and Multi Select),Unique option for multi-select (nothing else can be selected when this option is chosen. e.g. None),Option condition/Validation,When to show (do not specify if to be shown always),When NOT to show (do not specify if to be shown always)
+Counselling Topics,Topic of counselling ,Pre added Options ,Yes,User entered ,No,No,,,,,,Multi Select,"General Health education,
+Menstrual hygiene and  menstrual management products,
+
+Education Support",,,,
+General Health Education Counselling Details,Details of couselling session,Text,Yes,User entered ,No,No,,,,,,Multi Select,,,,Topic of counselling  = General Health education,
+General Health Education Counselling Details,Counselling hours,Duration,Yes,User entered ,No,Yes,,hrs,,,,,,,,Topic of counselling  = General Health education,
+Menstrual hygiene and  menstrual management products Counselling Details,Details of couselling session,Text,Yes,User entered ,No,No,,,,,,Multi Select,,,,Topic of counselling  = Menstrual hygiene and  menstrual management products,
+Menstrual hygiene and  menstrual management products Counselling Details,Counselling hours,Duration,Yes,User entered ,No,Yes,,hrs,,,,,,,,Topic of counselling  = Menstrual hygiene and  menstrual management products,
+"
+Education Support Counselling Details",Educaiton support Counselling,Numeric,Yes,User entered ,No,Yes,,hrs,,,,,,,,Topic of counselling  = Education Support,
+"
+Education Support Counselling Details",Details of couselling session,Duration,Yes,User entered ,No,No,,,,,,Multi Select,,,,Topic of counselling  = Education Support,
