@@ -1,0 +1,191 @@
+{
+  "name" : "Abortion (Hospital)",
+  "uuid" : "9d822ab3-a739-4214-af62-8ac225e0747a",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "a5dc6764-97b6-464d-a5df-1898d16bc8d5",
+    "name" : "Abortion (Hospital)",
+    "displayOrder" : -1.0,
+    "formElements" : [ {
+      "name" : "Date of abortion [H]",
+      "uuid" : "68882528-a13d-43bd-bd71-2dd7b1cb84ce",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Date of abortion [H]",
+        "uuid" : "195915a3-2b25-4fbb-88dd-6143ddb593bb",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Type of Abortion [H]",
+      "uuid" : "a6a39860-0973-4a7b-820f-1d699a28dc82",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Type of Abortion [H]",
+        "uuid" : "fabe76ba-6fa5-4e0f-bfb2-fd5463d21ba6",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Induced abortion [H]",
+          "uuid" : "cdd23baa-2dc7-400e-86e2-f302bacacd6a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Spontaneous abortion [H]",
+          "uuid" : "5b4c9ace-ad84-426c-90f4-c7aa370b6e96",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Period of gestation in weeks at the time of abortion [H]",
+      "uuid" : "1f22b665-8e3b-487e-a1a0-86e90adb6708",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Period of gestation in weeks at the time of abortion [H]",
+        "uuid" : "d7823710-48b7-4493-96f6-236a99ac63ac",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Place of abortion [H]",
+      "uuid" : "1b36c15d-6f20-42ac-8357-11b967778099",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Place of abortion [H]",
+        "uuid" : "89e74132-37a0-4663-82a0-3e8315a6d09b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Home [H]",
+          "uuid" : "f2c2be44-005f-467b-b0b1-ba9c85527000",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Institutional [H]",
+          "uuid" : "957a1460-3f11-43cf-8270-c1dcc2d64f71",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Date of discharge [H]",
+      "uuid" : "7c4c4039-1181-4b20-bd63-2c8356067ce5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Date of discharge [H]",
+        "uuid" : "e0e96eda-66f4-47d3-9c7a-291ccdccb143",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Post abortion complaints [H]",
+      "uuid" : "37a97a8f-571b-4bb4-bcc4-fdda6d1e2e65",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Post abortion complaints [H]",
+        "uuid" : "b25c03a3-0b40-4735-9d74-9af7b2418775",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "None [H]",
+          "uuid" : "12f5b637-a701-4e41-8f00-2fe80cdb42ca",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Fever [H]",
+          "uuid" : "fb04c1ac-eb9a-47aa-8c98-d49db7f81dc8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Abdominal pain [H]",
+          "uuid" : "515765ff-d1ea-486a-8738-7b5574850d0e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Per vaginal bleeding [H]",
+          "uuid" : "f0d58e6d-e28c-49ee-988c-adf63ed1890d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other [H]",
+          "uuid" : "e11b9a8d-1ffb-47f7-801c-7a8d8a17ee09",
+          "dataType" : "Text",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Other abortion complaints? [H]",
+      "uuid" : "8a6cf7f3-dc6b-4c70-8bf2-6022f53948d5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other abortion complaints? [H]",
+        "uuid" : "ebd5295d-f3c2-4948-89bb-2dda6ab07222",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "Abortion (Hospital)",
+    "timed" : false
+  } ],
+  "decisionConcepts" : [ ]
+}

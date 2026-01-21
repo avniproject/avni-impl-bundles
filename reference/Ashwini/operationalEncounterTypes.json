@@ -1,0 +1,467 @@
+{
+  "operationalEncounterTypes" : [ {
+    "uuid" : "2fe57864-43b2-4b8d-a086-459ca26f6656",
+    "encounterType" : {
+      "uuid" : "7088906a-f452-4e85-a13c-2d4b10981dfd",
+      "voided" : false
+    },
+    "name" : "Alcohol de-addiction Follow up",
+    "voided" : false
+  }, {
+    "uuid" : "07c45b2d-facb-4493-8263-94e0d7a1cb1d",
+    "encounterType" : {
+      "uuid" : "0cbc1eaa-2062-4d38-b69e-9488b4130455",
+      "voided" : false
+    },
+    "name" : "Chronic sickness followup",
+    "voided" : false
+  }, {
+    "uuid" : "d2fecebd-65a3-4b20-8b05-cc13c2ce7cb2",
+    "encounterType" : {
+      "uuid" : "d384c4f1-8549-4686-bab5-673f44bbabee",
+      "voided" : false
+    },
+    "name" : "Sickle Cell followup",
+    "voided" : false
+  }, {
+    "uuid" : "26a87592-f75c-4654-b891-3f10e38786cb",
+    "encounterType" : {
+      "uuid" : "a5a042eb-a6c8-4aed-a7be-dd808c4f028c",
+      "voided" : false
+    },
+    "name" : "FP monthly assessment",
+    "voided" : false
+  }, {
+    "uuid" : "e8584a7f-b2a8-4027-94e8-5c7f09eca45a",
+    "encounterType" : {
+      "uuid" : "aee78ad6-22ed-4e8f-aaa2-88fec28677cc",
+      "voided" : false
+    },
+    "name" : "Mental Health followup",
+    "voided" : false
+  }, {
+    "uuid" : "2d9018c3-b274-46c9-9db0-781c729ff58d",
+    "encounterType" : {
+      "uuid" : "75e563dd-4753-43c3-9c59-95aadbba688f",
+      "voided" : false
+    },
+    "name" : "TB followup",
+    "voided" : false
+  }, {
+    "uuid" : "08e3d619-910a-444b-b802-fc65eb910730",
+    "encounterType" : {
+      "uuid" : "eaef0e60-271b-41ff-b710-b1572b323cef",
+      "voided" : false
+    },
+    "name" : "Death Registration",
+    "voided" : false
+  }, {
+    "uuid" : "d5538b56-43d8-4cb7-bf76-8b783b1ce6a3",
+    "encounterType" : {
+      "uuid" : "02c72b2b-19f0-4f75-b734-dcad5601881b",
+      "voided" : false
+    },
+    "name" : "Anthropometry Assessment",
+    "voided" : false
+  }, {
+    "uuid" : "e2a05f40-446e-43dd-9183-2967c038034e",
+    "encounterType" : {
+      "uuid" : "330d954c-ab5f-4ea1-be8b-ba26a12bdfbc",
+      "voided" : false
+    },
+    "name" : "Child PNC",
+    "voided" : false
+  }, {
+    "uuid" : "bc66e632-8834-4bbd-a303-ca0af2ea157f",
+    "encounterType" : {
+      "uuid" : "1f07ae8c-faa4-4934-8e06-9038e62fc2ac",
+      "voided" : false
+    },
+    "name" : "Birth",
+    "voided" : false
+  }, {
+    "uuid" : "1d77c485-ae4b-4a2f-91d0-a7db5223b8fd",
+    "encounterType" : {
+      "uuid" : "1dec6355-4abd-45b7-89ab-bae1f5f9cc07",
+      "voided" : false
+    },
+    "name" : "Abortion",
+    "voided" : false
+  }, {
+    "uuid" : "e4965547-a8a8-4e73-b61d-248a1fbdf395",
+    "encounterType" : {
+      "uuid" : "7b6a93c7-e1e1-4e73-842d-df8a1935bde2",
+      "voided" : false
+    },
+    "name" : "Delivery",
+    "voided" : false
+  }, {
+    "uuid" : "1abf4c76-120c-4032-b213-39be6c0f4a65",
+    "encounterType" : {
+      "uuid" : "e9971396-b74f-411c-956d-da44073922f5",
+      "voided" : false
+    },
+    "name" : "PNC",
+    "voided" : false
+  }, {
+    "uuid" : "5ee64ffb-e5c0-454b-a91b-6d4402654b39",
+    "encounterType" : {
+      "uuid" : "b1efaffa-c8df-4801-8bbb-bf7c7bd6a0bd",
+      "voided" : false
+    },
+    "name" : "ANC",
+    "voided" : false
+  }, {
+    "uuid" : "a9db172c-178d-415c-9d96-75b543e44615",
+    "encounterType" : {
+      "uuid" : "ef10f093-fcdc-4214-aa9a-e048a6c3c1ec",
+      "voided" : false
+    },
+    "name" : "Suicide Prevention followup",
+    "voided" : false
+  }, {
+    "uuid" : "420c9a22-1dcb-4985-a27f-6e343b97b0bf",
+    "encounterType" : {
+      "uuid" : "1a5b1040-4e4e-4588-9896-d9deeacb5e52",
+      "voided" : false
+    },
+    "name" : "Immunization (voided~1263)",
+    "voided" : true
+  }, {
+    "uuid" : "cb1b01d7-3c1d-4946-b9da-0b84236a2b59",
+    "encounterType" : {
+      "uuid" : "ae79c3bd-06e5-47b5-8736-fc4354e84ab6",
+      "voided" : false
+    },
+    "name" : "Immunization",
+    "voided" : false
+  }, {
+    "uuid" : "43d735e3-d1dd-42dd-9d72-f9ede78138e4",
+    "encounterType" : {
+      "uuid" : "d73ab419-83b7-4b6c-9aad-5c13b6df9870",
+      "voided" : false
+    },
+    "name" : "Covid Follow up",
+    "voided" : false
+  }, {
+    "uuid" : "6e311097-d643-4533-9aed-b7f16bdb2d09",
+    "encounterType" : {
+      "uuid" : "683ce41b-9a65-4de6-a3b8-4c3cd34a944e",
+      "voided" : false
+    },
+    "name" : "Bahmni Patient Registration",
+    "voided" : false
+  }, {
+    "uuid" : "42450255-530e-4124-a543-f47601d14a93",
+    "encounterType" : {
+      "uuid" : "e88c8684-2c29-4727-8d34-0c2c98f3c323",
+      "voided" : false
+    },
+    "name" : "Lab Results (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "a2f0dbad-6f57-40fd-8331-7b8a9898d1f3",
+    "encounterType" : {
+      "uuid" : "ec36d9fa-4c85-44bb-9754-93141f67c117",
+      "voided" : false
+    },
+    "name" : "Drug Prescriptions (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "4ac16cbe-7020-4d00-ae09-c8b0e35e6a5c",
+    "encounterType" : {
+      "uuid" : "e0beff39-3013-458a-a37d-050e63ac8c7c",
+      "voided" : false
+    },
+    "name" : "Vitals (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "76055a13-ee76-403d-84ba-a0c4ddd5e605",
+    "encounterType" : {
+      "uuid" : "129e9d0f-0940-48be-92d2-5205a80266bd",
+      "voided" : false
+    },
+    "name" : "History and Examination (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "8162171f-8c2c-48f3-be86-965b0ed4697e",
+    "encounterType" : {
+      "uuid" : "68faa977-2a0f-4522-abed-3c9ed911f2f5",
+      "voided" : false
+    },
+    "name" : "Discharge Summary (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "e35e561a-ef10-405b-b042-a2b1462f781d",
+    "encounterType" : {
+      "uuid" : "8de5d1b6-5ddb-4bdb-bd01-080a1a2ff00d",
+      "voided" : false
+    },
+    "name" : "Procedure Notes (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "5b1181a4-b622-48e8-af06-6c40ed58803e",
+    "encounterType" : {
+      "uuid" : "3fb56d1d-8e2e-4726-a845-9de85cf10c68",
+      "voided" : false
+    },
+    "name" : "Operative Notes (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "19a6ae4f-0020-4ed5-a5e9-86d8733dc181",
+    "encounterType" : {
+      "uuid" : "86af1c6f-930b-497f-94e7-8a8d15593fc4",
+      "voided" : false
+    },
+    "name" : "General Ultrasound Note (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "4a510c0d-78ae-4d71-b133-4de4f9f661d7",
+    "encounterType" : {
+      "uuid" : "58fdaba2-6161-43ee-9e78-534b5e8cf7e2",
+      "voided" : false
+    },
+    "name" : "ANC (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "53ace616-8e6f-4972-911d-a3ee5138966d",
+    "encounterType" : {
+      "uuid" : "2ae50a23-d1c7-4c4a-a562-f69e8f356dbe",
+      "voided" : false
+    },
+    "name" : "Antenatal review (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "03da5c21-3595-4b6a-bf42-ae2f8a6ef468",
+    "encounterType" : {
+      "uuid" : "40ba67b3-ce04-4525-b51b-a01fdf50fa7a",
+      "voided" : false
+    },
+    "name" : "Delivery note (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "df3dea54-d801-4368-b72a-1c45cd26ddd7",
+    "encounterType" : {
+      "uuid" : "bb0ce2b4-572c-4be7-ac0a-ff2c11935724",
+      "voided" : false
+    },
+    "name" : "Obstetric ultrasound (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "523f8439-7ca2-4822-a0a2-5709fa1bb331",
+    "encounterType" : {
+      "uuid" : "9fe12ab8-a51f-4559-8ef1-8206348a81d0",
+      "voided" : false
+    },
+    "name" : "New born screening (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "0f196cf4-41e3-4883-8e3f-aac04090897a",
+    "encounterType" : {
+      "uuid" : "65fdb8d2-e7c4-4589-9c80-4964e3daa0a7",
+      "voided" : false
+    },
+    "name" : "Chronic Sickness Enrollment (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "56bcde1f-b14d-433a-aa92-835196bcec24",
+    "encounterType" : {
+      "uuid" : "008f5aba-aca6-4603-8bc4-24449f78c594",
+      "voided" : false
+    },
+    "name" : "Chronic Sickness followup (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "479c9153-1f09-457e-a947-8d9c701c0cc0",
+    "encounterType" : {
+      "uuid" : "fe533986-68e2-482e-9e35-b0af4e26bd69",
+      "voided" : false
+    },
+    "name" : "TB enrolment (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "89516867-19a3-40a7-be2a-6a5e0bb003aa",
+    "encounterType" : {
+      "uuid" : "43de4794-f102-404d-94fc-c9ada657a4b5",
+      "voided" : false
+    },
+    "name" : "TB followup (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "a7f5b39c-1da5-4649-89f3-faade7e5a7f2",
+    "encounterType" : {
+      "uuid" : "d136b5d2-e178-4981-922e-baea1c9fe71a",
+      "voided" : false
+    },
+    "name" : "Mental health enrolment (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "9294525c-5477-4489-b83c-90bbf7efeb60",
+    "encounterType" : {
+      "uuid" : "93ac411f-944c-4711-b5b2-fdbac414baf9",
+      "voided" : false
+    },
+    "name" : "Mental health followup (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "26fcb588-9974-40ab-b8aa-6169d5a37263",
+    "encounterType" : {
+      "uuid" : "68354111-1ed9-4b90-8716-816643faef87",
+      "voided" : false
+    },
+    "name" : "Sickle cell Enrolment (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "3887ec49-e333-4bc0-8d2e-a2e28e38cd50",
+    "encounterType" : {
+      "uuid" : "35bab602-8dbe-4040-af14-1eaf0c3435a3",
+      "voided" : false
+    },
+    "name" : "Sickle cell followup (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "fc0c96e3-9ce9-458f-b2f6-7ba935338acf",
+    "encounterType" : {
+      "uuid" : "1c085d62-df17-4923-8f0e-7277a739b147",
+      "voided" : false
+    },
+    "name" : "FP Enrolment (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "976e2a0c-7410-457f-8b0a-dfbd684653ac",
+    "encounterType" : {
+      "uuid" : "d40f8338-d91e-453a-a9fc-72dda145ddd0",
+      "voided" : false
+    },
+    "name" : "FP Followup (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "66701b44-30e1-4ecd-9607-6edce4250433",
+    "encounterType" : {
+      "uuid" : "53f8e38c-10ca-4b20-8636-70250fbeb534",
+      "voided" : false
+    },
+    "name" : "Child Enrolment (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "c07e9375-3bed-4264-a1af-afa0d26921b7",
+    "encounterType" : {
+      "uuid" : "8d8f988c-bdb1-4bee-8a3e-26cd1f745995",
+      "voided" : false
+    },
+    "name" : "Child  PNC (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "67b30557-eea4-48ef-bfaf-e1315b7488df",
+    "encounterType" : {
+      "uuid" : "5a90e791-7ad4-4e99-9fbd-37e0c29d32cb",
+      "voided" : false
+    },
+    "name" : "Birth (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "9d00e058-9ad1-481d-9417-68a623ed66c3",
+    "encounterType" : {
+      "uuid" : "1ee5a5de-605a-4f75-81a7-b6b391b2f950",
+      "voided" : false
+    },
+    "name" : "Anthropometry  Assessment (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "c1758961-437b-4d03-9513-a7faad49e84f",
+    "encounterType" : {
+      "uuid" : "8a557c2a-b566-42f0-b5bc-0d7939a9e701",
+      "voided" : false
+    },
+    "name" : "Mother Enrolment (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "0c51a90d-70a0-4996-ac36-c87432537110",
+    "encounterType" : {
+      "uuid" : "64fc37cb-d7c9-44f2-9a4e-de69a1d1a3b2",
+      "voided" : false
+    },
+    "name" : "ANC Followup (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "86444a57-8919-455b-8e4b-c490e34d433c",
+    "encounterType" : {
+      "uuid" : "5b8c32fd-950e-4b79-bd0a-fc2ee0832cf8",
+      "voided" : false
+    },
+    "name" : "PNC Followup (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "2f733950-4a3f-4904-b6ea-3095b5f4e57e",
+    "encounterType" : {
+      "uuid" : "fbdbff3f-ba4b-45a4-b9cb-340afa86d3dd",
+      "voided" : false
+    },
+    "name" : "Abortion (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "ecb54ede-2b92-4cde-987c-dde4157f780d",
+    "encounterType" : {
+      "uuid" : "721895a2-8cec-4c89-9b34-5a7cce7b2979",
+      "voided" : false
+    },
+    "name" : "Delivery (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "6403c190-bc8a-4296-9a0a-8176c611cbe4",
+    "encounterType" : {
+      "uuid" : "f8aa3163-9973-453a-9b91-49aac6e433fc",
+      "voided" : false
+    },
+    "name" : "Diagnosis (Hospital)",
+    "voided" : false
+  }, {
+    "uuid" : "4ae3ca6a-82b0-4b62-b2c9-6dd12cea3eb7",
+    "encounterType" : {
+      "uuid" : "f27e0cd8-19c3-4c1a-8a74-ebd1bd795472",
+      "voided" : false
+    },
+    "name" : "Screening Followup",
+    "voided" : false
+  }, {
+    "uuid" : "a13dfcc4-d03b-447d-9789-e6a3eda7966b",
+    "encounterType" : {
+      "uuid" : "40866267-bfa8-47cb-b66e-46c2bf6e3b96",
+      "voided" : false
+    },
+    "name" : "Stroke Care Followup",
+    "voided" : false
+  }, {
+    "uuid" : "f459cb37-7042-430f-b2ba-04c1348f26a5",
+    "encounterType" : {
+      "uuid" : "45b81547-654d-4f7d-a551-91634d95c893",
+      "voided" : false
+    },
+    "name" : "Mother PNC",
+    "voided" : false
+  }, {
+    "uuid" : "6d04388c-f423-4a8f-aaaa-c0e2a7a75fc5",
+    "encounterType" : {
+      "uuid" : "ee5110f8-8113-4b6b-9f69-6d86fc3bbd51",
+      "voided" : false
+    },
+    "name" : "Clinical Assessment Form",
+    "voided" : false
+  }, {
+    "uuid" : "5958b828-eed7-459c-8371-22f47d1a32a2",
+    "encounterType" : {
+      "uuid" : "2872b9d5-a8d6-4845-8440-0e310624f5d9",
+      "voided" : false
+    },
+    "name" : "Cancer Screening Questionnaire",
+    "voided" : false
+  }, {
+    "uuid" : "3699a257-197f-408d-84a6-553fa0939bcb",
+    "encounterType" : {
+      "uuid" : "dfbe76a8-808b-479c-86bd-58d33892266e",
+      "voided" : false
+    },
+    "name" : "POC Follow-up Visit Form",
+    "voided" : false
+  } ]
+}

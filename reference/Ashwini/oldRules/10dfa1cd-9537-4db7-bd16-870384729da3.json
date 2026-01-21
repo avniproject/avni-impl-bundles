@@ -1,0 +1,15 @@
+{
+  "ruleDependencyUUID" : "6a0a65a7-b6c5-4cfe-8b67-c5ed0da16d62",
+  "entity" : {
+    "uuid" : "1608c2c0-0334-41a6-aab0-5c61ea1eb069",
+    "type" : "Form"
+  },
+  "entityUUID" : "1608c2c0-0334-41a6-aab0-5c61ea1eb069",
+  "entityType" : "Form",
+  "type" : "Checklists",
+  "executionOrder" : 100.0,
+  "data" : { },
+  "name" : "Ashwini Child Vaccination checklists",
+  "uuid" : "10dfa1cd-9537-4db7-bd16-870384729da3",
+  "fnName" : "ChildChecklists"
+}

@@ -1,0 +1,59 @@
+{
+  "name" : "Court Registration",
+  "uuid" : "cf4087df-138e-4b63-89d3-46e11112640a",
+  "formType" : "IndividualProfile",
+  "formElementGroups" : [ {
+    "uuid" : "182588c5-0947-42f2-8c58-6ac03d3776e0",
+    "name" : "Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Court Jurisdiction",
+      "uuid" : "b89c0d1a-b532-428c-9350-68dd50b98a1d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Court Jurisdiction",
+        "uuid" : "feb3dffb-8e6e-4e64-a9f2-d90bf5689cb6",
+        "dataType" : "Location",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ {
+          "key" : "isWithinCatchment",
+          "value" : true
+        }, {
+          "key" : "lowestAddressLevelTypeUUIDs",
+          "value" : [ "f59d29c2-dbfb-4c94-b1ff-41fb642c9291" ]
+        }, {
+          "key" : "highestAddressLevelTypeUUID",
+          "value" : "3b373722-bac1-43a8-9a0a-ef00daa15b4c"
+        } ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "display" : "Details",
+    "timed" : false
+  } ],
+  "decisionRule" : "//SAMPLE RULE EXAMPLE\n  \"use strict\";\n({params, imports}) => {\n    const individual = params.entity;\n    const decisions = params.decisions;\n    const moment = imports.moment;\n    const registrationDecisions = [];\n    \n    let createdByName = params.user.name;\n    let createdByUUID = params.user.uuid;\n    let createdByUsername = params.user.username;\n    \n    const registrationDateForEditCase = individual.getObservationValue(\"7b1a1540-bfd5-484d-987f-4d6f3635a448\");\n    if (!registrationDateForEditCase) {\n      let regDateTime = moment().format(\"YYYY-MM-DD HH:mm:ss\");\n      if (regDateTime) {\n        registrationDecisions.push({ name: \"Registration DateTime\", value: regDateTime });\n      }\n    }\n    \n    if(createdByName){\n      registrationDecisions.push({name: \"Created By Name\", value: createdByName});  \n    }\n    \n    if(createdByUsername){\n      registrationDecisions.push({name: \"Created By Username\", value: createdByUsername});    \n    }\n    \n    decisions.registrationDecisions.push(...registrationDecisions);\n        \n    return decisions;\n};",
+  "visitScheduleRule" : "",
+  "validationRule" : "'use strict';\n({ params, imports }) => {\n  const individual = params.entity;\n  const moment = imports.moment;\n  const validationResults = [];\n\n  const registrationDateForEditCase = individual.getObservationValue(\"7b1a1540-bfd5-484d-987f-4d6f3635a448\");\n  const registrationDate = individual.registrationDate;\n\n  if (!registrationDateForEditCase) {\n    if (registrationDate) {\n      const today = moment().startOf('day');\n      const regDate = moment(registrationDate).startOf('day');\n\n      if (!regDate.isSame(today, 'day')) {\n        validationResults.push(\n          imports.common.createValidationError(\"Registration Date should be today's date.\")\n        );\n      }\n    }\n  } else {\n    const regDateEdit = moment(registrationDate).startOf('day');\n    const regDateOriginal = moment(registrationDateForEditCase).startOf('day');\n\n    if (!regDateEdit.isSame(regDateOriginal, 'day')) {\n      validationResults.push(\n        imports.common.createValidationError(\"Registration Date cannot be changed.\")\n      );\n    }\n  }\n\n  return validationResults;\n};",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ {
+    "name" : "Created By Username",
+    "uuid" : "836f9b19-bebb-4295-8519-9c7c6a4e4d15",
+    "dataType" : "Text",
+    "answers" : [ ],
+    "active" : true,
+    "keyValues" : [ ],
+    "media" : [ ]
+  }, {
+    "name" : "Created By Name",
+    "uuid" : "5d9875ad-9f13-4243-8e1f-edfe00c18866",
+    "dataType" : "Text",
+    "answers" : [ ],
+    "active" : true,
+    "keyValues" : [ ],
+    "media" : [ ]
+  } ]
+}

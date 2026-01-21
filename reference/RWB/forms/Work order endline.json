@@ -1,0 +1,725 @@
+{
+  "name" : "Work order endline",
+  "uuid" : "2c6f1ad6-6da6-4a79-9060-7f6567f5c6a4",
+  "formType" : "Encounter",
+  "formElementGroups" : [ {
+    "uuid" : "a5c4fa50-60d3-4416-ac23-8f023cf89806",
+    "name" : "Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Image 1 of the site",
+      "uuid" : "805625aa-9dfe-4eec-afdb-685a3d2b2229",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Image 1 of the site",
+        "uuid" : "2d9f1f02-d5ba-485b-a2b0-06a68cd28e41",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "All the images should be from same angle",
+      "uuid" : "3c3057db-c493-4263-b54e-403018f4b7fe",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      }, {
+        "key" : "ExcludedAnswers",
+        "value" : [ "Yes" ]
+      } ],
+      "concept" : {
+        "name" : "All the images should be from same angle",
+        "uuid" : "6349d053-ec62-4dfb-88b2-a7ccfd242065",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Image 2 of the site",
+      "uuid" : "1318d8b9-44cb-4a99-b2a0-d4b3df778d00",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Image 2 of the site",
+        "uuid" : "bcdcc8bb-5308-4348-bf4b-02303ae6a853",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Image 3 of the site",
+      "uuid" : "a19ac32f-7f7d-4058-bd8f-36613d076185",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Image 3 of the site",
+        "uuid" : "c1801d0c-1d84-46f7-9a62-daaf12e22336",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Video of Site",
+      "uuid" : "4d17261d-f1a2-4bb7-ae85-d8422b5fe301",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Video of Site",
+        "uuid" : "9ced444d-b29d-44e5-88e7-11e48cdd4351",
+        "dataType" : "Video",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Wells nearby",
+      "uuid" : "d1620630-fc11-4be6-9a43-e039fd98aeb5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Wells nearby",
+        "uuid" : "15aa3c5f-9cf7-47a7-88df-f2aa3b286cad",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Total silt excavated",
+      "uuid" : "157465e4-1230-4c63-9cf9-338afea451a8",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Total silt excavated",
+        "uuid" : "b0317c53-e6ec-4c05-bd1a-87dcab4c1570",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "highAbsolute" : 9999999.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  \n   const calculateSumOfObservationValues = function(encounterTypeName, observationName) {          \n          return encounter.individual.getEncounters()\n            .filter((enc) => enc.encounterType.name === encounterTypeName )\n            .filter((enc) => enc.latestEntityApprovalStatus &&  enc.latestEntityApprovalStatus.approvalStatus.status === 'Approved' )\n            .map((enc) => enc.getObservationReadableValue(observationName))\n            .reduce((total, val) => total + parseFloat(val), 0);;\n    }\n  \n  const value = calculateSumOfObservationValues('Work order daily Recording - Farmer','Total Silt carted').toFixed(2);\n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, value);\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Is MB Recording done?",
+      "uuid" : "9470b739-6cdf-497a-be90-a9e7343c41b5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "MB Recording done",
+        "uuid" : "2a60eeec-87e1-4c62-9fa6-062b3c5eca4d",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Image of MB recording",
+      "uuid" : "cedb13dc-b00d-4a83-954e-fa80f4c11d39",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Image of MB recording",
+        "uuid" : "b48274f3-e71f-4e0e-9ec3-7f7fbe2a40b0",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n   statusBuilder.show().when.valueInEncounter('MB Recording done').is.yes;\n   return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Amount of silt used for bund making",
+      "uuid" : "b65a94c1-8e12-4b7a-b423-6b90b107f3ea",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Amount of silt used for bund making",
+        "uuid" : "a04d4178-497d-40ab-943a-588038b5bf6a",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Is MB recording data same as App data",
+      "uuid" : "6af5c61d-56cf-47ea-9b5b-f1278247a85b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is MB recording data same as App data",
+        "uuid" : "70174e57-a0c1-4980-8de1-53e5695ff97e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter('MB Recording done').is.yes;\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Silt excavated as per MB recording",
+      "uuid" : "7aa4b0dd-3b66-4736-8723-51882d4a8297",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Silt excavated as per MB recording",
+        "uuid" : "e0019970-a7c0-423c-876c-d607c9acd36b",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "rule" : "\n'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n   statusBuilder.show().when.valueInEncounter('MB Recording done').is.yes;\n   return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Is MB recording data same as app data",
+      "uuid" : "f7fc65a0-1aa8-450f-8cd4-63be61951823",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Is MB recording data same as app data",
+        "uuid" : "63348d28-956f-4ffe-a7e8-d85b96c886fa",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = false;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  let totalSiltExcavated = encounter.getObservationReadableValue('b0317c53-e6ec-4c05-bd1a-87dcab4c1570');\n  let siltAsPerMbRecording = encounter.getObservationReadableValue('e0019970-a7c0-423c-876c-d607c9acd36b');\n  console.log('totalSiltExcavated----->',totalSiltExcavated);\n  if (totalSiltExcavated && siltAsPerMbRecording) {\n  \n  let absoluteValue = Math.abs( totalSiltExcavated - siltAsPerMbRecording ) ;\n  let averageValue = (totalSiltExcavated + siltAsPerMbRecording) / 2 ;\n  \n  visibility = true;\n  value = ((absoluteValue/averageValue) * 100).toFixed(2);\n  \n  }\n   \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : false
+    } ],
+    "display" : "Details",
+    "timed" : false
+  }, {
+    "uuid" : "69e35a44-42fa-419f-9dde-7e10994014ad",
+    "name" : "Other details",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Name of the main village",
+      "uuid" : "09fa48e0-d35b-4297-a22e-264a3e101f6b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of the main village",
+        "uuid" : "fd64214b-1e09-4e8d-bbbb-ab0f47640eef",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Number of allied villages",
+      "uuid" : "11cc6747-b1d7-4285-bb16-06e2bbd014ae",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of allied villages",
+        "uuid" : "16def34b-e7f0-4ade-8680-440dcd00863e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 4.0,
+        "lowNormal" : 0.0,
+        "highNormal" : 4.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Name of the allied village 1",
+      "uuid" : "cc95e328-9d09-4268-9041-01e32fe10516",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of the allied village 1",
+        "uuid" : "993684ea-a5c5-4d2e-a598-ade50bbc61a5",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"16def34b-e7f0-4ade-8680-440dcd00863e\").greaterThanOrEqualTo(1).matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Number of allied villages",
+                "conceptUuid" : "16def34b-e7f0-4ade-8680-440dcd00863e",
+                "conceptDataType" : "Numeric"
+              },
+              "rhs" : {
+                "type" : "value",
+                "value" : 1
+              },
+              "operator" : "greaterThanOrEqualTo"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Population of the allied village 1",
+      "uuid" : "280b6276-a36c-463d-843e-d722e362fe1e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Population of the allied village 1",
+        "uuid" : "6523f666-75f1-41ed-bc14-a3c4c437b858",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"16def34b-e7f0-4ade-8680-440dcd00863e\").greaterThanOrEqualTo(1).matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Number of allied villages",
+                "conceptUuid" : "16def34b-e7f0-4ade-8680-440dcd00863e",
+                "conceptDataType" : "Numeric"
+              },
+              "rhs" : {
+                "type" : "value",
+                "value" : 1
+              },
+              "operator" : "greaterThanOrEqualTo"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of allied villages",
+      "uuid" : "4626fe20-3aa3-4881-9cdb-28a0a98f522a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of allied villages",
+        "uuid" : "16def34b-e7f0-4ade-8680-440dcd00863e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 4.0,
+        "lowNormal" : 0.0,
+        "highNormal" : 4.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Population of the allied village 2",
+      "uuid" : "4ac55d5f-598a-4e0d-93e9-2d7b7f3810ef",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Population of the allied village 2",
+        "uuid" : "427127b6-7bfd-4cf2-8401-0c3617a7fad3",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"16def34b-e7f0-4ade-8680-440dcd00863e\").greaterThanOrEqualTo(2).matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Number of allied villages",
+                "conceptUuid" : "16def34b-e7f0-4ade-8680-440dcd00863e",
+                "conceptDataType" : "Numeric"
+              },
+              "rhs" : {
+                "type" : "value",
+                "value" : 2
+              },
+              "operator" : "greaterThanOrEqualTo"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Population of the allied village 3",
+      "uuid" : "8a37835b-a792-48b7-8aeb-3689e894551d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Population of the allied village 3",
+        "uuid" : "b871a61b-48a6-49e0-8278-18485a6d145d",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"16def34b-e7f0-4ade-8680-440dcd00863e\").greaterThanOrEqualTo(3).matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Number of allied villages",
+                "conceptUuid" : "16def34b-e7f0-4ade-8680-440dcd00863e",
+                "conceptDataType" : "Numeric"
+              },
+              "rhs" : {
+                "type" : "value",
+                "value" : 3
+              },
+              "operator" : "greaterThanOrEqualTo"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Name of the allied village 4",
+      "uuid" : "b9fe4e1e-5757-44c1-933c-67b33d72f964",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of the allied village 4",
+        "uuid" : "7d2e8f4e-c776-4f12-8695-6900ea10805d",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"16def34b-e7f0-4ade-8680-440dcd00863e\").greaterThanOrEqualTo(4).matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Number of allied villages",
+                "conceptUuid" : "16def34b-e7f0-4ade-8680-440dcd00863e",
+                "conceptDataType" : "Numeric"
+              },
+              "rhs" : {
+                "type" : "value",
+                "value" : 4
+              },
+              "operator" : "greaterThanOrEqualTo"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Name of the allied village 3",
+      "uuid" : "f0e98aa8-cb5e-49d4-bd04-077e87f87415",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of the allied village 3 (voided~122312)",
+        "uuid" : "a024aa13-f80a-4c99-bff0-3988385553c1",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ],
+        "voided" : true
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Please upload post perspective image",
+      "uuid" : "f89f2756-084e-4b0d-bcbc-f88fc6e3576a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Post perspective image",
+        "uuid" : "4a4a8a10-b048-44b4-ae49-96d95b00a512",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Please upload post work measurements image",
+      "uuid" : "eb12afcb-e1d9-40d4-abca-a98c964fca83",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Post work measurements image",
+        "uuid" : "e4af42a5-0344-44b6-80dd-81b0904f7e79",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Population of the village where waterbody is situated",
+      "uuid" : "7aa41373-4501-4b0c-91be-2ba6f26da6ad",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Population of the main village",
+        "uuid" : "df88e8df-78c2-4d99-943c-e6525d72424c",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Name of the allied village 2",
+      "uuid" : "1b5658fe-93e8-4b2c-9f46-5d7e08555f22",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of the allied village 2",
+        "uuid" : "62f00a60-c92c-4f1d-927c-9b11f1f7ce13",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"16def34b-e7f0-4ade-8680-440dcd00863e\").greaterThanOrEqualTo(2).matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Number of allied villages",
+                "conceptUuid" : "16def34b-e7f0-4ade-8680-440dcd00863e",
+                "conceptDataType" : "Numeric"
+              },
+              "rhs" : {
+                "type" : "value",
+                "value" : 2
+              },
+              "operator" : "greaterThanOrEqualTo"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Name of the allied village 3",
+      "uuid" : "54069d6a-6ef3-47d3-9073-d385395064cf",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of the allied village 3",
+        "uuid" : "9c3f303a-b4c9-4044-a948-d83814942a51",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"16def34b-e7f0-4ade-8680-440dcd00863e\").greaterThanOrEqualTo(3).matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Number of allied villages",
+                "conceptUuid" : "16def34b-e7f0-4ade-8680-440dcd00863e",
+                "conceptDataType" : "Numeric"
+              },
+              "rhs" : {
+                "type" : "value",
+                "value" : 3
+              },
+              "operator" : "greaterThanOrEqualTo"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Population of the allied village 4",
+      "uuid" : "1f47439f-9ff9-488f-aa90-b9d9d09e06d3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Population of the allied village 4",
+        "uuid" : "1310f00b-7b64-460a-aade-bda6f927eba5",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 15.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"16def34b-e7f0-4ade-8680-440dcd00863e\").greaterThanOrEqualTo(4).matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Number of allied villages",
+                "conceptUuid" : "16def34b-e7f0-4ade-8680-440dcd00863e",
+                "conceptDataType" : "Numeric"
+              },
+              "rhs" : {
+                "type" : "value",
+                "value" : 4
+              },
+              "operator" : "greaterThanOrEqualTo"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "voided" : true,
+    "display" : "Other details",
+    "timed" : false
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({ params, imports }) => {\n  const encounter = params.entity;\n  const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({\n    encounter\n  });\n  \n   //scheduleBuilder\n            //.add({\n                //name: \"Work Order Endline Executive Engineer\",\n                //encounterType: \"Work Order Endline Executive Engineer\",\n                //earliestDate: imports.moment(encounter.encounterDateTime).toDate(),\n              //  maxDate: imports.moment(encounter.encounterDateTime).add(7, 'days').toDate()\n            //});\n  \n  return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

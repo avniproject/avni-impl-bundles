@@ -1,0 +1,1204 @@
+{
+  "name" : "Suicide Prevention followup Encounter",
+  "uuid" : "4f2764ee-cac1-4726-a19e-a11360e5e133",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "eeaaca23-75b4-46ea-b309-d3cce02c6422",
+    "name" : "Identification",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "What is the type of subject?",
+      "uuid" : "d6c77d43-884e-40f9-a69d-b9894ed728d9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "What is the type of subject",
+        "uuid" : "d5a475fd-8dab-489c-bfe1-b01d6187c1a8",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Suicidal Attempt",
+          "uuid" : "77d77216-b0e3-4a02-bbd4-ab59329b97ce",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Suicidal Intent",
+          "uuid" : "42c0aa60-db9d-4f2b-9c94-14bec2f7ec34",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Suicidal ideation",
+          "uuid" : "52ab57fa-d0ae-4743-b577-4d680e6087ae",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Place of visit",
+      "uuid" : "8a1f9b46-2df0-4107-a5f8-2df351e4a0a5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SP_Place of visit",
+        "uuid" : "4570ae03-1782-4ace-8b46-f6c3b8c7263e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Village",
+          "uuid" : "5519a0c5-f9d8-4bc6-ab12-76fdef8857d2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "GAH",
+          "uuid" : "0e387b73-29ec-4ba1-846f-9359c98726e9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Area Center",
+          "uuid" : "6305c16f-e023-4593-aa6e-106b5522ae8a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Higher Centre",
+          "uuid" : "f5f676ba-c4f5-4649-9ce8-bac6760a18ae",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Did you have any of the following suicidal behavior in the previous month",
+      "uuid" : "6549cbf6-e059-4442-af68-8ad0fd9ae403",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Did you have any of the following suicidal behavior in the previous month",
+        "uuid" : "21637d58-1f3b-4043-9e2f-a06609aa1ee3",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Suicidal attempt",
+          "uuid" : "304ed7fe-5cbe-4847-9eb4-0e0a828bf02f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Suicidal thought",
+          "uuid" : "ce82660c-d601-4893-9bef-a0299884741b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not responding",
+          "uuid" : "e27b790b-6108-4215-87dd-c6e982005835",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Suicidal plan",
+          "uuid" : "d4cbd2af-dac1-4037-a8d2-3a8db2dc72ae",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Did you experience any of the following changes suddenly in the past month",
+      "uuid" : "b910eec0-dfac-46d1-92c4-8cce58193694",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Did you experience any of the following changes suddenly in the past month",
+        "uuid" : "510aed57-8039-43ba-97f2-e92f2dd506df",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Not responding",
+          "uuid" : "e27b790b-6108-4215-87dd-c6e982005835",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Guilt",
+          "uuid" : "310f53b9-600d-4bca-a42a-9f2b34b1a3e2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Rejection",
+          "uuid" : "39127319-3b43-40d9-94eb-61ddae808373",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Society issues and cultures",
+          "uuid" : "0bb6d14f-02f1-40ce-afb4-0e0cb8ab32c8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Grief",
+          "uuid" : "3cdfb391-db97-42cf-aa9a-ab432b56f35d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "False belief",
+          "uuid" : "0a1cbd86-1884-4035-b2a0-429e5e11bd1b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Financial problems",
+          "uuid" : "44c3416e-d955-4a9d-af5a-2224f8ff5859",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Shame",
+          "uuid" : "0f00fded-ad3a-459b-ab18-44a5a4084512",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Substance abuse addiction",
+          "uuid" : "b8e9bce0-f017-441f-ad38-71d4b19b1ca7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Family conflicts and misunderstandings",
+          "uuid" : "b48e0728-5eb3-444c-8ebe-d6ca169e9c44",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Others",
+          "uuid" : "118fa43e-525f-41d6-ad3f-98a4857e2d3e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Regret",
+          "uuid" : "d95e8302-bfab-4941-a392-438e366929b3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Specify others",
+      "uuid" : "5db3d74c-dfb6-4ae9-a571-4655b3416585",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other changes",
+        "uuid" : "f20ec246-0910-46b3-9cdf-ac7c35a5d1cd",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Did you experience any of the following changes suddenly in the past month').containsAnyAnswerConceptName('Others');\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Did you experience any of the following signs/symptoms in the past month",
+      "uuid" : "041358eb-d95b-458d-ba4d-78f97e5b6898",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Did you experience any of the following signs/symptoms in the past month",
+        "uuid" : "19bd5386-a95b-488d-8de4-73a6ce9667d5",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Experienced changes in the normal routine/ personality/food habits/sleep",
+          "uuid" : "6fa2abce-50a9-4c29-abb9-57bfca578794",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Expressed regret about being alive",
+          "uuid" : "3751f15d-18d5-4a22-8e3f-418a706dd92c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Medical illness",
+          "uuid" : "0ae0d67c-6219-40db-b3af-63f5d13e62f0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Increased use of drugs/alcohol/tobacco",
+          "uuid" : "a771ac04-6b9e-435d-ab06-0e437ad72b39",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Saying final goodbye",
+          "uuid" : "823bd4c6-1e27-4008-9d50-088e858bdea7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Talking about revenge/guilt/shame",
+          "uuid" : "c818058f-e4f7-4019-aeb0-bb4d471667d4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mood swings(happy/sad)",
+          "uuid" : "c2e65da2-e2c0-40f1-988c-5fd1f1dc7e21",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Others",
+          "uuid" : "118fa43e-525f-41d6-ad3f-98a4857e2d3e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Isolated themselves",
+          "uuid" : "723cd1a1-b20f-46ec-9556-d069ea143e3e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Felt hopeless",
+          "uuid" : "07baa682-1948-486e-ae51-69b9c8d3e573",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Psychatric illness",
+          "uuid" : "071b0d3e-04f0-4835-b36f-05d6146077a3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Got hold of poison/rope/kerosene/knife/other substances that could end life",
+          "uuid" : "4ba234ba-a2ad-4bd9-9f2b-687ddf2b0dc8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "MultiSelect",
+      "rule" : "",
+      "mandatory" : true
+    }, {
+      "name" : "Specify others",
+      "uuid" : "ea6a3a60-0c43-4ffb-873b-e4831cb5ff29",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other signs/symptoms",
+        "uuid" : "44b6ba6f-c906-421f-890a-039aaefaa234",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Did you experience any of the following signs/symptoms in the past month').containsAnyAnswerConceptName('Others');\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Are you on regular medication for the illness",
+      "uuid" : "47b63985-fe15-482c-91ee-46be118a0c68",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Are you on regular medication for the illness",
+        "uuid" : "6d581dfe-02bb-4262-9262-3dac5718cc31",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not responding",
+          "uuid" : "e27b790b-6108-4215-87dd-c6e982005835",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Did you experience any of the following signs/symptoms in the past month').containsAnyAnswerConceptName('Psychatric illness','Medical illness');\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Is the illness affecting your day to day life",
+      "uuid" : "cb1a0d96-89de-4ef7-9bb5-8eae170e3ff2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is the illness affecting your day to day life",
+        "uuid" : "4881611e-581d-48bc-8853-8c72f068bc65",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not responding",
+          "uuid" : "e27b790b-6108-4215-87dd-c6e982005835",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Did you experience any of the following signs/symptoms in the past month').containsAnyAnswerConceptName('Psychatric illness','Medical illness');\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Did these signs and symptoms or sudden changes in life affect your day to day life",
+      "uuid" : "bf958f3a-2cf4-4141-924c-5e704422cc5e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Did these signs and symptoms or sudden changes in life affect your day to day life",
+        "uuid" : "6f51d722-08f7-4fa8-8885-9310bbeb473d",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not responding",
+          "uuid" : "e27b790b-6108-4215-87dd-c6e982005835",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Did you experience any of the following signs/symptoms in the past month').not.containsAnyAnswerConceptName('None');\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "How did it affect your day to day life",
+      "uuid" : "567fc0ea-1d67-47ff-b4c4-f9ffc14edf65",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "How did it affect your day to day life",
+        "uuid" : "62b6ac8b-9125-47c1-ac5d-545fc1de3a2d",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Did you experience any of the following signs/symptoms in the past month').not.containsAnyAnswerConceptName('None');\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Do you spend time with family members and friends",
+      "uuid" : "32991a40-ca6a-4973-8c5a-56d18ea2e6df",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Do you spend time with family members and friends",
+        "uuid" : "b3619d2b-a030-42be-bc10-2ec69926b763",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Frequently",
+          "uuid" : "a41f0d55-bb09-4fc4-9982-197d4fba7fc5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Occasionally",
+          "uuid" : "5c4fc5e2-f7c8-4e8b-b75a-a735dfb8124f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not responding",
+          "uuid" : "e27b790b-6108-4215-87dd-c6e982005835",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Have you noticed any changes within yourself in the past month",
+      "uuid" : "92e08aaa-3ca4-48e6-8083-bf13457df90b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Have you noticed any changes within yourself in the past month",
+        "uuid" : "769e214b-c6e5-4cb5-bc7d-cf3a8138a721",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Not responding",
+          "uuid" : "e27b790b-6108-4215-87dd-c6e982005835",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "What changes are you seeing",
+      "uuid" : "338a6a9a-f0d2-454c-b3fd-64ee27be6171",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "What changes are you seeing",
+        "uuid" : "89660c08-c1b8-423a-b070-aa9701e68f1c",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Have you noticed any changes within yourself in the past month').not.containsAnyAnswerConceptName('No');\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Are you presently able to control certain behavioral impulses for good cause",
+      "uuid" : "fbba42aa-c393-4f5b-afde-7108e8119835",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Are you presently able to control certain behavioral impulses for good cause",
+        "uuid" : "91c28732-d50e-47bd-9d12-aaf55c4f13de",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not responding",
+          "uuid" : "e27b790b-6108-4215-87dd-c6e982005835",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 15.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Are you finding it difficult to adapt and accept the positive changes in life",
+      "uuid" : "c2360135-aa04-4f82-b2de-81fda439c121",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Are you finding it difficult to adapt and accept the positive changes in life",
+        "uuid" : "897bb6d0-0207-4281-bd33-4e50f4d6bb21",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Not responding",
+          "uuid" : "e27b790b-6108-4215-87dd-c6e982005835",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 16.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Have you tried any methods/coping strategies to control negative/disturbed thoughts",
+      "uuid" : "63c0e106-1e69-4626-8bfe-581a59b8d5fb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Have you tried any methods/coping strategies to control negative/disturbed thoughts",
+        "uuid" : "e14aec39-44d2-4216-9ff1-2b1b7f22a247",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Not responding",
+          "uuid" : "e27b790b-6108-4215-87dd-c6e982005835",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 17.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "What have you tried",
+      "uuid" : "337faaa5-a667-4f2e-9470-597bff4d25fe",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "What have you tried",
+        "uuid" : "c9f5f9a4-2c74-4d0d-8fd4-3e6327c4836f",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 18.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Have you tried any methods/coping strategies to control negative/disturbed thoughts').containsAnyAnswerConceptName('Yes');\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Have you started following any specific routine at home",
+      "uuid" : "daf14256-2da5-469b-9e12-d9124c0ede91",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Have you started following any specific routine at home",
+        "uuid" : "6af74de4-448f-4745-8ae1-efaf61978dd0",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not responding",
+          "uuid" : "e27b790b-6108-4215-87dd-c6e982005835",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 19.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Have you been able to engage yourself with productive work",
+      "uuid" : "5d1a302c-fc36-42c9-98d7-e22b7647f215",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Have you been able to engage yourself with productive work",
+        "uuid" : "bb17d2e6-a47d-44e1-8e66-4018827be8e9",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not responding",
+          "uuid" : "e27b790b-6108-4215-87dd-c6e982005835",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 20.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Current patient status",
+      "uuid" : "152e1eaf-5ba8-4878-a1c9-76e4ed7dbec8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Current patient status",
+        "uuid" : "812bc40c-0a09-495b-94c7-c3eb1ed6210c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No change",
+          "uuid" : "cd8440d3-96ba-433b-873e-f3caf883d163",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Improved",
+          "uuid" : "5c8d9a38-b5a0-4ec8-ad57-8f54caa93b64",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Relapse",
+          "uuid" : "844058d9-77e0-4d4a-94b7-e4296bb8fe3e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Case closed",
+          "uuid" : "57899719-be13-4191-9ef1-a1f70a414003",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Improving",
+          "uuid" : "4da2bf7b-dfab-4bf2-965e-de673c167830",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not willing to participate",
+          "uuid" : "a7d20424-c465-4fc8-8b52-3622eda2eb8d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Need Improvement",
+          "uuid" : "740aa112-e89d-4c5f-92b9-2b3bcca82125",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 21.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Proposed intervention for the month",
+      "uuid" : "149ddf0a-25c8-4875-8e39-f1616d9f4f14",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Proposed intervention for the month",
+        "uuid" : "b0e74621-6cdf-4393-a4bd-bc3dc1a2bb77",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Family counselling",
+          "uuid" : "ae719993-ab47-49c9-8de2-173437e65d4a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Psycho education",
+          "uuid" : "c01638a1-6d61-4de1-b87c-72541cde00f7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Medical/Psychatric admission",
+          "uuid" : "0242330a-b7e9-438b-a945-70bbc710d25d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Group therapy",
+          "uuid" : "acf6d361-4d2b-45f0-aaf9-0796e4a0165f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Follow up counseling",
+          "uuid" : "d12f5203-bb4a-4ecd-a40f-a3fa98e774aa",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Refered to higher center",
+          "uuid" : "c3a3fe89-d6d7-4e0e-b615-2f6de5e0edee",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Counseling therapy",
+          "uuid" : "a5ac3bc2-f83f-4e77-865b-e4dcc62d3c7c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Psychotherapy (One on One / Group) by MH professional",
+          "uuid" : "7e1bd35c-757f-4246-8b10-05236ba6bd1f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Medical/Psychatric Treatment",
+          "uuid" : "750d2d8e-ef33-4043-969e-9c649607a2f9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other techniques",
+          "uuid" : "7177e1d8-f2ea-4fbb-8234-4b93b428c729",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Emergency follow up",
+          "uuid" : "4e99cf0f-742a-443b-83ad-1b6463d604bc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 22.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Other techniques",
+      "uuid" : "c4b28280-e9bf-46ca-a0b7-913c8e09b0a5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other technique",
+        "uuid" : "86710467-c0a5-4357-84fd-8f2ebedd585c",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 23.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Proposed intervention for the month').containsAnyAnswerConceptName('Other techniques');\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Proposed medication for the month",
+      "uuid" : "bf8eac50-7e26-4756-82dc-1fe11f45117d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Proposed medication for the month",
+        "uuid" : "01758f9b-9d4a-4307-bd04-ba83e3317bf1",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Risperidone",
+          "uuid" : "8a5456df-7ba8-4108-a043-9a113971812f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Amitryptaline",
+          "uuid" : "70de71e5-e145-430e-a8a5-539b7dc188f8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Imipramine",
+          "uuid" : "e337fe1c-e002-4602-9468-5c52a94a1d6b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Haloperidol",
+          "uuid" : "38856274-fa97-477c-a3f3-640fdd0bf1d5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No medication",
+          "uuid" : "99d93aec-e61c-4085-87a1-37875ae70108",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Quitiapine",
+          "uuid" : "861a0d14-46b6-4450-bfa8-c92e2d543d4a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Fluoxetine",
+          "uuid" : "3148717d-4c24-4bd5-b6b0-a1fa2c26c2d6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Clonazepam",
+          "uuid" : "3f5e1bb9-ef2c-400a-9bfc-46690fd156b4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sertraline",
+          "uuid" : "d4e236c4-12f6-4799-af6e-60581289a66c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Others",
+          "uuid" : "118fa43e-525f-41d6-ad3f-98a4857e2d3e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Fluphenazine",
+          "uuid" : "9b408961-3e71-46fe-99fe-5f5c4bbe7c02",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 24.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Specify others",
+      "uuid" : "9adfdcbd-916a-4a7b-813f-5ecf62696474",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other Medicine",
+        "uuid" : "9a283d53-f008-4f39-902a-cbab6719f163",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 25.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Proposed medication for the month').containsAnyAnswerConceptName('Others');\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Remarks for the month",
+      "uuid" : "32c95e78-353f-41eb-8daf-3fe10c7231b1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Remarks for the month",
+        "uuid" : "26aab8dc-4106-4d4f-b94d-b9416fb877e8",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 26.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "Identification",
+    "timed" : false
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

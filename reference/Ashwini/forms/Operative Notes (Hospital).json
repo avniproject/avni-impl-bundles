@@ -1,0 +1,390 @@
+{
+  "name" : "Operative Notes (Hospital)",
+  "uuid" : "d7a602d0-d697-4f9d-8197-d2fc026b29af",
+  "formType" : "Encounter",
+  "formElementGroups" : [ {
+    "uuid" : "b9a9e8a6-2c10-4938-badb-76524c86a5ef",
+    "name" : "Operative Notes (Hospital)",
+    "displayOrder" : -1.0,
+    "formElements" : [ {
+      "name" : "Operative Notes, Preoperative Diagnosis [H]",
+      "uuid" : "13aa1ba1-a1eb-4ed7-9fbe-4b75bf4d5bb2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Operative Notes, Preoperative Diagnosis [H]",
+        "uuid" : "189f0684-7752-4219-a143-48545c90cfab",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Operative Notes, Preoperative Antibiotic [H]",
+      "uuid" : "8341028b-d2e4-4faf-a656-c78149dea860",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Operative Notes, Preoperative Antibiotic [H]",
+        "uuid" : "40d42309-4f1e-4709-9fe1-a888e812ba5b",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Operative Notes, Surgeons [H]",
+      "uuid" : "83b2b26c-4eda-4fd3-9f8a-54362489b08f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Operative Notes, Surgeons [H]",
+        "uuid" : "35267a81-ee03-4a1c-be06-47522f995e49",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Operative Notes, Anesthetist [H]",
+      "uuid" : "58fade49-75a7-46db-8f1a-ec3d0b89fde4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Operative Notes, Anesthetist [H]",
+        "uuid" : "95391913-55fe-438f-b585-b58a4f48d893",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Operative Notes, Scrub Nurse [H]",
+      "uuid" : "17128335-8677-450e-a1e7-329042079138",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Operative Notes, Scrub Nurse [H]",
+        "uuid" : "824ae92c-74a1-445d-afa4-3c782df57714",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Operative Notes, Circulating Nurse [H]",
+      "uuid" : "c55dc4f9-3f6b-42e1-8140-5a937d468606",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Operative Notes, Circulating Nurse [H]",
+        "uuid" : "1ae9b4fa-8300-4fb2-bb91-b239f575c63d",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Operative Notes, Anesthesia [H]",
+      "uuid" : "bf13dd7d-ff5a-4355-bfaf-badf940f0f21",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Operative Notes, Anesthesia [H]",
+        "uuid" : "371251fa-3919-4bb2-8c33-73eccb524a24",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Operative Notes, Estimated Blood Loss [H]",
+      "uuid" : "36ec9ade-a1ab-44d5-b78a-341827214362",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Operative Notes, Estimated Blood Loss [H]",
+        "uuid" : "4272e059-2e2d-420e-a0f6-c910ca5fecab",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Operative Notes, Findings [H]",
+      "uuid" : "29352f52-4518-4b55-b312-be1a0afd0eb9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Operative Notes, Findings [H]",
+        "uuid" : "a5483d9a-f72e-48be-b1fb-549901dddac6",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Operative Notes, Specimens [H]",
+      "uuid" : "a3e6a7a3-8fcf-4453-9a58-a324c1eba866",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Operative Notes, Specimens [H]",
+        "uuid" : "07450181-3972-47cf-a626-74c3bb10c085",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Operative Notes, Procedure Note [H]",
+      "uuid" : "2602aced-7a56-488a-8882-491e3cdcfba8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Operative Notes, Procedure Note [H]",
+        "uuid" : "c277b416-9a97-454d-a0fd-4c62c6e5260a",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Operative Notes, Complications [H]",
+      "uuid" : "cca16f43-efa2-445d-a55b-41328fd6729a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Operative Notes, Complications [H]",
+        "uuid" : "0d3f16c1-9dd7-4cc3-9cc3-7d2dab85217e",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Operative Notes, Postoperative Diagnosis [H]",
+      "uuid" : "68f15837-349c-4718-9449-4a8061ea9ae5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Operative Notes, Postoperative Diagnosis [H]",
+        "uuid" : "cbdfd1b3-013e-4066-9633-8e57a1f3b851",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Operative Notes, Drains [H]",
+      "uuid" : "9cc4bc87-f53a-447a-8981-6064ee9928df",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Operative Notes, Drains [H]",
+        "uuid" : "94f41fd3-1d11-4a38-9a63-3c7130d3db84",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Operative Notes, Date of procedure [H]",
+      "uuid" : "471c8d55-f7d2-424d-adc4-9ade8cd06bb0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Operative Notes, Date of procedure [H]",
+        "uuid" : "34ab51d9-a7a6-4660-aaef-77fa659fe379",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 15.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Operative Notes, Procedure [H]",
+      "uuid" : "00131fd4-b023-4aae-b65b-b8cd5c54f284",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Operative Notes, Procedure [H]",
+        "uuid" : "91772fa6-a35f-45d1-87d9-ae0d3da29be5",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 16.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Operative Notes, Operative type [H]",
+      "uuid" : "a1cbe1d2-5e67-499b-8d95-d5bfa80316f7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Operative Notes, Operative type [H]",
+        "uuid" : "13d40c62-ee17-41c9-b3e7-e246c2ef1a27",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Operative Notes, acute [H]",
+          "uuid" : "b931a9d1-0e4f-4427-ad83-4f8de7c56be6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Operative Notes, elective operation [H]",
+          "uuid" : "53b99953-b72e-40fe-b509-96775c4cd872",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 17.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Operative Notes, Duration of surgery [H]",
+      "uuid" : "4f0a0b19-2fae-4ce0-9cb8-b2d5bae7de56",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Operative Notes, Duration of surgery [H]",
+        "uuid" : "01760548-a6e9-48d2-b7f8-a27a358d7071",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 18.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Operative Notes, Surgeon Assistant 1 [H]",
+      "uuid" : "5933cc3d-aa23-488f-8aee-19beebac5ea5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Operative Notes, Surgeon Assistant 1 [H]",
+        "uuid" : "b6ec1375-4d42-4074-a2c6-b65cb7df310d",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 19.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Operative Notes, Surgeon Assistant 2 [H]",
+      "uuid" : "84f0daf5-1ec5-45bb-a47d-5a32866f13fd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Operative Notes, Surgeon Assistant 2 [H]",
+        "uuid" : "8f2e617e-b306-4e3b-8e32-9d58973ed33e",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 20.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Operative Notes, ASA status [H]",
+      "uuid" : "19db571c-398c-4291-941e-c6b2adfeba89",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Operative Notes, ASA status [H]",
+        "uuid" : "8c26b0e6-7214-4912-9101-cbfadc7297cf",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 21.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Operative Notes, Input [H]",
+      "uuid" : "5f71b387-94c6-4502-83b0-e3d5dcdf502d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Operative Notes, Input [H]",
+        "uuid" : "4b3d54c9-df97-4c54-824b-60bc0cb73b28",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 22.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Operative Notes, Output [H]",
+      "uuid" : "3362d406-f028-4e2b-927b-f0c7ef852372",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Operative Notes, Output [H]",
+        "uuid" : "37468bc4-3a75-463a-bb61-4c1b905bdfe6",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 23.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Operative Notes, Post Operative Antibiotic [H]",
+      "uuid" : "08a364ce-bfef-4a8e-8637-b918a0e77d46",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Operative Notes, Post Operative Antibiotic [H]",
+        "uuid" : "f5995b2d-c75c-4e5f-9faf-952093f31012",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 24.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "Operative Notes (Hospital)",
+    "timed" : false
+  } ],
+  "decisionConcepts" : [ ]
+}

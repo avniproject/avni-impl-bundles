@@ -1,0 +1,4651 @@
+{
+  "name" : "ANC",
+  "uuid" : "3a95e9b0-731a-4714-ae7c-10e1d03cebfe",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "fa5596c0-df16-4bf1-940c-ec66dd332359",
+    "name" : "TRIMESTER DETAILS",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Which trimester",
+      "uuid" : "75d5c67c-2f5b-4401-8cdf-d09518a6e86c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "TRIMESTER DETAILS",
+        "uuid" : "d378fbfd-37b3-4451-a5bc-f2042ac35b11",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Trimester 2",
+          "uuid" : "19030df8-b123-4fda-b057-52d71772db75",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Trimester 1",
+          "uuid" : "4e54a404-17f7-4abb-9c03-cfb0b0bede3a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Trimester 3",
+          "uuid" : "f37949ba-14b4-4eb0-9b0c-890351265880",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "display" : "TRIMESTER DETAILS",
+    "timed" : false
+  }, {
+    "uuid" : "e2737f19-7f9a-4d12-bf02-c676091a09be",
+    "name" : "General",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Have you enrolled in any government scheme?",
+      "uuid" : "f95fedd2-1dc1-4952-91be-f08ef80e11c1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Have you enrolled in any government scheme?",
+        "uuid" : "c10b6b0b-8223-4a4f-807c-57dc1eb44eef",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Weight",
+      "uuid" : "3c38e7a2-f273-4a3c-a0c8-040e06401a87",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Weight",
+        "uuid" : "75b1656e-2777-4753-9612-ce03a766a5e1",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 300.0,
+        "lowNormal" : 1.0,
+        "highNormal" : 100.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "BMI",
+      "uuid" : "fe3a208c-41b4-45b4-82f0-39ad78b2b17a",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "BMI",
+        "uuid" : "7ac0d759-c50d-4971-88e0-84274224c839",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 18.5,
+        "highNormal" : 24.9,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  \n  let height = programEncounter.findLatestObservationInEntireEnrolment(\"Height\", programEncounter);\nlet weight = programEncounter.findObservation(\"Weight\");\n        height = height && height.getValue();\n        weight = weight && weight.getValue();\n        console.log('height',height);\n        console.log('weight',weight);\n        let value = '';\n  \n  if (_.isFinite(weight) && _.isFinite(height)) {\n         value = ruleServiceLibraryInterfaceForSharingModules.common.calculateBMI(weight, height);\n       }\n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, value);  \n};",
+      "mandatory" : false
+    } ],
+    "display" : "General",
+    "timed" : false
+  }, {
+    "uuid" : "139162e9-1da5-4a8d-a8b3-3ed870de110b",
+    "name" : "Pregnancy Complications",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Has she been dealing with any complications?",
+      "uuid" : "4baa133c-82c5-40c6-96dc-cae8c9e10ab9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Pregnancy complications",
+        "uuid" : "0adc4170-9ebb-4feb-8b81-450fbf9a04dc",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Painful or difficult urination",
+          "uuid" : "39379c57-8f29-4d46-a600-d28b90b963da",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Severe headache",
+          "uuid" : "5a6ab8bb-fb14-4747-a66e-3961d718a83e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Spotting PV",
+          "uuid" : "b283f256-1219-44cf-a01d-c7516b1159f4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Fever with rash",
+          "uuid" : "051d2aa4-d61d-4dcf-91e0-5f2ea92316d7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Morning Sickness",
+          "uuid" : "2a2768ac-713b-4f74-85af-4a1fc5a832d1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Per vaginal bleeding",
+          "uuid" : "79865f4d-1946-40b4-a823-28281fc58ba0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Difficulty breathing",
+          "uuid" : "fe8c09ce-4135-4092-a693-3ad9bd8edb44",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Severe Abdominal Pain",
+          "uuid" : "5ba2d201-a120-4f2d-92e6-ca97d48b60b0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PV leaking",
+          "uuid" : "f7a77870-e1c6-47b7-9d72-01eec4adf0f5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Convulsions",
+          "uuid" : "ab9596e4-04b6-48f2-9f4d-1c7a2c82dbf8",
+          "dataType" : "Coded",
+          "answers" : [ {
+            "name" : "Absent",
+            "uuid" : "10885638-561a-42b6-8b24-8daa01864c89",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 2.0,
+            "active" : true,
+            "media" : [ ]
+          }, {
+            "name" : "Present",
+            "uuid" : "57b51d52-981f-4af2-b133-aeffa6d00757",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 1.0,
+            "active" : true,
+            "media" : [ ]
+          } ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Reduced foetal movement",
+          "uuid" : "3b2d2bba-6a2b-476d-bb87-18f789a09cb6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No problem",
+          "uuid" : "855fb739-19d8-418d-a8ae-c1da977b7fa9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 17.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Blurred vision",
+          "uuid" : "2367268e-5988-4db3-a0ca-19438bd5931c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pain on urination",
+          "uuid" : "97652252-0024-434d-8749-078b395fb6f2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Excessive vomiting and inability to consume anything orally in last 24 hours",
+          "uuid" : "7cdba040-6fad-4a43-8306-4a284178cf5d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Anemia",
+          "uuid" : "8235c567-4375-4933-9b66-f5e04157ca7a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Decreased Foetal movements",
+          "uuid" : "d4276c48-2db2-494b-b041-97ffc1146c83",
+          "dataType" : "Coded",
+          "answers" : [ {
+            "name" : "Yes",
+            "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 1.0,
+            "active" : true,
+            "media" : [ ]
+          }, {
+            "name" : "No",
+            "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 2.0,
+            "active" : true,
+            "media" : [ ]
+          } ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  const currentTrimester = \nruleServiceLibraryInterfaceForSharingModules.motherCalculations.currentTrimester(programEncounter.programEnrolment,programEncounter.encounterDateTime);\n  \n // _isInCurrentTrimester(trimesters) {\n //       return trimesters.indexOf(currentTrimester) > -1;\n //   }\n  \n //  const inclusionMapping = new Map([[\"Morning Sickness\", [1, 2]],\n //           ['Excessive vomiting and inability to consume anything orally in last 24 hours', [1,2]],\n //           [\"Difficulty breathing\", [2, 3]],\n //           [\"Fever\", []],\n //           [\"Blurred vision\", [2, 3]],\n //           [\"Severe headache\", [2, 3]],\n //           [\"PV leaking\", [2, 3]]]);\n            \n // formElement.concept.getAnswers()\n //           .map((answer) => _.assignIn({\n //               name: answer.concept.name,\n //               uuid: answer.concept.uuid\n //           }))\n//            .filter(answer => [...inclusionMapping.keys()].indexOf(answer.name) > -1)\n//            .map((answer) => {\n//                statusBuilder.skipAnswers(answer.name)\n//                    .whenItem(_isInCurrentTrimester(inclusionMapping.get(answer.name)))\n//                    .is.not.truthy;\n//            });\n  \n  statusBuilder.show().whenItem(true).is.truthy;\n  \n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Other complications?",
+      "uuid" : "20a01e2f-cbb4-4bf4-853b-20c871f0004d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other pregnancy complications",
+        "uuid" : "9ab68204-6336-4074-b99b-7de20549be3b",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  \n    statusBuilder.show().when.valueInEncounter(\"Pregnancy complications\").containsAnswerConceptName(\"Other\");\n\n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    } ],
+    "display" : "Pregnancy Complications",
+    "timed" : false
+  }, {
+    "uuid" : "36debb83-db66-4da1-88c7-23c0dfc47649",
+    "name" : "Physical Examination",
+    "displayOrder" : 4.0,
+    "formElements" : [ {
+      "name" : "Pedal Edema",
+      "uuid" : "32bed768-4074-45c4-92a6-4bc27f43bbdc",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Pedal Edema",
+        "uuid" : "b441c480-1a19-4ad0-9d0a-196485aacf12",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Present",
+          "uuid" : "57b51d52-981f-4af2-b133-aeffa6d00757",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Absent",
+          "uuid" : "10885638-561a-42b6-8b24-8daa01864c89",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Pallor",
+      "uuid" : "6b5f0898-6ea3-4395-91e2-6e415cada5ff",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Pallor",
+        "uuid" : "226f8715-563b-4a8b-8afa-f75cce2767af",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Absent",
+          "uuid" : "10885638-561a-42b6-8b24-8daa01864c89",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Present",
+          "uuid" : "57b51d52-981f-4af2-b133-aeffa6d00757",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Has she been having convulsions?",
+      "uuid" : "e4511f13-5b2a-4df2-9e7b-72729c1f6923",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Has she been having convulsions?",
+        "uuid" : "4236230c-d109-4409-9acf-2925388ebad5",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Present",
+          "uuid" : "57b51d52-981f-4af2-b133-aeffa6d00757",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Absent",
+          "uuid" : "10885638-561a-42b6-8b24-8daa01864c89",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Jaundice (Icterus)",
+      "uuid" : "a9a50a04-6e62-4398-b0ed-1039f82fe323",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Jaundice (Icterus)",
+        "uuid" : "78cb1fb0-9e7c-4012-872c-00589fda661d",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Absent",
+          "uuid" : "10885638-561a-42b6-8b24-8daa01864c89",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Present",
+          "uuid" : "57b51d52-981f-4af2-b133-aeffa6d00757",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Breast Examination - Nipple",
+      "uuid" : "5682fc9d-a852-445d-9e8e-d67a1fa51266",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Breast Examination - Nipple",
+        "uuid" : "ed087798-7116-4817-ba84-caa02a23e1b7",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Flat",
+          "uuid" : "040e37d2-12ff-465c-8bf2-990358805f11",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Normal",
+          "uuid" : "ba43b326-18a1-4f8d-ad04-29b0371461e0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Retracted",
+          "uuid" : "3273b055-0222-44b6-b0a6-7d45fb4e1b33",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "Physical Examination",
+    "timed" : false
+  }, {
+    "uuid" : "1ca46e2e-36bc-415b-ba50-9021588e676a",
+    "name" : "Per Abdominal Examination",
+    "displayOrder" : 5.0,
+    "formElements" : [ {
+      "name" : "Fundal Height",
+      "uuid" : "e7a89295-3b62-403d-9690-814488bc0a3d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Fundal Height",
+        "uuid" : "1e46713d-162d-4657-922d-1f458a3011a5",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  const value = \nruleServiceLibraryInterfaceForSharingModules.motherCalculations.gestationalAgeAsOn(programEncounter.encounterDateTime, programEncounter.programEnrolment);\n \n   statusBuilder.show().whenItem(value).is.greaterThanOrEqualTo(12);\n    \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Fundal height from pubic symphysis",
+      "uuid" : "3170cf31-535c-4030-bec1-59229f26d81e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Fundal height from pubic symphysis",
+        "uuid" : "fefe6bd1-8111-42dc-9be4-056ab0f5fd36",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n   const value = \nruleServiceLibraryInterfaceForSharingModules.motherCalculations.gestationalAgeAsOn(programEncounter.encounterDateTime, programEncounter.programEnrolment);\n \n   statusBuilder.show().whenItem(value).is.greaterThanOrEqualTo(24);\n  \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Abdominal girth",
+      "uuid" : "89136929-82c4-4e5c-a32f-5d00ef1ea4a4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Abdominal girth",
+        "uuid" : "334c4434-eda2-4119-9005-0139c2f0418e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Foetal movements",
+      "uuid" : "2440a24d-74ad-457a-813b-cce5dfedc136",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Foetal movements",
+        "uuid" : "f90bb5df-c7fa-4266-8141-3534f3e47e6c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Absent",
+          "uuid" : "10885638-561a-42b6-8b24-8daa01864c89",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Normal",
+          "uuid" : "ba43b326-18a1-4f8d-ad04-29b0371461e0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Reduced",
+          "uuid" : "cc933b72-291f-41c3-a5c2-53cfc9966a63",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "NA",
+          "uuid" : "4d476011-7fc4-432b-98c0-9f6f1847cf39",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n \n const value = \nruleServiceLibraryInterfaceForSharingModules.motherCalculations.gestationalAgeAsOn(programEncounter.encounterDateTime, programEncounter.programEnrolment);\n \n let gravida = programEncounter.programEnrolment.getObservationReadableValue('Gravida');\n   \n  const condition1 = gravida = 1 && value>= 20;\n  const condition2 = gravida > 1 && value>= 12;\n \n  statusBuilder.show().whenItem(condition1 || condition2).is.truthy;\n   return statusBuilder.build();\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Foetal Heart Sound",
+      "uuid" : "c30e4c6c-a823-47ff-8c8c-328f89a2587f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Foetal Heart Sound",
+        "uuid" : "b32881ad-45e7-4c16-b072-9d75929e6873",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Present and Regular",
+          "uuid" : "45b86f84-aeb9-474d-bef8-df986c0a0927",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Absent",
+          "uuid" : "10885638-561a-42b6-8b24-8daa01864c89",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Present and Irregular",
+          "uuid" : "5576ac3f-5492-4956-9934-801f06f1ca13",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  const value = \nruleServiceLibraryInterfaceForSharingModules.motherCalculations.gestationalAgeAsOn(programEncounter.encounterDateTime, programEncounter.programEnrolment);\n \n  statusBuilder.show().whenItem(value).greaterThanOrEqualTo(28);\n     \n  return statusBuilder.build();\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Foetal Heart Rate",
+      "uuid" : "bcda771b-c8e2-4931-aa8a-13c9d340718c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Foetal Heart Rate",
+        "uuid" : "77ee9c20-d074-4cbe-a5bd-a1ca9d6ecce9",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 120.0,
+        "highNormal" : 160.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  const value = \nruleServiceLibraryInterfaceForSharingModules.motherCalculations.gestationalAgeAsOn(programEncounter.encounterDateTime, programEncounter.programEnrolment);\n   \n   statusBuilder.show().whenItem(value).greaterThanOrEqualTo(28);\n \n    return statusBuilder.build();\n};",
+      "mandatory" : false
+    } ],
+    "display" : "Per Abdominal Examination",
+    "timed" : false
+  }, {
+    "uuid" : "cb8b6812-b58b-428d-afbd-7f53748c684d",
+    "name" : "Vitals",
+    "displayOrder" : 6.0,
+    "formElements" : [ {
+      "name" : "Systolic",
+      "uuid" : "972a7890-4fa9-42c8-b4b8-fe8583c5ae80",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Systolic",
+        "uuid" : "2a04bf88-6346-4eda-a86c-8a2afc011b22",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 20.0,
+        "highAbsolute" : 300.0,
+        "lowNormal" : 90.0,
+        "highNormal" : 140.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Diastolic",
+      "uuid" : "c253083f-a2f9-4bec-a07f-8883637125db",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Diastolic",
+        "uuid" : "1e2d41a2-5b6a-4ad7-ab91-51d3cdf122bd",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 10.0,
+        "highAbsolute" : 200.0,
+        "lowNormal" : 50.0,
+        "highNormal" : 90.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Pulse",
+      "uuid" : "099dd8f5-ed61-4195-ba8c-2a9f26317642",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Pulse",
+        "uuid" : "2d3b8f90-6123-4dbf-b866-4f56ac7d24c8",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 60.0,
+        "highNormal" : 100.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Respiratory Rate",
+      "uuid" : "407b2857-e5cd-4805-9b2c-c43c2e819b04",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Respiratory Rate",
+        "uuid" : "70d617f9-3c14-4ec2-8d0f-97c837f6ab37",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 16.0,
+        "highNormal" : 20.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Temperature",
+      "uuid" : "86d906d2-f44f-4743-9044-f7b23df6d5d8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Temperature",
+        "uuid" : "e6edb61c-c3d9-44c8-abf7-4fd09fe39ec9",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 97.0,
+        "highNormal" : 99.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "display" : "Vitals",
+    "timed" : false
+  }, {
+    "uuid" : "07458686-88c5-448f-92ed-c150c0629b4f",
+    "name" : "Lab Diagnostics - Blood",
+    "displayOrder" : 7.0,
+    "formElements" : [ {
+      "name" : "Was blood examination done",
+      "uuid" : "7a8e6352-46b5-419f-a7f1-694f0f2430f6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Was lab examination done",
+        "uuid" : "b39db88a-e0cd-42d2-b3a9-c7c4ecfe5819",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Blood Examination Date",
+      "uuid" : "4854821e-d478-4b95-afed-00b2c233ce41",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Blood Examination Date",
+        "uuid" : "63a1b5f2-f672-444a-b44b-c80819d85040",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Was lab examination done').containsAnswerConceptName(\"Yes\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Paracheck",
+      "uuid" : "f09992f0-ef48-4fb8-ad08-0f9a718aee54",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Paracheck",
+        "uuid" : "10ac6d19-49f9-4ca1-8d26-aa4f1e9997c8",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Positive for PF and PV",
+          "uuid" : "9387a474-72ca-48b6-a608-bd3657c5d1ea",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Positive for PF",
+          "uuid" : "ed305c6f-3986-4346-9ae3-e21cbe0b55f7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Negative",
+          "uuid" : "ad1f0481-a8ed-411a-ac00-d0435a670269",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Positive for PV",
+          "uuid" : "662c40a4-2694-4b10-9388-1ddb2c53886b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Hb",
+      "uuid" : "549367fb-a795-472d-9ad2-06e281dfc17e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Hb",
+        "uuid" : "f9ecabbc-2df2-4bfc-a6fa-aa417c50e11b",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 12.0,
+        "highNormal" : 15.5,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Was lab examination done').containsAnswerConceptName(\"Yes\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Blood Sugar (FBS/RBS/GCT)",
+      "uuid" : "53899c85-3e5e-45e8-ab03-e05d7d295e11",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Blood Sugar- GCT/GTT",
+        "uuid" : "d6bfbe2e-c301-4a26-8893-5236fd20f661",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "highNormal" : 139.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Was lab examination done').containsAnswerConceptName(\"Yes\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : false
+    }, {
+      "name" : "VDRL",
+      "uuid" : "bdab2e43-5e2c-43b9-bd1d-26707aa9806d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "VDRL",
+        "uuid" : "1bb4b646-d494-40d3-9d9b-7141b920e92e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Positive",
+          "uuid" : "479cd95a-54ef-4818-b84a-09b478fc68b8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Negative",
+          "uuid" : "ad1f0481-a8ed-411a-ac00-d0435a670269",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Was lab examination done').containsAnswerConceptName(\"Yes\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : false
+    }, {
+      "name" : "HIV/AIDS Test",
+      "uuid" : "44a88f6b-8b20-4a1b-835a-ad37193d7dc4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "HIV/AIDS Test",
+        "uuid" : "f5d77785-c9e1-421c-98f7-fb713aeef140",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Negative",
+          "uuid" : "ad1f0481-a8ed-411a-ac00-d0435a670269",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Positive",
+          "uuid" : "479cd95a-54ef-4818-b84a-09b478fc68b8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Was lab examination done').containsAnswerConceptName(\"Yes\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : false
+    }, {
+      "name" : "HbsAg",
+      "uuid" : "63987b56-7200-4a0d-9db5-4f01470da996",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "HbsAg",
+        "uuid" : "bf98b3dd-60e5-4af1-90b1-091cae84012b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Positive",
+          "uuid" : "479cd95a-54ef-4818-b84a-09b478fc68b8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Negative",
+          "uuid" : "ad1f0481-a8ed-411a-ac00-d0435a670269",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Was lab examination done').containsAnswerConceptName(\"Yes\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Sickling Test",
+      "uuid" : "b21c3ad3-d3df-4e3b-997a-d184a26a377d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Sickling Test",
+        "uuid" : "b9e3bfc4-8688-44fb-8334-d9a480a50f6c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Negative",
+          "uuid" : "ad1f0481-a8ed-411a-ac00-d0435a670269",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Positive",
+          "uuid" : "479cd95a-54ef-4818-b84a-09b478fc68b8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Was lab examination done').containsAnswerConceptName(\"Yes\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Hb Electrophoresis",
+      "uuid" : "456f4de6-c474-43a3-8417-08ec374a27b7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Hb Electrophoresis",
+        "uuid" : "d78edcbb-2034-4220-ace2-20b445a1e0ad",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "SS",
+          "uuid" : "3648a650-2f3e-4c2c-a899-c0a8212aace1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AA",
+          "uuid" : "daa7c62f-c663-4981-a134-1f662b3036d0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AS",
+          "uuid" : "77ee8a6a-2a01-421f-85ca-fc0ab39abcdb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Was lab examination done').containsAnswerConceptName(\"Yes\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : false
+    }, {
+      "name" : "TSH",
+      "uuid" : "fabb7505-20ed-4aed-aebb-4a70470e69f6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "TSH",
+        "uuid" : "8befcf33-52be-4788-a2c0-e3fe527e722d",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Was lab examination done').containsAnswerConceptName(\"Yes\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "HCV",
+      "uuid" : "05797f38-8eb5-405f-9f67-5ba09df4f38b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "HCV",
+        "uuid" : "c790e2a0-7334-4842-b4b5-439e17a7facd",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Was lab examination done').containsAnswerConceptName(\"Yes\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : false
+    } ],
+    "display" : "Lab Diagnostics - Blood",
+    "timed" : false
+  }, {
+    "uuid" : "33b4dfd6-2b49-4230-8132-46bd2232c2db",
+    "name" : "Lab Diagnostics - Urine",
+    "displayOrder" : 8.0,
+    "formElements" : [ {
+      "name" : "Was urine examination done",
+      "uuid" : "c6133f0e-d512-4f79-9026-e581e4abdd40",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Was lab examination done_Urine",
+        "uuid" : "9fcce401-e8bf-4b1a-8afa-2a090898484d",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Urine Albumin",
+      "uuid" : "97759fac-b25e-449b-b9da-2be2818a978c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Urine Albumin",
+        "uuid" : "96cf3ccd-df7e-4614-a19c-05b44bed2b5b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "+1",
+          "uuid" : "3661d5a9-d097-4cd6-8387-58b38cfc61ea",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "+3",
+          "uuid" : "172513b3-b1bb-4411-a3ea-a8e9914cb21a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Trace",
+          "uuid" : "17b0423e-ba04-4f24-b196-f82639c2ca4c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "+4",
+          "uuid" : "98d05a6e-2234-4238-85d2-92835581803d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "+2",
+          "uuid" : "10db74d9-2357-412e-b04c-099ab9a1c3f1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Absent",
+          "uuid" : "10885638-561a-42b6-8b24-8daa01864c89",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Was lab examination done_Urine').containsAnswerConceptName(\"Yes\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Urine Sugar",
+      "uuid" : "c961c4c8-22e1-47fd-8e4d-bef66c962303",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Urine Sugar",
+        "uuid" : "64134706-9d55-4bae-82c5-5e4628012394",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "+4",
+          "uuid" : "98d05a6e-2234-4238-85d2-92835581803d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "+3",
+          "uuid" : "172513b3-b1bb-4411-a3ea-a8e9914cb21a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Absent",
+          "uuid" : "10885638-561a-42b6-8b24-8daa01864c89",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Trace",
+          "uuid" : "17b0423e-ba04-4f24-b196-f82639c2ca4c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "+1",
+          "uuid" : "3661d5a9-d097-4cd6-8387-58b38cfc61ea",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "+2",
+          "uuid" : "10db74d9-2357-412e-b04c-099ab9a1c3f1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Was lab examination done_Urine').containsAnswerConceptName(\"Yes\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Urine Micro",
+      "uuid" : "f1640350-ac51-42e9-a4cb-7787e0d1d4f2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Urine micro",
+        "uuid" : "8fbf83e6-6a52-4630-82c5-c19065f4305e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Present",
+          "uuid" : "57b51d52-981f-4af2-b133-aeffa6d00757",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Absent",
+          "uuid" : "10885638-561a-42b6-8b24-8daa01864c89",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Was lab examination done_Urine').containsAnswerConceptName(\"Yes\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : false
+    } ],
+    "display" : "Lab Diagnostics - Urine",
+    "timed" : false
+  }, {
+    "uuid" : "353eec4f-052f-466b-9acb-7a740e5c19e5",
+    "name" : "Lab Diagnostics - USG",
+    "displayOrder" : 9.0,
+    "formElements" : [ {
+      "name" : "US Scanning Done",
+      "uuid" : "e5e671fe-0acf-44e1-9629-0796b274fe65",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "US Scanning Done",
+        "uuid" : "35805527-362c-497c-8009-5c353a464192",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "USG dating scan done?",
+      "uuid" : "c4dd5633-cb21-4bfd-99a1-d643a694b826",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "USG dating scan done?",
+        "uuid" : "eba78e11-f6f8-45cc-acc1-5883a28edaba",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  const value = \nruleServiceLibraryInterfaceForSharingModules.motherCalculations.gestationalAgeAsOn(programEncounter.encounterDateTime, programEncounter.programEnrolment);\n   \n  statusBuilder.show().whenItem(value).greaterThanOrEqualTo(7).and.lessThanOrEqualTo(28);\n  \n   return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Date of USG dating scan",
+      "uuid" : "ab83c703-2f83-4d2d-bcd2-9e76c3312523",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Date of USG dating scan",
+        "uuid" : "2b323cf0-b86a-451b-8266-fa4b5343d528",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n   statusBuilder.show()\n            .when.valueInEncounter(\"USG dating scan done?\").containsAnswerConceptName(\"Yes\");\n\n  \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "USG anomaly scan done?",
+      "uuid" : "33e5a8c6-66af-4786-a6f1-b9a0645aed4b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "USG anomaly scan done?",
+        "uuid" : "0d9a6654-68c1-4398-a49e-92340e4f9ff5",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  const value = \nruleServiceLibraryInterfaceForSharingModules.motherCalculations.currentTrimester(programEncounter.programEnrolment,programEncounter.encounterDateTime);\n  \n  \n   statusBuilder.show().whenItem(value).equals(2);\n \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Date of USG anomaly scan",
+      "uuid" : "2f41909e-60e7-43c9-8d57-8c19e625bc47",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Date of USG anomaly scan",
+        "uuid" : "b20dd110-f425-46f8-b281-24170ba222d3",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  statusBuilder.show()\n            .when.valueInEncounter(\"USG anomaly scan done?\").containsAnswerConceptName(\"Yes\");\n     \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Any anomaly?",
+      "uuid" : "582a0638-e9bb-4886-bf87-756b17d907da",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Any anomaly",
+        "uuid" : "7f3e4ca7-b6cd-4780-82b2-09257452df36",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  statusBuilder.show()\n            .when.valueInEncounter(\"USG anomaly scan done?\").containsAnswerConceptName(\"Yes\");\n     \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Specify anomaly",
+      "uuid" : "b1344682-2d28-40d2-8096-4f190ae25ff6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Specify anomaly",
+        "uuid" : "97fc3299-3d84-4aca-bf09-34a12700f665",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Wrong bone alignment",
+          "uuid" : "1563bd8e-34c2-4c8b-b6fc-0b83b883cadf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Reduced bone growth",
+          "uuid" : "1d13dc36-46b8-43b9-b49b-717a3adb5092",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Improper brain development",
+          "uuid" : "295cb71e-039b-4186-b0de-5903dfd3d74b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Reduced amniotic fluid",
+          "uuid" : "3246c2f4-95fa-43f7-a577-4e4e5987ef07",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Reduced liquor",
+          "uuid" : "4461824c-9829-4f2a-a27d-fe7261aa1165",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Improper kidney development",
+          "uuid" : "cf3ed38b-a48f-478b-a923-942d5455ef93",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Improper heart development",
+          "uuid" : "80c35f7f-acc9-4322-83b9-c8a907dffb08",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Abnormal position of placenta",
+          "uuid" : "966c5348-0884-4c7c-98d8-47ff86f0906c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cleft lip",
+          "uuid" : "f45753f1-ea79-42cb-8d9f-93fda03dfefe",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Abnormal foetal presenattion",
+          "uuid" : "123e5799-51ab-4f71-a8b5-fcab7c57caa2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Any anomaly').containsAnswerConceptName(\"Yes\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Location of placenta",
+      "uuid" : "a0eaf28f-2af2-407d-bfb6-9afa4fc57df3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Location of placenta",
+        "uuid" : "a5a68121-e8c4-4975-b0ad-7b3b548070ee",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Anterior",
+          "uuid" : "2e7edaff-a024-4ff5-8cf3-ecd2544dacf4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Posterior",
+          "uuid" : "4558ae66-69eb-4b6e-ab03-d0dfa1a0bc65",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Fundal",
+          "uuid" : "8db0e1d5-d445-4e59-a39f-01541ee593ea",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Placenta Praevia",
+          "uuid" : "49e475aa-d4c7-45ff-abb0-99985dfb12f1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lateral",
+          "uuid" : "cb1e1858-b7b9-4331-89db-453e5020f1da",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  statusBuilder.show()\n            .when.valueInEncounter(\"USG anomaly scan done?\").containsAnswerConceptName(\"Yes\");\n     \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Was growth scan done",
+      "uuid" : "dd5ec22f-a155-45b3-bc15-16d9e623ed80",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Was growth scan done",
+        "uuid" : "9b9a38f1-9b23-467a-8bfd-077ac15feedb",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  const value = \nruleServiceLibraryInterfaceForSharingModules.motherCalculations.currentTrimester(programEncounter.programEnrolment,programEncounter.encounterDateTime);\n  \n  \n   statusBuilder.show().whenItem(value).equals(2);\n \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Date of growth scan",
+      "uuid" : "1ea16740-9697-4c77-b4d8-cca28b008b90",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Date of growth scan",
+        "uuid" : "418e6b8f-b16e-412b-a92d-d2a1fb14db10",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  statusBuilder.show()\n            .when.valueInEncounter(\"Was growth scan done\").containsAnswerConceptName(\"Yes\");\n     \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Liquor volume",
+      "uuid" : "dd0e1888-6de3-4a7f-9f74-755f1c166184",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Liquor volume",
+        "uuid" : "0dbce5dc-2b22-42ff-a31a-21aeffb4e5d2",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  statusBuilder.show()\n            .when.valueInEncounter(\"Was growth scan done\").containsAnswerConceptName(\"Yes\");\n     \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Gestational age",
+      "uuid" : "f45fcb44-0130-4117-9ccb-c0609b0f7918",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Current gestational age",
+        "uuid" : "4e49b82f-8526-4b33-8fee-e235188af02d",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  statusBuilder.show()\n            .when.valueInEncounter(\"Was growth scan done\").containsAnswerConceptName(\"Yes\");\n     \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Foetal weight",
+      "uuid" : "304c7c3f-4b86-4a57-8951-889f2f221171",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Foetal weight",
+        "uuid" : "a202f985-1f9a-4bc4-b28f-f8d8bd7132f9",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  statusBuilder.show()\n            .when.valueInEncounter(\"Was growth scan done\").containsAnswerConceptName(\"Yes\");\n     \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "USG Scanning Date",
+      "uuid" : "3a7a4451-dceb-439b-aab3-9e968bd5be1b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "USG Scanning Date",
+        "uuid" : "e390b1b4-d492-4a51-87cf-cb0011465c0e",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  statusBuilder.show()\n            .when.valueInEncounter(\"US Scanning Done\").containsAnswerConceptName(\"Yes\");\n     \n    return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of foetus",
+      "uuid" : "bbbaa09b-b314-4123-a578-2e4b3f8d0b97",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "USG Scanning Report - Number of foetus",
+        "uuid" : "ea54eb71-5560-4871-9369-a91b6a064dba",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Three",
+          "uuid" : "a335e989-3c98-45f6-9659-1178c231cda0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Two",
+          "uuid" : "d1e58ac3-1ea7-46a1-8e17-e9f2c6789715",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "More than three",
+          "uuid" : "0ba85fd4-4d70-4f03-b449-8dd12e30d690",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "One",
+          "uuid" : "73431353-137e-4997-92aa-26b3cb79eba7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 15.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n   statusBuilder.show()\n            .when.valueInEncounter(\"US Scanning Done\").containsAnswerConceptName(\"Yes\");\n  \n    return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Liquour",
+      "uuid" : "e6126713-09aa-4a04-8f60-414dbd4125e5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "USG Scanning Report - Liquour",
+        "uuid" : "4b65c269-1394-40ce-8c1b-58377e791568",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Increased",
+          "uuid" : "563eb915-f607-48de-86af-3295b6f35bb8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Decreased",
+          "uuid" : "1aef1b55-0c52-4961-a1c9-f35e4c6a6f00",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Normal",
+          "uuid" : "ba43b326-18a1-4f8d-ad04-29b0371461e0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 16.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n   statusBuilder.show()\n            .when.valueInEncounter(\"US Scanning Done\").containsAnswerConceptName(\"Yes\");\n  \n    return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Placenta Previa",
+      "uuid" : "6bc5a76c-b45a-4489-b206-a21aca3e7fd3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "USG Scanning Report - Placenta Previa",
+        "uuid" : "648e5a59-9919-44d0-829c-6ff27cb355ea",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Previa",
+          "uuid" : "d9501d6b-7ae9-4b2f-b1a3-56f7fb1ea241",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not Previa",
+          "uuid" : "92454e8f-6ead-42a8-8c8c-114a405c1e39",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 17.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n \n  statusBuilder.show()\n            .when.valueInEncounter(\"US Scanning Done\").containsAnswerConceptName(\"Yes\");\n \n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Foetal presentation",
+      "uuid" : "a4194db7-7d4b-4deb-9b1e-4f42ab5ded94",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Foetal presentation",
+        "uuid" : "e57a15aa-e335-4b73-a593-e55af1a3bb25",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Cephalic",
+          "uuid" : "ab96f92f-6412-43e2-bb20-aabecd3aefad",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Transverse",
+          "uuid" : "74f986ee-faa5-40b1-baa8-78732761ce47",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Breech",
+          "uuid" : "d225cac9-f306-49ba-b9d3-3826c92995e6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 18.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  const currentTrimester = \nruleServiceLibraryInterfaceForSharingModules.motherCalculations.currentTrimester(programEncounter.programEnrolment,programEncounter.encounterDateTime);\n \n  \n  statusBuilder.show()\n            .when.valueInEncounter(\"US Scanning Done\").containsAnswerConceptName(\"Yes\")\n            .and.whenItem(currentTrimester).equals(3);\n\n  \n    return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Estimated date of delivery by doctor",
+      "uuid" : "691853b9-3634-440d-a4b5-12d0c2020125",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Estimated Date of Delivery",
+        "uuid" : "dde911fa-15eb-4564-8deb-bba46e9d3744",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 19.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n statusBuilder.show()\n            .when.valueInEncounter(\"US Scanning Done\").containsAnswerConceptName(\"Yes\");\n   return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "display" : "Lab Diagnostics - USG",
+    "timed" : false
+  }, {
+    "uuid" : "d874187e-8d09-4211-89b9-79c37d8fe13a",
+    "name" : "ANC supplements",
+    "displayOrder" : 10.0,
+    "formElements" : [ {
+      "name" : "Nutritional Support from the Govt.?",
+      "uuid" : "fcfa3d0d-2263-40f3-bc1a-9cdea12eda78",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Nutritional Support from the Govt",
+        "uuid" : "b97181fb-de4f-4784-b837-a13d4306eda5",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes-Not consuming regularly",
+          "uuid" : "da6c4e46-7164-4263-9479-d4cd5d660e2d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes-Consuming regularly",
+          "uuid" : "953fc183-b2ac-4336-8f07-bd1888df4d86",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Folic acid",
+      "uuid" : "46150d78-7628-4391-ac18-c6c2196baf58",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Folic acid (Tab)",
+        "uuid" : "2c34837a-93b0-4594-8f9e-a9772a6e9674",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  const value = \nruleServiceLibraryInterfaceForSharingModules.motherCalculations.currentTrimester(programEncounter.programEnrolment,programEncounter.encounterDateTime);\n  \n  \n   statusBuilder.show().whenItem(value).equals(1,2,3);\n \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Was deworming done",
+      "uuid" : "592952af-e5b0-4643-ae19-b30e216fa7cb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Was deworming done",
+        "uuid" : "063fa224-be5e-41bb-bd18-81b59a0c1f64",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  const value = \nruleServiceLibraryInterfaceForSharingModules.motherCalculations.currentTrimester(programEncounter.programEnrolment,programEncounter.encounterDateTime);\n  \n  \n   statusBuilder.show().whenItem(value).equals(2,3);\n \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Iron supplements",
+      "uuid" : "9852cb38-9685-4d6d-8d87-a3a9967a0e7c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Iron supplements",
+        "uuid" : "cabd0e4b-6227-4129-885f-90138ae3e91e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  const value = \nruleServiceLibraryInterfaceForSharingModules.motherCalculations.currentTrimester(programEncounter.programEnrolment,programEncounter.encounterDateTime);\n  \n  \n   statusBuilder.show().whenItem(value).equals(2,3);\n \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Calcium supplements",
+      "uuid" : "a946d635-5fd9-4440-af20-ace8c0e997ea",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Calcium supplements",
+        "uuid" : "06c7193c-cfca-484a-8912-a3efe1748a02",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  const value = \nruleServiceLibraryInterfaceForSharingModules.motherCalculations.currentTrimester(programEncounter.programEnrolment,programEncounter.encounterDateTime);\n  \n  \n   statusBuilder.show().whenItem(value).equals(2,3);\n \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    } ],
+    "display" : "ANC supplements",
+    "timed" : false
+  }, {
+    "uuid" : "f9301aef-48af-4ee7-8435-e66c1e23fd21",
+    "name" : "Vaccination",
+    "displayOrder" : 11.0,
+    "formElements" : [ {
+      "name" : "Was DT vaccination taken",
+      "uuid" : "55beaa70-61e7-48c0-a97e-5bcdaa3163a8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Was DT vaccination taken",
+        "uuid" : "fa6bcf30-cf46-4167-94ad-dc82b293c838",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "DT1 Date",
+      "uuid" : "b220398e-6f51-4568-978d-8e632cab00be",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "DT1 Date",
+        "uuid" : "f91604a8-89ac-4a99-a3cb-9edd764c8b0e",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.latestValueInPreviousEncounters(\"f91604a8-89ac-4a99-a3cb-9edd764c8b0e\").notDefined.matches();\n  \n  const condition21 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"fa6bcf30-cf46-4167-94ad-dc82b293c838\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").matches();\n  \n  visibility = condition11 && condition21 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        } ],
+        "conditions" : [ {
+          "conjunction" : "and",
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "latestInPreviousEncounters",
+                "conceptName" : "DT1 Date",
+                "conceptUuid" : "f91604a8-89ac-4a99-a3cb-9edd764c8b0e",
+                "conceptDataType" : "Date"
+              },
+              "rhs" : { },
+              "operator" : "notDefined"
+            } ]
+          }
+        }, {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Was DT vaccination taken",
+                "conceptUuid" : "fa6bcf30-cf46-4167-94ad-dc82b293c838",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "DT2 Date",
+      "uuid" : "6cf6bb59-08bb-4a78-9bfd-d82727f7e2b8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "DT2 Date",
+        "uuid" : "57f66ff5-e050-4a72-ad03-94d99dad4630",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.latestValueInPreviousEncounters(\"57f66ff5-e050-4a72-ad03-94d99dad4630\").notDefined.matches();\n  \n  const condition21 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"fa6bcf30-cf46-4167-94ad-dc82b293c838\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").matches();\n  \n  visibility = condition11 && condition21 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        } ],
+        "conditions" : [ {
+          "conjunction" : "and",
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "latestInPreviousEncounters",
+                "conceptName" : "DT2 Date",
+                "conceptUuid" : "57f66ff5-e050-4a72-ad03-94d99dad4630",
+                "conceptDataType" : "Date"
+              },
+              "rhs" : { },
+              "operator" : "notDefined"
+            } ]
+          }
+        }, {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Was DT vaccination taken",
+                "conceptUuid" : "fa6bcf30-cf46-4167-94ad-dc82b293c838",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "DT Booster Date",
+      "uuid" : "4fa32ede-c17d-4e0e-b8bc-2d5ced4b2dab",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "DT Booster Date",
+        "uuid" : "e1b7ce95-8c73-46fa-8354-19a14f5ca17f",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.latestValueInPreviousEncounters(\"e1b7ce95-8c73-46fa-8354-19a14f5ca17f\").notDefined.matches();\n  \n  const condition21 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"fa6bcf30-cf46-4167-94ad-dc82b293c838\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").matches();\n  \n  visibility = condition11 && condition21 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "conjunction" : "and",
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "latestInPreviousEncounters",
+                "conceptName" : "DT Booster Date",
+                "conceptUuid" : "e1b7ce95-8c73-46fa-8354-19a14f5ca17f",
+                "conceptDataType" : "Date"
+              },
+              "rhs" : { },
+              "operator" : "notDefined"
+            } ]
+          }
+        }, {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Was DT vaccination taken",
+                "conceptUuid" : "fa6bcf30-cf46-4167-94ad-dc82b293c838",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    } ],
+    "display" : "Vaccination",
+    "timed" : false
+  }, {
+    "uuid" : "5ad21a28-fdd9-40f8-b435-b3662081abd3",
+    "name" : "RISK ASSESSMENT",
+    "displayOrder" : 12.0,
+    "formElements" : [ {
+      "name" : "Hospital admission",
+      "uuid" : "d1df3bac-2b88-415c-8d39-9befd2e804bd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Hospital admission",
+        "uuid" : "936ba74d-6d27-49d3-a0d3-5816488f53f2",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Reason for admission",
+      "uuid" : "762f5e50-6b94-4240-912d-a678ceb3ed64",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Reason for admission",
+        "uuid" : "74c53e64-e29a-48d4-97bd-a667c785947a",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Hospital admission').containsAnswerConceptName(\"Yes\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Risk assessment",
+      "uuid" : "207c614b-222b-4ca6-a371-ad2266c39f33",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Risk assessment",
+        "uuid" : "5454f7d9-a8b0-4498-b940-bc20ee85ac22",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "High",
+          "uuid" : "82738fde-67ef-4ff8-975e-e3b439f63c6c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Low",
+          "uuid" : "662230dc-958b-434b-9d95-eaa6bd34bf12",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "",
+      "mandatory" : true
+    }, {
+      "name" : "High Risk Conditions",
+      "uuid" : "ed6c4223-4cdc-47d7-86d4-06ca4212acea",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "High Risk Conditions",
+        "uuid" : "f34f974b-47b0-424d-ae97-d479c80efa49",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Sickle cell disease SS",
+          "uuid" : "705b3ef7-e41a-4954-bc3f-9556eb002f3d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 39.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Previous Intrauterine Death",
+          "uuid" : "217d0b53-0314-4a64-b710-82fc8fe1bf9c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 29.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Previous Retained Placenta",
+          "uuid" : "9b9b1c0e-8dd3-4520-8c46-4488fd030fa9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 22.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Youngest child Less than 1 Year Old",
+          "uuid" : "49350a36-a442-47d2-bf96-2ecbe8fd1cc5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 19.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Severe Pre-Eclampsia",
+          "uuid" : "e6b24a5c-00f2-46c7-aa67-5b460df5cc81",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 21.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Weight Gain Per Month more than 1.5kg",
+          "uuid" : "4d95ca6e-f2a1-42bd-b52b-44fd8e853d63",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 35.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Chronic Hypertension",
+          "uuid" : "c1071344-deb9-4311-a397-b67b8a4bfecf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 68.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Previous Threatened Abortion",
+          "uuid" : "43524d76-5f86-485f-b101-3b669ca3431e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 58.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Previous Neonatal death within first 28 days",
+          "uuid" : "1b4f8d76-8272-4afe-ba1a-c277421d74d4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 47.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HIV/AIDS Positive",
+          "uuid" : "45350576-a60b-4431-90da-65604933d97c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 42.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Previous Abortion(s)",
+          "uuid" : "af7ae32a-dc5f-4ac2-a372-1baa6edf0b53",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 69.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Irregular abdominal girth increase",
+          "uuid" : "701b5f95-0a7a-453e-8bcd-282af4d2dc97",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 71.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HIV/AIDS",
+          "uuid" : "8425af99-4a07-4d99-97b2-cf955713a560",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 87.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Multiple foetuses",
+          "uuid" : "c99f5dc0-7dc7-410c-bb4a-997666ac312b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 38.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Intrauterine Growth Retardation",
+          "uuid" : "7e9fed7d-f111-4c87-9412-d8c0f8c162d2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 114.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "High BMI",
+          "uuid" : "f58ed8eb-1873-4cea-aab2-09cb8b48ada2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Puerperal sepsis",
+          "uuid" : "8993ed6a-df82-420e-9da8-fc4eecd6bdc3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 107.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Foetal heart rate irregular",
+          "uuid" : "dc3ed683-9e61-47be-899f-3c024ef2896f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 27.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Morning Sickness",
+          "uuid" : "2a2768ac-713b-4f74-85af-4a1fc5a832d1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 60.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Multiple Births",
+          "uuid" : "e66b41ba-fde0-4d1f-92b8-9e1ed367e0da",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 115.0,
+          "active" : true,
+          "keyValues" : [ ],
+          "media" : [ ]
+        }, {
+          "name" : "Irregular pulse",
+          "uuid" : "d976d3c9-0c39-4faf-8544-f9a2273ea2d5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 94.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not Breast-fed within 1 hour of birth",
+          "uuid" : "57f0b3c2-372e-4af7-8a0d-b23228f836db",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pulse <100 or > 160 bpm",
+          "uuid" : "e183bd41-eedf-458e-a96f-f818bf128243",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Foetal movements absent",
+          "uuid" : "8df37793-00cc-4d7e-9f4a-656216661a71",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 25.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Short Stature",
+          "uuid" : "9af1e8e9-f16c-46de-8794-ac302444c63d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 55.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hepatitis B Positive",
+          "uuid" : "f9b654e6-628b-4bbf-b3ee-2adc5ab7ea1c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 98.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Convulsions Present",
+          "uuid" : "b694eefb-6b9d-4123-98a4-1bfc39a7dcb4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 50.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Previous Post Partum Haemorrhage",
+          "uuid" : "e6759d31-2529-4919-b38b-34cb09188767",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 31.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jaundice Present",
+          "uuid" : "2facaa69-1164-4847-82bd-a0216e9c1a50",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 51.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sickle Cell",
+          "uuid" : "37acc93a-8416-4440-ba68-d61ac4ba4c5f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 52.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ante Partum hemorrhage (APH)",
+          "uuid" : "bbcab554-15c0-424f-a86f-e12a9ad38a53",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 65.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Primigravida",
+          "uuid" : "5d406c89-a7fc-4ed9-9a85-c2f2f44c66fb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Colour of child is Pale or Blue",
+          "uuid" : "73f97a3b-3b71-4b63-81f6-16976ee00aac",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Low Temperature",
+          "uuid" : "15f3e8c9-b39e-4617-b54e-6a425d8fa9a2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Age < 18",
+          "uuid" : "331aee3f-0567-4f75-9efd-722f04606e75",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Did not cry soon after birth",
+          "uuid" : "603a37fb-1179-477d-a4bc-cb9f2f463f25",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Old age pregnancy",
+          "uuid" : "8021adee-ad70-4644-97c6-d0804851f8d3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 105.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Previous Prolonged labour",
+          "uuid" : "24bd28bc-9301-446f-94c0-9264bf3e4cd8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 26.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Age > 30",
+          "uuid" : "9e66cbbd-3b24-4578-b423-6f3022298be6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Foetal heart sound irregular",
+          "uuid" : "36b67c37-5ea2-463b-9eef-47ba95d2c097",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 62.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Reflex Absent",
+          "uuid" : "f2eb3d4c-838d-4f67-9815-cf108e0f05ff",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Previous Multiple Births",
+          "uuid" : "6f969c17-cc0d-48cf-8ca4-835c02de4e1c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 88.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Previous Intrapartum Death",
+          "uuid" : "9133804d-26a0-4546-a459-15b2c9ade793",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 99.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Low Pulse",
+          "uuid" : "87f387a4-434c-45ee-9cbd-c17b310469a7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 111.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Abnormal Paracheck",
+          "uuid" : "a0460e35-d7de-46f2-8c12-783c3ae445b3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 67.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Low Respiratory Rate",
+          "uuid" : "12c00650-bed6-4242-9c29-4ab7af3676cb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 109.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Abnormal Liquour",
+          "uuid" : "b52921f9-5450-4a99-a172-02e9b33fbb3d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 101.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Malaria",
+          "uuid" : "0dee2973-eebe-4699-b676-b770fdd1c411",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 63.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "TB",
+          "uuid" : "ca8a5f57-c409-47ad-8acf-921cdd0fc191",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 106.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Muscle tone Absent/Flexed arms and legs",
+          "uuid" : "8701cdcf-5d23-4b05-8be0-310159758a4d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Blurred vision",
+          "uuid" : "2367268e-5988-4db3-a0ca-19438bd5931c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 93.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Previous Pre Eclampsia/ Eclampsia",
+          "uuid" : "5d0ba446-65b7-4704-b435-6071bf49bcd0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 53.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Severe Abdominal Pain",
+          "uuid" : "5ba2d201-a120-4f2d-92e6-ca97d48b60b0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 40.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Grand Multipara",
+          "uuid" : "338d5fb1-0493-4270-8d35-81105c239bbb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 48.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Per vaginal bleeding",
+          "uuid" : "79865f4d-1946-40b4-a823-28281fc58ba0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 43.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Young child",
+          "uuid" : "c815f770-0bea-41a2-8169-2ae6ed433a95",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "High blood sugar",
+          "uuid" : "3eab36f5-13cd-4c7b-9f4d-0ecbdbfdb57e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 80.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Post abortion complications",
+          "uuid" : "8b757ad9-c413-4efa-af54-974f65e727ac",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 108.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Severe Anemia",
+          "uuid" : "1aff631c-e487-4202-a862-122b45168ac6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 73.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "VDRL Positive",
+          "uuid" : "06c6b0ea-8ddc-4ed0-ab58-59ed67659571",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 23.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Previous Instrumental Delivery",
+          "uuid" : "4f40dbfb-008f-4b34-856e-d668207cdb7e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 61.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PV leaking",
+          "uuid" : "f7a77870-e1c6-47b7-9d72-01eec4adf0f5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 74.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Abnormal Urine Sugar",
+          "uuid" : "fd175971-d14e-429b-80ea-4700fa748251",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 28.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Abnormal Urine Albumin",
+          "uuid" : "834adde5-0f87-46a7-93eb-779130ba510e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 54.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jaundice",
+          "uuid" : "352bb8a4-1569-492f-9a53-14e3b134c104",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 72.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Heart Disease",
+          "uuid" : "89d2230c-7c64-4959-8835-bef4667f8428",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 82.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Abnormal Respiratory Rate",
+          "uuid" : "6b329b8c-04b7-4cdd-90ea-1cd79dbd014b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 17.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Icterus present",
+          "uuid" : "bab23da4-603e-4f9e-a823-90cc785d8f2f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 18.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Child born Underweight",
+          "uuid" : "6914364e-6627-46bf-94c4-574d051e7fb4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Foetal movements reduced",
+          "uuid" : "2f9afed5-dccb-4a2e-b771-48e88e48c814",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 104.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Irregular Respiratory Rate",
+          "uuid" : "47b79102-ad82-4a61-83cd-e01c4bc73cfe",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 84.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sickling Positive",
+          "uuid" : "4d2733ec-098a-407b-bfd2-1fd123dbe96d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 90.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mild Pre-Eclampsia",
+          "uuid" : "0eb43d96-dfff-4e45-91e8-1a273b419763",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 56.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Weight Gain Per Month less than 1kg",
+          "uuid" : "73ece93d-2065-4ff2-8f87-669142d186e6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 45.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "High Pulse",
+          "uuid" : "878c246d-4d2d-4a59-bcd4-fed33baa7814",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 112.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Malpresentation",
+          "uuid" : "96ec37c6-9572-4288-9220-2fe806093bde",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 89.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Low BMI",
+          "uuid" : "1faa1253-e4dd-48f1-aea2-c231390f9530",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Rh Negative Blood Group",
+          "uuid" : "0c3353c3-f4c9-4028-9cd0-bde9a317927b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Previous Pre-term labour",
+          "uuid" : "79a37abe-1a1d-41fc-9732-c95b7108553e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 66.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Convulsions",
+          "uuid" : "ab9596e4-04b6-48f2-9f4d-1c7a2c82dbf8",
+          "dataType" : "Coded",
+          "answers" : [ {
+            "name" : "Absent",
+            "uuid" : "10885638-561a-42b6-8b24-8daa01864c89",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 2.0,
+            "active" : true,
+            "media" : [ ]
+          }, {
+            "name" : "Present",
+            "uuid" : "57b51d52-981f-4af2-b133-aeffa6d00757",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 1.0,
+            "active" : true,
+            "media" : [ ]
+          } ],
+          "order" : 92.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Twins",
+          "uuid" : "b5719e3e-db9c-49c1-af0c-3047b1b9c57a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Underweight",
+          "uuid" : "41b2db08-99a4-428c-a908-641330858b8a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 83.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Miscarriage",
+          "uuid" : "fb079822-6338-46fe-9919-112686850e2d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 76.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Decreased Foetal movements",
+          "uuid" : "d4276c48-2db2-494b-b041-97ffc1146c83",
+          "dataType" : "Coded",
+          "answers" : [ {
+            "name" : "Yes",
+            "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 1.0,
+            "active" : true,
+            "media" : [ ]
+          }, {
+            "name" : "No",
+            "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 2.0,
+            "active" : true,
+            "media" : [ ]
+          } ],
+          "order" : 24.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Epilepsy",
+          "uuid" : "a34bf7a0-4d55-41fa-855a-0b8094f369f7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 78.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Excessive vomiting and inability to consume anything orally in last 24 hours",
+          "uuid" : "7cdba040-6fad-4a43-8306-4a284178cf5d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 103.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "High Temperature",
+          "uuid" : "eb1ec712-8a28-4511-ba59-4254ad301700",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Previous Intrauterine Growth Retardation",
+          "uuid" : "6b641e43-b981-4c10-a83c-fafac4654372",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 79.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Renal Disease",
+          "uuid" : "2e86955f-0d81-4e80-a1f4-255b3c186bec",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 64.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Abnormal Hb",
+          "uuid" : "b21e0c2c-7516-4019-85a2-a103e1ef7156",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 102.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pedal Edema Present",
+          "uuid" : "cc23823e-2f67-4230-98d4-46d326548869",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 46.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Retracted Nipples",
+          "uuid" : "c95ab0ea-46bb-41fb-995a-24a2db3681a2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 49.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Superimposed Pre-Eclampsia",
+          "uuid" : "f2e5ac5b-b0f8-4088-bc42-397a3885308f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 91.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Severe headache",
+          "uuid" : "5a6ab8bb-fb14-4747-a66e-3961d718a83e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 100.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Essential Hypertension",
+          "uuid" : "1f4227dc-a51f-4237-9217-37d4cea92efd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 20.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Eclampsia",
+          "uuid" : "489f07e5-d9e1-478a-969d-3acad587a15e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 113.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Irregular fundal height increase",
+          "uuid" : "a88feab9-1f5d-4c83-a215-cd0ba44006f6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 77.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Difficulty breathing",
+          "uuid" : "fe8c09ce-4135-4092-a693-3ad9bd8edb44",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 32.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Foetal heart sound absent",
+          "uuid" : "b85fce4e-aace-47df-898f-3f574f7587ae",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 37.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pregnancy induced hypertension",
+          "uuid" : "5a738df9-b09a-4e7d-b683-189a9cdabcad",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 70.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pallor Present",
+          "uuid" : "57c62191-910f-4d86-bb9d-ab0d9009a04d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 85.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Previous Still Birth",
+          "uuid" : "937a4d2a-7e38-4ca5-8309-113199d4a27e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 75.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Foetal Movements Absent",
+          "uuid" : "902df2a5-6403-4cb8-8732-e1e62bfa2364",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 36.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Fever",
+          "uuid" : "0b7f3334-f81e-4d84-a13d-b35011e34456",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 96.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Previous Pregnancy Induced Hypertension",
+          "uuid" : "d8637e17-faef-42fe-b2da-a16cfd7de33f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 41.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Moderate Anemia",
+          "uuid" : "c67d2c3a-c1c8-4cb7-b76e-b77e02541577",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 97.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hypertension",
+          "uuid" : "998d1bae-05d8-47b9-89b8-0254829f238f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 33.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Abnormal Hb Electrophoresis",
+          "uuid" : "e8b6e80e-2952-4ad8-8e8a-bb7299a13c7b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 57.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Placenta Previa Present",
+          "uuid" : "8afff549-a6b4-4eef-b229-b534be99e8e4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 86.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Flat Nipples",
+          "uuid" : "9ba87237-ea3f-42f4-9bac-99fa5fcc9abc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 95.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Diabetes",
+          "uuid" : "674f348f-5075-4c85-8bc2-9edfdee27505",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 59.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Previous Ante Partum Haemorrhage",
+          "uuid" : "36824575-042b-4137-ba3c-ce1145ce81e8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 81.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "High Respiratory Rate",
+          "uuid" : "6af88b96-93bd-4283-815b-27bc9afae823",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 110.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Irregular weight gain",
+          "uuid" : "ebb0dd6f-4dc8-4ef5-838b-a18eec5ba9c9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 30.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Previous LSCS/C-section",
+          "uuid" : "de5d06c1-df58-4e0f-949c-52100f769932",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 34.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Under age pregnancy",
+          "uuid" : "edb0ec5e-56dc-4826-b922-52ed2e182fd8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 44.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Recommendations",
+      "uuid" : "0b29f8b6-c8ea-4655-97a7-6dd442818e5f",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Recommendations",
+        "uuid" : "39c83171-b9ff-441a-9b68-071741ecb618",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Institutional Delivery",
+          "uuid" : "c958100c-ad81-4da8-816e-6ad7eceaac87",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Keep the baby warm by giving mother's skin to skin contact and covering the baby's head, hands and feet with a cap, gloves and socks resp.",
+          "uuid" : "e3e5b7aa-e24c-4f97-98fb-a175a9721e53",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Keep the baby warm",
+          "uuid" : "d53ccfbc-f5fd-4225-9b28-1736ec6c50b5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Give exclusive breast feeding",
+          "uuid" : "d98df61f-00f4-4b06-816e-1e36fca847c2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mother program enrolment with TB recommendation",
+          "uuid" : "4b306479-a861-4bd5-b89a-7098ec75d4bc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Institutional ANC",
+          "uuid" : "a72f03ce-c239-4f28-a18b-0e680db20f62",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "display" : "RISK ASSESSMENT",
+    "timed" : false
+  }, {
+    "uuid" : "70025486-e617-423c-98e7-016c5e9c59f5",
+    "name" : "Nutritional Counselling",
+    "displayOrder" : 13.0,
+    "formElements" : [ {
+      "name" : "Diet Advice Dos",
+      "uuid" : "d84f114c-2c52-475e-b78a-f346c2ef3321",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Diet Advice Do's",
+        "uuid" : "98d5f572-2aff-4973-941e-5459fce82f45",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Diet Advice Donts",
+      "uuid" : "a9337716-980e-4223-aea7-a2ece6147581",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Diet Advice Don'ts",
+        "uuid" : "3f0de760-cb91-428f-928d-164b9c8b0e6c",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Supplementary nutritional therapy",
+      "uuid" : "af2b1579-175a-4ce9-9c40-d97912002be9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Supplementary nutritional therapy (advice)",
+        "uuid" : "1307241d-92c2-4660-8ed9-c5da899aa06e",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "Nutritional Counselling",
+    "timed" : false
+  }, {
+    "uuid" : "40f81e13-bcd8-4190-9651-f04f504b9f09",
+    "name" : "General Counselling",
+    "displayOrder" : 14.0,
+    "formElements" : [ {
+      "name" : "Rest and sleep",
+      "uuid" : "292c2e5b-23d4-40cd-a2a4-7b426f5e64c8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Rest and sleep (advice)",
+        "uuid" : "d070cf73-16f3-4fb7-bf4b-94b95ce753a1",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Immunization Counselling",
+      "uuid" : "21b2dc49-e6b3-4284-9201-a458c1207276",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Immunization Counselling (advice)",
+        "uuid" : "c210a202-78e4-493f-bcf6-11ed6e79d61c",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Coitus/Sex Counselling",
+      "uuid" : "a5b16727-5cf4-4a49-8732-03dddf6ed311",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Coitus/Sex Counselling (advice)",
+        "uuid" : "22d263c5-033a-487f-b237-2ebf6c8698e4",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Illness management",
+      "uuid" : "2443614a-fe92-4667-9baa-51392342ec39",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Illness management (advice)",
+        "uuid" : "b5639c14-30a2-43d3-b818-21cd0cc0a2ff",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Finance management",
+      "uuid" : "db534cf4-aaaa-4e21-a096-da10d7cb32de",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Finance management (advice)",
+        "uuid" : "0dddfa30-74ee-47a4-b212-1918499f4c92",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "General Counselling",
+    "timed" : false
+  }, {
+    "uuid" : "55dcd6c1-a406-4006-9d08-0c71c624d1c4",
+    "name" : "Administrative Counselling",
+    "displayOrder" : 15.0,
+    "formElements" : [ {
+      "name" : "Government scheme information",
+      "uuid" : "2363acaa-e9d3-48df-8753-cac4c708a2fc",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Government scheme information (advice)",
+        "uuid" : "fd8fcbd8-278f-4417-9696-176ff46c3bcc",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Ambulance services information",
+      "uuid" : "8041f3fc-fc3e-4360-b732-105d9d599ee3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Ambulance services information (advice)",
+        "uuid" : "8b01c973-206a-42a7-9ecb-2471ee51be88",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "Administrative Counselling",
+    "timed" : false
+  } ],
+  "decisionRule" : "//SAMPLE RULE EXAMPLE\n  \"use strict\";\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const decisions = params.decisions;    \n    //create complicationBuilder using programEncounter and then push to encounterDecisions array.\n     const lmpDate = programEncounter.programEnrolment.getObservationValue('Last menstrual period');\n     const pregnancyPeriodInWeeks = imports.moment(programEncounter.encounterDateTime).diff(lmpDate,'weeks');\n     \n     const systolic = programEncounter.getObservationValue('Systolic');\n     const diastolic = programEncounter.getObservationValue('Diastolic');\n     const isBloodPressureHigh = (systolic >= 140) || (diastolic >= 90); \n\n     \nlet highRiskConditions = programEncounter.programEnrolment.getObservationReadableValueInEntireEnrolment('High Risk Conditions');\nconst isEssentialHypertensive = highRiskConditions && highRiskConditions.indexOf('Essential Hypertension') >= 0;\n\nconst obsHistory = programEncounter.programEnrolment.getObservationReadableValueInEntireEnrolment('Obstetrics history');\nconst obsHistoryOfPregnancyInducedHypertension = imports.common.contains(obsHistory, 'Pregnancy induced hypertension');\n         \n\n  const medicalHistory = [\"Hypertension\", \"Heart-related Diseases\", \"Diabetes\", \"Sickle Cell\", \"Epilepsy\", \n   \"Renal Disease\",\"HIV/AIDS\", \"Hepatitis B Positive\"];\n\nconst pastComplications = [\"Ante Partum Haemorrhage\", \"Intrauterine Growth Retardation\", \"Pre-term labour\", \n    \"Prolonged labour\",\"Instrumental Delivery\", \"LSCS/C-section\", \"Intrauterine death\", \"Threatened abortion\",\n    \"3 or more than 3 spontaneous abortions\", \"Still Birth\", \"Multiple Births\", \"Retained Placenta\",\n    \"Post Partum Haemorrhage (Excessive bleeding after delivery)\", \"Intrapartum Death\", \"Neonatal death within first 28 days\",\"Congenital anomaly\", \"Rh negative in the previous pregnancy\"];\n  \n  const investigations = [[\"Paracheck\", [1, 2, 3]], [\"Hb\", [1, 2, 3]], \n        [\"VDRL\", [1]], [\"HIV/AIDS Test\", [1]], [\"HbsAg\", [1]], [\"Sickling Test\", [1]], \n        [\"Hb Electrophoresis\", [1]],[\"Urine Albumin\", [1, 2, 3]], [\"Urine Sugar\", [1, 2, 3]]];\n        //[\"Blood Sugar\", [1, 2, 3]],\n        \n const pregnancyComplications = [\"Excessive vomiting and inability to consume anything orally in last 24 hours\", \"Severe Abdominal Pain\", \"Blurred vision\",\"Decreased Foetal movements\", \"Per vaginal bleeding\", \"PV leaking\", \"Morning Sickness\", \"Difficulty breathing\", \"Severe headache\"];\n   \n   if (imports.motherCalculations.isBelowNormalWeightGain) {\n        const isBelowNormalWeightGain = imports.motherCalculations\n            .isBelowNormalWeightGain(programEncounter.programEnrolment, programEncounter);\n        console.log('isBelowNormalWeightGain', isBelowNormalWeightGain);\n    }\n  \n     \n\nconst isNormalWeightGain = imports.motherCalculations\n            .isNormalWeightGain(programEncounter.programEnrolment, programEncounter);\n  console.log('isNormalWeightGain',isNormalWeightGain);\n            \n               \n    const complicationsBuilder = new imports.rulesConfig.complicationsBuilder({\n        programEncounter: programEncounter,\n        complicationsConcept: \"High Risk Conditions\"\n    });\n        complicationsBuilder.addComplication(\"Underweight\")\n        .when.valueInEncounter(\"Weight\").is.lessThanOrEqualTo(35);  \n        \n        complicationsBuilder.addComplication(\"Essential Hypertension\")\n        .whenItem(pregnancyPeriodInWeeks).is.lessThanOrEqualTo(20)\n        .and.whenItem(isBloodPressureHigh).is.truthy;\n        \n        complicationsBuilder.addComplication(\"Superimposed Pre-Eclampsia\")\n      .when.valueInEncounter(\"Urine Albumin\")\n      .containsAnyAnswerConceptName(\"Trace\",\"+1\",\"+2\",\"+3\",\"+4\")\n      .and.whenItem(pregnancyPeriodInWeeks).is.lessThanOrEqualTo(20)\n      .and.whenItem(isBloodPressureHigh).is.truthy;\n      \n      complicationsBuilder.addComplication(\"Pregnancy induced hypertension\")\n      .whenItem(isBloodPressureHigh).is.truthy\n      .and.whenItem(obsHistoryOfPregnancyInducedHypertension).is.not.truthy\n      .and.whenItem(pregnancyPeriodInWeeks).greaterThan(20)\n      .and.whenItem(isEssentialHypertensive).is.not.truthy;       \n     \n     complicationsBuilder.addComplication(\"Eclampsia\")\n     .when.valueInEncounter(\"Has she been having convulsions?\").containsAnswerConceptName('Present')\n      .and.when.valueInEncounter(\"Urine Albumin\").containsAnyAnswerConceptName(\"Trace\",\"+1\",\"+2\",\"+3\",\"+4\") \n      .and.whenItem(isBloodPressureHigh).is.truthy  \n      .and.whenItem(obsHistoryOfPregnancyInducedHypertension).is.not.truthy\n      .and.whenItem(pregnancyPeriodInWeeks).greaterThan(20)\n      .and.whenItem(isEssentialHypertensive).is.not.truthy;       \n     \n     complicationsBuilder.addComplication(\"Mild Pre-Eclampsia\")\n      .whenItem(isBloodPressureHigh).is.truthy\n    .and.when.valueInEncounter(\"Has she been having convulsions?\").containsAnswerConceptNameOtherThan('Present')\n      .and.when.valueInEncounter(\"Urine Albumin\")\n      .containsAnyAnswerConceptName(\"Trace\",\"+1\",\"+2\")      \n      .and.whenItem(obsHistoryOfPregnancyInducedHypertension).is.not.truthy\n      .and.whenItem(pregnancyPeriodInWeeks).greaterThan(20)\n      .and.whenItem(isEssentialHypertensive).is.not.truthy;       \n     \n     complicationsBuilder.addComplication(\"Severe Pre-Eclampsia\")\n      .whenItem(isBloodPressureHigh).is.truthy\n      .and.when.valueInEncounter(\"Has she been having convulsions?\").containsAnswerConceptNameOtherThan('Present')  \n      .and.when.valueInEncounter(\"Urine Albumin\")\n      .containsAnyAnswerConceptName(\"+3\",\"+4\")   \n      .and.whenItem(obsHistoryOfPregnancyInducedHypertension).is.not.truthy\n      .and.whenItem(pregnancyPeriodInWeeks).greaterThan(20)\n      .and.whenItem(isEssentialHypertensive).is.not.truthy;       \n     \n  \n       \n       complicationsBuilder.addComplication('Miscarriage')\n       .when.valueInEncounter(\"Pregnancy complications\")\n       .containsAnswerConceptName('Per vaginal bleeding')\n       .and.whenItem(pregnancyPeriodInWeeks).is.lessThanOrEqualTo(20);\n       \n       complicationsBuilder.addComplication('Ante Partum hemorrhage (APH)')\n       .when.valueInEncounter(\"Pregnancy complications\")\n       .containsAnswerConceptName('Per vaginal bleeding')\n       .and.whenItem(pregnancyPeriodInWeeks).is.greaterThan(20);       \n       \n       complicationsBuilder.addComplication(\"Severe Anemia\")\n       .when.valueInEncounter(\"Hb\").is.lessThan(7);       \n       \n       complicationsBuilder.addComplication('Moderate Anemia')\n       .when.valueInEncounter(\"Hb\").is.lessThanOrEqualTo(11)\n       .and.when.valueInEncounter(\"Hb\").is.greaterThanOrEqualTo(7);\n       \n       complicationsBuilder.addComplication('HIV/AIDS Positive')\n       .when.valueInEncounter(\"HIV/AIDS Test\").containsAnswerConceptName('Positive');\n       \n       complicationsBuilder.addComplication('VDRL Positive')\n       .when.valueInEncounter(\"VDRL\").containsAnswerConceptName('Positive');\n       \n       complicationsBuilder.addComplication('Sickling Positive')\n       .when.valueInEncounter(\"Sickling Test\").containsAnswerConceptName('Positive');\n              \n       complicationsBuilder.addComplication('Sickle cell disease SS')\n       .when.valueInEncounter(\"Hb Electrophoresis\").containsAnswerConceptName('SS');\n       \n       complicationsBuilder.addComplication('Malaria')\n       .when.valueInEncounter(\"Paracheck\").containsAnswerConceptName('Positive for PF')\n       .or.when.valueInEncounter(\"Paracheck\").containsAnswerConceptName('Positive for PV')\n       .or.when.valueInEncounter(\"Paracheck\").containsAnswerConceptName('Positive for PF and PV');\n       \n       complicationsBuilder.addComplication('Jaundice Present')\n       .when.valueInEncounter(\"Jaundice (Icterus)\").containsAnswerConceptName('Present');\n       \n       \n       complicationsBuilder.addComplication('Convulsions Present')\n       .when.valueInEncounter(\"Has she been having convulsions?\").containsAnswerConceptName('Present');\n       \n       \n       pregnancyComplications.forEach((complication) => {\n        complicationsBuilder.addComplication(complication)\n            .when.valueInEncounter(\"Pregnancy complications\")\n            .containsAnswerConceptName(complication);\n    });\n    \n    complicationsBuilder.addComplication(\"Pedal Edema Present\")\n        .when.valueInEncounter(\"Pedal Edema\").containsAnswerConceptName(\"Present\");\n\n    complicationsBuilder.addComplication(\"Pallor Present\")\n        .when.valueInEncounter(\"Pallor\").containsAnswerConceptName(\"Present\");\n\n    if (isBelowNormalWeightGain) {\n        referralAdvice.addComplication(\"Irregular weight gain\")\n            .whenItem(isBelowNormalWeightGain).is.truthy;\n    }\n        \n     complicationsBuilder.addComplication(\"Foetal heart sound irregular\")\n        .when.valueInEncounter(\"Foetal Heart Sound\").containsAnswerConceptName(\"Present and Irregular\");\n\n    complicationsBuilder.addComplication(\"Foetal heart sound absent\")\n        .when.valueInEncounter(\"Foetal Heart Sound\").containsAnswerConceptName(\"Absent\");\n\n    complicationsBuilder.addComplication(\"Foetal heart rate irregular\")\n        .when.valueInEncounter(\"Foetal Heart Rate\").is.lessThan(120)\n        .or.when.valueInEncounter(\"Foetal Heart Rate\").is.greaterThan(160);\n\n    complicationsBuilder.addComplication(\"Low Pulse\")\n        .when.valueInEncounter(\"Pulse\").is.lessThan(60);\n\n    complicationsBuilder.addComplication(\"High Pulse\")\n        .when.valueInEncounter(\"Pulse\").is.greaterThan(100);\n\n    complicationsBuilder.addComplication(\"Low Respiratory Rate\")\n        .when.valueInEncounter(\"Respiratory Rate\").is.lessThan(12);\n\n    complicationsBuilder.addComplication(\"High Respiratory Rate\")\n        .when.valueInEncounter(\"Respiratory Rate\").is.greaterThan(20);\n\n    //complicationsBuilder.addComplication(\"High blood sugar\")\n      //  .when.valueInEncounter(\"Blood Sugar\").is.greaterThanOrEqualTo(140);\n\n    complicationsBuilder.addComplication(\"Abnormal Urine Sugar\")\n        .when.valueInEncounter(\"Urine Sugar\").containsAnyAnswerConceptName(\"Trace\", \"+1\", \"+2\", \"+3\", \"+4\");\n\n    complicationsBuilder.addComplication(\"Multiple foetuses\")\n        .when.valueInEncounter(\"USG Scanning Report - Number of foetus\").containsAnyAnswerConceptName(\"Two\", \"Three\", \"More than three\");\n\n    complicationsBuilder.addComplication(\"Abnormal Liquour\")\n        .when.valueInEncounter(\"USG Scanning Report - Liquour\").containsAnyAnswerConceptName(\"Increased\", \"Decreased\");\n\n    complicationsBuilder.addComplication(\"Placenta Previa Present\")\n        .when.valueInEncounter(\"USG Scanning Report - Placenta Previa\").containsAnyAnswerConceptName(\"Previa\");\n    \n    complicationsBuilder.addComplication('Low BMI')\n        .when.valueInEncounter('BMI').lessThan(18.5);\n\n    complicationsBuilder.addComplication('High BMI')\n        .when.valueInEncounter('BMI').greaterThan(24.9);\n\n    [\"Flat\", \"Retracted\"].forEach((nippleState) => {\n        complicationsBuilder.addComplication(`${nippleState} Nipples`)\n            .when.valueInEncounter(\"Breast Examination - Nipple\").containsAnswerConceptName(nippleState);\n\n    });\n       \n    decisions.encounterDecisions.push(complicationsBuilder.getComplications());   \n    \n    const recommendationBuilder = new imports.rulesConfig.complicationsBuilder({\n        programEncounter: programEncounter,\n        complicationsConcept: \"Recommendations\"\n    });\n    \n    recommendationBuilder.addComplication(\"Institutional Delivery\")\n        .when.age.is.lessThan(18)\n        .or.when.age.is.greaterThan(30)\n        .or.when.valueInRegistration(\"Blood group\").containsAnyAnswerConceptName(\"AB-\", \"O-\", \"A-\", \"B-\")\n        .or.when.valueInRegistration(\"Medical history\").containsAnyAnswerConceptName(medicalHistory)\n        .or.when.valueInEnrolment(\"Height\").is.lessThan(145)\n        .or.when.valueInEnrolment(\"Gravida\").is.equals(1)\n        .or.when.valueInEnrolment(\"Gravida\").is.greaterThanOrEqualTo(5)\n        .or.when.valueInEnrolment(\"Age of youngest child\").asAge.is.lessThan(1)\n        .or.when.valueInEnrolment(\"Obstetrics history\").containsAnyAnswerConceptName(pastComplications)\n        .or.when.valueInEnrolment(\"Infertility treatment\").is.yes\n        .or.when.valueInEncounter(\"Systolic\").greaterThanOrEqualTo(140)\n        .or.when.valueInEncounter(\"Diastolic\").greaterThanOrEqualTo(90)\n        .or.when.valueInEncounter(\"Urine Albumin\").containsAnyAnswerConceptName(\"Trace\",\"+1\",\"+2\",\"+3\",\"+4\")\n        .or.when.valueInEncounter(\"Urine Sugar\").containsAnyAnswerConceptName(\"Trace\",\"+1\",\"+2\",\"+3\",\"+4\")\n        .or.when.valueInEncounter(\"USG Scanning Report - Number of foetus\")\n        .containsAnyAnswerConceptName(\"Two\", \"Three\", \"More than three\")\n        .or.when.valueInEncounter(\"USG Scanning Report - Liquour\")\n        .containsAnyAnswerConceptName(\"Increased\", \"Decreased\")\n        .or.when.valueInEncounter(\"USG Scanning Report - Placenta Previa\")\n        .containsAnyAnswerConceptName(\"Previa\")\n        .or.when.valueInEncounter(\"Foetal presentation\").containsAnyAnswerConceptName(\"Transverse\", \"Breech\")\n        .or.when.valueInEncounter(\"VDRL\").containsAnyAnswerConceptName(\"Positive\")\n        .or.when.valueInEncounter(\"HIV/AIDS Test\").containsAnyAnswerConceptName(\"Positive\")\n        .or.when.valueInEncounter(\"HbsAg\").containsAnyAnswerConceptName(\"Positive\")\n        .or.when.valueInEncounter(\"Sickling Test\").containsAnyAnswerConceptName(\"Positive\")\n        .or.when.valueInEncounter(\"Hb Electrophoresis\").containsAnyAnswerConceptName(\"SS\");\n\n    recommendationBuilder.addComplication(\"Institutional ANC\")\n        .when.valueInRegistration(\"Medical history\").containsAnyAnswerConceptName(medicalHistory)\n        .or.when.valueInEnrolment(\"Age of youngest child\").asAge.is.lessThan(1)\n        .or.when.valueInEnrolment(\"Obstetrics history\")\n        .containsAnyAnswerConceptName(\"3 or more than 3 spontaneous abortions\")\n        .or.when.valueInEncounter(\"Systolic\").greaterThanOrEqualTo(140)\n        .or.when.valueInEncounter(\"Diastolic\").greaterThanOrEqualTo(90)\n        .or.when.valueInEncounter(\"Urine Albumin\").containsAnyAnswerConceptName(\"Trace\", \"+1\", \"+2\", \"+3\", \"+4\")\n        .or.when.valueInEncounter(\"Urine Sugar\").containsAnyAnswerConceptName(\"Trace\", \"+1\", \"+2\", \"+3\", \"+4\")\n        .or.when.valueInEncounter(\"USG Scanning Report - Number of foetus\")\n        .containsAnyAnswerConceptName(\"Two\", \"Three\", \"More than three\")\n        .or.when.valueInEncounter(\"USG Scanning Report - Liquour\")\n        .containsAnyAnswerConceptName(\"Increased\", \"Decreased\")\n        .or.when.valueInEncounter(\"USG Scanning Report - Placenta Previa\")\n        .containsAnyAnswerConceptName(\"Previa\")\n        .or.when.valueInEncounter(\"Foetal presentation\").containsAnyAnswerConceptName(\"Transverse\", \"Breech\");\n    \n    decisions.encounterDecisions.push(recommendationBuilder.getComplications());   \n    \n    \n    const reasonsBuilder = new imports.rulesConfig.complicationsBuilder({\n        programEncounter: programEncounter,\n        complicationsConcept: \"Reason(s) for Institutional Delivery\"\n    });\n    \n    reasonsBuilder.addComplication(\"Under age pregnancy\").when.age.is.lessThan(18);\n    reasonsBuilder.addComplication(\"Old age pregnancy\").when.age.is.greaterThan(30);\n    reasonsBuilder.addComplication(\"Rh Negative Blood Group\")\n    .when.valueInRegistration(\"Blood group\").containsAnyAnswerConceptName(\"AB-\", \"O-\", \"A-\", \"B-\");\n    reasonsBuilder.addComplication(\"Medical history\")\n    .when.valueInRegistration(\"Medical history\").containsAnyAnswerConceptName(medicalHistory);\n    reasonsBuilder.addComplication(\"Short Stature\").when.valueInEnrolment(\"Height\").is.lessThan(145);\n    reasonsBuilder.addComplication(\"Primigravida\")\n    .when.valueInEnrolment(\"Gravida\").is.equals(1);\n    reasonsBuilder.addComplication(\"Grand Multipara\")\n    .when.valueInEnrolment(\"Gravida\").is.greaterThanOrEqualTo(5);\n    reasonsBuilder.addComplication(\"Youngest child Less than 1 Year Old\")\n    .when.valueInEnrolment(\"Age of youngest child\").asAge.is.lessThan(1);\n    reasonsBuilder.addComplication(\"Obstetrics history\")\n    .when.valueInEnrolment(\"Obstetrics history\").containsAnyAnswerConceptName(pastComplications);\n    reasonsBuilder.addComplication(\"Infertility treatment\")\n    .when.valueInEnrolment(\"Infertility treatment\").is.yes;\n    reasonsBuilder.addComplication(\"Hypertension\")\n    .when.valueInEncounter(\"Systolic\").greaterThanOrEqualTo(140);\n    reasonsBuilder.addComplication(\"Hypertension\")\n    .when.valueInEncounter(\"Diastolic\").greaterThanOrEqualTo(90);\n    reasonsBuilder.addComplication(\"Abnormal Urine Albumin\")\n    .when.valueInEncounter(\"Urine Albumin\").containsAnyAnswerConceptName(\"Trace\", \"+1\", \"+2\", \"+3\", \"+4\");\n    reasonsBuilder.addComplication(\"Abnormal Urine Sugar\")\n    .when.valueInEncounter(\"Urine Sugar\").containsAnyAnswerConceptName(\"Trace\", \"+1\", \"+2\", \"+3\", \"+4\");\n    reasonsBuilder.addComplication(\"Multiple foetuses\")\n    .when.valueInEncounter(\"USG Scanning Report - Number of foetus\")\n    .containsAnyAnswerConceptName(\"Two\", \"Three\", \"More than three\");\n    reasonsBuilder.addComplication(\"USG Scanning Report - Liquour\")\n    .when.valueInEncounter(\"USG Scanning Report - Liquour\")\n    .containsAnyAnswerConceptName(\"Increased\", \"Decreased\");\n    reasonsBuilder.addComplication(\"USG Scanning Report - Placenta Previa\")\n    .when.valueInEncounter(\"USG Scanning Report - Placenta Previa\")\n    .containsAnyAnswerConceptName(\"Previa\");\n    reasonsBuilder.addComplication(\"Foetal presentation\")\n    .when.valueInEncounter(\"Foetal presentation\")\n    .containsAnyAnswerConceptName(\"Transverse\", \"Breech\");\n    reasonsBuilder.addComplication(\"VDRL Positive\").when.valueInEncounter(\"VDRL\")\n    .containsAnyAnswerConceptName(\"Positive\");\n    reasonsBuilder.addComplication(\"HIV/AIDS Positive\")\n    .when.valueInEncounter(\"HIV/AIDS Test\").containsAnyAnswerConceptName(\"Positive\");\n    reasonsBuilder.addComplication(\"Hepatitis B Positive\").when.valueInEncounter(\"HbsAg\")\n    .containsAnyAnswerConceptName(\"Positive\");\n    reasonsBuilder.addComplication(\"Sickling Positive\")\n    .when.valueInEncounter(\"Sickling Test\").containsAnyAnswerConceptName(\"Positive\");\n    reasonsBuilder.addComplication(\"Hb Electrophoresis\")\n    .when.valueInEncounter(\"Hb Electrophoresis\").containsAnyAnswerConceptName(\"SS\");\n\n    \n     decisions.encounterDecisions.push(reasonsBuilder.getComplications());  \n     \n     const reasonsBuilderANC = new imports.rulesConfig.complicationsBuilder({\n        programEncounter: programEncounter,\n        complicationsConcept: \"Reason(s) for Institutional ANC\"\n    });\n    \n    reasonsBuilderANC.addComplication(\"Medical history\")\n    .when.valueInRegistration(\"Medical history\")\n    .containsAnyAnswerConceptName(medicalHistory);\n    \n    reasonsBuilderANC.addComplication(\"Youngest child Less than 1 Year Old\")\n    .when.valueInEnrolment(\"Age of youngest child\")\n    .asAge.is.lessThan(1);\n    \n    reasonsBuilderANC.addComplication(\"Obstetrics history\")\n    .when.valueInEnrolment(\"Obstetrics history\")\n    .containsAnyAnswerConceptName(\"3 or more than 3 spontaneous abortions\");\n    \n    reasonsBuilderANC.addComplication(\"Hypertension\")\n    .when.valueInEncounter(\"Systolic\").greaterThanOrEqualTo(140);\n    reasonsBuilderANC.addComplication(\"Hypertension\")\n    .when.valueInEncounter(\"Diastolic\")\n    .greaterThanOrEqualTo(90);\n    \n    reasonsBuilderANC.addComplication(\"Abnormal Urine Albumin\")\n    .when.valueInEncounter(\"Urine Albumin\")\n    .containsAnyAnswerConceptName(\"Trace\", \"+1\", \"+2\", \"+3\", \"+4\");\n    \n    reasonsBuilderANC.addComplication(\"Abnormal Urine Sugar\")\n    .when.valueInEncounter(\"Urine Sugar\")\n    .containsAnyAnswerConceptName(\"Trace\", \"+1\", \"+2\", \"+3\", \"+4\");\n    \n    reasonsBuilderANC.addComplication(\"Multiple foetuses\")\n    .when.valueInEncounter(\"USG Scanning Report - Number of foetus\")\n    .containsAnyAnswerConceptName(\"Two\", \"Three\", \"More than three\");\n    \n    reasonsBuilderANC.addComplication(\"USG Scanning Report - Liquour\")\n    .when.valueInEncounter(\"USG Scanning Report - Liquour\")\n    .containsAnyAnswerConceptName(\"Increased\", \"Decreased\");\n    \n    reasonsBuilderANC.addComplication(\"USG Scanning Report - Placenta Previa\")\n    .when.valueInEncounter(\"USG Scanning Report - Placenta Previa\")\n    .containsAnyAnswerConceptName(\"Previa\");\n    \n    reasonsBuilderANC.addComplication(\"Foetal presentation\").\n    when.valueInEncounter(\"Foetal presentation\")\n    .containsAnyAnswerConceptName(\"Transverse\", \"Breech\");\n\n    \n     decisions.encounterDecisions.push(reasonsBuilderANC.getComplications());  \n   \n     \n     const trimester = imports.motherCalculations\n     .currentTrimester(programEncounter.programEnrolment,programEncounter.encounterDateTime);\n\n    const gestationalAgeInWeeks = imports.motherCalculations\n    .gestationalAgeAsOn(programEncounter.encounterDateTime, programEncounter.programEnrolment);\n\n  const treatmentBuilder = new imports.rulesConfig.complicationsBuilder({\n        programEncounter: programEncounter,\n        complicationsConcept: \"Treatment\"\n    });\n    treatmentBuilder.addComplication(\"Doxinate 1 OD/BD for 10 Days\").when\n        .valueInEncounter(\"Pregnancy complications\").containsAnyAnswerConceptName(\"Morning Sickness\", \"Excessive vomiting and inability to consume anything orally in last 24 hours\")\n        .and.whenItem(trimester).lessThan(3);\n\n    treatmentBuilder.addComplication(\"Folic acid (1 OD)\")\n        .whenItem(trimester).equals(1);\n\n    treatmentBuilder.addComplication(\"Ferrous Sulphate (100mg) 1 OD\")\n        .when.valueInEncounter(\"Hb\").greaterThanOrEqualTo(11)\n        .and.whenItem(trimester).equalsOneOf(2, 3);\n\n    treatmentBuilder.addComplication(\"Ferrous Sulphate (200mg) 1 OD\")\n        .when.valueInEncounter(\"Hb\").lessThan(11)\n        .and.whenItem(trimester).equalsOneOf(2, 3);\n\n    treatmentBuilder.addComplication(\"Calcium 1g/day\")\n        .whenItem(trimester).equalsOneOf(2, 3);\n\n    treatmentBuilder.addComplication(\"Aspirin 75mg once a day\")\n        .whenItem(gestationalAgeInWeeks).greaterThanOrEqualTo(13)\n        .and.whenItem(gestationalAgeInWeeks).lessThan(36);\n\n\n     decisions.encounterDecisions.push(treatmentBuilder.getComplications());  \n\n    \n      const referralAdvice = new imports.rulesConfig.complicationsBuilder({\n        programEncounter: programEncounter,\n        complicationsConcept: \"Refer to the hospital for\"\n    });\n    \n    [\"Flat\", \"Retracted\"].forEach((nippleState) => {\n        referralAdvice.addComplication(`${nippleState} Nipples`)\n            .when.valueInEncounter(\"Breast Examination - Nipple\")\n            .containsAnswerConceptName(nippleState);\n    });\n\n    referralAdvice.addComplication(\"Irregular weight gain\")\n        .whenItem(isBelowNormalWeightGain).is.truthy;\n\n    referralAdvice.addComplication(\"Abdominal pain\")\n        .when.valueInEncounter(\"Complaint\")\n        .containsAnswerConceptName(\"Abdominal pain\");\n\n    referralAdvice.addComplication(\"Per vaginal bleeding\")\n        .when.valueInEncounter(\"Complaint\")\n        .containsAnswerConceptName(\"Per vaginal bleeding\");\n\n    referralAdvice.addComplication(\"Fever\")\n        .when.valueInEncounter(\"Complaint\")\n        .containsAnswerConceptName(\"Fever\")\n        .and.valueInEncounter(\"Place of abortion\")\n        .containsAnswerConceptName(\"Home\");\n\n    \n     decisions.encounterDecisions.push(referralAdvice.getComplications());  \n  \n   const referralAdvice1 = new imports.rulesConfig.complicationsBuilder({\n        programEncounter: programEncounter,\n        complicationsConcept: \"Refer to the hospital immediately for\"\n    });\n    \n     referralAdvice1.addComplication(\"TB\")\n        .when.valueInEnrolment(\"Did she complete her TB treatment?\")\n        .containsAnswerConceptName(\"No\")\n        .or.when.valueInEnrolment(\"Has she been taking her TB medication regularly?\")\n        .containsAnswerConceptName(\"No\");\n\n         [\"Excessive vomiting and inability to consume anything orally in last 24 hours\",\n          \"Severe Abdominal Pain\", \"Blurred vision\",\n        \"Decreased Foetal movements\", \"Per vaginal bleeding\", \"PV leaking\"].forEach((complication) => {\n            referralAdvice1.addComplication(complication)\n            .when.valueInEncounter(\"Pregnancy complications\")\n            .containsAnswerConceptName(complication);\n    });\n\nconst isAbsoluteMaxWeightGain = imports.motherCalculations\n            .isAbsoluteMaxWeightGain(programEncounter.programEnrolment, programEncounter);\n\n   referralAdvice1.addComplication(\"Irregular weight gain\")\n        .whenItem(isAbsoluteMaxWeightGain).is.truthy;\n\n    referralAdvice1.addComplication(\"Convulsions\")\n        .when.valueInEncounter(\"Has she been having convulsions?\").containsAnswerConceptName(\"Present\");\n\n    referralAdvice1.addComplication(\"Jaundice\")\n        .when.valueInEncounter(\"Jaundice (Icterus)\").containsAnswerConceptName(\"Present\");\n\n    referralAdvice1.addComplication(\"Foetal movements absent\")\n        .when.valueInEncounter(\"Foetal movements\").containsAnswerConceptName(\"Absent\");\n\n    referralAdvice1.addComplication(\"Foetal movements reduced\")\n        .when.valueInEncounter(\"Foetal movements\").containsAnswerConceptName(\"Reduced\");\n\n    referralAdvice1.addComplication(\"Foetal heart sound irregular\")\n        .when.valueInEncounter(\"Foetal Heart Sound\").containsAnswerConceptName(\"Present and Irregular\");\n\n    referralAdvice1.addComplication(\"Foetal heart sound absent\")\n        .when.valueInEncounter(\"Foetal Heart Sound\").containsAnswerConceptName(\"Absent\");\n\n    referralAdvice1.addComplication(\"Foetal heart rate irregular\")\n        .when.valueInEncounter(\"Foetal Heart Rate\").is.lessThan(120)\n        .or.when.valueInEncounter(\"Foetal Heart Rate\").is.greaterThan(160);\n\n    referralAdvice1.addComplication(\"Hypertension\")\n        .when.valueInEncounter(\"Systolic\").greaterThanOrEqualTo(140)\n        .or.when.valueInEncounter(\"Diastolic\").greaterThanOrEqualTo(90);\n\n    referralAdvice1.addComplication(\"Fever\")\n        .when.valueInEncounter(\"Temperature\").greaterThan(99);\n\n    referralAdvice1.addComplication(\"Abnormal Paracheck\")\n        .when.valueInEncounter(\"Paracheck\").\n        containsAnyAnswerConceptName(\"Positive for PF\", \"Positive for PF and PV\", \"Positive for PV\");\n\n    referralAdvice1.addComplication(\"Abnormal Hb\")\n        .when.valueInEncounter(\"Hb\").lessThan(8);\n\n    //referralAdvice1.addComplication(\"High blood sugar\")\n      //  .when.valueInEncounter(\"Blood Sugar\").greaterThanOrEqualTo(140);\n\n    referralAdvice1.addComplication(\"Abnormal Hb Electrophoresis\")\n        .when.valueInEncounter(\"Hb Electrophoresis\").containsAnyAnswerConceptName(\"SS\");\n\n    referralAdvice1.addComplication(\"Abnormal Urine Albumin\")\n        .when.valueInEncounter(\"Urine Albumin\").containsAnyAnswerConceptName(\"Trace\", \"+1\", \"+2\", \"+3\", \"+4\");\n\n    referralAdvice1.addComplication(\"Abnormal Urine Sugar\")\n        .when.valueInEncounter(\"Urine Sugar\").containsAnyAnswerConceptName(\"Trace\", \"+1\", \"+2\", \"+3\", \"+4\");\n\n    \n    decisions.encounterDecisions.push(referralAdvice1.getComplications());  \n  \n  const adviceBuilder = new imports.rulesConfig.complicationsBuilder({\n        programEncounter: programEncounter,\n        complicationsConcept: \"Missing tests\"\n    });\n    \n     investigations.forEach(([investigation, applicableTrimesters]) => {\n      adviceBuilder.addComplication(investigation)\n         .when.valueInEncounter(investigation).is.notDefined\n         .and.whenItem(applicableTrimesters.indexOf(trimester)).is.greaterThan(-1);\n    });\n    \n    decisions.encounterDecisions.push(adviceBuilder.getComplications());  \n  \n    \n    return decisions;\n};",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ {
+    "name" : "High Risk Conditions",
+    "uuid" : "f34f974b-47b0-424d-ae97-d479c80efa49",
+    "dataType" : "Coded",
+    "answers" : [ {
+      "name" : "Sickle cell disease SS",
+      "uuid" : "705b3ef7-e41a-4954-bc3f-9556eb002f3d",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 39.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Previous Intrauterine Death",
+      "uuid" : "217d0b53-0314-4a64-b710-82fc8fe1bf9c",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 29.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Previous Retained Placenta",
+      "uuid" : "9b9b1c0e-8dd3-4520-8c46-4488fd030fa9",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 22.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Youngest child Less than 1 Year Old",
+      "uuid" : "49350a36-a442-47d2-bf96-2ecbe8fd1cc5",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 19.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Severe Pre-Eclampsia",
+      "uuid" : "e6b24a5c-00f2-46c7-aa67-5b460df5cc81",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 21.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Weight Gain Per Month more than 1.5kg",
+      "uuid" : "4d95ca6e-f2a1-42bd-b52b-44fd8e853d63",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 35.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Chronic Hypertension",
+      "uuid" : "c1071344-deb9-4311-a397-b67b8a4bfecf",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 68.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Previous Threatened Abortion",
+      "uuid" : "43524d76-5f86-485f-b101-3b669ca3431e",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 58.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Previous Neonatal death within first 28 days",
+      "uuid" : "1b4f8d76-8272-4afe-ba1a-c277421d74d4",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 47.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "HIV/AIDS Positive",
+      "uuid" : "45350576-a60b-4431-90da-65604933d97c",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 42.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Previous Abortion(s)",
+      "uuid" : "af7ae32a-dc5f-4ac2-a372-1baa6edf0b53",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 69.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Irregular abdominal girth increase",
+      "uuid" : "701b5f95-0a7a-453e-8bcd-282af4d2dc97",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 71.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "HIV/AIDS",
+      "uuid" : "8425af99-4a07-4d99-97b2-cf955713a560",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 87.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Multiple foetuses",
+      "uuid" : "c99f5dc0-7dc7-410c-bb4a-997666ac312b",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 38.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Intrauterine Growth Retardation",
+      "uuid" : "7e9fed7d-f111-4c87-9412-d8c0f8c162d2",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 114.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "High BMI",
+      "uuid" : "f58ed8eb-1873-4cea-aab2-09cb8b48ada2",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 3.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Puerperal sepsis",
+      "uuid" : "8993ed6a-df82-420e-9da8-fc4eecd6bdc3",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 107.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Foetal heart rate irregular",
+      "uuid" : "dc3ed683-9e61-47be-899f-3c024ef2896f",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 27.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Morning Sickness",
+      "uuid" : "2a2768ac-713b-4f74-85af-4a1fc5a832d1",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 60.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Multiple Births",
+      "uuid" : "e66b41ba-fde0-4d1f-92b8-9e1ed367e0da",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 115.0,
+      "active" : true,
+      "keyValues" : [ ],
+      "media" : [ ]
+    }, {
+      "name" : "Irregular pulse",
+      "uuid" : "d976d3c9-0c39-4faf-8544-f9a2273ea2d5",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 94.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Not Breast-fed within 1 hour of birth",
+      "uuid" : "57f0b3c2-372e-4af7-8a0d-b23228f836db",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 9.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Pulse <100 or > 160 bpm",
+      "uuid" : "e183bd41-eedf-458e-a96f-f818bf128243",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 14.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Foetal movements absent",
+      "uuid" : "8df37793-00cc-4d7e-9f4a-656216661a71",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 25.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Short Stature",
+      "uuid" : "9af1e8e9-f16c-46de-8794-ac302444c63d",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 55.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Hepatitis B Positive",
+      "uuid" : "f9b654e6-628b-4bbf-b3ee-2adc5ab7ea1c",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 98.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Convulsions Present",
+      "uuid" : "b694eefb-6b9d-4123-98a4-1bfc39a7dcb4",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 50.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Previous Post Partum Haemorrhage",
+      "uuid" : "e6759d31-2529-4919-b38b-34cb09188767",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 31.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Jaundice Present",
+      "uuid" : "2facaa69-1164-4847-82bd-a0216e9c1a50",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 51.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Sickle Cell",
+      "uuid" : "37acc93a-8416-4440-ba68-d61ac4ba4c5f",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 52.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Ante Partum hemorrhage (APH)",
+      "uuid" : "bbcab554-15c0-424f-a86f-e12a9ad38a53",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 65.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Primigravida",
+      "uuid" : "5d406c89-a7fc-4ed9-9a85-c2f2f44c66fb",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 5.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Colour of child is Pale or Blue",
+      "uuid" : "73f97a3b-3b71-4b63-81f6-16976ee00aac",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 11.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Low Temperature",
+      "uuid" : "15f3e8c9-b39e-4617-b54e-6a425d8fa9a2",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 15.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Age < 18",
+      "uuid" : "331aee3f-0567-4f75-9efd-722f04606e75",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 7.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Did not cry soon after birth",
+      "uuid" : "603a37fb-1179-477d-a4bc-cb9f2f463f25",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 10.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Old age pregnancy",
+      "uuid" : "8021adee-ad70-4644-97c6-d0804851f8d3",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 105.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Previous Prolonged labour",
+      "uuid" : "24bd28bc-9301-446f-94c0-9264bf3e4cd8",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 26.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Age > 30",
+      "uuid" : "9e66cbbd-3b24-4578-b423-6f3022298be6",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 8.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Foetal heart sound irregular",
+      "uuid" : "36b67c37-5ea2-463b-9eef-47ba95d2c097",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 62.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Reflex Absent",
+      "uuid" : "f2eb3d4c-838d-4f67-9815-cf108e0f05ff",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 12.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Previous Multiple Births",
+      "uuid" : "6f969c17-cc0d-48cf-8ca4-835c02de4e1c",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 88.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Previous Intrapartum Death",
+      "uuid" : "9133804d-26a0-4546-a459-15b2c9ade793",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 99.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Low Pulse",
+      "uuid" : "87f387a4-434c-45ee-9cbd-c17b310469a7",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 111.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Abnormal Paracheck",
+      "uuid" : "a0460e35-d7de-46f2-8c12-783c3ae445b3",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 67.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Low Respiratory Rate",
+      "uuid" : "12c00650-bed6-4242-9c29-4ab7af3676cb",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 109.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Abnormal Liquour",
+      "uuid" : "b52921f9-5450-4a99-a172-02e9b33fbb3d",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 101.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Malaria",
+      "uuid" : "0dee2973-eebe-4699-b676-b770fdd1c411",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 63.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "TB",
+      "uuid" : "ca8a5f57-c409-47ad-8acf-921cdd0fc191",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 106.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Muscle tone Absent/Flexed arms and legs",
+      "uuid" : "8701cdcf-5d23-4b05-8be0-310159758a4d",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 13.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Blurred vision",
+      "uuid" : "2367268e-5988-4db3-a0ca-19438bd5931c",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 93.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Previous Pre Eclampsia/ Eclampsia",
+      "uuid" : "5d0ba446-65b7-4704-b435-6071bf49bcd0",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 53.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Severe Abdominal Pain",
+      "uuid" : "5ba2d201-a120-4f2d-92e6-ca97d48b60b0",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 40.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Grand Multipara",
+      "uuid" : "338d5fb1-0493-4270-8d35-81105c239bbb",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 48.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Per vaginal bleeding",
+      "uuid" : "79865f4d-1946-40b4-a823-28281fc58ba0",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 43.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Young child",
+      "uuid" : "c815f770-0bea-41a2-8169-2ae6ed433a95",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 0.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "High blood sugar",
+      "uuid" : "3eab36f5-13cd-4c7b-9f4d-0ecbdbfdb57e",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 80.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Post abortion complications",
+      "uuid" : "8b757ad9-c413-4efa-af54-974f65e727ac",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 108.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Severe Anemia",
+      "uuid" : "1aff631c-e487-4202-a862-122b45168ac6",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 73.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "VDRL Positive",
+      "uuid" : "06c6b0ea-8ddc-4ed0-ab58-59ed67659571",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 23.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Previous Instrumental Delivery",
+      "uuid" : "4f40dbfb-008f-4b34-856e-d668207cdb7e",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 61.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "PV leaking",
+      "uuid" : "f7a77870-e1c6-47b7-9d72-01eec4adf0f5",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 74.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Abnormal Urine Sugar",
+      "uuid" : "fd175971-d14e-429b-80ea-4700fa748251",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 28.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Abnormal Urine Albumin",
+      "uuid" : "834adde5-0f87-46a7-93eb-779130ba510e",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 54.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Jaundice",
+      "uuid" : "352bb8a4-1569-492f-9a53-14e3b134c104",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 72.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Heart Disease",
+      "uuid" : "89d2230c-7c64-4959-8835-bef4667f8428",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 82.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Abnormal Respiratory Rate",
+      "uuid" : "6b329b8c-04b7-4cdd-90ea-1cd79dbd014b",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 17.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Icterus present",
+      "uuid" : "bab23da4-603e-4f9e-a823-90cc785d8f2f",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 18.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Child born Underweight",
+      "uuid" : "6914364e-6627-46bf-94c4-574d051e7fb4",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 1.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Foetal movements reduced",
+      "uuid" : "2f9afed5-dccb-4a2e-b771-48e88e48c814",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 104.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Irregular Respiratory Rate",
+      "uuid" : "47b79102-ad82-4a61-83cd-e01c4bc73cfe",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 84.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Sickling Positive",
+      "uuid" : "4d2733ec-098a-407b-bfd2-1fd123dbe96d",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 90.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Mild Pre-Eclampsia",
+      "uuid" : "0eb43d96-dfff-4e45-91e8-1a273b419763",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 56.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Weight Gain Per Month less than 1kg",
+      "uuid" : "73ece93d-2065-4ff2-8f87-669142d186e6",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 45.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "High Pulse",
+      "uuid" : "878c246d-4d2d-4a59-bcd4-fed33baa7814",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 112.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Malpresentation",
+      "uuid" : "96ec37c6-9572-4288-9220-2fe806093bde",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 89.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Low BMI",
+      "uuid" : "1faa1253-e4dd-48f1-aea2-c231390f9530",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 2.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Rh Negative Blood Group",
+      "uuid" : "0c3353c3-f4c9-4028-9cd0-bde9a317927b",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 6.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Previous Pre-term labour",
+      "uuid" : "79a37abe-1a1d-41fc-9732-c95b7108553e",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 66.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Convulsions",
+      "uuid" : "ab9596e4-04b6-48f2-9f4d-1c7a2c82dbf8",
+      "dataType" : "Coded",
+      "answers" : [ {
+        "name" : "Absent",
+        "uuid" : "10885638-561a-42b6-8b24-8daa01864c89",
+        "dataType" : "NA",
+        "answers" : [ ],
+        "order" : 2.0,
+        "active" : true,
+        "media" : [ ]
+      }, {
+        "name" : "Present",
+        "uuid" : "57b51d52-981f-4af2-b133-aeffa6d00757",
+        "dataType" : "NA",
+        "answers" : [ ],
+        "order" : 1.0,
+        "active" : true,
+        "media" : [ ]
+      } ],
+      "order" : 92.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Twins",
+      "uuid" : "b5719e3e-db9c-49c1-af0c-3047b1b9c57a",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 4.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Underweight",
+      "uuid" : "41b2db08-99a4-428c-a908-641330858b8a",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 83.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Miscarriage",
+      "uuid" : "fb079822-6338-46fe-9919-112686850e2d",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 76.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Decreased Foetal movements",
+      "uuid" : "d4276c48-2db2-494b-b041-97ffc1146c83",
+      "dataType" : "Coded",
+      "answers" : [ {
+        "name" : "Yes",
+        "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+        "dataType" : "NA",
+        "answers" : [ ],
+        "order" : 1.0,
+        "active" : true,
+        "media" : [ ]
+      }, {
+        "name" : "No",
+        "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+        "dataType" : "NA",
+        "answers" : [ ],
+        "order" : 2.0,
+        "active" : true,
+        "media" : [ ]
+      } ],
+      "order" : 24.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Epilepsy",
+      "uuid" : "a34bf7a0-4d55-41fa-855a-0b8094f369f7",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 78.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Excessive vomiting and inability to consume anything orally in last 24 hours",
+      "uuid" : "7cdba040-6fad-4a43-8306-4a284178cf5d",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 103.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "High Temperature",
+      "uuid" : "eb1ec712-8a28-4511-ba59-4254ad301700",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 16.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Previous Intrauterine Growth Retardation",
+      "uuid" : "6b641e43-b981-4c10-a83c-fafac4654372",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 79.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Renal Disease",
+      "uuid" : "2e86955f-0d81-4e80-a1f4-255b3c186bec",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 64.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Abnormal Hb",
+      "uuid" : "b21e0c2c-7516-4019-85a2-a103e1ef7156",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 102.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Pedal Edema Present",
+      "uuid" : "cc23823e-2f67-4230-98d4-46d326548869",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 46.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Retracted Nipples",
+      "uuid" : "c95ab0ea-46bb-41fb-995a-24a2db3681a2",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 49.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Superimposed Pre-Eclampsia",
+      "uuid" : "f2e5ac5b-b0f8-4088-bc42-397a3885308f",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 91.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Severe headache",
+      "uuid" : "5a6ab8bb-fb14-4747-a66e-3961d718a83e",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 100.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Essential Hypertension",
+      "uuid" : "1f4227dc-a51f-4237-9217-37d4cea92efd",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 20.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Eclampsia",
+      "uuid" : "489f07e5-d9e1-478a-969d-3acad587a15e",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 113.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Irregular fundal height increase",
+      "uuid" : "a88feab9-1f5d-4c83-a215-cd0ba44006f6",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 77.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Difficulty breathing",
+      "uuid" : "fe8c09ce-4135-4092-a693-3ad9bd8edb44",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 32.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Foetal heart sound absent",
+      "uuid" : "b85fce4e-aace-47df-898f-3f574f7587ae",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 37.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Pregnancy induced hypertension",
+      "uuid" : "5a738df9-b09a-4e7d-b683-189a9cdabcad",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 70.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Pallor Present",
+      "uuid" : "57c62191-910f-4d86-bb9d-ab0d9009a04d",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 85.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Previous Still Birth",
+      "uuid" : "937a4d2a-7e38-4ca5-8309-113199d4a27e",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 75.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Foetal Movements Absent",
+      "uuid" : "902df2a5-6403-4cb8-8732-e1e62bfa2364",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 36.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Fever",
+      "uuid" : "0b7f3334-f81e-4d84-a13d-b35011e34456",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 96.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Previous Pregnancy Induced Hypertension",
+      "uuid" : "d8637e17-faef-42fe-b2da-a16cfd7de33f",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 41.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Moderate Anemia",
+      "uuid" : "c67d2c3a-c1c8-4cb7-b76e-b77e02541577",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 97.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Hypertension",
+      "uuid" : "998d1bae-05d8-47b9-89b8-0254829f238f",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 33.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Abnormal Hb Electrophoresis",
+      "uuid" : "e8b6e80e-2952-4ad8-8e8a-bb7299a13c7b",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 57.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Placenta Previa Present",
+      "uuid" : "8afff549-a6b4-4eef-b229-b534be99e8e4",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 86.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Flat Nipples",
+      "uuid" : "9ba87237-ea3f-42f4-9bac-99fa5fcc9abc",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 95.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Diabetes",
+      "uuid" : "674f348f-5075-4c85-8bc2-9edfdee27505",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 59.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Previous Ante Partum Haemorrhage",
+      "uuid" : "36824575-042b-4137-ba3c-ce1145ce81e8",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 81.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "High Respiratory Rate",
+      "uuid" : "6af88b96-93bd-4283-815b-27bc9afae823",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 110.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Irregular weight gain",
+      "uuid" : "ebb0dd6f-4dc8-4ef5-838b-a18eec5ba9c9",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 30.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Previous LSCS/C-section",
+      "uuid" : "de5d06c1-df58-4e0f-949c-52100f769932",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 34.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Under age pregnancy",
+      "uuid" : "edb0ec5e-56dc-4826-b922-52ed2e182fd8",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 44.0,
+      "active" : true,
+      "media" : [ ]
+    } ],
+    "active" : true,
+    "media" : [ ]
+  }, {
+    "name" : "Recommendations",
+    "uuid" : "39c83171-b9ff-441a-9b68-071741ecb618",
+    "dataType" : "Coded",
+    "answers" : [ {
+      "name" : "Institutional Delivery",
+      "uuid" : "c958100c-ad81-4da8-816e-6ad7eceaac87",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 2.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Keep the baby warm by giving mother's skin to skin contact and covering the baby's head, hands and feet with a cap, gloves and socks resp.",
+      "uuid" : "e3e5b7aa-e24c-4f97-98fb-a175a9721e53",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 5.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Keep the baby warm",
+      "uuid" : "d53ccfbc-f5fd-4225-9b28-1736ec6c50b5",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 4.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Give exclusive breast feeding",
+      "uuid" : "d98df61f-00f4-4b06-816e-1e36fca847c2",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 6.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Mother program enrolment with TB recommendation",
+      "uuid" : "4b306479-a861-4bd5-b89a-7098ec75d4bc",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 1.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Institutional ANC",
+      "uuid" : "a72f03ce-c239-4f28-a18b-0e680db20f62",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 3.0,
+      "active" : true,
+      "media" : [ ]
+    } ],
+    "active" : true,
+    "media" : [ ]
+  } ]
+}

@@ -1,0 +1,357 @@
+{
+  "name" : "PW Home Visit",
+  "uuid" : "f8da4ed8-d2ae-48e0-82ea-0dcff67bdaf6",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "5a55d853-906f-468c-98cf-2b1e555f4ab3",
+    "name" : "Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "HB",
+      "uuid" : "8473c737-a065-456e-886a-be82a1044d3a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "HB",
+        "uuid" : "68bc6e51-eb49-4816-b78b-2427bbab8d92",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  let isOverdue = moment().isAfter(moment(programEncounter.maxVisitDateTime));\n  \n  if(isOverdue ){\n    validationErrors.push(\"Overdue forms cannot be filled, please cancel this form so that next due form can be scheduled\");  \n  }\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Weight",
+      "uuid" : "e2461845-98aa-44bf-bdb1-6f824a4951ed",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Weight",
+        "uuid" : "8b187dda-a88e-487a-981a-0e4cb6142904",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 1.0,
+        "highAbsolute" : 100.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Consuming iron tablet?",
+      "uuid" : "2afc91fa-3132-4a36-8e2d-a78af6076baa",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Consuming iron tablet",
+        "uuid" : "0fbd0f94-e4d5-41ee-8b08-d37ef7259950",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Consuming calcium tablet?",
+      "uuid" : "8c9bc3f1-13ea-42ad-b3b1-849a21bec6b5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Consuming calcium tablet",
+        "uuid" : "2e8cee8d-cb8d-4a37-ba87-cad0247ed46c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Could you counsel the women?",
+      "uuid" : "e303905c-f460-4d64-822c-d0c615ae03be",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Could you counsel the women?",
+        "uuid" : "0bb5b642-2e3e-4859-927a-a51bd12a2c1d",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "What are the parameters the women was counseled?",
+      "uuid" : "aef17e79-b063-4422-a46f-57a74bd8e194",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "What are the parameters the women was counseled?",
+        "uuid" : "5226ad04-1151-48d3-b4de-6049f5957dcb",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Weight gain",
+          "uuid" : "ea75b5c6-75d0-4e34-b2cd-c3f2daf93bb5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Routine ANC check up",
+          "uuid" : "0224bf1a-22b9-4bd4-a3a7-808d624f0c5e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Any Medical conditions",
+          "uuid" : "ed54d020-ae60-4518-be47-c4c1a386c231",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Food habits",
+          "uuid" : "d8bce98f-cd6d-463c-9120-dcb014e39911",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Institutional delivery",
+          "uuid" : "643e379a-8f39-4ebd-b515-7f3179d3e465",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Anemia",
+          "uuid" : "5483b558-c36a-439c-80c3-065f7f331a34",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"0bb5b642-2e3e-4859-927a-a51bd12a2c1d\").containsAnswerConceptName(\"8ebbf088-f292-483e-9084-7de919ce67b7\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Could you counsel the women?",
+                "conceptUuid" : "0bb5b642-2e3e-4859-927a-a51bd12a2c1d",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "8ebbf088-f292-483e-9084-7de919ce67b7" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Any Medical conditions, please specify",
+      "uuid" : "cc1200a3-d37a-420d-85a5-94fbf294b54f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Any Medical conditions, please specify",
+        "uuid" : "402599d4-6b2d-475e-a362-686c054050f8",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"5226ad04-1151-48d3-b4de-6049f5957dcb\").containsAnswerConceptName(\"ed54d020-ae60-4518-be47-c4c1a386c231\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "What are the parameters the women was counseled?",
+                "conceptUuid" : "5226ad04-1151-48d3-b4de-6049f5957dcb",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Any Medical conditions" ],
+                "answerConceptUuids" : [ "ed54d020-ae60-4518-be47-c4c1a386c231" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "Is any health worker accompanying you?",
+      "uuid" : "563969aa-6bb0-42b5-ba32-d258db9e99f6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is any health worker accompanying you?",
+        "uuid" : "dc4cfecb-9bbf-4e92-8ee6-2bf42a3b67ce",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "ASHA",
+          "uuid" : "b738ce8f-ada1-4de2-abcc-a602513c75f5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "d1a185a8-c116-4b20-a37f-2deb03ed9654",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AWW",
+          "uuid" : "7b607352-bab1-4fd3-bd6b-5ca748654e03",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "ANM",
+          "uuid" : "6b3f25b4-5b76-4b00-b967-efffa2345d83",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Following adequate diet?",
+      "uuid" : "a9509ee9-1aab-4cb5-905c-30ae02fca51a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Following adequate diet",
+        "uuid" : "19db61c7-ce65-40d5-a53f-f025c9f13f74",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "display" : "Details",
+    "timed" : false
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const _ = imports.lodash;\n    const moment = imports.moment;\n    const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({\n        programEncounter\n    });\n\n\n    function getPWHomeVisitDate(qrtEncounterDate) {\n        const intervalInDays = imports.moment(programEncounter.earliestVisitDateTime).diff(imports.moment(qrtEncounterDate), 'days');\n\n        let daysToAdd = 0;\n        if (intervalInDays <= 15) {\n            daysToAdd = 30;\n        } else if (intervalInDays <= 30) {\n            daysToAdd = 45;\n        } else if (intervalInDays <= 45) {\n            daysToAdd = 60;\n        }\n\n        return daysToAdd !== 0 ? imports.moment(qrtEncounterDate).add(daysToAdd, 'days').toDate() : null;\n    }\n\n\n    function lastfilledEncounter(encounterType) {\n        const lastVisitEncounters = programEncounter.programEnrolment.getEncountersOfType(encounterType, false);\n        const latestEncounter = _.chain(lastVisitEncounters)\n            .filter((encounter) => encounter.encounterDateTime && encounter.voided == false)\n            .maxBy((encounter) => encounter.encounterDateTime)\n            .value();\n        return latestEncounter;\n    }\n \n   \n    const qrtEncounter = lastfilledEncounter('QRT PW');\n    if (qrtEncounter) {\n        const qrtEncounterDate = qrtEncounter ? imports.moment(qrtEncounter.encounterDateTime).toDate() : null;\n        const visitDate = getPWHomeVisitDate(qrtEncounterDate);\n        \n         let isEditScenario = programEncounter.programEnrolment.encounters.some((enc) => \n            enc.encounterType.name === 'PW Home Visit' && \n            enc.voided === false && \n            imports.moment(enc.earliestVisitDateTime).isSame(visitDate, 'day')\n          );\n    \n        if (visitDate && !isEditScenario) {\n            scheduleBuilder\n                .add({\n                    name: \"PW Home Visit\",\n                    encounterType: \"PW Home Visit\",\n                    earliestDate: imports.moment(visitDate).startOf('day').toDate(),\n                    maxDate: imports.moment(visitDate).add(7, 'days').endOf('day').toDate()\n                });\n        }\n    }\n    \n    \n    const isHighRiskCondition = programEncounter.programEnrolment.getObservationReadableValue('High risk condition');\n    const currentlyActiveInProgram = !programEncounter.programEnrolment.programExitDateTime;\n    const supervisorPWEncounter = lastfilledEncounter('Supervisor PW Home Visit');\n    let spwEncounterDate;\n    let spwEncounterMonth;\n    if (supervisorPWEncounter) {\n        spwEncounterDate = imports.moment(supervisorPWEncounter.encounterDateTime).toDate();\n        spwEncounterMonth = imports.moment(spwEncounterDate).month();\n    }      \n    const earliestDate = moment(programEncounter.encounterDateTime);\n    const earliestDateMonth = earliestDate.month();\n\n    let isAlreadyScheduled = programEncounter.programEnrolment.encounters.some((enc) =>\n        enc.encounterType.name == 'Supervisor PW Home Visit' &&\n        enc.voided == false &&\n        moment(enc.earliestVisitDateTime).isSame(earliestDate, 'day')\n    );\n    if((spwEncounterMonth !== earliestDateMonth) && !isAlreadyScheduled && isHighRiskCondition && isHighRiskCondition.length > 0 && currentlyActiveInProgram) {\n        \n        scheduleBuilder.add({\n            name: 'Supervisor PW Home Visit',\n            encounterType: 'Supervisor PW Home Visit',\n            earliestDate: earliestDate.startOf('day').toDate(),\n            maxDate:  earliestDate.endOf('month').toDate()\n        });\n    }\n    return scheduleBuilder.getAll();\n}",
+  "validationRule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const validationResults = [];\n  \n  const isMaxVisitDateTimeGreaterThanToday = moment(programEncounter.maxVisitDateTime).isBefore(moment(), 'day');\n\n  if (isMaxVisitDateTimeGreaterThanToday) {\n    validationResults.push(imports.common.createValidationError(\"You cannot complete an overdue visit. Please cancel this visit.\"));  \n  }\n     // Get schedule date (earliest visit date)\n    const scheduleDate = programEncounter.earliestVisitDateTime;\n  \n    // Check if encounter date is before schedule month\n    const isBeforeScheduleMonth = moment(programEncounter.encounterDateTime)\n        .isBefore(moment(scheduleDate));\n\n    // Check if encounter date is after schedule month\n    const isAfterScheduleMonth = moment(programEncounter.encounterDateTime)\n        .isAfter(moment(scheduleDate).endOf('month'));\n\n    if (isBeforeScheduleMonth) {\n        validationResults.push(imports.common.createValidationError(\"Cannot fill this form before the scheduled date\"));\n    }\n  \n  return validationResults;\n};",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

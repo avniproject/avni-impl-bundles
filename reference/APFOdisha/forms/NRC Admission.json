@@ -1,0 +1,495 @@
+{
+  "name" : "NRC Admission",
+  "uuid" : "dc4d7dc9-3ae8-429a-afe5-bf2a560fca53",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "a089d0ee-dc00-4f65-ae3e-2379d19e7031",
+    "name" : "Admission Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Case Type",
+      "uuid" : "b67670eb-6f18-49e7-834b-7d7a3126313e",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Case Type",
+        "uuid" : "355c7a26-5772-4d87-a776-270007bf0125",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Relapsed",
+          "uuid" : "b2c51de6-1cff-4d8f-a8b1-5de7093fc0f3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Defaulter",
+          "uuid" : "f9ba64b3-021d-411f-aa1c-84ae82f79047",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "New",
+          "uuid" : "e59af894-b576-4030-bc34-c95dec90967e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Referred from higher facitily",
+          "uuid" : "de92b4a0-ee48-48a2-bec1-6a449fbfe783",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const lastEncounter = programEncounter.programEnrolment.lastFulfilledEncounter('NRC Admission');\n  const val = programEncounter.getObservationReadableValue(\"Case Type\");\n  \n  \n  if(!val){\n      if(lastEncounter){ \n         const admissionStatus = lastEncounter.getObservationReadableValue(\"Admission Status\");\n          if(admissionStatus == \"Cured and discharged\"){\n              value = \"Relapsed\";\n          }\n          if(admissionStatus == \"Referred to higher facility\"){\n              value = \"Referred from higher facitily\";\n          }\n          if(admissionStatus == \"Left against Medical Advice\" || admissionStatus == \"Defaulter\" || admissionStatus == \"Admited\"){\n              value = \"Defaulter\"\n          }\n      }\n      else{\n          value = \"New\";\n      }\n  }\n  \n  \n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Admission Status",
+      "uuid" : "e7aeafa9-c816-4969-b4b6-c2a5066cfd6a",
+      "keyValues" : [ {
+        "key" : "ExcludedAnswers",
+        "value" : [ "Left against Medical Advice", "Cured and discharged", "Referred to higher facility", "Defaulter" ]
+      } ],
+      "concept" : {
+        "name" : "Admission Status",
+        "uuid" : "055a54be-f12a-4e32-8fbc-aa2560ab88e4",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Admited",
+          "uuid" : "1cb277a5-6666-4482-9108-c9c7737ec505",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Left against Medical Advice",
+          "uuid" : "27c16abc-c5cb-47f8-bfc8-fbe8482a4e2c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cured and discharged",
+          "uuid" : "386053f2-b495-44b6-95ca-bcd52b0282ef",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Referred to higher facility",
+          "uuid" : "6c32265e-281a-4aba-895a-205c16e5b33f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Defaulter",
+          "uuid" : "f9ba64b3-021d-411f-aa1c-84ae82f79047",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not Admitted",
+          "uuid" : "7e1e4517-2ff0-4868-b52e-ce0c61537e68",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const oldDate = moment(programEncounter.maxVisitDateTime);\n  const currentDate = moment();\n  \n  if (currentDate.isAfter(oldDate)) {\n    validationErrors.push(\"Overdue forms cannot be filled, please cancel this form so that next due form can be scheduled\");\n  }\n\n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Date of admission in NRC",
+      "uuid" : "493f6f75-19e9-4777-9cb6-bc0b8ca15b45",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Date of admission in NRC",
+        "uuid" : "27d927f3-39e2-49d9-8609-bb8aa49a00ec",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n\n  const admitted = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"055a54be-f12a-4e32-8fbc-aa2560ab88e4\").containsAnswerConceptName(\"1cb277a5-6666-4482-9108-c9c7737ec505\").matches();\n\n  visibility = admitted;\n\n  let selectedDate = programEncounter.getObservationValue('27d927f3-39e2-49d9-8609-bb8aa49a00ec');\n\n  if(selectedDate) {\n    \n    const currentDate = moment().startOf('day');\n    selectedDate = moment(selectedDate).startOf('day');\n    if(selectedDate.isAfter(currentDate)){\n        validationErrors.push(\"Invalid date: Future dates are not allowed\");\n    }\n  }\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Height at admission",
+      "uuid" : "caf8b263-be2f-4c48-a47c-0b51ed171378",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Height at admission",
+        "uuid" : "0097b1d2-a803-4fc4-a44d-d35436e9637c",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 40.0,
+        "highAbsolute" : 150.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"055a54be-f12a-4e32-8fbc-aa2560ab88e4\").containsAnswerConceptName(\"1cb277a5-6666-4482-9108-c9c7737ec505\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Admission Status",
+                "conceptUuid" : "055a54be-f12a-4e32-8fbc-aa2560ab88e4",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Admited" ],
+                "answerConceptUuids" : [ "1cb277a5-6666-4482-9108-c9c7737ec505" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Weight at admission",
+      "uuid" : "51bb381a-9847-4cc4-a52b-2a4610b9d7c5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Weight at admission",
+        "uuid" : "9134f243-ede9-4a3a-bbf0-706f5dddbb4d",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 1.0,
+        "highAbsolute" : 50.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"055a54be-f12a-4e32-8fbc-aa2560ab88e4\").containsAnswerConceptName(\"1cb277a5-6666-4482-9108-c9c7737ec505\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Admission Status",
+                "conceptUuid" : "055a54be-f12a-4e32-8fbc-aa2560ab88e4",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Admited" ],
+                "answerConceptUuids" : [ "1cb277a5-6666-4482-9108-c9c7737ec505" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Nutrition status at the time of admission",
+      "uuid" : "008d0572-0d40-43ae-9594-df74264fb024",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Nutrition status-admission",
+        "uuid" : "6dd30e50-f076-4bf2-859a-87fcd5331f0c",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const admitted = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"055a54be-f12a-4e32-8fbc-aa2560ab88e4\").containsAnswerConceptName(\"1cb277a5-6666-4482-9108-c9c7737ec505\").matches();\n  \n  visibility = admitted ;\n\n  if(visibility){\n    const height = programEncounter.getObservationValue(\"Height at admission\");\n    const weight = programEncounter.getObservationValue(\"Weight at admission\");\n    const asOnDate = programEncounter.encounterDateTime;\n    const individual = programEncounter.programEnrolment.individual;\n    const age = programEncounter.programEnrolment.individual.getAgeInMonths();\n\n    const addIfRequired = (decisions, name, value) => {\n        if (value === -0) value = 0;\n        if (value !== undefined) decisions.push({name: name, value: value});\n    };\n\n    const getGradeforZscore = (zScore) => {\n        let grade;\n        if (zScore <= -3) {\n            grade = 3;\n        } else if (zScore > -3 && zScore < -2) {\n            grade = 2;\n        } else if (zScore >= -2) {\n            grade = 1;\n        }\n        return grade;\n    };\n\n    const zScoresForChild = ruleServiceLibraryInterfaceForSharingModules.common.getZScore(individual, asOnDate, weight, height);\n\n    const zScoreGradeStatusMappingWeightForHeight = [\n        [\"SAM\", -3],\n        [\"MAM\", -2],\n        [\"Normal\", 1],\n        [\"Normal\", 2],\n        [\"Normal\", 3],\n        [\"Normal\", Infinity],\n    ];\n\n    const weightForHeightStatus = function (zScore) {\n        let found = _.find(zScoreGradeStatusMappingWeightForHeight, function (currentStatus) {\n            return zScore <= currentStatus[1];\n        });\n        return found && found[0];\n    };\n\n    const wfhStatus = weightForHeightStatus(zScoresForChild.wfh);\n    const wfhGrade = getGradeforZscore(zScoresForChild.wfh);\n\n    value = wfhStatus;\n  }\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : false
+    }, {
+      "name" : "QRT vehcile used for facilitation to medical facility",
+      "uuid" : "b48f6ad1-4810-4570-95f0-cf9eed630125",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "QRT vehcile used for facilitation to medical facility",
+        "uuid" : "6a7e82aa-a87e-4531-aade-66dfed4d56c3",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"055a54be-f12a-4e32-8fbc-aa2560ab88e4\").containsAnswerConceptName(\"1cb277a5-6666-4482-9108-c9c7737ec505\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Admission Status",
+                "conceptUuid" : "055a54be-f12a-4e32-8fbc-aa2560ab88e4",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Admited" ],
+                "answerConceptUuids" : [ "1cb277a5-6666-4482-9108-c9c7737ec505" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Criteria for admission",
+      "uuid" : "06d02db3-c8f6-4381-92ab-d02c44f75955",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Criteria for admission",
+        "uuid" : "0630ec1d-45bb-48fd-ba4a-0cae8ac3329a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Weight for height",
+          "uuid" : "086a8367-37de-4daa-b242-9d83ee814853",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other medical complication",
+          "uuid" : "97381570-77b1-4cb6-8c4b-7509f097d956",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "MUAC",
+          "uuid" : "e42f6cc7-125b-4836-9d04-22a3523ac7d4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"055a54be-f12a-4e32-8fbc-aa2560ab88e4\").containsAnswerConceptName(\"1cb277a5-6666-4482-9108-c9c7737ec505\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Admission Status",
+                "conceptUuid" : "055a54be-f12a-4e32-8fbc-aa2560ab88e4",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Admited" ],
+                "answerConceptUuids" : [ "1cb277a5-6666-4482-9108-c9c7737ec505" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Other medical complication",
+      "uuid" : "841026b3-6f8d-46a4-ac96-a0a4b27bdd41",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other medical complication coded",
+        "uuid" : "2e440961-b073-4d6f-898c-7f6f721d7e92",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Other illness",
+          "uuid" : "cdc4f808-a5f2-4c74-aafb-1bb024322c7e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Diarrhoea",
+          "uuid" : "e8bedb2b-c9fc-4c05-a0fe-a5d58d449824",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Fever",
+          "uuid" : "e52444ff-f514-4dfb-835c-86925d0d8d50",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Vomitting",
+          "uuid" : "45caaf3b-2664-4912-9fb2-9202e067814a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Difficulty in breathing",
+          "uuid" : "4c8b7986-f10e-40dd-816a-9353f77c1359",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"0630ec1d-45bb-48fd-ba4a-0cae8ac3329a\").containsAnswerConceptName(\"97381570-77b1-4cb6-8c4b-7509f097d956\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Criteria for admission",
+                "conceptUuid" : "0630ec1d-45bb-48fd-ba4a-0cae8ac3329a",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other medical complication" ],
+                "answerConceptUuids" : [ "97381570-77b1-4cb6-8c4b-7509f097d956" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Other illness, please specify",
+      "uuid" : "f8f4dff2-5518-48b8-97b3-1473e2d7eb75",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other illness, please specify",
+        "uuid" : "94942a24-6b53-4f71-b7c8-1da9f3ef6219",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"2e440961-b073-4d6f-898c-7f6f721d7e92\").containsAnswerConceptName(\"cdc4f808-a5f2-4c74-aafb-1bb024322c7e\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Other medical complication coded",
+                "conceptUuid" : "2e440961-b073-4d6f-898c-7f6f721d7e92",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other illness" ],
+                "answerConceptUuids" : [ "cdc4f808-a5f2-4c74-aafb-1bb024322c7e" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    } ],
+    "display" : "Admission Details",
+    "timed" : false
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({ params, imports }) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({programEncounter});\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter}).when.valueInEncounter(\"055a54be-f12a-4e32-8fbc-aa2560ab88e4\").containsAnswerConceptName(\"1cb277a5-6666-4482-9108-c9c7737ec505\").matches();\n  \n  if(condition11 ){\n    const earliestDate = moment(programEncounter.encounterDateTime).add(0, 'days').toDate();\n    const maxDate = moment(programEncounter.encounterDateTime).add(30, 'days').endOf('day').toDate();\n    scheduleBuilder.add({name: \"NRC Discharge\", encounterType: \"NRC Discharge\", earliestDate, maxDate});  \n}\n  \n  return scheduleBuilder.getAll();\n};",
+  "validationRule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const validationResults = [];\n\n    // Get schedule date (earliest visit date)\n    const scheduleDate = programEncounter.earliestVisitDateTime;\n\n    // Check if encounter date is before schedule month\n    const isBeforeScheduleMonth = moment(programEncounter.encounterDateTime)\n        .isBefore(moment(scheduleDate).startOf('month'));\n\n    // Check if encounter date is after schedule month\n    const isAfterScheduleMonth = moment(programEncounter.encounterDateTime)\n        .isAfter(moment(scheduleDate).endOf('month'));\n\n\n\n    return validationResults;\n};\n",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

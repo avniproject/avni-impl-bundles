@@ -1,0 +1,53 @@
+{
+  "name" : "Birth (Hospital)",
+  "uuid" : "0e5e429b-b4a7-4573-b797-4527b197c96a",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "13b4e261-176b-4040-bee3-8acb21366590",
+    "name" : "Birth (Hospital)",
+    "displayOrder" : -1.0,
+    "formElements" : [ {
+      "name" : "Gestational age category at birth [H]",
+      "uuid" : "018c744f-d1fd-4c1c-96de-4b3db1c886a6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Gestational age category at birth [H]",
+        "uuid" : "8ba0cdd1-eb1a-47cb-a76a-5c62aeba9be2",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Preterm (<28 weeks) [H]",
+          "uuid" : "bb0911d5-8cf7-4b79-898f-5213649fc793",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Very preterm [H]",
+          "uuid" : "88d788fb-acea-42b0-aff0-d8101d03127b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Term (37 -38 weeks) [H]",
+          "uuid" : "6bad477f-78d4-4bd0-acc5-e990e4c90083",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "Birth (Hospital)",
+    "timed" : false
+  } ],
+  "decisionConcepts" : [ ]
+}

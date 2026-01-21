@@ -1,0 +1,265 @@
+{
+  "name" : "Work Order Registration",
+  "uuid" : "c0ef43fe-087d-4887-9d8d-91a11192812d",
+  "formType" : "IndividualProfile",
+  "formElementGroups" : [ {
+    "uuid" : "f2f101a9-2cb7-47ec-a911-53d99e672fd4",
+    "name" : "Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Year",
+      "uuid" : "814f3c9a-c3f7-4da9-97e4-c541059e649f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Year",
+        "uuid" : "30b35ec3-634a-4534-b156-574ae6d9243d",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "2020",
+          "uuid" : "675ff561-82a3-45d6-b6ef-ec392c06ab2a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2021",
+          "uuid" : "efe82302-8e32-4d11-93db-34c5c6bfc218",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2022",
+          "uuid" : "5df889c3-47dc-4654-b7ac-9590f18bd57a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2023",
+          "uuid" : "e7da9c15-5368-4a1a-8b59-3fbf7fe38ebb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2024",
+          "uuid" : "2cf5e387-f1e2-4313-aa2c-6cfab97f3861",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Image 1 of the site",
+      "uuid" : "4ed87379-3bab-48d8-ab16-c670123f6f71",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Image 1 of the site",
+        "uuid" : "2d9f1f02-d5ba-485b-a2b0-06a68cd28e41",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Silt quantity as per work plan",
+      "uuid" : "96cac1b4-69d1-4fce-be5e-234b5e7f4eb4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Silt to be excavated as per plan",
+        "uuid" : "28158af0-efa7-42a6-b026-6eeb68d84ecc",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "highAbsolute" : 999999.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Image 2 of the site",
+      "uuid" : "940441f9-be4a-4eb9-99b9-01eb9a8f571a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Image 2 of the site",
+        "uuid" : "bcdcc8bb-5308-4348-bf4b-02303ae6a853",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Image 3 of the site",
+      "uuid" : "bc866f1c-68cc-45e5-898b-901d1ba98182",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Image 3 of the site",
+        "uuid" : "c1801d0c-1d84-46f7-9a62-daaf12e22336",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Video of Site (10-20 sec video)",
+      "uuid" : "bfc12f02-8ef7-43dd-829f-f53cbd5e0920",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Video of Site",
+        "uuid" : "9ced444d-b29d-44e5-88e7-11e48cdd4351",
+        "dataType" : "Video",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "NOC/Work order image",
+      "uuid" : "1bbfcc6a-1965-4300-94df-7067c1096b25",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "NOC/Work order image",
+        "uuid" : "be0bc5f7-4e99-43b4-a0e3-e597eea6fa86",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Wells nearby",
+      "uuid" : "87cfe160-97a9-4900-9d32-1c652876c148",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Wells nearby",
+        "uuid" : "15aa3c5f-9cf7-47a7-88df-f2aa3b286cad",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "display" : "Details",
+    "timed" : false
+  }, {
+    "uuid" : "f95db849-a440-4b44-98a5-ca23e8d6ef43",
+    "name" : "Other details",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Please upload image for village institution agreement (for contribution collection )",
+      "uuid" : "2ae27507-c8b0-4b78-bc35-2a2708483eeb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Village institution agreement image (for contribution collection)",
+        "uuid" : "58e31093-9727-4f3d-b293-36bac89b1b2b",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Please upload machine contractor agreement image",
+      "uuid" : "4fd912a5-dafb-41d3-950f-cad595d5405e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Machine contractor agreement image",
+        "uuid" : "5ea2e6d7-3f92-4c51-8612-2b1d8591e22e",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Please upload permission letter image",
+      "uuid" : "54e33711-e0d0-4965-8fce-e496514187d0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Permission letter image",
+        "uuid" : "6d9727d6-9c9e-496e-9d24-732dab34638f",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Please upload pre perspective image",
+      "uuid" : "4cda2227-b7ac-40f0-a5b2-b6b46f4ceeec",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Pre perspective image",
+        "uuid" : "0eaad1ad-28fd-4734-9078-dbc8819994b3",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Please upload site marking image",
+      "uuid" : "8c7501c3-c366-4732-a9bc-e662ddb64bf2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Site marking image",
+        "uuid" : "7472173c-d3a2-425d-bd46-25fb046dfa5e",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "Other details",
+    "timed" : false
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

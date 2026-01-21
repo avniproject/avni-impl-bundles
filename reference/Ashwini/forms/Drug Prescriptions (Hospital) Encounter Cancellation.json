@@ -1,0 +1,7 @@
+{
+  "name" : "Drug Prescriptions (Hospital) Encounter Cancellation",
+  "uuid" : "6133250e-b32f-4671-9f82-d78343a0e451",
+  "formType" : "IndividualEncounterCancellation",
+  "formElementGroups" : [ ],
+  "decisionConcepts" : [ ]
+}

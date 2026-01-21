@@ -15,7 +15,8 @@
         "uuid" : "2978117c-a297-4171-99c6-23c3522ca0f8",
         "dataType" : "Text",
         "answers" : [ ],
-        "active" : true
+        "active" : true,
+        "media" : [ ]
       },
       "displayOrder" : 1.0,
       "type" : "SingleSelect",
@@ -39,7 +40,8 @@
         }, {
           "key" : "highestAddressLevelTypeUUID",
           "value" : "fda77dde-6346-47b9-84e0-25e7f171f55a"
-        } ]
+        } ],
+        "media" : [ ]
       },
       "displayOrder" : 2.0,
       "type" : "SingleSelect",
@@ -60,7 +62,8 @@
         }, {
           "key" : "lowestAddressLevelTypeUUIDs",
           "value" : [ "3410e7a2-cefe-4fc7-94b4-6631656c548c" ]
-        } ]
+        } ],
+        "media" : [ ]
       },
       "displayOrder" : 3.0,
       "type" : "SingleSelect",
@@ -74,7 +77,8 @@
         "uuid" : "115d2ce2-e810-4745-bf9b-d4ac7ffe6565",
         "dataType" : "Numeric",
         "answers" : [ ],
-        "active" : true
+        "active" : true,
+        "media" : [ ]
       },
       "displayOrder" : 4.0,
       "type" : "SingleSelect",
@@ -89,7 +93,8 @@
         "dataType" : "Text",
         "answers" : [ ],
         "active" : true,
-        "keyValues" : [ ]
+        "keyValues" : [ ],
+        "media" : [ ]
       },
       "displayOrder" : 5.0,
       "type" : "SingleSelect",

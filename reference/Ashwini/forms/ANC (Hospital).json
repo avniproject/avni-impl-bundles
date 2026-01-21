@@ -1,0 +1,211 @@
+{
+  "name" : "ANC (Hospital)",
+  "uuid" : "012c56e3-1b88-4110-960c-bbf279bf66cb",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "c1fa3b87-3b71-4d79-ae57-5b537c4d29a9",
+    "name" : "ANC (Hospital)",
+    "displayOrder" : -1.0,
+    "formElements" : [ {
+      "name" : "Weight [H]",
+      "uuid" : "29cccf76-dd14-4253-b68d-be2e47c450a5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Weight [H]",
+        "uuid" : "d1856579-d278-4eb1-becd-7ad69e06a83b",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "ANC, Gravida [H]",
+      "uuid" : "c8f94d9a-be1f-4fdf-8c0a-590f303ce3d1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "ANC, Gravida [H]",
+        "uuid" : "9cb3697c-1573-4047-8d93-8dca30049184",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "ANC, Parity [H]",
+      "uuid" : "a86ed81f-d438-42e7-9b1c-dcdbc8929096",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "ANC, Parity [H]",
+        "uuid" : "969d9210-44a5-4ecd-97b0-7db68732917c",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "ANC, Last Menstrual Period [H]",
+      "uuid" : "bd4a2916-e510-4bc9-87f8-91e2ef4d333a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "ANC, Last Menstrual Period [H]",
+        "uuid" : "8faaf79b-d344-487c-8cd3-5f59dc0f9d2b",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "ANC, Expected Delivery Date [H]",
+      "uuid" : "21d7c2f1-ea8e-4229-8c68-ab66fbb74ed1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "ANC, Expected Delivery Date [H]",
+        "uuid" : "8ef0b3ea-58be-49a4-90ae-2d8458326a00",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "ANC, Blood Transfusion Provided [H]",
+      "uuid" : "9f641a5c-e2fa-465f-89ee-b7bb338ad5b5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "ANC, Blood Transfusion Provided [H]",
+        "uuid" : "dcc64958-e645-42fa-b9cb-d2d627962f42",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "True [H]",
+          "uuid" : "7e9a5117-bc2b-45e4-b92c-cd5796f9d36b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "False [H]",
+          "uuid" : "50b20dc3-41e9-4d9c-b2af-266647214c57",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "ANC, Blood Transfusion Date [H]",
+      "uuid" : "bc611cea-9b2c-4e57-8a6f-84ac703cc5bf",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "ANC, Blood Transfusion Date [H]",
+        "uuid" : "7f8a9066-e1ce-4ea7-b59b-29f72443d0a5",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "ANC, Blood Transfusion Quantity [H]",
+      "uuid" : "bb736e57-3323-450e-b04a-7541a9ac6c59",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "ANC, Blood Transfusion Quantity [H]",
+        "uuid" : "8810d4e9-dd7a-40d1-abd6-abe814f35cae",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Number of living children [H]",
+      "uuid" : "cb356887-fd11-4a44-ab02-ebd54866547e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of living children [H]",
+        "uuid" : "814d1883-1117-4c8b-b3e4-cdffb770169f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "No of abortions [H]",
+      "uuid" : "233d42c2-e35a-4832-902c-4316363c05e3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No of abortions [H]",
+        "uuid" : "fed13bbe-00ae-4d72-bb0a-c90410b0d353",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "ANC, VDRL [H]",
+      "uuid" : "f963c4e2-3318-4e0d-a580-15bd476a84cf",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "ANC, VDRL [H]",
+        "uuid" : "3c54e230-29ca-42c0-bd32-19949222a0fd",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Positive [H]",
+          "uuid" : "4690a920-b757-45f5-a82e-f84f9c7b7017",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Negative [H]",
+          "uuid" : "946dafba-3501-4557-b0da-879600d5036b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "ANC (Hospital)",
+    "timed" : false
+  } ],
+  "decisionConcepts" : [ ]
+}

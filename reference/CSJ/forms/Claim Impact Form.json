@@ -1,0 +1,102 @@
+{
+  "name" : "Claim Impact Form",
+  "uuid" : "5e8197d4-fbf0-42c7-a6c5-2021bc0096cc",
+  "formType" : "Encounter",
+  "formElementGroups" : [ {
+    "uuid" : "d765572e-fc3e-450c-9de6-c155684ac517",
+    "name" : "Impact Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Fill details of the impact of this application",
+      "uuid" : "52af2369-3cc6-44bf-bc06-a09012610d60",
+      "keyValues" : [ {
+        "key" : "repeatable",
+        "value" : true
+      } ],
+      "concept" : {
+        "name" : "IMPACT Details",
+        "uuid" : "45e3f7e6-a1dd-434b-804b-43013a49b2e1",
+        "dataType" : "QuestionGroup",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Outcome",
+      "uuid" : "34ebef3c-5469-4b6b-a9f4-62be3435cd5d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Outcome (voided~266433)",
+        "uuid" : "a98d701b-bcce-4510-ac83-d3cd038ff9ee",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Non compulsory",
+          "uuid" : "8e26ba57-1e8b-4653-bd2e-f3a7ffe3643a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Descriptive",
+          "uuid" : "eaf64c5d-c761-40f1-86ac-d07712758724",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ],
+        "voided" : true
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "52af2369-3cc6-44bf-bc06-a09012610d60",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Outcome",
+      "uuid" : "e1a0cd62-4334-4d48-b88b-4c5c61045106",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Outcome",
+        "uuid" : "c15958b4-edcb-43fa-885b-e90aada97fae",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "52af2369-3cc6-44bf-bc06-a09012610d60",
+      "mandatory" : false
+    }, {
+      "name" : "Monetary Impact",
+      "uuid" : "a76683f4-67fb-4a17-b804-473e16ae4b46",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Monetary Impact Claim",
+        "uuid" : "7e660845-224b-4037-aef2-1d850800cf2b",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "52af2369-3cc6-44bf-bc06-a09012610d60",
+      "mandatory" : false
+    } ],
+    "display" : "Impact Details",
+    "timed" : false
+  } ],
+  "decisionRule" : "\"use strict\";\n({params, imports}) => {\n    const encounter = params.entity;\n    const decisions = params.decisions;\n    const moment = imports.moment;\n    const encounterDecisions = [];\n    \n    const encounterDateForEditCase = encounter.getObservationValue(\"1f4bc226-9e3f-42c9-a332-2d81cd8e64f7\");\n    \n    if (!encounterDateForEditCase) {\n      let encDateTime = moment().format(\"YYYY-MM-DD HH:mm:ss\");\n      \n      if (encDateTime) {\n        encounterDecisions.push({ name: \"Encounter DateTime\", value: encDateTime });\n      }\n      decisions.encounterDecisions.push(...encounterDecisions);\n    }\n    \n    return decisions;\n};",
+  "visitScheduleRule" : "",
+  "validationRule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const validationResults = [];\n  const moment = imports.moment;\n  \n  const encounterDateForEditCase = encounter.getObservationValue(\"1f4bc226-9e3f-42c9-a332-2d81cd8e64f7\");\n  const encounterDate = encounter.encounterDateTime;\n\n  if (!encounterDateForEditCase) {\n    if (encounterDate) {\n      const today = moment().startOf('day');\n      const encDate = moment(encounterDate).startOf('day');\n\n      if (!encDate.isSame(today, 'day')) {\n        validationResults.push(\n          imports.common.createValidationError(\"Encounter Date should be today's date.\")\n        );\n      }\n    }\n  } else {\n    const encDateEdit = moment(encounterDate).startOf('day');\n    const encDateOriginal = moment(encounterDateForEditCase).startOf('day');\n\n    if (!encDateEdit.isSame(encDateOriginal, 'day')) {\n      validationResults.push(\n        imports.common.createValidationError(\"Encounter Date cannot be changed.\")\n      );\n    }\n  }\n  return validationResults;\n};",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

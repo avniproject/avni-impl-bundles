@@ -1,0 +1,985 @@
+{
+  "name" : "FP monthly assessment Encounter",
+  "uuid" : "7e3d5bdd-d748-4585-911a-4b89abf9c5a0",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "d2664ec5-427b-4017-acb5-460a39eddd76",
+    "name" : "Method of sterilization",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "What method of sterilization are you using currently",
+      "uuid" : "90a4afac-4e1e-4b7b-8807-262c3479744c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "What method of sterilization are you using currently",
+        "uuid" : "960557d4-f31d-4424-bd2a-ed7c9422660a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "OCP",
+          "uuid" : "a4cf2778-446b-441b-8f4c-b34b6b87124e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Antara",
+          "uuid" : "ac861eb8-e4f3-404a-8c5d-7027f63038a7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Copper-T",
+          "uuid" : "3d51f411-b1a3-478d-a5e8-623cc43d4b4f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Chaaya",
+          "uuid" : "f925d988-ced6-48a3-a144-284c7e7960da",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Condom",
+          "uuid" : "8f975508-8179-450b-9a27-d11b7818677b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "display" : "Method of sterilization",
+    "timed" : false
+  }, {
+    "uuid" : "fd03011a-3d7e-4cc0-9c00-6baf70c659fd",
+    "name" : "Copper-T",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Have you had any side effects",
+      "uuid" : "870cd97c-6cf7-4e96-b120-f9e81b1ce644",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Have you had any side effects",
+        "uuid" : "333cfc1c-c85d-4768-b294-8bb4970b56ed",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "What side effects did you have",
+      "uuid" : "1a6175c4-312b-4cf7-9dcc-293e5794f214",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "What side effects did you have",
+        "uuid" : "07d909bd-8510-4101-a977-86b8c2d9ced7",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "LBA",
+          "uuid" : "7f803504-d754-4c28-9ed2-f0df88275a32",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Menstrual irregularities",
+          "uuid" : "4858f10b-dc95-4abd-ad20-3928c5e21208",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Others",
+          "uuid" : "118fa43e-525f-41d6-ad3f-98a4857e2d3e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Bleeding PV",
+          "uuid" : "fd28b035-519a-47b8-9c63-3d396d8dee9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Dysmenorrheae",
+          "uuid" : "463ba74b-fdf9-4406-b551-fa9ef418eee2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\nconst programEncounter = params.entity;\nconst formElement = params.formElement;\nconst statusBuilder = new\nimports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\nstatusBuilder.show().when.valueInEncounter('Have you had any side effects').containsAnswerConceptName('Yes');\nreturn statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Specify others",
+      "uuid" : "7330ad79-0b19-4ad6-9a47-65e72c5adbd6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Specify others",
+        "uuid" : "39facae2-de63-4b3e-b0f1-ef32ce74afc2",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('What side effects did you have').containsAnswerConceptName(\"Others\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Was the CuT removed",
+      "uuid" : "15508706-f941-4676-9316-2f90aac2111d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Was the CuT removed",
+        "uuid" : "01001a8c-98c9-4a6b-8b53-35f3148ec729",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "\n",
+      "mandatory" : true
+    }, {
+      "name" : "Date of removal",
+      "uuid" : "8e55a137-d83e-43b3-bb6b-20ec6c828619",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "Calendar"
+      } ],
+      "concept" : {
+        "name" : "Date of removal",
+        "uuid" : "ea8a2d4a-d256-42b0-a490-4e0a082d8413",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  statusBuilder.show().when.valueInEncounter('Was the CuT removed').containsAnswerConceptName(\"Yes\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Reasons for removal",
+      "uuid" : "e1244f14-e543-4ffc-98fd-d7601480e0ac",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Reasons for removal",
+        "uuid" : "3005733a-9baa-4646-9e16-dcd0669ac37c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Others",
+          "uuid" : "118fa43e-525f-41d6-ad3f-98a4857e2d3e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Underwent permanent sterilization",
+          "uuid" : "b5fc9da5-1e70-4200-98a6-e812f8de2f41",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Desire for a child",
+          "uuid" : "3e5e9e4a-0e32-4e80-a868-be6c4ba9f539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Due to side effects",
+          "uuid" : "2c5b965f-d792-4b64-9c85-6a05073cb2c5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  statusBuilder.show().when.valueInEncounter('Was the CuT removed').containsAnswerConceptName(\"Yes\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Others",
+      "uuid" : "06c2d106-d5ba-48d1-9ae2-6186ee12d5f8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Reasons for removal_others",
+        "uuid" : "e78e39b4-b80f-4183-8ec0-d16be8bfc0fc",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Reasons for removal').containsAnswerConceptName(\"Others\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "What side effects did you have",
+      "uuid" : "fca710db-90a0-4a5f-9a3d-2de0b48e1fff",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "What side effects did you have",
+        "uuid" : "07d909bd-8510-4101-a977-86b8c2d9ced7",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "LBA",
+          "uuid" : "7f803504-d754-4c28-9ed2-f0df88275a32",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Menstrual irregularities",
+          "uuid" : "4858f10b-dc95-4abd-ad20-3928c5e21208",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Others",
+          "uuid" : "118fa43e-525f-41d6-ad3f-98a4857e2d3e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Bleeding PV",
+          "uuid" : "fd28b035-519a-47b8-9c63-3d396d8dee9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Dysmenorrheae",
+          "uuid" : "463ba74b-fdf9-4406-b551-fa9ef418eee2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const formElementGroup = params.formElementGroup;\n    const programEncounter = params.entity;\n    \n    const methodValue = programEncounter.getObservationReadableValue('What method of sterilization are you using currently');\n    let visibility = _.isEqual(methodValue, 'Copper-T');\n     \n    return formElementGroup.formElements.map(({uuid}) => {\n        return new imports.rulesConfig.FormElementStatus(uuid, visibility, null);\n    });\n};",
+    "display" : "Copper-T",
+    "timed" : false
+  }, {
+    "uuid" : "28067256-5601-4f50-b261-b108784fb5f8",
+    "name" : "Condom",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Are you using condom regularly",
+      "uuid" : "6ae16664-3594-474f-b33b-01168f908ef4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Are you using condom regularly",
+        "uuid" : "ff177978-b917-4ece-a8d2-8e3a99fb5836",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "What are the reasons for not using condom regularly",
+      "uuid" : "5771ef24-54b4-401d-8dc4-e7e749026ce9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "What are the reasons for not using condom regularly",
+        "uuid" : "c20437b6-e43b-4ac9-93d4-187dc4a41100",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Discomfort",
+          "uuid" : "2a7753a0-5a4c-4fb7-a12f-f1fd112ec851",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Non availability",
+          "uuid" : "d233b75e-0745-446c-802f-38227e6bba65",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Others",
+          "uuid" : "118fa43e-525f-41d6-ad3f-98a4857e2d3e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\nconst programEncounter = params.entity;\nconst formElement = params.formElement;\nconst statusBuilder = new\nimports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\nstatusBuilder.show().when.valueInEncounter('Are you using condom regularly').containsAnswerConceptName('No');\nreturn statusBuilder.build();\n};",
+      "mandatory" : true
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const formElementGroup = params.formElementGroup;\n    const programEncounter = params.entity;\n    \n    const methodValue = programEncounter.getObservationReadableValue('What method of sterilization are you using currently');\n    let visibility = _.isEqual(methodValue, 'Condom');\n     \n    return formElementGroup.formElements.map(({uuid}) => {\n        return new imports.rulesConfig.FormElementStatus(uuid, visibility, null);\n    });\n};",
+    "display" : "Condom",
+    "timed" : false
+  }, {
+    "uuid" : "a216f2ed-0863-4ebc-8562-930275f77bf7",
+    "name" : "OCP",
+    "displayOrder" : 4.0,
+    "formElements" : [ {
+      "name" : "Are you using OCP regularly",
+      "uuid" : "a9e69bf5-6098-48b3-8d4f-120290a40a86",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Are you using OCP regularly",
+        "uuid" : "be41ef52-17c6-4f30-b74e-085f76ec2d20",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "What are the reasons for not using OCP regularly",
+      "uuid" : "5fbf6ef3-79d4-4417-94e6-fdc31b9c4d87",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "What are the reasons for not using OCP regularly",
+        "uuid" : "e09c6bf2-7d8c-4708-b735-4e48e6836d2f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Non availability",
+          "uuid" : "d233b75e-0745-446c-802f-38227e6bba65",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Others",
+          "uuid" : "118fa43e-525f-41d6-ad3f-98a4857e2d3e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Menstrual irregularities",
+          "uuid" : "4858f10b-dc95-4abd-ad20-3928c5e21208",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\nconst programEncounter = params.entity;\nconst formElement = params.formElement;\nconst statusBuilder = new\nimports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\nstatusBuilder.show().when.valueInEncounter('Are you using OCP regularly').containsAnswerConceptName('No');\nreturn statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Others",
+      "uuid" : "2db12840-c70b-485a-a606-83b3ebcde9db",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Not using OCP Others",
+        "uuid" : "eb0135af-54d4-4192-b850-7d6114674c0e",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('What are the reasons for not using OCP regularly').containsAnswerConceptName(\"Others\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const formElementGroup = params.formElementGroup;\n    const programEncounter = params.entity;\n    \n    const methodValue = programEncounter.getObservationReadableValue('What method of sterilization are you using currently');\n    let visibility = _.isEqual(methodValue, 'OCP');\n     \n    return formElementGroup.formElements.map(({uuid}) => {\n        return new imports.rulesConfig.FormElementStatus(uuid, visibility, null);\n    });\n};",
+    "display" : "OCP",
+    "timed" : false
+  }, {
+    "uuid" : "f5aee45f-e771-4cec-a978-0c01dd588912",
+    "name" : "Chaaya",
+    "displayOrder" : 5.0,
+    "formElements" : [ {
+      "name" : "Date of first administration of chaaya tablet",
+      "uuid" : "4d1facd5-eae9-40a9-a993-140e1b46ceeb",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "Calendar"
+      } ],
+      "concept" : {
+        "name" : "Date of first administration of chaaya tablet",
+        "uuid" : "5eff0b23-2ca5-4745-ae2a-45494db9ba29",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new \n  imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  statusBuilder.show().when.latestValueInPreviousEncounters('Date of first administration of chaaya tablet').is.notDefined;\n  \nreturn statusBuilder.build();\n}",
+      "mandatory" : true
+    }, {
+      "name" : "Sheduled date for next administration for first three months",
+      "uuid" : "ca6efecc-43c0-41d4-8481-0cecd3e9f485",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "Calendar"
+      }, {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Sheduled date for next administration for first three months",
+        "uuid" : "f0162222-028f-4b80-8274-66d053ce5d1c",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "\"use strict\";\n({params, imports}) => {\n   const programEncounter = params.entity;\n   const formElement = params.formElement;  \n   const format = \"DD-MMM-YYYY\";\n   const chaayaFirstDate = programEncounter.getObservationValue('Date of first administration of chaaya tablet');\n    //console.log('antaraFirstDate',antaraFirstDate);\n    \n    let value = imports.moment(chaayaFirstDate).add(3, 'days').format(format);\n    let visitDateOnThreeMonths = imports.moment(chaayaFirstDate).add(3, 'months').format(format);\n    let visitDate = programEncounter.encounterDateTime;\n    \n    let visibility = false;\n        \n    if(imports.moment(visitDate).isSameOrBefore(visitDateOnThreeMonths))\n      visibility = true;\n        \n    //console.log('value date', value);\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility,value );\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Sheduled date for next administration after first three months",
+      "uuid" : "c4873c34-dc40-4f3a-9493-d37465c66a50",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "Calendar"
+      }, {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Sheduled date for next administration after first three months",
+        "uuid" : "0f6b3194-dd52-4ee8-b5b6-601166f58420",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "\"use strict\";\n({params, imports}) => {\n   const programEncounter = params.entity;\n   const formElement = params.formElement;  \n   const format = \"DD-MMM-YYYY\";\n   const chaayaFirstDate = programEncounter.getObservationValue('Date of first administration of chaaya tablet');\n    //console.log('antaraFirstDate',antaraFirstDate);\n    \n    let value = imports.moment(chaayaFirstDate).add(7, 'days').format(format);\n    \n    let visitDateOnThreeMonths = imports.moment(chaayaFirstDate).add(3, 'months').format(format);\n    let visitDate = programEncounter.encounterDateTime;\n    \n    let visibility = false;\n        \n    if(imports.moment(visitDate).isSameOrAfter(visitDateOnThreeMonths))\n      visibility = true;\n    //console.log('value date', value);\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility,value );\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Are you using chaaya regularly",
+      "uuid" : "c50642d1-9e22-4125-a62e-acfa22261c80",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Are you using chaaya regularly",
+        "uuid" : "b4e0707b-5ecf-473f-8b36-0438217096db",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Source of Availability",
+      "uuid" : "62e1960d-95ef-4f93-b135-9259a9beee45",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Source of Availability",
+        "uuid" : "c85724cb-0287-40ef-a5d4-b0b8bdbb345c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Health Animator",
+          "uuid" : "e55b7ed8-895a-49ed-a2ae-e8a83d83a2c8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "ASHA",
+          "uuid" : "40a3e839-f404-4339-913b-0fca1d733a75",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "VHN",
+          "uuid" : "a4957ed6-94a3-4ff2-9d57-df3d9cc9f3a3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Do you have any side effects",
+      "uuid" : "7d443695-2f9d-421c-a4b8-9b8a9aa4fa11",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Do you have any side effects",
+        "uuid" : "c95c87e0-2d9d-4ada-a94f-a8b4921405f8",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No side effect",
+          "uuid" : "90ee3e27-e780-42ce-a481-722cb01261de",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mood changes",
+          "uuid" : "7db2963b-6e2e-4fb5-870a-906615c92203",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Menstrual irregularity",
+          "uuid" : "56355b3a-6b9c-4b58-9523-7d81fa11b080",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Others",
+          "uuid" : "118fa43e-525f-41d6-ad3f-98a4857e2d3e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Specify others",
+      "uuid" : "944d8652-a85a-45bb-96d8-9c986e11cc26",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Others_FP",
+        "uuid" : "55b3bef3-ef3f-4078-a957-5653a9c69175",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Do you have any side effects').containsAnswerConceptName(\"Others\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const formElementGroup = params.formElementGroup;\n    const programEncounter = params.entity;\n    \n    const methodValue = programEncounter.getObservationReadableValue('What method of sterilization are you using currently');\n    let visibility = _.isEqual(methodValue, 'Chaaya');\n     \n    return formElementGroup.formElements.map(({uuid}) => {\n        return new imports.rulesConfig.FormElementStatus(uuid, visibility, null);\n    });\n};",
+    "display" : "Chaaya",
+    "timed" : false
+  }, {
+    "uuid" : "88fa587b-2a74-41a4-a756-34232480bd06",
+    "name" : "Chaaya counselling point",
+    "displayOrder" : 6.0,
+    "formElements" : [ {
+      "name" : "Chaaya Counselling Point",
+      "uuid" : "a6d8c101-0c81-4b00-8e20-0af2f4c4a6f1",
+      "keyValues" : [ {
+        "key" : "ExcludedAnswers",
+        "value" : [ "Counselling point" ]
+      } ],
+      "concept" : {
+        "name" : "Chhaya Counselling Point",
+        "uuid" : "db577d71-680e-43e0-8730-a40138663cc6",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Counselling point",
+          "uuid" : "c2a0c0de-2625-48ed-bca7-81d912c9b348",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const formElementGroup = params.formElementGroup;\n    const programEncounter = params.entity;\n    \n    const methodValue = programEncounter.getObservationReadableValue('What method of sterilization are you using currently');\n    let visibility = _.isEqual(methodValue, 'Chaaya');\n     \n    return formElementGroup.formElements.map(({uuid}) => {\n        return new imports.rulesConfig.FormElementStatus(uuid, visibility, null);\n    });\n};",
+    "display" : "Chaaya counselling point",
+    "timed" : false
+  }, {
+    "uuid" : "b55c2fef-b9fd-4db6-9830-7fd9fdb0ea08",
+    "name" : "Antara",
+    "displayOrder" : 7.0,
+    "formElements" : [ {
+      "name" : "Date of first administration of Antara Inj",
+      "uuid" : "7555a154-c09a-48d3-9823-ded7e771a1da",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "Calendar"
+      } ],
+      "concept" : {
+        "name" : "Date of first administration of Antara Inj",
+        "uuid" : "b116fea6-ee88-4d85-b9b0-fca7a90c71de",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new \n  imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  statusBuilder.show().when.latestValueInPreviousEncounters('Date of first administration of Antara Inj').is.notDefined;\n  \nreturn statusBuilder.build();\n}",
+      "mandatory" : true
+    }, {
+      "name" : "Sheduled date for next administration of Antara Inj",
+      "uuid" : "40ccabe9-363b-48bf-8188-9ff563e16514",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "Calendar"
+      } ],
+      "concept" : {
+        "name" : "Sheduled date for next administration",
+        "uuid" : "f56af6f7-493d-4c60-91a4-fa865d4342fe",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "\"use strict\";\n({params, imports}) => {\n   const programEncounter = params.entity;\n   const formElement = params.formElement;  \n   const format = \"DD-MMM-YYYY\";\n   const antaraFirstDate = programEncounter.getObservationValue('Date of first administration of Antara Inj');\n    console.log('antaraFirstDate',antaraFirstDate);\n    \n    let value = imports.moment(antaraFirstDate).add(90, 'days').format(format);\n        \n    //console.log('value date', value);\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, true,value );\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Sheduled date for next administration for Antara Inj",
+      "uuid" : "50a982b5-c227-420a-97fb-8a935230a18b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Sheduled date for next administration for Antara Inj",
+        "uuid" : "e87bb36f-bb9b-49e7-a7ed-aa62bde0a3bb",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "\"use strict\";\n({params, imports}) => {\n   const programEncounter = params.entity;\n   const formElement = params.formElement;  \n    \n    const antaraFirstDate = programEncounter.getObservationValue('Date of first administration of Antara Inj');\n    console.log('antaraFirstDate',antaraFirstDate);\n    \n    let value = imports.moment(antaraFirstDate).add(90, 'days').toDate();\n    \n    console.log('value',value);\n    return new FormElementStatus(formElement.uuid, true, _.toString(value));\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Source of Availability",
+      "uuid" : "4b1064e8-6978-4642-bef0-2a8a376bb757",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Antara Source of Availability",
+        "uuid" : "c5aa20ac-5b87-4c0f-b596-069a761fc299",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Health Animator",
+          "uuid" : "e55b7ed8-895a-49ed-a2ae-e8a83d83a2c8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "VHN",
+          "uuid" : "a4957ed6-94a3-4ff2-9d57-df3d9cc9f3a3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "ASHA",
+          "uuid" : "40a3e839-f404-4339-913b-0fca1d733a75",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Do you have any side effects",
+      "uuid" : "550bf0e2-aaee-42d9-9701-37c5cb370b5a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Antara Do you have any side effects",
+        "uuid" : "cc96b6fd-fe59-42d7-b4ec-d7ad59e6bfc1",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Mood changes",
+          "uuid" : "7db2963b-6e2e-4fb5-870a-906615c92203",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Weight gain",
+          "uuid" : "d26b2552-a441-4aa5-8122-a67152eddbf3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Menstrual irregularity",
+          "uuid" : "56355b3a-6b9c-4b58-9523-7d81fa11b080",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No side effect",
+          "uuid" : "90ee3e27-e780-42ce-a481-722cb01261de",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Headache",
+          "uuid" : "4085f165-ccb8-409b-9d6e-ea7755cf123e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const formElementGroup = params.formElementGroup;\n    const programEncounter = params.entity;\n    \n    const methodValue = programEncounter.getObservationReadableValue('What method of sterilization are you using currently');\n    let visibility = _.isEqual(methodValue, 'Antara');\n     \n    return formElementGroup.formElements.map(({uuid}) => {\n        return new imports.rulesConfig.FormElementStatus(uuid, visibility, null);\n    });\n};",
+    "display" : "Antara",
+    "timed" : false
+  }, {
+    "uuid" : "1d8f07c0-71a8-45e3-812c-5693b3daca1c",
+    "name" : "Antara Counselling Point",
+    "displayOrder" : 8.0,
+    "formElements" : [ {
+      "name" : "Antara counselling point",
+      "uuid" : "94a7fd71-a679-436a-87bf-720a32a4664e",
+      "keyValues" : [ {
+        "key" : "ExcludedAnswers",
+        "value" : [ "Counselling point" ]
+      } ],
+      "concept" : {
+        "name" : "Antara counselling point",
+        "uuid" : "54c78033-fcd0-421e-8aea-5e3c3e8780bc",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Counselling point",
+          "uuid" : "c2a0c0de-2625-48ed-bca7-81d912c9b348",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const formElementGroup = params.formElementGroup;\n    const programEncounter = params.entity;\n    \n    const methodValue = programEncounter.getObservationReadableValue('What method of sterilization are you using currently');\n    let visibility = _.isEqual(methodValue, 'Antara');\n     \n    return formElementGroup.formElements.map(({uuid}) => {\n        return new imports.rulesConfig.FormElementStatus(uuid, visibility, null);\n    });\n};",
+    "display" : "Antara Counselling Point",
+    "timed" : false
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "//SAMPLE RULE EXAMPLE\n\"use strict\";\n({ params, imports }) => {\n  const programEncounter = params.entity;\n  const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({\n    programEncounter\n  });\n  //add new visit schedule object to scheduleBuilder\n  let visitDate = imports.moment(programEncounter.encounterDateTime).add(30, 'days').toDate();\n  \n  scheduleBuilder\n    .add({\n      name: \"FP monthly assessment\",\n      encounterType: \"FP monthly assessment\",\n      earliestDate: visitDate,\n      maxDate: imports.moment(visitDate).add(20, 'days').toDate()\n    });\n  \n  return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

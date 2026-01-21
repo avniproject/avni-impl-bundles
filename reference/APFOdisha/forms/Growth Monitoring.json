@@ -1,0 +1,1133 @@
+{
+  "name" : "Growth Monitoring",
+  "uuid" : "847c45ab-9b06-470a-9229-7e848ad597b6",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "826b9bb1-9788-4c8d-8b10-72dd742dbe26",
+    "name" : "Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Weight",
+      "uuid" : "6b5057b1-c623-40af-8e8f-efbc6d622430",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Weight",
+        "uuid" : "8b187dda-a88e-487a-981a-0e4cb6142904",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 1.0,
+        "highAbsolute" : 100.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"8b187dda-a88e-487a-981a-0e4cb6142904\").greaterThan(50).matches();\n  \n  if(condition11 ){\n    validationErrors.push(\"Sould be 50, or less than 50\");  \n}\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "details" : {
+            "validationError" : "Sould be 50, or less than 50"
+          },
+          "actionType" : "validationError"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Weight",
+                "conceptUuid" : "8b187dda-a88e-487a-981a-0e4cb6142904",
+                "conceptDataType" : "Numeric"
+              },
+              "rhs" : {
+                "type" : "value",
+                "value" : 50
+              },
+              "operator" : "greaterThan"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Height in previous month",
+      "uuid" : "7635467c-f434-48be-bb02-a4162acccdb6",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Height in previous month",
+        "uuid" : "55045909-161c-4f5e-a9a8-18eae72afdf5",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 40.0,
+        "highAbsolute" : 150.0,
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  let encounterList = programEncounter.programEnrolment.encounters\n    .filter(enc => enc.encounterType.name === 'Growth Monitoring' && enc.voided == false && enc.cancelDateTime == null);\n  \n  encounterList = _.orderBy(encounterList, ['earliestVisitDateTime'], ['asc']);\n  \n  const currentIndex = _.findIndex(encounterList, enc => enc.uuid === programEncounter.uuid);\n  visibility = currentIndex > 0;\n  \n  if (visibility) {\n    encounterList = encounterList.filter(enc => enc.encounterDateTime != null);\n\n    const prevEncounter = encounterList[currentIndex - 1];\n    if (prevEncounter && prevEncounter.encounterDateTime) {\n\n      const prevValue = prevEncounter.getObservationValue('346902c4-9938-4ba5-90d1-587f36f1ab92');\n\n      if (prevValue) {\n        value = prevValue;\n      } else {\n        visibility = false;\n      }\n    } else {\n      visibility = false;\n    }\n  }\n  \n  return new imports.rulesConfig.FormElementStatus(\n    formElement.uuid,\n    visibility,\n    value,\n    answersToSkip,\n    validationErrors\n  );\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Height in current month",
+      "uuid" : "1d9ca058-6b4f-4d9f-924f-e85ca100824e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Height",
+        "uuid" : "346902c4-9938-4ba5-90d1-587f36f1ab92",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 40.0,
+        "highAbsolute" : 150.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n 'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n\n    let obs = programEncounter.programEnrolment.findLatestObservationFromPreviousEncounters('346902c4-9938-4ba5-90d1-587f36f1ab92',programEncounter);\n        \n    let currentObs = programEncounter.getObservationValue('346902c4-9938-4ba5-90d1-587f36f1ab92');\n\n    if (obs && obs != undefined) {\n        let prevValue = obs.getReadableValue();\n        if(prevValue > currentObs){\n            validationErrors.push(\"Height in current growth monitoring session cant be less than previous growth monitoring session\");\n        }\n        \n        if ((currentObs - prevValue) > 3) {\n        validationErrors.push(\"Height increase of more than 3 cm since last visit is not allowed. Please re-measure.\");\n        }\n    }\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Nutritional Status",
+      "uuid" : "215b4043-cc6a-4036-9814-bce8db726f92",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Nutritional Status",
+        "uuid" : "053b4f97-eacf-4f20-9d68-d6850966ce93",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n    const height = programEncounter.getObservationValue(\"Height\");\n    const weight = programEncounter.getObservationValue(\"Weight\");\n    const asOnDate = programEncounter.encounterDateTime;\n    const individual = programEncounter.programEnrolment.individual;\n    const age = programEncounter.programEnrolment.individual.getAgeInMonths();\n\n    const addIfRequired = (decisions, name, value) => {\n        if (value === -0) value = 0;\n        if (value !== undefined) decisions.push({name: name, value: value});\n    };\n\n    const getGradeforZscore = (zScore) => {\n        let grade;\n        if (zScore <= -3) {\n            grade = 3;\n        } else if (zScore > -3 && zScore < -2) {\n            grade = 2;\n        } else if (zScore >= -2) {\n            grade = 1;\n        }\n        return grade;\n    };\n    const zScoresForChild = ruleServiceLibraryInterfaceForSharingModules.common.getZScore(individual, asOnDate, weight, height);\n    \n    console.log('zScoresForChild----->', zScoresForChild);\n\n    const zScoreGradeStatusMappingWeightForHeight = [\n        [\"SAM\", -3],\n        [\"MAM\", -2],\n        [\"Normal\", 1],\n        [\"Normal\", 2],\n        [\"Normal\", 3],\n        [\"Normal\", Infinity],\n    ];\n\n    const weightForHeightStatus = function (zScore) {\n        let found = _.find(zScoreGradeStatusMappingWeightForHeight, function (currentStatus) {\n            return zScore <= currentStatus[1];\n        });\n        return found && found[0];\n    };\n\n    const wfhStatus = weightForHeightStatus(zScoresForChild.wfh);\n    const wfhGrade = getGradeforZscore(zScoresForChild.wfh);\n    \n    value = wfhStatus;\n\n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Growth Faltering",
+      "uuid" : "9bb2c8dc-7e97-49bd-82de-c1856d2e6534",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Growth Faltering",
+        "uuid" : "a9d8db9a-8411-412c-82ed-e6e177353561",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n\n    const encounters = programEncounter.programEnrolment.getEncountersOfType('Growth Monitoring');\n    let enc1 = _.chain(encounters)\n        .filter((enc) => !_.isNil(enc.encounterDateTime) && !_.isNil(enc.earliestVisitDateTime) && _.isNil(enc.cancelDateTime))\n        .filter((enc) => enc.uuid !== programEncounter.uuid)\n        .filter((enc) => enc.encounterDateTime < programEncounter.encounterDateTime)\n        .sortBy((enc) => -imports.moment(enc.earliestVisitDateTime)) \n        .nth(0)\n        .value();\n\n    let enc2 = _.chain(encounters)\n        .filter((enc) => !_.isNil(enc.encounterDateTime) && !_.isNil(enc.earliestVisitDateTime) && _.isNil(enc.cancelDateTime))\n        .filter((enc) => enc.uuid !== programEncounter.uuid)\n        .filter((enc) => enc.encounterDateTime < programEncounter.encounterDateTime)\n        .sortBy((enc) => -imports.moment(enc.earliestVisitDateTime))\n        .nth(1)\n        .value();\n\n    let enc1Weight = null, enc2Weight = null;\n    let currentWeight = programEncounter.getObservationReadableValue('Weight');\n    if (enc1) {\n        enc1Weight = enc1.getObservationReadableValue('Weight');\n        \n    }\n    if (enc2) {\n        enc2Weight = enc2.getObservationReadableValue('Weight');\n        \n    }\n     \n    if(enc1Weight && enc2Weight && (currentWeight <= enc1Weight) && (enc1Weight <= enc2Weight)){\n          value = \"GF2\"; // If current weight is less than the second last 2 weights, GF status is GF2 \n    } else if(enc1Weight && (currentWeight <= enc1Weight)){\n          value = \"GF1\"; // If current weight is less than the last weight, GF status is GF1\n    } else {\n          value = \"None\";\n    }\n\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Is the child going to PPK?",
+      "uuid" : "c84d73c2-6735-4189-b0a5-b75d6525239e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is the child going to PPK?",
+        "uuid" : "41366f6d-6263-4fb1-a182-edd6cb109667",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = false;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  //const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.ageInMonths.greaterThanOrEqualTo(36).and.when.ageInMonths.lessThanOrEqualTo(60).matches();\n  let age = moment(programEncounter.earliestVisitDateTime).diff(programEncounter.programEnrolment.individual.dateOfBirth,'months');\n\n  \n  let condition11 =  (age >= 36) && (age<=60);\n  \n  let condition12 = false;\n  \n  \n  const locationProperties = programEncounter.programEnrolment.individual.lowestAddressLevel.locationProperties;  \n  \n  if(locationProperties.length > 0){\n     const locationProperty = locationProperties.filter(prop=>prop.concept.name == 'PPK Village');\n     if(locationProperty.length==1){\n         const valueJSON = locationProperty[0].valueJSON;\n         const answer = JSON.parse(valueJSON).answer;\n         if(answer==\"8ebbf088-f292-483e-9084-7de919ce67b7\"){\n            condition12 = true;\n         } \n     }\n  }\n  \n  visibility = condition11 && condition12;\n  \n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Is the child going to Creche?",
+      "uuid" : "c81f70de-ec0e-432e-a2dd-d567036dfe00",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is the child going to Creche?",
+        "uuid" : "d248cf77-2051-4501-935c-10e718df7f6e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Ombardc",
+          "uuid" : "b31c3757-f91d-4bde-ae30-3591633e0484",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "STSC department",
+          "uuid" : "e59be2f8-18e5-462f-8d15-b8ad650f4c64",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No Creche",
+          "uuid" : "6d410210-65a6-4b01-bd09-2b888782a17c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "RCI",
+          "uuid" : "8069a1cc-90d7-4e0f-98eb-97ee508ef795",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "DMF",
+          "uuid" : "30cafc2e-b87b-4a8f-8602-ce7e32e64676",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "WCD department",
+          "uuid" : "26806613-fb24-4364-a4ea-b40f24299163",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n    let age = moment(programEncounter.earliestVisitDateTime).diff(programEncounter.programEnrolment.individual.dateOfBirth,'months');\n\n  \n  const condition11 = (age >= 7) && (age<=36);\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Is the child being currently exclusively breastfed?",
+      "uuid" : "bf31d84b-4417-4c8f-a3de-034ce765cdee",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is the child being currently exclusively breastfed?",
+        "uuid" : "da2b553e-a445-40d0-8190-1b4767004211",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n    let age = moment(programEncounter.earliestVisitDateTime).diff(programEncounter.programEnrolment.individual.dateOfBirth,'months');\n\n  \n  const condition11 = (age <= 6);\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Is the child being currently breastfed?",
+      "uuid" : "8c4dab0e-245a-4f19-925b-5916eaa4a41c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is the child being currently breastfed?",
+        "uuid" : "c3d795ce-ce22-425e-a20d-7596d1d7b73a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n    let age = moment(programEncounter.earliestVisitDateTime).diff(programEncounter.programEnrolment.individual.dateOfBirth,'months');\n\n  \n  const condition11 = (age >= 7) && (age <=24);\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Number of days attended AWC (last month)",
+      "uuid" : "1d023c01-b319-4eb2-97af-ab04688611c3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of day attended AWC (last month)",
+        "uuid" : "829e4938-92d7-4277-a1fe-56acaa67d5b4",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 32.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n    let age = moment(programEncounter.earliestVisitDateTime).diff(programEncounter.programEnrolment.individual.dateOfBirth,'years');\n\n  \n  const condition11 = (age >= 3 ) && (age<=5);\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Is the mother receiving THR from AWC in last month?",
+      "uuid" : "a18f2fb7-eceb-4994-9633-3db4d95d68c0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is the mother receiving THR from AWC in last month?",
+        "uuid" : "2165a161-887b-4479-9ddb-7cf22d57cf9d",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n    let age = moment(programEncounter.earliestVisitDateTime).diff(programEncounter.programEnrolment.individual.dateOfBirth,'months');\n\n  \n  const condition11 = (age < 7);\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Is the child continiously breast fed upto 2 years?",
+      "uuid" : "f519966b-d12f-446e-9fc8-dc1fe90415ec",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is the child continiously breast fed upto 2 years?",
+        "uuid" : "38d6c4c3-22be-458a-b7be-c38cf0c9db08",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.ageInYears.greaterThanOrEqualTo(3).and.when.ageInYears.lessThanOrEqualTo(6).matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "ageInYears"
+              },
+              "rhs" : {
+                "type" : "value",
+                "value" : 3
+              },
+              "operator" : "greaterThanOrEqualTo"
+            }, {
+              "lhs" : {
+                "type" : "ageInYears"
+              },
+              "rhs" : {
+                "type" : "value",
+                "value" : 6
+              },
+              "operator" : "lessThanOrEqualTo"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Is the child receiving THR from AWC in last month?",
+      "uuid" : "972cae5a-fa84-4ec0-bf45-6f14beb2eefa",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is the child receiving THR from AWC",
+        "uuid" : "8bb34e68-b3f1-4168-940c-219b699e6fe5",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  let ageInMonths = moment(programEncounter.earliestVisitDateTime).diff(programEncounter.programEnrolment.individual.dateOfBirth,'months');\n  \n  const condition11 = ageInMonths > 36 ;\n  \n  visibility = !(condition11 );\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Is the child receiving egg from AWC in last month?",
+      "uuid" : "90362cbd-c0d1-4dd3-b78a-ef9dacea08fc",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is the child receiving egg from AWC",
+        "uuid" : "45644b33-e398-4686-94ca-11837acbe5c9",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  let ageInMonths = moment(programEncounter.earliestVisitDateTime).diff(programEncounter.programEnrolment.individual.dateOfBirth,'months');\n  \n  const condition11 = ageInMonths > 36 ;\n  \n  visibility = !(condition11 );\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Did the child attended VHND last month?",
+      "uuid" : "f2e5296d-0849-4d39-b58d-94d4eb8539fd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Did the child attended VHND last month",
+        "uuid" : "7e4d3545-27a5-4598-a703-50fc5907faa3",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 15.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Is the child receiving additional THR for SUW in last month?",
+      "uuid" : "9d1a531b-a916-4ae9-adda-586133975365",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is the child receiving additional THR for SUW in last month?",
+        "uuid" : "76f772ca-aa9d-4fdc-9606-e5310f62bf02",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "NA",
+          "uuid" : "a1da52a7-f587-4f8f-9349-2d4ee4dae563",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 16.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.ageInYears.greaterThanOrEqualTo(3).and.when.ageInYears.lessThanOrEqualTo(6).matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "ageInYears"
+              },
+              "rhs" : {
+                "type" : "value",
+                "value" : 3
+              },
+              "operator" : "greaterThanOrEqualTo"
+            }, {
+              "lhs" : {
+                "type" : "ageInYears"
+              },
+              "rhs" : {
+                "type" : "value",
+                "value" : 6
+              },
+              "operator" : "lessThanOrEqualTo"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "What is the treatment advise for the SAM/MAM/GF2 child?",
+      "uuid" : "d86586fa-2826-4f0a-b3d8-ebc526cd113c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "What is the treatment advise for the SAM/MAM/GF2 child?",
+        "uuid" : "2f136d99-f500-4710-89fe-d8007c977843",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Any other higher facility/DH/MC",
+          "uuid" : "48b9d172-fa2d-45c4-ba54-842517202c72",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Treatment at home",
+          "uuid" : "397f526d-9247-4b3b-bb09-27c4e21fd062",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Referred to CHC",
+          "uuid" : "3dd2c48c-7b49-4972-be04-b9deb1c3fe84",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 17.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n  \n    const height = programEncounter.getObservationValue(\"Height\");\n    const weight = programEncounter.getObservationValue(\"Weight\");\n    const asOnDate = programEncounter.encounterDateTime;\n    const individual = programEncounter.programEnrolment.individual;\n    const age = programEncounter.programEnrolment.individual.getAgeInMonths();\n\n    const addIfRequired = (decisions, name, value) => {\n        if (value === -0) value = 0;\n        if (value !== undefined) decisions.push({name: name, value: value});\n    };\n\n    const getGradeforZscore = (zScore) => {\n        let grade;\n        if (zScore <= -3) {\n            grade = 3;\n        } else if (zScore > -3 && zScore < -2) {\n            grade = 2;\n        } else if (zScore >= -2) {\n            grade = 1;\n        }\n        return grade;\n    };\n    const zScoresForChild = ruleServiceLibraryInterfaceForSharingModules.common.getZScore(individual, asOnDate, weight, height);\n\n    const zScoreGradeStatusMappingWeightForHeight = [\n        [\"SAM\", -3],\n        [\"MAM\", -2],\n        [\"Normal\", 1],\n        [\"Normal\", 2],\n        [\"Normal\", 3],\n        [\"Normal\", Infinity],\n    ];\n\n    const weightForHeightStatus = function (zScore) {\n        let found = _.find(zScoreGradeStatusMappingWeightForHeight, function (currentStatus) {\n            return zScore <= currentStatus[1];\n        });\n        return found && found[0];\n    };\n\n    const wfhStatus = weightForHeightStatus(zScoresForChild.wfh);\n    const wfhGrade = getGradeforZscore(zScoresForChild.wfh);\n    \n    let nutritionalStatus = wfhStatus;\n    let growthFalteringStatus = '';\n\n    const encounters = programEncounter.programEnrolment.getEncountersOfType('Growth Monitoring');\n    let enc1 = _.chain(encounters)\n        .filter((enc) => !_.isNil(enc.encounterDateTime) && !_.isNil(enc.earliestVisitDateTime) && _.isNil(enc.cancelDateTime))\n        .filter((enc) => enc.uuid !== programEncounter.uuid)\n        .filter((enc) => enc.encounterDateTime < programEncounter.encounterDateTime)\n        .sortBy((enc) => -imports.moment(enc.earliestVisitDateTime)) \n        .nth(0)\n        .value();\n\n    let enc2 = _.chain(encounters)\n        .filter((enc) => !_.isNil(enc.encounterDateTime) && !_.isNil(enc.earliestVisitDateTime) && _.isNil(enc.cancelDateTime))\n        .filter((enc) => enc.uuid !== programEncounter.uuid)\n        .filter((enc) => enc.encounterDateTime < programEncounter.encounterDateTime)\n        .sortBy((enc) => -imports.moment(enc.earliestVisitDateTime))\n        .nth(1)\n        .value();\n\n    let enc1Weight = null, enc2Weight = null;\n    let currentWeight = programEncounter.getObservationReadableValue('Weight');\n    if (enc1) {\n        enc1Weight = enc1.getObservationReadableValue('Weight');\n        \n    }\n    if (enc2) {\n        enc2Weight = enc2.getObservationReadableValue('Weight');\n        \n    }\n     \n    if(enc1Weight && enc2Weight && (currentWeight <= enc1Weight) && (enc1Weight <= enc2Weight)){\n        growthFalteringStatus = \"GF2\"; // If current weight is less than the second last 2 weights, GF status is GF2 \n    } else if(enc1Weight && (currentWeight <= enc1Weight)){\n        growthFalteringStatus = \"GF1\"; // If current weight is less than the last weight, GF status is GF1\n    } else {\n        growthFalteringStatus = \"None\";\n    }\n\n    visibility = (nutritionalStatus && ['SAM', 'MAM'].includes(nutritionalStatus)) || (growthFalteringStatus && growthFalteringStatus == 'GF2');\n\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Place of decision/advise",
+      "uuid" : "d3ae0c5d-8b09-479e-a0ba-4f45042f8eda",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Place of decision/advise",
+        "uuid" : "91c0799a-848d-480d-8fea-a44bd6ecc681",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Immunization Day",
+          "uuid" : "26a07970-c7f4-47e1-bc9e-3effe3ac96fb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Over a phone call to ANM",
+          "uuid" : "a0232b48-ff54-4264-8294-3483d8cb9450",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AWC",
+          "uuid" : "e842c1f9-138d-4b00-9e6d-59d7cc114e66",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "VHSND",
+          "uuid" : "dde6f1c8-e34e-4d80-8ebb-8e6783fd8da6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "SAM Child Home",
+          "uuid" : "4d9c84d7-1f70-4e0e-acf9-d42fd4cef72c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Others (please specify)",
+          "uuid" : "95ad204b-e263-4c3a-ac0a-adc68c75b8f2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 18.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"2f136d99-f500-4710-89fe-d8007c977843\").defined.matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "What is the treatment advise for the SAM/MAM/GF2 child?",
+                "conceptUuid" : "2f136d99-f500-4710-89fe-d8007c977843",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : { },
+              "operator" : "defined"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Others, please specify place of decision/advise",
+      "uuid" : "9de6cca9-46e3-478f-a203-861f9b808f61",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Others, please specify place of decision/advise",
+        "uuid" : "aa1890c9-f8fd-4a9d-8a73-2aa5a9e945b8",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 19.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"91c0799a-848d-480d-8fea-a44bd6ecc681\").containsAnswerConceptName(\"95ad204b-e263-4c3a-ac0a-adc68c75b8f2\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Place of decision/advise",
+                "conceptUuid" : "91c0799a-848d-480d-8fea-a44bd6ecc681",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Others (please specify)" ],
+                "answerConceptUuids" : [ "95ad204b-e263-4c3a-ac0a-adc68c75b8f2" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "Cause of illness",
+      "uuid" : "9c9906e7-b820-4b3b-ab8b-84e4200eddad",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cause of illness",
+        "uuid" : "7de7de1e-10dd-46f2-a5c3-bfb056a41318",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Sickle cell anemia",
+          "uuid" : "4b0c2486-20ac-458b-b89a-28603715aeb2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cold and cough",
+          "uuid" : "1a1e2b03-2e03-43ed-8eb2-f2840d8786a5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Dengue",
+          "uuid" : "766953f6-6632-40d2-b850-8bd253a5334f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Malaria",
+          "uuid" : "1572682c-5aeb-4455-a7cf-a43da6a1e6fd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Measles",
+          "uuid" : "761e2baa-2747-44c4-84cd-6f3887b8838c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pneumonia",
+          "uuid" : "1b3f4523-91f3-425e-9a4f-33ff06d176ae",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Diarrhea",
+          "uuid" : "fd904c6a-fe26-46b0-b123-ac46d5c9567b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Others",
+          "uuid" : "caf114c0-b81a-4606-8157-73144c8d3b1f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 20.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"2f136d99-f500-4710-89fe-d8007c977843\").containsAnswerConceptNameOtherThan(\"397f526d-9247-4b3b-bb09-27c4e21fd062\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "What is the treatment advise for the SAM/MAM/GF2 child?",
+                "conceptUuid" : "2f136d99-f500-4710-89fe-d8007c977843",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Treatment at home" ],
+                "answerConceptUuids" : [ "397f526d-9247-4b3b-bb09-27c4e21fd062" ]
+              },
+              "operator" : "containsAnswerConceptNameOtherThan"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Cause of illness (Other)",
+      "uuid" : "92f5f203-4c4b-403b-b6ca-b23aabe686c9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cause of illness (Other)",
+        "uuid" : "0e1d0c17-62d7-4c24-be93-62f326943c32",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 21.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"7de7de1e-10dd-46f2-a5c3-bfb056a41318\").containsAnswerConceptName(\"caf114c0-b81a-4606-8157-73144c8d3b1f\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Cause of illness",
+                "conceptUuid" : "7de7de1e-10dd-46f2-a5c3-bfb056a41318",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Others" ],
+                "answerConceptUuids" : [ "caf114c0-b81a-4606-8157-73144c8d3b1f" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Is the child enrolled in the CMAM program?",
+      "uuid" : "f729e0b3-0d1f-4d43-9d9a-93fe9463a87a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is the child enrolled in the CMAM program?",
+        "uuid" : "001b3307-731e-4606-a8f4-9aaa1e264000",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 22.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n\n    const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"2f136d99-f500-4710-89fe-d8007c977843\").containsAnswerConceptName(\"397f526d-9247-4b3b-bb09-27c4e21fd062\").matches();\n    let totalEnc=programEncounter.programEnrolment.getEncountersOfType('Growth Monitoring');\n    let completedEnc= _.filter(totalEnc,enc=> enc.encounterDateTime != null)\n\n  visibility = condition11 && (completedEnc.length % 4 == 0);\n  \n\n\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};\n",
+      "mandatory" : true
+    }, {
+      "name" : "Is the child availing benefits (ATHR) under the CMAM program?",
+      "uuid" : "a99d4076-5c27-4f39-ade6-94c0e13c579a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is the child availing benefits (ATHR) under the CMAM program?",
+        "uuid" : "98e9c3ab-b6f5-4292-bc10-009cd27bb689",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 23.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.ageInYears.lessThanOrEqualTo(5).and.when.latestValueInEntireEnrolment(\"001b3307-731e-4606-a8f4-9aaa1e264000\").containsAnswerConceptName(\"8ebbf088-f292-483e-9084-7de919ce67b7\").matches();\n  const condition12 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.ageInYears.lessThanOrEqualTo(5).and. when.valueInEncounter(\"001b3307-731e-4606-a8f4-9aaa1e264000\").containsAnswerConceptName(\"8ebbf088-f292-483e-9084-7de919ce67b7\").matches();\n  \n  \n  let totalEnc=programEncounter.programEnrolment.getEncountersOfType('Growth Monitoring');\n    let completedEnc= _.filter(totalEnc,enc=> enc.encounterDateTime != null)\n    if(completedEnc.length % 4 == 0){\n    visibility= condition12\n    }else {\n    visibility = condition11 ;\n    }\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Did you receive additional THR (MSPY)?",
+      "uuid" : "22cc5204-3108-4e7a-88fd-aa48b5a7c474",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Did you receive additional THR (MSPY)?",
+        "uuid" : "914f2acc-d449-4911-a14f-82c4d51ad20a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 24.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.ageInMonths.lessThanOrEqualTo(6).and.when.latestValueInEntireEnrolment(\"001b3307-731e-4606-a8f4-9aaa1e264000\").containsAnswerConceptName(\"8ebbf088-f292-483e-9084-7de919ce67b7\").matches();\n  const condition12 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.ageInMonths.lessThanOrEqualTo(6).and.when.valueInEncounter(\"001b3307-731e-4606-a8f4-9aaa1e264000\").containsAnswerConceptName(\"8ebbf088-f292-483e-9084-7de919ce67b7\").matches();\n  \n  visibility = condition11 ;\n  \n    \n  let totalEnc=programEncounter.programEnrolment.getEncountersOfType('Growth Monitoring');\n    let completedEnc= _.filter(totalEnc,enc=> enc.encounterDateTime != null)\n    \n     if(completedEnc.length % 4 == 0){\n    visibility= condition12\n    }else {\n    visibility = condition11 ;\n    }\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : false
+    } ],
+    "display" : "Details",
+    "timed" : false
+  } ],
+  "decisionRule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const _ = imports.lodash;\n    const decisions = params.decisions;\n    const complicationsBuilderForWFA = new imports.rulesConfig.complicationsBuilder({\n            programEncounter: programEncounter,\n            complicationsConcept: \"Weight for age z-score\"\n        },\n        {\n            programEnrolment: programEncounter,\n            complicationsConcept: \"High risk condition\"\n        });\n\n    const height = programEncounter.getObservationValue(\"Height\");\n    const weight = programEncounter.getObservationValue(\"Weight\");\n    const asOnDate = programEncounter.encounterDateTime;\n    const individual = programEncounter.programEnrolment.individual;\n    const age = programEncounter.programEnrolment.individual.getAgeInMonths();\n\n    const addIfRequired = (decisions, name, value) => {\n        if (value === -0) value = 0;\n        if (value !== undefined) decisions.push({name: name, value: value});\n    };\n\n    const getGradeforZscore = (zScore) => {\n        let grade;\n        if (zScore <= -3) {\n            grade = 3;\n        } else if (zScore > -3 && zScore < -2) {\n            grade = 2;\n        } else if (zScore >= -2) {\n            grade = 1;\n        }\n        return grade;\n    };\n\n    const zScoresForChild = ruleServiceLibraryInterfaceForSharingModules.common.getZScore(individual, asOnDate, weight, height);\n\n    const zScoreGradeStatusMappingWeightForAge = {\n        '1': 'Normal',\n        '2': 'Moderately Underweight',\n        '3': 'Severely Underweight'\n    };\n\n    const zScoreGradeStatusMappingHeightForAge = {\n        '1': 'Normal',\n        '2': 'Stunted',\n        '3': 'Severely stunted'\n    };\n\n    const zScoreGradeStatusMappingWeightForHeight = [\n        [\"SAM\", -3],\n        [\"MAM\", -2],\n        [\"Normal\", 1],\n        [\"Normal\", 2],\n        [\"Normal\", 3],\n        [\"Normal\", Infinity],\n    ];\n\n    const weightForHeightStatus = function (zScore) {\n        let found = _.find(zScoreGradeStatusMappingWeightForHeight, function (currentStatus) {\n            return zScore <= currentStatus[1];\n        });\n        return found && found[0];\n    };\n\n\n    const wfaGrade = getGradeforZscore(zScoresForChild.wfa);\n    const wfaStatus = zScoreGradeStatusMappingWeightForAge[wfaGrade];\n    const wfaZScore= zScoresForChild.wfa;\n\n\n\n    const wfhStatus = weightForHeightStatus(zScoresForChild.wfh);\n    const wfhGrade = getGradeforZscore(zScoresForChild.wfh)\n\n    const hfaGrade = getGradeforZscore(zScoresForChild.hfa);\n    const hfaZScore = zScoresForChild.hfa;\n    const hfaStatus = zScoreGradeStatusMappingHeightForAge[hfaGrade];\n\n    addIfRequired(decisions.encounterDecisions, \"Weight for age z-score\", zScoresForChild.wfa);\n    addIfRequired(decisions.encounterDecisions, \"Weight for age Grade\", wfaGrade);\n    addIfRequired(decisions.encounterDecisions, \"Weight for age Status\", wfaStatus ? [wfaStatus] : []);\n\n    addIfRequired(decisions.encounterDecisions, \"Height for age z-score\", zScoresForChild.hfa);\n    addIfRequired(decisions.encounterDecisions, \"Height for age Grade\", hfaGrade);\n    addIfRequired(decisions.encounterDecisions, \"Height for age Status\", hfaStatus ? [hfaStatus] : []);\n\n\n    addIfRequired(decisions.encounterDecisions, \"Weight for height z-score\", zScoresForChild.wfh);\n    addIfRequired(decisions.encounterDecisions, \"Weight for Height Status\", wfhStatus ? [wfhStatus] : []);\n\n\n    const isTreatmentNotAtHome = programEncounter.getObservationValue(\"What is the treatment advise for the SAM/MAM/GF2 child?\") ? programEncounter.getObservationReadableValue(\"What is the treatment advise for the SAM/MAM/GF2 child?\") != \"Treatment at home\" : false;\n    const latest = programEncounter.programEnrolment.lastFulfilledEncounter(\"Growth Monitoring\",\"QRT Child\",\"Child Home Visit\");\n\n\n    if(latest === undefined || programEncounter.uuid === latest.uuid || moment(programEncounter.encounterDateTime).isAfter(moment(latest.encounterDateTime))){\n\n        if(wfhStatus == \"SAM\" || isTreatmentNotAtHome){\n            decisions.registrationDecisions.push({name : \"To be monitored by QRT\", value : \"Yes\"});\n            decisions.enrolmentDecisions.push({name : \"To be monitored by QRT\", value : \"Yes\"});\n            decisions.encounterDecisions.push({name : \"To be monitored by QRT\", value : \"Yes\"});\n        }else {\n            decisions.registrationDecisions.push({name : \"To be monitored by QRT\", value : \"No\"});\n            decisions.enrolmentDecisions.push({name : \"To be monitored by QRT\", value : \"No\"});\n            decisions.encounterDecisions.push({name : \"To be monitored by QRT\", value : \"No\"});\n        }\n    }else {\n        if(wfhStatus == \"SAM\" || isTreatmentNotAtHome){\n            decisions.encounterDecisions.push({name : \"To be monitored by QRT\", value : \"Yes\"});\n        }else {\n            decisions.encounterDecisions.push({name : \"To be monitored by QRT\", value : \"No\"});\n        }\n    }\n    \n     // Pushing decisions to the registration for the optimizing performance of offlne dashborad cards\n  \nlet allEnc = programEncounter.programEnrolment.getEncounters();\nlet growthEnc = allEnc.filter(enc => enc.encounterType.name == 'Growth Monitoring' && enc.encounterDateTime != null && enc.uuid == programEncounter.uuid)\n\nconst latest = programEncounter.programEnrolment.lastFulfilledEncounter(\"Growth Monitoring\");\n\nlet pushRegDecision = (growthEnc) => {\n\n  //  if (growthEnc.length == 0) {\n    if(latest === undefined || programEncounter.uuid === latest.uuid || imports.moment(programEncounter.encounterDateTime).isAfter(imports.moment(latest.encounterDateTime)))\n    {\n        decisions.registrationDecisions.push({\n            name: \"Growth Faltering\",\n            value: programEncounter.getObservationValue(\"Growth Faltering\")\n        })\n        if (wfhStatus) {\n            decisions.registrationDecisions.push({name: \"Nutritional Status\", value: wfhStatus})\n        }\n\n        let cmamEnroll = programEncounter.getObservationReadableValue(\"Is the child enrolled in the CMAM program?\");\n        if (cmamEnroll) {\n            decisions.registrationDecisions.push({\n                name: \"Is the child enrolled in the CMAM program?\",\n                value: cmamEnroll\n            })\n        }\n    }\n\n}\npushRegDecision(growthEnc)\n    \n    return decisions;\n};",
+  "visitScheduleRule" : "\"use strict\";\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({\n        programEncounter\n    });\n    const moment = imports.moment;\n    const _ = imports.lodash;\n\n    function visitAlreadyScheduled(encounterType, earliestDate) {\n        const earliestDateMoment = moment(earliestDate);\n        const isVisitScheduled = programEncounter.programEnrolment.getEncountersOfType(encounterType)\n            .some((enc) =>\n                enc.voided === false &&\n                moment(enc.earliestVisitDateTime).isSame(earliestDateMoment, 'day')\n            );\n        \n        return isVisitScheduled;\n    }\n\n    const isTreatmentNotAtHome = programEncounter.getObservationReadableValue(\"What is the treatment advise for the SAM/MAM/GF2 child?\") ? programEncounter.getObservationReadableValue(\"What is the treatment advise for the SAM/MAM/GF2 child?\") != \"Treatment at home\" : false;\n    const isTreatmentAtHome = programEncounter.getObservationReadableValue(\"What is the treatment advise for the SAM/MAM/GF2 child?\") ? programEncounter.getObservationReadableValue(\"What is the treatment advise for the SAM/MAM/GF2 child?\") == \"Treatment at home\" : false;\n    const isSAM = programEncounter.getObservationReadableValue(\"Nutritional Status\") == \"SAM\";\n    const isGF1 = programEncounter.getObservationReadableValue(\"Growth Faltering\") == \"GF1\";\n    \n    const growthMonitoringEarliestDate = moment(programEncounter.earliestVisitDateTime).add(1, 'month').startOf('month').toDate();\n    const qrtEarliestDate = moment(programEncounter.encounterDateTime).startOf('day').toDate();\n    const childHomeVisitEarliestDate = moment(programEncounter.encounterDateTime).add(15, 'days').startOf('day').toDate();\n\n    // Growth Monitoring\n    if(programEncounter.programEnrolment.individual.getAgeInYears() < 5 && !visitAlreadyScheduled('Growth Monitoring', growthMonitoringEarliestDate)) {\n        scheduleBuilder.add({\n            name: 'Growth Monitoring',\n            encounterType: 'Growth Monitoring',\n            earliestDate: growthMonitoringEarliestDate,\n            maxDate:  moment(growthMonitoringEarliestDate).endOf('month').toDate()\n        });\n    }\n\n    // QRT Child or Child Home Visit\n    if((isTreatmentNotAtHome || isSAM) && !visitAlreadyScheduled('QRT Child', qrtEarliestDate)) {\n        scheduleBuilder.add({\n            name: 'QRT Child',\n            encounterType: 'QRT Child',\n            earliestDate: qrtEarliestDate,\n            maxDate: moment(qrtEarliestDate).add(30, 'days').endOf('day').toDate()\n        });\n    }\n    else if ((isTreatmentAtHome || isGF1 ) && !visitAlreadyScheduled('Child Home Visit', childHomeVisitEarliestDate) && !isSAM){\n        scheduleBuilder.add({\n            name: 'Child Home Visit',\n            encounterType: 'Child Home Visit',\n            earliestDate: childHomeVisitEarliestDate,\n            maxDate: moment(childHomeVisitEarliestDate).add(7, 'days').endOf('day').toDate()\n        });\n    }\n    \n    return scheduleBuilder.getAll();\n};",
+  "validationRule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const validationResults = [];\n  \n  const isMaxVisitDateTimeGreaterThanToday = moment(programEncounter.maxVisitDateTime).isBefore(moment(), 'day');\n\n  if (isMaxVisitDateTimeGreaterThanToday) {\n    validationResults.push(imports.common.createValidationError(\"You cannot complete an overdue visit. Please cancel this visit.\"));  \n  }\n  \n  \n    // Get schedule date (earliest visit date)\n    const scheduleDate = programEncounter.earliestVisitDateTime;\n\n    // Check if encounter date is before schedule month\n    const isBeforeScheduleMonth = moment(programEncounter.encounterDateTime)\n        .isBefore(moment(scheduleDate));\n\n    // Check if encounter date is after schedule month\n    const isAfterScheduleMonth = moment(programEncounter.encounterDateTime)\n        .isAfter(moment(scheduleDate).endOf('month'));\n\n    if (isBeforeScheduleMonth) {\n        validationResults.push(imports.common.createValidationError(\"Cannot fill this form before the scheduled date\"));\n    }\n\n    \n  \n  return validationResults;\n};",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ {
+    "name" : "Weight for age Status",
+    "uuid" : "efeb0a0b-aea4-4af1-9bc4-37d86bc865a1",
+    "dataType" : "Coded",
+    "answers" : [ {
+      "name" : "Moderately Underweight",
+      "uuid" : "f2a4a610-c96e-454b-8c5c-cd8fad2feeb6",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 1.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Severely Underweight",
+      "uuid" : "4b855734-921c-4796-a752-39b3ede1c66c",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 2.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Normal",
+      "uuid" : "422604be-5776-4050-a779-9221935d6f7c",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 0.0,
+      "active" : true,
+      "media" : [ ]
+    } ],
+    "active" : true,
+    "keyValues" : [ ],
+    "media" : [ ]
+  }, {
+    "name" : "Weight for height z-score",
+    "uuid" : "84e6fe5e-5968-48df-bc51-9b151714e9be",
+    "dataType" : "Numeric",
+    "answers" : [ ],
+    "active" : true,
+    "keyValues" : [ ],
+    "media" : [ ]
+  }, {
+    "name" : "Height for age Status",
+    "uuid" : "3d4d5c56-8b3d-449c-9971-67712b6ca95c",
+    "dataType" : "Coded",
+    "answers" : [ {
+      "name" : "Moderately Underweight",
+      "uuid" : "f2a4a610-c96e-454b-8c5c-cd8fad2feeb6",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 1.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Stunted",
+      "uuid" : "5c2109f2-c6ad-41bb-a055-e032d993bad5",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 3.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Severely Underweight",
+      "uuid" : "4b855734-921c-4796-a752-39b3ede1c66c",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 2.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Normal",
+      "uuid" : "422604be-5776-4050-a779-9221935d6f7c",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 0.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Severely stunted",
+      "uuid" : "d21b3fcb-4272-44d0-b6f1-0f32437a492a",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 4.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    } ],
+    "active" : true,
+    "keyValues" : [ ],
+    "media" : [ ]
+  }, {
+    "name" : "To be monitored by QRT",
+    "uuid" : "be0ab05f-b0f3-43ec-b598-fdde0679104a",
+    "dataType" : "Coded",
+    "answers" : [ {
+      "name" : "Yes",
+      "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 0.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "No",
+      "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 1.0,
+      "active" : true,
+      "media" : [ ]
+    } ],
+    "active" : true,
+    "keyValues" : [ ],
+    "media" : [ ]
+  }, {
+    "name" : "Weight for Height Status",
+    "uuid" : "2a2027c1-cec9-4237-a53a-80d6b1047979",
+    "dataType" : "Coded",
+    "answers" : [ {
+      "name" : "SAM",
+      "uuid" : "7d0229c1-e69e-4cac-8937-cdd48c8ed9dd",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 0.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Normal",
+      "uuid" : "422604be-5776-4050-a779-9221935d6f7c",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 2.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "MAM",
+      "uuid" : "da518460-f4ab-4fcb-89ae-3526619d43c5",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 1.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    } ],
+    "active" : true,
+    "keyValues" : [ ],
+    "media" : [ ]
+  } ]
+}

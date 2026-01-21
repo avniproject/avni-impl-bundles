@@ -1,0 +1,524 @@
+{
+  "name" : "Sickle cell Enrolment (Hospital)",
+  "uuid" : "0dc0ccbf-317c-4ee6-9d30-f9e7a87387f0",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "8f5e57ab-07df-455f-81ce-c1d8ef9ce2cc",
+    "name" : "Sickle cell Enrolment (Hospital)",
+    "displayOrder" : -1.0,
+    "formElements" : [ {
+      "name" : "Sickle cell status of patient [H]",
+      "uuid" : "1e1a23dc-e718-4b79-8400-40aae0912d18",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Sickle cell status of patient [H]",
+        "uuid" : "1c794ca3-0a31-4511-8ef9-2fcb674770fa",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "SS [H]",
+          "uuid" : "ff07f66c-8149-4cca-9ddb-13a399875630",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AA [H]",
+          "uuid" : "fb1f1bd1-e960-4c64-99ea-769ff3aae62a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AS [H]",
+          "uuid" : "bf8858f0-cd84-4ae8-ba92-1e47117f0db4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Lab number of patient [H]",
+      "uuid" : "8a0c0710-ec3b-4249-a908-110220dd9625",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Lab number of patient [H]",
+        "uuid" : "d87806bc-87f9-46d8-867d-3e0ab465e960",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Date of diagnosis [H]",
+      "uuid" : "d246f60b-712d-4740-9b81-dd05c9e5dcae",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Date of diagnosis [H]",
+        "uuid" : "87dc571c-d6f9-4809-b937-0d61994ae8a5",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "How was the diagnosis done [H]",
+      "uuid" : "8c6f951a-d51c-4944-98e2-88c75f17f85c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "How was the diagnosis done [H]",
+        "uuid" : "24d16d3d-8887-4c8c-bf01-a46e8a9ad46a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "DT_New born screening [H]",
+          "uuid" : "f1899ed3-423f-4905-9a87-2c0b9eb7ef0c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "DT_Electrophoresis test [H]",
+          "uuid" : "a9a3c164-8f9d-445e-a06d-82b0835f1730",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Name of father [H]",
+      "uuid" : "7d45a2c1-cdeb-4f61-a043-2fde1e03bf41",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of father [H]",
+        "uuid" : "68d06cc4-7eca-452a-943f-05991347eaee",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Sickle cell status of father [H]",
+      "uuid" : "d401c8ab-e9a4-41cd-8456-36495ec53f4d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Sickle cell status of father [H]",
+        "uuid" : "16f5cd46-ae08-4da8-9133-e7a2d77a7d4a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "AA [H]",
+          "uuid" : "fb1f1bd1-e960-4c64-99ea-769ff3aae62a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AS [H]",
+          "uuid" : "bf8858f0-cd84-4ae8-ba92-1e47117f0db4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Unknown [H]",
+          "uuid" : "366f8801-0074-40f8-912f-81b1ec801706",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "SS [H]",
+          "uuid" : "ff07f66c-8149-4cca-9ddb-13a399875630",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Name of mother [H]",
+      "uuid" : "5bdd10da-4e29-45a3-93bf-ffb89ecc0e64",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of mother [H]",
+        "uuid" : "d36fc16e-717a-4d27-a7c2-a420e6376c70",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Sickle cell status of mother [H]",
+      "uuid" : "25a9c0cb-c679-466d-96b4-89ffdc5be4c1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Sickle cell status of mother [H]",
+        "uuid" : "f2aeb8c3-12fd-4608-9ab8-98208e8984d8",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Unknown [H]",
+          "uuid" : "366f8801-0074-40f8-912f-81b1ec801706",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AA [H]",
+          "uuid" : "fb1f1bd1-e960-4c64-99ea-769ff3aae62a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AS [H]",
+          "uuid" : "bf8858f0-cd84-4ae8-ba92-1e47117f0db4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "SS [H]",
+          "uuid" : "ff07f66c-8149-4cca-9ddb-13a399875630",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Marriage status [H]",
+      "uuid" : "d2bc93ae-9431-4e3e-bbcd-a47fe90dad76",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Marriage status [H]",
+        "uuid" : "66e4b8ae-90d3-4650-b207-383fa5c345fa",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "False [H]",
+          "uuid" : "50b20dc3-41e9-4d9c-b2af-266647214c57",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "True [H]",
+          "uuid" : "7e9a5117-bc2b-45e4-b92c-cd5796f9d36b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Name of spouse [H]",
+      "uuid" : "53733ead-3ccf-4dfa-8a45-d8c42eb0a52d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of spouse [H]",
+        "uuid" : "7f33c2c5-ea9b-42c3-bf37-0329c8d57597",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Sickle cell status of spouse [H]",
+      "uuid" : "8c727ac1-9ff3-472b-bc8b-b266805b3c3f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Sickle cell status of spouse [H]",
+        "uuid" : "161e2d92-f235-4bd3-bd02-d09537a903b0",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Unknown [H]",
+          "uuid" : "366f8801-0074-40f8-912f-81b1ec801706",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AA [H]",
+          "uuid" : "fb1f1bd1-e960-4c64-99ea-769ff3aae62a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "SS [H]",
+          "uuid" : "ff07f66c-8149-4cca-9ddb-13a399875630",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AS [H]",
+          "uuid" : "bf8858f0-cd84-4ae8-ba92-1e47117f0db4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Blood group of patient [H]",
+      "uuid" : "0cf2c5de-7e1e-44e9-bff0-16063252ea34",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Blood group of patient [H]",
+        "uuid" : "b359ff75-7b8c-4376-b14d-e82f2c632cad",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "B negative [H]",
+          "uuid" : "aaaa2a0d-76c3-4788-8849-cbc71c09091d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "A positive [H]",
+          "uuid" : "b0522a5e-4390-4497-977b-7e546690b03e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "B Positive [H]",
+          "uuid" : "92674c26-eb12-4c25-963a-8301714e144a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "A negative [H]",
+          "uuid" : "bf1c7bc3-aac0-4d7c-a867-5632b70fa32c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "O Positive [H]",
+          "uuid" : "477b4b31-b1a1-4a62-b054-c671f1f19d1c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "O negative [H]",
+          "uuid" : "4bdf91d5-eca8-4710-a2d8-6bba5db0ac16",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AB positive [H]",
+          "uuid" : "e6b6973a-efd2-4114-ab07-3729f7aa39c2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "SS_New patient [H]",
+      "uuid" : "b7a21f31-5120-4823-9fce-83dcc4e7e435",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SS_New patient [H]",
+        "uuid" : "23119987-14d5-4b29-b753-6145d7b224ec",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "True [H]",
+          "uuid" : "7e9a5117-bc2b-45e4-b92c-cd5796f9d36b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "False [H]",
+          "uuid" : "50b20dc3-41e9-4d9c-b2af-266647214c57",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Hb gm% during diagnosis [H]",
+      "uuid" : "755ebb7e-83e4-4cd0-9de4-fa578a69c57f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Hb gm% during diagnosis [H]",
+        "uuid" : "88f1efc5-3c06-48ef-8220-4bd9a3f241a4",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "WBC count during diagnosis [H]",
+      "uuid" : "e824a4dd-c824-4f1e-925a-06ab4aedf847",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "WBC count during diagnosis [H]",
+        "uuid" : "b6c91d94-b2ad-4df9-9616-831bc4f2d385",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 15.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Urine RE during diagnosis [H]",
+      "uuid" : "de8ae574-ab3a-43dd-9a9d-cfaaa21dd0fd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Urine RE during diagnosis [H]",
+        "uuid" : "3534d08e-4207-4dab-b334-0481d74b7488",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 16.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Was pneumococcal vaccine administered [H]",
+      "uuid" : "e8a9113e-74a3-4211-9136-1d5924981834",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Was pneumococcal vaccine administered [H]",
+        "uuid" : "b1c25341-667f-4229-96eb-799b5f7d2c3b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "False [H]",
+          "uuid" : "50b20dc3-41e9-4d9c-b2af-266647214c57",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "True [H]",
+          "uuid" : "7e9a5117-bc2b-45e4-b92c-cd5796f9d36b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 17.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Date of pneumococcal vaccination [H]",
+      "uuid" : "050f3f53-8a3c-4783-b39b-7832eea4e6b3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Date of pneumococcal vaccination [H]",
+        "uuid" : "478f49bc-9223-4994-b7ec-90137a05a18c",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 18.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "Sickle cell Enrolment (Hospital)",
+    "timed" : false
+  } ],
+  "decisionConcepts" : [ ]
+}

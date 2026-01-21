@@ -1,0 +1,510 @@
+{
+  "name" : "Ashwini Registration Form",
+  "uuid" : "1593d5f5-b247-4f5d-8734-e73c92b4f643",
+  "formType" : "IndividualProfile",
+  "formElementGroups" : [ {
+    "uuid" : "c551e715-722c-497e-badd-0976a93e6960",
+    "name" : "Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Sangam Number",
+      "uuid" : "374be040-bb0d-4305-957a-6bca0c7774ea",
+      "keyValues" : [ {
+        "key" : "unique",
+        "value" : true
+      } ],
+      "concept" : {
+        "name" : "Sangam Number",
+        "uuid" : "c9e64f06-23ac-47dc-b7e4-c93b819f52ce",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "validFormat" : {
+        "regex" : "^[0-9]{8}$",
+        "descriptionKey" : "Required8Digits"
+      },
+      "mandatory" : false
+    }, {
+      "name" : "Contact Number",
+      "uuid" : "5eb27496-e35d-44cc-be83-d644b6daaf4f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Contact Number",
+        "uuid" : "82fa0dbb-92f9-4ec2-9263-49054e64d909",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Aadhaar ID",
+      "uuid" : "8ae3bcbc-3a98-45b5-a1d5-34273125bc4e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Aadhaar ID",
+        "uuid" : "43c4860f-fccf-48c9-818a-191bc0f8d0cf",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "",
+      "mandatory" : false
+    }, {
+      "name" : "Ration Card Number",
+      "uuid" : "be81a47c-ba63-4dce-811c-53e717af558b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Ration Card Number",
+        "uuid" : "5266b857-1421-4f00-a64c-999d856e0f63",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "CMCHIS Card Number",
+      "uuid" : "4cd80d30-61b0-42f3-b1ee-77ad31849da5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "CMCHIS Card Number",
+        "uuid" : "4db892ee-b062-41df-8317-9c411f09729e",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Aadhaar Card Number",
+      "uuid" : "d6283043-cbfa-4bab-bc26-0650c201c729",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Aadhaar Card Number",
+        "uuid" : "7b3caefc-6159-4da1-9d08-94b98ff74943",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Aadhaar Card Number",
+      "uuid" : "f8f89101-ff37-49aa-820b-ddc55c9888e7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Aadhaar Card Number",
+        "uuid" : "7b3caefc-6159-4da1-9d08-94b98ff74943",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const individual = params.entity;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let value;\n    let aadhaar = individual.programEncounter?.getObservationValue(\"208b5054-7969-4465-a90f-a5a826e6cdaa\");\n    if (aadhaar !== undefined && aadhaar !== null) {\n        value = aadhaar;\n    }   \n    else {\n        value = 'nill'\n    }\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, value, [], []);\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Aadhaar Card Number",
+      "uuid" : "7ed53dc1-3a6f-4f10-a36e-4896ae0dc871",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Aadhaar Card Number",
+        "uuid" : "7b3caefc-6159-4da1-9d08-94b98ff74943",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let value;\n    let aadhaar = programEncounter.individual.getObservationReadableValue(\"208b5054-7969-4465-a90f-a5a826e6cdaa\");\n    if (aadhaar !== undefined && aadhaar !== null) {\n        value = aadhaar;\n    }\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, value, [], []);\n};",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "display" : "Details",
+    "timed" : false
+  }, {
+    "uuid" : "1bfba8ea-b3c0-4f9c-93a6-5506631fbaa4",
+    "name" : "Family Details",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Husband/Father name",
+      "uuid" : "3f9b4690-056e-467a-a811-17c61277b5c6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Father/Husband",
+        "uuid" : "4edb709d-a0ad-44fd-9132-2884054cd114",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Mother's name",
+      "uuid" : "ea5aac74-0f79-4aa6-bb86-ddbad8908ca9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Mother's Name",
+        "uuid" : "36525e7b-575f-4b34-aae8-9a031adb84eb",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "Family Details",
+    "timed" : false
+  }, {
+    "uuid" : "1329ba69-07f6-4c3b-8e9b-9680b3d3a415",
+    "name" : "Socio Economic Details",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Tribe",
+      "uuid" : "128f7694-0ac5-4685-9e4c-d15c9ca4d688",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Tribe",
+        "uuid" : "14c794f1-2db6-4646-94b9-ac933b7e71bd",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Bettakurumba",
+          "uuid" : "a6b9c130-6ad1-4b97-9be3-3e610c66e4af",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Irula",
+          "uuid" : "232d39aa-33c5-45f9-9f4c-d55b9d8fb7d5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Paniya",
+          "uuid" : "7d3039fa-4297-4161-971b-1dd1ef0150ef",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mullakurumba",
+          "uuid" : "cd896b0f-8880-40e2-8550-11c5fd554bf7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Kattunaikar",
+          "uuid" : "c15f9739-3d26-4583-991f-894975ac7cbe",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "display" : "Socio Economic Details",
+    "timed" : false
+  }, {
+    "uuid" : "be4a4e55-99b6-4977-8881-e8970bd86a5c",
+    "name" : "Medical Details",
+    "displayOrder" : 4.0,
+    "formElements" : [ {
+      "name" : "Blood Group",
+      "uuid" : "6a89e62e-59f4-4155-852f-35aa5dc9d4a1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Blood group",
+        "uuid" : "3493c80a-8af5-40e6-b598-8385c4db2bd7",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "A+",
+          "uuid" : "da859a32-2850-4376-8f14-f49392f8e8cb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "O+",
+          "uuid" : "23629c90-8071-47b8-86c8-f060e03b8722",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "B-",
+          "uuid" : "345712f0-1437-490e-a0d0-6ab6f795f2c6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AB+",
+          "uuid" : "3293d4f4-15e9-4fbe-8cad-d966a9a90385",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AB-",
+          "uuid" : "a68bc952-8abc-44d6-a12b-76e8fdbc3ed3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "A-",
+          "uuid" : "69e4b4dc-be2d-476b-8ea5-567c71f57526",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "B+",
+          "uuid" : "be517796-a3ea-4feb-ae1f-bdf6ef06f22b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "O-",
+          "uuid" : "2870bad6-c36a-4054-84f4-5c2314fe8c23",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Medical History",
+      "uuid" : "ea62f6d5-6780-4485-bde3-ac02e3ffd30d",
+      "keyValues" : [ {
+        "key" : "ExcludedAnswers",
+        "value" : [ "Nephrotic syndrome", "HIV/AIDS" ]
+      } ],
+      "concept" : {
+        "name" : "Medical history",
+        "uuid" : "2991127b-7064-4027-a030-4a3a8d0e8aa7",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Epilepsy",
+          "uuid" : "a34bf7a0-4d55-41fa-855a-0b8094f369f7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "TB",
+          "uuid" : "ca8a5f57-c409-47ad-8acf-921cdd0fc191",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hepatitis B Positive",
+          "uuid" : "f9b654e6-628b-4bbf-b3ee-2adc5ab7ea1c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Renal Disease",
+          "uuid" : "2e86955f-0d81-4e80-a1f4-255b3c186bec",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Asthma",
+          "uuid" : "3d6fcc5e-fb31-4222-aa69-a02d43ff91cf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Diabetes",
+          "uuid" : "674f348f-5075-4c85-8bc2-9edfdee27505",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Nephrotic syndrome",
+          "uuid" : "5a798bac-6417-4b36-98c8-13d4380aa69e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HIV/AIDS",
+          "uuid" : "8425af99-4a07-4d99-97b2-cf955713a560",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hypertension",
+          "uuid" : "998d1bae-05d8-47b9-89b8-0254829f238f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Heart-related Diseases",
+          "uuid" : "712e683a-337d-49bd-a3d7-f7b0e1b8e22e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sickle Cell",
+          "uuid" : "37acc93a-8416-4440-ba68-d61ac4ba4c5f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    } ],
+    "display" : "Medical Details",
+    "timed" : false
+  }, {
+    "uuid" : "c74c6e80-43be-44d6-a6d3-860b4135b349",
+    "name" : "Personal Habits",
+    "displayOrder" : 5.0,
+    "formElements" : [ {
+      "name" : "Addiction Details",
+      "uuid" : "c953b3c2-690b-4a39-ab92-15537fbff838",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Addiction Details",
+        "uuid" : "2ebca9be-3be3-4d11-ada0-187563ff04f8",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No Addiction",
+          "uuid" : "c7f89d3c-2aa3-4570-a7a5-163e002fba66",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tobacco",
+          "uuid" : "ef29759b-5f74-4f5a-b186-fea7697cfb34",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Both",
+          "uuid" : "246df73a-07d8-4924-8cf9-787dea8278fe",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Alcohol",
+          "uuid" : "92654fda-d485-4b6d-97c5-8a8fe2a9582a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "display" : "Personal Habits",
+    "timed" : false
+  } ],
+  "decisionRule" : "\"use strict\";\n({ params, imports }) => {\n    const individual = params.entity;\n    const decisions = params.decisions;\n    const _ = imports.lodash;\n    //Add Aadhaar\n    const valchk = new imports.rulesConfig.RuleCondition({ individual })\n        .when.valueInRegistration(\"43c4860f-fccf-48c9-818a-191bc0f8d0cf\")\n        .notDefined.matches();\n    if (valchk) {\n        const encounter = _.find(\n            individual.encounters,\n            enc => enc.encounterType.name === 'Bahmni Patient Registration'\n        );\n        console.log('Encounter ----->', encounter);\n        const Aadhaar = encounter\n            ? encounter.getObservationReadableValue('Aadhar card number [HP]')\n            : null;\n        console.log('Aadhaar ----->', Aadhaar);\n        decisions.registrationDecisions.push({\n            name: \"Aadhaar ID\",\n            value: Aadhaar\n        });\n    }\n    //Add Ration Card Number\n    const valchkration = new imports.rulesConfig.RuleCondition({ individual })\n        .when.valueInRegistration(\"5266b857-1421-4f00-a64c-999d856e0f63\")\n        .notDefined.matches();\n    if (valchkration) {\n        const encounter = _.find(\n            individual.encounters,\n            enc => enc.encounterType.name === 'Bahmni Patient Registration'\n        );\n        console.log('Encounter ----->', encounter);\n        const ration = encounter\n            ? encounter.getObservationReadableValue('Ration Card Number [HP]')\n            : null;\n        console.log('ration ----->', ration);\n        decisions.registrationDecisions.push({\n            name: \"Ration Card Number\",\n            value: ration\n        });\n    }\n    //Add CMCHIS Card Number\n    const valchkcmchis = new imports.rulesConfig.RuleCondition({ individual })\n        .when.valueInRegistration(\"4db892ee-b062-41df-8317-9c411f09729e\")\n        .notDefined.matches();\n    if (valchkcmchis) {\n        const encounter = _.find(\n            individual.encounters,\n            enc => enc.encounterType.name === 'Bahmni Patient Registration'\n        );\n        console.log('Encounter ----->', encounter);\n        const cmchis = encounter\n            ? encounter.getObservationReadableValue('CMCHIS Card Number [HP]')\n            : null;\n        console.log('cmchis ----->', cmchis);\n        decisions.registrationDecisions.push({\n            name: \"CMCHIS Card Number\",\n            value: cmchis\n        });\n    }\n    return decisions;\n};\n\n\n\n",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.loader {
+  border: 16px solid #f3f3f3;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; 
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 170px;
+  height: 170px;
+  -webkit-animation: spin 2s linear infinite; 
+  animation: spin 2s linear infinite;
+}
+
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+img {
+  display: block;
+  margin-left: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 170px;
+  height:170px;
+}
+</style>
+</head>
+<body>
+<div id="mydiv">
+  <img src="http://ashwini.org/wp-content/uploads/2022/10/Ashwini-LOGO-Transparent.png" alt="ASHWINI" width="500" height="600">
+</div>
+<div class="loader"></div>
+
+</body>
+</html>

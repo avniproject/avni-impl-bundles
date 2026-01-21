@@ -1,0 +1,105 @@
+{
+  "name" : "Cancel Form",
+  "uuid" : "e269fff7-6ac9-41d8-85f9-1fa3cb131629",
+  "formType" : "ProgramEncounterCancellation",
+  "formElementGroups" : [ {
+    "uuid" : "645e70f6-909c-408f-88c8-329169562558",
+    "name" : "Visit cancel details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Reason of Cancel",
+      "uuid" : "35512da7-639b-490d-b9dc-73c7d2cd92d1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Reason Of Cancel",
+        "uuid" : "e68a92d7-7a0b-4743-8e9b-8e57159b7beb",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Unplanned visit done",
+          "uuid" : "673bb4ae-a5f7-40c9-b6ce-d9fd131e3ee3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Field Worker is on Leave",
+          "uuid" : "01944212-4cf3-48fa-ab07-b081228bb6c4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Out of Village",
+          "uuid" : "1e184384-8e29-48c6-9d06-b08b7ed6b61e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Death",
+          "uuid" : "afff87d7-4c40-4dd4-9bf7-8e5d9adb3b83",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Others",
+          "uuid" : "118fa43e-525f-41d6-ad3f-98a4857e2d3e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Parmanent Migration",
+          "uuid" : "a5096fda-a8d4-4791-8942-6b37f1fbb3fb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hospitalization",
+          "uuid" : "ab2277df-f4fe-4a93-b836-24bba1e599d9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Specify, other reason of cancel",
+      "uuid" : "eaaf253c-c9ac-4675-ad62-d8d5726387cc",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other Reason of Cancel",
+        "uuid" : "fffe1a35-84b0-4d06-b672-128efe02fb83",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "\"use strict\";\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const formElement = params.formElement;\n    \nconst cancelReasonObs = programEncounter.findCancelEncounterObservation('Reason of Cancel');\nconst answer = _.isNil(cancelReasonObs) ? undefined : cancelReasonObs.getReadableValue();  \n\n// cancelReasonObs && cancelReasonObs.getReadableValue(); \nconsole.log('cancelReasonObs',cancelReasonObs);\nconsole.log('answer',answer);\nlet isVisible = false;\nif (answer == 'Other') \n  isVisible = true;\n \n        \n      return new imports.rulesConfig.FormElementStatus(formElement.uuid, isVisible);\n  };",
+      "mandatory" : true
+    } ],
+    "display" : "Visit cancel details",
+    "timed" : false
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "//SAMPLE RULE EXAMPLE\n\"use strict\";\n({ params, imports }) => {\n  const programEncounter = params.entity;\n  const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({\n    programEncounter\n  });\n  //add new visit schedule object to scheduleBuilder\n  const hasExitedProgram = programEncounter => programEncounter.programEnrolment.programExitDateTime;  \n  let currentVisitDate = programEncounter.encounterDateTime || programEncounter.earliestVisitDateTime;\n  \n  let visitDate = imports.moment(currentVisitDate).add(30, 'days').toDate();\n  let visitname ;\n  console.log('programEncounter.encounterType.name',programEncounter.encounterType.name);\n  if (!hasExitedProgram(programEncounter)) {\n            switch (programEncounter.encounterType.name) {\n                case 'Mental Health followup':\n                    visitname = 'Mental Health followup';\n                    break;\n                case 'FP monthly assessment':\n                     visitname = 'FP monthly assessment';\n                    break;\n                case 'Chronic sickness followup':\n                     visitname = 'Chronic sickness followup';\n                    break;\n                case 'Sickle Cell followup':\n                     visitname = 'Sickle Cell followup';\n                    break;\n                case 'TB followup':\n                     visitname = 'TB followup';\n                    break;\n                }  \n                \n  scheduleBuilder\n    .add({\n      name: visitname,\n      encounterType: visitname,\n      earliestDate: visitDate,\n      maxDate: imports.moment(visitDate).add(20, 'days').toDate()\n    });\n     \n}\n                \n \n  \n  return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

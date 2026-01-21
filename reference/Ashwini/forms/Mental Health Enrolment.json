@@ -1,0 +1,700 @@
+{
+  "name" : "Mental Health Enrolment",
+  "uuid" : "fce850c9-40cc-4f2d-bb77-60789b2919dc",
+  "formType" : "ProgramEnrolment",
+  "formElementGroups" : [ {
+    "uuid" : "0e9967c8-49e9-448d-a8ee-9e520a85f940",
+    "name" : "Identification",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Diagnosis",
+      "uuid" : "3ce8dd47-5151-48a2-8730-ca3c276a94e3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Diagnosis_MH",
+        "uuid" : "137f850d-c3a3-4f8f-a7e5-f74b2986423b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Psychoactive and substance use disorder",
+          "uuid" : "10c90cca-1582-42f1-afaa-72b2459abf83",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Obsessive compulsive disorder",
+          "uuid" : "8517b569-31f3-4533-be8d-8fccac210959",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Personality disorder",
+          "uuid" : "10d86e2c-b31a-4bde-b957-db2a3562d060",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mania",
+          "uuid" : "a88390ca-58f0-4119-8e51-3db373885caa",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Bipolar disorder",
+          "uuid" : "b1e9145c-8d6e-4fc2-a620-adf5d8f2feac",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Post Traumatic Stress Disorder",
+          "uuid" : "91a9c6bc-0e8e-474c-b556-7db31a8786b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Psychosis",
+          "uuid" : "0fcc81bc-012a-432e-b1eb-5ba69893ce75",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "keyValues" : [ ],
+          "media" : [ ]
+        }, {
+          "name" : "Depression",
+          "uuid" : "c625a4a8-3c71-4ad2-8716-90e29c265b70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Anxiety disorder",
+          "uuid" : "26632c29-4c4d-49d8-a849-87c742e69e80",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Epilepsy",
+          "uuid" : "a34bf7a0-4d55-41fa-855a-0b8094f369f7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Others",
+          "uuid" : "118fa43e-525f-41d6-ad3f-98a4857e2d3e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Schizophrenia",
+          "uuid" : "35dac380-3bba-4736-b2d0-f86e9780d733",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Organic disorder(Delirium,Dementia)",
+          "uuid" : "38f29a7d-9265-486d-9410-4701350968e1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Psychosexual disorders",
+          "uuid" : "a4d2c58e-783f-4da5-945b-6f225bb8a522",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Somatoform disorders",
+          "uuid" : "3f803f4f-7594-4680-ad3a-f946da2feb5f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Specify others",
+      "uuid" : "189f2f0c-0341-487f-ac0c-65b60ee5bd7e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Others_MH",
+        "uuid" : "cb97f6d3-684a-4ea4-98a8-ed44b5918102",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Diagnosis_MH').containsAnswerConceptName(\"Others\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "When was the diagnosis made",
+      "uuid" : "7d651e86-fa39-43d4-af71-cbc27288d7c7",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "Calendar"
+      } ],
+      "concept" : {
+        "name" : "When was the diagnosis made",
+        "uuid" : "d7e1e91f-cf34-404d-94a9-1f50f6578703",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Presenting complaints",
+      "uuid" : "2ff044aa-9c4e-4172-9002-df9d472397e7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Presenting complaints",
+        "uuid" : "266df9a6-e77d-464b-8c4a-d6f9bb4515b2",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "History of presenting illness",
+      "uuid" : "09c49cf1-bfc1-4de6-99a3-8e86f08296d1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "History of presenting illness",
+        "uuid" : "25993e8b-f27d-4392-bac9-d753ba8d80bb",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Family history",
+      "uuid" : "7e70af06-e73b-4790-9207-d5b1a75c08bc",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Family history",
+        "uuid" : "18fa9773-bf4b-47f8-9535-f1573a477940",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Consanginous marriage",
+          "uuid" : "e3739448-403e-4654-9bf1-c7431affb7d1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hypertension",
+          "uuid" : "998d1bae-05d8-47b9-89b8-0254829f238f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "TB",
+          "uuid" : "ca8a5f57-c409-47ad-8acf-921cdd0fc191",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Diabetes",
+          "uuid" : "674f348f-5075-4c85-8bc2-9edfdee27505",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mental illness",
+          "uuid" : "674d3b8c-6dc2-41b6-920e-54db974adab8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sickle cell disease in family",
+          "uuid" : "eae794b9-9ae9-45da-ab57-ce0f87de9939",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Contact with TB",
+          "uuid" : "f231abab-2baf-4e53-a49f-f0de8c534648",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Treatment history",
+      "uuid" : "529a5e1e-15da-4131-bfe9-7beb7a72b2f9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Treatment history",
+        "uuid" : "7f237785-48bf-4cfc-a21c-8d7a821245d8",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "display" : "Identification",
+    "timed" : false
+  }, {
+    "uuid" : "9a17a547-2950-40f9-8c86-f51ee2c5f2aa",
+    "name" : "Medication",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Is the patient under medication",
+      "uuid" : "9e21e8f9-9184-4d89-9b48-8bd08c296456",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is the patient under medication",
+        "uuid" : "2f942027-d055-43ab-aac6-0aca2aac290e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "What medicines are being given",
+      "uuid" : "58583112-af69-4112-914f-3145eb69941a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Medicines are being given",
+        "uuid" : "aeb76af2-6335-4fba-aa06-5ce1f9787b64",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Inj.Fluoxetine",
+          "uuid" : "6d524c5b-04f8-4dc2-b342-68c202ee9e30",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 23.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Pacitine",
+          "uuid" : "d895f48f-8540-4276-a155-c378aeb77bf2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Others",
+          "uuid" : "118fa43e-525f-41d6-ad3f-98a4857e2d3e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 26.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Risperidone",
+          "uuid" : "2066e758-324a-4623-91f5-3e049573ed18",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 17.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Phenytoin",
+          "uuid" : "38da912b-4716-4d42-992e-78e4040e01bf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 22.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Imipramine",
+          "uuid" : "52399610-c3bf-4472-a090-df4571d80bb2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Fluoxetine",
+          "uuid" : "0dc23091-177e-445e-9311-96386672225b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Mirtazapine",
+          "uuid" : "cfcf97d7-cd8b-478f-90ed-489e98507b88",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Amitryptyllin",
+          "uuid" : "24f61456-adb8-4660-8f79-34f121c2e692",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Clobazan",
+          "uuid" : "a6f26f84-c52f-4474-85d8-fa070b825fa1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Carbobamazapine",
+          "uuid" : "ef831f49-ad0e-4461-97ab-fac24c13cd27",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 25.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Clozapine",
+          "uuid" : "7358067f-df49-4491-ba5a-bd806a12dd32",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Lorazepim",
+          "uuid" : "f31b352d-d1e2-47a2-a1fe-75255efe7bf8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Lithium Carbonate",
+          "uuid" : "fb46763b-6fb3-4b89-ae14-513761e2fee8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Sertralin",
+          "uuid" : "c147b859-8011-4c16-bd82-872e98606a40",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 19.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Amisulpride",
+          "uuid" : "cc86558e-a1d9-461d-9d62-ccf34ef388ec",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Inj.Fluphenazine",
+          "uuid" : "a457d877-6a97-43cd-aee0-698582ccd511",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 24.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Clonazepam",
+          "uuid" : "25fd2ac8-a5fd-4086-900e-f37d4cc0dc13",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.escitalapram",
+          "uuid" : "f37f23c6-13d9-4449-bb6e-f471c193e8ca",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Sodium Valproate",
+          "uuid" : "e30b85c3-168f-4b72-9d4d-01ffe871565a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 18.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Olanzapine",
+          "uuid" : "747bfa88-12c3-41d1-b43e-1841e9eb75c1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Quetipine",
+          "uuid" : "d9079daf-1ff1-4879-9d5d-a1e954888db6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Donamem",
+          "uuid" : "6c96d3fe-2dd8-478d-82a7-108037375d83",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 20.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Haloperidol",
+          "uuid" : "fd101ea9-1da9-47f1-81ca-cf6dee08886b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Phenobarbitone",
+          "uuid" : "3fee2f32-c385-45bb-bea8-5f81d6962b9a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 21.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Aripiprazole",
+          "uuid" : "b8809396-1102-4dc4-94da-3ffb56c7328b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Alprazolam",
+          "uuid" : "8561f211-cf86-4481-97c1-0e1bcd5dda95",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Specify Others",
+      "uuid" : "f85acc81-7d66-4842-9cc0-ca4485b73174",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Others MH Medicine",
+        "uuid" : "b5c821c0-7530-49ec-b296-1934909da976",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Medicines are being given').containsAnswerConceptName(\"Others\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Specify others",
+      "uuid" : "155014a0-63bd-49d4-a692-1c2944175ff1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Specify others",
+        "uuid" : "39facae2-de63-4b3e-b0f1-ef32ce74afc2",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('What medicines are being given').containsAnswerConceptName(\"Others\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Specify others",
+      "uuid" : "ca5f9a47-6c75-471f-9d56-79206c82e8b3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Specify others",
+        "uuid" : "39facae2-de63-4b3e-b0f1-ef32ce74afc2",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('What medicines are being given').containsAnswerConceptName(\"Others\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "What was the reason for stopping medication",
+      "uuid" : "f936f3c4-1821-4e30-a583-a1124af60125",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "What was the reason for stopping medication",
+        "uuid" : "24f6de47-5648-475c-9a53-2144035b782b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Others",
+          "uuid" : "118fa43e-525f-41d6-ad3f-98a4857e2d3e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Symptoms got relieved",
+          "uuid" : "10eb6940-b42d-4845-85dc-52e634c27b5a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not compliant with treatment",
+          "uuid" : "e0a05b49-51fb-4310-b97b-4e64774afc13",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Is the patient under medication').containsAnswerConceptName(\"No\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Specify others",
+      "uuid" : "68175157-45cb-4453-a606-8fe36c859b69",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other reason for stopping medication",
+        "uuid" : "f50488de-a2bb-4cb6-8b22-5c8a3e0bd6ba",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('What was the reason for stopping medication').containsAnswerConceptName(\"Others\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    } ],
+    "display" : "Medication",
+    "timed" : false
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "//SAMPLE RULE EXAMPLE\n\"use strict\";\n({ params, imports }) => {\n  const programEnrolment = params.entity;\n  const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({\n    programEnrolment\n  });\n  //add new visit schedule object to scheduleBuilder\n  scheduleBuilder\n    .add({\n      name: \"Mental Health followup\",\n      encounterType: \"Mental Health followup\",\n      earliestDate: programEnrolment.enrolmentDateTime,\n      maxDate: imports.moment(programEnrolment.enrolmentDateTime).add(20, 'days').toDate()\n    });\n  \n  return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

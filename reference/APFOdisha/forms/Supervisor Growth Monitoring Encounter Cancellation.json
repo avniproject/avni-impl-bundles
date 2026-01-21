@@ -1,0 +1,18 @@
+{
+  "name" : "Supervisor Growth Monitoring Encounter Cancellation",
+  "uuid" : "7a94ae08-8e57-4872-8a44-712f96f0cf77",
+  "formType" : "IndividualEncounterCancellation",
+  "formElementGroups" : [ {
+    "uuid" : "cd1c1e92-a2a1-4a05-89ea-54600f53e793",
+    "name" : "Cancel details",
+    "displayOrder" : 1.0,
+    "formElements" : [ ],
+    "display" : "Cancel details",
+    "timed" : false
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "//SAMPLE RULE EXAMPLE\n\"use strict\";\n({params, imports}) => {\n    const encounter = params.entity;\n    const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({\n        encounter\n    });\n    const moment = imports.moment;\n    const _ = imports.lodash;\n\n    const earliestDate = moment(encounter.earliestVisitDateTime).add(1, 'month').startOf('month');\n    const currentlyActive= !encounter.individual.voided;\n\n\n     let isAlreadyScheduled = _.some(encounter.individual.encounters, (enc) =>\n    enc.encounterType.name === 'Supervisor Growth Monitoring Session' &&\n    enc.voided === false &&\n    moment(enc.earliestVisitDateTime).isSame(earliestDate, 'day')\n);\n    \n     \n    if(!isAlreadyScheduled && currentlyActive) {\n        scheduleBuilder.add({\n            name: 'Supervisor Growth Monitoring Session',\n            encounterType: 'Supervisor Growth Monitoring Session',\n            earliestDate: earliestDate.toDate(),\n            maxDate:  earliestDate.endOf('month').toDate()\n        });\n    }\n\n    return scheduleBuilder.getAll();\n}",
+  "validationRule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const validationResults = [];\n  //use imports.common.createValidationError('sample error') to create validation error and push it to validationResults\n  const isBeforeScheduleDate = moment(encounter.cancelDateTime)\n    .isBefore(moment(encounter.earliestVisitDateTime), 'day');\n\n  if (isBeforeScheduleDate) {\n    validationResults.push(\n      imports.common.createValidationError(\"Visit cannot be cancelled before the scheduled date\")\n    );\n  }\n  return validationResults;\n};",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

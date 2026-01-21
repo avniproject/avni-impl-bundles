@@ -1,0 +1,347 @@
+{
+  "name" : "Training Legal Fund",
+  "uuid" : "e14431a2-307c-4fa5-8d4f-ffdf18bc0129",
+  "formType" : "Encounter",
+  "formElementGroups" : [ {
+    "uuid" : "4c0a59f3-16f6-47a1-ae10-01c4e18f4913",
+    "name" : "Legal Fund",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Claim Legal Fund",
+      "uuid" : "b1a972bb-4e05-4478-8f69-4082e4014cd1",
+      "keyValues" : [ {
+        "key" : "repeatable",
+        "value" : true
+      } ],
+      "concept" : {
+        "name" : "LEGAL FUND ENCOUNTER",
+        "uuid" : "22a96d47-8121-455b-b5e0-8fa7c5da1c4e",
+        "dataType" : "QuestionGroup",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Details",
+      "uuid" : "0d0995dd-301d-44b6-94fb-fb92d603a559",
+      "keyValues" : [ {
+        "key" : "repeatable",
+        "value" : true
+      } ],
+      "concept" : {
+        "name" : "Training Legal Fund",
+        "uuid" : "f960e93c-8571-4498-97ba-b3f14b806e3f",
+        "dataType" : "QuestionGroup",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Date of Receipt",
+      "uuid" : "72443174-a26e-4453-b309-cc2a663b7ac1",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "calendar"
+      } ],
+      "concept" : {
+        "name" : "Date of Receipt - Training Legal Fund",
+        "uuid" : "9cc2569b-b6ee-4b9a-814c-13e7ac1f9b3d",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({ params, imports }) => {\n    const encounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n    const questionGroupIndex = params.questionGroupIndex;\n\n    const questionGroup = encounter.getObservationValue(\"f960e93c-8571-4498-97ba-b3f14b806e3f\");\n    if(questionGroup){\n        const currentQuestionGroup = questionGroup[questionGroupIndex];\n        \n\n        if(currentQuestionGroup){\n            let dateofReceipt = currentQuestionGroup.findObservationByConceptUUID(\"9cc2569b-b6ee-4b9a-814c-13e7ac1f9b3d\");\n        \n            if(dateofReceipt){\n                const currentDate = moment().startOf(\"day\");\n                dateofReceipt = moment(dateofReceipt.getValue()).startOf(\"day\");\n                if (dateofReceipt.isAfter(currentDate)) {\n                    validationErrors.push(\"Invalid date: Future dates are not allowed\");\n                }\n            }\n            else{\n                value = moment().startOf(\"day\");\n            }\n        }\n        else{\n            value = moment().startOf(\"day\");\n        }\n    }\n    else{\n        value = moment().startOf(\"day\");\n    }\n    \n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "parentFormElementUuid" : "0d0995dd-301d-44b6-94fb-fb92d603a559",
+      "mandatory" : true
+    }, {
+      "name" : "Amount",
+      "uuid" : "ba661ced-d86a-4919-b114-2e46d5acbe7a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Amount - Training Legal",
+        "uuid" : "54ea2f70-0443-459e-94cc-7ab3ca7f7e0a",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.questionGroupValueInEncounter(\"54ea2f70-0443-459e-94cc-7ab3ca7f7e0a\", \"f960e93c-8571-4498-97ba-b3f14b806e3f\", params.questionGroupIndex).lessThan(0).matches();\n  \n  if(condition11 ){\n    validationErrors.push(\"Amount should be greater than or equal to 0\");  \n}\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "details" : {
+            "validationError" : "Amount should be greater than or equal to 0"
+          },
+          "actionType" : "validationError"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "questionGroupEncounter",
+                "conceptName" : "Amount - Training Legal",
+                "conceptUuid" : "54ea2f70-0443-459e-94cc-7ab3ca7f7e0a",
+                "conceptDataType" : "Numeric",
+                "parentConceptUuid" : "f960e93c-8571-4498-97ba-b3f14b806e3f"
+              },
+              "rhs" : {
+                "type" : "value",
+                "value" : 0
+              },
+              "operator" : "lessThan"
+            } ]
+          }
+        } ]
+      } ],
+      "parentFormElementUuid" : "0d0995dd-301d-44b6-94fb-fb92d603a559",
+      "mandatory" : true
+    }, {
+      "name" : "Upload File",
+      "uuid" : "2cbb5291-45e4-412e-8d2d-412ff0b0a409",
+      "keyValues" : [ {
+        "key" : "allowedMaxSize",
+        "value" : 1
+      } ],
+      "concept" : {
+        "name" : "Upload File",
+        "uuid" : "9364a616-e0f0-4bdf-b0d5-cbd7dceee763",
+        "dataType" : "File",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "0d0995dd-301d-44b6-94fb-fb92d603a559",
+      "mandatory" : false
+    }, {
+      "name" : "Upload Image",
+      "uuid" : "4726c777-0535-4440-bf29-768b0ba88a3a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Upload Image",
+        "uuid" : "fe30a8b6-0c79-4fb6-988a-4f2a717a8fbe",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "0d0995dd-301d-44b6-94fb-fb92d603a559",
+      "mandatory" : false
+    }, {
+      "name" : "Whether uploading FILE or PHOTO",
+      "uuid" : "ce0af8d7-4d7b-46a4-9f2a-18f418eb5902",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Whether uploading FILE or PHOTO",
+        "uuid" : "2cb53da9-9d23-474e-920c-fe6f99520ca6",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "FILE",
+          "uuid" : "7bceada8-146b-44dd-b333-39a90f2c59f5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PHOTO",
+          "uuid" : "11a4f46e-5c13-4dee-9462-9e1758a72f1d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "0d0995dd-301d-44b6-94fb-fb92d603a559",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Upload File",
+      "uuid" : "660337bf-fe89-490f-80bf-dca8926e203a",
+      "keyValues" : [ {
+        "key" : "allowedMaxSize",
+        "value" : 1
+      } ],
+      "concept" : {
+        "name" : "File",
+        "uuid" : "ba34d47d-55b9-465f-ac5d-46742a95078a",
+        "dataType" : "File",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "",
+      "parentFormElementUuid" : "0d0995dd-301d-44b6-94fb-fb92d603a559",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Upload Photos",
+      "uuid" : "1b7b1ab4-4e65-4328-9880-8141c4cbb4d8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "photos",
+        "uuid" : "cbf24d32-9b0a-4a9a-bf01-93c774ec5112",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "",
+      "parentFormElementUuid" : "0d0995dd-301d-44b6-94fb-fb92d603a559",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Upload receipt",
+      "uuid" : "401e0132-5aba-4cc1-b161-4524792360a8",
+      "keyValues" : [ {
+        "key" : "allowedMaxSize",
+        "value" : 1
+      } ],
+      "concept" : {
+        "name" : "Upload receipt - Training Legal Fund (voided~269135)",
+        "uuid" : "e575e1d8-c1d0-41ef-8f5a-b826bb096f39",
+        "dataType" : "File",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ],
+        "voided" : true
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "0d0995dd-301d-44b6-94fb-fb92d603a559",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Date of Receipt",
+      "uuid" : "169a1822-f9a2-44cb-93b9-a101eb460b1e",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "calendar"
+      } ],
+      "concept" : {
+        "name" : "Date of receipt - Legal Fund (voided~266436)",
+        "uuid" : "d2869f1e-4e6c-4b5c-815d-1d96a08889cd",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ],
+        "voided" : true
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({ params, imports }) => {\n    const encounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n    const questionGroupIndex = params.questionGroupIndex;\n\n    const questionGroup = encounter.getObservationValue(\"22a96d47-8121-455b-b5e0-8fa7c5da1c4e\");\n    console.log(\"\\n\\n\\nquestionGroup---------SID>\",questionGroup);\n    if(questionGroup){\n        const currentQuestionGroup = questionGroup[questionGroupIndex];\n        console.log(\"currentQuestionGroup--------->\",currentQuestionGroup);\n\n        let dateofReceipt = currentQuestionGroup.getObservationValue(\"d2869f1e-4e6c-4b5c-815d-1d96a08889cd\");\n      console.log(\"dateofReceipt--------->\",dateofReceipt);\n      \n        console.log('Today----------->', moment().startOf(\"day\"));\n\n        if(!dateofReceipt){\n            value = moment().startOf(\"day\");\n            dateofReceipt = moment().startOf(\"day\");\n        }\n        else{\n            const currentDate = moment().startOf(\"day\");\n            dateofReceipt = moment(dateofReceipt).startOf(\"day\");\n            if (dateofReceipt.isAfter(currentDate)) {\n                validationErrors.push(\"Invalid date: Future dates are not allowed\");\n            }\n        }\n    }\n    else{\n        console.log(\"Inside Else\");\n        value = moment().startOf(\"day\");\n    }\n    \n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "parentFormElementUuid" : "b1a972bb-4e05-4478-8f69-4082e4014cd1",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Amount",
+      "uuid" : "994b3281-4568-4dc1-99f6-e202dd1df658",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Amount - Legal Fund",
+        "uuid" : "498f42be-21dc-4b03-a2ed-5761d327583f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.questionGroupValueInEncounter(\"d2869f1e-4e6c-4b5c-815d-1d96a08889cd\", \"22a96d47-8121-455b-b5e0-8fa7c5da1c4e\", params.questionGroupIndex).defined.matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "questionGroupEncounter",
+                "conceptName" : "Date of receipt - Legal Fund",
+                "conceptUuid" : "d2869f1e-4e6c-4b5c-815d-1d96a08889cd",
+                "conceptDataType" : "Date",
+                "parentConceptUuid" : "22a96d47-8121-455b-b5e0-8fa7c5da1c4e"
+              },
+              "rhs" : { },
+              "operator" : "defined"
+            } ]
+          }
+        } ]
+      } ],
+      "parentFormElementUuid" : "b1a972bb-4e05-4478-8f69-4082e4014cd1",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Stage at which taken",
+      "uuid" : "e5f70755-b0e2-4be1-b7b9-2b42d4d89aaf",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Stage at which Taken",
+        "uuid" : "02a93e4e-1ce1-42d0-9c08-89baf75ea6d5",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "b1a972bb-4e05-4478-8f69-4082e4014cd1",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Upload receipt",
+      "uuid" : "e543e3c8-282b-4506-bc6a-03229a78303c",
+      "keyValues" : [ {
+        "key" : "allowedMaxSize",
+        "value" : 1
+      } ],
+      "concept" : {
+        "name" : "Upload receipt - Legal Fund",
+        "uuid" : "46c5bfa8-4d88-4b69-b7c1-5b1b78ae99a3",
+        "dataType" : "File",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "b1a972bb-4e05-4478-8f69-4082e4014cd1",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "display" : "Legal Fund",
+    "timed" : false
+  } ],
+  "decisionRule" : "\"use strict\";\n({params, imports}) => {\n    const encounter = params.entity;\n    const decisions = params.decisions;\n    const moment = imports.moment;\n    const encounterDecisions = [];\n    \n    const encounterDateForEditCase = encounter.getObservationValue(\"1f4bc226-9e3f-42c9-a332-2d81cd8e64f7\");\n    \n    if (!encounterDateForEditCase) {\n      let encDateTime = moment().format(\"YYYY-MM-DD HH:mm:ss\");\n      \n      if (encDateTime) {\n        encounterDecisions.push({ name: \"Encounter DateTime\", value: encDateTime });\n      }\n      decisions.encounterDecisions.push(...encounterDecisions);\n    }\n    \n    return decisions;\n};",
+  "visitScheduleRule" : "",
+  "validationRule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const validationResults = [];\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let validationErrors = [];\n  const moment = imports.moment;\n  \n  \n  let documentDetails = programEncounter.findGroupedObservation(\"f960e93c-8571-4498-97ba-b3f14b806e3f\");\n  if(documentDetails && documentDetails.length > 0){\n\n    for(let i = 0;i<documentDetails.length;i++){\n      let currentQuestionGroup = documentDetails[i]\n      let uploadFile = currentQuestionGroup.findObservationByConceptUUID(\"9364a616-e0f0-4bdf-b0d5-cbd7dceee763\");\n      let uploadImage =  currentQuestionGroup.findObservationByConceptUUID(\"fe30a8b6-0c79-4fb6-988a-4f2a717a8fbe\");\n\n      if((uploadFile === null || uploadFile === undefined) && (uploadImage === null || uploadImage === undefined)){\n        let validationError = imports.common.createValidationError('Please upload either image or file');\n        validationResults.push(validationError);\n      }\n    }\n  }  \n  \n  const encounterDateForEditCase = programEncounter.getObservationValue(\"1f4bc226-9e3f-42c9-a332-2d81cd8e64f7\");\n  const encounterDate = programEncounter.encounterDateTime;\n\n  if (!encounterDateForEditCase) {\n    if (encounterDate) {\n      const today = moment().startOf('day');\n      const encDate = moment(encounterDate).startOf('day');\n\n      if (!encDate.isSame(today, 'day')) {\n        validationResults.push(\n          imports.common.createValidationError(\"Encounter Date should be today's date.\")\n        );\n      }\n    }\n  } else {\n    const encDateEdit = moment(encounterDate).startOf('day');\n    const encDateOriginal = moment(encounterDateForEditCase).startOf('day');\n\n    if (!encDateEdit.isSame(encDateOriginal, 'day')) {\n      validationResults.push(\n        imports.common.createValidationError(\"Encounter Date cannot be changed.\")\n      );\n    }\n  }\n  \n  return validationResults;\n};\n",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

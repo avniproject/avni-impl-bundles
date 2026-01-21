@@ -1,0 +1,49 @@
+{
+  "name" : "Medical Facilitation for Poshan Sathi",
+  "uuid" : "acbfb98e-0317-4cc9-8bfa-fe2aecd8960c",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "701f8cc3-ddce-40b8-a605-e74cee4ff9f4",
+    "name" : "Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Is QRT Intervention Required?",
+      "uuid" : "d38cdef4-5727-4406-94e3-6f3c113a2eb9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is QRT Intervention Required?",
+        "uuid" : "3f11d680-4da0-43b9-a532-e080b855b9d6",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "display" : "Details",
+    "timed" : false
+  } ],
+  "decisionRule" : "\"use strict\";\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const decisions = params.decisions;\n    const decisionsList = [];\n\n    \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter}).when.valueInEncounter(\"3f11d680-4da0-43b9-a532-e080b855b9d6\").containsAnswerConceptName(\"8ebbf088-f292-483e-9084-7de919ce67b7\").matches();\n  \n    if(condition11 ){\n    decisionsList.push({name: \"To be monitored by QRT\", value: [\"Yes\"]});  \n}\n  \n    decisions.enrolmentDecisions.push(...decisionsList);\n    decisions.encounterDecisions.push(...decisionsList);\n    decisions.registrationDecisions.push(...decisionsList);\n    return decisions;\n};",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

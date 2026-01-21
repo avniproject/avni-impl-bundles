@@ -1,0 +1,8 @@
+{
+  "name" : "Chronic sickness followup Encounter Cancellation (voided~215)",
+  "uuid" : "301971d6-4656-471f-a186-f2e72a6c1be7",
+  "formType" : "ProgramEncounterCancellation",
+  "formElementGroups" : [ ],
+  "decisionConcepts" : [ ],
+  "voided" : true
+}

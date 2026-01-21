@@ -1,0 +1,18 @@
+[ {
+  "uuid" : "ac1c365f-df3b-42ab-9f6c-a380922f6f1c",
+  "id" : 6,
+  "name" : "Everyone",
+  "notEveryoneGroup" : false
+}, {
+  "uuid" : "2975a3f9-6ecf-491f-81d4-97e12ed8c2f1",
+  "id" : 122,
+  "name" : "Non MCH programs"
+}, {
+  "uuid" : "9f41a76e-f2ef-4899-ac86-e3c5354663b5",
+  "id" : 289,
+  "name" : "Bahmni Sync"
+}, {
+  "uuid" : "313402c4-5300-47a0-80f6-84117b92f7e5",
+  "id" : 2146,
+  "name" : "ProfilePicUpload"
+} ]

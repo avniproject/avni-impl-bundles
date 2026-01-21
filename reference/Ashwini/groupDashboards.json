@@ -1,0 +1,34 @@
+[ {
+  "uuid" : "42afba90-a7e2-49dd-9722-04348ff2fba5",
+  "voided" : true,
+  "dashboardUUID" : "b28b9844-8109-4f82-9a75-218a190d66d6",
+  "groupUUID" : "ac1c365f-df3b-42ab-9f6c-a380922f6f1c",
+  "groupName" : "Everyone",
+  "dashboardName" : "Hospital visits",
+  "dashboardDescription" : "",
+  "groupOneOfTheDefaultGroups" : true,
+  "primaryDashboard" : false,
+  "secondaryDashboard" : false
+}, {
+  "uuid" : "c147e700-9964-472b-bc75-29087b89cb3e",
+  "voided" : false,
+  "dashboardUUID" : "b28b9844-8109-4f82-9a75-218a190d66d6",
+  "groupUUID" : "ac1c365f-df3b-42ab-9f6c-a380922f6f1c",
+  "groupName" : "Everyone",
+  "dashboardName" : "Hospital visits",
+  "dashboardDescription" : "",
+  "groupOneOfTheDefaultGroups" : true,
+  "primaryDashboard" : false,
+  "secondaryDashboard" : false
+}, {
+  "uuid" : "ab6732fe-a177-4ff9-acaa-2efc8fa92b7b",
+  "voided" : false,
+  "dashboardUUID" : "c4d3bc0a-027e-4a6a-87dd-85e5b7285523",
+  "groupUUID" : "ac1c365f-df3b-42ab-9f6c-a380922f6f1c",
+  "groupName" : "Everyone",
+  "dashboardName" : "Default Dashboard",
+  "dashboardDescription" : null,
+  "groupOneOfTheDefaultGroups" : true,
+  "primaryDashboard" : true,
+  "secondaryDashboard" : false
+} ]

@@ -1,0 +1,7 @@
+{
+  "name" : "Gram Panchayat Interaction Encounter Cancellation",
+  "uuid" : "9d2e0cfe-1122-4dcb-adee-575a536b5b18",
+  "formType" : "IndividualEncounterCancellation",
+  "formElementGroups" : [ ],
+  "decisionConcepts" : [ ]
+}

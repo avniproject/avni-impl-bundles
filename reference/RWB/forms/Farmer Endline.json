@@ -1,0 +1,2163 @@
+{
+  "name" : "Farmer Endline",
+  "uuid" : "5faef044-e77a-48cf-b0b2-a28d15fbd3c6",
+  "formType" : "Encounter",
+  "formElementGroups" : [ {
+    "uuid" : "cd230a21-f90b-471c-86d9-2af36aebd788",
+    "name" : "Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "The total farm area on which Silt is spread",
+      "uuid" : "21d99647-e0d6-4b88-990b-2d970d02152b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "The total farm area on which Silt is spread",
+        "uuid" : "af52922e-bcea-4a9c-b1ae-1882132f7c12",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "documentation" : {
+        "label" : "Land arcers",
+        "value" : "7a49c2a2-a43a-42ba-9241-1beb148785c8"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "Total cost borne by the farmer for carting silt (INR)",
+      "uuid" : "87ff1bf7-2bed-49bd-8f6e-c0b122746d8c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total cost borne by the farmer for carting silt (INR)",
+        "uuid" : "ab6f31f0-20cb-4326-a4f3-9d409a8ac42d",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Total cost borne by the farmer for spreading/levelling silt on farm (INR)",
+      "uuid" : "bb84ad36-dcd3-4e71-a247-06bfc49f1ade",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total cost borne by the farmer for spreading/levelling silt on farm (INR)",
+        "uuid" : "080b1da4-cf42-47b2-83e2-eb07b8db694f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Number of Sub-units to vary depending upon the number of family members",
+      "uuid" : "c181919b-666d-4007-911e-f4bd2e87c02c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of Sub-units to vary depending upon the number of family members",
+        "uuid" : "fef9c6d1-e8b5-4751-94ff-a9d437be592a",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of family members who took silt\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Landholding of family member taking silt 1",
+      "uuid" : "7f6eb11b-86e1-43f8-aa04-350d5ff4830e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Landholding of family member taking silt 1",
+        "uuid" : "274f411a-e377-414e-9489-00bc02c3497d",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of family members who took silt\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Mobile Number of family member 1",
+      "uuid" : "0e1e21d0-4f59-4844-8eb5-ccd4abfe5d08",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Mobile Number of family member 1",
+        "uuid" : "7d1a0e7c-90e3-4f1e-a165-ae0effeb63d6",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of family members who took silt\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Survey Number/ (7/12) of family member 1",
+      "uuid" : "c917a1e1-99fe-44bc-b03c-c7cef672b947",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Survey Number/ (7/12) of family member 1",
+        "uuid" : "fa776c5d-ab3a-4baa-8b0d-f325d8389d5c",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n   statusBuilder.show().when.valueInEncounter(\"Number of family members who took silt\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Number of trolleys/ hywa taken by family member 1",
+      "uuid" : "62413101-62c9-458f-af4a-4787c9348678",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of trolleys/ hywa taken by family member 1",
+        "uuid" : "6de50245-44b1-4b0b-961e-b3854047bb41",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of family members who took silt\").is.greaterThan(0);\n return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Number of trolleys carted",
+      "uuid" : "7389a3f3-ea2d-4c2c-883b-05de44a400cd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of trolleys carted",
+        "uuid" : "584fe343-02f0-4977-9034-5fc87d40bbf1",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "highAbsolute" : 999.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of family members who took silt\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of hyvas/dumper carted",
+      "uuid" : "89607a3f-465f-4672-ab3f-48f3cefc1ad1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of hyvas/dumper carted",
+        "uuid" : "0d1ed0d7-2c6b-419a-afb4-40b2550db7f0",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "highAbsolute" : 999.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n statusBuilder.show().when.valueInEncounter(\"Number of family members who took silt\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total Silt carted",
+      "uuid" : "8e4afe50-05b5-4d57-8265-cea61dd8be28",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Total Silt carted",
+        "uuid" : "b679d7de-ef1e-477f-907b-d2eb8a76cd63",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 16.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  \n  let numberOfTrolleys =0;\n  let numberOfHyvas = 0;\n  let capacityOfHyva = 0;\n  let value = 0;\n  \n  // Number of trolleys * 2.8 cu.m. + Number of hyvas*Capacity of hyva\n   numberOfTrolleys = encounter.getObservationReadableValue('Number of trolleys carted');\n   numberOfHyvas = encounter.getObservationReadableValue('Number of hyvas/dumper carted by family members');\n   \n   if(numberOfHyvas > 0)\n   capacityOfHyva = encounter.getObservationReadableValue('Capacity of Hyva/Dumper in cu.m.');\n   \n  const familyMembers = encounter.getObservationReadableValue('Number of family members who took silt');\n  \n // if(numberOfTrolleys > 0)\n //  value =  numberOfTrolleys * 2.8 ;\n // else if(numberOfHyvas > 0)\n //  value = ( numberOfHyvas * capacityOfHyva);\n   \n    value = (numberOfTrolleys * 2.8)  + (numberOfHyvas * capacityOfHyva);\n   \n  let visibility = false;\n  \n if(familyMembers > 0)\n  visibility = true;\n         \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value.toFixed(2));\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Capacity of Hyva",
+      "uuid" : "8e3e8df7-6ed3-408f-a6e2-ace9d2ea95aa",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Capacity of Hyva (voided~73720)",
+        "uuid" : "1bc61158-9540-4819-b71a-cb5d3b6715e9",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ],
+        "voided" : true
+      },
+      "displayOrder" : 18.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total cost beared by the farmer for carting silt",
+      "uuid" : "0f7ff87c-cfac-4629-be0f-c5e60d11e3c1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total cost beared by the farmer for carting silt",
+        "uuid" : "595c394b-65c8-4c14-bcd9-d25b69b32bdd",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5002.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of family members who took silt",
+      "uuid" : "785b8f13-dc72-473f-b5f1-b489cee8954b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of family members who took silt",
+        "uuid" : "e4c97739-8e4a-41bf-83cf-ca940cc73e90",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "highAbsolute" : 5.0,
+        "highNormal" : 5.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5004.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total cost beared by the farmer for spreading/ levelling the silt on the farm",
+      "uuid" : "1d970b73-e87b-449f-a199-f7a20c02fb2f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total cost beared by the farmer for spreading/ levelling the silt on the farm",
+        "uuid" : "d5de27f7-9ef8-40eb-bcd8-3c909cabb266",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5005.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of trolleys carted by family members",
+      "uuid" : "99416c85-78f7-46e3-9dcc-90bae2e216bf",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of trolleys carted by family members",
+        "uuid" : "c6e8e14d-6151-49cb-860b-e2fc6f1c628f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "highAbsolute" : 999.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5011.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of family members who took silt\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Capacity of trolleys in cu.m. carted by family members",
+      "uuid" : "0599b07e-2358-4e0f-9f9f-05a4e84c2afe",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Capacity of trolleys in cu.m. carted by family members",
+        "uuid" : "98d8c001-fa66-4aad-bc69-275ad311b0d0",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "2.8",
+          "uuid" : "69e6a155-6bb4-4cf9-8dec-0b8057f1931f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.5",
+          "uuid" : "248a4fa2-7d0c-4b14-8191-3ec9e787cfc8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.2",
+          "uuid" : "e8306ab5-2c22-4565-b1a9-5a7491f97c8c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3.5",
+          "uuid" : "669cd23d-50b2-443c-8490-68525ec324ef",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5012.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n   statusBuilder.show().when.valueInEncounter(\"Number of trolleys carted by family members\").is.greaterThan(0); \n    return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of hyvas/dumper carted by family members",
+      "uuid" : "a0949878-3a28-498d-9f25-8eaaf7004f6e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of hyvas/dumper carted by family members",
+        "uuid" : "5554fd2e-a4a0-49a7-809c-97f252ba6700",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "highAbsolute" : 999.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5014.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of family members who took silt\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Capacity of Hyva/Dumper in cu.m. carted by family members",
+      "uuid" : "764490a1-3721-4838-a917-6c4ca715cd9d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Capacity of Hyva/Dumper in cu.m.",
+        "uuid" : "b1634598-6bea-4a6d-af7e-9808a751530b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "20",
+          "uuid" : "f6608f94-3bff-4a6d-a38b-ef14b1e40fa1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "18",
+          "uuid" : "5404d563-5b50-47ae-a3f1-49c71496b3a2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "25",
+          "uuid" : "68211d18-45fe-4053-9639-9480df9de238",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "14",
+          "uuid" : "7c956ebb-acc0-41a0-afdc-c810ddba485a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "16",
+          "uuid" : "19286f0a-957c-4674-b9c9-42ac6c2476ce",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 5015.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of hyvas/dumper carted by family members\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total silt carted by family members",
+      "uuid" : "1c4308d0-8b0c-4d11-924d-67b29bc4af74",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Total silt carted by family members",
+        "uuid" : "a915d997-4231-4cdb-b803-0a0ba75baf17",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5017.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  \n  let numberOfTrolleys =0;\n  let capacityOfTrolleys = 0;\n  \n  let numberOfHyvas = 0;\n  let capacityOfHyva = 0;\n  \n  let value = 0;\n  \n  // Number of trolleys * 2.8 cu.m. + Number of hyvas*Capacity of hyva\n   numberOfTrolleys = encounter.getObservationReadableValue('Number of trolleys carted by family members');\n   numberOfHyvas = encounter.getObservationReadableValue('Number of hyvas/dumper carted by family members');\n   \n    if(numberOfTrolleys > 0)\n  capacityOfTrolleys = encounter.getObservationReadableValue('Capacity of trolleys in cu.m. carted by family members');   \n   \n   if(numberOfHyvas > 0)\n   capacityOfHyva = encounter.getObservationReadableValue('Capacity of Hyva/Dumper in cu.m.');\n   \n  const familyMembers = encounter.getObservationReadableValue('Number of family members who took silt');\n  \n // if(numberOfTrolleys > 0)\n //  value =  numberOfTrolleys * 2.8 ;\n // else if(numberOfHyvas > 0)\n //  value = ( numberOfHyvas * capacityOfHyva);\n   \n    value = (numberOfTrolleys * capacityOfTrolleys)  + (numberOfHyvas * capacityOfHyva);\n   \n  let visibility = false;\n  \n if(familyMembers > 0)\n  visibility = true;\n         \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value.toFixed(2));\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Image of farmer with the farm",
+      "uuid" : "77b8f18c-6800-483c-a08a-fcf83c61209f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Image of farmer with the farm",
+        "uuid" : "193469b7-5f1d-4acb-9b77-eef0a2b8cc32",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5019.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "display" : "Details",
+    "timed" : false
+  }, {
+    "uuid" : "47069cfc-08d8-4b5f-b435-6cff2b82e2b4",
+    "name" : "Farmer Details",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Village of farmer",
+      "uuid" : "7cd3468c-09a8-4c3e-b702-0fdb7d6828cb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Village of farmer",
+        "uuid" : "e559b834-75ae-47a1-90bf-6fc76ad3da47",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "validFormat" : {
+        "regex" : "^[A-Z\\ ]+$",
+        "descriptionKey" : "AddAValidVillageNameInCapitalLetters"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "Aadhar number",
+      "uuid" : "a07e45b6-9ae9-4586-b0dc-f6eed658c746",
+      "keyValues" : [ {
+        "key" : "unique",
+        "value" : true
+      } ],
+      "concept" : {
+        "name" : "Aadhar number",
+        "uuid" : "9673ab6f-fed5-4a03-a0ed-a1e74ac7e0b0",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"3b4b1f6b-61ed-4329-b799-0fda7d53057d\").containsAnswerConceptName(\"c9d2309e-7282-4c8b-8f23-1e58845a753f\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Is Aadhar card or Voter Id available",
+                "conceptUuid" : "3b4b1f6b-61ed-4329-b799-0fda7d53057d",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Aadhar card" ],
+                "answerConceptUuids" : [ "c9d2309e-7282-4c8b-8f23-1e58845a753f" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "validFormat" : {
+        "regex" : "^[0-9]{12}$",
+        "descriptionKey" : "Valid12DigitNumbers"
+      },
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "MGNREGA card number or any other ID card number",
+      "uuid" : "45a495e6-8c5f-4e42-a562-70b164cda390",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "MGNREGA card number or any other ID card number",
+        "uuid" : "1059d039-b5f1-49e5-83fc-ce9eb7e596eb",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Number of dependent family members",
+      "uuid" : "427bf972-4946-46eb-8512-904941326533",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of dependent family members",
+        "uuid" : "b8bed1c9-5133-4901-b754-9848ff32c339",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Voter ID",
+      "uuid" : "ecbe2f9d-3b9c-4ec1-9b05-af3134f0995d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Voter id",
+        "uuid" : "b973940a-ab38-478f-8a5d-487048822e92",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"3b4b1f6b-61ed-4329-b799-0fda7d53057d\").containsAnswerConceptName(\"9d626a7a-92a0-4d0d-b9c5-f55012242b42\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Is Aadhar card or Voter Id available",
+                "conceptUuid" : "3b4b1f6b-61ed-4329-b799-0fda7d53057d",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Voter ID" ],
+                "answerConceptUuids" : [ "9d626a7a-92a0-4d0d-b9c5-f55012242b42" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "validFormat" : {
+        "regex" : "^([a-zA-Z]){3}([0-9]){7}?$|^([a-zA-Z]){2}([\\/])([0-9]){2}([\\/])([0-9]){3}([\\/])([0-9]){7}?$",
+        "descriptionKey" : "Enter a valid voter id number"
+      },
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Voter ID",
+      "uuid" : "0764afcc-4f63-48af-ac0d-0f9df5c87c11",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Voter Id (voided~127971)",
+        "uuid" : "c295421a-e3a9-4e5a-9dc0-ee7a7b4d5f98",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ],
+        "voided" : true
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"3b4b1f6b-61ed-4329-b799-0fda7d53057d\").containsAnswerConceptName(\"9d626a7a-92a0-4d0d-b9c5-f55012242b42\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Is Aadhar card or Voter Id available",
+                "conceptUuid" : "3b4b1f6b-61ed-4329-b799-0fda7d53057d",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Voter ID" ],
+                "answerConceptUuids" : [ "9d626a7a-92a0-4d0d-b9c5-f55012242b42" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "validFormat" : {
+        "regex" : "^([a-zA-Z]){3}([0-9]){7}$",
+        "descriptionKey" : "Enter a valid voter id number"
+      },
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "vid",
+      "uuid" : "8f586115-6771-4479-b658-9d576322ea69",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "df (voided~127972)",
+        "uuid" : "cc10f63f-bf1d-41eb-9fee-0afe55bd5ff2",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ],
+        "voided" : true
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "validFormat" : {
+        "regex" : "^([a-zA-Z]){3}([0-9]){7}$",
+        "descriptionKey" : "sdfsdf"
+      },
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Survey Number of 7/12 or 8A",
+      "uuid" : "827e7c80-0d4c-4b72-b7d4-4f61ce1c613b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Survey Number of 7/12 or 8A",
+        "uuid" : "6e7be18a-6372-4795-aeaf-0691ae798bfd",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5005.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Landholding",
+      "uuid" : "323f9fe6-c69e-4a26-add6-f3e02afb2d0f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Landholding",
+        "uuid" : "65826c46-e1a8-4976-8acf-417f563d64f8",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5008.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Is Aadhar card or Voter Id available ?",
+      "uuid" : "ebe82e85-cd49-41f4-9120-896f7dfd441e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is Aadhar card or Voter Id available",
+        "uuid" : "3b4b1f6b-61ed-4329-b799-0fda7d53057d",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Voter ID",
+          "uuid" : "9d626a7a-92a0-4d0d-b9c5-f55012242b42",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Aadhar card",
+          "uuid" : "c9d2309e-7282-4c8b-8f23-1e58845a753f",
+          "dataType" : "Text",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5022.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Distance from farm",
+      "uuid" : "be4586c5-73b1-4a53-b54f-6119363280c4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Distance from farm",
+        "uuid" : "3e7fd6b7-ecf3-4808-9e37-54653e2f0f8f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5055.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "display" : "Farmer Details",
+    "timed" : false
+  }, {
+    "uuid" : "c6b8f76e-ea74-444b-93ce-eb751428c027",
+    "name" : "Other details",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Type of land silt is spread on",
+      "uuid" : "285042ad-b455-459a-8c7f-6e9e7c87f232",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Type of land silt is spread on",
+        "uuid" : "99bdda89-3d3a-4b90-87a1-e5ecd04c3c23",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Fertile",
+          "uuid" : "c66691ef-5dbc-4053-b9dd-f13a54b09a78",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Barren",
+          "uuid" : "56bab187-29ab-48ee-a5f0-cda1939599f4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Major crops grown on the land",
+      "uuid" : "468a1122-5810-4416-8bd3-bce421ff55d0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Major crops grown on the land",
+        "uuid" : "134757b4-7bcc-4969-9dd9-34bba9d91423",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Major crops to be grown on the land where silt is spread",
+      "uuid" : "f93b829a-ceec-47f2-be2e-ab20ad8fd746",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Major crops to be grown on the land where silt is spread",
+        "uuid" : "485ffca5-3b20-4846-ac20-4f5ef8240117",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Distance from waterbody",
+      "uuid" : "e2c00700-908b-4f6b-a4c5-6904c8bac332",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Distance from waterbody",
+        "uuid" : "fec14f82-4900-4ee1-a77c-1133e46316b5",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "0-1 Km",
+          "uuid" : "1f7f57c8-d454-4c5e-8336-789451335cb6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2-3 Km",
+          "uuid" : "e1ea6e8d-a266-4677-a9ff-dd756ce2451a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "4-5 Km",
+          "uuid" : "414768b2-4c4d-4b6d-8f39-f285bced3545",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : ">5 Km",
+          "uuid" : "bcf21c8b-680c-42e6-8b59-cdd233c8a6ac",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "display" : "Other details",
+    "timed" : false
+  }, {
+    "uuid" : "ae9682d9-7383-4d51-a9bf-31b39aecb5ef",
+    "name" : "Family member 1 details",
+    "displayOrder" : 4.0,
+    "formElements" : [ {
+      "name" : "Survey Number/ (7/12) of family member 1",
+      "uuid" : "34c413d9-43c2-4cb2-a477-d80a7741929f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Survey Number/ (7/12) of family member 1",
+        "uuid" : "fa776c5d-ab3a-4baa-8b0d-f325d8389d5c",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n   statusBuilder.show().when.valueInEncounter(\"Number of family members who took silt\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of trolleys/ hywa taken by family member 1",
+      "uuid" : "e5ef914d-3c60-4111-bace-dc40d9f15959",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of trolleys/ hywa taken by family member 1",
+        "uuid" : "6de50245-44b1-4b0b-961e-b3854047bb41",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of family members who took silt\").is.greaterThan(0);\n return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Capacity of hyva in cu.m. for family member 1",
+      "uuid" : "5d3a0f42-cb73-4255-bb5e-bacb1ed4d000",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Capacity of Hyva for family member 1 (voided~73992)",
+        "uuid" : "7dddd682-dbf0-48a6-a593-f2a4fe4a5fe8",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ],
+        "voided" : true
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of hyvas carted by family member 1\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Landholding of family member taking silt 1",
+      "uuid" : "7f7f46b3-cf39-4689-9598-f674545b5faf",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Landholding of family member taking silt 1",
+        "uuid" : "274f411a-e377-414e-9489-00bc02c3497d",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5001.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of family members who took silt\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Mobile Number of family member 1",
+      "uuid" : "1af165e2-2c2a-4715-83a6-b555f99aba7d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Mobile Number of family member 1",
+        "uuid" : "7d1a0e7c-90e3-4f1e-a165-ae0effeb63d6",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5002.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of family members who took silt\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "validFormat" : {
+        "regex" : "^[0-9]{10}$",
+        "descriptionKey" : "Valid10DigitNumbers"
+      },
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Survey Number (7/12) of family member 1",
+      "uuid" : "fdac4d3f-9f8e-4914-8e97-cbe7273f9fb0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Survey Number (7/12) of family member 1",
+        "uuid" : "d99b9243-6fa9-4dc3-8338-2cec1cf27e1c",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5003.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of trolleys carted by family member 1",
+      "uuid" : "62dc82c1-cc72-4573-96ee-b3b091c92f68",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of trolleys carted by family member 1",
+        "uuid" : "15812127-c3dc-4202-b01a-9553047fbe91",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5006.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Capacity of trolleys in cu.m. for family member 1",
+      "uuid" : "bbfc4911-90cf-434a-b083-ab56d2500f1a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Capacity of trolleys in cu.m. for family member 1",
+        "uuid" : "bf9cf644-396d-430c-aaab-b97d4190cfe6",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "2.5",
+          "uuid" : "248a4fa2-7d0c-4b14-8191-3ec9e787cfc8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.2",
+          "uuid" : "e8306ab5-2c22-4565-b1a9-5a7491f97c8c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.8",
+          "uuid" : "69e6a155-6bb4-4cf9-8dec-0b8057f1931f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3.5",
+          "uuid" : "669cd23d-50b2-443c-8490-68525ec324ef",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5007.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of trolleys carted by family member 1\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of hyvas/dumper carted by family member 1",
+      "uuid" : "69cbe440-45ad-4f3a-8af1-69bb4639060d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of hyvas/dumper carted by family member 1",
+        "uuid" : "50511a85-3b56-48f1-b33b-0066fb3dcbb8",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5008.0,
+      "type" : "SingleSelect",
+      "rule" : "",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Capacity of hyva in cu.m. for family member 1",
+      "uuid" : "dd210bc0-c8a2-4fa0-b1a9-63c9e7878deb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Capacity of hyva in cu.m. for family member 1",
+        "uuid" : "e795d919-e2be-4c8c-9ad8-fa37a352ed86",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "18",
+          "uuid" : "5404d563-5b50-47ae-a3f1-49c71496b3a2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "20",
+          "uuid" : "f6608f94-3bff-4a6d-a38b-ef14b1e40fa1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "14",
+          "uuid" : "7c956ebb-acc0-41a0-afdc-c810ddba485a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "25",
+          "uuid" : "68211d18-45fe-4053-9639-9480df9de238",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "16",
+          "uuid" : "19286f0a-957c-4674-b9c9-42ac6c2476ce",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 5009.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of hyvas/dumper carted by family member 1\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total Silt carted by family member 1",
+      "uuid" : "f086728f-32c8-456e-a8fc-de2fc9065637",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Total Silt carted by family member 1",
+        "uuid" : "df084f43-34e5-4671-ab8d-5675d93ab8ed",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5011.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  \n  let numberOfTrolleys =0;\n  let capacityOfTrolleys = 0;\n  \n  let numberOfHyvas = 0;  \n  let capacityOfHyva = 0;\n  let value = 0;\n  \n  // Number of trolleys * 2.8 cu.m. + Number of hyvas*Capacity of hyva\n   numberOfTrolleys = encounter.getObservationReadableValue('Number of trolleys carted by family member 1');\n   numberOfHyvas = encounter.getObservationReadableValue('Number of hyvas/dumper carted by family member 1');\n   \n    if(numberOfTrolleys > 0)\n   capacityOfTrolleys = encounter.getObservationReadableValue('Capacity of trolleys in cu.m. for family member 1');\n   \n   if(numberOfHyvas > 0)\n   capacityOfHyva = encounter.getObservationReadableValue('Capacity of hyva in cu.m. for family member 1');\n    \n   value = (numberOfTrolleys * capacityOfTrolleys)  + (numberOfHyvas * capacityOfHyva);\n\n         \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, value.toFixed(2));\n};",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const formElementGroup = params.formElementGroup;\n    const encounter = params.entity;\n     \n    return formElementGroup.formElements.map(({uuid}) => {\n        let visibility = false;\n        const familyMembers = encounter.getObservationReadableValue('Number of family members who took silt');\n        \n         if(familyMembers > 0)\n            visibility = true;\n        \n        \n        return new imports.rulesConfig.FormElementStatus(uuid, visibility, null);\n    });\n};",
+    "voided" : true,
+    "display" : "Family member 1 details",
+    "timed" : false
+  }, {
+    "uuid" : "7191aad3-100d-4983-bdf2-f3a994141dd4",
+    "name" : "Family member 2 details",
+    "displayOrder" : 5.0,
+    "formElements" : [ {
+      "name" : "Survey Number/ (7/12) of family member 2",
+      "uuid" : "c9ec1e60-7cae-481a-8227-d34cefe5cdc2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Survey Number/ (7/12) of family member 2",
+        "uuid" : "1dbdf442-fe67-412c-b671-92fd93ecc0b1",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of hyvas/dumper carted by family member 2",
+      "uuid" : "08deadce-d953-498c-934f-ddb27855be75",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of hyvas/dumper carted by family member 2",
+        "uuid" : "2bef459a-960c-4ab1-bf8b-9bb4b288ebb5",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "\n'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n   console.log('numberOfHyvas/dumper', encounter.getObservationReadableValue('Number of hyvas/dumper carted by family member 2'));\n\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of trolleys/ hywa taken by family member 2",
+      "uuid" : "2a262ae6-1da1-467b-a662-64d4c43dfef2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of trolleys/ hywa taken by family member 2",
+        "uuid" : "0553576b-0c96-45f5-bded-822d4dc4e4b2",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Landholding of family member taking silt 2",
+      "uuid" : "797f56da-512e-4b60-8928-4c1c6f478226",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Landholding of family member taking silt 2",
+        "uuid" : "76e0f099-deb3-4e19-b4d6-377eab83b33a",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5001.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Mobile Number of family member 2",
+      "uuid" : "2cbcaf86-e454-47ce-9e7c-fdc33d3ede7a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Mobile Number of family member 2",
+        "uuid" : "bca04f41-0f61-4c8f-9eb1-c7c21acc075c",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5002.0,
+      "type" : "SingleSelect",
+      "validFormat" : {
+        "regex" : "^[0-9]{10}$",
+        "descriptionKey" : "Valid10DigitNumbers"
+      },
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Survey Number (7/12) of family member 2",
+      "uuid" : "2e26764e-0b5a-4982-b7a3-ba8237e12639",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Survey Number (7/12) of family member 2",
+        "uuid" : "5f2cc616-32b8-4da0-9a75-31482f0d408a",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5003.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of trolleys carted by family member 2",
+      "uuid" : "3b67edf0-1a63-4e33-9b9c-3c34090a4772",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of trolleys carted by family member 2",
+        "uuid" : "86358524-db55-4bf6-930b-277568ac5b6d",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5005.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Capacity of trolleys in cu.m. for family member 2",
+      "uuid" : "7d23d369-1918-4725-931e-3d2bcf489801",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Capacity of trolleys in cu.m. for family member 2",
+        "uuid" : "8af7c615-804d-46b7-93cc-61e99a068211",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "3.5",
+          "uuid" : "669cd23d-50b2-443c-8490-68525ec324ef",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.2",
+          "uuid" : "e8306ab5-2c22-4565-b1a9-5a7491f97c8c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.8",
+          "uuid" : "69e6a155-6bb4-4cf9-8dec-0b8057f1931f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.5",
+          "uuid" : "248a4fa2-7d0c-4b14-8191-3ec9e787cfc8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5006.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of trolleys carted by family member 2\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of hyvas/dumper  carted by family member 2",
+      "uuid" : "d29a9998-e2b5-458f-9568-1a91b9e25b1b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of hyvas/dumper carted by family member 2",
+        "uuid" : "2bef459a-960c-4ab1-bf8b-9bb4b288ebb5",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5007.0,
+      "type" : "SingleSelect",
+      "rule" : "",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Capacity of hyva in cu.m. for family member 2",
+      "uuid" : "3cafec02-23eb-4a4a-9b20-ec76d70f8730",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Capacity of hyva in cu.m. for family member 2",
+        "uuid" : "d1b69f5a-b657-4ab3-8cdb-f18b5991b905",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "18",
+          "uuid" : "5404d563-5b50-47ae-a3f1-49c71496b3a2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "25",
+          "uuid" : "68211d18-45fe-4053-9639-9480df9de238",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "20",
+          "uuid" : "f6608f94-3bff-4a6d-a38b-ef14b1e40fa1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "14",
+          "uuid" : "7c956ebb-acc0-41a0-afdc-c810ddba485a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "16",
+          "uuid" : "19286f0a-957c-4674-b9c9-42ac6c2476ce",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5008.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of hyvas/dumper carted by family member 2\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total Silt carted by family member 2",
+      "uuid" : "bd69d64c-401c-46e4-97c3-426791d5d01c",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Total Silt carted by family member 2",
+        "uuid" : "a9b7368d-b483-4e9b-9440-24e9a0d144fa",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5010.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  \n  let numberOfTrolleys =0;\n  let capacityOfTrolleys = 0;\n  let numberOfHyvas = 0;\n  let capacityOfHyva = 0;\n  let value = 0;\n  \n  // Number of trolleys * 2.8 cu.m. + Number of hyvas*Capacity of hyva\n   numberOfTrolleys = encounter.getObservationReadableValue('Number of trolleys carted by family member 2');\n   numberOfHyvas = encounter.getObservationReadableValue('Number of hyvas/dumper carted by family member 2');   \n   \n    if(numberOfTrolleys > 0)\n   capacityOfTrolleys = encounter.getObservationReadableValue('Capacity of trolleys in cu.m. for family member 2');\n   \n   if(numberOfHyvas > 0)\n   capacityOfHyva = encounter.getObservationReadableValue('Capacity of hyva in cu.m. for family member 2');\n    \n  value = (numberOfTrolleys * capacityOfTrolleys)  + (numberOfHyvas * capacityOfHyva);\n       \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, value.toFixed(2));\n};",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const formElementGroup = params.formElementGroup;\n     const encounter = params.entity;\n     const familyMembers = encounter.getObservationReadableValue('Number of family members who took silt');\n       \n    return formElementGroup.formElements.map(({uuid}) => {\n        let visibility = false;\n        \n         if(familyMembers > 1)\n            visibility = true;\n        \n        \n        return new imports.rulesConfig.FormElementStatus(uuid, visibility, null);\n    });\n};",
+    "voided" : true,
+    "display" : "Family member 2 details",
+    "timed" : false
+  }, {
+    "uuid" : "918e7c52-06a9-4bdb-b091-42f38cc4a25b",
+    "name" : "Family member 3 details",
+    "displayOrder" : 6.0,
+    "formElements" : [ {
+      "name" : "Landholding of family member taking silt 3",
+      "uuid" : "a3046841-4038-4e26-ae36-36661fbd9f67",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Landholding of family member taking silt 3",
+        "uuid" : "e65d7496-cb95-471e-8482-ffe1f8a98d95",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5001.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Mobile Number of family member 3",
+      "uuid" : "e399f0f6-d91b-4c27-a247-2468a0a035a9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Mobile Number of family member 3",
+        "uuid" : "0ecc6df1-e54b-48d8-aaa0-53337bf5fece",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5002.0,
+      "type" : "SingleSelect",
+      "validFormat" : {
+        "regex" : "^[0-9]{10}$",
+        "descriptionKey" : "Valid10DigitNumbers"
+      },
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Survey Number (7/12) of family member 3",
+      "uuid" : "ba5f217c-656d-427d-a930-05d02b0223a8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Survey Number (7/12) of family member 3",
+        "uuid" : "9dd9d076-b94a-403b-8444-e8dc4dd3b93c",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5003.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Survey Number/ (7/12) of family member 3",
+      "uuid" : "65a019ee-77b5-41f5-9ee5-ab4163a48c2c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Survey Number/ (7/12) of family member 3",
+        "uuid" : "6a4fe316-5349-4fa4-9bf9-26b6dffbaf08",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5004.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of trolleys/ hywa taken by family member 3",
+      "uuid" : "9c898ed7-d363-4a6d-ba7e-f214ef4dcfda",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of trolleys/ hywa taken by family member 3",
+        "uuid" : "fee71630-b84b-4b2d-9c8f-7a0d07eaf62e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5005.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of trolleys carted by family member 3",
+      "uuid" : "5bc1022c-3db0-4b25-b56a-8bf6e8dbedfd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of trolleys carted by family member 3",
+        "uuid" : "4fd9ea9a-ceff-4e38-9a61-9ab69a72d434",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5006.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Capacity of trolleys in cu.m. for family member 3",
+      "uuid" : "4a99b85d-f37d-4e4c-a500-45927373f24f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Capacity of trolleys in cu.m. for family member 3",
+        "uuid" : "344d81ef-b52b-40d2-83fd-af0b9bb24a75",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "3.5",
+          "uuid" : "669cd23d-50b2-443c-8490-68525ec324ef",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.2",
+          "uuid" : "e8306ab5-2c22-4565-b1a9-5a7491f97c8c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.5",
+          "uuid" : "248a4fa2-7d0c-4b14-8191-3ec9e787cfc8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.8",
+          "uuid" : "69e6a155-6bb4-4cf9-8dec-0b8057f1931f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5007.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of trolleys carted by family member 3\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Number of hyvas/dumper carted by family member 3",
+      "uuid" : "83a96f86-9543-4779-97ba-feb1468ad5c0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of hyvas/dumper  carted by family member 3",
+        "uuid" : "49d14135-19b5-4c10-8779-71a113d3ccae",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5008.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Capacity of hyva in cu.m. for family member 3",
+      "uuid" : "8b36ba59-0f9b-40c2-8584-85b1842b59f0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Capacity of hyva in cu.m. for family member 3",
+        "uuid" : "cb76dfb5-923c-4422-a8ae-c556dbe9fd0a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "18",
+          "uuid" : "5404d563-5b50-47ae-a3f1-49c71496b3a2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "20",
+          "uuid" : "f6608f94-3bff-4a6d-a38b-ef14b1e40fa1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "16",
+          "uuid" : "19286f0a-957c-4674-b9c9-42ac6c2476ce",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "14",
+          "uuid" : "7c956ebb-acc0-41a0-afdc-c810ddba485a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "25",
+          "uuid" : "68211d18-45fe-4053-9639-9480df9de238",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5009.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of hyvas/dumper carted by family member 3\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total Silt carted by family member 3",
+      "uuid" : "ab496de4-10e3-4bd7-9bf2-354b9c588a98",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Total Silt carted by family member 3",
+        "uuid" : "84bc3771-9c73-49a4-a518-bbdc5fee44f8",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5010.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  \n  let numberOfTrolleys =0;\n  let capacityOfTrolleys = 0;\n  let numberOfHyvas = 0;\n  let capacityOfHyva = 0;\n  let value = 0;\n  \n  // Number of trolleys * 2.8 cu.m. + Number of hyvas*Capacity of hyva\n   numberOfTrolleys = encounter.getObservationReadableValue('Number of trolleys carted by family member 3');\n   numberOfHyvas = encounter.getObservationReadableValue('Number of hyvas/dumper carted by family member 3');\n   \n   if(numberOfTrolleys > 0)\n   capacityOfTrolleys = encounter.getObservationReadableValue('Capacity of trolleys in cu.m. for family member 3');\n   \n   if(numberOfHyvas > 0)\n   capacityOfHyva = encounter.getObservationReadableValue('Capacity of hyva in cu.m. for family member 3');\n    \n  value = (numberOfTrolleys * capacityOfTrolleys)  + (numberOfHyvas * capacityOfHyva);\n          \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, true,  value.toFixed(2));\n};",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const formElementGroup = params.formElementGroup;\n    const encounter = params.entity;\n     const familyMembers = encounter.getObservationReadableValue('Number of family members who took silt');\n     \n    return formElementGroup.formElements.map(({uuid}) => {\n        let visibility = false;\n           \n         if(familyMembers > 2)\n            visibility = true;\n        \n        \n        return new imports.rulesConfig.FormElementStatus(uuid, visibility, null);\n    });\n};",
+    "voided" : true,
+    "display" : "Family member 3 details",
+    "timed" : false
+  }, {
+    "uuid" : "1ffeeb7e-366c-4d4f-ba90-7c57d1264704",
+    "name" : "Family member 4 details",
+    "displayOrder" : 7.0,
+    "formElements" : [ {
+      "name" : "Landholding of family member taking silt 4",
+      "uuid" : "b5ccd4f6-4fef-4280-a29b-904b4c1a61da",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Landholding of family member taking silt 4",
+        "uuid" : "a8b86af4-66da-4fc0-89d5-3adbaef652e0",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5001.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Mobile Number of family member 4",
+      "uuid" : "946b0fb7-cbaf-4456-9995-d4c5f282bf1d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Mobile Number of family member 4",
+        "uuid" : "9454b482-64b7-4072-ae8c-17b67b031b7a",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5002.0,
+      "type" : "SingleSelect",
+      "validFormat" : {
+        "regex" : "^[0-9]{10}$",
+        "descriptionKey" : "Valid10DigitNumbers"
+      },
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Survey Number (7/12) of family member 4",
+      "uuid" : "27fbe559-d6b3-4b87-9873-0d8d57bc491f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Survey Number (7/12) of family member 4",
+        "uuid" : "3b2954e9-bf20-4271-af63-9b32fa44889b",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5003.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Survey Number/ (7/12) of family member 4",
+      "uuid" : "750aa8f7-a3d9-49a3-9d86-167d855b7bbc",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Survey Number/ (7/12) of family member 4",
+        "uuid" : "860c2a1c-03ed-4f48-9dc2-b50122e603ee",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5004.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of trolleys carted by family member 4",
+      "uuid" : "83568a58-3381-4fe9-a277-14ef20de1de4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of trolleys carted by family member 4",
+        "uuid" : "70d5f68c-4eb7-4eb7-982b-cab91ce7f5b8",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5005.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Capacity of trolleys in cu.m. for family member 4",
+      "uuid" : "0fdb35a2-7b65-4d3e-9858-9d8ac135bfb1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Capacity of trolleys in cu.m. for family member 4",
+        "uuid" : "977fad59-b013-4759-938e-113ae3fc1d51",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "2.5",
+          "uuid" : "248a4fa2-7d0c-4b14-8191-3ec9e787cfc8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.8",
+          "uuid" : "69e6a155-6bb4-4cf9-8dec-0b8057f1931f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3.5",
+          "uuid" : "669cd23d-50b2-443c-8490-68525ec324ef",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.2",
+          "uuid" : "e8306ab5-2c22-4565-b1a9-5a7491f97c8c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5006.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of trolleys carted by family member 4\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of hyvas/dumper carted by family member 4",
+      "uuid" : "924683d4-908d-467e-8c64-d63a9d65ee53",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of hyvas/dumper  carted by family member 4",
+        "uuid" : "9522f549-d6fe-490b-a896-511805ce7690",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5007.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Capacity of hyva in cu.m. for family member 4",
+      "uuid" : "e2c71689-53f6-4ad7-8962-426f80fdb80b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Capacity of hyva in cu.m. for family member 4",
+        "uuid" : "ddc4da07-02f4-4512-893b-a4256802e06c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "14",
+          "uuid" : "7c956ebb-acc0-41a0-afdc-c810ddba485a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "18",
+          "uuid" : "5404d563-5b50-47ae-a3f1-49c71496b3a2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "25",
+          "uuid" : "68211d18-45fe-4053-9639-9480df9de238",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "16",
+          "uuid" : "19286f0a-957c-4674-b9c9-42ac6c2476ce",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "20",
+          "uuid" : "f6608f94-3bff-4a6d-a38b-ef14b1e40fa1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5008.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of hyvas/dumper carted by family member 4\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total Silt carted by family member 4",
+      "uuid" : "8667b26d-107e-4170-a0e6-f57b86ba9ffc",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Total Silt carted by family member 4",
+        "uuid" : "55eaad1f-28bf-4cf8-972d-94a3559924bb",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5009.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  \n  let numberOfTrolleys =0;\n  let capacityOfTrolleys = 0;\n  let numberOfHyvas = 0;\n  let capacityOfHyva = 0;\n  let value = 0;\n  \n  // Number of trolleys * 2.8 cu.m. + Number of hyvas*Capacity of hyva\n   numberOfTrolleys = encounter.getObservationReadableValue('Number of trolleys carted by family member 4');\n   numberOfHyvas = encounter.getObservationReadableValue('Number of hyvas/dumper carted by family member 4');\n   \n   if(numberOfTrolleys > 0)\n  capacityOfTrolleys = encounter.getObservationReadableValue('Capacity of trolleys in cu.m. for family member 4'); \n   \n   if(numberOfHyvas > 0)\n   capacityOfHyva = encounter.getObservationReadableValue('Capacity of hyva in cu.m. for family member 4');\n    \n value = (numberOfTrolleys * capacityOfTrolleys)  + (numberOfHyvas * capacityOfHyva);\n           \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, true,  value.toFixed(2));\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Number of trolleys/ hywa taken by family member 4",
+      "uuid" : "b60455c0-c9bf-4126-9f6b-145479f41344",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of trolleys/ hywa taken by family member 4",
+        "uuid" : "0c570327-5863-439a-a8a0-1cb3f403fb32",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5010.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const formElementGroup = params.formElementGroup;\n    const encounter = params.entity;\n     const familyMembers = encounter.getObservationReadableValue('Number of family members who took silt');\n     \n    return formElementGroup.formElements.map(({uuid}) => {\n        let visibility = false;\n           \n         if(familyMembers > 3)\n            visibility = true;\n        \n        \n        return new imports.rulesConfig.FormElementStatus(uuid, visibility, null);\n    });\n};",
+    "voided" : true,
+    "display" : "Family member 4 details",
+    "timed" : false
+  }, {
+    "uuid" : "9d71d65d-0625-48d9-ab6a-904f5ba14cd2",
+    "name" : "Family member 5 details",
+    "displayOrder" : 8.0,
+    "formElements" : [ {
+      "name" : "Landholding of family member taking silt 5",
+      "uuid" : "c0ad9310-880c-4bef-86b9-ca48f7dca7b0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Landholding of family member taking silt 5",
+        "uuid" : "8d7d4b38-5f01-401b-99a0-1ccc4934c91f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5001.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Mobile Number of family member 5",
+      "uuid" : "435294a0-9d08-4c7d-bb37-3151a87a6679",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Mobile Number of family member 5",
+        "uuid" : "6b1d12d0-d5e3-4ebc-b3d8-16238602b9df",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5002.0,
+      "type" : "SingleSelect",
+      "validFormat" : {
+        "regex" : "^[0-9]{10}$",
+        "descriptionKey" : "Valid10DigitNumbers"
+      },
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Survey Number (7/12) of family member 5",
+      "uuid" : "130135f8-2c8c-46b7-b037-4dc156fbdb32",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Survey Number (7/12) of family member 5",
+        "uuid" : "2f2d02d1-1f70-4b65-80fa-4f90d168f9d4",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5003.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Survey Number/ (7/12) of family member 5",
+      "uuid" : "6492eb9e-e6ac-4e60-9e3b-b0fcbc49c424",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Survey Number/ (7/12) of family member 5",
+        "uuid" : "35ab699f-b998-4f4f-b7f1-974ad963445d",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5004.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of trolleys carted by family member 5",
+      "uuid" : "e9ae588c-e216-4ddd-9079-f49ddc3d663d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of trolleys carted by family member 5",
+        "uuid" : "6951251a-8eb1-47e7-92d6-e3fc0abf42de",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5005.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Capacity of trolleys in cu.m. for family member 5",
+      "uuid" : "3529bb8a-38b9-4298-aa17-648d7e965599",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Capacity of trolleys in cu.m. for family member 5",
+        "uuid" : "1fdcc6a5-d59d-4540-966f-2242cb2136c1",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "3.5",
+          "uuid" : "669cd23d-50b2-443c-8490-68525ec324ef",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.5",
+          "uuid" : "248a4fa2-7d0c-4b14-8191-3ec9e787cfc8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.2",
+          "uuid" : "e8306ab5-2c22-4565-b1a9-5a7491f97c8c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.8",
+          "uuid" : "69e6a155-6bb4-4cf9-8dec-0b8057f1931f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5006.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of trolleys carted by family member 5\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of hyvas/dumper carted by family member 5",
+      "uuid" : "0022e3ed-5650-4512-b39d-90e8281ac77f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of hyvas/dumper  carted by family member 5",
+        "uuid" : "9b62b177-14d9-4e86-aa22-00024558a3cb",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5007.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Capacity of hyva in cu.m. for family member 5",
+      "uuid" : "53b29bb5-95b5-41a2-839c-75579911d02b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Capacity of hyva in cu.m. for family member 5",
+        "uuid" : "b0c42316-2b11-4385-a33b-a7cc4b1238eb",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "20",
+          "uuid" : "f6608f94-3bff-4a6d-a38b-ef14b1e40fa1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "18",
+          "uuid" : "5404d563-5b50-47ae-a3f1-49c71496b3a2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "14",
+          "uuid" : "7c956ebb-acc0-41a0-afdc-c810ddba485a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "25",
+          "uuid" : "68211d18-45fe-4053-9639-9480df9de238",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "16",
+          "uuid" : "19286f0a-957c-4674-b9c9-42ac6c2476ce",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5008.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of hyvas/dumper carted by family member 5\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total Silt carted by family member 5",
+      "uuid" : "b1ad416b-37d3-42a0-ad9a-2d55ca89fdbe",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Total Silt carted by family member 5",
+        "uuid" : "432f8a85-951d-45d2-a1a5-0987f23c6706",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5009.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  \n  let numberOfTrolleys =0;\n  let capacityOfTrolleys = 0;\n  let numberOfHyvas = 0;\n  let capacityOfHyva = 0;\n  let value = 0;\n  \n  // Number of trolleys * 2.8 cu.m. + Number of hyvas*Capacity of hyva\n   numberOfTrolleys = encounter.getObservationReadableValue('Number of trolleys carted by family member 5');\n   numberOfHyvas = encounter.getObservationReadableValue('Number of hyvas/dumper carted by family member 5');   \n   \n      if(numberOfTrolleys > 0)\n   capacityOfTrolleys = encounter.getObservationReadableValue('Capacity of trolleys in cu.m. for family member 5');\n   \n   if(numberOfHyvas > 0)\n   capacityOfHyva = encounter.getObservationReadableValue('Capacity of hyva in cu.m. for family member 5');\n    \n  value = (numberOfTrolleys * capacityOfTrolleys)  + (numberOfHyvas * capacityOfHyva);\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, true,  value.toFixed(2));\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Number of trolleys/ hywa taken by family member 5",
+      "uuid" : "5d277a53-a487-44fc-ad61-815c308a7e1c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of trolleys/ hywa taken by family member 5",
+        "uuid" : "1e460d2d-3f30-4c94-ba40-0e61a3c76b13",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5010.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const formElementGroup = params.formElementGroup;\n    const encounter = params.entity;\n     const familyMembers = encounter.getObservationReadableValue('Number of family members who took silt');\n     \n    return formElementGroup.formElements.map(({uuid}) => {\n        let visibility = false;\n          \n         if(familyMembers > 4)\n            visibility = true;\n        \n        \n        return new imports.rulesConfig.FormElementStatus(uuid, visibility, null);\n    });\n};",
+    "voided" : true,
+    "display" : "Family member 5 details",
+    "timed" : false
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

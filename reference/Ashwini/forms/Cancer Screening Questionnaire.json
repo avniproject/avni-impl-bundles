@@ -1,0 +1,597 @@
+{
+  "name" : "Cancer Screening Questionnaire",
+  "uuid" : "adef5bdb-2d0c-4b44-b016-be3aba6e0aa7",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "d3885163-2020-4488-ab0e-6dfbe8d0836d",
+    "name" : "Cancer Screening Questionnaire",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Cancer screening",
+      "uuid" : "051ae71d-dbd2-4218-becf-2f90063d93e4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cancer screening",
+        "uuid" : "313bc174-07e8-4257-8cbb-384df0d2ae6e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Oral Cavity Signs and Symptoms",
+          "uuid" : "e996e3a7-da54-4ec2-b434-3d8439d9d039",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Breast Symptoms",
+          "uuid" : "5ce7cfc8-9917-4f93-b230-7d44d16dde75",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Gynaecological symptoms",
+          "uuid" : "7d464f63-9298-42d6-a427-4eefdd3807f8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Genito-Urinary Signs and Symptoms",
+          "uuid" : "0df7ba8e-02d0-48fb-a6f3-ccbdf8f6b215",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Gastrointestinal symptoms",
+          "uuid" : "a5b058f8-3e5a-4c40-adfd-506f7c96d3cd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not performed",
+          "uuid" : "e0e72387-8a2a-4d13-94d1-4dcfa8614096",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Reason for not performed",
+      "uuid" : "d85d8cbe-f3a6-4693-9559-8c1fa1ca3249",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Reason for not performed",
+        "uuid" : "b86e8186-5c84-4d19-8c45-45b0fe37db74",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Urgent Clinical Scenario",
+          "uuid" : "8502bbb8-eba8-4b92-b92d-43468e8a5e86",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Person not willing",
+          "uuid" : "90099808-3c82-4007-a120-12c8b4bf1146",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"313bc174-07e8-4257-8cbb-384df0d2ae6e\").containsAnswerConceptName(\"e0e72387-8a2a-4d13-94d1-4dcfa8614096\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Cancer screening",
+                "conceptUuid" : "313bc174-07e8-4257-8cbb-384df0d2ae6e",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Not performed" ],
+                "answerConceptUuids" : [ "e0e72387-8a2a-4d13-94d1-4dcfa8614096" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Cancer Screening Done by",
+      "uuid" : "3f32ddb7-9b95-44f8-83c4-58f5fa9e9f0b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cancer Screening Done by",
+        "uuid" : "5f15c50e-eebd-4e80-9605-41c50706b514",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Nurse technicians",
+          "uuid" : "328ef0bb-61d9-46dc-9dd3-7f7dbeb56853",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Doctor",
+          "uuid" : "062071e7-85a9-4da0-9d59-c27b00e53a60",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Health Animators",
+          "uuid" : "835702b4-19c6-4f8b-83cb-613f69667070",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Others",
+          "uuid" : "118fa43e-525f-41d6-ad3f-98a4857e2d3e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "MHSW",
+          "uuid" : "79f09655-6487-4feb-bd15-92d1fc199262",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "POC staff",
+          "uuid" : "cac0617a-4288-491c-8547-bbf40ed3f48b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Cancer Screening Done by (Specify Others)",
+      "uuid" : "749225ce-2e55-42bc-9338-b787fc14b18d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cancer Screening Done by (Specify Others)",
+        "uuid" : "cf4e2d1a-766c-4e7d-9051-092902956f88",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"5f15c50e-eebd-4e80-9605-41c50706b514\").containsAnswerConceptName(\"118fa43e-525f-41d6-ad3f-98a4857e2d3e\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Red Flag Signs Oral Malignancy",
+      "uuid" : "75487225-615e-48f7-882d-dbd575fccfc7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Red Flag Signs Oral Malignancy",
+        "uuid" : "c6fa3339-2986-4fce-915a-7749abedd49f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Neck, cheek or jaw swelling",
+          "uuid" : "5198569c-1592-40b7-a2f5-a24e0971fa8f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Multiple Painful small white ulcers (aphthous)",
+          "uuid" : "f5c95b7e-0ac2-49e7-802e-8c385c178ad0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "White or red patch oral cavity",
+          "uuid" : "6fc46da9-8eb0-406c-9656-c27e2d6b7cca",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Painless ulcer or swelling",
+          "uuid" : "b648deb0-1ffb-4bdc-bce0-c17c03d277ba",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Difficulty opening mouth",
+          "uuid" : "add3c2e1-7edb-42b7-b520-ed45c1f85f7d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"313bc174-07e8-4257-8cbb-384df0d2ae6e\").containsAnswerConceptName(\"e996e3a7-da54-4ec2-b434-3d8439d9d039\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Red Flag Signs Gastrointestinal Malignancy",
+      "uuid" : "d4abc233-5e55-4bd0-9aa5-af44548fbc9a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Red Flag Signs Gastrointestinal Malignancy",
+        "uuid" : "1ad54a3e-a940-4e94-adcf-16244da37b7d",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Decreased appetite",
+          "uuid" : "2084b4b0-5e75-4588-90b9-0ec14650707b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Occasional dysphagia",
+          "uuid" : "d9c765d1-e3bb-44dd-8a6f-ffa6f1d216bc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Stools – black coloured/ blood with mucous/only watery or mucous stools",
+          "uuid" : "94ec4b97-bc3e-42b0-b798-7d21128bc09c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Dysphagia to Liquid and solids",
+          "uuid" : "dcf05657-1025-4498-9bc2-798491e7c5dd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Weight loss",
+          "uuid" : "18820da4-79bf-47a0-bbee-a848bb68fe4b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hard nodule in umbilicus",
+          "uuid" : "39e6a615-80ef-444c-b42d-73a1a2d05019",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Chronic gastritis",
+          "uuid" : "3003e04b-0975-4764-815b-0e7f96ec6e02",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"313bc174-07e8-4257-8cbb-384df0d2ae6e\").containsAnswerConceptName(\"a5b058f8-3e5a-4c40-adfd-506f7c96d3cd\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Red Flag Signs Breast Malignancy",
+      "uuid" : "31ae56b8-5954-439f-aad2-fa5efafed839",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Red Flag Signs Breast Malignancy",
+        "uuid" : "86f0374c-135c-47dd-9076-785da8f05ccd",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Pain and swelling (lactating mother) with fever",
+          "uuid" : "edc4519a-a54e-4557-b86f-d7d752c3e852",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Painless hard swelling",
+          "uuid" : "7a2953b3-c248-4e48-b005-1c1ce4ab462a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Brown/Red/Pus nipple discharge",
+          "uuid" : "74099d5d-4a95-4106-bd92-c316481ed4c9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Skin or nipple ulcer",
+          "uuid" : "c2e0d30d-e717-4883-bd44-04b7b507eb1a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"313bc174-07e8-4257-8cbb-384df0d2ae6e\").containsAnswerConceptName(\"5ce7cfc8-9917-4f93-b230-7d44d16dde75\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Red Flag Signs Gynaecological Malignancy",
+      "uuid" : "1bc95bcf-21ed-4512-98ba-43620e04c354",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Red Flag Signs Gynaecological Malignancy",
+        "uuid" : "dde93e40-3c39-4396-aa7b-b479e8a099a6",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Dyspareunia",
+          "uuid" : "c0ec3521-efb8-4d2d-ab3c-e5c1a9b9ed19",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Leg swelling",
+          "uuid" : "6dca90e2-0a1e-407d-9a82-a22f392ed431",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Post coital bleeding",
+          "uuid" : "28b38674-fffa-4eb4-8f2b-787e8ebfe754",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Post Menopausal bleeding",
+          "uuid" : "89105922-12b6-433a-9f58-2b5b5a8a93ce",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Decreased urine output",
+          "uuid" : "646273e6-60b6-4077-b5b2-ddbf02e3f411",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"313bc174-07e8-4257-8cbb-384df0d2ae6e\").containsAnswerConceptName(\"7d464f63-9298-42d6-a427-4eefdd3807f8\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Red Flag Signs Genito-Urinary Malignancy",
+      "uuid" : "98861662-eda9-487d-b521-357991581a51",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Red Flag Signs Genito-Urinary Malignancy",
+        "uuid" : "4632e6e9-7230-490f-8c3e-f589e463a1b3",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Decreased urine output",
+          "uuid" : "646273e6-60b6-4077-b5b2-ddbf02e3f411",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Leg swelling with pain and Breathlessness",
+          "uuid" : "7059c30b-f145-4656-9674-e3cf34f01cfc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Painless Haematuria",
+          "uuid" : "9d5b912c-df91-414c-be31-7e7b3e2068ba",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Reddish plaque on glans penis, Ulcer penis or scrotum",
+          "uuid" : "146ddd6a-2839-4082-b7e8-772cffe60807",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Phimosis in adult with white scarred skin",
+          "uuid" : "b1f56d3e-5bd2-4a20-a691-85f14ecdb09b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"313bc174-07e8-4257-8cbb-384df0d2ae6e\").containsAnswerConceptName(\"0df7ba8e-02d0-48fb-a6f3-ccbdf8f6b215\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Cancer Screening Actions",
+      "uuid" : "8f948329-97bd-44ca-9eb2-3de6829e0216",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cancer Screening Actions",
+        "uuid" : "4f9d4c76-fa41-4f8e-9351-3b94f2b27b25",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Call MO for advice",
+          "uuid" : "71038a52-6b42-494d-8300-0ab58099c145",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Needs further evaluation in Hospital",
+          "uuid" : "79932aac-f69e-4610-8fa0-a20e83a800db",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Inform HA",
+          "uuid" : "5233119b-9324-406c-af95-013c7ab219b3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    } ],
+    "display" : "Cancer Screening Questionnaire",
+    "timed" : false
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

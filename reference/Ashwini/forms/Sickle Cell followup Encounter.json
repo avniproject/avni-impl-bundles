@@ -1,0 +1,2733 @@
+{
+  "name" : "Sickle Cell followup Encounter",
+  "uuid" : "461e8676-90f3-465f-8679-71eb3e43fc46",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "a3dcd63a-647f-4f52-a1be-48d5a2cdb1d3",
+    "name" : "Followup",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Date of visit",
+      "uuid" : "21d9a6be-5565-4af2-93e4-b742d1c49c69",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "Calendar"
+      } ],
+      "concept" : {
+        "name" : "Date of visit",
+        "uuid" : "44fbe023-36f8-48e5-b24f-ffe6987c699d",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Weight of patient",
+      "uuid" : "e3e576f4-6605-4130-b745-f35592546df6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Weight of patient",
+        "uuid" : "0a970d54-f2f3-4827-97ae-cca3956f4c5c",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Height",
+      "uuid" : "73df2559-2496-4772-9e87-624c5430f33d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Height",
+        "uuid" : "d883d5fe-e17d-4136-b989-089fa0295e34",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 20.0,
+        "highAbsolute" : 300.0,
+        "lowNormal" : 30.0,
+        "highNormal" : 200.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "BMI",
+      "uuid" : "bbbb6027-8fa1-4cf9-8ada-fc3f6795b9a3",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "BMI",
+        "uuid" : "7ac0d759-c50d-4971-88e0-84274224c839",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 18.5,
+        "highNormal" : 24.9,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  \nlet height = programEncounter.findLatestObservationInEntireEnrolment(\"Height\", programEncounter);\nlet weight = programEncounter.findObservation(\"Weight of patient\");\n        height = height && height.getValue();\n        weight = weight && weight.getValue();\n        console.log('height',height);\n        console.log('Weight of patient',weight);\n        let value = '';\n  \n  if (_.isFinite(weight) && _.isFinite(height)) {\n         value = ruleServiceLibraryInterfaceForSharingModules.common.calculateBMI(weight, height);\n       }\n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, value);  \n};\n",
+      "mandatory" : false
+    }, {
+      "name" : "Audit Date",
+      "uuid" : "2b18c768-dc4d-437a-aeb0-dc6a6eb39dd0",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Audit Date",
+        "uuid" : "3e0d8272-9562-48a0-8cc8-dce9ad8007fb",
+        "dataType" : "DateTime",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement})\n    .when.valueInEncounter(\"0a970d54-f2f3-4827-97ae-cca3956f4c5c\").defined.matches();\n  \n  if (condition11) {\n    // Format date as YYYY-MM-DD (compatible with OpenMRS)\n    // change this to below value = imports.moment().toDate();\n    value = moment().format(\"YYYY-MM-DD\");\n  }\n  \n  return new imports.rulesConfig.FormElementStatus(\n    formElement.uuid, visibility, value, answersToSkip, validationErrors\n  );\n};\n",
+      "mandatory" : true
+    }, {
+      "name" : "Hb (gm %)",
+      "uuid" : "24ab723e-9fc2-4f9b-b36b-b113ccd2b6ec",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Hb (gm %)",
+        "uuid" : "47e996c7-3aef-4eea-9eae-a213bd2851e1",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "",
+      "mandatory" : true
+    }, {
+      "name" : "Systolic",
+      "uuid" : "3af2df7e-98a2-46b1-9011-46584f54445d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Systolic",
+        "uuid" : "2a04bf88-6346-4eda-a86c-8a2afc011b22",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 20.0,
+        "highAbsolute" : 300.0,
+        "lowNormal" : 90.0,
+        "highNormal" : 140.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Diastolic",
+      "uuid" : "35d29ed8-2d35-4788-abb4-ae6b64f1844a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Diastolic",
+        "uuid" : "1e2d41a2-5b6a-4ad7-ab91-51d3cdf122bd",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 10.0,
+        "highAbsolute" : 200.0,
+        "lowNormal" : 50.0,
+        "highNormal" : 90.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "WBC count",
+      "uuid" : "00c96a16-5e15-4b1c-9d05-288a1d0bb559",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "WBC count",
+        "uuid" : "2cd031ef-3115-457b-96df-400be8c64bb7",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "SCD DC Neutrophil",
+      "uuid" : "8bc63fd8-6c84-434d-b0dc-0ed78578e5b2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD DC Neutrophil",
+        "uuid" : "577b49f5-748f-44e8-9f93-b2293788077b",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Absolute Neutrophil Count",
+      "uuid" : "a4e02844-3509-46be-a612-ffcbc24e0599",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Absolute Neutrophil Count",
+        "uuid" : "7b97a2fe-9f16-48eb-84d8-df4a50dea9d7",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({ params, imports }) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n\n  // Fetch observations\n  let wbc = programEncounter.findObservation(\"WBC count\");\n  let neutrophil = programEncounter.findObservation(\"SCD DC Neutrophil\");\n\n  wbc = wbc && wbc.getValue();\n  neutrophil = neutrophil && neutrophil.getValue();\n\n  console.log('WBC count', wbc);\n  console.log('Neutrophil %', neutrophil);\n\n  let value = '';\n\n  if (_.isFinite(wbc) && _.isFinite(neutrophil)) {\n    value = (wbc * neutrophil) / 100;\n    value = Math.round(value); // optional\n  }\n\n  return new imports.rulesConfig.FormElementStatus(\n    formElement.uuid,\n    true,\n    value\n  );\n};\n",
+      "mandatory" : false
+    }, {
+      "name" : "What is the present condition",
+      "uuid" : "ad9a0d49-b8c1-485b-9228-adabfa18b2a4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Present condition",
+        "uuid" : "178fb218-2b26-4d43-9e35-f1c28f1bf361",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Recurrent infections",
+          "uuid" : "677a3e7b-c449-4c4a-a98f-1f9c7eec2c81",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Suffering from pain",
+          "uuid" : "4352dedc-b33f-452c-88ac-8bd6f90ce0de",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Normal",
+          "uuid" : "ba43b326-18a1-4f8d-ad04-29b0371461e0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Admitted in hospital",
+          "uuid" : "1b55841b-14ad-4f5c-a423-34132dbfdad7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "What infections did you have in the past month",
+      "uuid" : "790a92fb-a738-427e-8c18-4ba9c4aee69a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "What infections did you have in the past month",
+        "uuid" : "c5add62c-e517-447d-af60-029c80f5f68e",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Present condition').containsAnswerConceptName(\"Recurrent infections\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Where do you experience pain",
+      "uuid" : "3d2bee65-99b0-4a3a-b04d-e71cb8945f90",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Where do you experience pain",
+        "uuid" : "780eabbc-73af-4430-b033-b0e7d18842c9",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Thigh",
+          "uuid" : "2c769499-95d3-4249-adee-053465cbe213",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Lower extremity",
+          "uuid" : "19342b19-d795-4a52-9e2d-ec736aa7e9e4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Others",
+          "uuid" : "118fa43e-525f-41d6-ad3f-98a4857e2d3e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Back",
+          "uuid" : "18e96efd-355c-4324-a126-e5bbf12f3677",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Arm",
+          "uuid" : "83478747-17ed-4146-9145-6ddc98fa4b96",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Lower back",
+          "uuid" : "08210d60-4e5f-476e-b158-0f7e943d52d1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Upper extremity",
+          "uuid" : "539be009-1b3c-41cb-a784-6eb78693f452",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Shin",
+          "uuid" : "0ba13f4d-98ea-42f7-9c43-b84dbced5b78",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Knee",
+          "uuid" : "b7822117-a12b-495e-9bdc-e53f32bd35fc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Present condition').containsAnswerConceptName(\"Suffering from pain\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Area of pain",
+      "uuid" : "fd7ed4dd-f6b4-4e97-ab96-db2256e74080",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Area of pain_Upper extremity",
+        "uuid" : "da4dc300-d78e-453b-929c-c4eb43c99f1d",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Forearm",
+          "uuid" : "c911de95-4387-4782-8173-cd4bf6d65a29",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hand",
+          "uuid" : "0b57088f-496d-4c0a-9c95-5a4f3d9f35d3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Fingers",
+          "uuid" : "96af2945-1fb1-4fa9-8698-cebd09b2434d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Arm",
+          "uuid" : "83478747-17ed-4146-9145-6ddc98fa4b96",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 15.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Where do you experience pain').containsAnyAnswerConceptName('Upper extremity');\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Area of pain",
+      "uuid" : "61b2ba9c-6e58-4253-902a-f8477ae70ffb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Area of pain_Lower extremity",
+        "uuid" : "903b133c-1c79-406d-a2d6-3216262c2827",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Foot",
+          "uuid" : "253fdbab-e35a-4a42-ac55-612bf5e339d2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Thigh",
+          "uuid" : "2c769499-95d3-4249-adee-053465cbe213",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Leg",
+          "uuid" : "7296749f-81b0-4865-b694-9aebc15f3d25",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pelvis",
+          "uuid" : "1855b47b-1f82-44f4-81b9-f2db75c40bec",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Knee",
+          "uuid" : "b7822117-a12b-495e-9bdc-e53f32bd35fc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Hip",
+          "uuid" : "a2c6caeb-ff4d-4b48-9915-a7069a3996b6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 16.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Where do you experience pain').containsAnyAnswerConceptName('Lower extremity');\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Area of pain",
+      "uuid" : "7ecdf64c-f795-42e4-861c-0a26537f514e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Area of pain_Back",
+        "uuid" : "fdd7dd6f-9116-4eab-87ed-667205acd735",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Neck",
+          "uuid" : "e2e2fecc-cbfa-469c-921a-2981efea721a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Upper back",
+          "uuid" : "2e256f07-d788-4aab-a8eb-27a432001c5a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lower back",
+          "uuid" : "08210d60-4e5f-476e-b158-0f7e943d52d1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 17.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Where do you experience pain').containsAnyAnswerConceptName('Back');\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Area of pain",
+      "uuid" : "7725d242-3983-4ece-a20e-270c5b56860e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Area of pain_Other",
+        "uuid" : "ae7f34c7-ae87-4052-9d75-50877354027f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Chest",
+          "uuid" : "869996d2-6241-42d6-bdb5-9c45a8f41a32",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Abdomen",
+          "uuid" : "5d7ef1b8-3c9e-48dd-945f-268fb403eb2e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Head",
+          "uuid" : "02c42c95-468e-4885-ba38-d259e50c0d86",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 18.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Where do you experience pain').containsAnyAnswerConceptName('Others');\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "SCD Medical Details",
+      "uuid" : "6eac7e1d-26b8-4c08-818f-cd318feca236",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Medical Details",
+        "uuid" : "09e5522d-b673-40db-abb5-2fabfc4a01b5",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Organ Analysis",
+          "uuid" : "67fe427e-94c0-4415-b8af-fd2f8a2a92fc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Physical Examination",
+          "uuid" : "3c12b838-3e3b-424e-b823-c40be913134f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 19.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Physical examination",
+      "uuid" : "45bb1b05-89f5-458a-835c-c83776dbffd5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Physical examination",
+        "uuid" : "69398be9-e4df-49b9-af29-b4678a5ec040",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Heart",
+          "uuid" : "4ee30a72-1d7a-47f7-b801-3812a0083040",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Anaemia",
+          "uuid" : "3de68d67-09fc-4e98-9606-e342053c12de",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hepatomegaly",
+          "uuid" : "10d4959b-0d39-4934-a210-fab2f923e470",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Splenomegaly",
+          "uuid" : "3bedcc61-a465-4b1f-95b5-4d06131a556c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Leg ulcer",
+          "uuid" : "b914f458-1389-47b4-bd69-3dd14d7a9277",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hip/Shoulder",
+          "uuid" : "8eb2298f-e695-40c8-a7a6-5a90148d0e93",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jaundice",
+          "uuid" : "352bb8a4-1569-492f-9a53-14e3b134c104",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 20.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"09e5522d-b673-40db-abb5-2fabfc4a01b5\").containsAnswerConceptName(\"3c12b838-3e3b-424e-b823-c40be913134f\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "SCD Medical Details",
+                "conceptUuid" : "09e5522d-b673-40db-abb5-2fabfc4a01b5",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Physical Examination" ],
+                "answerConceptUuids" : [ "3c12b838-3e3b-424e-b823-c40be913134f" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "SCD Investigations",
+      "uuid" : "93655457-8be9-4e35-9ad0-a5e1d64ab6ed",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Investigations",
+        "uuid" : "7dbe3b7d-5daf-49b1-ba7f-179ddf1a8f70",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "SGPT",
+          "uuid" : "f5ebf8b7-07a1-40e7-b675-be19d90bd3d2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ultrasound",
+          "uuid" : "62d60248-a47a-49ab-8291-1281bf2b89fd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Creatinine",
+          "uuid" : "46c2c333-019d-4c66-8021-e714185f57b6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ferritin",
+          "uuid" : "67ba8d7d-de2f-4f62-ae27-88d9ca32ffa0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Echo",
+          "uuid" : "b3e3f5d0-2425-446c-9a14-3ea6cc6c907b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Transcranial Doppler",
+          "uuid" : "2f55cac1-0a02-4f2c-ac1e-7ece5d180a8b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Micro albumin",
+          "uuid" : "07a6ce2a-20ba-457a-8dad-4478b1889fcd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 21.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    }, {
+      "name" : "SCD Creatinine Result",
+      "uuid" : "adcc94f8-2611-4cb7-a776-3a58f548c0ed",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Creatinine Result",
+        "uuid" : "338b2681-3788-4337-b2a7-139c3194df56",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 22.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"7dbe3b7d-5daf-49b1-ba7f-179ddf1a8f70\").containsAnswerConceptName(\"46c2c333-019d-4c66-8021-e714185f57b6\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "SCD Investigations",
+                "conceptUuid" : "7dbe3b7d-5daf-49b1-ba7f-179ddf1a8f70",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Creatinine" ],
+                "answerConceptUuids" : [ "46c2c333-019d-4c66-8021-e714185f57b6" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "SCD Micro Albumin",
+      "uuid" : "a729ec60-0cf7-4c46-b018-efd907598fab",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Micro Albumin",
+        "uuid" : "21677597-256c-4417-a8eb-9616094a0945",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 23.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"7dbe3b7d-5daf-49b1-ba7f-179ddf1a8f70\").containsAnswerConceptName(\"07a6ce2a-20ba-457a-8dad-4478b1889fcd\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "SCD Investigations",
+                "conceptUuid" : "7dbe3b7d-5daf-49b1-ba7f-179ddf1a8f70",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Micro albumin" ],
+                "answerConceptUuids" : [ "07a6ce2a-20ba-457a-8dad-4478b1889fcd" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "SCD Ferritin Result",
+      "uuid" : "8d9b619e-5785-4133-ac8b-7939d1fe3439",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Ferritin Result (voided~383881)",
+        "uuid" : "526cd28c-e17e-44f2-95ce-9b8f3701b8e9",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ],
+        "voided" : true
+      },
+      "displayOrder" : 24.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"7dbe3b7d-5daf-49b1-ba7f-179ddf1a8f70\").containsAnswerConceptName(\"67ba8d7d-de2f-4f62-ae27-88d9ca32ffa0\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "SCD Investigations",
+                "conceptUuid" : "7dbe3b7d-5daf-49b1-ba7f-179ddf1a8f70",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Ferritin" ],
+                "answerConceptUuids" : [ "67ba8d7d-de2f-4f62-ae27-88d9ca32ffa0" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "SCD Ferritin Result",
+      "uuid" : "8f7d19de-1d05-42d1-8979-d008f7ffb86e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Ferritin Result",
+        "uuid" : "327aaa65-3bdd-4568-b43c-798d6d9407a6",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 25.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"7dbe3b7d-5daf-49b1-ba7f-179ddf1a8f70\").containsAnswerConceptName(\"67ba8d7d-de2f-4f62-ae27-88d9ca32ffa0\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "SCD SGPT",
+      "uuid" : "15278730-2c02-42ca-9cb5-6201eba110c8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD SGPT",
+        "uuid" : "bb28bf53-5650-461d-b216-8dfb70a1e1d7",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 26.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"7dbe3b7d-5daf-49b1-ba7f-179ddf1a8f70\").containsAnswerConceptName(\"f5ebf8b7-07a1-40e7-b675-be19d90bd3d2\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "SCD Investigations",
+                "conceptUuid" : "7dbe3b7d-5daf-49b1-ba7f-179ddf1a8f70",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "SGPT" ],
+                "answerConceptUuids" : [ "f5ebf8b7-07a1-40e7-b675-be19d90bd3d2" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "SCD Date of USG",
+      "uuid" : "49d88806-d762-4ac6-8b33-b9cc59b08dce",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Date of USG",
+        "uuid" : "89faf167-a459-4fe4-a9be-47e595b5f47d",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 27.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"7dbe3b7d-5daf-49b1-ba7f-179ddf1a8f70\").containsAnswerConceptName(\"62d60248-a47a-49ab-8291-1281bf2b89fd\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "SCD Investigations",
+                "conceptUuid" : "7dbe3b7d-5daf-49b1-ba7f-179ddf1a8f70",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Ultrasound" ],
+                "answerConceptUuids" : [ "62d60248-a47a-49ab-8291-1281bf2b89fd" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "SCD USG - Findings",
+      "uuid" : "1315aeb3-1758-44d0-9514-e9d37538ba38",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD USG - Findings",
+        "uuid" : "832aad5a-eb66-43aa-b6ac-3af644dbdca9",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Normal",
+          "uuid" : "ba43b326-18a1-4f8d-ad04-29b0371461e0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Abnormal",
+          "uuid" : "ecf02cf1-e8c8-4ad3-a0e9-792e1d307105",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 28.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"7dbe3b7d-5daf-49b1-ba7f-179ddf1a8f70\").containsAnswerConceptName(\"62d60248-a47a-49ab-8291-1281bf2b89fd\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "SCD USG - If Abnormal Specify",
+      "uuid" : "256da93a-a58a-4e69-ba5c-dfe08b39d496",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD USG - If Abnormal Specify",
+        "uuid" : "98fdb629-e1a4-4f22-ba0e-e30a04907212",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 29.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"832aad5a-eb66-43aa-b6ac-3af644dbdca9\").containsAnswerConceptName(\"ecf02cf1-e8c8-4ad3-a0e9-792e1d307105\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "SCD USG - Findings",
+                "conceptUuid" : "832aad5a-eb66-43aa-b6ac-3af644dbdca9",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Abnormal" ],
+                "answerConceptUuids" : [ "ecf02cf1-e8c8-4ad3-a0e9-792e1d307105" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "SCD Echo",
+      "uuid" : "db365322-68aa-4f71-b558-8a24652ab082",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Echo",
+        "uuid" : "da09454e-dc55-48fb-8f74-0c74dc4ff1f0",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Abnormal",
+          "uuid" : "ecf02cf1-e8c8-4ad3-a0e9-792e1d307105",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Normal",
+          "uuid" : "ba43b326-18a1-4f8d-ad04-29b0371461e0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 30.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"7dbe3b7d-5daf-49b1-ba7f-179ddf1a8f70\").containsAnswerConceptName(\"b3e3f5d0-2425-446c-9a14-3ea6cc6c907b\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "SCD Investigations",
+                "conceptUuid" : "7dbe3b7d-5daf-49b1-ba7f-179ddf1a8f70",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Echo" ],
+                "answerConceptUuids" : [ "b3e3f5d0-2425-446c-9a14-3ea6cc6c907b" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "SCD Echo Date",
+      "uuid" : "7ca62c28-cc65-4ed0-99b7-606960dfaedb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Echo Date",
+        "uuid" : "861427c4-47ef-495d-8e49-d37f3b1be338",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 31.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"7dbe3b7d-5daf-49b1-ba7f-179ddf1a8f70\").containsAnswerConceptName(\"b3e3f5d0-2425-446c-9a14-3ea6cc6c907b\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "SCD Investigations",
+                "conceptUuid" : "7dbe3b7d-5daf-49b1-ba7f-179ddf1a8f70",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Echo" ],
+                "answerConceptUuids" : [ "b3e3f5d0-2425-446c-9a14-3ea6cc6c907b" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "SCD Echo if Abnormal",
+      "uuid" : "bdc58eaa-7775-4715-9c41-f1bfe8830390",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Echo if Abnormal",
+        "uuid" : "a9334dff-9f6c-436d-a46e-ea841d55639d",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 32.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"da09454e-dc55-48fb-8f74-0c74dc4ff1f0\").containsAnswerConceptName(\"ecf02cf1-e8c8-4ad3-a0e9-792e1d307105\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "SCD Echo",
+                "conceptUuid" : "da09454e-dc55-48fb-8f74-0c74dc4ff1f0",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Abnormal" ],
+                "answerConceptUuids" : [ "ecf02cf1-e8c8-4ad3-a0e9-792e1d307105" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "SCD Heart - Clinical Findings",
+      "uuid" : "fa83ae8a-c28d-44bb-b89e-a91ce836c554",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Heart - Clinical Findings",
+        "uuid" : "b8e21734-54c4-4ee1-834f-9011422eeabd",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 33.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"69398be9-e4df-49b9-af29-b4678a5ec040\").containsAnswerConceptName(\"4ee30a72-1d7a-47f7-b801-3812a0083040\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Physical examination",
+                "conceptUuid" : "69398be9-e4df-49b9-af29-b4678a5ec040",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Heart" ],
+                "answerConceptUuids" : [ "4ee30a72-1d7a-47f7-b801-3812a0083040" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "SCD Transcranial Doppler",
+      "uuid" : "d088c81b-7ce6-43b3-9d85-1508ee477e63",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Transcranial Doppler",
+        "uuid" : "685f43c5-972a-46aa-8466-30a9fd8d2bc7",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Normal",
+          "uuid" : "ba43b326-18a1-4f8d-ad04-29b0371461e0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Abnormal",
+          "uuid" : "ecf02cf1-e8c8-4ad3-a0e9-792e1d307105",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 34.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "SCD Transcranial Doppler if Abnormal",
+      "uuid" : "a8983b56-a584-4e6c-b630-11cbfe787326",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Transcranial Doppler if Abnormal",
+        "uuid" : "6ea41388-0e45-4ab2-9473-7d015ac260f9",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 35.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"685f43c5-972a-46aa-8466-30a9fd8d2bc7\").containsAnswerConceptName(\"ecf02cf1-e8c8-4ad3-a0e9-792e1d307105\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "SCD Transcranial Doppler",
+                "conceptUuid" : "685f43c5-972a-46aa-8466-30a9fd8d2bc7",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Abnormal" ],
+                "answerConceptUuids" : [ "ecf02cf1-e8c8-4ad3-a0e9-792e1d307105" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "SCD Avascular Necrosis",
+      "uuid" : "fcb7741c-2a43-4ab3-9e82-80ef3a7b80a9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Avascular Necrosis",
+        "uuid" : "95115f53-3715-4d88-8125-a04fd6153725",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Hip",
+          "uuid" : "a2c6caeb-ff4d-4b48-9915-a7069a3996b6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not present",
+          "uuid" : "18518727-74e7-412e-90ac-fe471278ffaf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Shoulder",
+          "uuid" : "8fb90069-3f74-4557-a07f-a3da94ddaabc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 36.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"69398be9-e4df-49b9-af29-b4678a5ec040\").containsAnswerConceptName(\"8eb2298f-e695-40c8-a7a6-5a90148d0e93\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Physical examination",
+                "conceptUuid" : "69398be9-e4df-49b9-af29-b4678a5ec040",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Hip/Shoulder" ],
+                "answerConceptUuids" : [ "8eb2298f-e695-40c8-a7a6-5a90148d0e93" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "SCD Avascular Necrosis If present",
+      "uuid" : "8b90c528-ee51-4c63-a9eb-358cc2f29cea",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Avascular Necrosis If present",
+        "uuid" : "5db0313b-99e9-483e-8363-12e1376dd12a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Surgery",
+          "uuid" : "44cb9397-d88a-414a-a1d9-1981ef981544",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Follow-up",
+          "uuid" : "46a77a09-a49e-4922-98a2-b0b09d476630",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 37.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"95115f53-3715-4d88-8125-a04fd6153725\").containsAnswerConceptNameOtherThan(\"18518727-74e7-412e-90ac-fe471278ffaf\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "SCD Avascular Necrosis",
+                "conceptUuid" : "95115f53-3715-4d88-8125-a04fd6153725",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Not present" ],
+                "answerConceptUuids" : [ "18518727-74e7-412e-90ac-fe471278ffaf" ]
+              },
+              "operator" : "containsAnswerConceptNameOtherThan"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "SCD Avascular Necrosis Surgery Done",
+      "uuid" : "328dabc7-c287-4cdc-9a39-7ba982c4a3be",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Avascular Necrosis Surgery Done",
+        "uuid" : "8f0e8fe9-ba8a-4a7c-a4ca-d20669dabdc3",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 38.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"5db0313b-99e9-483e-8363-12e1376dd12a\").containsAnswerConceptName(\"44cb9397-d88a-414a-a1d9-1981ef981544\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "SCD Avascular Necrosis If present",
+                "conceptUuid" : "5db0313b-99e9-483e-8363-12e1376dd12a",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Surgery" ],
+                "answerConceptUuids" : [ "44cb9397-d88a-414a-a1d9-1981ef981544" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "SCD Avascular Necrosis Date of Surgery",
+      "uuid" : "9e7f217c-a6a2-46fb-baf2-b925085b0ac5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Avascular Necrosis Date of Surgery",
+        "uuid" : "5063a630-e5df-4651-ab41-a2eb811e7379",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 39.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"8f0e8fe9-ba8a-4a7c-a4ca-d20669dabdc3\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "SCD Avascular Necrosis Surgery Done",
+                "conceptUuid" : "8f0e8fe9-ba8a-4a7c-a4ca-d20669dabdc3",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Hepatomegaly - Size",
+      "uuid" : "3462c612-3623-418b-bf3f-204f38130f4f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Hepatomegaly - Size",
+        "uuid" : "814f2e93-4173-4e94-9212-305dabe502e1",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 40.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"69398be9-e4df-49b9-af29-b4678a5ec040\").containsAnswerConceptName(\"10d4959b-0d39-4934-a210-fab2f923e470\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Physical examination",
+                "conceptUuid" : "69398be9-e4df-49b9-af29-b4678a5ec040",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Hepatomegaly" ],
+                "answerConceptUuids" : [ "10d4959b-0d39-4934-a210-fab2f923e470" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Hepatomegaly - Tenderness",
+      "uuid" : "72e71be0-d576-49d4-b748-898296f2aab6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Hepatomegaly - Tenderness",
+        "uuid" : "e5a11bd4-fdc3-495c-8ef7-169033d8d347",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 41.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"69398be9-e4df-49b9-af29-b4678a5ec040\").containsAnswerConceptName(\"10d4959b-0d39-4934-a210-fab2f923e470\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Physical examination",
+                "conceptUuid" : "69398be9-e4df-49b9-af29-b4678a5ec040",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Hepatomegaly" ],
+                "answerConceptUuids" : [ "10d4959b-0d39-4934-a210-fab2f923e470" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Splenomegaly - Size",
+      "uuid" : "0323e910-a3a5-4274-89cb-3a627ab10018",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Splenomegaly - Size",
+        "uuid" : "bd65bb92-a6da-45b4-94ba-37bd24483740",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 42.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"69398be9-e4df-49b9-af29-b4678a5ec040\").containsAnswerConceptName(\"3bedcc61-a465-4b1f-95b5-4d06131a556c\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Physical examination",
+                "conceptUuid" : "69398be9-e4df-49b9-af29-b4678a5ec040",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Splenomegaly" ],
+                "answerConceptUuids" : [ "3bedcc61-a465-4b1f-95b5-4d06131a556c" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Splenomegaly - Tenderness",
+      "uuid" : "53cc5795-be3e-47ce-90a2-5ea443b14cd0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Splenomegaly - Tenderness",
+        "uuid" : "2de272e1-3bc6-4635-ab93-8ddf37e67d60",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 43.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"69398be9-e4df-49b9-af29-b4678a5ec040\").containsAnswerConceptName(\"3bedcc61-a465-4b1f-95b5-4d06131a556c\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Physical examination",
+                "conceptUuid" : "69398be9-e4df-49b9-af29-b4678a5ec040",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Splenomegaly" ],
+                "answerConceptUuids" : [ "3bedcc61-a465-4b1f-95b5-4d06131a556c" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "SCD Splenomegaly Type",
+      "uuid" : "ed4db6c6-b2bd-4c77-8c07-1ccab5c49aef",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Splenomegaly Type",
+        "uuid" : "432ec96d-16f4-4016-b89d-d90d3f4e4907",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Non-serious splenomegaly",
+          "uuid" : "e2e78c5d-0dc7-46a2-aa2f-ded0afe244ab",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Acute Splenic Secuestration",
+          "uuid" : "98f6c4b4-478c-4823-8b81-c6490cc34196",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hypersplenism",
+          "uuid" : "b943b161-438a-449b-a70a-f8ff2abfbe95",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 44.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"2de272e1-3bc6-4635-ab93-8ddf37e67d60\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").matches();\n  \n  const condition21 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"bd65bb92-a6da-45b4-94ba-37bd24483740\").greaterThan(4).matches();\n  \n  visibility = condition11 || condition21 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "conjunction" : "or",
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Splenomegaly - Tenderness",
+                "conceptUuid" : "2de272e1-3bc6-4635-ab93-8ddf37e67d60",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        }, {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Splenomegaly - Size",
+                "conceptUuid" : "bd65bb92-a6da-45b4-94ba-37bd24483740",
+                "conceptDataType" : "Numeric"
+              },
+              "rhs" : {
+                "type" : "value",
+                "value" : 4
+              },
+              "operator" : "greaterThan"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "SCD Serious Splenomegaly If present",
+      "uuid" : "ff09214e-83a4-45b9-82a0-62c51f0e074f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Serious Splenomegaly If present",
+        "uuid" : "30417557-a4f8-4cdc-a3e4-32f3cc767b0f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Surgery",
+          "uuid" : "44cb9397-d88a-414a-a1d9-1981ef981544",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Follow-up",
+          "uuid" : "46a77a09-a49e-4922-98a2-b0b09d476630",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 45.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"432ec96d-16f4-4016-b89d-d90d3f4e4907\").containsAnyAnswerConceptName(\"98f6c4b4-478c-4823-8b81-c6490cc34196\",\"b943b161-438a-449b-a70a-f8ff2abfbe95\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "SCD Splenomegaly Type",
+                "conceptUuid" : "432ec96d-16f4-4016-b89d-d90d3f4e4907",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Acute Splenic Secuestration", "Hypersplenism" ],
+                "answerConceptUuids" : [ "98f6c4b4-478c-4823-8b81-c6490cc34196", "b943b161-438a-449b-a70a-f8ff2abfbe95" ]
+              },
+              "operator" : "containsAnyAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "SCD Splenectomy Surgery Done",
+      "uuid" : "10e9c175-e8d6-487f-b68f-a3d789275016",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Splenectomy Surgery Done",
+        "uuid" : "a9bd55c6-3745-4733-bb4b-d09fb9590c16",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 46.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"30417557-a4f8-4cdc-a3e4-32f3cc767b0f\").containsAnswerConceptName(\"44cb9397-d88a-414a-a1d9-1981ef981544\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "SCD Serious Splenomegaly If present",
+                "conceptUuid" : "30417557-a4f8-4cdc-a3e4-32f3cc767b0f",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Surgery" ],
+                "answerConceptUuids" : [ "44cb9397-d88a-414a-a1d9-1981ef981544" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "SCD Splenomegaly Date of Surgery",
+      "uuid" : "afdc70eb-d5a0-42de-918b-b6f0135ec10d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Splenomegaly Date of Surgery",
+        "uuid" : "bf8d5519-b359-4cca-9619-10d90c748d15",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 47.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"a9bd55c6-3745-4733-bb4b-d09fb9590c16\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "SCD Splenectomy Surgery Done",
+                "conceptUuid" : "a9bd55c6-3745-4733-bb4b-d09fb9590c16",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "Any other health issues in the past month",
+      "uuid" : "3f818662-5d77-4420-b330-ede8d0af2e6b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Any other health issues in the past month",
+        "uuid" : "42783f83-e7f6-451e-bb2d-a0140a110e74",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 48.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Did you miss household chores/work/school in the past month due to the condition",
+      "uuid" : "6e25df7a-d5e9-493f-a2a0-cd55025041c1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Did you miss household chores/work/school in the past month due to the condition",
+        "uuid" : "adf9c5fa-a3ea-4a3f-805b-5ddcc8ad77ff",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 49.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "How many days in the month did you miss chores/school/work",
+      "uuid" : "ce22059d-80d3-4b59-a462-b2b8f05a38f3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "How many days in the month did you miss chores/school/work",
+        "uuid" : "c31e3c7e-9edc-4eb6-8c1d-79f3a6d1349c",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 50.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Did you miss household chores/work/school in the past month due to the condition').containsAnyAnswerConceptName('Yes');\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Reason for missing",
+      "uuid" : "c2cec488-7098-48c1-a027-376c34e76771",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Reason for missing",
+        "uuid" : "1a4021ae-fc2c-4e2a-83eb-34090e4c3deb",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 51.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Did you miss household chores/work/school in the past month due to the condition').containsAnyAnswerConceptName('Yes');\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Were you seen by a doctor in the past month",
+      "uuid" : "6ff97464-9ef8-4209-ba95-3f04a5df5b46",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Were you seen by a doctor in the past month",
+        "uuid" : "5365bb1d-836f-4528-b7d8-1382e30a80ec",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 52.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Which drug was administered",
+      "uuid" : "7dc070c3-4626-4523-a1e6-3e073f64c23f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Drug administered",
+        "uuid" : "449959b7-e724-44da-941d-482544122075",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Vit B complex",
+          "uuid" : "4300c014-8bc1-4647-bcd0-0ecdfbc0ab67",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Folic acid",
+          "uuid" : "86c39430-bf12-4718-99b1-33b8af49ebbe",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Iron",
+          "uuid" : "eb039a93-7034-4945-b573-e6ec031b33e0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Paracetamol",
+          "uuid" : "5d3962d5-c20f-4dbe-9af6-c195ff01dd97",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Amoxycillin",
+          "uuid" : "e12059e8-3402-4122-a647-8da950c0d984",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Others",
+          "uuid" : "118fa43e-525f-41d6-ad3f-98a4857e2d3e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hydroxy urea",
+          "uuid" : "f198d1d6-f307-402e-a786-74dc35ffbc00",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Penicillin",
+          "uuid" : "49425091-9284-4063-8570-5714a77f09e5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 53.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "SCD Vitamins",
+      "uuid" : "bcc460f5-f031-4057-a125-59d2a2c5e40a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Vitamins",
+        "uuid" : "83b6be90-28c7-4ecd-aed8-26c67eafc400",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 54.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "SCD Analgesic",
+      "uuid" : "a44cfbc7-0251-49df-9aeb-07d78ef60fbb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Analgesic",
+        "uuid" : "77a61182-2da7-4378-bcfb-1fdca6bc6f71",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 55.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "SCD Hydroxyurea when started",
+      "uuid" : "288affdc-f851-48e3-8b9b-b2e199a57532",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Hydroxyurea when started",
+        "uuid" : "01a279d6-1bc7-4ccf-8d00-676195f78ebe",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 56.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({ params, imports }) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const FormElementStatus = imports.rulesConfig.FormElementStatus;\n\n  // Set default status values\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n\n  // UUID for the \"SCD Hydroxyurea when started\" concept\n  const HydroxyureastartedConceptUUID = \"01a279d6-1bc7-4ccf-8d00-676195f78ebe\";\n\n  // Fetch the latest past encounter that has height recorded\n  const programEnrolment = programEncounter.programEnrolment;\n  const hydroxStartObs =\n    programEnrolment && programEnrolment.findLatestObservationInEntireEnrolment\n      ? programEnrolment.findLatestObservationInEntireEnrolment(HydroxyureastartedConceptUUID)\n      : null;\n\n  if (hydroxStartObs) {\n    if (typeof hydroxStartObs.getValue === 'function') {\n      const obsValue = hydroxStartObs.getValue();\n      if (obsValue !== undefined && obsValue !== null) {\n        value = obsValue; // Set the previously recorded SCD Hydroxyurea when started\n      }\n    } else if (hydroxStartObs.value !== undefined && hydroxStartObs.value !== null) {\n      value = hydroxStartObs.value; // Set the previously recorded SCD Hydroxyurea when started\n    }\n  }\n\n  return new FormElementStatus(\n    formElement.uuid,\n    visibility,\n    value,\n    answersToSkip,\n    validationErrors\n  );\n};",
+      "mandatory" : false
+    }, {
+      "name" : "SCD Dosage of hydroxyurea",
+      "uuid" : "99ac9901-7b81-47ac-a528-1571f2f0da9f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Dosage of hydroxyurea",
+        "uuid" : "d279e24e-7b1c-401b-adf5-e7aa6bd06786",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 57.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"449959b7-e724-44da-941d-482544122075\").containsAnswerConceptName(\"f198d1d6-f307-402e-a786-74dc35ffbc00\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Drug administered",
+                "conceptUuid" : "449959b7-e724-44da-941d-482544122075",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Hydroxy urea" ],
+                "answerConceptUuids" : [ "f198d1d6-f307-402e-a786-74dc35ffbc00" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "Dosage",
+      "uuid" : "a44ec6d2-a3de-4288-94a2-3201dd6ca537",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Dosage",
+        "uuid" : "18c40493-e81a-4c21-b9aa-0b271954b8b8",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 58.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Drug administered').containsAnyAnswerConceptName('Penicillin','Hydroxy urea');\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Dosage of hydroxyurea",
+      "uuid" : "c0b46f89-9284-4c50-9b4e-fde7b2d192b0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Dosage of hydroxyurea",
+        "uuid" : "efb81577-ecd4-4a47-ab9e-5ac609c523bf",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "<250",
+          "uuid" : "c867a5e9-35ab-43ef-9249-69c4eec8cbd8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "750",
+          "uuid" : "a1b1cd71-c6bb-48b4-b765-074348c56b5b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "250",
+          "uuid" : "ec6f583b-7636-43e5-a0a9-a9283a7744c5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : ">750",
+          "uuid" : "b91fb2e0-b769-4887-bbf6-d575a6a89610",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "500",
+          "uuid" : "24f5ad0b-cfaa-4014-a4b2-fa81d9f4b82e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 59.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Drug administered').containsAnyAnswerConceptName('Hydroxy urea');\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "SCD Medicines intake",
+      "uuid" : "018e92ba-59e2-4dd8-a9b8-2e721f631d14",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Medicines intake",
+        "uuid" : "e9dbcf2d-00f2-482e-83e3-47a59e909ddc",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Unknown",
+          "uuid" : "501c7aed-991c-4151-b84a-25742a1c65c2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not Provided",
+          "uuid" : "89dac2d3-0efa-42a9-a4db-443f54c0b606",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Irregular",
+          "uuid" : "04186661-c7e1-4dd9-b123-91021e8925f7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not taking",
+          "uuid" : "9e6236be-ef58-4727-af2a-05f8b1a89ee1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Regular",
+          "uuid" : "c64e674c-7d03-46b8-b834-3e01b05b4e34",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 60.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "SCD Medicine for High Ferritin",
+      "uuid" : "60ea7477-c3eb-497e-87d8-d2f996c74b3f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Medicine for High Ferritin",
+        "uuid" : "82c27cb8-8e68-40da-a60a-c706e44dc574",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Desferroxamine",
+          "uuid" : "7e75d0ea-38e6-4315-8ccc-4f05ef9734f6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 61.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"327aaa65-3bdd-4568-b43c-798d6d9407a6\").greaterThan(1000).matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "SCD Ferritin Result",
+                "conceptUuid" : "327aaa65-3bdd-4568-b43c-798d6d9407a6",
+                "conceptDataType" : "Numeric"
+              },
+              "rhs" : {
+                "type" : "value",
+                "value" : 1000
+              },
+              "operator" : "greaterThan"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "SCD Ferritin Dosage",
+      "uuid" : "d4c054a2-8e8d-47f6-b1e0-64d5258d2079",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Ferritin Dosage",
+        "uuid" : "59649526-47ee-4a98-a6fc-313c9de1f99e",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 62.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"82c27cb8-8e68-40da-a60a-c706e44dc574\").containsAnswerConceptName(\"7e75d0ea-38e6-4315-8ccc-4f05ef9734f6\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "SCD Medicine for High Ferritin",
+                "conceptUuid" : "82c27cb8-8e68-40da-a60a-c706e44dc574",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Desferroxamine" ],
+                "answerConceptUuids" : [ "7e75d0ea-38e6-4315-8ccc-4f05ef9734f6" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "SCD Follow-up Type",
+      "uuid" : "af4e49ed-33bf-4f51-8886-2f541391d661",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Follow-up Type",
+        "uuid" : "64c56fd2-e4ad-4f80-afe7-84cd8b3d6b7a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Follow-up",
+          "uuid" : "46a77a09-a49e-4922-98a2-b0b09d476630",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Surgery",
+          "uuid" : "44cb9397-d88a-414a-a1d9-1981ef981544",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 63.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "SCD Follow-up Date",
+      "uuid" : "7c37a9ef-5621-48a8-954a-300885c6391c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Follow-up Date",
+        "uuid" : "69f89ca9-084f-48ca-8330-bce780f9b5f6",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 64.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Remarks for the month",
+      "uuid" : "34d87c52-5a4b-4832-8087-d4730aab3e97",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Remarks for the month",
+        "uuid" : "26aab8dc-4106-4d4f-b94d-b9416fb877e8",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 65.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "What were the other drugs",
+      "uuid" : "5a0836b1-0662-49f2-8964-a980edd812f0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "What were the other drugs",
+        "uuid" : "3b6dc309-3f7c-47cf-b16d-046fef8850c3",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 66.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment('Drug administered').containsAnswerConceptName(\"Others\");\n  return statusBuilder.build();//this method returns FormElementStatus object with visibility true if the conditions given above matches\n};",
+      "mandatory" : true
+    }, {
+      "name" : "SCD Last Hospital Admission Date",
+      "uuid" : "3631aacd-0d5a-40bd-b71d-34bfbdd08b99",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Last Hospital Admission Date",
+        "uuid" : "0cedb59d-ac0a-4c1a-a464-ab87b60230b0",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 67.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "SCD Last Blood Transfusion Date",
+      "uuid" : "ee51c16d-230d-46ef-b20b-4ba978e629bb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Last Blood Transfusion Date",
+        "uuid" : "8dd64b80-7760-40fb-8290-4fe87beafa4c",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 68.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "SCD Mental Health Assessment",
+      "uuid" : "a35aea1b-d572-4762-b41a-52451afd0ed4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Mental Health Assessment",
+        "uuid" : "94433dc2-8aba-4c50-98ad-df195bbae61c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Required",
+          "uuid" : "cfabfd76-1124-4520-a131-f5645b599cde",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not Required",
+          "uuid" : "2c5d2a15-fae8-4ce5-8fe8-51cf9b6f6400",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 69.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Was counselling given this month",
+      "uuid" : "94a58827-5f3d-4100-a7a6-85b596b55017",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Was counselling given this month",
+        "uuid" : "c4d6f312-1c73-4961-b83a-60ff49d0947f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 70.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "SCD Part of Peer Group (WhatsApp)",
+      "uuid" : "e3bb8da7-ef3f-474d-b8b0-44eada02a0a9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SCD Part of Peer Group (WhatsApp)",
+        "uuid" : "cfbd9b49-3f1a-4a62-836c-a0ec979679e2",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 71.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "Followup",
+    "timed" : false
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "//SAMPLE RULE EXAMPLE\n\"use strict\";\n({ params, imports }) => {\n  const programEncounter = params.entity;\n  const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({\n    programEncounter\n  });\n  //add new visit schedule object to scheduleBuilder\n  let visitDate = imports.moment(programEncounter.encounterDateTime).add(30, 'days').toDate();\n  \n  scheduleBuilder\n    .add({\n      name: \"Sickle Cell followup\",\n      encounterType: \"Sickle Cell followup\",\n      earliestDate: visitDate,\n      maxDate: imports.moment(visitDate).add(20, 'days').toDate()\n    });\n  \n  return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

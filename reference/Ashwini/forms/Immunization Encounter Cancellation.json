@@ -1,0 +1,7 @@
+{
+  "name" : "Immunization Encounter Cancellation",
+  "uuid" : "c6c72d03-490d-45ad-92c4-3dae759f39cc",
+  "formType" : "ProgramEncounterCancellation",
+  "formElementGroups" : [ ],
+  "decisionConcepts" : [ ]
+}

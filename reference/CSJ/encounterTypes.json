@@ -1,0 +1,220 @@
+[ {
+  "name" : "Claim Activity Register",
+  "uuid" : "57486413-7045-491c-9596-c66c6fc61a2a",
+  "entityEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n    const individual = params.entity;\n    \n    const hasEncounterAlreadyFilled = individual.getEncounters(true).some((enc) => enc.encounterType.name == \"Claim Activity Register\" && enc.encounterDateTime != null && enc.voided == false && enc.cancelDateTime == null)\n    \n    return !hasEncounterAlreadyFilled;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Claim Impact (voided~3735)",
+  "uuid" : "779596f8-b162-42e7-ad00-678aadb6fc83",
+  "entityEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n    const individual = params.entity;\n    \n    const hasEncounterAlreadyFilled = individual.getEncounters(true).some((enc) => enc.encounterType.name == \"Claim Impact\" && enc.encounterDateTime != null && enc.voided == false && enc.cancelDateTime == null)\n    \n    return !hasEncounterAlreadyFilled;\n};",
+  "active" : true,
+  "immutable" : false,
+  "voided" : true
+}, {
+  "name" : "Claim Impact Form",
+  "uuid" : "0bb3b428-6057-4cf3-9d15-22851ecce74b",
+  "entityEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n    const individual = params.entity;\n    \n    const hasEncounterAlreadyFilled = individual.getEncounters(true).some((enc) => enc.encounterType.name == \"Claim Impact Form\" && enc.encounterDateTime != null && enc.voided == false && enc.cancelDateTime == null)\n    \n    return !hasEncounterAlreadyFilled;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Claim Legal Fund (voided~3736)",
+  "uuid" : "5c3e8378-68ff-476f-ae34-8548434d013f",
+  "entityEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n    const individual = params.entity;\n    \n    const hasEncounterAlreadyFilled = individual.getEncounters(true).some((enc) => enc.encounterType.name == \"Claim Legal Fund\" && enc.encounterDateTime != null && enc.voided == false && enc.cancelDateTime == null)\n    \n    return !hasEncounterAlreadyFilled;\n};",
+  "active" : true,
+  "immutable" : false,
+  "voided" : true
+}, {
+  "name" : "Claim Legal Fund (voided~3759)",
+  "uuid" : "2767916a-2bcc-4d64-9017-db0ad460a645",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false,
+  "voided" : true
+}, {
+  "name" : "Claim Status Details (voided~3758)",
+  "uuid" : "1427d910-4e82-4b96-9446-5e42d0683128",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false,
+  "voided" : true
+}, {
+  "name" : "Claim Legal Fund",
+  "uuid" : "6afe3ea4-a64a-4861-a586-9d8fa54edf5c",
+  "entityEligibilityCheckRule" : "'use strict';\n({ params, imports }) => {\n    const individual = params.entity;\n\n    const hasEncounterAlreadyFilled = individual.getEncounters(true).some((enc) => \n        enc.encounterType.name == \"Claim Legal Fund\" &&\n        enc.encounterDateTime != null &&\n        enc.voided == false &&\n        enc.cancelDateTime == null\n    );\n\n \n    return !hasEncounterAlreadyFilled ; \n};\n",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Internal Training",
+  "uuid" : "a5d29b8a-69d8-4a76-b18e-c28883ca82ba",
+  "entityEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const internalConceptUUID = \"3feb2dac-7f40-49e7-82c8-a5c55b3feb8a\";\n  const phasedEventUUID = \"cfdfb311-ac5d-48ff-b250-57259194016b\";\n  const isTypeOfTrainingInternal = individual.getObservationValue(\"c7afa395-baae-4434-b8f7-b938b78051bd\") == internalConceptUUID;\n  const iswhetherPhased = individual.getObservationValue(\"387e72d2-1ced-4032-b273-ea3ef5c5a159\") == phasedEventUUID ; \n  return isTypeOfTrainingInternal && iswhetherPhased\n};\n",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "One Time Training (voided~3782)",
+  "uuid" : "20e89d9d-2237-4789-8d10-352fc4ef2261",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false,
+  "voided" : true
+}, {
+  "name" : "External Training",
+  "uuid" : "107721e2-1ee1-4d51-a3c8-5f9ed7983ba7",
+  "entityEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const externalConceptUUID = \"f882e2b6-52e1-43cf-a45b-215e76ff05eb\";\n  const phasedEventUUID = \"cfdfb311-ac5d-48ff-b250-57259194016b\";\n  const isTypeOfTrainingExternal = individual.getObservationValue(\"c7afa395-baae-4434-b8f7-b938b78051bd\") == externalConceptUUID;\n  const iswhetherPhased = individual.getObservationValue(\"387e72d2-1ced-4032-b273-ea3ef5c5a159\") == phasedEventUUID ; \n  return isTypeOfTrainingExternal && iswhetherPhased\n};\n",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "One Time Training",
+  "uuid" : "a3e30cab-ff81-4ed1-8706-9773ec2372c2",
+  "entityEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const singleEventUUID = \"9d91df97-79f6-4e42-8d61-19d8926edd9f\";  \n  const isSinglePhased = individual.getObservationValue(\"387e72d2-1ced-4032-b273-ea3ef5c5a159\") == singleEventUUID ; \n  const hasEncounterAlreadyFilled = individual.getEncounters(true).some((enc) => enc.encounterType.name == \"One Time Training\" && enc.encounterDateTime != null && enc.voided == false && enc.cancelDateTime == null)\n  return  isSinglePhased && !hasEncounterAlreadyFilled\n};\n",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "PIL Impact (voided~3804)",
+  "uuid" : "91d66fa7-0770-4cde-a5a1-fe09fbd57ea3",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false,
+  "voided" : true
+}, {
+  "name" : "PIL Impact Form (voided~3805)",
+  "uuid" : "488d359e-d33e-47b8-91ac-02e65ba2f50a",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false,
+  "voided" : true
+}, {
+  "name" : "Letter Impact",
+  "uuid" : "688c8097-c617-4acf-8281-864319da35d4",
+  "entityEligibilityCheckRule" : "({params, imports}) => {\n  const individual = params.entity;\n  const enrolment = individual.enrolments.find(e => e.program.name === 'Letter Status'); //todo handle for multiple \n  const visitCount = enrolment.encounters.filter(e => e.encounterType.uuid === '688c8097-c617-4acf-8281-864319da35d4').length;\n  return visitCount <= 0;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "PIL Impact",
+  "uuid" : "bdbd3d89-e1fb-4c4b-ae6a-ca0d745b2652",
+  "entityEligibilityCheckRule" : "({params, imports}) => {\n  const individual = params.entity;\n  const enrolment = individual.enrolments.find(e => e.program.name === 'PIL Status'); //todo handle for multiple \n  const visitCount = enrolment.encounters.filter(e => e.encounterType.uuid === 'bdbd3d89-e1fb-4c4b-ae6a-ca0d745b2652').length;\n  return visitCount <= 0;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Letter Impact (voided~3800)",
+  "uuid" : "a55bfb9e-2a2f-4575-8353-4c966e2150ad",
+  "entityEligibilityCheckRule" : "({params, imports}) => {\n  const individual = params.entity;\n  const enrolment = individual.enrolments.find(e => e.program.name === 'Letter Status'); //todo handle for multiple \n  const visitCount = enrolment.encounters.filter(e => e.encounterType.uuid === 'a55bfb9e-2a2f-4575-8353-4c966e2150ad').length;\n  return visitCount <= 0;\n};",
+  "active" : true,
+  "immutable" : false,
+  "voided" : true
+}, {
+  "name" : "Follow Up Letter",
+  "uuid" : "6a52bd71-f499-476d-ba39-7ce0977698e5",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Outreach Location Specific Details",
+  "uuid" : "04175152-5f03-4e3c-b7b7-c07914b8d67e",
+  "entityEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n    const individual = params.entity;\n    const moment = imports.moment;\n    \n    let outreachEncounters = individual.getEncounters()\n        .filter((enc) => enc.encounterType.name == \"Outreach Location Specific Details\" && enc.voided == false && enc.encounterDateTime !=  null)\n\n    if(outreachEncounters.length == 0) {\n        return true; \n    }\n\n    const previousEncounter = outreachEncounters[0];\n\n    const whereDidTheOutreachActivityHappened = previousEncounter.getObservationValue(\"f619854c-9ed3-44ec-944e-ad9e51a768e0\");\n    const otherSpaceUUID = \"326f1f66-0707-4eb3-b708-a89b8ffbab4a\";\n\n    if(whereDidTheOutreachActivityHappened == otherSpaceUUID){\n        return false;\n    }\n\n    const kyaIssGanvMeinKoiOurSthalGaye = previousEncounter.getObservationValue(\"59a812b5-511d-44a5-99ef-a963881a6864\");\n    const yesUUID = \"d045b9b5-0d0f-4ead-82c4-7ff05bf4efa6\";\n\n    if(kyaIssGanvMeinKoiOurSthalGaye == yesUUID) {\n        return true;\n    }\n      \n    return false;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "PIL Legal Fund",
+  "uuid" : "252c33f0-bd3f-48ff-bf80-22db679cff8c",
+  "entityEligibilityCheckRule" : "({params, imports}) => {\n  const individual = params.entity;\n  const enrolment = individual.enrolments.find(e => e.program.name === 'PIL Status'); //todo handle for multiple \n  const visitCount = enrolment.encounters.filter(e => e.encounterType.uuid === '252c33f0-bd3f-48ff-bf80-22db679cff8c').length;\n  return visitCount <= 0;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Client Follow Up (voided~3697)",
+  "uuid" : "3f750412-feee-4044-8400-664312f8d064",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false,
+  "voided" : true
+}, {
+  "name" : "Follow Up RTI",
+  "uuid" : "a80cfec5-6436-457f-bdac-ba2d37860baf",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Case Documents",
+  "uuid" : "943dbaea-ad93-493b-b692-47be2ccd7b7a",
+  "entityEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n    const individual = params.entity;\n    \n    const hasEncounterAlreadyFilled = individual.getEncounters(true).some((enc) => enc.encounterType.name == \"Case Documents\" && enc.encounterDateTime != null && enc.voided == false && enc.cancelDateTime == null)\n    \n    return !hasEncounterAlreadyFilled;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Training Legal Fund",
+  "uuid" : "5bc44f70-46a9-4e7a-85e9-8cf0e44dc55b",
+  "entityEligibilityCheckRule" : "'use strict';\n\n({ params, imports }) => {\n    const individual = params.entity;\n\n    const internalUUID = \"3feb2dac-7f40-49e7-82c8-a5c55b3feb8a\";\n    //const phasedUUID = \"cfdfb311-ac5d-48ff-b250-57259194016b\";\n\n    const isTypeOfTrainingInternal =\n        individual.getObservationValue(\"c7afa395-baae-4434-b8f7-b938b78051bd\") === internalUUID;\n\n  //  const isWhetherPhased =\n    //    individual.getObservationValue(\"387e72d2-1ced-4032-b273-ea3ef5c5a159\") === phasedUUID;\n\n    const hasEncounterAlreadyFilled = individual.getEncounters(true).some((enc) => enc.encounterType.name == \"Training Legal Fund\" && enc.encounterDateTime != null && enc.voided == false && enc.cancelDateTime == null)\n\n    return !hasEncounterAlreadyFilled && !(isTypeOfTrainingInternal) ; //&& isWhetherPhased);\n};\n",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "PIL Document",
+  "uuid" : "dac30d7e-97eb-4da9-8882-b3411fb39f26",
+  "entityEligibilityCheckRule" : "({params, imports}) => {\n  const individual = params.entity;\n  const enrolment = individual.enrolments.find(e => e.program.name === 'PIL Status'); //todo handle for multiple \n  const visitCount = enrolment.encounters.filter(e => e.encounterType.uuid === 'dac30d7e-97eb-4da9-8882-b3411fb39f26').length;\n  return visitCount <= 0;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "RTI Impact",
+  "uuid" : "42e4c852-fa15-4ad0-bfab-80dab90de421",
+  "entityEligibilityCheckRule" : "({params, imports}) => {\n  const individual = params.entity;\n  const enrolment = individual.enrolments.find(e => e.program.name === 'RTI Status'); //todo handle for multiple \n  const visitCount = enrolment.encounters.filter(e => e.encounterType.uuid === '42e4c852-fa15-4ad0-bfab-80dab90de421').length;\n  return visitCount <= 0;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Case Status Details",
+  "uuid" : "d8f9b41a-abe2-4677-84a0-c3ead8542af4",
+  "entityEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n    const individual = params.entity;\n    \n    const hasEncounterAlreadyFilled = individual.getEncounters(true).some((enc) => enc.encounterType.name == \"Case Status Details\" && enc.encounterDateTime != null && enc.voided == false && enc.cancelDateTime == null)\n    \n    return !hasEncounterAlreadyFilled;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Victim Compensation",
+  "uuid" : "312ad861-3f2b-4b5a-8611-d2d170a4eb1c",
+  "entityEligibilityCheckRule" : "({ params, imports }) => {\n    const individual = params.entity;\n    const moment = imports.moment;\n\n    const hasEncounterAlreadyFilled = individual.getEncounters(true).some((enc) => enc.encounterType.name == \"Victim Compensation\" && enc.encounterDateTime != null && enc.voided == false && enc.cancelDateTime == null)\n  \n    const caseTypes = {\n      \"Criminal prosecution fresh filing\": \"a3d1b65d-0e00-4e78-9cf2-0bbd29e77642\",\n      \"Criminal prosecution appeal\": \"ad47420b-5a60-42f0-9a49-60011af2bfd5\",\n      \"Bail cancellation\": \"d92cfcaf-90ed-4a18-bb2b-e7804a66c1a7\",\n      \"High Court writ / special powers / inherent powers\": \"a15c03bd-497c-44ca-930f-419b4163a3a0\"\n    };\n  \n    let natureOfCase = null; \n\n    let caseStatusDetails = individual.enrolments.filter(enrl=> {\n        return enrl.program.name === \"Case Status\" && \n        !enrl.voided && \n        enrl.enrolmentDateTime\n    })\n\n    if(caseStatusDetails.length > 0){\n        natureOfCase = caseStatusDetails[0].getObservationValue('252f4c55-d113-4951-8ebb-eed01b9ccbb9');\n    }\n  \n    const cases = Object.values(caseTypes)\n    \n    return !hasEncounterAlreadyFilled && natureOfCase != null && cases.includes(natureOfCase)\n\n  };\n  ",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Case Legal Fund",
+  "uuid" : "763a7f8e-6aec-4a9b-b4ca-7f74e5309597",
+  "entityEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n    const individual = params.entity;\n    \n    const hasEncounterAlreadyFilled = individual.getEncounters(true).some((enc) => enc.encounterType.name == \"Case Legal Fund\" && enc.encounterDateTime != null && enc.voided == false && enc.cancelDateTime == null)\n    \n    return !hasEncounterAlreadyFilled;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Case Monetary Impact",
+  "uuid" : "37920b3f-5ad5-48c5-b11e-ae969bf8ffff",
+  "entityEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n    const individual = params.entity;\n    \n    const hasEncounterAlreadyFilled = individual.getEncounters(true).some((enc) => enc.encounterType.name == \"Case Monetary Impact\" && enc.encounterDateTime != null && enc.voided == false && enc.cancelDateTime == null)\n    \n    return !hasEncounterAlreadyFilled;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Case Fact Finding",
+  "uuid" : "7630882f-8f18-4c13-b5a2-668ed15b5da9",
+  "entityEligibilityCheckRule" : "({ params, imports }) => {\n    const individual = params.entity;\n    const moment = imports.moment;\n\n    const hasEncounterAlreadyFilled = individual.getEncounters(true).some((enc) => enc.encounterType.name == \"Case Fact Finding\" && enc.encounterDateTime != null && enc.voided == false && enc.cancelDateTime == null)\n  \n    const caseTypes = {\n      \"Criminal prosecution fresh filing\": \"a3d1b65d-0e00-4e78-9cf2-0bbd29e77642\",\n      \"Criminal prosecution appeal\": \"ad47420b-5a60-42f0-9a49-60011af2bfd5\",\n      \"Criminal defence fresh filing\": \"0fc2f7cb-ab3e-4474-8d85-c4e40917409f\",\n      \"Criminal Defence appeal\": \"9882ada0-b5da-4662-8d88-baf57a7fdace\",\n      \"Bail fresh filing\": \"4ab86dad-0ddf-4479-bf29-1c99a0a7579f\",\n      \"Bail cancellation\": \"d92cfcaf-90ed-4a18-bb2b-e7804a66c1a7\",\n      \"High Court writ / special powers / inherent powers\": \"a15c03bd-497c-44ca-930f-419b4163a3a0\"\n    };\n  \n    let natureOfCase = null; \n\n    let caseStatusDetails = individual.enrolments.filter(enrl=> {\n        return enrl.program.name === \"Case Status\" && \n        !enrl.voided && \n        enrl.enrolmentDateTime\n    })\n\n    if(caseStatusDetails.length > 0){\n        natureOfCase = caseStatusDetails[0].getObservationValue('252f4c55-d113-4951-8ebb-eed01b9ccbb9');\n    }\n  \n    const cases = Object.values(caseTypes)\n    \n    return !hasEncounterAlreadyFilled && natureOfCase != null && cases.includes(natureOfCase)\n\n  };\n  ",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Letter Document",
+  "uuid" : "ecdc98b0-9b69-49c9-a798-faa8ed48ddbe",
+  "entityEligibilityCheckRule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  \n  const hasEnrolledInLetterStatus = individual.enrolments\n        .filter((enrl) => enrl.program.name == \"Letter Status\" && enrl.voided == false && enrl.enrolmentDateTime && !enrl.programExitDateTime);\n  \n  if(hasEnrolledInLetterStatus.length > 0){\n    const letterDocumentEncounters = hasEnrolledInLetterStatus[0].getEncountersOfType('Letter Document');\n    if(letterDocumentEncounters.length > 0) {return false;}\n  }\n  \n  return true;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "PIL Case Activity Register",
+  "uuid" : "7e42c11e-e3f1-4f04-8562-f67471ee157c",
+  "entityEligibilityCheckRule" : "({params, imports}) => {\n  const individual = params.entity;\n  const enrolment = individual.enrolments.find(e => e.program.name === 'PIL Status');\n  const visitCount = enrolment.encounters.filter(e => e.encounterType.uuid === '7e42c11e-e3f1-4f04-8562-f67471ee157c').length;\n  return visitCount <= 0;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "RTI Document",
+  "uuid" : "ac2a5462-1656-4c4e-98ee-9b108bf806d4",
+  "entityEligibilityCheckRule" : "({params, imports}) => {\n  const individual = params.entity;\n  const enrolment = individual.enrolments.find(e => e.program.name === 'RTI Status'); \n  const visitCount = enrolment.encounters.filter(e => e.encounterType.uuid === 'ac2a5462-1656-4c4e-98ee-9b108bf806d4').length;\n  return visitCount <= 0;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Case Disposed",
+  "uuid" : "a6290741-b145-474a-812a-6c0270452c92",
+  "entityEligibilityCheckRule" : "({ params, imports }) => {\n    /*const { entity: individual } = params;\n    const { moment } = imports;\n\n    const hasEncounterAlreadyFilled = individual.getEncounters(true).some(enc =>\n        enc.encounterType.name === \"Case Disposed\" &&\n        enc.encounterDateTime &&\n        !enc.voided &&\n        !enc.cancelDateTime\n    );\n\n    const caseTypesSet = new Set([\"65688e86-a632-4e70-9ef8-4f19b0fc3bee\"]);\n\n    let statusOfCase = null;\n    const caseStatusEnrollment = individual.enrolments.find(enrl =>\n        enrl.program.name === \"Case Status\" &&\n        !enrl.voided &&\n        enrl.enrolmentDateTime\n    );\n\n    if (caseStatusEnrollment) {\n        statusOfCase = caseStatusEnrollment.getObservationValue(\"b1927aeb-ab4c-46a6-8eff-6ccdf38f5478\");\n    }\n\n    return !hasEncounterAlreadyFilled && statusOfCase && caseTypesSet.has(statusOfCase);*/\n    \n    return false;\n};\n",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Case Activity Register",
+  "uuid" : "85f99584-0c1c-4241-9d2f-2fba9f6f13f5",
+  "entityEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  \n  const hasEncounterAlreadyFilled = individual.getEncounters(true).some((enc) => enc.encounterType.name == \"Case Activity Register\" && enc.encounterDateTime != null && enc.voided == false && enc.cancelDateTime == null)\n    \n    return !hasEncounterAlreadyFilled;\n};",
+  "active" : true,
+  "immutable" : false
+} ]

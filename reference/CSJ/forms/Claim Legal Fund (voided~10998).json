@@ -1,0 +1,107 @@
+{
+  "name" : "Claim Legal Fund (voided~10998)",
+  "uuid" : "b29f678a-b622-452e-b87a-9e2ae5829e55",
+  "formType" : "Encounter",
+  "formElementGroups" : [ {
+    "uuid" : "05d574f4-a167-4e3a-ab2a-621af4f3d9a1",
+    "name" : "LEGAL FUND",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "LEGAL FUND",
+      "uuid" : "d7a9580d-7de4-4ddd-b32b-8cf54ad83742",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "LEGAL FUND ENCOUNTER",
+        "uuid" : "22a96d47-8121-455b-b5e0-8fa7c5da1c4e",
+        "dataType" : "QuestionGroup",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Date of receipt",
+      "uuid" : "975f1180-4377-43ba-9920-b28ff16984f2",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "calendar"
+      } ],
+      "concept" : {
+        "name" : "Date of receipt - Legal Fund (voided~266436)",
+        "uuid" : "d2869f1e-4e6c-4b5c-815d-1d96a08889cd",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ],
+        "voided" : true
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  const questionGroupIndex = params.questionGroupIndex;\n  let dateofReceipt = encounter.getObservationValue('22a96d47-8121-455b-b5e0-8fa7c5da1c4e');\n  \n  if(dateofReceipt && dateofReceipt.length > 0){\n\n    let currentQuestionGroup = dateofReceipt[questionGroupIndex]\n    let selectedDate = currentQuestionGroup.findObservationByConceptUUID('d2869f1e-4e6c-4b5c-815d-1d96a08889cd');\n\n    if(selectedDate) {\n      const currentDate = moment().startOf('day');\n      selectedDate = moment(selectedDate.getValue()).startOf('day');\n      if(selectedDate.isAfter(currentDate)){\n          validationErrors.push(\"Invalid date: Future dates are not allowed\");\n      }\n    } \n  }\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "parentFormElementUuid" : "d7a9580d-7de4-4ddd-b32b-8cf54ad83742",
+      "mandatory" : true
+    }, {
+      "name" : "Amount",
+      "uuid" : "3179bead-39af-4ff6-9df0-23aa30aa2032",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Amount - Legal Fund",
+        "uuid" : "498f42be-21dc-4b03-a2ed-5761d327583f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "d7a9580d-7de4-4ddd-b32b-8cf54ad83742",
+      "mandatory" : true
+    }, {
+      "name" : "Stage at which taken",
+      "uuid" : "a20ead68-e0d7-489d-a86c-03f239c7dfbf",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Stage at which Taken",
+        "uuid" : "02a93e4e-1ce1-42d0-9c08-89baf75ea6d5",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "d7a9580d-7de4-4ddd-b32b-8cf54ad83742",
+      "mandatory" : true
+    }, {
+      "name" : "Upload receipt",
+      "uuid" : "df204db6-63a2-4412-a477-8e4180e76ffb",
+      "keyValues" : [ {
+        "key" : "allowedMaxSize",
+        "value" : 1
+      } ],
+      "concept" : {
+        "name" : "Upload receipt - Legal Fund",
+        "uuid" : "46c5bfa8-4d88-4b69-b7c1-5b1b78ae99a3",
+        "dataType" : "File",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "d7a9580d-7de4-4ddd-b32b-8cf54ad83742",
+      "mandatory" : true
+    } ],
+    "display" : "LEGAL FUND",
+    "timed" : false
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ],
+  "voided" : true
+}

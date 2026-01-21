@@ -1,0 +1,124 @@
+{
+  "name" : "Case Legal Fund",
+  "uuid" : "979c4150-7e2a-4a98-b155-6aceae65f7f7",
+  "formType" : "Encounter",
+  "formElementGroups" : [ {
+    "uuid" : "f550085f-b1cf-4514-a9c3-20190cb92613",
+    "name" : "Legal Fund Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Fill details of the legal fund received",
+      "uuid" : "901e9588-f049-4931-a6c3-711c647bf3a1",
+      "keyValues" : [ {
+        "key" : "repeatable",
+        "value" : true
+      } ],
+      "concept" : {
+        "name" : "Legal Fund",
+        "uuid" : "c1cf21d1-5ce0-4246-ad0d-23137f8d8cdc",
+        "dataType" : "QuestionGroup",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Date of receipt",
+      "uuid" : "66f7aab8-9b97-4705-862c-2b5713a64260",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "calendar"
+      } ],
+      "concept" : {
+        "name" : "Date of receipt",
+        "uuid" : "c329c903-d7cd-4378-adae-b2b99eb2311f",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  const questionGroupIndex = params.questionGroupIndex;\n  let dateofReceipt = encounter.getObservationValue(\"c1cf21d1-5ce0-4246-ad0d-23137f8d8cdc\");\n  \n  if(dateofReceipt && dateofReceipt.length > 0){\n\n    let currentQuestionGroup = dateofReceipt[questionGroupIndex]\n    let selectedDate = currentQuestionGroup.findObservationByConceptUUID('c329c903-d7cd-4378-adae-b2b99eb2311f');\n\n    if(selectedDate) {\n      \n      const currentDate = moment().startOf('day');\n      selectedDate = moment(selectedDate.getValue()).startOf('day');\n      if(selectedDate.isAfter(currentDate)){\n          validationErrors.push(\"Invalid date: Future dates are not allowed\");\n      }\n    } \n  }\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "parentFormElementUuid" : "901e9588-f049-4931-a6c3-711c647bf3a1",
+      "mandatory" : true
+    }, {
+      "name" : "Amount",
+      "uuid" : "0c93ea3f-5292-48f2-a4c4-70759b0a4d6b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Amount",
+        "uuid" : "6163fe31-4acc-43bb-a9ff-bfc8d4b98259",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "901e9588-f049-4931-a6c3-711c647bf3a1",
+      "mandatory" : true
+    }, {
+      "name" : "Stage at which taken",
+      "uuid" : "a26b2ff1-84f6-4498-b5f0-967b0424ac93",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Stage at which taken",
+        "uuid" : "05141002-ff89-49fc-9c0c-64da1fb9f489",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "901e9588-f049-4931-a6c3-711c647bf3a1",
+      "mandatory" : true
+    }, {
+      "name" : "Upload File",
+      "uuid" : "9964b3c9-120e-433a-85c6-278ed0c82c4b",
+      "keyValues" : [ {
+        "key" : "allowedMaxSize",
+        "value" : 1
+      } ],
+      "concept" : {
+        "name" : "Upload receipt",
+        "uuid" : "8eabb8c2-7708-471a-a0aa-c7dc549ad006",
+        "dataType" : "File",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "901e9588-f049-4931-a6c3-711c647bf3a1",
+      "mandatory" : false
+    }, {
+      "name" : "Upload Image",
+      "uuid" : "7f58e5e4-b203-4266-918e-e3ae0a2c4def",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Upload Image",
+        "uuid" : "fe30a8b6-0c79-4fb6-988a-4f2a717a8fbe",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "901e9588-f049-4931-a6c3-711c647bf3a1",
+      "mandatory" : false
+    } ],
+    "display" : "Legal Fund Details",
+    "timed" : false
+  } ],
+  "decisionRule" : "\"use strict\";\n({params, imports}) => {\n    const encounter = params.entity;\n    const decisions = params.decisions;\n    const moment = imports.moment;\n    const encounterDecisions = [];\n    \n    const encounterDateForEditCase = encounter.getObservationValue(\"1f4bc226-9e3f-42c9-a332-2d81cd8e64f7\");\n    \n    if (!encounterDateForEditCase) {\n      let encDateTime = moment().format(\"YYYY-MM-DD HH:mm:ss\");\n      \n      if (encDateTime) {\n        encounterDecisions.push({ name: \"Encounter DateTime\", value: encDateTime });\n      }\n      decisions.encounterDecisions.push(...encounterDecisions);\n    }\n    \n    return decisions;\n};",
+  "visitScheduleRule" : "",
+  "validationRule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const validationResults = [];\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let validationErrors = [];\n  const moment = imports.moment;\n  \n  let documentDetails = programEncounter.findGroupedObservation(\"c1cf21d1-5ce0-4246-ad0d-23137f8d8cdc\");\n  \n  if(documentDetails && documentDetails.length > 0){\n    for(let i = 0;i<documentDetails.length;i++){\n      let currentQuestionGroup = documentDetails[i]\n      let uploadFile = currentQuestionGroup.findObservationByConceptUUID(\"8eabb8c2-7708-471a-a0aa-c7dc549ad006\");\n      let uploadImage =  currentQuestionGroup.findObservationByConceptUUID(\"fe30a8b6-0c79-4fb6-988a-4f2a717a8fbe\");\n\n      if((uploadFile === null || uploadFile === undefined) && (uploadImage === null || uploadImage === undefined)){\n        let validationError = imports.common.createValidationError('Please upload either image or file');\n        validationResults.push(validationError);\n      }\n    }\n  }  \n  \n  const encounterDateForEditCase = programEncounter.getObservationValue(\"1f4bc226-9e3f-42c9-a332-2d81cd8e64f7\");\n  const encounterDate = programEncounter.encounterDateTime;\n\n  if (!encounterDateForEditCase) {\n    if (encounterDate) {\n      const today = moment().startOf('day');\n      const encDate = moment(encounterDate).startOf('day');\n\n      if (!encDate.isSame(today, 'day')) {\n        validationResults.push(\n          imports.common.createValidationError(\"Encounter Date should be today's date.\")\n        );\n      }\n    }\n  } else {\n    const encDateEdit = moment(encounterDate).startOf('day');\n    const encDateOriginal = moment(encounterDateForEditCase).startOf('day');\n\n    if (!encDateEdit.isSame(encDateOriginal, 'day')) {\n      validationResults.push(\n        imports.common.createValidationError(\"Encounter Date cannot be changed.\")\n      );\n    }\n  }\n  \n  return validationResults;\n};\n",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

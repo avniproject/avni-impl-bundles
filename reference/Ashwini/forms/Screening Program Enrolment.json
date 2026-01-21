@@ -1,0 +1,284 @@
+{
+  "name" : "Screening Program Enrolment",
+  "uuid" : "54c162f7-2176-454b-8241-c86718d9c21b",
+  "formType" : "ProgramEnrolment",
+  "formElementGroups" : [ {
+    "uuid" : "2c45da77-a8fd-4737-ba19-593bbb1c2a43",
+    "name" : "Screening Program",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Education Details",
+      "uuid" : "4a36909f-3f6c-4ff6-923e-880d5fa70c64",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Education Details",
+        "uuid" : "7040e602-8469-43d0-8e1a-02c21a2d66f1",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "10th pass",
+          "uuid" : "873500ce-cd90-42ea-93cb-f140291e490b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "12th pass",
+          "uuid" : "4afc2b61-93d9-46c4-93f4-fedf25b67eb3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Uneducated",
+          "uuid" : "77451026-c24f-4231-b4de-8c161e0b3ca0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "5th Pass and Below",
+          "uuid" : "3fcbbe64-06cd-4688-b78c-662cec9a8e41",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Graduate and Above",
+          "uuid" : "22b21226-18af-4f50-b6b7-5293ae559b4b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "6th to 9th",
+          "uuid" : "b7608166-6c81-4e26-9e51-ec6e51dd0036",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Substance use",
+      "uuid" : "5994f20d-fb68-4065-9bd7-5fdca30bb8f9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Substance use",
+        "uuid" : "27c669c0-847a-477e-92fb-0d8763814a9c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Pan chewing",
+          "uuid" : "90be76e7-fdc7-4b5c-b4f8-6fd31a56f324",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Smoking",
+          "uuid" : "27614c97-4dda-456f-837e-d756a01402b0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Others",
+          "uuid" : "118fa43e-525f-41d6-ad3f-98a4857e2d3e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Alcohol",
+          "uuid" : "92654fda-d485-4b6d-97c5-8a8fe2a9582a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Specify others",
+      "uuid" : "64c17e52-66a2-4cd0-bcac-4f417f16dace",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Substance-other",
+        "uuid" : "2bcb1ad9-1e5a-45ec-a8b1-b0b114646468",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInEnrolment(\"27c669c0-847a-477e-92fb-0d8763814a9c\").containsAnswerConceptName(\"118fa43e-525f-41d6-ad3f-98a4857e2d3e\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "enrolment",
+                "conceptName" : "Substance use",
+                "conceptUuid" : "27c669c0-847a-477e-92fb-0d8763814a9c",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Others" ],
+                "answerConceptUuids" : [ "118fa43e-525f-41d6-ad3f-98a4857e2d3e" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "Substance use frequency",
+      "uuid" : "c955b576-af03-4306-8df0-28ab1707b7fd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Substance use frequency",
+        "uuid" : "d03a67b7-1655-408e-ba6a-8a91f4c74c0e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Less than 3 times a month",
+          "uuid" : "5b134fb0-cf37-4478-83ae-21bdd8f8866d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Weekly",
+          "uuid" : "9bb27d90-168b-4a54-a233-bf5440a37938",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Daily",
+          "uuid" : "0e806cbb-d6c3-4a6b-92f6-d35720dd9a44",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInEnrolment(\"27c669c0-847a-477e-92fb-0d8763814a9c\").containsAnswerConceptName(\"ebda5e05-a995-43ca-ad1a-30af3b937539\").matches();\n  \n  visibility = !(condition11 );\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "hideFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "enrolment",
+                "conceptName" : "Substance use",
+                "conceptUuid" : "27c669c0-847a-477e-92fb-0d8763814a9c",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "None" ],
+                "answerConceptUuids" : [ "ebda5e05-a995-43ca-ad1a-30af3b937539" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "Nature of Visit?",
+      "uuid" : "29da4186-f73d-4900-ba5f-f14a01357f93",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Nature of Visit?",
+        "uuid" : "0a43ece2-5e6e-43e2-af87-1438e19f5586",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Village Screening",
+          "uuid" : "7c4666cf-e67c-4c0f-a25b-b96859628fb8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Point-of-care visit",
+          "uuid" : "c4a3b173-02a2-4919-a12f-c76f9f09abf1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Regular Village visit",
+          "uuid" : "cdc8b622-95e7-4426-947d-2de7dabffe6e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    } ],
+    "display" : "Screening Program",
+    "timed" : false
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

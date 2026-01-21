@@ -1,0 +1,670 @@
+{
+  "name" : "Chronic Sickness followup (Hospital)",
+  "uuid" : "35a34b99-f698-4dce-864f-a784fa4870b2",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "1bcaec49-85b0-453e-a0cb-b393cee584e6",
+    "name" : "Chronic Sickness followup (Hospital)",
+    "displayOrder" : -1.0,
+    "formElements" : [ {
+      "name" : "Chronic Sickness Present diagnosis [H]",
+      "uuid" : "c43c0d1d-15b8-4e77-82f9-ba36b5ee89f8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Chronic Sickness Present diagnosis [H]",
+        "uuid" : "4d0eda47-320e-4018-a54f-f1836744ac01",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "COPD [H]",
+          "uuid" : "650728f4-e498-4eec-8014-a3efe777097c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Dyslipidemia [H]",
+          "uuid" : "4f89bce3-4fcc-4847-8041-b33deaa0f2df",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cerebro vascular accuident [H]",
+          "uuid" : "ade5f1aa-bd7b-4685-a055-88559008005b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cardiac diseases [H]",
+          "uuid" : "cba101a0-3252-4089-a7a1-e7173ae3899f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Thyroid disorders [H]",
+          "uuid" : "759235ba-43a7-4c27-9436-6506bed3a411",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Diabetes Mellitus [H]",
+          "uuid" : "3b3dcf3d-ea62-4204-9289-30d675b3e462",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hypertension [H]",
+          "uuid" : "e6f678bf-3533-4c6b-afa6-6138667837e7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cancer [H]",
+          "uuid" : "c8be5e1d-5ece-40a8-ad77-6c94d01f781c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Was the disease value checked [H]",
+      "uuid" : "ee6948ae-1eea-408e-b736-cdf905fc3115",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Was the disease value checked [H]",
+        "uuid" : "ce4e3963-220a-4969-9adf-9d40a886f68c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "True [H]",
+          "uuid" : "7e9a5117-bc2b-45e4-b92c-cd5796f9d36b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "False [H]",
+          "uuid" : "50b20dc3-41e9-4d9c-b2af-266647214c57",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Recorded level of disease value Hypertension [H]",
+      "uuid" : "4013337c-db9e-42e7-8505-86de7e1a4fa8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Recorded level of disease value Hypertension [H]",
+        "uuid" : "cbde46fb-179a-4edb-9edf-2c48846fbd4f",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Recorded level of disease value Diabetes or Dyslipidemia [H]",
+      "uuid" : "a7028348-c3d9-4756-ae7f-64ebd66f9b7b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Recorded level of disease value Diabetes or Dyslipidemia [H]",
+        "uuid" : "9034c9b2-e5cb-42be-bc5e-f192ca6ea1b8",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Recorded level of disease value Thyroid disorders [H]",
+      "uuid" : "cf711ca4-8eaf-4909-b937-51f8299530ca",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Recorded level of disease value Thyroid disorders [H]",
+        "uuid" : "750f68e3-2ef7-4f67-9603-40408534d553",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Present status of symptoms [H]",
+      "uuid" : "43aa98e0-c685-4892-b744-b36ec24ad82e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Present status of symptoms [H]",
+        "uuid" : "92bff874-93c6-4225-9c73-ad78414183e4",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Reduced symptoms [H]",
+          "uuid" : "f7e4a713-775a-4fc1-8aa3-b93ca110a6d7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Aggravated symptoms [H]",
+          "uuid" : "1ba6a18d-2746-4f3b-9c39-37e04b5b83f5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Normal [H]",
+          "uuid" : "9c08052e-1eab-4de0-b79d-1f5492d740f3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Is there any change in medication [H]",
+      "uuid" : "c28d9b63-f18a-461d-90cc-42368a511624",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is there any change in medication [H]",
+        "uuid" : "df45ecac-88c3-4a21-9e86-127a4d2011a7",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Stopped medication [H]",
+          "uuid" : "e1a02754-14b4-47c5-a522-d5ff1a13df14",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Change in medicine [H]",
+          "uuid" : "4c706104-a4cf-4f12-b479-a71d976dcd18",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Increase in dosage [H]",
+          "uuid" : "13de74f8-9f9d-4255-bf6c-38b35aad55ed",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Referred to a higher center [H]",
+          "uuid" : "ccd307ad-5e20-4c80-ac85-8360599244ac",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Decrease in dosage [H]",
+          "uuid" : "225af381-2b22-4040-bdbb-1090fb103013",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No change [H]",
+          "uuid" : "5c864eaa-f751-45b7-b31c-ff6f86e07bd3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "What management was suggested [H]",
+      "uuid" : "321f5102-c64e-463f-bf12-75b2902d4b86",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "What management was suggested [H]",
+        "uuid" : "e7407ec7-0bbc-4a20-9f7f-60effdf7eb84",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Palliative management is being given [H]",
+          "uuid" : "46ebd501-cfac-4b64-a22f-51edac955654",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Referred to a higher center [H]",
+          "uuid" : "ccd307ad-5e20-4c80-ac85-8360599244ac",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Surgery was performed [H]",
+          "uuid" : "572a0841-a7d2-4e5b-89b3-9c83882a411d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Medicines which are administered now Hypertension [H]",
+      "uuid" : "0e25bc20-f799-4219-a030-7085078288f0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Medicines which are administered now Hypertension [H]",
+        "uuid" : "981bbb2b-1810-4733-b4d6-769caccd0fa8",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "T.Hydrochlorothiazide [H]",
+          "uuid" : "01ac0a14-e591-407d-b551-4a071a3eb770",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Amlodipine [H]",
+          "uuid" : "f6c34ddf-97f6-49f6-8f9b-32d244e557a5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Aspirin [H]",
+          "uuid" : "772a86d5-7a5f-4dfd-86bd-d7fcce251106",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Losartan [H]",
+          "uuid" : "d66d6fa5-e36e-4d81-b9cb-525bf6d7ba7c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Enalapril [H]",
+          "uuid" : "bdb2250f-35c5-4560-9d4e-59142238102a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Metoprolol [H]",
+          "uuid" : "159d791f-58dc-4b85-a2ef-9b4f544afac9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Propranalol [H]",
+          "uuid" : "79e9d6f1-2e7e-440d-b138-a87f5dfd978d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Medicines which are administered now Diabetes Mellitus [H]",
+      "uuid" : "78c45568-d1d9-4038-847c-b95ed44dbf9c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Medicines which are administered now Diabetes Mellitus [H]",
+        "uuid" : "d8eb4b2e-2e8f-41a0-ba4d-a81a9462f27f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "T.Glipizide [H]",
+          "uuid" : "5a029243-16cf-43e7-abff-da59298f20d2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Metformin [H]",
+          "uuid" : "d21dce28-9831-4c32-8905-7daaf010a47f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Glimipiride [H]",
+          "uuid" : "f817220b-8b3e-4a29-8ab6-98f8ac1dff85",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Inj.mixtard [H]",
+          "uuid" : "36b35276-9972-464c-acb9-e95f9124f102",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Medicines which are administered now COPD [H]",
+      "uuid" : "0d9ce8f7-9ff7-4c90-b5f5-8232c3e1c589",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Medicines which are administered now COPD [H]",
+        "uuid" : "ab92ca4b-7ee9-4704-ab0d-8c3b37f15c8a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "T.Salbatumol [H]",
+          "uuid" : "61c62150-5013-49c7-8c5d-f438bbdae51a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Deriphyllin [H]",
+          "uuid" : "7b25a995-2a3b-48c2-8140-1bee4d3eaa83",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Inhaler [H]",
+          "uuid" : "87586e86-cd43-4f35-aa41-eb980d34ef22",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Medicines which are administered now Thyroid disorders [H]",
+      "uuid" : "5e59507f-20e4-4fec-aca6-09ac8bc2ea3b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Medicines which are administered now Thyroid disorders [H]",
+        "uuid" : "433c48b4-9589-4761-97d6-48db147bdfb2",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "T.Neomercazole [H]",
+          "uuid" : "c73ec928-0091-4a05-845e-39bae3e827b3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Elroxin [H]",
+          "uuid" : "f56c0331-7c2f-4251-be70-8666ee3a898b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Medicines which are administered now Cardiac diseases [H]",
+      "uuid" : "6b1889ab-1a67-4ece-a1b2-dee2ba1f2674",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Medicines which are administered now Cardiac diseases [H]",
+        "uuid" : "22a672c8-3612-4e2e-8d2c-58d06ccd34a9",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "T.Lasix [H]",
+          "uuid" : "e13944f3-3f4a-4106-aa10-35b63c11e969",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Digoxin [H]",
+          "uuid" : "96f11854-f1b6-4bf1-b219-946ace2ee28b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Clopidogrel [H]",
+          "uuid" : "7836300e-963e-4ec3-bb26-7c0d317ac4e1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Ivabradine [H]",
+          "uuid" : "5f0e21e1-013c-43f7-a9b7-a4430c79d6be",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Spirinolactone [H]",
+          "uuid" : "bc318d54-3971-4eaf-bf91-a82f9d13a5b8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Aspirin [H]",
+          "uuid" : "772a86d5-7a5f-4dfd-86bd-d7fcce251106",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Medicines which are administered now Dyslipidemia [H]",
+      "uuid" : "19922cc8-f14f-4bb0-86e5-4accd6ccded9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Medicines which are administered now Dyslipidemia [H]",
+        "uuid" : "7f2f836e-51d1-4183-83fc-345f0aa63a50",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "T.Atorva [H]",
+          "uuid" : "6b8a34de-58e6-4f70-a53a-8309b3f7f2d8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Finofibrate [H]",
+          "uuid" : "d2236c8d-93fd-47fe-917c-88eecc039b92",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Aspirin [H]",
+          "uuid" : "772a86d5-7a5f-4dfd-86bd-d7fcce251106",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Medicines which are administered now Cerebro Vascular accident [H]",
+      "uuid" : "4c827e6d-48c9-42de-8708-e8683de19abc",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Medicines which are administered now Cerebro Vascular accident [H]",
+        "uuid" : "9c11d193-6e61-4858-acb3-8c607ba214b3",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "T.Atorva [H]",
+          "uuid" : "6b8a34de-58e6-4f70-a53a-8309b3f7f2d8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Aspirin [H]",
+          "uuid" : "772a86d5-7a5f-4dfd-86bd-d7fcce251106",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 15.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Medicine provider [H]",
+      "uuid" : "94915d59-b781-4b87-aadf-d405c6ba874d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Medicine provider [H]",
+        "uuid" : "3f419943-8793-452a-973e-d06d4769390a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Government facility [H]",
+          "uuid" : "832cfdd2-822c-4f7e-bdb9-633839bd87bb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Private facility [H]",
+          "uuid" : "cf3b131d-c71b-43aa-a782-24d01165bcb3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "GAH [H]",
+          "uuid" : "9d31a265-2da5-40c9-aea7-732c9e00b0a4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 16.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "Chronic Sickness followup (Hospital)",
+    "timed" : false
+  } ],
+  "decisionConcepts" : [ ]
+}

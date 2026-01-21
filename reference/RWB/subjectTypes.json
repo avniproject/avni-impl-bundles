@@ -1,0 +1,155 @@
+[ {
+  "name" : "Excavating Machine",
+  "uuid" : "561ddbf6-3a6d-4088-a369-514dcfc44f19",
+  "active" : true,
+  "type" : "Individual",
+  "subjectSummaryRule" : "'use strict';\n({params, imports}) =>  {\n  const {summaries, individual} = params;\n   \n summaries.push({name: 'WaterBody', value: individual.lowestAddressLevel.name});\n \n summaries.push({name: 'Machine Registration number', value: individual.nameString});\n\n//Type of Machine\nconst typeOfMachine = individual.findObservation('Type of Machine');  \nif(typeOfMachine)    \nsummaries.push({name: 'Type of Machine', value: typeOfMachine.getValue()});\n\nreturn summaries;\n};",
+  "allowEmptyLocation" : false,
+  "allowMiddleName" : false,
+  "lastNameOptional" : false,
+  "allowProfilePicture" : false,
+  "uniqueName" : true,
+  "validFirstNameFormat" : {
+    "regex" : "^[A-Z]{2}[ -][0-9]{1,2}(?: [A-Z])?(?: [A-Z]*)? [0-9]{4}(?: [A-Z]{2})?(?: [A-Z]{3})?$",
+    "descriptionKey" : "Add a valid machine registration number (e.g., KA 01 AF 8192)"
+  },
+  "iconFileS3Key" : "https://s3.ap-south-1.amazonaws.com/prod-user-media/rwb2023/icons/561ddbf6-3a6d-4088-a369-514dcfc44f19.png",
+  "shouldSyncByLocation" : true,
+  "settings" : {
+    "displayRegistrationDetails" : true,
+    "displayPlannedEncounters" : true
+  },
+  "household" : false,
+  "group" : false,
+  "directlyAssignable" : false,
+  "voided" : false
+}, {
+  "name" : "Work Order",
+  "uuid" : "a961a36a-4728-4389-9934-a052067ee6a5",
+  "active" : true,
+  "type" : "Individual",
+  "subjectSummaryRule" : "'use strict';\n({params, imports}) =>  {\n  const {summaries, individual} = params;\n  \n  const _ = imports.lodash;\n   \n    summaries.push({name: 'WaterBody', value: individual.lowestAddressLevel.name});\n \n const calculateSumOfObservationNumberValues = function(encounterTypeName, observationName) {\n        return individual.getEncounters()\n            .filter((enc) => enc.encounterType.name === encounterTypeName )\n            .filter((enc) =>  enc.latestEntityApprovalStatus && enc.latestEntityApprovalStatus.approvalStatus.status === 'Approved' )\n            .map((enc) => enc.getObservationReadableValue(observationName))\n            .reduce((total, val) => total + parseFloat(val), 0);;\n    };\n \n    const calculateSumOfObservationValues = function(encounterTypeName, observationName) {\n        return individual.getEncounters()\n            .filter((enc) => enc.encounterType.name === encounterTypeName )\n            .filter((enc) =>  enc.latestEntityApprovalStatus && enc.latestEntityApprovalStatus.approvalStatus.status === 'Approved' )\n            .map((enc) => enc.getObservationReadableValue(observationName) || 0)\n            .reduce((total, val) => total + val, 0);\n    }\n  \n const calculateSumOfObservationValuesMachineWise = function(encounterTypeName, observationName,typeOfMachine) {\n        const subjects = params.services.individualService\n                 .getSubjectsInLocation(individual.lowestAddressLevel,'Excavating Machine');\n                 \n        const machineTypesubjects = subjects\n                 .filter((e) => e.getObservationReadableValue('Type of Machine') === typeOfMachine);\n        const uuids = _.map(machineTypesubjects, ({uuid}) => uuid);         \n         \n        return individual.getEncounters()\n            .filter((enc) => enc.encounterType.name === encounterTypeName )\n            .filter((enc) =>  enc.latestEntityApprovalStatus && enc.latestEntityApprovalStatus.approvalStatus.status === 'Approved' )\n            .filter((enc) => _.includes(uuids,enc.getObservationReadableValue('Excavating Machine')) )\n            .map((enc) => enc.getObservationReadableValue(observationName) || 0)\n            .reduce((total, val) => total + val, 0);\n    }\n\nconst getTotalMachineType = function(encounterTypeName, observationName, typeOfMachine) {\n        const encounters = individual.getEncounters()\n            .filter((enc) => enc.encounterType.name === encounterTypeName)\n            .filter((enc) =>  enc.latestEntityApprovalStatus && enc.latestEntityApprovalStatus.approvalStatus.status === 'Approved'); \n            \n        const subjects = params.services.individualService\n                 .getSubjectsInLocation(individual.lowestAddressLevel,'Excavating Machine');           \n        const uniqueSubjects = _.uniqBy(subjects, 'uuid');\n          \n        let obsSubjects = [];\n        const temp  = _.forEach(encounters, (enc) => { \n           obsSubjects.push(_.find(uniqueSubjects, \n           (subject) => subject.uuid === enc.getObservationReadableValue(observationName)));\n        });\n        const uniqueObsSubjects = _.uniqBy(obsSubjects, 'uuid');\n        \n        if(uniqueObsSubjects.length > 0){\n         return uniqueObsSubjects.filter((e) => !_.isEqual(e,undefined))\n                           .filter((e) => e.getObservationReadableValue('Type of Machine') === typeOfMachine).length;\n        } \n        else return 0;\n  }\n       \n const getTotalBeneficiaries = function(encounterTypeName, observationName) {\n        const encounters = individual.getEncounters()\n            .filter((enc) => enc.encounterType.name === encounterTypeName)\n            .filter((enc) =>  enc.latestEntityApprovalStatus && enc.latestEntityApprovalStatus.approvalStatus.status === 'Approved');      \n        const distinctNames = new Set(encounters.map(enc =>\n            `${enc.getObservationReadableValue(observationName)}`\n        ));\n        return distinctNames.size;\n  }\n  \n  const getTotalSiltExcavatedByGP = function(encounterTypeName, observationName) {\n        return individual.getEncounters()\n            .filter((enc) => enc.encounterType.name === encounterTypeName )\n            .filter((enc) =>  enc.latestEntityApprovalStatus && enc.latestEntityApprovalStatus.approvalStatus.status === 'Approved' )\n            .map((enc) => enc.getObservationReadableValue(observationName))\n            .reduce((total, val) => total + parseFloat(val), 0);;\n    };\n    \nsummaries.push({name: 'Total Silt carted', value: calculateSumOfObservationNumberValues('Work order daily Recording - Farmer','Total Silt carted').toFixed(2)});\n\nsummaries.push({name: 'Number of farmers', value: getTotalBeneficiaries('Work order daily Recording - Farmer','Farmer/Beneficiary')});\n \nsummaries.push({name: 'Number of machine', value: getTotalBeneficiaries('Work order daily Recording - Machine','Excavating Machine')});\n\nsummaries.push({name: 'Total number of JCBs', value: getTotalMachineType('Work order daily Recording - Machine','Excavating Machine','JCB')});\n\nsummaries.push({name: 'Total number of Poclains', value: getTotalMachineType('Work order daily Recording - Machine','Excavating Machine','Poclain')});\n \nsummaries.push({name: 'Total working hours of machine', value: calculateSumOfObservationValues('Work order daily Recording - Machine','Working Hours as per time')});\n\nsummaries.push({name: 'Total working hours of JCBs', value: calculateSumOfObservationValuesMachineWise('Work order daily Recording - Machine','Working Hours as per time','JCB')});\n\nsummaries.push({name: 'Total working hours of Poclains', value: calculateSumOfObservationValuesMachineWise('Work order daily Recording - Machine','Working Hours as per time','Poclain')});\n\nconst siltAsPerPlan = individual.getObservationReadableValue('Silt to be excavated as per plan');\nsummaries.push({name: 'Silt to be excavated as per plan', value: siltAsPerPlan});\n\nsummaries.push({name: 'Total silt excavated by GP (for non-farm purpose)', value: getTotalSiltExcavatedByGP('Gram Panchayat Endline','Total silt excavated by GP (for non-farm purpose)')});\n\n     \n  return summaries;\n};",
+  "allowEmptyLocation" : false,
+  "allowMiddleName" : false,
+  "lastNameOptional" : false,
+  "allowProfilePicture" : false,
+  "uniqueName" : true,
+  "validFirstNameFormat" : {
+    "regex" : "\\b[A-Z0-9]+\\b",
+    "descriptionKey" : "Please add a valid wok order name"
+  },
+  "iconFileS3Key" : "https://s3.ap-south-1.amazonaws.com/prod-user-media/rwb2023/icons/a961a36a-4728-4389-9934-a052067ee6a5.png",
+  "shouldSyncByLocation" : true,
+  "syncRegistrationConcept1" : "30b35ec3-634a-4534-b156-574ae6d9243d",
+  "settings" : {
+    "displayRegistrationDetails" : true,
+    "displayPlannedEncounters" : true
+  },
+  "household" : false,
+  "group" : false,
+  "syncRegistrationConcept1Usable" : true,
+  "directlyAssignable" : false,
+  "voided" : false
+}, {
+  "name" : "Gram panchayat",
+  "uuid" : "ad2ab138-b89f-48e1-aa96-f8626221cef3",
+  "active" : true,
+  "type" : "Individual",
+  "subjectSummaryRule" : "",
+  "programEligibilityCheckRule" : "",
+  "allowEmptyLocation" : false,
+  "allowMiddleName" : false,
+  "lastNameOptional" : false,
+  "allowProfilePicture" : false,
+  "uniqueName" : false,
+  "shouldSyncByLocation" : true,
+  "settings" : {
+    "displayRegistrationDetails" : true,
+    "displayPlannedEncounters" : true
+  },
+  "household" : false,
+  "group" : false,
+  "directlyAssignable" : false,
+  "voided" : false
+}, {
+  "name" : "Machine Contractor (voided~225)",
+  "uuid" : "698ada15-50e7-4606-93d2-fc8683703e00",
+  "active" : true,
+  "type" : "Group",
+  "subjectSummaryRule" : "",
+  "allowEmptyLocation" : true,
+  "allowMiddleName" : false,
+  "lastNameOptional" : false,
+  "allowProfilePicture" : false,
+  "uniqueName" : true,
+  "shouldSyncByLocation" : true,
+  "settings" : {
+    "displayRegistrationDetails" : true,
+    "displayPlannedEncounters" : true
+  },
+  "household" : false,
+  "group" : true,
+  "directlyAssignable" : false,
+  "voided" : true
+}, {
+  "name" : "Waterbody (voided~201)",
+  "uuid" : "3f2d84a7-15db-4244-ab98-ccc8649edab6",
+  "active" : true,
+  "type" : "Individual",
+  "subjectSummaryRule" : "",
+  "allowEmptyLocation" : false,
+  "allowMiddleName" : false,
+  "lastNameOptional" : false,
+  "allowProfilePicture" : false,
+  "uniqueName" : false,
+  "shouldSyncByLocation" : true,
+  "settings" : {
+    "displayRegistrationDetails" : true,
+    "displayPlannedEncounters" : true
+  },
+  "household" : false,
+  "group" : false,
+  "directlyAssignable" : false,
+  "voided" : true
+}, {
+  "name" : "Well (voided~493)",
+  "uuid" : "1d11fc5a-efd9-4482-92fd-f19b9e056a5a",
+  "active" : true,
+  "type" : "Individual",
+  "subjectSummaryRule" : "",
+  "allowEmptyLocation" : false,
+  "allowMiddleName" : false,
+  "lastNameOptional" : false,
+  "allowProfilePicture" : false,
+  "uniqueName" : false,
+  "iconFileS3Key" : "https://s3.ap-south-1.amazonaws.com/prod-user-media/rwb2023/icons/1d11fc5a-efd9-4482-92fd-f19b9e056a5a.png",
+  "shouldSyncByLocation" : true,
+  "settings" : {
+    "displayRegistrationDetails" : true,
+    "displayPlannedEncounters" : true
+  },
+  "household" : false,
+  "group" : false,
+  "directlyAssignable" : false,
+  "voided" : true
+}, {
+  "name" : "Farmer",
+  "uuid" : "73271784-512d-4435-8dc8-0f102b99d682",
+  "active" : true,
+  "type" : "Person",
+  "subjectSummaryRule" : "'use strict';\n({params, imports}) =>  {\n  const {summaries, individual} = params;\n   \n //console.log('Waterbody',individual);\n summaries.push({name: 'WaterBody', value: individual.lowestAddressLevel.name});\n \n //findLatestObservationFromEncounters\n    \n    \nconst mobileNumber = individual.findObservation('Mobile Number');  \nif(mobileNumber)\nsummaries.push({name: 'Mobile Number', value: mobileNumber.getValueWrapper()});\n\nconst totalSilt = individual.findObservation('Total silt required');  \nif(totalSilt)    \nsummaries.push({name: 'Total silt required', value: totalSilt.getValue()});\n\n\n//Endline\nlet endline = individual.getEncounters()\n            .filter((enc) => enc.encounterType.name === 'Farmer Endline' )\n            .filter((enc) =>  enc.latestEntityApprovalStatus && enc.latestEntityApprovalStatus.approvalStatus.status === 'Approved');\n            \nif(endline){\n\n//Aadhar number\nconst aadharNumber = individual.findLatestObservationFromEncounters('Aadhar number');  \nif(aadharNumber)    \nsummaries.push({name: 'Aadhar number', value: aadharNumber.getValue()});\n\n//Landholding\nconst landholding = individual.findLatestObservationFromEncounters('Landholding');  \nif(landholding)    \nsummaries.push({name: 'Landholding', value: landholding.getValue()});\n\n\n//Distance from farm\nconst distance = individual.findLatestObservationFromEncounters('Distance from farm');  \nif(distance)    \nsummaries.push({name: 'Distance from farm', value: distance.getValue()});\n\n//Total Silt carted by family members\n//Total Silt carted \n\n//const totalSilt = individual.findLatestObservationFromEncounters('Total Silt carted');  \n//if(totalSilt)    \n//summaries.push({name: 'Total Silt carted', value: totalSilt.getValue()});\n\n\n}\n           \n\n\n    \n  return summaries;\n};",
+  "allowEmptyLocation" : false,
+  "allowMiddleName" : false,
+  "lastNameOptional" : false,
+  "allowProfilePicture" : false,
+  "uniqueName" : true,
+  "shouldSyncByLocation" : true,
+  "settings" : {
+    "displayRegistrationDetails" : true,
+    "displayPlannedEncounters" : true
+  },
+  "household" : false,
+  "group" : false,
+  "directlyAssignable" : false,
+  "voided" : false
+} ]

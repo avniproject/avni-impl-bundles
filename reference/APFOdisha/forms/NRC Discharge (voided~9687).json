@@ -1,0 +1,241 @@
+{
+  "name" : "NRC Discharge (voided~9687)",
+  "uuid" : "97ae8ad5-2ee2-4068-b5ab-3569f07c3c68",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "85174368-91eb-4238-bf64-5fbf7a07d7e6",
+    "name" : "Discharge Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Height at discharge",
+      "uuid" : "bbad1755-340c-422d-b6e7-07879a404c2b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Height at Discharge",
+        "uuid" : "3ac094e8-347e-499b-911c-f6a386fca98a",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 40.0,
+        "highAbsolute" : 150.0,
+        "lowNormal" : 40.0,
+        "highNormal" : 150.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"055a54be-f12a-4e32-8fbc-aa2560ab88e4\").containsAnswerConceptName(\"386053f2-b495-44b6-95ca-bcd52b0282ef\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Admission Status",
+                "conceptUuid" : "055a54be-f12a-4e32-8fbc-aa2560ab88e4",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Cured and discharged" ],
+                "answerConceptUuids" : [ "386053f2-b495-44b6-95ca-bcd52b0282ef" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Weight at discharge",
+      "uuid" : "f6588d2e-dcd8-45cb-8431-2a6776b0def2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Weight at Discharge",
+        "uuid" : "06e4633a-70ae-4b6e-b570-3dc4056c8a40",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 1.0,
+        "highAbsolute" : 50.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"055a54be-f12a-4e32-8fbc-aa2560ab88e4\").containsAnswerConceptName(\"386053f2-b495-44b6-95ca-bcd52b0282ef\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Admission Status",
+                "conceptUuid" : "055a54be-f12a-4e32-8fbc-aa2560ab88e4",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Cured and discharged" ],
+                "answerConceptUuids" : [ "386053f2-b495-44b6-95ca-bcd52b0282ef" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Nutrition status at the time of discharge",
+      "uuid" : "7cf21761-15d3-4e92-96f2-b56dea341c51",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Nutrition status-discharge",
+        "uuid" : "81e3c0fa-e96a-4cd2-8c09-4ae3c126874e",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"055a54be-f12a-4e32-8fbc-aa2560ab88e4\").containsAnswerConceptName(\"386053f2-b495-44b6-95ca-bcd52b0282ef\").matches();\n  \n  visibility = condition11 ;\n  \n  if(visibility){\n        const height = programEncounter.getObservationValue(\"Height at Discharge\");\n    const weight = programEncounter.getObservationValue(\"Weight at Discharge\");\n    const asOnDate = programEncounter.encounterDateTime;\n    const individual = programEncounter.programEnrolment.individual;\n    const age = programEncounter.programEnrolment.individual.getAgeInMonths();\n    \n    \n    console.log(`height ${height} weight ${weight}`);\n\n    const addIfRequired = (decisions, name, value) => {\n        if (value === -0) value = 0;\n        if (value !== undefined) decisions.push({name: name, value: value});\n    };\n\n    const getGradeforZscore = (zScore) => {\n        let grade;\n        if (zScore <= -3) {\n            grade = 3;\n        } else if (zScore > -3 && zScore < -2) {\n            grade = 2;\n        } else if (zScore >= -2) {\n            grade = 1;\n        }\n        return grade;\n    };\n\n    const zScoresForChild = ruleServiceLibraryInterfaceForSharingModules.common.getZScore(individual, asOnDate, weight, height);\n\n    const zScoreGradeStatusMappingWeightForHeight = [\n        [\"SAM\", -3],\n        [\"MAM\", -2],\n        [\"Normal\", 1],\n        [\"Normal\", 2],\n        [\"Normal\", 3],\n        [\"Normal\", Infinity],\n    ];\n\n    const weightForHeightStatus = function (zScore) {\n        let found = _.find(zScoreGradeStatusMappingWeightForHeight, function (currentStatus) {\n            return zScore <= currentStatus[1];\n        });\n        return found && found[0];\n    };\n\n    const wfhStatus = weightForHeightStatus(zScoresForChild.wfh);\n    const wfhGrade = getGradeforZscore(zScoresForChild.wfh);\n    \n    value = wfhStatus;\n  }\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Date of discharge from NRC",
+      "uuid" : "b0c11bc7-a057-4a88-93df-8ede60ed1696",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Date of discharge from NRC",
+        "uuid" : "71e84ef3-4f1d-4814-84fc-3672b3a72423",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"055a54be-f12a-4e32-8fbc-aa2560ab88e4\").containsAnswerConceptName(\"386053f2-b495-44b6-95ca-bcd52b0282ef\").matches();\n  \n  visibility = condition11 ;\n  const discharge = programEncounter.getObservationReadableValue(\"Date of discharge from NRC\");  \n  \n  if(visibility && discharge){\n    const admission = programEncounter.getObservationReadableValue(\"Date of admission in NRC\");  \n    if(moment(admission).isAfter(moment(discharge))){\n      validationErrors.push(\"Discharge should be after admission date\");\n    }\n  }\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Criteria for exit",
+      "uuid" : "63e231f7-2055-4016-b7f1-f777bd0d4cba",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Criteria for exit",
+        "uuid" : "f0ac307d-7487-4d2a-92c9-5d3574a5b9e3",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Weight for height",
+          "uuid" : "086a8367-37de-4daa-b242-9d83ee814853",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other medical complication",
+          "uuid" : "97381570-77b1-4cb6-8c4b-7509f097d956",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "MUAC",
+          "uuid" : "e42f6cc7-125b-4836-9d04-22a3523ac7d4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"055a54be-f12a-4e32-8fbc-aa2560ab88e4\").containsAnswerConceptName(\"386053f2-b495-44b6-95ca-bcd52b0282ef\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Admission Status",
+                "conceptUuid" : "055a54be-f12a-4e32-8fbc-aa2560ab88e4",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Cured and discharged" ],
+                "answerConceptUuids" : [ "386053f2-b495-44b6-95ca-bcd52b0282ef" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Other medical complication, please specify",
+      "uuid" : "bf4d1956-b03d-44c6-81bb-86e03597ea7d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other medical complication, please specify",
+        "uuid" : "44c3706d-94ca-44ab-a7cf-ff54c43dfab9",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"f0ac307d-7487-4d2a-92c9-5d3574a5b9e3\").containsAnswerConceptName(\"97381570-77b1-4cb6-8c4b-7509f097d956\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Criteria for exit",
+                "conceptUuid" : "f0ac307d-7487-4d2a-92c9-5d3574a5b9e3",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other medical complication" ],
+                "answerConceptUuids" : [ "97381570-77b1-4cb6-8c4b-7509f097d956" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    } ],
+    "display" : "Discharge Details",
+    "timed" : false
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ],
+  "voided" : true
+}

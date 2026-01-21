@@ -1,0 +1,273 @@
+{
+  "name" : "Volunteer Registration",
+  "uuid" : "3585b468-0ff4-4979-881f-72e243e15db9",
+  "formType" : "IndividualProfile",
+  "formElementGroups" : [ {
+    "uuid" : "bc4e2a9f-b962-4067-ba7b-47f6da33d787",
+    "name" : "Details of volunteer",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Phone Number",
+      "uuid" : "ff8450c9-1dcf-42d0-815c-8ab4e7bd3b92",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Phone Number (voided~259989)",
+        "uuid" : "690172d4-9bdc-423d-9125-9243c7c95202",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "highAbsolute" : 10.0,
+        "active" : true,
+        "media" : [ ],
+        "voided" : true
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Name of  Volunteer",
+      "uuid" : "421fb626-6c6e-4f1f-bd96-3037a1884575",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of  Volunteer",
+        "uuid" : "44fc71bc-c6e2-4680-b514-5473f9510faf",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Address of Volunteer",
+      "uuid" : "ff93b8a1-26d9-4922-ae8c-ca2b6708c603",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Address of Volunteer",
+        "uuid" : "9c0e16da-13e9-4f60-8db1-06fd831528de",
+        "dataType" : "Location",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ {
+          "key" : "isWithinCatchment",
+          "value" : false
+        }, {
+          "key" : "lowestAddressLevelTypeUUIDs",
+          "value" : [ "c1f26e98-816d-4cf5-aada-6f4dcab46487" ]
+        }, {
+          "key" : "highestAddressLevelTypeUUID",
+          "value" : "b11a3eba-5e28-4b7a-886d-5cec856d02ba"
+        } ],
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Phone Number",
+      "uuid" : "ceb4ca6f-5517-4877-a7ac-a8c187d89fe5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Phone",
+        "uuid" : "11394907-2df2-474e-919d-c3ddc393305f",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "validFormat" : {
+        "regex" : "^[6-9]\\d{9}$",
+        "descriptionKey" : "The phone number must start with digits 6, 7, 8, or 9 and should be 10 digits"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "Social Category",
+      "uuid" : "1aa8c32d-b185-486a-8161-232292792277",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SocialCategory",
+        "uuid" : "c4f408b3-0112-4d12-af14-b5bbd25591c7",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Campaign Subject",
+          "uuid" : "87b53f71-b277-43d6-b891-59a58dfb3fb7",
+          "dataType" : "Subject",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "subjectTypeUUID",
+            "value" : "0ab6edd4-2a80-4ce9-9bfa-0464cb4ae6b0"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "ST",
+          "uuid" : "5f88add0-3407-48cc-ba89-5f9218aa6e5a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "SC",
+          "uuid" : "dc5d596d-3f05-4a48-ae28-a9faf4155a18",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "General",
+          "uuid" : "d715cc92-9661-4885-88cc-aa240d41116d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "OBC",
+          "uuid" : "b835d5c4-8843-4396-98cb-08454f923a28",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Main livelihood",
+      "uuid" : "0da58f1a-5535-436e-bfe2-d06516feefc0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "MainLivelihood",
+        "uuid" : "3ec84c90-a614-4710-824c-321aa4fcccf3",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Whether associated with any other NGO/GO/Samooh",
+      "uuid" : "de8030ad-12da-446e-b63d-0b869154a3b1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Whether associated with any other NGO/GO/Samooh",
+        "uuid" : "27e6400f-ac99-4939-b065-0d1c570fec64",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "d045b9b5-0d0f-4ead-82c4-7ff05bf4efa6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "03ead610-1596-4a1f-b57d-07792c6e66b6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Name of NGO/GO/Samooh",
+      "uuid" : "9549326b-40b0-4ae2-9f5e-982226200ab3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "NgoName",
+        "uuid" : "534d012c-cff0-47a5-abc0-5effa7d80357",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration(\"27e6400f-ac99-4939-b065-0d1c570fec64\").containsAnswerConceptName(\"d045b9b5-0d0f-4ead-82c4-7ff05bf4efa6\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "registration",
+                "conceptName" : "YesOrNo",
+                "conceptUuid" : "27e6400f-ac99-4939-b065-0d1c570fec64",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "d045b9b5-0d0f-4ead-82c4-7ff05bf4efa6" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Any other info",
+      "uuid" : "b6e0d68f-8513-4eb9-b529-6d85e320ebf8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Info",
+        "uuid" : "94487220-b135-4980-90f7-cae13fd9f764",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "rule" : "'use strict';\n({ params, imports }) => {\n    const individual = params.entity;\n    const moment = imports.moment;\n    const formElementGroup = params.formElementGroup;\n    const _ = imports.lodash;\n    let visibility = true;\n\n    return formElementGroup.formElements.map((formElement) => {\n        if (individual) {\n            const nameOfVolunteer = individual.getObservationReadableValue('44fc71bc-c6e2-4680-b514-5473f9510faf');\n            const addressOfVolunteer = individual.lowestAddressLevel.name;\n\n            if (!nameOfVolunteer && !addressOfVolunteer) {\n                individual.firstName = `Volunteer_`;\n                individual.name = `Volunteer_`;\n\n            } else{\n                 individual.firstName = `Volunteer_${nameOfVolunteer}_${addressOfVolunteer}`;\n                  individual.name = `Volunteer_${nameOfVolunteer}_${addressOfVolunteer}`;\n\n            }\n        }\n\n        return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, null);\n    });\n};\n",
+    "display" : "Details of volunteer",
+    "timed" : false
+  } ],
+  "decisionRule" : "//SAMPLE RULE EXAMPLE\n  \"use strict\";\n({params, imports}) => {\n    const individual = params.entity;\n    const decisions = params.decisions;\n    const moment = imports.moment;\n    const registrationDecisions = [];\n    \n    let createdByName = params.user.name;\n    let createdByUUID = params.user.uuid;\n    let createdByUsername = params.user.username;\n    \n    const registrationDateForEditCase = individual.getObservationValue(\"7b1a1540-bfd5-484d-987f-4d6f3635a448\");\n    if (!registrationDateForEditCase) {\n      let regDateTime = moment().format(\"YYYY-MM-DD HH:mm:ss\");\n      if (regDateTime) {\n        registrationDecisions.push({ name: \"Registration DateTime\", value: regDateTime });\n      }\n    }\n    \n    if(createdByName){\n      registrationDecisions.push({name: \"Created By Name\", value: createdByName});  \n    }\n    \n    if(createdByUsername){\n      registrationDecisions.push({name: \"Created By Username\", value: createdByUsername});    \n    }\n    \n    decisions.registrationDecisions.push(...registrationDecisions);\n        \n    return decisions;\n};",
+  "visitScheduleRule" : "",
+  "validationRule" : "'use strict';\n({ params, imports }) => {\n  const individual = params.entity;\n  const moment = imports.moment;\n  const validationResults = [];\n  \n  const registrationDateForEditCase = individual.getObservationValue(\"7b1a1540-bfd5-484d-987f-4d6f3635a448\");\n  const registrationDate = individual.registrationDate;\n\n  if (!registrationDateForEditCase) {\n    if (registrationDate) {\n      const today = moment().startOf('day');\n      const regDate = moment(registrationDate).startOf('day');\n\n      if (!regDate.isSame(today, 'day')) {\n        validationResults.push(\n          imports.common.createValidationError(\"Registration Date should be today's date.\")\n        );\n      }\n    }\n  } else {\n    const regDateEdit = moment(registrationDate).startOf('day');\n    const regDateOriginal = moment(registrationDateForEditCase).startOf('day');\n\n    if (!regDateEdit.isSame(regDateOriginal, 'day')) {\n      validationResults.push(\n        imports.common.createValidationError(\"Registration Date cannot be changed.\")\n      );\n    }\n  }\n\n  return validationResults;\n};\n",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ {
+    "name" : "Created By Username",
+    "uuid" : "836f9b19-bebb-4295-8519-9c7c6a4e4d15",
+    "dataType" : "Text",
+    "answers" : [ ],
+    "active" : true,
+    "keyValues" : [ ],
+    "media" : [ ]
+  }, {
+    "name" : "Created By Name",
+    "uuid" : "5d9875ad-9f13-4243-8e1f-edfe00c18866",
+    "dataType" : "Text",
+    "answers" : [ ],
+    "active" : true,
+    "keyValues" : [ ],
+    "media" : [ ]
+  } ]
+}

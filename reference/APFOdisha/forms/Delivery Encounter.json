@@ -1,0 +1,1025 @@
+{
+  "name" : "Delivery Encounter",
+  "uuid" : "d0121564-50e3-445c-b909-439d0cd74ef0",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "24a87003-cb10-4d92-a37c-e46f6304337d",
+    "name" : "Identification",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Date of delivery",
+      "uuid" : "81495d0a-a378-47d2-8537-62907e699e39",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Date of delivery",
+        "uuid" : "f72ec1db-50d5-409e-883a-421825fbebb5",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  let lastMenstrualPeriodObservation = programEncounter.findLatestObservationInEntireEnrolment('2664c7be-7467-4304-811f-d9d20dcd7eae', programEncounter);\n  let lastMenstrualPeriodValue = _.isEmpty(lastMenstrualPeriodObservation) ? lastMenstrualPeriodObservation : lastMenstrualPeriodObservation.getReadableValue();\n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"f72ec1db-50d5-409e-883a-421825fbebb5\").lessThan(lastMenstrualPeriodValue, 'ms').matches();\n  \n  if(condition11 ){\n    validationErrors.push(\"Date cannot be before last menstrual period\");  \n}\n\n  const dateInFuture = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"f72ec1db-50d5-409e-883a-421825fbebb5\").greaterThan(moment(programEncounter.encounterDateTime)).matches();\n  \n  if(dateInFuture ){\n    validationErrors.push(\"Date cannot be in the future\");  \n}\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Place of delivery",
+      "uuid" : "1abd75dd-ae56-48ec-9a5a-b7ab814964d5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Place of delivery",
+        "uuid" : "4abffffa-eeb0-4655-95ce-0d34c4702d5b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Hospital",
+          "uuid" : "b6b1a9cb-4b5f-42c7-b27c-39b9ab92107f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "f169230d-809b-4d06-9ccb-96586977bb68",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "On Road",
+          "uuid" : "917d7dab-93c6-4795-941c-e98174ef1c90",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Home",
+          "uuid" : "b0a00c8b-b190-41a0-8b65-1afb0db00a81",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "",
+      "mandatory" : true
+    }, {
+      "name" : "Specify other place of delivery",
+      "uuid" : "42ae370b-c12f-4c3a-a9e5-92b97d01eb35",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Specify other place of delivery",
+        "uuid" : "4e1c5397-c61b-4403-99f4-8a53607c3ebe",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"4abffffa-eeb0-4655-95ce-0d34c4702d5b\").containsAnswerConceptName(\"f169230d-809b-4d06-9ccb-96586977bb68\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Place of delivery",
+                "conceptUuid" : "4abffffa-eeb0-4655-95ce-0d34c4702d5b",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "f169230d-809b-4d06-9ccb-96586977bb68" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "Mode of Delivery",
+      "uuid" : "855fbd81-8311-4bbf-8219-3bfaf10572a5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Mode of Delivery",
+        "uuid" : "05406606-52f3-4427-a87b-001bfdc5a6fb",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "C section",
+          "uuid" : "07a7c084-8189-46f8-b59a-4f3df9666c45",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Normal - Home",
+          "uuid" : "bb0e063c-6a2b-4cd2-972e-707f9ae60cf4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Normal - Instituition",
+          "uuid" : "3e93ddc0-404a-4fcc-b4e7-21076676cd0e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"4abffffa-eeb0-4655-95ce-0d34c4702d5b\").containsAnswerConceptName(\"b6b1a9cb-4b5f-42c7-b27c-39b9ab92107f\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Place of delivery",
+                "conceptUuid" : "4abffffa-eeb0-4655-95ce-0d34c4702d5b",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Hospital" ],
+                "answerConceptUuids" : [ "b6b1a9cb-4b5f-42c7-b27c-39b9ab92107f" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Mode of Transportation to medical facility?",
+      "uuid" : "af9b6e51-2a85-40b9-95c4-12db9dba26ba",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Mode of Transportation to medical facility?",
+        "uuid" : "585e21ad-3538-4122-aa79-cbd08537c4f6",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "108 Vehicle",
+          "uuid" : "51f7b9cd-bd54-41ed-8a4b-802920f9764d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Walking",
+          "uuid" : "40dceb59-6619-46fa-9144-dfc47a1923a9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Public Transport",
+          "uuid" : "cd086ffb-fbed-4b75-8e54-3e5a8e4f550b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Private Vehicle",
+          "uuid" : "a3cb3612-e115-4d21-8dfc-0c5126d8cc59",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"4abffffa-eeb0-4655-95ce-0d34c4702d5b\").defined.and.when.valueInEncounter(\"4abffffa-eeb0-4655-95ce-0d34c4702d5b\").containsAnswerConceptNameOtherThan(\"b0a00c8b-b190-41a0-8b65-1afb0db00a81\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Place of delivery",
+                "conceptUuid" : "4abffffa-eeb0-4655-95ce-0d34c4702d5b",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : { },
+              "operator" : "defined"
+            }, {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Place of delivery",
+                "conceptUuid" : "4abffffa-eeb0-4655-95ce-0d34c4702d5b",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Home" ],
+                "answerConceptUuids" : [ "b0a00c8b-b190-41a0-8b65-1afb0db00a81" ]
+              },
+              "operator" : "containsAnswerConceptNameOtherThan"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Birth outcome",
+      "uuid" : "a896154c-e640-4230-9547-409416cada90",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Birth outcome",
+        "uuid" : "976db865-27a4-41e7-be18-6b59f42bb900",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Miscarriage",
+          "uuid" : "80837323-2f91-4955-a35f-88956b503006",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Neonatal death",
+          "uuid" : "a8ee0e9c-e759-4a63-aa4e-39cc7392792f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Still birth",
+          "uuid" : "8c2f1e75-cf54-4761-887f-b06e4ffa6463",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Normal delivery",
+          "uuid" : "1ece5dd3-864e-460a-9116-874b94ce22eb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Infant death",
+          "uuid" : "8d512f83-598a-4eee-80ec-1958c6698677",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Abortion",
+          "uuid" : "88f291bf-e354-47ea-960e-69f16e987c71",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "keyValues" : [ ],
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Birth weight",
+      "uuid" : "7724f01e-0aa6-4c32-8137-e1698cccb4df",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Birth weight",
+        "uuid" : "536f46bc-8beb-42d7-a7ed-2958b21a9021",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.5,
+        "highAbsolute" : 15.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"976db865-27a4-41e7-be18-6b59f42bb900\").containsAnswerConceptName(\"1ece5dd3-864e-460a-9116-874b94ce22eb\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Birth outcome",
+                "conceptUuid" : "976db865-27a4-41e7-be18-6b59f42bb900",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Normal delivery" ],
+                "answerConceptUuids" : [ "1ece5dd3-864e-460a-9116-874b94ce22eb" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Length of the baby at birth (in cm)",
+      "uuid" : "5f41dfcc-1628-4f85-af16-53d8213536d2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Length of the baby at birth (in cm)",
+        "uuid" : "8754d06d-3192-48c3-afea-6991e6bc4b61",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 1.0,
+        "highAbsolute" : 50.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"976db865-27a4-41e7-be18-6b59f42bb900\").containsAnswerConceptName(\"1ece5dd3-864e-460a-9116-874b94ce22eb\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Birth outcome",
+                "conceptUuid" : "976db865-27a4-41e7-be18-6b59f42bb900",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Normal delivery" ],
+                "answerConceptUuids" : [ "1ece5dd3-864e-460a-9116-874b94ce22eb" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "Sex of the new born baby",
+      "uuid" : "f5195af5-caeb-4bbf-9dd5-00c4bfeafaa0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Sex of the new born baby",
+        "uuid" : "9f35ace3-773b-4f67-8546-71a061a252f6",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Male",
+          "uuid" : "924de7e5-47d9-401a-9178-3336fee5ee03",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Female",
+          "uuid" : "710583d4-cb89-4986-aef2-b97b6aa222e5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"976db865-27a4-41e7-be18-6b59f42bb900\").containsAnswerConceptName(\"1ece5dd3-864e-460a-9116-874b94ce22eb\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Birth outcome",
+                "conceptUuid" : "976db865-27a4-41e7-be18-6b59f42bb900",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Normal delivery" ],
+                "answerConceptUuids" : [ "1ece5dd3-864e-460a-9116-874b94ce22eb" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Eligible for JSY Scheme?",
+      "uuid" : "aab3ba29-7b43-49a6-8ecf-7c884b2e9646",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Eligible for JSY Scheme?",
+        "uuid" : "1289b352-f8af-4fc8-bc55-f30681c08a60",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Not eligible",
+          "uuid" : "2770f98b-a6cd-49b9-9af8-dff69a7d868b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not enrolled",
+          "uuid" : "342965f0-b7f0-49fa-95d6-bc001b56e3b0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Don’t know",
+          "uuid" : "9efb228c-9978-48eb-b224-8add92b5f2f1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Have you received first installment of Mamata scheme amount?",
+      "uuid" : "bb7cfa66-46a0-4c36-8854-feaf90bb907f",
+      "keyValues" : [ {
+        "key" : "ExcludedAnswers",
+        "value" : [ "Dont know" ]
+      } ],
+      "concept" : {
+        "name" : "Have you received first installment of Mamata scheme amount?",
+        "uuid" : "a1012f45-fb96-4bd0-94cb-2714065e4367",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Dont know",
+          "uuid" : "6efff09c-e027-49ae-b7c2-ff311dbdfd9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Don't know",
+          "uuid" : "54f6160b-0c27-4bf7-b2e1-31f8f2fec972",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Mamata Scheme Amount received (Second instalment)",
+      "uuid" : "0b52ab16-c82e-43ab-907b-b10d86e449c9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Mamata Scheme Amount received  (Second instalment)",
+        "uuid" : "49554aaa-5430-4ad0-9ad6-8453d3213773",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Not enrolled",
+          "uuid" : "342965f0-b7f0-49fa-95d6-bc001b56e3b0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Don't know",
+          "uuid" : "54f6160b-0c27-4bf7-b2e1-31f8f2fec972",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not eligible",
+          "uuid" : "2770f98b-a6cd-49b9-9af8-dff69a7d868b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Timely Initiation of Breast feeeding done?",
+      "uuid" : "70f6a2cc-8eeb-447e-ba15-aec69a486ec3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Timely initiation of Breast feeding",
+        "uuid" : "609ab1cc-0d5e-4e31-87b8-a8299c22c600",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"976db865-27a4-41e7-be18-6b59f42bb900\").containsAnswerConceptName(\"1ece5dd3-864e-460a-9116-874b94ce22eb\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Birth outcome",
+                "conceptUuid" : "976db865-27a4-41e7-be18-6b59f42bb900",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Normal delivery" ],
+                "answerConceptUuids" : [ "1ece5dd3-864e-460a-9116-874b94ce22eb" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Delivery in how many weeks?",
+      "uuid" : "853f6105-0821-4450-bfdb-15f8c538a9d0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Delivery in how many weeks?",
+        "uuid" : "fb6f58f7-36f6-4fb2-b57d-1c99bfbd030c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Before 34 weeks",
+          "uuid" : "05b7cfaf-beb8-4b7c-9802-d742c37c778a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Between 34-37 weeks",
+          "uuid" : "ac231a0f-0d6f-4d85-bb9b-fbc174b9a639",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "After 37 weeks",
+          "uuid" : "d0eb7a0b-6aa9-4c30-9ff6-caec37a1a947",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"976db865-27a4-41e7-be18-6b59f42bb900\").containsAnswerConceptName(\"1ece5dd3-864e-460a-9116-874b94ce22eb\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Birth outcome",
+                "conceptUuid" : "976db865-27a4-41e7-be18-6b59f42bb900",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Normal delivery" ],
+                "answerConceptUuids" : [ "1ece5dd3-864e-460a-9116-874b94ce22eb" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Is the child pre term?",
+      "uuid" : "402c027b-195e-428d-8d27-4f3b3d5d5d69",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Is the child pre term?",
+        "uuid" : "9aeb38a6-8529-4d71-a0e8-7f34182cc859",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 15.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"fb6f58f7-36f6-4fb2-b57d-1c99bfbd030c\").defined.matches();\n    \n  const condition12 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"fb6f58f7-36f6-4fb2-b57d-1c99bfbd030c\").containsAnswerConceptName(\"05b7cfaf-beb8-4b7c-9802-d742c37c778a\").matches();\n    \n  const condition13 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"fb6f58f7-36f6-4fb2-b57d-1c99bfbd030c\").containsAnyAnswerConceptName(\"ac231a0f-0d6f-4d85-bb9b-fbc174b9a639\",\"d0eb7a0b-6aa9-4c30-9ff6-caec37a1a947\").matches();\n  \n  visibility = condition11 ;\n    if(condition12 ){\n    value = \"Yes\";  \n}\n    if(condition13 ){\n    value = \"No\";  \n}\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Delivery in how many weeks?",
+                "conceptUuid" : "fb6f58f7-36f6-4fb2-b57d-1c99bfbd030c",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : { },
+              "operator" : "defined"
+            } ]
+          }
+        } ]
+      }, {
+        "actions" : [ {
+          "details" : {
+            "value" : "Yes"
+          },
+          "actionType" : "value"
+        } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Delivery in how many weeks?",
+                "conceptUuid" : "fb6f58f7-36f6-4fb2-b57d-1c99bfbd030c",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Before 34 weeks" ],
+                "answerConceptUuids" : [ "05b7cfaf-beb8-4b7c-9802-d742c37c778a" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      }, {
+        "actions" : [ {
+          "details" : {
+            "value" : "No"
+          },
+          "actionType" : "value"
+        } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Delivery in how many weeks?",
+                "conceptUuid" : "fb6f58f7-36f6-4fb2-b57d-1c99bfbd030c",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Between 34-37 weeks", "After 37 weeks" ],
+                "answerConceptUuids" : [ "ac231a0f-0d6f-4d85-bb9b-fbc174b9a639", "d0eb7a0b-6aa9-4c30-9ff6-caec37a1a947" ]
+              },
+              "operator" : "containsAnyAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "LBW baby",
+      "uuid" : "708d9976-bd96-47e1-ba48-88f0f40a931a",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "LBW baby",
+        "uuid" : "68a1d6e8-3f4d-45bc-8b71-74da0b0a69d3",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "LBW",
+          "uuid" : "58015715-c23b-4f8b-ad30-adc0b1f6a16b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "SLBW",
+          "uuid" : "47981f48-f9c4-454f-a680-d8667d332040",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 16.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"536f46bc-8beb-42d7-a7ed-2958b21a9021\").lessThan(3).matches();\n    \n  const condition12 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"536f46bc-8beb-42d7-a7ed-2958b21a9021\").lessThan(2.5).matches();\n    \n  const condition13 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"536f46bc-8beb-42d7-a7ed-2958b21a9021\").greaterThanOrEqualTo(2.5).matches();\n  \n  visibility = condition11 ;\n    if(condition12 ){\n    value = \"SLBW\";  \n}\n    if(condition13 ){\n    value = \"LBW\";  \n}\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Birth weight",
+                "conceptUuid" : "536f46bc-8beb-42d7-a7ed-2958b21a9021",
+                "conceptDataType" : "Numeric"
+              },
+              "rhs" : {
+                "type" : "value",
+                "value" : 3
+              },
+              "operator" : "lessThan"
+            } ]
+          }
+        } ]
+      }, {
+        "actions" : [ {
+          "details" : {
+            "value" : "SLBW"
+          },
+          "actionType" : "value"
+        } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Birth weight",
+                "conceptUuid" : "536f46bc-8beb-42d7-a7ed-2958b21a9021",
+                "conceptDataType" : "Numeric"
+              },
+              "rhs" : {
+                "type" : "value",
+                "value" : 2.5
+              },
+              "operator" : "lessThan"
+            } ]
+          }
+        } ]
+      }, {
+        "actions" : [ {
+          "details" : {
+            "value" : "LBW"
+          },
+          "actionType" : "value"
+        } ],
+        "conditions" : [ {
+          "conjunction" : "and",
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Birth weight",
+                "conceptUuid" : "536f46bc-8beb-42d7-a7ed-2958b21a9021",
+                "conceptDataType" : "Numeric"
+              },
+              "rhs" : {
+                "type" : "value",
+                "value" : 2.5
+              },
+              "operator" : "greaterThanOrEqualTo"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "JSY money received?",
+      "uuid" : "d010ab7f-4ea7-4e4e-85b6-dafb7678ddab",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "JSY money received",
+        "uuid" : "3b6e00e3-b931-40aa-8af1-4416f7336650",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Don't know",
+          "uuid" : "54f6160b-0c27-4bf7-b2e1-31f8f2fec972",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 17.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "display" : "Identification",
+    "timed" : false
+  } ],
+  "decisionRule" : "//SAMPLE RULE EXAMPLE\n  \"use strict\";\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const decisions = params.decisions;\n    //create complicationBuilder using programEncounter and then push to encounterDecisions array.\n    const encounterTypeNames = [\"Delivery\",\"ANC\"];\n    const latest = programEncounter.programEnrolment.lastFulfilledEncounter(\"ANC\",\"Delivery\");\n    if(latest === undefined || programEncounter.uuid === latest.uuid || imports.moment(programEncounter.encounterDateTime).isAfter(imports.moment(latest.encounterDateTime))){\n        decisions.registrationDecisions.push({name : \"To be monitored by QRT\", value : \"No\"});\n        decisions.enrolmentDecisions.push({name : \"To be monitored by QRT\", value : \"No\"});\n    }\n    else{  \n      decisions.encounterDecisions.push({name : \"To be monitored by QRT\", value : \"No\"});\n    }\n    return decisions;\n};",
+  "visitScheduleRule" : "//SAMPLE RULE EXAMPLE\n\"use strict\";\n({ params, imports }) => {\n  const programEncounter = params.entity;\n  const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({\n    programEncounter\n  });\n\n  const noPNCEncounters = programEncounter.programEnrolment.encounters.filter((enc) => enc.encounterType.name == 'PNC').length == 0;\n  if(noPNCEncounters){\n    const dateOfDelivery = programEncounter.getObservationValue('f72ec1db-50d5-409e-883a-421825fbebb5');\n    const earliestDate = imports.moment(dateOfDelivery).add(3, 'Days').toDate();\n    scheduleBuilder.add({\n      name: 'PNC Followup-1',\n      encounterType: 'PNC',\n      earliestDate: earliestDate,\n      maxDate: imports.moment(earliestDate).add(2, 'days').endOf('day').toDate()\n    });  \n  }\n  return scheduleBuilder.getAll();\n};",
+  "validationRule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const validationResults = [];\n  \n     // Get schedule date (earliest visit date)\n    const scheduleDate = programEncounter.earliestVisitDateTime;\n  \n    // Check if encounter date is before schedule month\n    const isBeforeScheduleMonth = moment(programEncounter.encounterDateTime)\n        .isBefore(moment(scheduleDate).startOf('month'));\n\n    // Check if encounter date is after schedule month\n    const isAfterScheduleMonth = moment(programEncounter.encounterDateTime)\n        .isAfter(moment(scheduleDate).endOf('month'));\n\n   \n  \n  return validationResults;\n};",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

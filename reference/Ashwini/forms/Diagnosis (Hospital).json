@@ -1,0 +1,167 @@
+{
+  "name" : "Diagnosis (Hospital)",
+  "uuid" : "19e180e0-b7cf-4338-9be9-7fb572473dca",
+  "formType" : "Encounter",
+  "formElementGroups" : [ {
+    "uuid" : "87382209-22c1-43c8-9714-0579d95c62fc",
+    "name" : "Diagnosis (Hospital)",
+    "displayOrder" : -1.0,
+    "formElements" : [ {
+      "name" : "Non-coded Diagnosis [H]",
+      "uuid" : "f5cea0e3-6795-455f-8908-cdcf5cf4bfbe",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Non-coded Diagnosis [H]",
+        "uuid" : "7dd1a92f-db43-4695-a04e-205357c622c5",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Coded Diagnosis [H]",
+      "uuid" : "72807b6d-3831-4656-a19c-c892e4346b79",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Coded Diagnosis [H]",
+        "uuid" : "8a7a3937-e9c0-4c82-b9f0-0e4ceb11c360",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Diagnosis Certainty [H]",
+      "uuid" : "ab5b1eb5-7997-4a4b-8d11-8072da4aba03",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Diagnosis Certainty [H]",
+        "uuid" : "2a8ff80e-49b9-4eca-9b82-117b57d50516",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Confirmed [H]",
+          "uuid" : "930e4d26-e8c7-4228-818f-16dcbf82b7f2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Presumed [H]",
+          "uuid" : "50cd8c51-adf3-44a8-b893-8d0306a5c620",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Diagnosis order [H]",
+      "uuid" : "e2b4bd97-8488-401d-b7b8-d5555693d512",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Diagnosis order [H]",
+        "uuid" : "4327c127-020e-42a9-b306-89e06bc4a592",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Secondary [H]",
+          "uuid" : "e5a2a777-d1d7-48fa-bf05-e859610074fc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Primary [H]",
+          "uuid" : "7e5f351c-5d02-48b8-97b7-e7b0fbe401eb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Bahmni Diagnosis Status [H]",
+      "uuid" : "2602e365-b94c-4723-b3b8-997b582cb5e5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Bahmni Diagnosis Status [H]",
+        "uuid" : "350c54e1-2896-41f8-b51f-36806009aa15",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Bahmni Initial Diagnosis [H]",
+      "uuid" : "4e5217ef-efd5-4cfc-a065-e214cb0762df",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Bahmni Initial Diagnosis [H]",
+        "uuid" : "a9d406a3-dab5-498e-9e1f-d7c0231b9c82",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Bahmni Diagnosis Revised [H]",
+      "uuid" : "e62e23cf-2114-40b8-85ea-2619122697ad",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Bahmni Diagnosis Revised [H]",
+        "uuid" : "c8b92f2c-0cc8-4efb-926a-2c8839113789",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "True [H]",
+          "uuid" : "7e9a5117-bc2b-45e4-b92c-cd5796f9d36b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "False [H]",
+          "uuid" : "50b20dc3-41e9-4d9c-b2af-266647214c57",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "Diagnosis (Hospital)",
+    "timed" : false
+  } ],
+  "decisionConcepts" : [ ]
+}

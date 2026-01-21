@@ -1,0 +1,18 @@
+{
+  "name" : "Supervisor PW Home Visit Encounter Cancellation",
+  "uuid" : "e0b6ba6c-5adf-4049-aff8-315e270163c0",
+  "formType" : "ProgramEncounterCancellation",
+  "formElementGroups" : [ {
+    "uuid" : "0161689a-c2a9-4824-bf25-a334b7ba703a",
+    "name" : "Cancel Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ ],
+    "display" : "Cancel Details",
+    "timed" : false
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

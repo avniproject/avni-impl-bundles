@@ -1,0 +1,218 @@
+{
+  "name" : "TB enrolment (Hospital)",
+  "uuid" : "4e955263-61ee-481d-ad52-ed9dd48e88d0",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "6724dfe7-bf78-42c7-b881-539fc236da0d",
+    "name" : "TB enrolment (Hospital)",
+    "displayOrder" : -1.0,
+    "formElements" : [ {
+      "name" : "Type of tuberculosis [H]",
+      "uuid" : "5295ae14-f923-4ada-892f-31daf0328870",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Type of tuberculosis [H]",
+        "uuid" : "b5b51c0e-0099-436b-83d2-d6d8fa402ab4",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Pulmonary [H]",
+          "uuid" : "036d270a-4127-41d7-a2a6-004bcefb6d44",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Extrapulmonary [H]",
+          "uuid" : "4a7783ca-839e-4402-aed2-1036855e0161",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Clinical findings [H]",
+      "uuid" : "3c5dac81-afdf-42c9-b883-4d601f8ae0ef",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Clinical findings [H]",
+        "uuid" : "da86e801-a1a8-40c2-89c4-b81f18dd2ebe",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Fever more than 2 weeks [H]",
+          "uuid" : "738c4ba1-a2d3-4f5e-b17b-8b2e00234ba1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cough more than two weeks [H]",
+          "uuid" : "b7019f30-770b-487d-a3c6-7e987385af48",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hemoptysis [H]",
+          "uuid" : "34e37791-f2d4-4c1d-a6b6-442360910501",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Weight loss [H]",
+          "uuid" : "8a94f7c1-43b0-4bf1-a314-a5b4bee3a938",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Decreased appetite [H]",
+          "uuid" : "597db42e-be75-4ccf-860f-195267b4fe7c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Investigative findings [H]",
+      "uuid" : "2c100e1e-127d-4a94-98b7-60175aa43f94",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Investigative findings [H]",
+        "uuid" : "aca7ca6f-4751-47bb-ad52-b6121c271684",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Positive GeneXpert [H]",
+          "uuid" : "c58a0c48-5575-4fee-9164-0e09d321f49f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Investigative findings-Others [H]",
+          "uuid" : "1bc7de55-f5d8-4ec3-b157-9b0de28db5dd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Positive CSF analysis [H]",
+          "uuid" : "7f1f8a97-52d1-4e1a-8594-bfdad671098d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Histopathological report [H]",
+          "uuid" : "b8116949-269b-43d8-b4c9-aa04c018e38f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Positive chest x-ray [H]",
+          "uuid" : "4606a790-22a2-44d7-960b-8487b8b9381c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Tuberculosis, Type of patient [H]",
+      "uuid" : "ee6ac6df-3a05-4b89-961a-771339933a93",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Tuberculosis, Type of patient [H]",
+        "uuid" : "806deb68-6539-4da2-98f1-45d73625e6a5",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Failure [H]",
+          "uuid" : "30a3b21c-ebe5-441a-882d-4674ae7626db",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Transfer In [H]",
+          "uuid" : "44fc4705-b16b-4a4c-bd37-da47d08d7a77",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lost to Follow-up [H]",
+          "uuid" : "92356c00-1469-4633-b810-bc2be76a36c0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "New Patient [H]",
+          "uuid" : "e052f419-ea25-4232-8034-2ad22e95ff73",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Relapse [H]",
+          "uuid" : "6217af0b-e868-4780-8ff9-b95436e689be",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Type of patient-Others [H]",
+          "uuid" : "dacb055b-72b4-4548-97f7-3ff55a6884aa",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "TB enrolment (Hospital)",
+    "timed" : false
+  } ],
+  "decisionConcepts" : [ ]
+}

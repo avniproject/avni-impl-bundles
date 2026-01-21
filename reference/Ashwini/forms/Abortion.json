@@ -1,0 +1,199 @@
+{
+  "name" : "Abortion",
+  "uuid" : "32428a7e-d553-4172-b697-e8df3bbfb61d",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "db1d4fbd-f885-4e56-9c25-1bf4dc4e2805",
+    "name" : "Basic Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Date of abortion",
+      "uuid" : "1f54eacd-2004-4b9b-8f29-c67d94f74103",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Date of abortion",
+        "uuid" : "c82404a6-78f6-4e55-93b8-51acc5d8aa68",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Type of Abortion",
+      "uuid" : "abf596f7-aefd-4938-86b0-49e75fdf6511",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Type of Abortion",
+        "uuid" : "94e3ad45-ae52-41dc-a26a-27b4973cbd04",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Spontaneous abortion",
+          "uuid" : "e93e1640-7fea-4085-9f17-cfc36fcf13c5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Induced abortion",
+          "uuid" : "9e7d21e8-8123-46de-8bf0-f3c79e5810b0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Period of gestation in weeks at the time of abortion",
+      "uuid" : "57e8aa10-728e-4b56-a2b2-78bb762e21e1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Period of gestation in weeks at the time of abortion",
+        "uuid" : "6912e863-ba7c-438e-83d9-b73fc4878b92",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 21.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Place of abortion",
+      "uuid" : "012590a5-15e9-445a-b75f-e41a9d0688cf",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Place of abortion",
+        "uuid" : "b8893e96-89fd-4965-93ea-b9307dd69be0",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Institutional",
+          "uuid" : "071291ce-e644-4d66-89b9-94d14364effc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Home",
+          "uuid" : "bb75a86c-05af-4b05-b699-860737d19e57",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Date of discharge",
+      "uuid" : "041c5758-d2aa-473c-b3f1-20fc529056cd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Date of discharge",
+        "uuid" : "b4d6b6b6-fff0-4dda-8f60-aa273ff20250",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  statusBuilder.show().when.valueInEncounter(\"Place of abortion\").containsAnswerConceptName(\"Institutional\");\n\n    return statusBuilder.build();\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Post abortion complaints",
+      "uuid" : "c4658141-4d39-44bf-8c16-dab5919431ef",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Post abortion complaints",
+        "uuid" : "fc1346b0-57fe-4a84-8d95-f4461d60176f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Abdominal pain",
+          "uuid" : "7b8829db-9a5a-4177-bab3-6f8e3bb3832c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Per vaginal bleeding",
+          "uuid" : "79865f4d-1946-40b4-a823-28281fc58ba0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Fever",
+          "uuid" : "0b7f3334-f81e-4d84-a13d-b35011e34456",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Other abortion complaints?",
+      "uuid" : "eeb437e8-6861-4f2c-a545-6d54c5c83dfa",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other abortion complaints",
+        "uuid" : "a7d52633-56ff-486d-b451-b119d74a7760",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  statusBuilder.show().when.valueInEncounter(\"Post abortion complaints\").containsAnswerConceptName(\"Other\");\n  \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    } ],
+    "display" : "Basic Details",
+    "timed" : false
+  } ],
+  "decisionRule" : "\"use strict\";\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const decisions = params.decisions;\n      \n    const complicationsBuilder = new imports.rulesConfig.complicationsBuilder({\n        programEncounter: programEncounter,\n        complicationsConcept: 'Refer to the hospital immediately for'\n    });\n    \n    complicationsBuilder.addComplication(\"Abdominal pain\")\n        .when.valueInEncounter(\"Post abortion complaints\").containsAnswerConceptName(\"Abdominal pain\");\n\n    complicationsBuilder.addComplication(\"Per vaginal bleeding\")\n        .when.valueInEncounter(\"Post abortion complaints\").containsAnswerConceptName(\"Per vaginal bleeding\");\n\n    complicationsBuilder.addComplication(\"Fever\")\n        .when.valueInEncounter(\"Post abortion complaints\").containsAnswerConceptName(\"Fever\")\n        .and.valueInEncounter(\"Place of abortion\").containsAnswerConceptName(\"Home\");\n\n    complicationsBuilder.addComplication(\"Induced abortion\")\n        .when.valueInEncounter(\"Post abortion complaints\").containsAnswerConceptName(\"Per vaginal bleeding\")\n        .and.when.valueInEncounter(\"Type of Abortion\").containsAnswerConceptName(\"Induced abortion\");\n\n    complicationsBuilder.addComplication(\"Spontaneous abortion\")\n        .when.valueInEncounter(\"Type of Abortion\").containsAnswerConceptName(\"Spontaneous abortion\");\n\n    decisions.encounterDecisions.push(complicationsBuilder.getComplications());\n    return decisions;\n    \n};",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

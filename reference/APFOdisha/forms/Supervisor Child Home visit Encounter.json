@@ -1,0 +1,389 @@
+{
+  "name" : "Supervisor Child Home visit Encounter",
+  "uuid" : "b2cfdafb-e5c6-4f3a-9ee1-31ffe59cda38",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "13797435-d7bb-4411-8eff-74097b5fc1c1",
+    "name" : "Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Did Poshan Sathi visit your place in the current month?",
+      "uuid" : "7cba5c91-d762-4259-b8d5-a2eeae4b2922",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Did Poshan Sathi visit Your place in the current month?",
+        "uuid" : "99aeece1-1d25-4781-8042-dd676e01566e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Weight",
+      "uuid" : "029cc68b-1466-4dde-89ef-08de941a7f7a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Weight",
+        "uuid" : "8b187dda-a88e-487a-981a-0e4cb6142904",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 1.0,
+        "highAbsolute" : 100.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n\n    let obs = programEncounter.programEnrolment.findLatestObservationFromEncounters('Weight');\n    if (obs && obs !== undefined) {\n        value = obs.getReadableValue()\n    }\n\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Height",
+      "uuid" : "aca6cb34-d1dd-4faf-b61a-882f464bb318",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Height",
+        "uuid" : "346902c4-9938-4ba5-90d1-587f36f1ab92",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 40.0,
+        "highAbsolute" : 150.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n\n    let obs = programEncounter.programEnrolment.findLatestObservationFromEncounters('Height');\n    if (obs && obs !== undefined) {\n        value = obs.getReadableValue()\n    }\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Is the child receiving aditional THR in current month?",
+      "uuid" : "7d829fde-b9f4-41fb-8f7f-38fc8ce8a629",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is the child receiving aditional THR in current month?",
+        "uuid" : "0bd63d20-b12b-45eb-9cb8-d104ab18c9db",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Is there any medical complication?",
+      "uuid" : "31b10716-411a-45a8-881f-98befd9455ba",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is there any medical complication?",
+        "uuid" : "de18abbb-8a7a-48c3-8788-cef13b6693ae",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Any other medical complication",
+      "uuid" : "d9bb40a5-3c62-4af6-afa3-8a369e9e97c8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Any other medical complication",
+        "uuid" : "d6fdcefc-a215-45d3-b553-30af7c62f6d9",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Others",
+          "uuid" : "caf114c0-b81a-4606-8157-73144c8d3b1f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Breathing difficulty",
+          "uuid" : "ea01e2e8-36d0-47f9-9e5d-c5b4abde1d10",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Fever",
+          "uuid" : "e52444ff-f514-4dfb-835c-86925d0d8d50",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Diarrhoea",
+          "uuid" : "e8bedb2b-c9fc-4c05-a0fe-a5d58d449824",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Vomiting",
+          "uuid" : "3054430a-49b1-4034-970f-a1f79f5fb3da",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"de18abbb-8a7a-48c3-8788-cef13b6693ae\").containsAnswerConceptName(\"8ebbf088-f292-483e-9084-7de919ce67b7\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Is there any medical complication?",
+                "conceptUuid" : "de18abbb-8a7a-48c3-8788-cef13b6693ae",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "8ebbf088-f292-483e-9084-7de919ce67b7" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Other medical complication, please specify",
+      "uuid" : "a1197a1a-945c-4ae1-823e-d15bf91074b1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other medical complication, Please specify",
+        "uuid" : "a9d0a75d-c221-4ff1-b2fa-77fe4e8d207a",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"d6fdcefc-a215-45d3-b553-30af7c62f6d9\").containsAnswerConceptName(\"caf114c0-b81a-4606-8157-73144c8d3b1f\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Any other medical complication",
+                "conceptUuid" : "d6fdcefc-a215-45d3-b553-30af7c62f6d9",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Others" ],
+                "answerConceptUuids" : [ "caf114c0-b81a-4606-8157-73144c8d3b1f" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Could you counsel the mother?",
+      "uuid" : "614b4467-c419-47e3-a83c-e9d6a629ca1f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Could you counsel the mother?",
+        "uuid" : "318dde8a-ca56-4ac3-ae39-034237f57dd1",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "What are the parameters the women was counselled?",
+      "uuid" : "dfa4e993-a9d5-4e63-82db-c11f7e9930c3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "What are the parameters the women was counselled?",
+        "uuid" : "40a85f22-a119-4e76-a8aa-1ddbbb3978f5",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Any Medical conditions",
+          "uuid" : "ed54d020-ae60-4518-be47-c4c1a386c231",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Dietary Diversity",
+          "uuid" : "69a3b18d-b390-4144-94fb-6a561cfd87dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Minimum number of meals",
+          "uuid" : "c4983e0a-ff29-47a2-9f05-6162bad339b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Supplementary packets/ Augmented THR",
+          "uuid" : "271013e9-1eb8-4a85-bfd5-e11cf214949f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Meal frequency",
+          "uuid" : "c472f507-7d61-46a3-91c6-c7cfa4f5c42f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Handwashing and Hygiene",
+          "uuid" : "468b33f4-47d0-4cf7-8db7-44cdfb7123c9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"318dde8a-ca56-4ac3-ae39-034237f57dd1\").containsAnswerConceptName(\"8ebbf088-f292-483e-9084-7de919ce67b7\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Could you counsel the mother?",
+                "conceptUuid" : "318dde8a-ca56-4ac3-ae39-034237f57dd1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "8ebbf088-f292-483e-9084-7de919ce67b7" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    } ],
+    "display" : "Details",
+    "timed" : false
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const validationResults = [];\n  \n  const isMaxVisitDateTimeGreaterThanToday = moment(programEncounter.maxVisitDateTime).isBefore(moment(), 'day');\n\n  if (isMaxVisitDateTimeGreaterThanToday) {\n    validationResults.push(imports.common.createValidationError(\"You cannot complete an overdue visit. Please cancel this visit.\"));  \n  }\n     // Get schedule date (earliest visit date)\n    const scheduleDate = programEncounter.earliestVisitDateTime;\n  \n    // Check if encounter date is before schedule month\n    const isBeforeScheduleMonth = moment(programEncounter.encounterDateTime)\n        .isBefore(moment(scheduleDate));\n\n    // Check if encounter date is after schedule month\n    const isAfterScheduleMonth = moment(programEncounter.encounterDateTime)\n        .isAfter(moment(scheduleDate).endOf('month'));\n\n    if (isBeforeScheduleMonth) {\n        validationResults.push(imports.common.createValidationError(\"Cannot fill this form before the scheduled date\"));\n    }\n  \n  return validationResults;\n};",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

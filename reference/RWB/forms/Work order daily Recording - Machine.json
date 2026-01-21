@@ -1,0 +1,371 @@
+{
+  "name" : "Work order daily Recording - Machine",
+  "uuid" : "7a81896b-ea72-46bd-ad7f-4b02e96dbcff",
+  "formType" : "Encounter",
+  "formElementGroups" : [ {
+    "uuid" : "29038cd6-1405-4548-a88b-13a582d51541",
+    "name" : "Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Excavating Machine",
+      "uuid" : "111a285f-fe30-4f1a-91d2-a5d463f88f03",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Excavating Machine",
+        "uuid" : "14b70adc-847d-4b5e-808f-d6d24b4b3279",
+        "dataType" : "Subject",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ {
+          "key" : "subjectTypeUUID",
+          "value" : "561ddbf6-3a6d-4088-a369-514dcfc44f19"
+        } ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : " 'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  const individualService = params.services.individualService;\n  \n  const subjects = individualService.getSubjectsInLocation(encounter.individual.lowestAddressLevel, 'Excavating Machine');\n  const approvedSubjects = subjects.filter((e) => e.latestEntityApprovalStatus.approvalStatus.status === 'Approved');\n \n  const uuids = _.map(approvedSubjects, ({uuid}) => uuid);\n  statusBuilder.showAnswers(...uuids);\n  \n  let selectedSubject = encounter.getObservationReadableValue('Excavating Machine');\n  \n  if(selectedSubject != undefined){\n  let showCondition = !_.includes(uuids,selectedSubject);\n  statusBuilder.validationError(\"Selected Machine registration is not approved\").whenItem(showCondition).is.truthy;\n  }\n  \n    \n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Machine start time",
+      "uuid" : "816375df-5382-4832-87c1-047dfbb8215f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Machine start time",
+        "uuid" : "e52c9dd5-5336-495f-bc6d-998af08fa5d6",
+        "dataType" : "Time",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Working hours as per time",
+      "uuid" : "ab2b5641-0607-4293-86ea-1eee6c3b178a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Working Hours as per time",
+        "uuid" : "d6058f1c-e235-4cae-b09d-6ce48886ce31",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Log book image 1",
+      "uuid" : "0e8291d6-6156-435f-a2ec-08e4e73a4b06",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Log book image 1",
+        "uuid" : "f0459939-5094-46ed-a387-c5b6a3eb61a2",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Machine start time",
+      "uuid" : "13e51103-0d94-42b3-a828-b7258bc9426a",
+      "keyValues" : [ {
+        "key" : "timePickerMode",
+        "value" : "spinner"
+      } ],
+      "concept" : {
+        "name" : "Machine start time",
+        "uuid" : "e52c9dd5-5336-495f-bc6d-998af08fa5d6",
+        "dataType" : "Time",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Machine Start Time",
+      "uuid" : "695a4922-be59-48bb-8ec1-0087f7760721",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "spinner"
+      } ],
+      "concept" : {
+        "name" : "Machine Start Time",
+        "uuid" : "79d9ac28-ad52-4290-b443-3a4829cf16ea",
+        "dataType" : "DateTime",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Machine end time",
+      "uuid" : "73662391-c0a4-47f4-8281-0106acf4abff",
+      "keyValues" : [ {
+        "key" : "timePickerMode",
+        "value" : "spinner"
+      } ],
+      "concept" : {
+        "name" : "Machine end time",
+        "uuid" : "0de026f4-ab45-4ad7-8152-59a99780c345",
+        "dataType" : "Time",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n   \n   let machineStartHourReading = encounter.getObservationReadableValue('Machine start time');\n   let machineEndHourReading = encounter.getObservationReadableValue('Machine end time');\n   \n   if(machineEndHourReading != undefined){\n   if(machineEndHourReading < machineStartHourReading || machineEndHourReading == machineStartHourReading )\n   statusBuilder.validationError(\"Machine end time should be more than start time\");\n   }\n  \n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Machine End Time",
+      "uuid" : "c4d5e119-9391-430d-80ec-82e571bfc249",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "spinner"
+      } ],
+      "concept" : {
+        "name" : "Machine End Time",
+        "uuid" : "bde8b4d2-2b8c-4114-8898-36785b0de48d",
+        "dataType" : "DateTime",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n   \n   let machineStartHourReading = encounter.getObservationReadableValue('Machine Start Time');\n   let machineEndHourReading = encounter.getObservationReadableValue('Machine End Time');\n   \n   if(machineEndHourReading != undefined){\n   if(machineEndHourReading < machineStartHourReading || machineEndHourReading == machineStartHourReading )\n   statusBuilder.validationError(\"Machine end time should be more than start time\");\n   }\n  \n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Working hours as per time",
+      "uuid" : "0672d684-9596-485a-bc81-b47c63a4e10d",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Working hours as per time",
+        "uuid" : "f88653bb-377c-404f-8eb2-fb06e8d1d04f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n\n   let machineStartHourReading = encounter.getObservationReadableValue('Machine Start Time');\n   let machineEndHourReading = encounter.getObservationReadableValue('Machine End Time');\n   \n   const calculateDurationInDaysAndHours = (startDateTime, endDateTime) => {\n        if (!_.isNil(startDateTime) && !_.isNil(endDateTime)) {\n            let diff = imports.moment(endDateTime).diff(imports.moment(startDateTime), 'days', true);\n            let days = Math.floor(diff);\n            let decimalValue = diff - days;\n            let hours = Math.round(decimalValue * 24 * 4) / 4;\n            return `${days} days, ${hours} hours`;\n        }\n    }\n    \n    let workingHours = calculateDurationInDaysAndHours(machineStartHourReading,machineEndHourReading);    \n    //let workingHours = machineEndHourReading - machineStartHourReading;\n    console.log('workingHours',workingHours);\n    \n    // if(workingHours > 0)\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, workingHours);\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Quantity of diesel filled",
+      "uuid" : "6256f9a9-3485-4b0a-a672-a183381091a9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity of diesel filled",
+        "uuid" : "176d5151-29aa-4c8c-a479-8349b55e4e6a",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "highAbsolute" : 400.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Machine hour reading when diesel filled",
+      "uuid" : "c198d3b3-fe22-472e-923b-c9b3900a8441",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Machine hour reading when diesel filled",
+        "uuid" : "9d50d5a4-99f0-480f-abce-c2521496e997",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "highAbsolute" : 999999.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Remarks",
+      "uuid" : "e9cf5565-7541-4023-a2c8-bb9876e938d8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Remarks",
+        "uuid" : "11e22c88-b032-45f9-a35c-49d38e793d09",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Log book image 2",
+      "uuid" : "7affa948-ba3c-462c-b9fa-99413b893be2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Log book image 2",
+        "uuid" : "fc1b8968-4764-42de-9173-0506b6e5f32d",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Working hours as per time",
+      "uuid" : "5a84d712-cd90-42ba-90ba-37d7b6fe885f",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Working hours of machine as per time",
+        "uuid" : "12e402c2-9881-400e-9b60-404f7f86b10e",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5002.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n\n   //let machineStartHourReading = encounter.getObservationReadableValue('Machine Start Time');\n   //let machineEndHourReading = encounter.getObservationReadableValue('Machine End Time');\n   \n   let machineStartHourReading = encounter.getObservationReadableValue('Machine start time');\n   let machineEndHourReading = encounter.getObservationReadableValue('Machine end time');\n   \n   \n   const calculateDurationInDaysAndHours = (startDateTime, endDateTime) => {\n        if (!_.isNil(startDateTime) && !_.isNil(endDateTime)) {\n            let diff = imports.moment(endDateTime).diff(imports.moment(startDateTime), 'days', true);\n            let days = Math.floor(diff);\n            let decimalValue = diff - days;\n            let hours = Math.round(decimalValue * 24 * 4) / 4;\n            return `${days} days, ${hours} hours`;\n        }\n    }\n    \n    //let workingHours = calculateDurationInDaysAndHours(machineStartHourReading,machineEndHourReading);    \n    //let workingHours = machineEndHourReading - machineStartHourReading;\n    //console.log('workingHours',workingHours);\n    \n    var timeStart = new Date(\"01/01/2007 \" + machineStartHourReading).getHours();\n    var timeEnd = new Date(\"01/01/2007 \" + machineEndHourReading).getHours();\n\n    var hourDiff = timeEnd - timeStart;             \n    \n     if(hourDiff > 0)\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, hourDiff);\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Machine end time",
+      "uuid" : "1baeb8d6-3e6e-48cd-ba28-2a888df2c08a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Machine end time",
+        "uuid" : "0de026f4-ab45-4ad7-8152-59a99780c345",
+        "dataType" : "Time",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5003.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n   \n   let machineStartHourReading = encounter.getObservationReadableValue('Machine start time');\n   let machineEndHourReading = encounter.getObservationReadableValue('Machine end time');\n   const moment = imports.moment;\n   if(machineEndHourReading != undefined){\n   if(moment(machineStartHourReading).isSameOrBefore(moment(machineEndHourReading)))\n     statusBuilder.validationError(\"Machine end time should be more than start time\");\n   }\n  \n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Are machine start and end hour readings recorded?",
+      "uuid" : "4aaa9edf-4797-475f-bbc3-69e7025028ce",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Are machine start and end hour readings recorded",
+        "uuid" : "13ad3d37-19f5-4470-9df5-be623c20f22e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5005.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Machine start hour reading",
+      "uuid" : "49e4875f-540a-45b8-848d-12d7898de68f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Machine start hour reading",
+        "uuid" : "9da5e88f-1305-4338-9a2d-39cde0c9425e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "highAbsolute" : 999999.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5006.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Are machine start and end hour readings recorded\").is.yes;\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Machine end hour reading",
+      "uuid" : "a41240ca-62ce-4c2f-8127-26f3dda89abf",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Machine end hour reading",
+        "uuid" : "d16f745e-b185-4971-91e6-3c6110645938",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "highAbsolute" : 999999.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5007.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Are machine start and end hour readings recorded\").is.yes;\n  \n   let machineStartHourReading = encounter.getObservationReadableValue('Machine start hour reading');\n   let machineEndHourReading = encounter.getObservationReadableValue('Machine end hour reading');\n\n   if(machineEndHourReading != undefined){\n   if(machineEndHourReading < machineStartHourReading || machineEndHourReading == machineStartHourReading )\n   statusBuilder.validationError(\"Machine end hour readings should be more than start hour reading\");\n   }\n  \n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Working hours of machine",
+      "uuid" : "57e4fb9f-9675-4433-8ea4-1618e25973c9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Working hours of machine",
+        "uuid" : "26b807b7-912a-4eaf-b76f-bc8670ca1743",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "highAbsolute" : 24.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5008.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n\n  let isMachineHourReading = encounter.getObservationReadableValue('Are machine start and end hour readings recorded');\n  if(isMachineHourReading == 'Yes'){\n   let machineStartHourReading = encounter.getObservationReadableValue('Machine start hour reading');\n   let machineEndHourReading = encounter.getObservationReadableValue('Machine end hour reading');\n\n\n   let workingHours = machineEndHourReading - machineStartHourReading;\n   \n   if(workingHours > 0)\n   return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, workingHours);\n  }else   \n   return new imports.rulesConfig.FormElementStatus(formElement.uuid, true);\n};",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "display" : "Details",
+    "timed" : false
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

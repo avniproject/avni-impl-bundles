@@ -1,0 +1,7 @@
+{
+  "name" : "Death  Encounter Cancellation",
+  "uuid" : "7a757268-101f-4ce1-a8b4-bb1f26727809",
+  "formType" : "IndividualEncounterCancellation",
+  "formElementGroups" : [ ],
+  "decisionConcepts" : [ ]
+}

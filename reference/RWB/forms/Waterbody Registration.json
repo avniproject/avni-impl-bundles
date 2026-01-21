@@ -1,0 +1,49 @@
+{
+  "name" : "Waterbody Registration",
+  "uuid" : "1335e017-bb5f-40b5-89ae-43661bb5bb11",
+  "formType" : "IndividualProfile",
+  "formElementGroups" : [ {
+    "uuid" : "69213fc3-bd10-4ea0-948a-bde9b3cfce0c",
+    "name" : "Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Type of Waterbody",
+      "uuid" : "f5e0054e-3b3d-48ea-b2cd-c87d96b323b1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Type of Waterbody",
+        "uuid" : "1a16b0ab-8b13-42ba-b161-2217f873e05d",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Nalla",
+          "uuid" : "6729f01c-d1ca-4cb9-88cc-75fc948db38b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Dam",
+          "uuid" : "c771f002-ba51-4dae-8425-8c28f82a2e73",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "display" : "Details",
+    "timed" : false
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

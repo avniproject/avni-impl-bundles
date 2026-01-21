@@ -1,0 +1,63 @@
+{
+  "name" : "Regular recording",
+  "uuid" : "7f479eef-d8f7-4061-a635-adfcf686451a",
+  "formType" : "Encounter",
+  "formElementGroups" : [ {
+    "uuid" : "218a0414-b279-411a-8b58-7bbbdaacd46b",
+    "name" : "Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Water level in well",
+      "uuid" : "2baab246-5186-4310-a741-88a959b26a51",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Water level in well",
+        "uuid" : "5d69660b-af49-4640-ac12-2ac2b63f18af",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Well Image (Inside)",
+      "uuid" : "3ae9ee60-915f-4e56-8bdf-ab84cfb6f927",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Well Image 1",
+        "uuid" : "52ff5563-e677-47e2-93e6-e1a159c7718e",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Well Image (Outside)",
+      "uuid" : "e03081f3-fc08-4f2e-80a9-d0e45cfe5f54",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Well Image 2",
+        "uuid" : "17562cc6-7e54-457f-916a-07505dfa753a",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "display" : "Details",
+    "timed" : false
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

@@ -1,0 +1,534 @@
+{
+  "name" : "Mother PNC",
+  "uuid" : "b52bc3e9-5a97-4e02-ab9c-15974a223906",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "bb6e5725-5119-405a-aa36-cc4e26320fbd",
+    "name" : "General Health Assessment",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Height",
+      "uuid" : "e48f1a4f-bd68-498a-b8d6-6ab38beb6e28",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Height",
+        "uuid" : "d883d5fe-e17d-4136-b989-089fa0295e34",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 20.0,
+        "highAbsolute" : 300.0,
+        "lowNormal" : 30.0,
+        "highNormal" : 200.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Weight",
+      "uuid" : "39ef1bb7-c91a-4eb8-bcf2-c9fc0f47ce43",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Weight",
+        "uuid" : "75b1656e-2777-4753-9612-ce03a766a5e1",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 300.0,
+        "lowNormal" : 1.0,
+        "highNormal" : 100.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Pallor",
+      "uuid" : "8edf1007-68a5-498d-be64-9315829e31aa",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Pallor",
+        "uuid" : "226f8715-563b-4a8b-8afa-f75cce2767af",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Absent",
+          "uuid" : "10885638-561a-42b6-8b24-8daa01864c89",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Present",
+          "uuid" : "57b51d52-981f-4af2-b133-aeffa6d00757",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Tobacco",
+      "uuid" : "9275bba1-ef8f-48cb-b973-88f9795de359",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "PNC1_Tobacco",
+        "uuid" : "e1c7d8f4-50da-4781-acd5-75688ae088b6",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "ICDS visit",
+      "uuid" : "86417495-7f18-4401-bf6d-59b25acab3d0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "ICDS visit",
+        "uuid" : "b5b2458f-640d-4c33-b5bf-600b5f12b10c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "General Health Assessment",
+    "timed" : false
+  }, {
+    "uuid" : "af58f89e-f99e-4c3d-9ee3-4c2f796d75f0",
+    "name" : "Nutrition & Supplementation",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Nutrition & Supplements",
+      "uuid" : "49c95819-5083-4c79-83d1-f3dc65aff3e4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Nutrition and Supplements",
+        "uuid" : "17efef8c-d128-4012-93bb-bac548839e2e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Calcium",
+          "uuid" : "13a0ac5f-d729-4837-863f-de9ffec2c211",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Dates",
+          "uuid" : "4aa3b187-836f-46f7-8f8e-37e881230a9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Customised nutrition",
+          "uuid" : "e7270d41-b6fa-4c10-bd86-630e42b979a1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Peanuts",
+          "uuid" : "b09eaad0-e761-401b-a2db-054420c808fa",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Satthumaavu",
+          "uuid" : "bcd8d0ec-8ca3-42a0-8617-ac43d7a52ebb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Iron",
+          "uuid" : "eb039a93-7034-4945-b573-e6ec031b33e0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Albendazole",
+          "uuid" : "8ae4b8c6-5461-4289-8462-f1a4b28bb7c1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "BC",
+          "uuid" : "3510d451-e34d-4140-be28-7c13c75ec5f4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "If not given, give reasons",
+      "uuid" : "0be5638b-0964-4937-b525-f7d1157be063",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "If not given, give reasons",
+        "uuid" : "885c5409-c7bd-424b-ba6d-4824b6582826",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"17efef8c-d128-4012-93bb-bac548839e2e\").containsAnswerConceptName(\"e7b50c78-3d90-484d-a224-9887887780dc\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Nutrition and Supplements",
+                "conceptUuid" : "17efef8c-d128-4012-93bb-bac548839e2e",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "No" ],
+                "answerConceptUuids" : [ "e7b50c78-3d90-484d-a224-9887887780dc" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Nutritional Intake",
+      "uuid" : "526522e4-72a6-48bf-b5d9-dbebbb0f7fbe",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Nutritional Intake",
+        "uuid" : "3b863bea-81d4-468c-bb07-3641628bfae8",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Not Followed",
+          "uuid" : "82c920d4-9f80-48e7-bd09-d2bac185b626",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Followed",
+          "uuid" : "97b3d1d8-a36f-4ab5-92dc-08c4118f8927",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Remarks (Define Custom nutrition also here)",
+      "uuid" : "c3b1c5e9-a23c-48c2-bae8-0da9dd5c60b5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Remarks for the month",
+        "uuid" : "26aab8dc-4106-4d4f-b94d-b9416fb877e8",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "Nutrition & Supplementation",
+    "timed" : false
+  }, {
+    "uuid" : "f310de7f-c06f-475f-909e-7c4419801478",
+    "name" : "Infant Feeding & Maternal Assessment",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Breast Feeding Assesment Done",
+      "uuid" : "b5bab793-5e4d-4070-9680-530cd4ad7632",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Breast Feeding Assesment Done",
+        "uuid" : "ae2f19ae-854f-45ef-b359-d7d4cf3236e9",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Breastfeeding Frequency",
+      "uuid" : "b9d55d96-d08c-4293-aed7-7c03c78cde6f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Breastfeeding Frequency",
+        "uuid" : "9bd0264f-e0a5-432c-8607-f11c5a194527",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Breast Examination",
+      "uuid" : "a77ad150-68c3-4d5b-a6b8-75b42f980b04",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Breast Examination",
+        "uuid" : "5484051c-b879-4b36-8215-c17e408a5c5a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Normal",
+          "uuid" : "ba43b326-18a1-4f8d-ad04-29b0371461e0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Abnormal",
+          "uuid" : "ecf02cf1-e8c8-4ad3-a0e9-792e1d307105",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "NA",
+          "uuid" : "4d476011-7fc4-432b-98c0-9f6f1847cf39",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Baby's frequency of passing motion/ urine",
+      "uuid" : "9fe3a8bd-5173-4051-b10b-50fc16d0f7b0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Babys frequency of passing motion urine",
+        "uuid" : "3a4129c9-3fd3-497d-82bd-1da61f4b4921",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Inadequate",
+          "uuid" : "ef4f3bfb-6122-466f-87a0-c260e4b0166a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Adequate",
+          "uuid" : "ae7a5115-72b9-48ea-a01b-92735e4d1344",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Need for Referral",
+      "uuid" : "36abdf41-0cd3-4c2a-a1ec-1310160785ea",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Need for Referral",
+        "uuid" : "81e84f3d-6e3b-421b-bcd6-cb4df17a2777",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Mother",
+          "uuid" : "0168f841-617b-4579-bb7f-11d1a199b183",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Baby",
+          "uuid" : "7fa509e8-7d5d-4e20-89e1-fe712369bd60",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "EPDS: Mental Health Screening",
+      "uuid" : "946e373b-9845-4f0e-87f7-4115a5e7e932",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "EPDS: Mental Health Screening",
+        "uuid" : "3740291a-bde7-46af-a2c3-3797e29464d2",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "Infant Feeding & Maternal Assessment",
+    "timed" : false
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

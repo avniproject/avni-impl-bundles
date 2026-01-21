@@ -1,0 +1,1301 @@
+{
+  "name" : "Mother Enrolment",
+  "uuid" : "026e2f5c-8670-4e4b-9a54-cb03bbf3093d",
+  "formType" : "ProgramEnrolment",
+  "formElementGroups" : [ {
+    "uuid" : "2dff8c09-bed3-4848-943f-b2240b70d7ed",
+    "name" : "Basic Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "ANC registration no",
+      "uuid" : "cadad826-0b4c-4474-b256-697b49159111",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "ANC registration no",
+        "uuid" : "bf1fb39e-ec62-4110-9942-042a91503457",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Last menstrual period",
+      "uuid" : "10a7bb47-6780-4b43-9ebd-842b1f5cc58f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Last menstrual period",
+        "uuid" : "1cc6fd5d-1359-483e-a971-4bf36e34a72d",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Estimated date of delivery",
+      "uuid" : "fef50f26-8251-4ba8-80dd-526eaade37f1",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Estimated Date of Delivery",
+        "uuid" : "dde911fa-15eb-4564-8deb-bba46e9d3744",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "/*\n//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n const lmpDate = programEnrolment.getObservationValue('Last menstrual period');\n    const value =  ruleServiceLibraryInterfaceForSharingModules.motherCalculations.estimatedDateOfDelivery(programEnrolment);\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, value);\n\n};\n*/\n\n'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n\n  const lmpDate = programEnrolment.getObservationValue('Last menstrual period');\n\n  if (lmpDate !== undefined && lmpDate !== null) {\n    const value = ruleServiceLibraryInterfaceForSharingModules.motherCalculations.estimatedDateOfDelivery(programEnrolment);\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, value);\n  } else {\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, false, null);\n  }\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Height",
+      "uuid" : "1e3afc0f-4f40-46f5-ab20-0739c30f99cd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Height",
+        "uuid" : "d883d5fe-e17d-4136-b989-089fa0295e34",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 20.0,
+        "highAbsolute" : 300.0,
+        "lowNormal" : 30.0,
+        "highNormal" : 200.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Urine pregnancy test",
+      "uuid" : "1e23c808-5932-484b-b913-1d78f81cc11f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Urine pregnancy test result",
+        "uuid" : "ae076480-008d-47ca-9fab-a5300a626e42",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Inconclusive",
+          "uuid" : "7ba1b7cc-0287-4415-895b-a64acd3a1e28",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Positive",
+          "uuid" : "479cd95a-54ef-4818-b84a-09b478fc68b8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Negative",
+          "uuid" : "ad1f0481-a8ed-411a-ac00-d0435a670269",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "ANC registered",
+      "uuid" : "591b5ed9-d00e-48c1-8b6b-54d4520a5921",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "ANC registered",
+        "uuid" : "a340839c-204e-4443-b6c4-43b00766f53f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Informed by",
+      "uuid" : "ccb16544-6d0d-4059-b3e4-9e90ae225bf2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Informed by",
+        "uuid" : "1136ddfe-6400-467d-b4e6-dc17eec054e8",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Self",
+          "uuid" : "74466f64-3f7c-4046-aaae-57803cee46b1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Villagers",
+          "uuid" : "b16b0f46-1e44-4733-8bb4-789878fcd45d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HV",
+          "uuid" : "52c2e52e-ff64-4aa0-893d-41bffcde7dee",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Educational status of mother(In years)",
+      "uuid" : "dcfe8bc6-8b16-4620-93f7-c021a4e4e2ab",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Educational status of mother",
+        "uuid" : "6874a063-e99a-4369-9f0d-04ebb340773a",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Gestational age at enrollment (In weeks)",
+      "uuid" : "62fd7882-9529-4610-870d-8b8fd2f4eb89",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Gestational age at enrollment (In weeks)",
+        "uuid" : "4b7fcf0b-3ecb-49fe-882d-959b58e7229d",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Oral cavities",
+      "uuid" : "fe87d632-10b5-41c5-b41a-90bccdd4210a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Oral cavities",
+        "uuid" : "47cb1c91-4422-4396-b5c1-ea6f95763a99",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "display" : "Basic Details",
+    "timed" : false
+  }, {
+    "uuid" : "27fda7b7-d97d-4eef-9d9b-d1a31a6a04c3",
+    "name" : "HISTORY",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Medical history",
+      "uuid" : "61c43adf-38c5-4ad5-ad0d-05309a169338",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Medical history_Mother",
+        "uuid" : "5a9dd711-d35a-4b2d-a61f-1a80fe52bd70",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Convulsions",
+          "uuid" : "ab9596e4-04b6-48f2-9f4d-1c7a2c82dbf8",
+          "dataType" : "Coded",
+          "answers" : [ {
+            "name" : "Absent",
+            "uuid" : "10885638-561a-42b6-8b24-8daa01864c89",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 2.0,
+            "active" : true,
+            "media" : [ ]
+          }, {
+            "name" : "Present",
+            "uuid" : "57b51d52-981f-4af2-b133-aeffa6d00757",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 1.0,
+            "active" : true,
+            "media" : [ ]
+          } ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tb-Under medication",
+          "uuid" : "114978f8-34fa-431c-8cea-170f89c1f1f9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sickle cell patient",
+          "uuid" : "d0302ca9-0cf6-405e-b170-57ba8fc50442",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Type 2 DM",
+          "uuid" : "505c9db4-a66f-42e0-a2b7-1db0787675bb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mental illness",
+          "uuid" : "674d3b8c-6dc2-41b6-920e-54db974adab8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Thyroid disorder",
+          "uuid" : "16dfd8b6-4fd3-4fa2-bb32-de94323bee61",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 18.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hip/pelvis fracture",
+          "uuid" : "1f2f0383-b215-49e0-9309-d53c095c586d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 19.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Malaria",
+          "uuid" : "0dee2973-eebe-4699-b676-b770fdd1c411",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 17.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Syphilis",
+          "uuid" : "f7d6e756-60ec-4632-a09b-74710f2c704f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jaundice",
+          "uuid" : "352bb8a4-1569-492f-9a53-14e3b134c104",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Alcohol consumption",
+          "uuid" : "232bfa87-9bd3-4d14-a214-b0bce97dd8b0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hepatitis",
+          "uuid" : "0c84770b-8181-42db-9976-6884d75cfd05",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hypertension",
+          "uuid" : "998d1bae-05d8-47b9-89b8-0254829f238f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Asthma",
+          "uuid" : "3d6fcc5e-fb31-4222-aa69-a02d43ff91cf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cardiac diseases",
+          "uuid" : "88766617-f2c3-4973-b6ec-f9646024701c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Physical deformity/disability",
+          "uuid" : "b73e0ce9-62b0-4bdb-aa6e-e08ff6bd4a2f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Uterine fibroid removal",
+          "uuid" : "26126c9b-e005-4799-bc3e-0d1b4eedc390",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 20.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Infertility treatment",
+          "uuid" : "79e2f5b7-f8c7-4f12-aec9-7e3d3382cf1a",
+          "dataType" : "Coded",
+          "answers" : [ {
+            "name" : "No",
+            "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 2.0,
+            "active" : true,
+            "media" : [ ]
+          }, {
+            "name" : "Yes",
+            "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 1.0,
+            "active" : true,
+            "media" : [ ]
+          } ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ovarian cyst",
+          "uuid" : "d2ab733d-a787-4de6-bef3-70c747299b50",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 21.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "TORCH infections",
+          "uuid" : "c8c1430d-1b36-431f-98c2-8ce75c4dfdc2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 22.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tobacco consumption",
+          "uuid" : "bbeb5221-6dd9-450e-8467-900f217d0e09",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HIV",
+          "uuid" : "dcd638eb-d508-44a2-802e-ab32cf21a0b5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Family History",
+      "uuid" : "3c16d218-4af0-4e6c-a5c6-e178e966e89a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Family history",
+        "uuid" : "18fa9773-bf4b-47f8-9535-f1573a477940",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Consanginous marriage",
+          "uuid" : "e3739448-403e-4654-9bf1-c7431affb7d1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hypertension",
+          "uuid" : "998d1bae-05d8-47b9-89b8-0254829f238f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "TB",
+          "uuid" : "ca8a5f57-c409-47ad-8acf-921cdd0fc191",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Diabetes",
+          "uuid" : "674f348f-5075-4c85-8bc2-9edfdee27505",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mental illness",
+          "uuid" : "674d3b8c-6dc2-41b6-920e-54db974adab8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sickle cell disease in family",
+          "uuid" : "eae794b9-9ae9-45da-ab57-ce0f87de9939",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Contact with TB",
+          "uuid" : "f231abab-2baf-4e53-a49f-f0de8c534648",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    } ],
+    "display" : "HISTORY",
+    "timed" : false
+  }, {
+    "uuid" : "71b33c6d-e029-43be-baff-452c3e31890d",
+    "name" : "Pregnancy History",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Gravida",
+      "uuid" : "a21ba591-9f62-44b4-addc-44df0eea168b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Gravida",
+        "uuid" : "dc2c23e9-19ad-471f-81d1-213069ccc975",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Parity",
+      "uuid" : "8e82a356-22a7-44ae-b28f-2b30fd6f9664",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Parity",
+        "uuid" : "2d679fd5-a75b-46bd-96c2-10c180187342",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 10.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment(\"Gravida\").is.greaterThan(1);\n  \n   return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Number of Abortions",
+      "uuid" : "7c43bedd-dbd8-46d0-9a3f-8517dcb7e18d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of abortions",
+        "uuid" : "38b9986b-76e8-4015-ae51-48152b1cd42c",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 10.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment(\"Gravida\").is.greaterThan(1);\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Number of male children",
+      "uuid" : "0abd0e1e-484c-48c9-ab3a-ffa14b66c9c5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of male children",
+        "uuid" : "1b749b48-bfae-470d-8219-a735dae99f7a",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 10.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\nstatusBuilder.show().when.valueInEnrolment(\"Parity\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Number of female children",
+      "uuid" : "8b7b54a0-6f07-40b4-b080-f2023ec2ee2f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of female children",
+        "uuid" : "d924596e-e08e-4829-b4c3-77a0411d18c7",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 10.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  \n  statusBuilder.show().when.valueInEnrolment(\"Parity\").is.greaterThan(0);\n  \n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Age of youngest child",
+      "uuid" : "d07f9fdc-2dbe-4b21-abce-eb79c30470b8",
+      "keyValues" : [ {
+        "key" : "durationOptions",
+        "value" : [ "months", "years" ]
+      } ],
+      "concept" : {
+        "name" : "Age of youngest child",
+        "uuid" : "305f693c-c8b6-4e3e-9a82-a6e91a3e462f",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n statusBuilder.show().when.valueInEnrolment(\"Number of male children\").is.greaterThan(0)\n            .or.valueInEnrolment(\"Number of female children\").is.greaterThan(0);\n\n   return statusBuilder.build();\n};",
+      "mandatory" : true
+    } ],
+    "display" : "Pregnancy History",
+    "timed" : false
+  }, {
+    "uuid" : "50a2d045-88fe-44e3-86e0-0dba16f53818",
+    "name" : "Past pregnancy complications",
+    "displayOrder" : 4.0,
+    "formElements" : [ {
+      "name" : "Obstetrics history",
+      "uuid" : "4ae32d41-7c2e-4d7d-8ac6-566c9331f3a1",
+      "keyValues" : [ {
+        "key" : "ExcludedAnswers",
+        "value" : [ "Intrapartum Death", "Threatened abortion", "Heavy bleeding during delivery" ]
+      } ],
+      "concept" : {
+        "name" : "Obstetrics history",
+        "uuid" : "8a4ab436-6767-45d5-95d7-075d9459609e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Neonatal death within first 28 days",
+          "uuid" : "58146bb8-9fbe-439b-a472-08e17a8cd4ba",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 17.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "LSCS/C-section",
+          "uuid" : "eb68c395-17dc-4679-828c-487753228e9f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3 or more than 3 spontaneous abortions",
+          "uuid" : "502759ae-00c9-4a22-a7eb-7e40e842f931",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pre Eclampsia/ Eclampsia",
+          "uuid" : "4c5c8ed4-3166-4782-b010-728aeee3ebb1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Gestational DM",
+          "uuid" : "be447df8-983f-4b95-8600-ba55af3b555a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 26.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Intrauterine Growth Retardation",
+          "uuid" : "7e9fed7d-f111-4c87-9412-d8c0f8c162d2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Induced labour(forceps/vacoum)",
+          "uuid" : "02df7aad-d88c-4155-ab92-4d3569b64376",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Intrapartum Death",
+          "uuid" : "92ba84ab-b395-48c4-b867-932524f60d15",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Increased liquor",
+          "uuid" : "2d9c6673-e6c7-4086-98d0-103ebb8efe40",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 28.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Previous abortion",
+          "uuid" : "b765cd5b-2938-4772-a07e-4fbe98de8dd3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 24.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 31.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Weight of the previous baby less than 2.5kg or more than 4.5kg",
+          "uuid" : "afb87749-1c3a-455f-81d2-f320ce72f45e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 23.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Preterm Premature Rupture of Membranes(<37 weeks)",
+          "uuid" : "a73e153f-7259-4288-b3bb-b014b2e3cde4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 29.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Still Birth",
+          "uuid" : "797c7923-1993-49d9-b759-1706aae62ae9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Post abortion complications",
+          "uuid" : "8b757ad9-c413-4efa-af54-974f65e727ac",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 21.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Premature Rupture of Membranes(>37 weeks)",
+          "uuid" : "7754784f-feba-4653-897d-a5d694c9b938",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 30.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Breech or transverse presentation [ObstetricHistory]",
+          "uuid" : "60cf6ea6-2a4c-459d-ac67-52c6cdc23f54",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 19.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Previous ectopic pregnancy",
+          "uuid" : "232b7487-78aa-47d2-892b-3cb1ba3954e8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 25.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Prolonged labour",
+          "uuid" : "2156deeb-bec7-4614-873f-eed4807a74f3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pregnancy induced hypertension",
+          "uuid" : "5a738df9-b09a-4e7d-b683-189a9cdabcad",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Reduced liquor",
+          "uuid" : "4461824c-9829-4f2a-a27d-fe7261aa1165",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 27.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Puerperal sepsis",
+          "uuid" : "8993ed6a-df82-420e-9da8-fc4eecd6bdc3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 20.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Threatened abortion",
+          "uuid" : "b61694a3-5762-483b-a439-3f09fa7b796b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Retained Placenta",
+          "uuid" : "d211703c-beab-40f3-9e87-a271759c5ec9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Rh negative in the previous pregnancy",
+          "uuid" : "fe1c108e-507b-4abc-ad91-3930b59d3c62",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 22.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Intrauterine death",
+          "uuid" : "16d08bef-fa20-40d3-8813-1cd10268bbb1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pre-term labour",
+          "uuid" : "d86bf489-eb51-47c9-8c98-b109aba38951",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Congenital anomaly",
+          "uuid" : "e641d792-ea69-40ed-bf26-67c6c567f687",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 18.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Post Partum Haemorrhage (Excessive bleeding after delivery)",
+          "uuid" : "3abc1b44-0486-4378-abc0-ffb8235144ca",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Twins",
+          "uuid" : "b5719e3e-db9c-49c1-af0c-3047b1b9c57a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No problem",
+          "uuid" : "855fb739-19d8-418d-a8ae-c1da977b7fa9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 32.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ante Partum Haemorrhage",
+          "uuid" : "3dc4aa0e-e941-4f02-8dd5-d1e1d48753ff",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Heavy bleeding during delivery",
+          "uuid" : "b5bf5c83-d8eb-4b40-ba7b-aed8cb23f6e1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  \n statusBuilder.show().when.valueInEnrolment(\"Gravida\").is.greaterThan(1);\n     \n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Other obstetrics history",
+      "uuid" : "ea8e0c8c-ca3f-46e7-b64b-2dedb0391c03",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other obstetrics history",
+        "uuid" : "7d34125a-1b0b-4755-acc8-aeda71af8bd3",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment(\"Obstetrics history\").containsAnswerConceptName(\"Other\");\n   return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Family History",
+      "uuid" : "955713c1-ea0e-439f-8d95-8fdef38a9a49",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Family history",
+        "uuid" : "18fa9773-bf4b-47f8-9535-f1573a477940",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Consanginous marriage",
+          "uuid" : "e3739448-403e-4654-9bf1-c7431affb7d1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hypertension",
+          "uuid" : "998d1bae-05d8-47b9-89b8-0254829f238f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "TB",
+          "uuid" : "ca8a5f57-c409-47ad-8acf-921cdd0fc191",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Diabetes",
+          "uuid" : "674f348f-5075-4c85-8bc2-9edfdee27505",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mental illness",
+          "uuid" : "674d3b8c-6dc2-41b6-920e-54db974adab8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sickle cell disease in family",
+          "uuid" : "eae794b9-9ae9-45da-ab57-ce0f87de9939",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Contact with TB",
+          "uuid" : "f231abab-2baf-4e53-a49f-f0de8c534648",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "MultiSelect",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "display" : "Past pregnancy complications",
+    "timed" : false
+  }, {
+    "uuid" : "fa3eaeb3-115f-4634-a6e7-e51b3e6d4e44",
+    "name" : "TB Complications",
+    "displayOrder" : 5.0,
+    "formElements" : [ {
+      "name" : "Is she on TB medication?",
+      "uuid" : "be6fad57-fe7e-4bc0-bf36-26a31aec0d78",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is she on TB medication?",
+        "uuid" : "b47dca1d-3f42-4280-9b3e-3d68cce88bed",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInRegistration(\"Medical history\").is.containsAnswerConceptName(\"TB\");\n   \n   return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Has she been taking her TB medication regularly?",
+      "uuid" : "7eb50d2d-387c-47f2-b10b-b2cfd484eb2e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Has she been taking her TB medication regularly?",
+        "uuid" : "2a8a5306-c0a9-4ca6-8bd7-b394069aa6f2",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n  statusBuilder.show().when.valueInEnrolment(\"Is she on TB medication?\").is.containsAnswerConceptName(\"Yes\");\n  \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Did she complete her TB treatment?",
+      "uuid" : "1d8cd852-f03c-45f1-b09c-a6e601d5f0b0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Did she complete her TB treatment?",
+        "uuid" : "4a20f69f-12c4-4472-ac82-ece0ab102e4b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEnrolment, formElement});\n   statusBuilder.show().when.valueInEnrolment(\"Is she on TB medication?\").is.containsAnswerConceptName(\"No\");\n\n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    } ],
+    "display" : "TB Complications",
+    "timed" : false
+  }, {
+    "uuid" : "a9edaaef-c93b-4039-8fab-ef8b836cf19a",
+    "name" : "Other medical complications",
+    "displayOrder" : 6.0,
+    "formElements" : [ {
+      "name" : "Infertility treatment",
+      "uuid" : "72d82a0a-162a-461f-a0c3-bb317412f35b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Infertility treatment",
+        "uuid" : "79e2f5b7-f8c7-4f12-aec9-7e3d3382cf1a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Malaria in the past 6 months?",
+      "uuid" : "3f4c9772-02d8-4632-9ba9-0c7de065e340",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Malaria in the past 6 months?",
+        "uuid" : "d9d0e39f-7dad-41fd-84a5-d1e988584ca7",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Other notes",
+      "uuid" : "06458e0b-9b1c-45a0-9d29-eac854953bd1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other obstetrics history notes",
+        "uuid" : "3491cdc9-20a0-4ea4-b6ce-8a1c8ded8183",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Any physical disabilities/deformities?",
+      "uuid" : "cdd1f782-9324-424d-b5e2-35974bdaa49a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Any physical disabilities/deformities?",
+        "uuid" : "48393747-976b-4c91-907b-c4444a9d2f27",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Any mental illnesses?",
+      "uuid" : "f47595b4-0ffb-4449-98c6-e64f5e8eb1c1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Any mental illnesses?",
+        "uuid" : "28bf5aa0-6dd6-4dc1-beb5-1de504f85b4b",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "voided" : true,
+    "display" : "Other medical complications",
+    "timed" : false
+  } ],
+  "decisionRule" : "//SAMPLE RULE EXAMPLE\n  \"use strict\";\n({params, imports}) => {\n    const programEnrolment = params.entity;\n    const decisions = params.decisions;\n       \n    const medicalHistory = [\n    \"Hypertension\", \"Heart-related Diseases\", \"Diabetes\", \"Sickle Cell\", \"Epilepsy\", \"Renal Disease\",\n    \"HIV/AIDS\", \"Hepatitis B Positive\"\n];\n\nconst pastComplications = [\n    \"Ante Partum Haemorrhage\", \"Intrauterine Growth Retardation\", \"Pre-term labour\", \"Prolonged labour\",\n    \"Instrumental Delivery\", \"LSCS/C-section\", \"Intrauterine death\", \"Threatened abortion\",\n    \"3 or more than 3 spontaneous abortions\", \"Still Birth\", \"Multiple Births\", \"Retained Placenta\",\n    \"Post Partum Haemorrhage (Excessive bleeding after delivery)\", \"Intrapartum Death\", \"Neonatal death within first 28 days\",\"Congenital anomaly\", \"Rh negative in the previous pregnancy\"];\n       \n    const complicationsBuilder = new imports.rulesConfig.complicationsBuilder({\n        programEnrolment: programEnrolment,\n        complicationsConcept: 'High Risk Conditions'\n    });\n\n    complicationsBuilder.addComplication(\"Puerperal sepsis\")\n        .when.valueInEnrolment(\"Obstetrics history\").containsAnswerConceptName(\"Puerperal sepsis\");\n\n    complicationsBuilder.addComplication(\"Post abortion complications\")\n        .when.valueInEnrolment(\"Obstetrics history\").containsAnswerConceptName(\"Post abortion complications\");\n\n    complicationsBuilder.addComplication(\"Under age pregnancy\").when.age.is.lessThan(18);\n\n    complicationsBuilder.addComplication(\"Old age pregnancy\").when.age.is.greaterThan(30);\n\n    complicationsBuilder.addComplication(\"Rh Negative Blood Group\")\n        .when.valueInRegistration(\"Blood group\").containsAnyAnswerConceptName(\"AB-\", \"O-\", \"A-\", \"B-\");\n        \n    complicationsBuilder.addComplication(\"Puerperal sepsis\")\n        .when.valueInEnrolment(\"Obstetrics history\").containsAnswerConceptName(\"Puerperal sepsis\");\n\n    complicationsBuilder.addComplication(\"Short Stature\")\n        .when.valueInEnrolment(\"Height\").is.lessThanOrEqualTo(145);\n  \n    complicationsBuilder.addComplication(\"Previous Abortion(s)\")\n        .when.valueInEnrolment(\"Number of abortions\").is.greaterThan(0);\n\n   complicationsBuilder.addComplication(\"Grand Multipara\")\n        .when.valueInEnrolment(\"Gravida\").is.greaterThanOrEqualTo(5);\n     \n   complicationsBuilder.addComplication(\"Primigravida\")\n        .when.valueInEnrolment(\"Gravida\").equals(1);\n    \n    decisions.enrolmentDecisions.push(complicationsBuilder.getComplications());  \n\n    const institutionalDelivery = new imports.rulesConfig.complicationsBuilder({\n        programEnrolment: programEnrolment,\n        complicationsConcept: 'Recommendations'\n    });\n\n    institutionalDelivery.addComplication(\"Institutional Delivery\").when.age.is.lessThan(18)\n        .or.when.age.is.greaterThan(30)\n        .or.when.valueInRegistration(\"Blood group\").containsAnyAnswerConceptName(\"AB-\", \"O-\", \"A-\", \"B-\")\n        .or.when.valueInRegistration(\"Medical history\").containsAnyAnswerConceptName(...medicalHistory)\n        .or.when.valueInEnrolment(\"Height\").is.lessThan(145)\n        .or.when.valueInEnrolment(\"Gravida\").is.equals(1)\n        .or.when.valueInEnrolment(\"Gravida\").is.greaterThanOrEqualTo(5)\n        .or.when.valueInEnrolment(\"Age of youngest child\").asAge.is.lessThan(1)\n        .or.when.valueInEnrolment(\"Obstetrics history\").containsAnyAnswerConceptName(...pastComplications)\n        .or.when.valueInEnrolment(\"Infertility treatment\").is.yes;\n    \n    decisions.enrolmentDecisions.push(institutionalDelivery.getComplications());\n\n\n const institutionalDeliveryReasons = new imports.rulesConfig.complicationsBuilder({\n        programEnrolment: programEnrolment,\n        complicationsConcept: 'Reason(s) for Institutional Delivery'\n    });\n\n    institutionalDeliveryReasons.addComplication(\"Under age pregnancy\").when.age.is.lessThan(18);\n    institutionalDeliveryReasons.addComplication(\"Old age pregnancy\").when.age.is.greaterThan(30);\n    institutionalDeliveryReasons.addComplication(\"Rh Negative Blood Group\").when.valueInRegistration(\"Blood group\").containsAnyAnswerConceptName(\"AB-\", \"O-\", \"A-\", \"B-\");\n    institutionalDeliveryReasons.addComplication(\"Medical history\").when.valueInRegistration(\"Medical history\").containsAnyAnswerConceptName(...medicalHistory);\n    institutionalDeliveryReasons.addComplication(\"Short Stature\").when.valueInEnrolment(\"Height\").is.lessThan(145);\n    institutionalDeliveryReasons.addComplication(\"Primigravida\").when.valueInEnrolment(\"Gravida\").is.equals(1);\n    institutionalDeliveryReasons.addComplication(\"Grand Multipara\").when.valueInEnrolment(\"Gravida\").is.greaterThanOrEqualTo(5);\n    institutionalDeliveryReasons.addComplication(\"Youngest child Less than 1 Year Old\").when.valueInEnrolment(\"Age of youngest child\").asAge.is.lessThan(1);\n    institutionalDeliveryReasons.addComplication(\"Obstetrics history\").when.valueInEnrolment(\"Obstetrics history\").containsAnyAnswerConceptName(...pastComplications);\n    institutionalDeliveryReasons.addComplication(\"Infertility treatment\").when.valueInEnrolment(\"Infertility treatment\").is.yes;\n    \n    decisions.enrolmentDecisions.push(institutionalDeliveryReasons.getComplications());\n\n\nconst reasonsBuilder = new imports.rulesConfig.complicationsBuilder({\n        programEnrolment: programEnrolment,\n        complicationsConcept: 'Refer to the hospital immediately for'\n    });\n\n    reasonsBuilder.addComplication(\"TB\")\n        .when.valueInEnrolment(\"Did she complete her TB treatment?\").containsAnswerConceptName(\"No\")\n        .or.when.valueInEnrolment(\"Has she been taking her TB medication regularly?\").containsAnswerConceptName(\"No\");\n    \n    decisions.enrolmentDecisions.push(reasonsBuilder.getComplications());\n\n    return decisions;\n};",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

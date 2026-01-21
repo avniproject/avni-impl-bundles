@@ -1,0 +1,371 @@
+{
+  "name" : "Anthropometry Assessment",
+  "uuid" : "d062907a-690c-44ca-b699-f8b2f688b075",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "124d7b8b-0baf-4bdf-8f8a-5de8a4c95218",
+    "name" : "Anthropometry",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Skip capturing height",
+      "uuid" : "4f6e842e-8556-448b-9ebf-93ad06a333a5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Skip capturing height",
+        "uuid" : "b26ab849-6550-4245-8637-a9fc7fb4eb60",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Reason for skipping height capture.",
+      "uuid" : "9ef90251-e2b8-411b-845c-f980d2ca1427",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Reason for skipping height capture.",
+        "uuid" : "8d378a39-2030-4cfe-ac4d-c8e97f718b23",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  statusBuilder.show().when.valueInEncounter(\"Skip capturing height\").is.yes;\n  \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Height",
+      "uuid" : "219bfbb0-03ff-4be4-a8c1-5eb98ab6fe6c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Height",
+        "uuid" : "d883d5fe-e17d-4136-b989-089fa0295e34",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 20.0,
+        "highAbsolute" : 300.0,
+        "lowNormal" : 30.0,
+        "highNormal" : 200.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n   statusBuilder.show().when.valueInEncounter(\"Skip capturing height\").is.notDefined;\n  \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Weight",
+      "uuid" : "e6e54c47-290c-4c8b-a2b3-dd30c39a361f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Weight",
+        "uuid" : "75b1656e-2777-4753-9612-ce03a766a5e1",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 300.0,
+        "lowNormal" : 1.0,
+        "highNormal" : 100.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "MUAC",
+      "uuid" : "9cdd93d7-f87b-423d-b664-7da4101cff14",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "MUAC",
+        "uuid" : "000fdb18-20fe-4711-b048-c8c313e73a1a",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "MUAC Status",
+      "uuid" : "7733dde7-ec7b-498f-8139-2e96e93b28fb",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "MUAC Status",
+        "uuid" : "b52653d8-3143-47a0-8f82-cea92a15a6bd",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "\"use strict\";\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const formElement = params.formElement;\n    \nlet encounterValue = programEncounter.getObservationReadableValue('MUAC');\n        let value = '';\n        \n  if (!isNaN(encounterValue)) { \n    if (encounterValue <= 11.49) {\n      value = \"Severe Wasting\";\n    } else if (encounterValue >= 11.5 && encounterValue < 12.49) {\n      value = \"Moderate Wasting\";\n    /*} else if (encounterValue >= 12.6 && encounterValue < 13.5) {\n      value = \"Mild Wasting\";*/\n    } else if (encounterValue >= 12.5) {\n      value = \"No Wasting\";\n    }\n  }   \n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, value);\n  };",
+      "mandatory" : false
+    }, {
+      "name" : "Nutrition supplements given?",
+      "uuid" : "12fbd2f3-ccf4-40d2-852d-785767f88e16",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Nutrition supplements given?",
+        "uuid" : "f56a465f-6e23-4aa2-acac-99b24b063cb9",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "NA",
+          "uuid" : "4d476011-7fc4-432b-98c0-9f6f1847cf39",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Ready to eat items distributed? Y/N",
+      "uuid" : "cb724263-76ba-4734-a9c7-2e36249361a7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Ready to eat items distributed? Y/N",
+        "uuid" : "84f2ed41-68d1-4930-9cda-8214927f8b42",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "NA",
+          "uuid" : "4d476011-7fc4-432b-98c0-9f6f1847cf39",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Regular in ICDS/Getting supplements from ICDS?",
+      "uuid" : "07ff838f-79bc-45c8-9a98-495fa609d9a9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Regular in ICDS/Getting supplements from ICDS?",
+        "uuid" : "1e148477-b36c-4d5a-b4e2-5fd82b24bfc4",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "NA",
+          "uuid" : "4d476011-7fc4-432b-98c0-9f6f1847cf39",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "display" : "Anthropometry",
+    "timed" : false
+  } ],
+  "decisionRule" : "//SAMPLE RULE EXAMPLE\n  \"use strict\";\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const decisions = params.decisions;\n    const individual = programEncounter.programEnrolment.individual;\n         \n   const zScoreGradeStatusMappingWeightForAge = {\n    '1': 'Normal',\n    '2': 'Moderately Underweight',\n    '3': 'Severely Underweight'\n};\n\nconst zScoreGradeStatusMappingHeightForAge = {\n    '1': 'Normal',\n    '2': 'Stunted',\n    '3': 'Severely stunted'\n};\n\nconst zScoreGradeStatusMappingWeightForHeight = [\n    [\"Severely wasted\", -3],\n    [\"Moderate Wasting\", -2],\n    [\"Normal\", 1],\n    [\"Possible risk of overweight\", 2],\n    [\"Overweight\", 3],\n    [\"Obese\", Infinity],\n];\n\nconst weightForHeightStatus = function (zScore) {\n    let found = _.find(zScoreGradeStatusMappingWeightForHeight, function (currentStatus) {\n        return zScore <= currentStatus[1];\n    });\n    return found && found[0];\n}\n\nconst getGradeforZscore = (zScore) => {\n    let grade;\n    if (zScore <= -3) {\n        grade = 3;\n    }\n    else if (zScore > -3 && zScore < -2) {\n        grade = 2;\n    }\n    else if (zScore >= -2) {\n        grade = 1;\n    }\n\n    return grade;\n\n}\n\nconst addIfRequired = (decisions, name, value) => {\n    if (value === -0) value = 0;\n    if (value !== undefined) decisions.push({name: name, value: value});\n};\n\n   const currentEncounterDateTime = programEncounter.encounterDateTime;\n   \n   const weight = programEncounter.findObservation(\"Weight\") &&\n                  programEncounter.findObservation(\"Weight\").getValue();\n   const height = programEncounter.findObservation(\"Height\") &&     \n                  programEncounter.findObservation(\"Height\").getValue();\n   \n      const zScoresForChild = ruleServiceLibraryInterfaceForSharingModules.common.getZScore(individual, currentEncounterDateTime, weight, height);\n      console.log('zScoresForChild',zScoresForChild);\n\n    var wfaGrade = getGradeforZscore(zScoresForChild.wfa);\n    console.log('zScoresForChild',getGradeforZscore(zScoresForChild.wfa));\n\n    var wfaStatus = zScoreGradeStatusMappingWeightForAge[wfaGrade];\n\n    var hfaGrade = getGradeforZscore(zScoresForChild.hfa);\n    var hfaStatus = zScoreGradeStatusMappingHeightForAge[hfaGrade];\n\n    var wfhStatus = weightForHeightStatus(zScoresForChild.wfh);\n\n    addIfRequired(decisions.encounterDecisions, \"Weight for age z-score\", zScoresForChild.wfa);\n    addIfRequired(decisions.encounterDecisions, \"Weight for age Grade\", wfaGrade);\n    addIfRequired(decisions.encounterDecisions, \"Weight for age Status\", wfaStatus ? [wfaStatus] : []);\n\n    addIfRequired(decisions.encounterDecisions, \"Height for age z-score\", zScoresForChild.hfa);\n    addIfRequired(decisions.encounterDecisions, \"Height for age Grade\", hfaGrade);\n    addIfRequired(decisions.encounterDecisions, \"Height for age Status\", hfaStatus ? [hfaStatus] : []);\n\n    addIfRequired(decisions.encounterDecisions, \"Weight for height z-score\", zScoresForChild.wfh);\n    addIfRequired(decisions.encounterDecisions, \"Weight for Height Status\", wfhStatus ? [wfhStatus] : []);\n    \n    const sd2Neg = ruleServiceLibraryInterfaceForSharingModules.common\n                    .projectedSD2NegForWeight(individual, currentEncounterDateTime);\n    const observations = programEncounter.programEnrolment.getObservationsForConceptName(\"Weight\");\n    const observationsSorted = _.orderBy(observations,\n        encounter => imports.moment(encounter.encounterDateTime).unix(),\n        [\"desc\"]\n    );\n\n    const pastObservation = _.find(observationsSorted, observation =>\n        imports.moment(currentEncounterDateTime).diff(imports.moment(observation.encounterDateTime), \"months\", true) >= 3.0\n    );\n\n    if (pastObservation) {\n        const pastSD2Neg = ruleServiceLibraryInterfaceForSharingModules.common\n        .projectedSD2NegForWeight(individual, pastObservation.encounterDateTime);\n        \n        const pastWeight = pastObservation.obs;\n        const falteringInPast = pastWeight < pastSD2Neg;\n        const falteringStatus = falteringInPast && weight < sd2Neg ? \"Yes\" : \"No\";\n        addIfRequired(decisions.encounterDecisions, \"Growth Faltering Status\", [falteringStatus]);\n    } else {\n        const falteringStatus = \"No\";\n        addIfRequired(decisions.encounterDecisions, \"Growth Faltering Status\", [falteringStatus]);\n    }\n\n    return decisions;\n};",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ {
+    "name" : "Weight for age Grade",
+    "uuid" : "10d6ef42-2db4-4af9-951d-75b8942690a1",
+    "dataType" : "Numeric",
+    "answers" : [ ],
+    "active" : true,
+    "media" : [ ]
+  }, {
+    "name" : "Weight for height z-score",
+    "uuid" : "6c6dcf3f-9088-49a8-a3b0-abce795c0c95",
+    "dataType" : "Numeric",
+    "answers" : [ ],
+    "lowNormal" : -2.0,
+    "highNormal" : 2.0,
+    "active" : true,
+    "media" : [ ]
+  }, {
+    "name" : "Weight for Height Status",
+    "uuid" : "7a2ee364-2fe8-4d48-9304-cb4ebc7e3144",
+    "dataType" : "Coded",
+    "answers" : [ {
+      "name" : "Possible risk of overweight",
+      "uuid" : "f9525016-c15c-41ef-8438-43dc18ae7fa7",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 2.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Normal",
+      "uuid" : "ba43b326-18a1-4f8d-ad04-29b0371461e0",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 1.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Overweight",
+      "uuid" : "74481c32-e400-4103-b656-b4f52e517fdd",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 3.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Obese",
+      "uuid" : "c7512031-62fb-4bbc-b793-7fde56d45883",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 4.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Wasted",
+      "uuid" : "01927145-9b54-4c6f-815b-b6c405de207a",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 5.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Severely wasted",
+      "uuid" : "03629146-7282-4ee6-85c5-fc04b8a6406f",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 6.0,
+      "active" : true,
+      "media" : [ ]
+    } ],
+    "active" : true,
+    "media" : [ ]
+  }, {
+    "name" : "Weight for age Status",
+    "uuid" : "ff4eb1f3-2a19-4337-95a0-27cb2ff5cea3",
+    "dataType" : "Coded",
+    "answers" : [ {
+      "name" : "Severely Underweight",
+      "uuid" : "29295fb9-9ed3-44b0-8e94-f1822b46a851",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 2.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Moderately Underweight",
+      "uuid" : "e422d466-f7a5-408e-b79a-d9f177ab8c5c",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 1.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Normal",
+      "uuid" : "ba43b326-18a1-4f8d-ad04-29b0371461e0",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 0.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Underweight",
+      "uuid" : "41b2db08-99a4-428c-a908-641330858b8a",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 3.0,
+      "active" : true,
+      "media" : [ ]
+    } ],
+    "active" : true,
+    "media" : [ ]
+  }, {
+    "name" : "Weight for age z-score",
+    "uuid" : "c5f418f8-af4a-4a10-a70d-54f088c6a8c6",
+    "dataType" : "Numeric",
+    "answers" : [ ],
+    "lowNormal" : -2.0,
+    "highNormal" : 2.0,
+    "active" : true,
+    "media" : [ ]
+  } ]
+}

@@ -1,0 +1,1069 @@
+{
+  "name" : "Child PNC",
+  "uuid" : "e09dddeb-ed72-40c4-ae8d-112d8893f18b",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "00595000-54fb-40f2-9493-a57f01881aad",
+    "name" : "Recent History",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Has the child passed urine since birth?",
+      "uuid" : "d1c666b6-8433-4afa-b2f0-264828b2781a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Child passed urine since birth",
+        "uuid" : "317ba6a6-d989-45df-82c7-44fc87c0cc32",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n \n statusBuilder.show().when.valueInEntireEnrolment(\"Child passed urine since birth\").is.notDefined.or.when.valueInLastEncounter(\"Child passed urine since birth\", [\"Child PNC\"]).is.no.or.when.valueInEncounter(\"Child passed urine since birth\").is.defined;\n \n   return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "When did the child pass urine for the first time after birth?",
+      "uuid" : "d6b5cb76-843b-48b7-a0f1-645caf9a178e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Duration in hours between birth and first urination",
+        "uuid" : "0a3fb6d3-ea49-4902-95ae-e2514d3739b6",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "highNormal" : 48.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n   statusBuilder.show().when.valueInEncounter(\"Child passed urine since birth\").is.yes;\n return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Has the child passed meconium since birth?",
+      "uuid" : "d15703be-5c42-45ad-bebb-a5a438cf7fb4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Child passed meconium since birth",
+        "uuid" : "b58f5ae0-36f8-4ab9-8331-5597c71a4efb",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  statusBuilder.show().when.valueInEntireEnrolment(\"Child passed meconium since birth\").is.notDefined.or.when.valueInLastEncounter(\"Child passed meconium since birth\", [\"Child PNC\"]).is.no.or.when.valueInEncounter(\"Child passed meconium since birth\").is.defined;\n  \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "When did the child pass meconium for the first time after birth?",
+      "uuid" : "4849b8dd-cce8-4302-b77e-5bf28a555229",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Duration in hours between birth and meconium",
+        "uuid" : "e7766535-327c-481c-8eb9-bc43cdb2fab5",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "highNormal" : 48.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n   statusBuilder.show().when.valueInEncounter(\"Child passed meconium since birth\").is.yes;\n\n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Any activity problems",
+      "uuid" : "018f9968-79cf-4e40-988d-1befcdff73bb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Any activity problems",
+        "uuid" : "16dd616a-4fc9-4fcc-8f24-4123a6dcfa21",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Convulsions",
+          "uuid" : "ab9596e4-04b6-48f2-9f4d-1c7a2c82dbf8",
+          "dataType" : "Coded",
+          "answers" : [ {
+            "name" : "Absent",
+            "uuid" : "10885638-561a-42b6-8b24-8daa01864c89",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 2.0,
+            "active" : true,
+            "media" : [ ]
+          }, {
+            "name" : "Present",
+            "uuid" : "57b51d52-981f-4af2-b133-aeffa6d00757",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 1.0,
+            "active" : true,
+            "media" : [ ]
+          } ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Slow activity / lethargic",
+          "uuid" : "23884265-d78e-4159-8e04-dc9de88b1a4f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No problem",
+          "uuid" : "855fb739-19d8-418d-a8ae-c1da977b7fa9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Does not feed well",
+          "uuid" : "56157f43-d681-4fcd-a414-171dee9af787",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "MultiSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Does child feel hot or have the chills",
+      "uuid" : "0dbaa2f0-080b-4657-b421-621943d4dd99",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Does child feel hot or have the chills",
+        "uuid" : "1ef3c052-2437-4adc-ae05-e155bc62c207",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "display" : "Recent History",
+    "timed" : false
+  }, {
+    "uuid" : "daea5603-e7c8-449f-85ad-da9be62c2288",
+    "name" : "PNC Complaints",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Cry related complaints",
+      "uuid" : "0b652f14-8d13-49d7-94fd-8c39a72f4033",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Child PNC cry related complaints",
+        "uuid" : "d6a0c77e-840d-40a2-9282-d22db7ede007",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Poor cry",
+          "uuid" : "2dab5910-bc76-4e8c-815f-627525958a25",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cries Continuously",
+          "uuid" : "0cd1ca5a-8a93-4edd-b7de-ace0f45d504a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Feeding related complaints",
+      "uuid" : "67bb881d-808f-41ba-a336-27a57111ee1d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Child PNC feeding related complaints",
+        "uuid" : "bc7b0015-ee9a-4089-b0a3-76862a30aa1c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Sucking poorly",
+          "uuid" : "43f7549c-cbed-42ff-80d6-85b46a396582",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Vomiting",
+          "uuid" : "8126ae79-28d5-4587-bca1-1c8f518b48f4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not sucking milk at all",
+          "uuid" : "8422c270-11fc-4bf5-85b0-bb3aeb2d39b9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sucking well",
+          "uuid" : "176bf779-21ce-4dff-ad0b-a28d45806ba8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Urination related complaints",
+      "uuid" : "6181ecd8-3bfa-433b-96b1-768186bb03f5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Child PNC urination related complaints",
+        "uuid" : "43a78b5a-f4da-440d-9614-80af65090e1f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Child cries before or while passing urine",
+          "uuid" : "c97a10fb-10ac-421e-a352-3244ef1753a7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No urination",
+          "uuid" : "874d4998-85f8-45a9-ba81-1e187a6b3278",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yellow or reddish colour urine",
+          "uuid" : "8014220b-17b8-47e4-85dc-47cf61975bbf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Proper urination",
+          "uuid" : "23d4fd31-1868-4605-a310-8e7a295cd37f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Stool related complaints",
+      "uuid" : "6564bc9a-aef4-48cf-b517-69848358f3e0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Child PNC stool related complaints",
+        "uuid" : "bcd4495f-41fa-494b-a5d9-a766c87f37f9",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Loose stools",
+          "uuid" : "a98c6c67-8c47-4a60-9f7b-82cd261167a4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Blood in stools",
+          "uuid" : "ced8bcd4-642e-4e45-9af8-f9f9cf9c7b1f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not passing stools",
+          "uuid" : "6481a8c2-fab8-49ad-bb37-d6abb72513ca",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Greenish Stool",
+          "uuid" : "5721b5e2-5492-4473-aee6-50b9383c4d41",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Child cries before or while passing stool",
+          "uuid" : "4b26172a-584e-461d-afb6-938eb88391eb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Loose motion since how many days",
+      "uuid" : "def57525-ba02-4aea-a79a-ab2513f0a7eb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of days of diarrhoea",
+        "uuid" : "0b71db57-0add-4215-b198-0e9773d7da31",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n \n statusBuilder.show().when.valueInEncounter(\"Child PNC stool related complaints\").containsAnswerConceptName(\"Loose stools\");\n  \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Greenish stool since how many days",
+      "uuid" : "f47bde61-d1c3-4910-9263-3f7ff982f989",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of days since child passing greenish stool",
+        "uuid" : "26aeaa02-3fdb-4cf5-a6a1-a16e650c1c71",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  statusBuilder.show().when.valueInEncounter(\"Child PNC stool related complaints\").containsAnswerConceptName(\"Greenish Stool\");\n  \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Blood in stool since how many days",
+      "uuid" : "d0bc99af-af04-4a54-9bc5-a2783a783c1a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of days since blood in stool",
+        "uuid" : "e64a7a27-b93d-404e-8cb1-28a2ea2a1b74",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  statusBuilder.show().when.valueInEncounter(\"Child PNC stool related complaints\").containsAnswerConceptName(\"Blood in stools\");\n  \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Not passing stools since how many days",
+      "uuid" : "2846e0d2-34c6-4a20-a43e-4c11c0e1f351",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of days since not passing stool",
+        "uuid" : "7f169dca-2c2f-473c-a736-b87febd21989",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  statusBuilder.show().when.valueInEncounter(\"Child PNC stool related complaints\").containsAnswerConceptName(\"Not passing stools\");\n   \n    return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Child cries while passing stool since how many days",
+      "uuid" : "ac5162bd-191b-4ff1-8cd2-e4a1603981a7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of days since child cries while passing stool",
+        "uuid" : "7879f94b-31a6-4ac1-b307-284322ef5bef",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  statusBuilder.show().when.valueInEncounter(\"Child PNC stool related complaints\").containsAnswerConceptName(\"Child cries before or while passing stool\");\n \n   return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Activity related complaints",
+      "uuid" : "e9361bd1-9e3b-41e4-b83b-576aa83bd08b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Child PNC activity related complaints",
+        "uuid" : "ad5d7bf8-932a-4eb2-8e8a-7c38dc4bbe2b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Sluggish movements",
+          "uuid" : "7c767ec4-dfe8-46de-aeec-87dfaab3f056",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Slow activity / lethargic",
+          "uuid" : "23884265-d78e-4159-8e04-dc9de88b1a4f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not sucking milk at all",
+          "uuid" : "8422c270-11fc-4bf5-85b0-bb3aeb2d39b9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Unconscious",
+          "uuid" : "04d0248b-72c4-4d78-b4f1-3e3d9cc247b1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Convulsions",
+          "uuid" : "ab9596e4-04b6-48f2-9f4d-1c7a2c82dbf8",
+          "dataType" : "Coded",
+          "answers" : [ {
+            "name" : "Absent",
+            "uuid" : "10885638-561a-42b6-8b24-8daa01864c89",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 2.0,
+            "active" : true,
+            "media" : [ ]
+          }, {
+            "name" : "Present",
+            "uuid" : "57b51d52-981f-4af2-b133-aeffa6d00757",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 1.0,
+            "active" : true,
+            "media" : [ ]
+          } ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Does feel hot or have the chills?",
+      "uuid" : "fe794b79-cd35-4a43-a203-e56fdfe08b63",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Fever/Chills",
+        "uuid" : "2441879f-4f53-4755-9474-3168c68095a5",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Child feeds only on mothers milk?",
+      "uuid" : "a8aba1cf-be72-4bb0-bf04-d051ddbe5857",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is baby exclusively breastfeeding",
+        "uuid" : "5a3b65c1-1647-47d0-ad66-d8b22722c472",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "What else is the baby being fed?",
+      "uuid" : "1bb5e368-fca1-4b8b-8ff7-7b84285509ed",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other things fed to the baby",
+        "uuid" : "e97d83a0-0519-4dc3-9673-705b66c95e08",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n   \n   statusBuilder.show().when.valueInEncounter(\"Is baby exclusively breastfeeding\").is.no;\n  \n  return statusBuilder.build();\n};",
+      "mandatory" : false
+    } ],
+    "display" : "PNC Complaints",
+    "timed" : false
+  }, {
+    "uuid" : "abde79ae-b9d5-484d-832e-be69d87824f4",
+    "name" : "Vitals",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Temperature",
+      "uuid" : "2d8c280d-8de5-4792-bf25-08ad5f1cd35a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Child Temperature",
+        "uuid" : "c5e0d0e0-4ff7-40be-a929-292d7c4b17d0",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 97.5,
+        "highNormal" : 99.5,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Respiratory Rate",
+      "uuid" : "e5529a87-915c-4e75-9376-9bc1706cb9d8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Child Respiratory Rate",
+        "uuid" : "a669a751-574e-4f7b-8c34-d3d755adecf8",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 30.0,
+        "highNormal" : 60.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Pulse",
+      "uuid" : "e643f8a3-b03a-4a03-8c26-19c6bcf8538f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Child Pulse",
+        "uuid" : "4629403c-7d38-4984-89cb-8be929b66e69",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 60.0,
+        "highNormal" : 100.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "display" : "Vitals",
+    "timed" : false
+  }, {
+    "uuid" : "4c5093dd-feb3-4f94-b930-b7168bb65c71",
+    "name" : "Examination",
+    "displayOrder" : 4.0,
+    "formElements" : [ {
+      "name" : "Any breathing problems",
+      "uuid" : "37e5335a-42bc-4a25-840a-e82e820f4f15",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Child PNC breathing problems",
+        "uuid" : "17d5ed6e-b571-4e02-bebe-0c9db2c8f5ca",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Breathing too fast",
+          "uuid" : "2a68f048-bb8c-404f-9a51-7b2d46806d1f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No problem",
+          "uuid" : "855fb739-19d8-418d-a8ae-c1da977b7fa9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Grunting noises while breathing",
+          "uuid" : "5414e490-3bdd-4551-81d1-0ce69cb7580d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Chest indrawing",
+          "uuid" : "4ac39842-039b-45de-a50d-7b31e51c9850",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Breathing too slow",
+          "uuid" : "e0422b25-f656-4e97-92ab-2db9aef28e8c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Any skin problems",
+      "uuid" : "a489a772-08f7-49c9-8bbc-814cfdcf1525",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Child PNC skin problems",
+        "uuid" : "36460b33-a6c2-478f-894c-491128aa4ca5",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Skin blisters",
+          "uuid" : "fdfbfbc8-0a77-4ade-9a26-4203e23c3f82",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Blue/pale",
+          "uuid" : "a23bc4b5-b1a5-40ff-b67c-255a0788baf3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Umbilical cord is infected",
+          "uuid" : "50ad01bb-a93a-4eae-8804-a3b8a5a23077",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Umbilical Abscess",
+          "uuid" : "4cc68725-905b-4f29-800a-5032bc169c4d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Rash",
+          "uuid" : "966bf035-b14f-4fd0-8b2d-22798ad330c7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Umbilical redness and or discharge",
+          "uuid" : "eb030ccc-865c-43d1-84f1-11c20e7e7fc2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No problem",
+          "uuid" : "855fb739-19d8-418d-a8ae-c1da977b7fa9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sunken fontanelle",
+          "uuid" : "0210eee7-90e8-4c93-bd41-3c8f3dcb95c7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Wrinkled Skin",
+          "uuid" : "efe68956-0ff4-4391-af2b-c9e49bb9e97e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Any eye problems",
+      "uuid" : "84cc43d5-72ed-4f01-918e-86ecd7464079",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Child PNC eye problems",
+        "uuid" : "2010e1e0-468d-424c-85ef-290612f3eae8",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Redness of eyes",
+          "uuid" : "f68197ea-a8b0-4187-a816-234ebf2720ee",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Swollen eyelids",
+          "uuid" : "3b98f4f8-fa9b-4af1-bf16-e1cc3b25c03f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Discharge from eyes",
+          "uuid" : "388cd26f-f73e-498f-8e33-1a23320b30a5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Icterus present",
+          "uuid" : "bab23da4-603e-4f9e-a823-90cc785d8f2f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    } ],
+    "display" : "Examination",
+    "timed" : false
+  }, {
+    "uuid" : "550cc969-4021-4d13-8ad3-d8759388205b",
+    "name" : "Anthropometry",
+    "displayOrder" : 5.0,
+    "formElements" : [ {
+      "name" : "Height",
+      "uuid" : "94a659ce-dd98-44a1-a3ea-2a8abc622990",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Height",
+        "uuid" : "d883d5fe-e17d-4136-b989-089fa0295e34",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 20.0,
+        "highAbsolute" : 300.0,
+        "lowNormal" : 30.0,
+        "highNormal" : 200.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Weight",
+      "uuid" : "786fa276-8baa-4315-8f72-1da2e0c888a6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Weight",
+        "uuid" : "75b1656e-2777-4753-9612-ce03a766a5e1",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 300.0,
+        "lowNormal" : 1.0,
+        "highNormal" : 100.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "display" : "Anthropometry",
+    "timed" : false
+  }, {
+    "uuid" : "d4db4667-2e87-4929-9de5-921d12196e25",
+    "name" : "Baby warming",
+    "displayOrder" : 6.0,
+    "formElements" : [ {
+      "name" : "Child PNC - Baby warming - Dos",
+      "uuid" : "81a8c965-37c8-4d64-8da1-bdac3f098032",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Placeholder for counselling form element",
+        "uuid" : "b4e5a662-97bf-4846-b9b7-9baeab4d89c4",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "Baby warming",
+    "timed" : false
+  }, {
+    "uuid" : "cddc82ff-89f7-494d-af37-d764d4d3d300",
+    "name" : "Breast Feeding",
+    "displayOrder" : 7.0,
+    "formElements" : [ {
+      "name" : "Child PNC - Breastfeeding - Dos",
+      "uuid" : "fd5cd4f8-0406-45ca-ae1d-ee285d94e281",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Placeholder for counselling form element",
+        "uuid" : "b4e5a662-97bf-4846-b9b7-9baeab4d89c4",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "Breast Feeding",
+    "timed" : false
+  }, {
+    "uuid" : "eb7b004a-f570-495a-a0c3-6ecce0c4de3b",
+    "name" : "Hygiene",
+    "displayOrder" : 8.0,
+    "formElements" : [ {
+      "name" : "Child PNC - Hygiene - Dos",
+      "uuid" : "ee520d1f-8d64-4f73-9bec-4ae318f350cf",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Placeholder for counselling form element",
+        "uuid" : "b4e5a662-97bf-4846-b9b7-9baeab4d89c4",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "Hygiene",
+    "timed" : false
+  }, {
+    "uuid" : "e482f207-a243-47b1-98a1-3bb246ba5a48",
+    "name" : "Child's weight",
+    "displayOrder" : 9.0,
+    "formElements" : [ {
+      "name" : "Child PNC - Weight - Dos",
+      "uuid" : "670644a6-4acf-45ee-8bd5-811146ad5d28",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Placeholder for counselling form element",
+        "uuid" : "b4e5a662-97bf-4846-b9b7-9baeab4d89c4",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "Child's weight",
+    "timed" : false
+  }, {
+    "uuid" : "1b25d014-f4c3-48cd-ba6b-abb00c186329",
+    "name" : "Registration and immunisation",
+    "displayOrder" : 10.0,
+    "formElements" : [ {
+      "name" : "Child PNC - Registration Immunisation - Dos",
+      "uuid" : "77f470aa-4a1a-4297-8f93-c43b2d93e649",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Placeholder for counselling form element",
+        "uuid" : "b4e5a662-97bf-4846-b9b7-9baeab4d89c4",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "Registration and immunisation",
+    "timed" : false
+  } ],
+  "decisionRule" : "//SAMPLE RULE EXAMPLE\n  \"use strict\";\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const decisions = params.decisions;\n    \n    const recommendationBuilder = new imports.rulesConfig.complicationsBuilder({\n        programEncounter: programEncounter,\n        complicationsConcept: \"Recommendations\"\n    });\n    \n    recommendationBuilder.addComplication(\"Keep the baby warm\")\n        .when.valueInEncounter(\"Child Pulse\").lessThan(60)\n        .or.when.valueInEncounter(\"Child Pulse\").greaterThan(100)\n        .or.when.valueInEncounter(\"Child Respiratory Rate\").lessThan(30)\n        .or.when.valueInEncounter(\"Child Respiratory Rate\").greaterThan(60)\n    ;\n\n    recommendationBuilder.addComplication(\"Keep the baby warm by giving mother's skin to skin contact and covering the baby's head, hands and feet with a cap, gloves and socks resp.\")\n        .when.valueInEncounter(\"Child Temperature\").lessThan(97.5);\n\n    recommendationBuilder.addComplication(\"Give exclusive breast feeding\")\n        .when.valueInEncounter(\"Child Temperature\").lessThan(97.5);\n\n    recommendationBuilder.addComplication(\"Give exclusive breast feeding\")\n        .when.encounterType.equals(\"Child PNC\")\n        .and.valueInEncounter(\"Is baby exclusively breastfeeding\").containsAnswerConceptName(\"No\");\n\n \n decisions.encounterDecisions.push(recommendationBuilder.getComplications());   \n  \n  \n  const referralAdvice = new imports.rulesConfig.complicationsBuilder({\n        programEncounter: programEncounter,\n        complicationsConcept: \"Refer to the hospital immediately for\"\n    });\n    \n    referralAdvice.addComplication(\"Child born Underweight\")\n        .when.valueInEncounter(\"Birth Weight\").lessThan(2);\n\n    referralAdvice.addComplication(\"Did not cry soon after birth\")\n        .when.valueInEncounter(\"Cried soon after birth\").containsAnswerConceptName(\"No\");\n\n    referralAdvice.addComplication(\"Colour of child is Pale or Blue\")\n        .when.valueInEncounter(\"Colour of child\").containsAnswerConceptName(\"Blue/pale\");\n\n    referralAdvice.addComplication(\"Reflex Absent\")\n        .when.valueInEncounter(\"Reflex\").containsAnswerConceptName(\"Absent\");\n\n    referralAdvice.addComplication(\"Muscle tone Absent/Flexed arms and legs\")\n        .when.valueInEncounter(\"Muscle tone\").containsAnyAnswerConceptName(\"Absent\", \"Flexed arms and legs\");\n\n    referralAdvice.addComplication(\"Low Pulse\")\n        .when.valueInEncounter(\"Child Pulse\").lessThan(60);\n\n    referralAdvice.addComplication(\"High Pulse\")\n        .when.valueInEncounter(\"Child Pulse\").greaterThan(100);\n\n    referralAdvice.addComplication(\"Low Temperature\")\n        .when.valueInEncounter(\"Child Temperature\").lessThan(97.5);\n\n    referralAdvice.addComplication(\"High Temperature\")\n        .when.valueInEncounter(\"Child Temperature\").greaterThan(99.5);\n\n    referralAdvice.addComplication(\"Low Respiratory Rate\")\n        .when.valueInEncounter(\"Child Respiratory Rate\").lessThan(30);\n\n    referralAdvice.addComplication(\"High Respiratory Rate\")\n        .when.valueInEncounter(\"Child Respiratory Rate\").greaterThan(60);\n\n    referralAdvice.addComplication(\"Icterus present\")\n        .when.valueInEncounter(\"Jaundice (Icterus)\").containsAnswerConceptName(\"Present\");\n\n    referralAdvice.addComplication(\"Urine not passed for more than 48 hours after birth\")\n        .when.encounterType.equals(\"Child PNC\")\n        .when.valueInEncounter(\"Duration in hours between birth and first urination\").greaterThan(48);\n\n    referralAdvice.addComplication(\"Urine not passed since birth\")\n        .when.encounterType.equals(\"Child PNC\")\n        .when.valueInEncounter(\"Child passed urine since birth\").is.no;\n\n    referralAdvice.addComplication(\"Meconium not passed for more than 48 hours after birth\")\n        .when.encounterType.equals(\"Child PNC\")\n        .when.valueInEncounter(\"Duration in hours between birth and meconium\").greaterThan(48);\n\n    referralAdvice.addComplication(\"Meconium not passed since birth\")\n        .when.encounterType.equals(\"Child PNC\")\n        .when.valueInEncounter(\"Child passed meconium since birth\").is.no;\n\n    referralAdvice.addComplication(\"Child PNC cry related complaints\")\n        .when.encounterType.equals(\"Child PNC\")\n        .when.valueInEncounter(\"Child PNC cry related complaints\").containsAnswerConceptName(\"Cries Continuously\", \"Poor cry\");\n\n    referralAdvice.addComplication(\"Child PNC feeding related complaints\")\n        .when.encounterType.equals(\"Child PNC\")\n        .when.valueInEncounter(\"Child PNC feeding related complaints\").containsAnswerConceptName(\"Not sucking milk at all\", \"Vomiting\");\n\n    referralAdvice.addComplication(\"Child PNC urination related complaints\")\n        .when.encounterType.equals(\"Child PNC\")\n        .when.valueInEncounter(\"Child PNC urination related complaints\").containsAnswerConceptName(\"No urination\", \"Difficulty in urination\");\n\n    referralAdvice.addComplication(\"Child PNC stool related complaints\")\n        .when.encounterType.equals(\"Child PNC\")\n        .when.valueInEncounter(\"Child PNC stool related complaints\").containsAnswerConceptName(\"Blood in stools\", \"Loose stools\", \"Not passing stools\");\n\n    referralAdvice.addComplication(\"Child PNC activity related complaints\")\n        .when.encounterType.equals(\"Child PNC\")\n        .when.valueInEncounter(\"Child PNC activity related complaints\").containsAnswerConceptName(\"Sluggish movements\", \"Not sucking milk at all\", \"Convulsions\", \"Slow activity / lethargic\", \"Unconscious\");\n\n    referralAdvice.addComplication(\"Fever/Chills\")\n        .when.encounterType.equals(\"Child PNC\")\n        .when.valueInEncounter(\"Fever/Chills\").containsAnswerConceptName(\"Yes\");\n\n    referralAdvice.addComplication(\"Child PNC eye problems\")\n        .when.encounterType.equals(\"Child PNC\")\n        .when.valueInEncounter(\"Child PNC eye problems\").containsAnswerConceptName(\"Redness of eyes\", \"Swollen eyelids\", \"Discharge from eyes\", \"Icterus present\");\n\n    referralAdvice.addComplication(\"Child PNC skin problems\")\n        .when.encounterType.equals(\"Child PNC\")\n        .when.valueInEncounter(\"Child PNC skin problems\").containsAnswerConceptName(\"Blue/pale\", \"Umbilical redness and or discharge\", \"Umbilical Abscess\", \"Rash\", \"Wrinkled Skin\", \"Sunken fontanelle\", \"Skin blisters\")\n        .or.when.valueInEncounter(\"Child PNC skin problems\").containsAnswerConceptName(\"Rash\").and.ageInDays.is.greaterThan(3);\n\n    referralAdvice.addComplication(\"Child PNC breathing problems\")\n        .when.encounterType.equals(\"Child PNC\")\n        .when.valueInEncounter(\"Child PNC breathing problems\").containsAnswerConceptName(\"Chest indrawing\", \"Breathing too fast\", \"Breathing too slow\", \"Grunting noises while breathing\");\n    \n    decisions.encounterDecisions.push(referralAdvice.getComplications());   \n    \n    const highRiskBuilder = new imports.rulesConfig.complicationsBuilder({\n        programEncounter: programEncounter,\n        complicationsConcept: \"High Risk Conditions\"\n    });\n    \n    highRiskBuilder.addComplication(\"Child born Underweight\")\n        .when.valueInEncounter(\"Birth Weight\").lessThan(2);\n\n    highRiskBuilder.addComplication(\"Did not cry soon after birth\")\n        .when.valueInEncounter(\"Cried soon after birth\").containsAnswerConceptName(\"No\");\n\n    highRiskBuilder.addComplication(\"Not Breast-fed within 1 hour of birth\")\n        .when.valueInEncounter(\"Breast feeding within 1 hour of birth\").containsAnswerConceptName(\"No\");\n\n    highRiskBuilder.addComplication(\"Colour of child is Pale or Blue\")\n        .when.valueInEncounter(\"Colour of child\").containsAnswerConceptName(\"Blue/pale\")\n\n    highRiskBuilder.addComplication(\"Reflex Absent\")\n        .when.valueInEncounter(\"Reflex\").containsAnswerConceptName(\"Absent\");\n\n    highRiskBuilder.addComplication(\"Muscle tone Absent/Flexed arms and legs\")\n        .when.valueInEncounter(\"Muscle tone\").containsAnyAnswerConceptName(\"Absent\", \"Flexed arms and legs\");\n\n    highRiskBuilder.addComplication(\"Low Pulse\")\n        .when.valueInEncounter(\"Child Pulse\").lessThan(60);\n\n    highRiskBuilder.addComplication(\"High Pulse\")\n        .when.valueInEncounter(\"Child Pulse\").greaterThan(100);\n\n    highRiskBuilder.addComplication(\"Low Temperature\")\n        .when.valueInEncounter(\"Child Temperature\").lessThan(97.5);\n\n    highRiskBuilder.addComplication(\"High Temperature\")\n        .when.valueInEncounter(\"Child Temperature\").greaterThan(99.5);\n\n    highRiskBuilder.addComplication(\"Low Respiratory Rate\")\n        .when.valueInEncounter(\"Child Respiratory Rate\").lessThan(30);\n\n    highRiskBuilder.addComplication(\"High Respiratory Rate\")\n        .when.valueInEncounter(\"Child Respiratory Rate\").greaterThan(60);\n\n    highRiskBuilder.addComplication(\"Icterus present\")\n        .when.valueInEncounter(\"Jaundice (Icterus)\").containsAnswerConceptName(\"Present\");\n    \n    decisions.encounterDecisions.push(highRiskBuilder.getComplications());   \n    \n       const zScoreGradeStatusMappingWeightForAge = {\n    '1': 'Normal',\n    '2': 'Moderately Underweight',\n    '3': 'Severely Underweight'\n};\n\nconst zScoreGradeStatusMappingHeightForAge = {\n    '1': 'Normal',\n    '2': 'Stunted',\n    '3': 'Severely stunted'\n};\n\nconst zScoreGradeStatusMappingWeightForHeight = [\n    [\"Severely wasted\", -3],\n    [\"Wasted\", -2],\n    [\"Normal\", 1],\n    [\"Possible risk of overweight\", 2],\n    [\"Overweight\", 3],\n    [\"Obese\", Infinity],\n];\n\nconst weightForHeightStatus = function (zScore) {\n    let found = _.find(zScoreGradeStatusMappingWeightForHeight, function (currentStatus) {\n        return zScore <= currentStatus[1];\n    });\n    return found && found[0];\n}\n\nconst getGradeforZscore = (zScore) => {\n    let grade;\n    if (zScore <= -3) {\n        grade = 3;\n    }\n    else if (zScore > -3 && zScore < -2) {\n        grade = 2;\n    }\n    else if (zScore >= -2) {\n        grade = 1;\n    }\n\n    return grade;\n\n}\n\nconst addIfRequired = (decisions, name, value) => {\n    if (value === -0) value = 0;\n    if (value !== undefined) decisions.push({name: name, value: value});\n};\n\n   const currentEncounterDateTime = programEncounter.encounterDateTime;\n   const individual = programEncounter.programEnrolment.individual;\n   \n   const weight = programEncounter.findObservation(\"Weight\") &&\n                  programEncounter.findObservation(\"Weight\").getValue();\n   const height = programEncounter.findObservation(\"Height\") &&     \n                  programEncounter.findObservation(\"Height\").getValue();\n   \n      const zScoresForChild = ruleServiceLibraryInterfaceForSharingModules.common.getZScore(individual, currentEncounterDateTime, weight, height);\n      console.log('zScoresForChild',zScoresForChild);\n\n    var wfaGrade = getGradeforZscore(zScoresForChild.wfa);\n    console.log('zScoresForChild',getGradeforZscore(zScoresForChild.wfa));\n\n    var wfaStatus = zScoreGradeStatusMappingWeightForAge[wfaGrade];\n\n    var hfaGrade = getGradeforZscore(zScoresForChild.hfa);\n    var hfaStatus = zScoreGradeStatusMappingHeightForAge[hfaGrade];\n\n    var wfhStatus = weightForHeightStatus(zScoresForChild.wfh);\n\n    addIfRequired(decisions.encounterDecisions, \"Weight for age z-score\", zScoresForChild.wfa);\n    addIfRequired(decisions.encounterDecisions, \"Weight for age Grade\", wfaGrade);\n    addIfRequired(decisions.encounterDecisions, \"Weight for age Status\", wfaStatus ? [wfaStatus] : []);\n\n    addIfRequired(decisions.encounterDecisions, \"Height for age z-score\", zScoresForChild.hfa);\n    addIfRequired(decisions.encounterDecisions, \"Height for age Grade\", hfaGrade);\n    addIfRequired(decisions.encounterDecisions, \"Height for age Status\", hfaStatus ? [hfaStatus] : []);\n\n    addIfRequired(decisions.encounterDecisions, \"Weight for height z-score\", zScoresForChild.wfh);\n    addIfRequired(decisions.encounterDecisions, \"Weight for Height Status\", wfhStatus ? [wfhStatus] : []);\n   \n   const sd2Neg = ruleServiceLibraryInterfaceForSharingModules.common\n                    .projectedSD2NegForWeight(individual, currentEncounterDateTime);\n    const observations = programEncounter.programEnrolment.getObservationsForConceptName(\"Weight\");\n    const observationsSorted = _.orderBy(observations,\n        encounter => imports.moment(encounter.encounterDateTime).unix(),\n        [\"desc\"]\n    );\n\n    const pastObservation = _.find(observationsSorted, observation =>\n        imports.moment(currentEncounterDateTime).diff(imports.moment(observation.encounterDateTime), \"months\", true) >= 3.0\n    );\n\n    if (pastObservation) {\n        const pastSD2Neg = ruleServiceLibraryInterfaceForSharingModules.common\n        .projectedSD2NegForWeight(individual, pastObservation.encounterDateTime);\n        \n        const pastWeight = pastObservation.obs;\n        const falteringInPast = pastWeight < pastSD2Neg;\n        const falteringStatus = falteringInPast && weight < sd2Neg ? \"Yes\" : \"No\";\n        addIfRequired(decisions.encounterDecisions, \"Growth Faltering Status\", [falteringStatus]);\n    } else {\n        const falteringStatus = \"No\";\n        addIfRequired(decisions.encounterDecisions, \"Growth Faltering Status\", [falteringStatus]);\n    }\n\n   \n    return decisions;\n};",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

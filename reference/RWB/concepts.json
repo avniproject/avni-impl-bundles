@@ -1,0 +1,4133 @@
+[ {
+  "name" : "",
+  "uuid" : "4d7bcc2c-cc00-4651-8eab-6c5876626aff",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "0-1 Km",
+  "uuid" : "1f7f57c8-d454-4c5e-8336-789451335cb6",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "10-20 years",
+  "uuid" : "f66b0416-a432-4b0b-b759-687fad7516e9",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "14",
+  "uuid" : "7c956ebb-acc0-41a0-afdc-c810ddba485a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "16",
+  "uuid" : "19286f0a-957c-4674-b9c9-42ac6c2476ce",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "18",
+  "uuid" : "5404d563-5b50-47ae-a3f1-49c71496b3a2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "2-3 Km",
+  "uuid" : "e1ea6e8d-a266-4677-a9ff-dd756ce2451a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "2.2",
+  "uuid" : "e8306ab5-2c22-4565-b1a9-5a7491f97c8c",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "2.5",
+  "uuid" : "248a4fa2-7d0c-4b14-8191-3ec9e787cfc8",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "2.8",
+  "uuid" : "69e6a155-6bb4-4cf9-8dec-0b8057f1931f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "20",
+  "uuid" : "f6608f94-3bff-4a6d-a38b-ef14b1e40fa1",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "2020",
+  "uuid" : "675ff561-82a3-45d6-b6ef-ec392c06ab2a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "2021",
+  "uuid" : "efe82302-8e32-4d11-93db-34c5c6bfc218",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "2022",
+  "uuid" : "5df889c3-47dc-4654-b7ac-9590f18bd57a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "2023",
+  "uuid" : "e7da9c15-5368-4a1a-8b59-3fbf7fe38ebb",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "2024",
+  "uuid" : "2cf5e387-f1e2-4313-aa2c-6cfab97f3861",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "25",
+  "uuid" : "68211d18-45fe-4053-9639-9480df9de238",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "3.5",
+  "uuid" : "669cd23d-50b2-443c-8490-68525ec324ef",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "4-5 Km",
+  "uuid" : "414768b2-4c4d-4b6d-8f39-f285bced3545",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "<10 years",
+  "uuid" : "0d25c97e-9530-40ab-b271-3ec6241439f2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : ">20 years",
+  "uuid" : "614cde5b-f6a6-4b29-8de3-4a120a111371",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : ">5 Km",
+  "uuid" : "bcf21c8b-680c-42e6-8b59-cdd233c8a6ac",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Aadhar card",
+  "uuid" : "c9d2309e-7282-4c8b-8f23-1e58845a753f",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Aadhar number",
+  "uuid" : "9673ab6f-fed5-4a03-a0ed-a1e74ac7e0b0",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "ABSSS",
+  "uuid" : "f4275bdb-b8b7-4745-8501-9588d81e9150",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "ACF",
+  "uuid" : "3325feeb-de07-4431-9cfe-43f99b28017d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "ACF MH",
+  "uuid" : "a9af596f-14aa-4cc8-a89b-56859b5f4761",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "ACF RJ",
+  "uuid" : "7c60f79c-d837-4868-86ee-8d4ade275f06",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Additional amount",
+  "uuid" : "4f8b3d6e-52c5-4f1b-97f7-6ae86a87f131",
+  "dataType" : "Numeric",
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Additional amount paid apart from carting cost",
+  "uuid" : "4e352093-e754-4bb0-9653-b2e69a95fe04",
+  "dataType" : "Numeric",
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Additional comments by auditor",
+  "uuid" : "90077bb4-7e0e-4bd9-abd7-623e87e96f9d",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Additional expenses by the farmer, if any",
+  "uuid" : "dc3a21e0-8e6f-45aa-a3ff-7fc6e317c3ce",
+  "dataType" : "Numeric",
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Additional expenses done by the farmer",
+  "uuid" : "088d4cd7-99ac-485e-8b2a-ca272362937e",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Additional observations, details of site",
+  "uuid" : "0b39aba6-a75e-4a74-b6dd-84241c23bf73",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Additional observations, machine operator interaction",
+  "uuid" : "1f2e204b-1254-4b10-8a37-7d40b8abd30a",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Additional observations, MB recording details",
+  "uuid" : "1994a466-670b-4be1-b5c1-395878f4328d",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Additional observations, monitoring mobile app",
+  "uuid" : "10763def-ddb0-4d3b-80be-dada9d40db61",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Additional observations, monitoring templates",
+  "uuid" : "36782585-60e4-4e06-8c8c-93c89ef2d39a",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Additional observations, site challenges",
+  "uuid" : "8b84ad39-e0d4-45f8-8680-a8731b599d21",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Additional observations, site efficiency",
+  "uuid" : "d9e74bd3-bace-4705-9ca7-f7a4ff912371",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Additional observations, site preparedness",
+  "uuid" : "d7f3fb2e-deb7-4496-8f88-485e7b85527f",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Additional observations, tractor trolley owner interaction",
+  "uuid" : "78787e7f-e7d3-4bb7-a13a-aa09ac1bb1a7",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Agriculture",
+  "uuid" : "50ef3b8e-78aa-4948-ae7d-eb8c0899e18e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Ajit Hembram",
+  "uuid" : "2cb50930-3ff9-41e8-b91f-bea009fd0817",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Akash K. Dasoundhi",
+  "uuid" : "4c9eb13d-2829-4bd2-9fe9-150afa4aa892",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Akhildeep Giri",
+  "uuid" : "cd270f8e-651a-4f2e-bcb2-81a6b7bb5080",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "All the images should be from same angle",
+  "uuid" : "6349d053-ec62-4dfb-88b2-a7ccfd242065",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  } ]
+}, {
+  "name" : "Amit K. Saha",
+  "uuid" : "63b4e573-40a3-4d4e-8c19-cb362e392c02",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Amount",
+  "uuid" : "2b5635ee-e4c4-4587-a796-c3a1f48f6fac",
+  "dataType" : "Numeric",
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Amount for diesel is paid by",
+  "uuid" : "521bcbf6-ebaa-4e7b-992f-a634812908af",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Donor",
+    "uuid" : "b3747a7b-c0e2-456c-8366-2bcbc912fb8f",
+    "order" : 0.0
+  }, {
+    "name" : "Government",
+    "uuid" : "1844678c-8f05-41bd-b120-6e715b0625fd",
+    "order" : 1.0
+  }, {
+    "name" : "Farmer",
+    "uuid" : "9c052913-2e30-40d3-a25b-f22c7ae81f38",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Amount of silt carted by the family member - Number of hywas",
+  "uuid" : "1c0392ce-3b3c-45df-b10f-359c28ad20f3",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Amount of silt carted by the family members - Capacity of hywas",
+  "uuid" : "6c66462a-fa66-422f-8e28-3738008e9328",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "14",
+    "uuid" : "7c956ebb-acc0-41a0-afdc-c810ddba485a",
+    "order" : 0.0
+  }, {
+    "name" : "16",
+    "uuid" : "19286f0a-957c-4674-b9c9-42ac6c2476ce",
+    "order" : 1.0
+  }, {
+    "name" : "18",
+    "uuid" : "5404d563-5b50-47ae-a3f1-49c71496b3a2",
+    "order" : 2.0
+  }, {
+    "name" : "20",
+    "uuid" : "f6608f94-3bff-4a6d-a38b-ef14b1e40fa1",
+    "order" : 3.0
+  }, {
+    "name" : "25",
+    "uuid" : "68211d18-45fe-4053-9639-9480df9de238",
+    "order" : 4.0
+  } ]
+}, {
+  "name" : "Amount of silt carted by the family members - Number of trolleys",
+  "uuid" : "1bd245b5-79c4-43a1-a493-466d69bf3c6f",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Amount of silt used for bund making",
+  "uuid" : "a04d4178-497d-40ab-943a-588038b5bf6a",
+  "dataType" : "Numeric",
+  "unit" : "cu.m.",
+  "active" : true
+}, {
+  "name" : "Amount paid",
+  "uuid" : "cc509926-1652-4fc8-9e2a-c1e01e0035d5",
+  "dataType" : "Numeric",
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Amount paid, tractor trolley owner interaction",
+  "uuid" : "8963567b-6076-4ba7-8d0d-f974c59ae971",
+  "dataType" : "Numeric",
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Any plans to establish a committee for this WB",
+  "uuid" : "d54ae8d3-279d-45ff-bfc7-8d3429c87313",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Any water committee active",
+  "uuid" : "49e7824d-0f1a-45a7-97ee-861a5e394105",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Anyone including machine operator, site coordinator or any other NGO representative proposed for providing additional silt at an extra cost to you?",
+  "uuid" : "5b17327f-f909-455a-98d9-c9e6a37581a1",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "AOL",
+  "uuid" : "1320720b-8a22-4355-bddb-1ea4d38e275c",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "AOL Karnataka",
+  "uuid" : "57cff794-475b-4add-95fa-a2f249011603",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "AOL Latur",
+  "uuid" : "4b67067c-4847-4499-a0b1-d1c0f2c47fc2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "AOL Parbhani",
+  "uuid" : "d2b77462-17b8-4ff2-9185-19b9d6e436b2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "AOL RWB NITI",
+  "uuid" : "2f6c52fa-7dab-4b8d-90ff-df1343c40380",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Are machine start and end hour readings recorded",
+  "uuid" : "13ad3d37-19f5-4470-9df5-be623c20f22e",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Area already covered with silt",
+  "uuid" : "0ad3fabb-01dd-4de0-a137-7a05809daa05",
+  "dataType" : "Numeric",
+  "unit" : "acres",
+  "active" : true
+}, {
+  "name" : "Area covered by silt",
+  "uuid" : "4aa17f04-4302-4d22-af27-9aa7e9476a6e",
+  "dataType" : "Numeric",
+  "unit" : "acres",
+  "active" : true
+}, {
+  "name" : "Area to be covered with silt",
+  "uuid" : "557117b9-f92a-4408-9297-fddf17eb98ca",
+  "dataType" : "Numeric",
+  "unit" : "acres",
+  "active" : true
+}, {
+  "name" : "Arunoday",
+  "uuid" : "6a5d8a4a-a3b3-44dd-abb4-711d88f5018d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Arvind Singh Rajput",
+  "uuid" : "0322c367-7650-4e7f-a15d-4aa2f55bbbb2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Assumptions/ Calculation to estimating the silt",
+  "uuid" : "9789a20b-357b-4eae-9756-4867d97b8d13",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Availability of drinking water",
+  "uuid" : "e68e227c-5fc1-43fb-8fcd-a98fda353245",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Availability of first-aid facilities",
+  "uuid" : "a134f702-9cac-4cb8-b7a7-f25663027fb9",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Average hywas filled per hour",
+  "uuid" : "8f6372a9-2a8e-4b05-9902-4a41e0ac72f2",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Average number of hywas filled per hour, machine operator interaction",
+  "uuid" : "d351f0ed-1a72-4c57-9629-310fb0031e92",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Average number of trolleys filled per hour, machine operator interaction",
+  "uuid" : "e6eea3da-3b4a-4257-ab3d-86c2f303d8bd",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Average trolleys filled per hour",
+  "uuid" : "d00dbfab-db82-4bcc-8c2c-f832324870fe",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Bal govind Kr singh",
+  "uuid" : "2a0ef2db-7c5b-41bf-9ef9-6b6f0eb22618",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Bariyar Mahato",
+  "uuid" : "b2c0bd80-0bfe-4482-91ed-7972a5c88b68",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Barren",
+  "uuid" : "56bab187-29ab-48ee-a5f0-cda1939599f4",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Benefits of silt, according to the farmer",
+  "uuid" : "569a5338-8987-44b8-bde5-f3bef8d84cea",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Between 1 to 2  km",
+  "uuid" : "6099de54-7336-4097-b420-bc2598358df5",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Between 2 to 3 km",
+  "uuid" : "d7f18cce-6ca1-489f-b02e-d78a12d4b81f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Between 3 to 5 km",
+  "uuid" : "e918f284-0613-43b0-9dd6-49be5dc0c893",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Bhudev Mahatha",
+  "uuid" : "e6884201-bc54-49a5-a32c-22e1cffc47a9",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Bhuneshwar Mahto",
+  "uuid" : "386b63c9-4890-4879-8042-d88a6cd5709c",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Bintu Chandra Rajwar",
+  "uuid" : "3d399e2f-ec20-422c-b82a-47309047b787",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "BJS",
+  "uuid" : "da0cb181-bc7c-426b-a864-36b60f8b1c42",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Brief on the challenges",
+  "uuid" : "5363e01c-5db3-437f-b3fd-e172c5331e1b",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Bund Making",
+  "uuid" : "a99feaf0-2807-427a-bc04-cc5fbd7a3e2e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "CAF India",
+  "uuid" : "d132b57c-e951-4b9e-98cc-5655b0e7555b",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Capacity of Hyva (voided~73720)",
+  "uuid" : "1bc61158-9540-4819-b71a-cb5d3b6715e9",
+  "dataType" : "Numeric",
+  "unit" : " cu.m.",
+  "active" : true,
+  "voided" : true
+}, {
+  "name" : "Capacity of Hyva for family member 1 (voided~73992)",
+  "uuid" : "7dddd682-dbf0-48a6-a593-f2a4fe4a5fe8",
+  "dataType" : "Numeric",
+  "unit" : "cu.m.",
+  "active" : true,
+  "voided" : true
+}, {
+  "name" : "Capacity of hyva in cu.m. for family member 1",
+  "uuid" : "e795d919-e2be-4c8c-9ad8-fa37a352ed86",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "14",
+    "uuid" : "7c956ebb-acc0-41a0-afdc-c810ddba485a",
+    "order" : 0.0
+  }, {
+    "name" : "16",
+    "uuid" : "19286f0a-957c-4674-b9c9-42ac6c2476ce",
+    "order" : 1.0
+  }, {
+    "name" : "18",
+    "uuid" : "5404d563-5b50-47ae-a3f1-49c71496b3a2",
+    "order" : 2.0
+  }, {
+    "name" : "20",
+    "uuid" : "f6608f94-3bff-4a6d-a38b-ef14b1e40fa1",
+    "order" : 3.0
+  }, {
+    "name" : "25",
+    "uuid" : "68211d18-45fe-4053-9639-9480df9de238",
+    "order" : 4.0
+  } ],
+  "keyValues" : [ ]
+}, {
+  "name" : "Capacity of hyva in cu.m. for family member 2",
+  "uuid" : "d1b69f5a-b657-4ab3-8cdb-f18b5991b905",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "14",
+    "uuid" : "7c956ebb-acc0-41a0-afdc-c810ddba485a",
+    "order" : 0.0
+  }, {
+    "name" : "16",
+    "uuid" : "19286f0a-957c-4674-b9c9-42ac6c2476ce",
+    "order" : 1.0
+  }, {
+    "name" : "18",
+    "uuid" : "5404d563-5b50-47ae-a3f1-49c71496b3a2",
+    "order" : 2.0
+  }, {
+    "name" : "20",
+    "uuid" : "f6608f94-3bff-4a6d-a38b-ef14b1e40fa1",
+    "order" : 3.0
+  }, {
+    "name" : "25",
+    "uuid" : "68211d18-45fe-4053-9639-9480df9de238",
+    "order" : 4.0
+  } ]
+}, {
+  "name" : "Capacity of hyva in cu.m. for family member 3",
+  "uuid" : "cb76dfb5-923c-4422-a8ae-c556dbe9fd0a",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "14",
+    "uuid" : "7c956ebb-acc0-41a0-afdc-c810ddba485a",
+    "order" : 0.0
+  }, {
+    "name" : "16",
+    "uuid" : "19286f0a-957c-4674-b9c9-42ac6c2476ce",
+    "order" : 1.0
+  }, {
+    "name" : "18",
+    "uuid" : "5404d563-5b50-47ae-a3f1-49c71496b3a2",
+    "order" : 2.0
+  }, {
+    "name" : "20",
+    "uuid" : "f6608f94-3bff-4a6d-a38b-ef14b1e40fa1",
+    "order" : 3.0
+  }, {
+    "name" : "25",
+    "uuid" : "68211d18-45fe-4053-9639-9480df9de238",
+    "order" : 4.0
+  } ]
+}, {
+  "name" : "Capacity of hyva in cu.m. for family member 4",
+  "uuid" : "ddc4da07-02f4-4512-893b-a4256802e06c",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "14",
+    "uuid" : "7c956ebb-acc0-41a0-afdc-c810ddba485a",
+    "order" : 0.0
+  }, {
+    "name" : "16",
+    "uuid" : "19286f0a-957c-4674-b9c9-42ac6c2476ce",
+    "order" : 1.0
+  }, {
+    "name" : "18",
+    "uuid" : "5404d563-5b50-47ae-a3f1-49c71496b3a2",
+    "order" : 2.0
+  }, {
+    "name" : "20",
+    "uuid" : "f6608f94-3bff-4a6d-a38b-ef14b1e40fa1",
+    "order" : 3.0
+  }, {
+    "name" : "25",
+    "uuid" : "68211d18-45fe-4053-9639-9480df9de238",
+    "order" : 4.0
+  } ]
+}, {
+  "name" : "Capacity of hyva in cu.m. for family member 5",
+  "uuid" : "b0c42316-2b11-4385-a33b-a7cc4b1238eb",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "14",
+    "uuid" : "7c956ebb-acc0-41a0-afdc-c810ddba485a",
+    "order" : 0.0
+  }, {
+    "name" : "16",
+    "uuid" : "19286f0a-957c-4674-b9c9-42ac6c2476ce",
+    "order" : 1.0
+  }, {
+    "name" : "18",
+    "uuid" : "5404d563-5b50-47ae-a3f1-49c71496b3a2",
+    "order" : 2.0
+  }, {
+    "name" : "20",
+    "uuid" : "f6608f94-3bff-4a6d-a38b-ef14b1e40fa1",
+    "order" : 3.0
+  }, {
+    "name" : "25",
+    "uuid" : "68211d18-45fe-4053-9639-9480df9de238",
+    "order" : 4.0
+  } ]
+}, {
+  "name" : "Capacity of Hyva/Dumper in cu.m.",
+  "uuid" : "b1634598-6bea-4a6d-af7e-9808a751530b",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "14",
+    "uuid" : "7c956ebb-acc0-41a0-afdc-c810ddba485a",
+    "order" : 0.0
+  }, {
+    "name" : "16",
+    "uuid" : "19286f0a-957c-4674-b9c9-42ac6c2476ce",
+    "order" : 1.0
+  }, {
+    "name" : "18",
+    "uuid" : "5404d563-5b50-47ae-a3f1-49c71496b3a2",
+    "order" : 2.0
+  }, {
+    "name" : "20",
+    "uuid" : "f6608f94-3bff-4a6d-a38b-ef14b1e40fa1",
+    "order" : 3.0
+  }, {
+    "name" : "25",
+    "uuid" : "68211d18-45fe-4053-9639-9480df9de238",
+    "order" : 4.0
+  } ],
+  "keyValues" : [ ]
+}, {
+  "name" : "Capacity of hywas in cu.m.",
+  "uuid" : "88320765-b3f9-47bb-9ad8-db65c9bbda17",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "14",
+    "uuid" : "7c956ebb-acc0-41a0-afdc-c810ddba485a",
+    "order" : 0.0
+  }, {
+    "name" : "16",
+    "uuid" : "19286f0a-957c-4674-b9c9-42ac6c2476ce",
+    "order" : 1.0
+  }, {
+    "name" : "18",
+    "uuid" : "5404d563-5b50-47ae-a3f1-49c71496b3a2",
+    "order" : 2.0
+  }, {
+    "name" : "20",
+    "uuid" : "f6608f94-3bff-4a6d-a38b-ef14b1e40fa1",
+    "order" : 3.0
+  }, {
+    "name" : "25",
+    "uuid" : "68211d18-45fe-4053-9639-9480df9de238",
+    "order" : 4.0
+  } ]
+}, {
+  "name" : "Capacity of trolleys in cu.m.",
+  "uuid" : "62379fbe-8615-4e93-b194-ce1a1dbfbffd",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "2.2",
+    "uuid" : "e8306ab5-2c22-4565-b1a9-5a7491f97c8c",
+    "order" : 0.0
+  }, {
+    "name" : "2.5",
+    "uuid" : "248a4fa2-7d0c-4b14-8191-3ec9e787cfc8",
+    "order" : 1.0
+  }, {
+    "name" : "2.8",
+    "uuid" : "69e6a155-6bb4-4cf9-8dec-0b8057f1931f",
+    "order" : 2.0
+  }, {
+    "name" : "3.5",
+    "uuid" : "669cd23d-50b2-443c-8490-68525ec324ef",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Capacity of trolleys in cu.m. carted by family members",
+  "uuid" : "98d8c001-fa66-4aad-bc69-275ad311b0d0",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "2.2",
+    "uuid" : "e8306ab5-2c22-4565-b1a9-5a7491f97c8c",
+    "order" : 0.0
+  }, {
+    "name" : "2.5",
+    "uuid" : "248a4fa2-7d0c-4b14-8191-3ec9e787cfc8",
+    "order" : 1.0
+  }, {
+    "name" : "2.8",
+    "uuid" : "69e6a155-6bb4-4cf9-8dec-0b8057f1931f",
+    "order" : 2.0
+  }, {
+    "name" : "3.5",
+    "uuid" : "669cd23d-50b2-443c-8490-68525ec324ef",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Capacity of trolleys in cu.m. for family member 1",
+  "uuid" : "bf9cf644-396d-430c-aaab-b97d4190cfe6",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "2.2",
+    "uuid" : "e8306ab5-2c22-4565-b1a9-5a7491f97c8c",
+    "order" : 0.0
+  }, {
+    "name" : "2.5",
+    "uuid" : "248a4fa2-7d0c-4b14-8191-3ec9e787cfc8",
+    "order" : 1.0
+  }, {
+    "name" : "2.8",
+    "uuid" : "69e6a155-6bb4-4cf9-8dec-0b8057f1931f",
+    "order" : 2.0
+  }, {
+    "name" : "3.5",
+    "uuid" : "669cd23d-50b2-443c-8490-68525ec324ef",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Capacity of trolleys in cu.m. for family member 2",
+  "uuid" : "8af7c615-804d-46b7-93cc-61e99a068211",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "2.2",
+    "uuid" : "e8306ab5-2c22-4565-b1a9-5a7491f97c8c",
+    "order" : 0.0
+  }, {
+    "name" : "2.5",
+    "uuid" : "248a4fa2-7d0c-4b14-8191-3ec9e787cfc8",
+    "order" : 1.0
+  }, {
+    "name" : "2.8",
+    "uuid" : "69e6a155-6bb4-4cf9-8dec-0b8057f1931f",
+    "order" : 2.0
+  }, {
+    "name" : "3.5",
+    "uuid" : "669cd23d-50b2-443c-8490-68525ec324ef",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Capacity of trolleys in cu.m. for family member 3",
+  "uuid" : "344d81ef-b52b-40d2-83fd-af0b9bb24a75",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "2.2",
+    "uuid" : "e8306ab5-2c22-4565-b1a9-5a7491f97c8c",
+    "order" : 0.0
+  }, {
+    "name" : "2.5",
+    "uuid" : "248a4fa2-7d0c-4b14-8191-3ec9e787cfc8",
+    "order" : 1.0
+  }, {
+    "name" : "2.8",
+    "uuid" : "69e6a155-6bb4-4cf9-8dec-0b8057f1931f",
+    "order" : 2.0
+  }, {
+    "name" : "3.5",
+    "uuid" : "669cd23d-50b2-443c-8490-68525ec324ef",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Capacity of trolleys in cu.m. for family member 4",
+  "uuid" : "977fad59-b013-4759-938e-113ae3fc1d51",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "2.2",
+    "uuid" : "e8306ab5-2c22-4565-b1a9-5a7491f97c8c",
+    "order" : 0.0
+  }, {
+    "name" : "2.5",
+    "uuid" : "248a4fa2-7d0c-4b14-8191-3ec9e787cfc8",
+    "order" : 1.0
+  }, {
+    "name" : "2.8",
+    "uuid" : "69e6a155-6bb4-4cf9-8dec-0b8057f1931f",
+    "order" : 2.0
+  }, {
+    "name" : "3.5",
+    "uuid" : "669cd23d-50b2-443c-8490-68525ec324ef",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Capacity of trolleys in cu.m. for family member 5",
+  "uuid" : "1fdcc6a5-d59d-4540-966f-2242cb2136c1",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "2.2",
+    "uuid" : "e8306ab5-2c22-4565-b1a9-5a7491f97c8c",
+    "order" : 0.0
+  }, {
+    "name" : "2.5",
+    "uuid" : "248a4fa2-7d0c-4b14-8191-3ec9e787cfc8",
+    "order" : 1.0
+  }, {
+    "name" : "2.8",
+    "uuid" : "69e6a155-6bb4-4cf9-8dec-0b8057f1931f",
+    "order" : 2.0
+  }, {
+    "name" : "3.5",
+    "uuid" : "669cd23d-50b2-443c-8490-68525ec324ef",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Capture Images for usage of silt 1",
+  "uuid" : "7858d7df-014f-418b-8c55-ec8cf3bead15",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Capture Images for usage of silt 2",
+  "uuid" : "89ca0e82-50a7-4ca8-9d33-89af4f01645d",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Cash",
+  "uuid" : "ae773de7-4ed7-497b-a3d7-c43340221a17",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Category of farmer",
+  "uuid" : "afc7de39-650e-442d-9818-ae12448041d7",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Marginal (0-2.49 acres)",
+    "uuid" : "d788c182-e7de-48ea-a23a-cef038c588c2",
+    "order" : 0.0
+  }, {
+    "name" : "Small (2.5-4.99 acres)",
+    "uuid" : "003458ff-be84-4937-9c44-636819ec3738",
+    "order" : 1.0
+  }, {
+    "name" : "Semi-medium (5-9.55 acres)",
+    "uuid" : "0af46156-3b27-4feb-9a0f-7930772d45b6",
+    "order" : 2.0
+  }, {
+    "name" : "Medium (10-24.99 acres)",
+    "uuid" : "e67585a0-0a7d-4976-aabe-04e38069149f",
+    "order" : 3.0
+  }, {
+    "name" : "Large (above 25 acres)",
+    "uuid" : "3f88926b-0bbd-4dc3-aca8-b8ad5ad30ab0",
+    "order" : 4.0
+  } ]
+}, {
+  "name" : "Challenges faced by site",
+  "uuid" : "7f2f78b6-c111-475a-a7a4-5decc3329a01",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Resistance from farmer",
+    "uuid" : "c8cf62e9-11af-4de7-9786-bb420d0b7da5",
+    "order" : 0.0
+  }, {
+    "name" : "Less Demand",
+    "uuid" : "2cd6b416-4c8d-478e-a44c-88ee4f80def6",
+    "order" : 1.0
+  }, {
+    "name" : "Challenges from government officials",
+    "uuid" : "a0e8b194-1e36-47a3-b490-35797e10026d",
+    "order" : 2.0
+  }, {
+    "name" : "Machine Availability",
+    "uuid" : "87cc88b2-5e24-425d-8376-49a77df392fd",
+    "order" : 3.0
+  }, {
+    "name" : "No challenges",
+    "uuid" : "4ea31b99-63e7-4632-bb2e-5aac28c20331",
+    "unique" : true,
+    "order" : 4.0
+  }, {
+    "name" : "Other",
+    "uuid" : "0a09f401-14e4-41bb-a1a6-c25dbc5e0733",
+    "order" : 5.0
+  } ]
+}, {
+  "name" : "Challenges faced during the interview",
+  "uuid" : "4bcbb98d-4689-46a8-99c2-97790f130287",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Challenges faced during the review",
+  "uuid" : "b2d461f9-8db7-41e4-a0eb-023983b0e486",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Challenges from government officials",
+  "uuid" : "a0e8b194-1e36-47a3-b490-35797e10026d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Cheque",
+  "uuid" : "4fe1e6af-f8ca-46f4-91e6-0e588755e4ae",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Chiranjit Mukharjee",
+  "uuid" : "b74054d2-30e7-4072-96e3-0dbfe10dea9a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Clarity - GP clear about RWB",
+  "uuid" : "74ff2ca6-0e59-49b7-bb7c-b6e61013ad4a",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Collective Group",
+  "uuid" : "9c6997ba-6676-4b71-868d-321d78b26538",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Comments",
+  "uuid" : "45dd32cc-16a0-4ae3-ada2-1cbd887b6bec",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Common place in village",
+  "uuid" : "d7fc9d24-4228-492a-9555-5891c0699b71",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Contact number of PoC for committee",
+  "uuid" : "49859ba5-b7ba-4f0e-913a-3a4bdc22ce93",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Contact number of PoC for GP",
+  "uuid" : "63ef1694-2037-41c3-aa65-fec221999d3c",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Contact number of Point of Contact",
+  "uuid" : "36244e72-5d99-46e6-9352-9733a4c9a8c3",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Contractor's Mobile number",
+  "uuid" : "64ac503c-47ba-4489-82c7-172d7b80c1f9",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Contractor's name",
+  "uuid" : "38b8f175-35fa-4338-a564-5cc9165d68ec",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Crops grown by the farmer",
+  "uuid" : "d2088a63-ace4-4d0f-91b0-ee0e3a636ecb",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Dam",
+  "uuid" : "c771f002-ba51-4dae-8425-8c28f82a2e73",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Data is correct",
+  "uuid" : "a68162b4-2617-4329-b0fa-a503c512f7fb",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Date of data recording",
+  "uuid" : "0fe998c1-886f-42f6-93ee-ea5e978badb1",
+  "dataType" : "Date",
+  "active" : true
+}, {
+  "name" : "Deepak Kumar",
+  "uuid" : "e39db4db-1cf0-49aa-b7fc-2a1652d12afd",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Deepak Panday",
+  "uuid" : "ef1a5e84-3c2b-4791-aef1-daf01bac3c88",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Desilting site",
+  "uuid" : "3879c66e-d5c3-469c-9f98-bbfa20732f47",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Deviations found",
+  "uuid" : "acc116df-89b7-4052-ac0c-9f7716e7687b",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "df (voided~127972)",
+  "uuid" : "cc10f63f-bf1d-41eb-9fee-0afe55bd5ff2",
+  "dataType" : "Text",
+  "active" : true,
+  "voided" : true
+}, {
+  "name" : "Dhaneswar Mahato",
+  "uuid" : "afeef5b9-076c-4f28-a39a-274da72d0ce0",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Dhara Sansthan",
+  "uuid" : "6e7e7179-723c-413d-bf47-ba4aa460d836",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Dhiraj Giri",
+  "uuid" : "292e7753-8869-4c6d-804b-d465dac7b7ff",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Did farmer take the silt under program before this year?",
+  "uuid" : "28448f53-4dfa-476e-a002-30a7e8af79d0",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Diesel for machines provided at the site",
+  "uuid" : "9bb19735-942a-451a-8daf-29039ea8e001",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Diesel funds provided by",
+  "uuid" : "1525d258-1c74-4df0-959a-02898ec36313",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Donor",
+    "uuid" : "b3747a7b-c0e2-456c-8366-2bcbc912fb8f",
+    "order" : 0.0
+  }, {
+    "name" : "Government",
+    "uuid" : "1844678c-8f05-41bd-b120-6e715b0625fd",
+    "order" : 1.0
+  }, {
+    "name" : "Farmer",
+    "uuid" : "9c052913-2e30-40d3-a25b-f22c7ae81f38",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Diesel storage at the site",
+  "uuid" : "93032caf-502b-4cfb-a34d-5fc6526dc987",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Diesel storage duration",
+  "uuid" : "0c80b316-cf54-4475-a7ab-e52a7d47aa6d",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Diesel storage location",
+  "uuid" : "3ef74096-e73f-449b-b322-32bff0e9ba06",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Diesel storage medium",
+  "uuid" : "c0220314-60f6-4751-a47f-030bab4934f2",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Distance between the desilting site and farmland",
+  "uuid" : "2d105970-2492-4549-bb73-0d1c6a25be40",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Less than 1 km",
+    "uuid" : "2c375aee-1738-4f1c-9c2d-48bee0d034a8",
+    "order" : 0.0
+  }, {
+    "name" : "Between 1 to 2  km",
+    "uuid" : "6099de54-7336-4097-b420-bc2598358df5",
+    "order" : 1.0
+  }, {
+    "name" : "Between 2 to 3 km",
+    "uuid" : "d7f18cce-6ca1-489f-b02e-d78a12d4b81f",
+    "order" : 2.0
+  }, {
+    "name" : "Between 3 to 5 km",
+    "uuid" : "e918f284-0613-43b0-9dd6-49be5dc0c893",
+    "order" : 3.0
+  }, {
+    "name" : "Less than 5km",
+    "uuid" : "8b3c4edd-cb2b-4d20-94e6-0a5259b915ac",
+    "order" : 4.0
+  } ]
+}, {
+  "name" : "Distance from farm",
+  "uuid" : "3e7fd6b7-ecf3-4808-9e37-54653e2f0f8f",
+  "dataType" : "Numeric",
+  "unit" : "km",
+  "active" : true
+}, {
+  "name" : "Distance from waterbody",
+  "uuid" : "fec14f82-4900-4ee1-a77c-1133e46316b5",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "0-1 Km",
+    "uuid" : "1f7f57c8-d454-4c5e-8336-789451335cb6",
+    "order" : 0.0
+  }, {
+    "name" : "2-3 Km",
+    "uuid" : "e1ea6e8d-a266-4677-a9ff-dd756ce2451a",
+    "order" : 1.0
+  }, {
+    "name" : "4-5 Km",
+    "uuid" : "414768b2-4c4d-4b6d-8f39-f285bced3545",
+    "order" : 2.0
+  }, {
+    "name" : ">5 Km",
+    "uuid" : "bcf21c8b-680c-42e6-8b59-cdd233c8a6ac",
+    "order" : 3.0
+  } ],
+  "keyValues" : [ ]
+}, {
+  "name" : "Dleep K. Soren",
+  "uuid" : "75de198e-c786-4d22-bcaa-deba1f69daf4",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Donor",
+  "uuid" : "b3747a7b-c0e2-456c-8366-2bcbc912fb8f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Dugwell",
+  "uuid" : "965337c3-e001-489b-b17c-6d52b644075f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "End time for desilting work",
+  "uuid" : "5203e625-bbfa-44ed-bfed-815e03c14f5a",
+  "dataType" : "DateTime",
+  "active" : true
+}, {
+  "name" : "End time for desilting work at the site",
+  "uuid" : "8c2310d1-cfb7-4bd4-b5af-28e196e4df0c",
+  "dataType" : "DateTime",
+  "active" : true
+}, {
+  "name" : "End time for desilting work at the site, tractor trolley owner interaction",
+  "uuid" : "d7dd13cf-a4d8-4a06-bfec-0d98802d6641",
+  "dataType" : "DateTime",
+  "active" : true
+}, {
+  "name" : "Established any water committee",
+  "uuid" : "d9c6617c-e87d-4f44-90f2-e59e2725b928",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Estimated number of households to be benefited",
+  "uuid" : "b8bb3ed5-f69b-4a3a-8440-add1b4db01ba",
+  "dataType" : "Numeric",
+  "highAbsolute" : 99.0,
+  "active" : true
+}, {
+  "name" : "Estimated population",
+  "uuid" : "13fcaf93-5dea-4977-9fd6-42fc331e78e1",
+  "dataType" : "Numeric",
+  "highAbsolute" : 9999.0,
+  "active" : true
+}, {
+  "name" : "Estimated quantity of Silt",
+  "uuid" : "b7ea424d-be0b-4f50-a7d7-67429b17fb92",
+  "dataType" : "Numeric",
+  "unit" : "cu.m.",
+  "active" : true
+}, {
+  "name" : "Excavating Machine",
+  "uuid" : "14b70adc-847d-4b5e-808f-d6d24b4b3279",
+  "dataType" : "Subject",
+  "active" : true,
+  "keyValues" : [ {
+    "key" : "subjectTypeUUID",
+    "value" : "561ddbf6-3a6d-4088-a369-514dcfc44f19"
+  } ]
+}, {
+  "name" : "Family members carting silt under the farmers name",
+  "uuid" : "20157210-7101-4eaa-8875-f993e52e01a9",
+  "dataType" : "Numeric",
+  "highAbsolute" : 99.0,
+  "active" : true
+}, {
+  "name" : "Farmer",
+  "uuid" : "9c052913-2e30-40d3-a25b-f22c7ae81f38",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Farmer contribution per trolley",
+  "uuid" : "8e60502e-3a14-4b64-bba3-4fbbdcfd2983",
+  "dataType" : "Numeric",
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Farmer involvement",
+  "uuid" : "793abac8-02c6-458c-a14d-d8f49b4f3e7f",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Farmer/Beneficiary",
+  "uuid" : "ba36fe5a-a3ef-4c79-a4d4-bc9c6a6c8532",
+  "dataType" : "Subject",
+  "active" : true,
+  "keyValues" : [ {
+    "key" : "subjectTypeUUID",
+    "value" : "73271784-512d-4435-8dc8-0f102b99d682"
+  } ]
+}, {
+  "name" : "Farmland of farmer",
+  "uuid" : "aa3141fa-77c2-4761-af25-e259c7f9be94",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Female",
+  "uuid" : "a6548912-1705-4075-a346-e16f08d9d5f3",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Fertile",
+  "uuid" : "c66691ef-5dbc-4053-b9dd-f13a54b09a78",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "FES",
+  "uuid" : "9aa71882-6125-4266-8a31-31b5166769dc",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "GCK",
+  "uuid" : "054d53d2-a417-4de5-a62f-9265bfcbd5bf",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Gender",
+  "uuid" : "1a49e708-4fb9-4246-9bc7-73e4644014a5",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Male",
+    "uuid" : "e4d500d2-0924-4078-88cc-896cb1e0953e",
+    "order" : 0.0
+  }, {
+    "name" : "Female",
+    "uuid" : "a6548912-1705-4075-a346-e16f08d9d5f3",
+    "order" : 1.0
+  }, {
+    "name" : "Other",
+    "uuid" : "0a09f401-14e4-41bb-a1a6-c25dbc5e0733",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Giridih District Administration",
+  "uuid" : "69cc67b0-ab9b-4072-ae41-99b95997c375",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Gouri sankar Murmu",
+  "uuid" : "c2651efd-40aa-4338-9a14-db98caee9154",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Government",
+  "uuid" : "1844678c-8f05-41bd-b120-6e715b0625fd",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "GPS Coordinates of the site, Latitude",
+  "uuid" : "9090ce98-5b2a-4619-8cc2-3c65a458d38f",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "GPS Coordinates of the site, Longitude",
+  "uuid" : "0a2dee94-6b21-4d41-b187-7140d3c93b5e",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Gram Panchayat",
+  "uuid" : "e286903c-8c23-4d58-8439-0678c8b81cfc",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Gram Vikas",
+  "uuid" : "b7db18e0-b347-4556-ae56-74f296359b62",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Gramin Swades",
+  "uuid" : "69d22103-0e3d-4f3e-8aff-d1208388cdb8",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Gravis",
+  "uuid" : "bc9ae91a-52b4-42eb-a235-f5a52cdc1ab8",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "HARITIKA",
+  "uuid" : "355f6e3d-4bfd-4ecd-8d0c-32770d190021",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Home of farmer",
+  "uuid" : "50d2a947-48e3-432e-a708-a301dc78c4d5",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "How did the farmer know about the program?",
+  "uuid" : "48d727f7-2657-4577-85e1-4a7e9f553f92",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "How is the NGO allocating silt quantity to the farmers?",
+  "uuid" : "6a9dcbe1-64f4-4a10-b2e2-cea1abef94a8",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "How the rent of the machine is paid",
+  "uuid" : "2916893c-f276-4b5e-9016-204fdeb394cd",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Per hour",
+    "uuid" : "b9793695-71e7-4ac5-92b5-9b76450a6149",
+    "order" : 0.0
+  }, {
+    "name" : "Per trolley",
+    "uuid" : "e9278f73-54cc-41e4-9159-301ac3240c8a",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "How will you execute the silt usage plans",
+  "uuid" : "2aedfdd2-6780-4bb8-9a1f-fa6e156ec323",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Hywa",
+  "uuid" : "4f65555d-7070-4c8e-8b42-c9eca1ea5ad8",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "If no, duration of filling the data templates",
+  "uuid" : "8e754e31-481c-4572-a6bc-007c844df68a",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Image - Farmland",
+  "uuid" : "fa171bc5-81b9-4842-8014-b3449f069889",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Image - Machine",
+  "uuid" : "1002cd03-85e7-49bd-9a40-4ef0fff796c0",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Image - Monitoring Templates",
+  "uuid" : "d3167c33-96a2-4909-b482-cdc1b9c877e4",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Image - Site",
+  "uuid" : "c7b855bc-fa15-4f60-bae7-46b3e10cb431",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Image - Village",
+  "uuid" : "497dafd9-7207-42c1-b800-0f7f9d4eba9b",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Image 1 of the site",
+  "uuid" : "2d9f1f02-d5ba-485b-a2b0-06a68cd28e41",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Image 2 of the site",
+  "uuid" : "bcdcc8bb-5308-4348-bf4b-02303ae6a853",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Image 3 of the site",
+  "uuid" : "c1801d0c-1d84-46f7-9a62-daaf12e22336",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Image of farmer with the farm",
+  "uuid" : "193469b7-5f1d-4acb-9b77-eef0a2b8cc32",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Image of MB recording",
+  "uuid" : "b48274f3-e71f-4e0e-9ec3-7f7fbe2a40b0",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Image of the farmer with his/her farm",
+  "uuid" : "e4a59e54-058f-4634-93dd-3d36a5439b01",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Increase in income",
+  "uuid" : "fff49051-69ed-4655-b9d4-e93f767df5ce",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Increase in productivity",
+  "uuid" : "57821286-0950-4133-93e2-bc70db871080",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Individually",
+  "uuid" : "308c40ab-626c-4dac-be55-ce24393ed985",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "INR 500 collected during registration",
+  "uuid" : "d5f19bf8-6d39-4d8f-a31a-d7b406a2a193",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "INR/Day",
+  "uuid" : "d59c283a-3f54-4524-89cf-25beffd623b7",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "INR/KM",
+  "uuid" : "07b56d22-fe66-442d-ad53-3b7945af5f6d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "INR/Trip",
+  "uuid" : "38923e7a-e982-48f2-af06-d9bb98b7c193",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Is Aadhar card or Voter Id available",
+  "uuid" : "3b4b1f6b-61ed-4329-b799-0fda7d53057d",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Aadhar card",
+    "uuid" : "c9d2309e-7282-4c8b-8f23-1e58845a753f",
+    "order" : 0.0
+  }, {
+    "name" : "Voter ID",
+    "uuid" : "9d626a7a-92a0-4d0d-b9c5-f55012242b42",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Is farmer taking silt from other source",
+  "uuid" : "85682fc4-f2ec-44b2-aed9-559e5aac2d49",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Is MB recording data same as App data",
+  "uuid" : "70174e57-a0c1-4980-8de1-53e5695ff97e",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Is MB recording data same as app data",
+  "uuid" : "63348d28-956f-4ffe-a7e8-d85b96c886fa",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "JCB",
+  "uuid" : "831d8c1b-62e9-49d8-b861-747a00f32d80",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Jitram Murmu",
+  "uuid" : "f62c440a-460b-4e49-8430-88b1c4e42a06",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Kailash parasad",
+  "uuid" : "cd08ecff-fecd-4053-a74f-7cb9cf32dac9",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Karan Giri",
+  "uuid" : "eb9d800f-b7d3-4477-a584-a3c0f54541f1",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Krishna Mahto",
+  "uuid" : "3dcb3fc6-acb7-4c0b-ba69-a5ae9235b788",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "KSWF",
+  "uuid" : "467e903f-cadf-4aca-a0c0-25504f516f76",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Land holding",
+  "uuid" : "19778a2e-3397-4e79-8a31-9341dc50f336",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Landholding",
+  "uuid" : "65826c46-e1a8-4976-8acf-417f563d64f8",
+  "dataType" : "Numeric",
+  "unit" : "acres",
+  "active" : true
+}, {
+  "name" : "Landholding of family member taking silt 1",
+  "uuid" : "274f411a-e377-414e-9489-00bc02c3497d",
+  "dataType" : "Numeric",
+  "unit" : "acres",
+  "active" : true
+}, {
+  "name" : "Landholding of family member taking silt 2",
+  "uuid" : "76e0f099-deb3-4e19-b4d6-377eab83b33a",
+  "dataType" : "Numeric",
+  "unit" : "acres",
+  "active" : true
+}, {
+  "name" : "Landholding of family member taking silt 3",
+  "uuid" : "e65d7496-cb95-471e-8482-ffe1f8a98d95",
+  "dataType" : "Numeric",
+  "unit" : "acres",
+  "active" : true
+}, {
+  "name" : "Landholding of family member taking silt 4",
+  "uuid" : "a8b86af4-66da-4fc0-89d5-3adbaef652e0",
+  "dataType" : "Numeric",
+  "unit" : "acres",
+  "active" : true
+}, {
+  "name" : "Landholding of family member taking silt 5",
+  "uuid" : "8d7d4b38-5f01-401b-99a0-1ccc4934c91f",
+  "dataType" : "Numeric",
+  "unit" : "acres",
+  "active" : true
+}, {
+  "name" : "Landholding of the family members",
+  "uuid" : "3f171488-b62d-4d24-87f9-06e2115e85dc",
+  "dataType" : "Numeric",
+  "unit" : "acres",
+  "active" : true
+}, {
+  "name" : "Large (above 25 acres)",
+  "uuid" : "3f88926b-0bbd-4dc3-aca8-b8ad5ad30ab0",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "lead",
+  "uuid" : "370b441c-9432-4d1c-84f1-f8653bcf152c",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "LEADS",
+  "uuid" : "23c7e2a5-ec0e-4277-a162-6a6cd96e32f9",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Less Demand",
+  "uuid" : "2cd6b416-4c8d-478e-a44c-88ee4f80def6",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Less than 1 km",
+  "uuid" : "2c375aee-1738-4f1c-9c2d-48bee0d034a8",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Less than 5km",
+  "uuid" : "8b3c4edd-cb2b-4d20-94e6-0a5259b915ac",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Leveraged Schemes",
+  "uuid" : "cf31c0bb-2522-4847-86f3-205f042617ec",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Local Name of Waterbody",
+  "uuid" : "0217e676-9e09-42a5-8b93-705d90a0623f",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Location of the interaction with the farmer",
+  "uuid" : "7e47d561-191a-40b2-87d3-694d73f9ca25",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Home of farmer",
+    "uuid" : "50d2a947-48e3-432e-a708-a301dc78c4d5",
+    "order" : 0.0
+  }, {
+    "name" : "Farmland of farmer",
+    "uuid" : "aa3141fa-77c2-4761-af25-e259c7f9be94",
+    "order" : 1.0
+  }, {
+    "name" : "Desilting site",
+    "uuid" : "3879c66e-d5c3-469c-9f98-bbfa20732f47",
+    "order" : 2.0
+  }, {
+    "name" : "Common place in village",
+    "uuid" : "d7fc9d24-4228-492a-9555-5891c0699b71",
+    "order" : 3.0
+  }, {
+    "name" : "Other",
+    "uuid" : "0a09f401-14e4-41bb-a1a6-c25dbc5e0733",
+    "order" : 4.0
+  } ]
+}, {
+  "name" : "Location of the interaction with the farmer (voided~83772)",
+  "uuid" : "339204d5-d5d0-4375-b82b-a45df7f4c0ea",
+  "dataType" : "Text",
+  "active" : true,
+  "voided" : true
+}, {
+  "name" : "Log book image 1",
+  "uuid" : "f0459939-5094-46ed-a387-c5b6a3eb61a2",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Log book image 2",
+  "uuid" : "fc1b8968-4764-42de-9173-0506b6e5f32d",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Machine",
+  "uuid" : "1a4a2fa6-4099-4684-b7e5-a7d9e5cdee36",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Rented",
+    "uuid" : "005e5031-a2b9-4979-b267-50f678361612",
+    "order" : 0.0
+  }, {
+    "name" : "Owned by NGO",
+    "uuid" : "03bd73a8-5979-46d1-933b-38d037d9f9bd",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Machine Availability",
+  "uuid" : "87cc88b2-5e24-425d-8376-49a77df392fd",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Machine contractor agreement image",
+  "uuid" : "5ea2e6d7-3f92-4c51-8612-2b1d8591e22e",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Machine end hour reading",
+  "uuid" : "d16f745e-b185-4971-91e6-3c6110645938",
+  "dataType" : "Numeric",
+  "highAbsolute" : 999999.0,
+  "active" : true
+}, {
+  "name" : "Machine End Time",
+  "uuid" : "bde8b4d2-2b8c-4114-8898-36785b0de48d",
+  "dataType" : "DateTime",
+  "active" : true
+}, {
+  "name" : "Machine end time",
+  "uuid" : "0de026f4-ab45-4ad7-8152-59a99780c345",
+  "dataType" : "Time",
+  "active" : true
+}, {
+  "name" : "Machine hour reading when diesel filled",
+  "uuid" : "9d50d5a4-99f0-480f-abce-c2521496e997",
+  "dataType" : "Numeric",
+  "highAbsolute" : 999999.0,
+  "active" : true
+}, {
+  "name" : "Machine Registration number",
+  "uuid" : "45e6339f-672a-43cd-aa9f-65e5404231d8",
+  "dataType" : "Text",
+  "active" : true,
+  "keyValues" : [ ]
+}, {
+  "name" : "Machine Registration Number",
+  "uuid" : "2924bd06-24ff-43ee-bb3e-3de81017cab3",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Machine start hour reading",
+  "uuid" : "9da5e88f-1305-4338-9a2d-39cde0c9425e",
+  "dataType" : "Numeric",
+  "highAbsolute" : 999999.0,
+  "active" : true
+}, {
+  "name" : "Machine start time",
+  "uuid" : "e52c9dd5-5336-495f-bc6d-998af08fa5d6",
+  "dataType" : "Time",
+  "active" : true
+}, {
+  "name" : "Machine Start Time",
+  "uuid" : "79d9ac28-ad52-4290-b443-3a4829cf16ea",
+  "dataType" : "DateTime",
+  "active" : true
+}, {
+  "name" : "Maintenance plan for the WB",
+  "uuid" : "bd9389eb-1692-4b78-ae90-3e7f482983e1",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Major crops grown",
+  "uuid" : "9e5dc4c8-3c77-4b58-96c7-495adac4c9d5",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Major crops grown on the land",
+  "uuid" : "134757b4-7bcc-4969-9dd9-34bba9d91423",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Major crops to be grown on the land where silt is spread",
+  "uuid" : "485ffca5-3b20-4846-ac20-4f5ef8240117",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Make of machine",
+  "uuid" : "bf4f6f21-eff3-4b2b-90b2-be5f9a1561d9",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Male",
+  "uuid" : "e4d500d2-0924-4078-88cc-896cb1e0953e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Manavlok",
+  "uuid" : "d0d259a9-d13d-43e0-96bc-853de7d0e679",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Manoj k. Gosai",
+  "uuid" : "861880e2-3dad-42d6-8a6c-9ae52978eefd",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Manufacturing year of machine",
+  "uuid" : "1942ac8e-e9b4-4cb4-8b60-19caa4f0ae11",
+  "dataType" : "Numeric",
+  "unit" : "year",
+  "active" : true
+}, {
+  "name" : "Marginal (0-2.49 acres)",
+  "uuid" : "d788c182-e7de-48ea-a23a-cef038c588c2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "MB Recording done",
+  "uuid" : "2a60eeec-87e1-4c62-9fa6-062b3c5eca4d",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Md. Murshid Alam",
+  "uuid" : "1ca5d6f4-b800-483f-9a62-936ef4dba352",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Medium (10-24.99 acres)",
+  "uuid" : "e67585a0-0a7d-4976-aabe-04e38069149f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "MGNREGA card number or any other ID card number",
+  "uuid" : "1059d039-b5f1-49e5-83fc-ce9eb7e596eb",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "MGVS",
+  "uuid" : "dffea6c1-0ff3-41d4-bdb8-34d210d0e000",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "MI tank",
+  "uuid" : "ff3456c8-2244-47ba-8c64-911f13c42fae",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Milan Sen",
+  "uuid" : "e3e8eb11-c3a9-4245-af69-1025b51d540a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Mobile Number",
+  "uuid" : "660f6741-3ab2-4300-8404-397c4eb82d9e",
+  "dataType" : "PhoneNumber",
+  "active" : true,
+  "keyValues" : [ {
+    "key" : "verifyPhoneNumber",
+    "value" : true
+  } ]
+}, {
+  "name" : "Mobile Number of family member 1",
+  "uuid" : "7d1a0e7c-90e3-4f1e-a165-ae0effeb63d6",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Mobile Number of family member 2",
+  "uuid" : "bca04f41-0f61-4c8f-9eb1-c7c21acc075c",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Mobile Number of family member 3",
+  "uuid" : "0ecc6df1-e54b-48d8-aaa0-53337bf5fece",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Mobile Number of family member 4",
+  "uuid" : "9454b482-64b7-4072-ae8c-17b67b031b7a",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Mobile Number of family member 5",
+  "uuid" : "6b1d12d0-d5e3-4ebc-b3d8-16238602b9df",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Mobile number old",
+  "uuid" : "f11333cd-5103-4bce-88a4-61b063aa7695",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Mode of payment",
+  "uuid" : "9ed7963e-440d-435d-a3df-f88c0c87b50a",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Cash",
+    "uuid" : "ae773de7-4ed7-497b-a3d7-c43340221a17",
+    "order" : 0.0
+  }, {
+    "name" : "NEFT",
+    "uuid" : "0c737f33-84c6-455c-b776-e4f6e6c264ff",
+    "order" : 1.0
+  }, {
+    "name" : "Cheque",
+    "uuid" : "4fe1e6af-f8ca-46f4-91e6-0e588755e4ae",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Model of machine",
+  "uuid" : "3f5b39a1-26ee-4b9e-8dcf-b5e203e377c7",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Monitoring template maintained at the site",
+  "uuid" : "2cb0ab0b-96ed-4337-9784-91e4c8fb574d",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Monitoring templates present at the site",
+  "uuid" : "3263c0ce-e7ee-4b73-a704-65115e290871",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Mritunjay Kumar Mahtha",
+  "uuid" : "f6bc6667-558c-4bb6-91e7-da7398cd5f67",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "NA",
+  "uuid" : "e0af02cd-bf5d-4572-aaba-d2de266a624c",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Naala",
+  "uuid" : "9154c007-63f5-4184-8e82-44a7876ccec5",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Nalla",
+  "uuid" : "6729f01c-d1ca-4cb9-88cc-75fc948db38b",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Name of Gram Panchayat",
+  "uuid" : "a84f9054-a689-467f-8a2a-5b611b900001",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Name of PoC for GP",
+  "uuid" : "42408f72-71b7-494c-b6ce-9278cfa3970d",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Name of PoC for the committee",
+  "uuid" : "fc075ceb-2baa-44ef-a1ac-a3944f14cc64",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Name of Point of Contact for Gram Panchayat",
+  "uuid" : "6d6a2c4d-6d11-49af-8818-d135c22d797f",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Name of site coordinator at the site",
+  "uuid" : "42ceed96-8c65-4072-aadd-7d5b4ffb4731",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Name of the allied village 1",
+  "uuid" : "993684ea-a5c5-4d2e-a598-ade50bbc61a5",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Name of the allied village 2",
+  "uuid" : "62f00a60-c92c-4f1d-927c-9b11f1f7ce13",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Name of the allied village 3",
+  "uuid" : "9c3f303a-b4c9-4044-a948-d83814942a51",
+  "dataType" : "Text",
+  "active" : true,
+  "keyValues" : [ ]
+}, {
+  "name" : "Name of the allied village 3 (voided~122312)",
+  "uuid" : "a024aa13-f80a-4c99-bff0-3988385553c1",
+  "dataType" : "Numeric",
+  "active" : true,
+  "voided" : true
+}, {
+  "name" : "Name of the allied village 4",
+  "uuid" : "7d2e8f4e-c776-4f12-8695-6900ea10805d",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Name of the main village",
+  "uuid" : "fd64214b-1e09-4e8d-bbbb-ab0f47640eef",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Nav Bharat Jagriti Kendra",
+  "uuid" : "0641aad8-9e26-413e-a894-bca9cecfcb56",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "NBJK",
+  "uuid" : "51dba115-13ec-4772-b2f9-911926cf249a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "NEFT",
+  "uuid" : "0c737f33-84c6-455c-b776-e4f6e6c264ff",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Negotiation done by",
+  "uuid" : "5bba4016-bd0a-48c5-8494-dd6a0d7b2faa",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Individually",
+    "uuid" : "308c40ab-626c-4dac-be55-ce24393ed985",
+    "order" : 0.0
+  }, {
+    "name" : "Collective Group",
+    "uuid" : "9c6997ba-6676-4b71-868d-321d78b26538",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "No",
+  "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "No challenges",
+  "uuid" : "4ea31b99-63e7-4632-bb2e-5aac28c20331",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "NOC/Work order image",
+  "uuid" : "be0bc5f7-4e99-43b4-a0e3-e597eea6fa86",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Number of allied villages",
+  "uuid" : "16def34b-e7f0-4ade-8680-440dcd00863e",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "highAbsolute" : 4.0,
+  "lowNormal" : 0.0,
+  "highNormal" : 4.0,
+  "active" : true
+}, {
+  "name" : "Number of dependent family members",
+  "uuid" : "b8bed1c9-5133-4901-b754-9848ff32c339",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of family members who took silt",
+  "uuid" : "e4c97739-8e4a-41bf-83cf-ca940cc73e90",
+  "dataType" : "Numeric",
+  "highAbsolute" : 5.0,
+  "highNormal" : 5.0,
+  "active" : true
+}, {
+  "name" : "Number of farmers",
+  "uuid" : "add41132-2e69-47ad-9189-d7736ea995b0",
+  "dataType" : "Numeric",
+  "active" : true,
+  "keyValues" : [ ]
+}, {
+  "name" : "Number of hyvas/dumper  carted by family member 3",
+  "uuid" : "49d14135-19b5-4c10-8779-71a113d3ccae",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of hyvas/dumper  carted by family member 4",
+  "uuid" : "9522f549-d6fe-490b-a896-511805ce7690",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of hyvas/dumper  carted by family member 5",
+  "uuid" : "9b62b177-14d9-4e86-aa22-00024558a3cb",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of hyvas/dumper carted",
+  "uuid" : "0d1ed0d7-2c6b-419a-afb4-40b2550db7f0",
+  "dataType" : "Numeric",
+  "highAbsolute" : 999.0,
+  "active" : true
+}, {
+  "name" : "Number of hyvas/dumper carted by family member 1",
+  "uuid" : "50511a85-3b56-48f1-b33b-0066fb3dcbb8",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of hyvas/dumper carted by family member 2",
+  "uuid" : "2bef459a-960c-4ab1-bf8b-9bb4b288ebb5",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of hyvas/dumper carted by family members",
+  "uuid" : "5554fd2e-a4a0-49a7-809c-97f252ba6700",
+  "dataType" : "Numeric",
+  "highAbsolute" : 999.0,
+  "active" : true
+}, {
+  "name" : "Number of hywas required",
+  "uuid" : "19403ec0-0813-40a6-a741-54aae61589a8",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of machine",
+  "uuid" : "fae4d947-f1b0-45a0-b634-562a4d1893f9",
+  "dataType" : "Numeric",
+  "active" : true,
+  "keyValues" : [ ]
+}, {
+  "name" : "Number of MB recordings done at the site since start of work",
+  "uuid" : "b85f322f-96f3-4be7-b66e-39bf75e3d6ee",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of Sub-units to vary depending upon the number of family members",
+  "uuid" : "fef9c6d1-e8b5-4751-94ff-a9d437be592a",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of times diesel has been filled in the machine",
+  "uuid" : "cf84dcab-f079-4ce1-8fcb-035f3bf7376b",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Number of times diesel has been filled in the machine (voided~83694)",
+  "uuid" : "2e1ad888-d91f-4367-bd06-c4bd51993409",
+  "dataType" : "Numeric",
+  "active" : true,
+  "voided" : true
+}, {
+  "name" : "Number of trolleys carted",
+  "uuid" : "584fe343-02f0-4977-9034-5fc87d40bbf1",
+  "dataType" : "Numeric",
+  "highAbsolute" : 999.0,
+  "active" : true
+}, {
+  "name" : "Number of trolleys carted by family member 1",
+  "uuid" : "15812127-c3dc-4202-b01a-9553047fbe91",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of trolleys carted by family member 2",
+  "uuid" : "86358524-db55-4bf6-930b-277568ac5b6d",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of trolleys carted by family member 3",
+  "uuid" : "4fd9ea9a-ceff-4e38-9a61-9ab69a72d434",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of trolleys carted by family member 4",
+  "uuid" : "70d5f68c-4eb7-4eb7-982b-cab91ce7f5b8",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of trolleys carted by family member 5",
+  "uuid" : "6951251a-8eb1-47e7-92d6-e3fc0abf42de",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of trolleys carted by family members",
+  "uuid" : "c6e8e14d-6151-49cb-860b-e2fc6f1c628f",
+  "dataType" : "Numeric",
+  "highAbsolute" : 999.0,
+  "active" : true
+}, {
+  "name" : "Number of trolleys required",
+  "uuid" : "3829f6c5-fa18-4f75-8ccb-87be38b7a8a5",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of trolleys/ hywa taken by family member 1",
+  "uuid" : "6de50245-44b1-4b0b-961e-b3854047bb41",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of trolleys/ hywa taken by family member 2",
+  "uuid" : "0553576b-0c96-45f5-bded-822d4dc4e4b2",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of trolleys/ hywa taken by family member 3",
+  "uuid" : "fee71630-b84b-4b2d-9c8f-7a0d07eaf62e",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of trolleys/ hywa taken by family member 4",
+  "uuid" : "0c570327-5863-439a-a8a0-1cb3f403fb32",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of trolleys/ hywa taken by family member 5",
+  "uuid" : "1e460d2d-3f30-4c94-ba40-0e61a3c76b13",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Observation brief",
+  "uuid" : "5f988b8b-dbd5-4085-bb8b-f1f40f0002c9",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Observation title",
+  "uuid" : "f3e75143-ffd0-48e5-9733-4f22c411b5da",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Observations based on MB recording data entries, MB recording details",
+  "uuid" : "91e33785-2233-4b11-860c-1d3ebc6abcd1",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Observations based on sample entries in app",
+  "uuid" : "46f3442f-6018-4f50-92d1-6aa84a881f58",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Observations based on sample entries in monitoring templates",
+  "uuid" : "7c7786bd-8178-48d7-803d-fa1caa2fe039",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Open well",
+  "uuid" : "88a181e0-f374-4b7d-b287-7192e48bb6d4",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Other",
+  "uuid" : "0a09f401-14e4-41bb-a1a6-c25dbc5e0733",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Other challenge faced by site",
+  "uuid" : "92f423a7-b8fe-4d09-b96d-6c2cf31e0ad5",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other location of interaction with farmer",
+  "uuid" : "040146c0-303f-45c1-a801-82ce73cef893",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other observation 1",
+  "uuid" : "55d4842e-d7ae-4cfb-bca5-37b177917047",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other observation 2",
+  "uuid" : "b30712b3-8ab1-476a-b36c-250c4aca12bb",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other observations",
+  "uuid" : "3bb27d2f-7401-470d-8825-330ce7feac05",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other Observations",
+  "uuid" : "8dbe11e5-476a-4819-9f4e-80957904e6ca",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other period/duration of diesel logbooks filled by site coordinator",
+  "uuid" : "2ebaec93-c734-4398-aa87-f784dda25ddc",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other period/duration of filling data in app",
+  "uuid" : "4e11216c-2b85-4da5-a941-3d85c69283fb",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other person responsible for the data entry in app",
+  "uuid" : "22d2f09e-cde7-44d0-8a4f-f079f666cfb2",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other person taking silt",
+  "uuid" : "2e8150be-19af-4b73-a96d-921ae7fb453d",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other purpose of carting silt",
+  "uuid" : "7ba0b900-67b0-4e80-a233-69fff7a5bc63",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other Source",
+  "uuid" : "8e67e961-1f5a-45ba-b771-121e2b322a4d",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other type of well",
+  "uuid" : "2c32a617-3e83-44d2-a724-46f0b23e29cc",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Owned by NGO",
+  "uuid" : "03bd73a8-5979-46d1-933b-38d037d9f9bd",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Owner of the well",
+  "uuid" : "d8801e99-760d-4831-a709-ca2346e7adca",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Parimal Ray",
+  "uuid" : "aec6bba1-909c-489f-a1fc-3e10e3ab0a95",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Partial",
+  "uuid" : "a0f9e7c6-6762-44a1-bf91-302490538942",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Pawan kumar",
+  "uuid" : "c4fe87d1-14e8-4004-b396-7d4c7c31d194",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Payment amount",
+  "uuid" : "b237bc40-9314-4e9f-8946-7371b179dc44",
+  "dataType" : "Numeric",
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Payment due",
+  "uuid" : "b6655877-f2af-47be-b3d1-3084d6c83515",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Payment made",
+  "uuid" : "93b8045a-95fa-4c47-a334-df72bc5c3f15",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  }, {
+    "name" : "Partial",
+    "uuid" : "a0f9e7c6-6762-44a1-bf91-302490538942",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Per hour",
+  "uuid" : "b9793695-71e7-4ac5-92b5-9b76450a6149",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Per trolley",
+  "uuid" : "e9278f73-54cc-41e4-9159-301ac3240c8a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Period/Duration of diesel logbooks filled by site coordinator",
+  "uuid" : "cb3f7e47-7aa3-44ba-b463-9f2a1ace3394",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Regularly",
+    "uuid" : "a6240609-ff85-43d5-9c17-c1c595567e65",
+    "order" : 0.0
+  }, {
+    "name" : "Other",
+    "uuid" : "0a09f401-14e4-41bb-a1a6-c25dbc5e0733",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Period/Duration of filling data in app",
+  "uuid" : "e2d10104-9b3c-4c18-b3be-5db50808733e",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Regularly",
+    "uuid" : "a6240609-ff85-43d5-9c17-c1c595567e65",
+    "order" : 0.0
+  }, {
+    "name" : "Other",
+    "uuid" : "0a09f401-14e4-41bb-a1a6-c25dbc5e0733",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Period/Duration of filling data in app (voided~83688)",
+  "uuid" : "c792c7ad-f3f2-4ec1-9b31-2983e744ba50",
+  "dataType" : "Text",
+  "active" : true,
+  "voided" : true
+}, {
+  "name" : "Permission letter image",
+  "uuid" : "6d9727d6-9c9e-496e-9d24-732dab34638f",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Person responsible for the data entry in app",
+  "uuid" : "c397775b-dbe4-46f5-a558-dfb36de3375b",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Site supervisors",
+    "uuid" : "dbe3e72a-0e28-4d37-9e19-4406e1e76339",
+    "order" : 0.0
+  }, {
+    "name" : "Project supervisors",
+    "uuid" : "3a53e44e-1d3f-4248-bbb3-2ec995ba9846",
+    "order" : 1.0
+  }, {
+    "name" : "lead",
+    "uuid" : "370b441c-9432-4d1c-84f1-f8653bcf152c",
+    "order" : 3.0
+  }, {
+    "name" : "Other",
+    "uuid" : "0a09f401-14e4-41bb-a1a6-c25dbc5e0733",
+    "order" : 4.0
+  } ]
+}, {
+  "name" : "Person responsible for the data entry in app (voided~83687)",
+  "uuid" : "44e4bbf0-8f08-4be5-8a8f-579c97ebfe90",
+  "dataType" : "Text",
+  "active" : true,
+  "voided" : true
+}, {
+  "name" : "Plot Leveling",
+  "uuid" : "15598f28-112d-43e6-b76d-86a2bae51fba",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Poclain",
+  "uuid" : "f21b1c40-2454-4673-b4cc-0544b791eb70",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Population of the allied village 1",
+  "uuid" : "6523f666-75f1-41ed-bc14-a3c4c437b858",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Population of the allied village 2",
+  "uuid" : "427127b6-7bfd-4cf2-8401-0c3617a7fad3",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Population of the allied village 3",
+  "uuid" : "b871a61b-48a6-49e0-8278-18485a6d145d",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Population of the allied village 4",
+  "uuid" : "1310f00b-7b64-460a-aade-bda6f927eba5",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Population of the main village",
+  "uuid" : "df88e8df-78c2-4d99-943c-e6525d72424c",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Post perspective image",
+  "uuid" : "4a4a8a10-b048-44b4-ae49-96d95b00a512",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Post work measurements image",
+  "uuid" : "e4af42a5-0344-44b6-80dd-81b0904f7e79",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Praveen Kumar",
+  "uuid" : "2e1c859a-3ce2-4d9d-bd72-09844caa7211",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Pre perspective image",
+  "uuid" : "0eaad1ad-28fd-4734-9078-dbc8819994b3",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Problems faced while carting silt",
+  "uuid" : "975a64c4-9136-4fe7-8c30-425ddf73e22c",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Project supervisors",
+  "uuid" : "3a53e44e-1d3f-4248-bbb3-2ec995ba9846",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "PT/Village pond",
+  "uuid" : "2c5c9d7f-0f7d-4890-9043-f6c2ba150cd8",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Puran Chandra Rajowar",
+  "uuid" : "e4c22cfa-5e33-449a-b165-507ba39b2a5d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Purpose of carting silt",
+  "uuid" : "6771609d-e2c4-4b13-9d0e-2c0f364ea653",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Agriculture",
+    "uuid" : "50ef3b8e-78aa-4948-ae7d-eb8c0899e18e",
+    "order" : 0.0
+  }, {
+    "name" : "Plot Leveling",
+    "uuid" : "15598f28-112d-43e6-b76d-86a2bae51fba",
+    "order" : 1.0
+  }, {
+    "name" : "Bund Making",
+    "uuid" : "a99feaf0-2807-427a-bc04-cc5fbd7a3e2e",
+    "order" : 2.0
+  }, {
+    "name" : "Road Construction",
+    "uuid" : "4e6f1ac9-bad1-40bb-afc9-1f70016d4fa2",
+    "order" : 3.0
+  }, {
+    "name" : "Other",
+    "uuid" : "0a09f401-14e4-41bb-a1a6-c25dbc5e0733",
+    "order" : 4.0
+  } ]
+}, {
+  "name" : "Quantity of diesel filled",
+  "uuid" : "176d5151-29aa-4c8c-a479-8349b55e4e6a",
+  "dataType" : "Numeric",
+  "highAbsolute" : 400.0,
+  "unit" : "ltrs",
+  "active" : true
+}, {
+  "name" : "Quantity of diesel filled in the machine",
+  "uuid" : "e3ff4a5c-4015-448b-862b-8dfcb9b0816c",
+  "dataType" : "Numeric",
+  "unit" : "ltr",
+  "active" : true
+}, {
+  "name" : "Raj Kumar Mahto",
+  "uuid" : "1ee240b6-83d7-4322-9f51-7d6c3343b4a1",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Rajesh k. Gupta",
+  "uuid" : "de52c9d0-f64e-4d2e-bce4-4f7b0da09789",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Rajgarh District Administration",
+  "uuid" : "2b5e696d-a131-4cb3-9c3d-26cc5d2b23e8",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Ranjit Rajwar",
+  "uuid" : "3e37f05a-d8cb-4900-9c12-c2e90f2c6d48",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Reason for not collecting registration fee",
+  "uuid" : "3783bccd-48ea-409a-8a29-d45a2760a7c0",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Regularly",
+  "uuid" : "a6240609-ff85-43d5-9c17-c1c595567e65",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Remarks",
+  "uuid" : "11e22c88-b032-45f9-a35c-49d38e793d09",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Rent for machine per hour",
+  "uuid" : "dd8e01c9-ad6b-4403-b15a-cda58216e4fa",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 200.0,
+  "highAbsolute" : 2000.0,
+  "lowNormal" : 200.0,
+  "highNormal" : 2000.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Rent for machine per trolley",
+  "uuid" : "2fc27901-fe58-4e82-8d70-e22c1ac4afb5",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 11.0,
+  "highAbsolute" : 199.0,
+  "lowNormal" : 11.0,
+  "highNormal" : 199.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Rent paid based",
+  "uuid" : "b08974c5-9e2e-4ef7-ab4d-53a5ad9ee806",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Per hour",
+    "uuid" : "b9793695-71e7-4ac5-92b5-9b76450a6149",
+    "order" : 0.0
+  }, {
+    "name" : "Per trolley",
+    "uuid" : "e9278f73-54cc-41e4-9159-301ac3240c8a",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Rent paid based, tractor trolley owner interaction",
+  "uuid" : "187238a1-31fe-4e10-8caa-c709c46270b1",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Per hour",
+    "uuid" : "b9793695-71e7-4ac5-92b5-9b76450a6149",
+    "order" : 0.0
+  }, {
+    "name" : "Per trolley",
+    "uuid" : "e9278f73-54cc-41e4-9159-301ac3240c8a",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Rent paid by",
+  "uuid" : "afde7b39-6d59-4615-9753-300d54feeb82",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "INR/Trip",
+    "uuid" : "38923e7a-e982-48f2-af06-d9bb98b7c193",
+    "order" : 0.0
+  }, {
+    "name" : "INR/KM",
+    "uuid" : "07b56d22-fe66-442d-ad53-3b7945af5f6d",
+    "order" : 1.0
+  }, {
+    "name" : "INR/Day",
+    "uuid" : "d59c283a-3f54-4524-89cf-25beffd623b7",
+    "order" : 2.0
+  }, {
+    "name" : "Other",
+    "uuid" : "0a09f401-14e4-41bb-a1a6-c25dbc5e0733",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Rented",
+  "uuid" : "005e5031-a2b9-4979-b267-50f678361612",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Resistance from farmer",
+  "uuid" : "c8cf62e9-11af-4de7-9786-bb420d0b7da5",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Responsible coordinator names",
+  "uuid" : "8d5b5b43-5538-40aa-b578-96d66675faa6",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Rishikul Ashram",
+  "uuid" : "081e7e52-6f6d-45c2-b31b-d5aa71306c25",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Ritesh K. Nishad",
+  "uuid" : "8d05d211-f175-46d2-8a0c-c7dfffb05504",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Road Construction",
+  "uuid" : "4e6f1ac9-bad1-40bb-afc9-1f70016d4fa2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Safety measures",
+  "uuid" : "4aba5eff-5d82-4ac8-86a7-0fc424aa1a6c",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "SaniRam Hansda",
+  "uuid" : "2e5d7c64-22d7-469e-866d-993fb36939e1",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Satish K. Mahato",
+  "uuid" : "8b54d7be-74f2-4638-8a2b-900267856f30",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Semi-medium (5-9.55 acres)",
+  "uuid" : "0af46156-3b27-4feb-9a0f-7930772d45b6",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Sevamandir",
+  "uuid" : "5e527aeb-b68a-44fe-b56e-9e63a8cf0230",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Silt carted by farmer - Capacity of hywas in cu.m.",
+  "uuid" : "5ceb5eb3-6f69-4c0b-898e-7ce7d543f296",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "14",
+    "uuid" : "7c956ebb-acc0-41a0-afdc-c810ddba485a",
+    "order" : 0.0
+  }, {
+    "name" : "16",
+    "uuid" : "19286f0a-957c-4674-b9c9-42ac6c2476ce",
+    "order" : 1.0
+  }, {
+    "name" : "18",
+    "uuid" : "5404d563-5b50-47ae-a3f1-49c71496b3a2",
+    "order" : 2.0
+  }, {
+    "name" : "20",
+    "uuid" : "f6608f94-3bff-4a6d-a38b-ef14b1e40fa1",
+    "order" : 3.0
+  }, {
+    "name" : "25",
+    "uuid" : "68211d18-45fe-4053-9639-9480df9de238",
+    "order" : 4.0
+  } ]
+}, {
+  "name" : "Silt carted by farmer - Number of hywas",
+  "uuid" : "d813fcad-f940-475b-a718-ab62230f9d3f",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Silt carted by farmer - Number of trolleys",
+  "uuid" : "9f713f35-3fa7-4f98-b4b9-c5be0e8812b1",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Silt carted by farmer as per data",
+  "uuid" : "788eb5c1-5350-47d4-99f0-767fcdad972a",
+  "dataType" : "Numeric",
+  "unit" : "cu.m.",
+  "active" : true
+}, {
+  "name" : "Silt carted by farmer as per interaction",
+  "uuid" : "fe241a65-364c-4a16-99f5-7d6853c6cd19",
+  "dataType" : "Numeric",
+  "unit" : "cu.m.",
+  "active" : true
+}, {
+  "name" : "Silt excavated as per MB recording",
+  "uuid" : "e0019970-a7c0-423c-876c-d607c9acd36b",
+  "dataType" : "Numeric",
+  "unit" : "cu.m.",
+  "active" : true
+}, {
+  "name" : "Silt requested by the farmer - Capacity of hywas in cu.m.",
+  "uuid" : "4d1ee0a3-f9b0-473a-bbd6-79dd1f0d7562",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "14",
+    "uuid" : "7c956ebb-acc0-41a0-afdc-c810ddba485a",
+    "order" : 0.0
+  }, {
+    "name" : "16",
+    "uuid" : "19286f0a-957c-4674-b9c9-42ac6c2476ce",
+    "order" : 1.0
+  }, {
+    "name" : "18",
+    "uuid" : "5404d563-5b50-47ae-a3f1-49c71496b3a2",
+    "order" : 2.0
+  }, {
+    "name" : "20",
+    "uuid" : "f6608f94-3bff-4a6d-a38b-ef14b1e40fa1",
+    "order" : 3.0
+  }, {
+    "name" : "25",
+    "uuid" : "68211d18-45fe-4053-9639-9480df9de238",
+    "order" : 4.0
+  } ]
+}, {
+  "name" : "Silt requested by the farmer - Number of hywas",
+  "uuid" : "f5857f8e-32e1-436f-ad53-5632296cb048",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Silt requested by the farmer - Number of trolleys",
+  "uuid" : "a974588d-fea7-4ad8-87a9-3d3acd0a29b9",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Silt taken by",
+  "uuid" : "54e7ad6d-f13c-4de4-a941-edcfc35a41fe",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Farmer",
+    "uuid" : "9c052913-2e30-40d3-a25b-f22c7ae81f38",
+    "order" : 0.0
+  }, {
+    "name" : "Gram Panchayat",
+    "uuid" : "e286903c-8c23-4d58-8439-0678c8b81cfc",
+    "order" : 1.0
+  }, {
+    "name" : "Other",
+    "uuid" : "0a09f401-14e4-41bb-a1a6-c25dbc5e0733",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Silt to be excavated as per plan",
+  "uuid" : "28158af0-efa7-42a6-b026-6eeb68d84ecc",
+  "dataType" : "Numeric",
+  "highAbsolute" : 999999.0,
+  "unit" : "cu.m.",
+  "active" : true
+}, {
+  "name" : "Silt usage plans",
+  "uuid" : "a691f079-3028-4307-a008-1ced6a575ee4",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Site coordinator present at the site",
+  "uuid" : "66e49279-aae3-4476-a693-31d7826cb33b",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Site marking image",
+  "uuid" : "7472173c-d3a2-425d-bd46-25fb046dfa5e",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Site supervisors",
+  "uuid" : "dbe3e72a-0e28-4d37-9e19-4406e1e76339",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Small (2.5-4.99 acres)",
+  "uuid" : "003458ff-be84-4937-9c44-636819ec3738",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "SRIJAN",
+  "uuid" : "a70e9ac5-4cc9-4c0a-85d0-df622f8d1d0e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "SSM",
+  "uuid" : "10cabd74-17b7-4116-b715-2afc660f5955",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Stakeholder responsible",
+  "uuid" : "473e109a-1ae5-4429-8250-f536615f84b4",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Rishikul Ashram",
+    "uuid" : "081e7e52-6f6d-45c2-b31b-d5aa71306c25",
+    "order" : 0.0,
+    "voided" : true
+  }, {
+    "name" : "NA",
+    "uuid" : "e0af02cd-bf5d-4572-aaba-d2de266a624c",
+    "order" : 1.0,
+    "voided" : true
+  }, {
+    "name" : "Rajgarh District Administration",
+    "uuid" : "2b5e696d-a131-4cb3-9c3d-26cc5d2b23e8",
+    "order" : 2.0
+  }, {
+    "name" : "Giridih District Administration",
+    "uuid" : "69cc67b0-ab9b-4072-ae41-99b95997c375",
+    "order" : 3.0,
+    "voided" : true
+  }, {
+    "name" : "NBJK",
+    "uuid" : "51dba115-13ec-4772-b2f9-911926cf249a",
+    "order" : 4.0
+  }, {
+    "name" : "VSK",
+    "uuid" : "9e58bdeb-f34a-4052-999e-0b7ef467b812",
+    "order" : 5.0
+  }, {
+    "name" : "SRIJAN",
+    "uuid" : "a70e9ac5-4cc9-4c0a-85d0-df622f8d1d0e",
+    "order" : 6.0
+  }, {
+    "name" : "lead",
+    "uuid" : "370b441c-9432-4d1c-84f1-f8653bcf152c",
+    "order" : 7.0
+  }, {
+    "name" : "WOTR",
+    "uuid" : "bcf0d621-3c14-4c25-9a22-20c78fa014b4",
+    "order" : 8.0
+  }, {
+    "name" : "Vikas Sahyog Kendra",
+    "uuid" : "f4a9b7ce-575c-483d-b315-894afcfb665a",
+    "order" : 9.0
+  }, {
+    "name" : "Puran Chandra Rajowar",
+    "uuid" : "e4c22cfa-5e33-449a-b165-507ba39b2a5d",
+    "order" : 10.0
+  }, {
+    "name" : "Bintu Chandra Rajwar",
+    "uuid" : "3d399e2f-ec20-422c-b82a-47309047b787",
+    "order" : 11.0
+  }, {
+    "name" : "Ranjit Rajwar",
+    "uuid" : "3e37f05a-d8cb-4900-9c12-c2e90f2c6d48",
+    "order" : 12.0
+  }, {
+    "name" : "Deepak Kumar",
+    "uuid" : "e39db4db-1cf0-49aa-b7fc-2a1652d12afd",
+    "order" : 13.0
+  }, {
+    "name" : "Bhudev Mahatha",
+    "uuid" : "e6884201-bc54-49a5-a32c-22e1cffc47a9",
+    "order" : 14.0
+  }, {
+    "name" : "Chiranjit Mukharjee",
+    "uuid" : "b74054d2-30e7-4072-96e3-0dbfe10dea9a",
+    "order" : 15.0
+  }, {
+    "name" : "Deepak Panday",
+    "uuid" : "ef1a5e84-3c2b-4791-aef1-daf01bac3c88",
+    "order" : 16.0
+  }, {
+    "name" : "Mritunjay Kumar Mahtha",
+    "uuid" : "f6bc6667-558c-4bb6-91e7-da7398cd5f67",
+    "order" : 17.0
+  }, {
+    "name" : "Milan Sen",
+    "uuid" : "e3e8eb11-c3a9-4245-af69-1025b51d540a",
+    "order" : 18.0
+  }, {
+    "name" : "Parimal Ray",
+    "uuid" : "aec6bba1-909c-489f-a1fc-3e10e3ab0a95",
+    "order" : 19.0
+  }, {
+    "name" : "Vijay K.Dasoundhi",
+    "uuid" : "d3fccf0d-20ed-4b35-a3e5-21673ff6a15f",
+    "order" : 20.0
+  }, {
+    "name" : "Kailash parasad",
+    "uuid" : "cd08ecff-fecd-4053-a74f-7cb9cf32dac9",
+    "order" : 21.0
+  }, {
+    "name" : "Rajesh k. Gupta",
+    "uuid" : "de52c9d0-f64e-4d2e-bce4-4f7b0da09789",
+    "order" : 22.0
+  }, {
+    "name" : "Bal govind Kr singh",
+    "uuid" : "2a0ef2db-7c5b-41bf-9ef9-6b6f0eb22618",
+    "order" : 23.0
+  }, {
+    "name" : "Dhiraj Giri",
+    "uuid" : "292e7753-8869-4c6d-804b-d465dac7b7ff",
+    "order" : 24.0
+  }, {
+    "name" : "Akhildeep Giri",
+    "uuid" : "cd270f8e-651a-4f2e-bcb2-81a6b7bb5080",
+    "order" : 25.0
+  }, {
+    "name" : "Karan Giri",
+    "uuid" : "eb9d800f-b7d3-4477-a584-a3c0f54541f1",
+    "order" : 26.0
+  }, {
+    "name" : "Md. Murshid Alam",
+    "uuid" : "1ca5d6f4-b800-483f-9a62-936ef4dba352",
+    "order" : 27.0
+  }, {
+    "name" : "Krishna Mahto",
+    "uuid" : "3dcb3fc6-acb7-4c0b-ba69-a5ae9235b788",
+    "order" : 28.0
+  }, {
+    "name" : "Bhuneshwar Mahto",
+    "uuid" : "386b63c9-4890-4879-8042-d88a6cd5709c",
+    "order" : 29.0
+  }, {
+    "name" : "Bariyar Mahato",
+    "uuid" : "b2c0bd80-0bfe-4482-91ed-7972a5c88b68",
+    "order" : 30.0
+  }, {
+    "name" : "Ritesh K. Nishad",
+    "uuid" : "8d05d211-f175-46d2-8a0c-c7dfffb05504",
+    "order" : 31.0
+  }, {
+    "name" : "Raj Kumar Mahto",
+    "uuid" : "1ee240b6-83d7-4322-9f51-7d6c3343b4a1",
+    "order" : 32.0
+  }, {
+    "name" : "Pawan kumar",
+    "uuid" : "c4fe87d1-14e8-4004-b396-7d4c7c31d194",
+    "order" : 33.0
+  }, {
+    "name" : "Vikash Kumar",
+    "uuid" : "f5efbcbf-7d06-4c78-94fb-eacf287a3e56",
+    "order" : 34.0
+  }, {
+    "name" : "Jitram Murmu",
+    "uuid" : "f62c440a-460b-4e49-8430-88b1c4e42a06",
+    "order" : 35.0
+  }, {
+    "name" : "Suresh Rajwar",
+    "uuid" : "36a39401-a588-44e4-8aca-6364becad197",
+    "order" : 36.0
+  }, {
+    "name" : "Satish K. Mahato",
+    "uuid" : "8b54d7be-74f2-4638-8a2b-900267856f30",
+    "order" : 37.0
+  }, {
+    "name" : "Manoj k. Gosai",
+    "uuid" : "861880e2-3dad-42d6-8a6c-9ae52978eefd",
+    "order" : 38.0
+  }, {
+    "name" : "Akash K. Dasoundhi",
+    "uuid" : "4c9eb13d-2829-4bd2-9fe9-150afa4aa892",
+    "order" : 39.0
+  }, {
+    "name" : "Arvind Singh Rajput",
+    "uuid" : "0322c367-7650-4e7f-a15d-4aa2f55bbbb2",
+    "order" : 40.0
+  }, {
+    "name" : "Praveen Kumar",
+    "uuid" : "2e1c859a-3ce2-4d9d-bd72-09844caa7211",
+    "order" : 41.0
+  }, {
+    "name" : "Gouri sankar Murmu",
+    "uuid" : "c2651efd-40aa-4338-9a14-db98caee9154",
+    "order" : 42.0
+  }, {
+    "name" : "Dhaneswar Mahato",
+    "uuid" : "afeef5b9-076c-4f28-a39a-274da72d0ce0",
+    "order" : 43.0
+  }, {
+    "name" : "Dleep K. Soren",
+    "uuid" : "75de198e-c786-4d22-bcaa-deba1f69daf4",
+    "order" : 44.0
+  }, {
+    "name" : "SaniRam Hansda",
+    "uuid" : "2e5d7c64-22d7-469e-866d-993fb36939e1",
+    "order" : 45.0
+  }, {
+    "name" : "Ajit Hembram",
+    "uuid" : "2cb50930-3ff9-41e8-b91f-bea009fd0817",
+    "order" : 46.0
+  }, {
+    "name" : "Amit K. Saha",
+    "uuid" : "63b4e573-40a3-4d4e-8c19-cb362e392c02",
+    "order" : 47.0
+  }, {
+    "name" : "Vinod Mahto",
+    "uuid" : "c1af1089-8e0e-4929-b596-70acaa1d7181",
+    "order" : 48.0
+  }, {
+    "name" : "Suresh Ravidas",
+    "uuid" : "2698ed03-507d-4f63-a7cf-60447fc8f17f",
+    "order" : 49.0
+  }, {
+    "name" : "Vikash Sahyog Kendra",
+    "uuid" : "80970ac8-157a-4345-a7c1-33b3fe841fd0",
+    "order" : 50.0
+  }, {
+    "name" : "LEADS",
+    "uuid" : "23c7e2a5-ec0e-4277-a162-6a6cd96e32f9",
+    "order" : 51.0
+  }, {
+    "name" : "Nav Bharat Jagriti Kendra",
+    "uuid" : "0641aad8-9e26-413e-a894-bca9cecfcb56",
+    "order" : 52.0
+  } ]
+}, {
+  "name" : "Stakeholder responsible (voided~165482)",
+  "uuid" : "3001426a-812b-4659-80a4-5aea91f69ba2",
+  "dataType" : "Text",
+  "active" : true,
+  "voided" : true
+}, {
+  "name" : "Start time for desilting work",
+  "uuid" : "a4639fb7-41d6-42fe-be9d-353d8077ddd1",
+  "dataType" : "DateTime",
+  "active" : true
+}, {
+  "name" : "Start time for desilting work at the site",
+  "uuid" : "0b9d6aa9-5cfe-41d0-a74b-2cf0202a5815",
+  "dataType" : "DateTime",
+  "active" : true
+}, {
+  "name" : "Start time for desilting work at the site , tractor trolley owner interaction",
+  "uuid" : "766986ef-a2ec-44b7-b134-5f60086e0c69",
+  "dataType" : "DateTime",
+  "active" : true
+}, {
+  "name" : "Structure - Year of construction",
+  "uuid" : "835c11bf-06d1-4f37-adfa-e88a6047d8b9",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "<10 years",
+    "uuid" : "0d25c97e-9530-40ab-b271-3ec6241439f2",
+    "order" : 0.0
+  }, {
+    "name" : "10-20 years",
+    "uuid" : "f66b0416-a432-4b0b-b759-687fad7516e9",
+    "order" : 1.0
+  }, {
+    "name" : ">20 years",
+    "uuid" : "614cde5b-f6a6-4b29-8de3-4a120a111371",
+    "order" : 2.0
+  } ],
+  "keyValues" : [ ]
+}, {
+  "name" : "Supervisor contact number",
+  "uuid" : "4b4cee10-e1c8-434c-991d-997ef0eca977",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Supervisor name",
+  "uuid" : "e2ca1ac8-3408-4224-9bdd-cb1e89ebc876",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Suresh Rajwar",
+  "uuid" : "36a39401-a588-44e4-8aca-6364becad197",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Suresh Ravidas",
+  "uuid" : "2698ed03-507d-4f63-a7cf-60447fc8f17f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Survey Number (7/12) of family member 1",
+  "uuid" : "d99b9243-6fa9-4dc3-8338-2cec1cf27e1c",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Survey Number (7/12) of family member 2",
+  "uuid" : "5f2cc616-32b8-4da0-9a75-31482f0d408a",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Survey Number (7/12) of family member 3",
+  "uuid" : "9dd9d076-b94a-403b-8444-e8dc4dd3b93c",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Survey Number (7/12) of family member 4",
+  "uuid" : "3b2954e9-bf20-4271-af63-9b32fa44889b",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Survey Number (7/12) of family member 5",
+  "uuid" : "2f2d02d1-1f70-4b65-80fa-4f90d168f9d4",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Survey Number of 7/12 or 8A",
+  "uuid" : "6e7be18a-6372-4795-aeaf-0691ae798bfd",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Survey Number/ (7/12) of family member 1",
+  "uuid" : "fa776c5d-ab3a-4baa-8b0d-f325d8389d5c",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Survey Number/ (7/12) of family member 2",
+  "uuid" : "1dbdf442-fe67-412c-b671-92fd93ecc0b1",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Survey Number/ (7/12) of family member 3",
+  "uuid" : "6a4fe316-5349-4fa4-9bf9-26b6dffbaf08",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Survey Number/ (7/12) of family member 4",
+  "uuid" : "860c2a1c-03ed-4f48-9dc2-b50122e603ee",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Survey Number/ (7/12) of family member 5",
+  "uuid" : "35ab699f-b998-4f4f-b7f1-974ad963445d",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Tata Trust",
+  "uuid" : "1361ceaa-a848-4ba9-8133-5f83cf3f34f2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Templates are filled on a regular basis",
+  "uuid" : "6b1f08e7-31d6-4d8f-8fdb-d61025fd8efe",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "The approach route and exit route for tractors are different",
+  "uuid" : "982b1dd6-8526-480a-a1fe-8b5c8ef9a6fa",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "The total farm area on which Silt is spread",
+  "uuid" : "af52922e-bcea-4a9c-b1ae-1882132f7c12",
+  "dataType" : "Numeric",
+  "unit" : "acres",
+  "active" : true
+}, {
+  "name" : "Time taken by a machine to fill a trolley/hywa during observation",
+  "uuid" : "0a84f5ee-bf38-470d-b094-fddfc2ee5dc4",
+  "dataType" : "Duration",
+  "active" : true
+}, {
+  "name" : "Total area of the site",
+  "uuid" : "214de683-9b80-4806-a4ec-ce4fea50ccab",
+  "dataType" : "Numeric",
+  "unit" : "acres",
+  "active" : true
+}, {
+  "name" : "Total area to be covered by silt",
+  "uuid" : "ccb8a2df-d6e2-4a00-91c6-641101edafed",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Total area to be covered with silt",
+  "uuid" : "731bb5be-1614-412e-8c23-da0bee30a5f0",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Total cost beared by the farmer for carting silt",
+  "uuid" : "595c394b-65c8-4c14-bcd9-d25b69b32bdd",
+  "dataType" : "Numeric",
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Total cost beared by the farmer for spreading/ levelling the silt on the farm",
+  "uuid" : "d5de27f7-9ef8-40eb-bcd8-3c909cabb266",
+  "dataType" : "Numeric",
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Total cost borne by the farmer for carting silt (INR)",
+  "uuid" : "ab6f31f0-20cb-4326-a4f3-9d409a8ac42d",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Total cost borne by the farmer for spreading/levelling silt on farm (INR)",
+  "uuid" : "080b1da4-cf42-47b2-83e2-eb07b8db694f",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Total number of JCBs",
+  "uuid" : "37c14bdd-d254-4255-9cb6-4da1445fc647",
+  "dataType" : "Numeric",
+  "active" : true,
+  "keyValues" : [ ]
+}, {
+  "name" : "Total number of Poclains",
+  "uuid" : "a4fa261b-dbfd-44b4-9813-a81c3cf682c3",
+  "dataType" : "Text",
+  "active" : true,
+  "keyValues" : [ ]
+}, {
+  "name" : "Total Silt carted",
+  "uuid" : "b679d7de-ef1e-477f-907b-d2eb8a76cd63",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Total Silt carted by family member 1",
+  "uuid" : "df084f43-34e5-4671-ab8d-5675d93ab8ed",
+  "dataType" : "Numeric",
+  "unit" : "cu.m.",
+  "active" : true
+}, {
+  "name" : "Total Silt carted by family member 2",
+  "uuid" : "a9b7368d-b483-4e9b-9440-24e9a0d144fa",
+  "dataType" : "Numeric",
+  "unit" : "cu.m.",
+  "active" : true
+}, {
+  "name" : "Total Silt carted by family member 3",
+  "uuid" : "84bc3771-9c73-49a4-a518-bbdc5fee44f8",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Total Silt carted by family member 4",
+  "uuid" : "55eaad1f-28bf-4cf8-972d-94a3559924bb",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Total Silt carted by family member 5",
+  "uuid" : "432f8a85-951d-45d2-a1a5-0987f23c6706",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Total silt carted by family members",
+  "uuid" : "a915d997-4231-4cdb-b803-0a0ba75baf17",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Total silt excavated",
+  "uuid" : "b0317c53-e6ec-4c05-bd1a-87dcab4c1570",
+  "dataType" : "Numeric",
+  "highAbsolute" : 9999999.0,
+  "unit" : "cu.m.",
+  "active" : true
+}, {
+  "name" : "Total silt excavated by GP (for non-farm purpose)",
+  "uuid" : "1800c876-e957-4070-a527-b1ea81abfacc",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Total silt requested by the family members - Capacity of hywas",
+  "uuid" : "a90e98aa-ae5a-4629-8ed5-ed6c20d3fd6c",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "14",
+    "uuid" : "7c956ebb-acc0-41a0-afdc-c810ddba485a",
+    "order" : 0.0
+  }, {
+    "name" : "16",
+    "uuid" : "19286f0a-957c-4674-b9c9-42ac6c2476ce",
+    "order" : 1.0
+  }, {
+    "name" : "18",
+    "uuid" : "5404d563-5b50-47ae-a3f1-49c71496b3a2",
+    "order" : 2.0
+  }, {
+    "name" : "20",
+    "uuid" : "f6608f94-3bff-4a6d-a38b-ef14b1e40fa1",
+    "order" : 3.0
+  }, {
+    "name" : "25",
+    "uuid" : "68211d18-45fe-4053-9639-9480df9de238",
+    "order" : 4.0
+  } ]
+}, {
+  "name" : "Total silt requested by the family members - Number of trolleys",
+  "uuid" : "c2ba151d-b954-4f3e-94df-2772478833f6",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Total silt requested by the family members – Number of hywas",
+  "uuid" : "909c6a3e-b7e3-4264-b0f4-b88fec13bcc1",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Total silt required",
+  "uuid" : "78c87f77-6b25-4b79-a6d9-5de5faa42c99",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Total working hours of JCBs",
+  "uuid" : "6c637fbf-ab95-4824-ba09-ce86036ef332",
+  "dataType" : "Text",
+  "active" : true,
+  "keyValues" : [ ]
+}, {
+  "name" : "Total working hours of machine",
+  "uuid" : "e2766243-1ccf-491b-aed0-c55ad97c63eb",
+  "dataType" : "Numeric",
+  "unit" : "Hours",
+  "active" : true,
+  "keyValues" : [ ]
+}, {
+  "name" : "Total working hours of machine by time",
+  "uuid" : "cee52a1c-fe9c-448d-bde6-d71a1df74835",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Total working hours of Poclains",
+  "uuid" : "c6f7c594-c9c5-484c-ad94-d8a198bba522",
+  "dataType" : "Text",
+  "active" : true,
+  "keyValues" : [ ]
+}, {
+  "name" : "Tractor trolley",
+  "uuid" : "02c699f4-8747-450d-9e54-70831f22f221",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Tractor trolley/hywa is?",
+  "uuid" : "eb86fc8f-0069-4dc8-aa21-9e1b8cada1b3",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Owned by NGO",
+    "uuid" : "03bd73a8-5979-46d1-933b-38d037d9f9bd",
+    "order" : 0.0
+  }, {
+    "name" : "Rented",
+    "uuid" : "005e5031-a2b9-4979-b267-50f678361612",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Tractors following a single line for carting",
+  "uuid" : "6705fd48-0266-47f8-a34b-133aabb5a526",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Transportation used to cart the silt",
+  "uuid" : "356c787d-e5d9-467e-8fc6-c94d3bc0c9fc",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Tractor trolley",
+    "uuid" : "02c699f4-8747-450d-9e54-70831f22f221",
+    "order" : 0.0
+  }, {
+    "name" : "Hywa",
+    "uuid" : "4f65555d-7070-4c8e-8b42-c9eca1ea5ad8",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Tube well",
+  "uuid" : "013b4e53-bf42-441e-8718-2a1a504d0243",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Type of land on which silt was spread",
+  "uuid" : "f9498b5a-bd44-479b-ad1c-346fbad9b560",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Barren",
+    "uuid" : "56bab187-29ab-48ee-a5f0-cda1939599f4",
+    "order" : 0.0
+  }, {
+    "name" : "Fertile",
+    "uuid" : "c66691ef-5dbc-4053-b9dd-f13a54b09a78",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Type of land silt is spread on",
+  "uuid" : "99bdda89-3d3a-4b90-87a1-e5ecd04c3c23",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Barren",
+    "uuid" : "56bab187-29ab-48ee-a5f0-cda1939599f4",
+    "order" : 0.0
+  }, {
+    "name" : "Fertile",
+    "uuid" : "c66691ef-5dbc-4053-b9dd-f13a54b09a78",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Type of Machine",
+  "uuid" : "89e5dfbe-d42a-44ee-b986-acf8458003b4",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "JCB",
+    "uuid" : "831d8c1b-62e9-49d8-b861-747a00f32d80",
+    "order" : 0.0
+  }, {
+    "name" : "Poclain",
+    "uuid" : "f21b1c40-2454-4673-b4cc-0544b791eb70",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Type of recording",
+  "uuid" : "6e98c74e-14db-477e-9e3b-7771916d2947",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Farmer",
+    "uuid" : "9c052913-2e30-40d3-a25b-f22c7ae81f38",
+    "order" : 0.0
+  }, {
+    "name" : "Machine",
+    "uuid" : "1a4a2fa6-4099-4684-b7e5-a7d9e5cdee36",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Type of the water structure",
+  "uuid" : "a2cf181d-0ca6-4cc8-951d-1b7dbaf02c7b",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "MI tank",
+    "uuid" : "ff3456c8-2244-47ba-8c64-911f13c42fae",
+    "order" : 0.0
+  }, {
+    "name" : "PT/Village pond",
+    "uuid" : "2c5c9d7f-0f7d-4890-9043-f6c2ba150cd8",
+    "order" : 1.0
+  }, {
+    "name" : "Naala",
+    "uuid" : "9154c007-63f5-4184-8e82-44a7876ccec5",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Type of Waterbody",
+  "uuid" : "1a16b0ab-8b13-42ba-b161-2217f873e05d",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Dam",
+    "uuid" : "c771f002-ba51-4dae-8425-8c28f82a2e73",
+    "order" : 0.0
+  }, {
+    "name" : "Nalla",
+    "uuid" : "6729f01c-d1ca-4cb9-88cc-75fc948db38b",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Type of well",
+  "uuid" : "0d748856-aeec-4f6e-83c7-1463b1a5b678",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Dugwell",
+    "uuid" : "965337c3-e001-489b-b17c-6d52b644075f",
+    "order" : 0.0
+  }, {
+    "name" : "Tube well",
+    "uuid" : "013b4e53-bf42-441e-8718-2a1a504d0243",
+    "order" : 1.0
+  }, {
+    "name" : "Open well",
+    "uuid" : "88a181e0-f374-4b7d-b287-7192e48bb6d4",
+    "order" : 2.0
+  }, {
+    "name" : "Other",
+    "uuid" : "0a09f401-14e4-41bb-a1a6-c25dbc5e0733",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Upload Video - Village",
+  "uuid" : "bb392a5f-c13a-4a61-b9cd-1e4b96a9cea4",
+  "dataType" : "Video",
+  "active" : true
+}, {
+  "name" : "Usage of silt for non-farm purpose",
+  "uuid" : "01293170-2c22-4a6b-bfcf-7d6bdda9a138",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Vanarai",
+  "uuid" : "9bb85675-ba50-43ee-8093-458219d387c2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Video - Farmland",
+  "uuid" : "a21a4572-aa12-4da3-8098-b26b61db5eff",
+  "dataType" : "Video",
+  "active" : true
+}, {
+  "name" : "Video - Machine",
+  "uuid" : "dc07035f-e94e-4c16-bcc0-3af97a2c1bce",
+  "dataType" : "Video",
+  "active" : true
+}, {
+  "name" : "Video - Monitoring Templates",
+  "uuid" : "1e38cb23-6fcd-4ee2-95ae-6641cf3f6104",
+  "dataType" : "Video",
+  "active" : true
+}, {
+  "name" : "Video - Site",
+  "uuid" : "81c64d4a-e82e-4463-b7c9-1516a3fc4c29",
+  "dataType" : "Video",
+  "active" : true
+}, {
+  "name" : "Video of Site",
+  "uuid" : "9ced444d-b29d-44e5-88e7-11e48cdd4351",
+  "dataType" : "Video",
+  "active" : true
+}, {
+  "name" : "Vijay K.Dasoundhi",
+  "uuid" : "d3fccf0d-20ed-4b35-a3e5-21673ff6a15f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Vikas Sahyog Kendra",
+  "uuid" : "f4a9b7ce-575c-483d-b315-894afcfb665a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Vikash Kumar",
+  "uuid" : "f5efbcbf-7d06-4c78-94fb-eacf287a3e56",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Vikash Sahyog Kendra",
+  "uuid" : "80970ac8-157a-4345-a7c1-33b3fe841fd0",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Village institution agreement image (for contribution collection)",
+  "uuid" : "58e31093-9727-4f3d-b293-36bac89b1b2b",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Village of farmer",
+  "uuid" : "e559b834-75ae-47a1-90bf-6fc76ad3da47",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Vinod Mahto",
+  "uuid" : "c1af1089-8e0e-4929-b596-70acaa1d7181",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Voter ID",
+  "uuid" : "9d626a7a-92a0-4d0d-b9c5-f55012242b42",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Voter id",
+  "uuid" : "b973940a-ab38-478f-8a5d-487048822e92",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Voter Id (voided~127971)",
+  "uuid" : "c295421a-e3a9-4e5a-9dc0-ee7a7b4d5f98",
+  "dataType" : "Numeric",
+  "active" : true,
+  "voided" : true
+}, {
+  "name" : "VSK",
+  "uuid" : "9e58bdeb-f34a-4052-999e-0b7ef467b812",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "VSS",
+  "uuid" : "2c68fddd-94f8-400b-8f6e-cc092b726880",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Water Bodies Rejuvenation/LEADS",
+  "uuid" : "121d43a3-bb51-4399-878b-200c0dfaa27d",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "FES",
+    "uuid" : "9aa71882-6125-4266-8a31-31b5166769dc",
+    "order" : 0.0,
+    "voided" : true
+  }, {
+    "name" : "GCK",
+    "uuid" : "054d53d2-a417-4de5-a62f-9265bfcbd5bf",
+    "order" : 1.0,
+    "voided" : true
+  }, {
+    "name" : "Gram Vikas",
+    "uuid" : "b7db18e0-b347-4556-ae56-74f296359b62",
+    "order" : 2.0,
+    "voided" : true
+  }, {
+    "name" : "BJS",
+    "uuid" : "da0cb181-bc7c-426b-a864-36b60f8b1c42",
+    "order" : 3.0,
+    "voided" : true
+  }, {
+    "name" : "AOL",
+    "uuid" : "1320720b-8a22-4355-bddb-1ea4d38e275c",
+    "order" : 4.0,
+    "voided" : true
+  }, {
+    "name" : "Gravis",
+    "uuid" : "bc9ae91a-52b4-42eb-a235-f5a52cdc1ab8",
+    "order" : 5.0,
+    "voided" : true
+  }, {
+    "name" : "Sevamandir",
+    "uuid" : "5e527aeb-b68a-44fe-b56e-9e63a8cf0230",
+    "order" : 6.0,
+    "voided" : true
+  }, {
+    "name" : "Manavlok",
+    "uuid" : "d0d259a9-d13d-43e0-96bc-853de7d0e679",
+    "order" : 7.0,
+    "voided" : true
+  }, {
+    "name" : "Yuva Mitra",
+    "uuid" : "592f96a3-8fee-42b8-9b51-41c7c98173f5",
+    "order" : 8.0,
+    "voided" : true
+  }, {
+    "name" : "MGVS",
+    "uuid" : "dffea6c1-0ff3-41d4-bdb8-34d210d0e000",
+    "order" : 9.0,
+    "voided" : true
+  }, {
+    "name" : "Tata Trust",
+    "uuid" : "1361ceaa-a848-4ba9-8133-5f83cf3f34f2",
+    "order" : 10.0,
+    "voided" : true
+  }, {
+    "name" : "SSM",
+    "uuid" : "10cabd74-17b7-4116-b715-2afc660f5955",
+    "order" : 11.0,
+    "voided" : true
+  }, {
+    "name" : "ACF",
+    "uuid" : "3325feeb-de07-4431-9cfe-43f99b28017d",
+    "order" : 12.0,
+    "voided" : true
+  }, {
+    "name" : "Vanarai",
+    "uuid" : "9bb85675-ba50-43ee-8093-458219d387c2",
+    "order" : 13.0,
+    "voided" : true
+  }, {
+    "name" : "AOL Latur",
+    "uuid" : "4b67067c-4847-4499-a0b1-d1c0f2c47fc2",
+    "order" : 14.0,
+    "voided" : true
+  }, {
+    "name" : "AOL Parbhani",
+    "uuid" : "d2b77462-17b8-4ff2-9185-19b9d6e436b2",
+    "order" : 15.0,
+    "voided" : true
+  }, {
+    "name" : "ACF MH",
+    "uuid" : "a9af596f-14aa-4cc8-a89b-56859b5f4761",
+    "order" : 16.0,
+    "voided" : true
+  }, {
+    "name" : "AOL Karnataka",
+    "uuid" : "57cff794-475b-4add-95fa-a2f249011603",
+    "order" : 17.0,
+    "voided" : true
+  }, {
+    "name" : "ACF RJ",
+    "uuid" : "7c60f79c-d837-4868-86ee-8d4ade275f06",
+    "order" : 18.0,
+    "voided" : true
+  }, {
+    "name" : "KSWF",
+    "uuid" : "467e903f-cadf-4aca-a0c0-25504f516f76",
+    "order" : 19.0,
+    "voided" : true
+  }, {
+    "name" : "Dhara Sansthan",
+    "uuid" : "6e7e7179-723c-413d-bf47-ba4aa460d836",
+    "order" : 20.0,
+    "voided" : true
+  }, {
+    "name" : "VSS",
+    "uuid" : "2c68fddd-94f8-400b-8f6e-cc092b726880",
+    "order" : 21.0,
+    "voided" : true
+  }, {
+    "name" : "Gramin Swades",
+    "uuid" : "69d22103-0e3d-4f3e-8aff-d1208388cdb8",
+    "order" : 22.0,
+    "voided" : true
+  }, {
+    "name" : "ABSSS",
+    "uuid" : "f4275bdb-b8b7-4745-8501-9588d81e9150",
+    "order" : 23.0
+  }, {
+    "name" : "Rishikul Ashram",
+    "uuid" : "081e7e52-6f6d-45c2-b31b-d5aa71306c25",
+    "order" : 24.0
+  }, {
+    "name" : "Arunoday",
+    "uuid" : "6a5d8a4a-a3b3-44dd-abb4-711d88f5018d",
+    "order" : 25.0
+  }, {
+    "name" : "SRIJAN",
+    "uuid" : "a70e9ac5-4cc9-4c0a-85d0-df622f8d1d0e",
+    "order" : 26.0
+  }, {
+    "name" : "HARITIKA",
+    "uuid" : "355f6e3d-4bfd-4ecd-8d0c-32770d190021",
+    "order" : 27.0
+  }, {
+    "name" : "AOL RWB NITI",
+    "uuid" : "2f6c52fa-7dab-4b8d-90ff-df1343c40380",
+    "order" : 28.0
+  }, {
+    "name" : "CAF India",
+    "uuid" : "d132b57c-e951-4b9e-98cc-5655b0e7555b",
+    "order" : 29.0
+  }, {
+    "name" : "NA",
+    "uuid" : "e0af02cd-bf5d-4572-aaba-d2de266a624c",
+    "order" : 30.0,
+    "voided" : true
+  }, {
+    "name" : "VSK",
+    "uuid" : "9e58bdeb-f34a-4052-999e-0b7ef467b812",
+    "order" : 31.0
+  }, {
+    "name" : "NBJK",
+    "uuid" : "51dba115-13ec-4772-b2f9-911926cf249a",
+    "order" : 32.0
+  } ]
+}, {
+  "name" : "Water level in well",
+  "uuid" : "5d69660b-af49-4640-ac12-2ac2b63f18af",
+  "dataType" : "Numeric",
+  "unit" : "meters",
+  "active" : true
+}, {
+  "name" : "Water level in well during registration",
+  "uuid" : "ffa5b342-acb5-4606-a922-763bf8a428bf",
+  "dataType" : "Numeric",
+  "unit" : "meters",
+  "active" : true
+}, {
+  "name" : "WaterBody",
+  "uuid" : "9978b31f-c470-474e-b494-92bcace6994e",
+  "dataType" : "Text",
+  "active" : true,
+  "keyValues" : [ ]
+}, {
+  "name" : "Waterbody",
+  "uuid" : "00ca9cc6-92aa-4f59-88b1-f6d61ea11c27",
+  "dataType" : "Subject",
+  "active" : true,
+  "keyValues" : [ {
+    "key" : "subjectTypeUUID",
+    "value" : "3f2d84a7-15db-4244-ab98-ccc8649edab6"
+  } ]
+}, {
+  "name" : "Ways to recover the amount spent on silt by the farmer",
+  "uuid" : "cecc9514-a79b-4369-b15a-378075953d10",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Well Image 1",
+  "uuid" : "52ff5563-e677-47e2-93e6-e1a159c7718e",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Well Image 2",
+  "uuid" : "17562cc6-7e54-457f-916a-07505dfa753a",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Well Image 3",
+  "uuid" : "8e1ad3ab-13c6-4155-85ea-9ee14f036553",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Wells nearby",
+  "uuid" : "15aa3c5f-9cf7-47a7-88df-f2aa3b286cad",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "When did you take the silt under GDGS before this year?",
+  "uuid" : "208bf875-efc3-4c31-b136-278f2c32a36b",
+  "dataType" : "Date",
+  "active" : true
+}, {
+  "name" : "Working Hours as per time",
+  "uuid" : "d6058f1c-e235-4cae-b09d-6ce48886ce31",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Working hours as per time",
+  "uuid" : "f88653bb-377c-404f-8eb2-fb06e8d1d04f",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Working hours of machine",
+  "uuid" : "26b807b7-912a-4eaf-b76f-bc8670ca1743",
+  "dataType" : "Numeric",
+  "highAbsolute" : 24.0,
+  "unit" : "hours",
+  "active" : true
+}, {
+  "name" : "Working hours of machine as per time",
+  "uuid" : "12e402c2-9881-400e-9b60-404f7f86b10e",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "WOTR",
+  "uuid" : "bcf0d621-3c14-4c25-9a22-20c78fa014b4",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Year",
+  "uuid" : "30b35ec3-634a-4534-b156-574ae6d9243d",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "2020",
+    "uuid" : "675ff561-82a3-45d6-b6ef-ec392c06ab2a",
+    "order" : 0.0
+  }, {
+    "name" : "2021",
+    "uuid" : "efe82302-8e32-4d11-93db-34c5c6bfc218",
+    "order" : 1.0
+  }, {
+    "name" : "2022",
+    "uuid" : "5df889c3-47dc-4654-b7ac-9590f18bd57a",
+    "order" : 2.0
+  }, {
+    "name" : "2023",
+    "uuid" : "e7da9c15-5368-4a1a-8b59-3fbf7fe38ebb",
+    "order" : 3.0
+  }, {
+    "name" : "2024",
+    "uuid" : "2cf5e387-f1e2-4313-aa2c-6cfab97f3861",
+    "order" : 4.0
+  } ]
+}, {
+  "name" : "Year of construction of the water structure",
+  "uuid" : "9c848aa3-ba19-4567-92c1-c7f1a6e96455",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Yes",
+  "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Yuva Mitra",
+  "uuid" : "592f96a3-8fee-42b8-9b51-41c7c98173f5",
+  "dataType" : "NA",
+  "active" : true
+} ]

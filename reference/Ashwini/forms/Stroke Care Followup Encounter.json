@@ -1,0 +1,170 @@
+{
+  "name" : "Stroke Care Followup Encounter",
+  "uuid" : "8c5ae395-7bc0-4196-8089-8d70b671f541",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "6cdc7c31-62dc-4538-9dc8-c67a2912dc4e",
+    "name" : "Followup",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Systolic",
+      "uuid" : "fdd6a824-a0c7-4c08-abf3-74f2042d7da3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Systolic",
+        "uuid" : "2a04bf88-6346-4eda-a86c-8a2afc011b22",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 20.0,
+        "highAbsolute" : 300.0,
+        "lowNormal" : 90.0,
+        "highNormal" : 140.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Diastolic",
+      "uuid" : "de553528-e4ca-4a66-bda5-19cba07f6615",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Diastolic",
+        "uuid" : "1e2d41a2-5b6a-4ad7-ab91-51d3cdf122bd",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 10.0,
+        "highAbsolute" : 200.0,
+        "lowNormal" : 50.0,
+        "highNormal" : 90.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "RBS",
+      "uuid" : "c709df5f-d8a0-4399-9f4e-5c8a0ef61081",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Random Blood Sugar (RBS) Result",
+        "uuid" : "f87791c7-7018-4ddd-95c9-6e33abe48df8",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Height",
+      "uuid" : "46437cf9-8220-412c-8000-bd96e5b83440",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Height",
+        "uuid" : "d883d5fe-e17d-4136-b989-089fa0295e34",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 20.0,
+        "highAbsolute" : 300.0,
+        "lowNormal" : 30.0,
+        "highNormal" : 200.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Weight",
+      "uuid" : "3830ce48-6bfa-42b7-881b-76560d955086",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Weight",
+        "uuid" : "75b1656e-2777-4753-9612-ce03a766a5e1",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 300.0,
+        "lowNormal" : 1.0,
+        "highNormal" : 100.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "NIHSS",
+      "uuid" : "b89dd630-7cb6-4b29-8778-73a50317d402",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "NIHSS",
+        "uuid" : "5ed66879-8139-4fb9-bea5-fc419fa3e823",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "MRS",
+      "uuid" : "ea5f2f24-e476-4ba9-b838-ceff7d965632",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "MRS",
+        "uuid" : "79eea76e-e533-4437-bcf0-d090e40a3732",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "MMS",
+      "uuid" : "7efc7ad1-44f1-4642-945d-1344573a35ad",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "MMS",
+        "uuid" : "648c2a37-2450-4214-9dad-f0b06d7c3f58",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Physiotherapy",
+      "uuid" : "d938576b-2b38-44dd-a1a5-abace1107e62",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Physiotherapy",
+        "uuid" : "e3d5e477-d7a2-4a3b-98e5-fe1e5773f26d",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "display" : "Followup",
+    "timed" : false
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

@@ -1,0 +1,8 @@
+{
+  "name" : "Death Registration  Encounter Cancellation (voided~311)",
+  "uuid" : "adacfd27-07bf-4221-8c80-6fb4416cf2dc",
+  "formType" : "ProgramEncounterCancellation",
+  "formElementGroups" : [ ],
+  "decisionConcepts" : [ ],
+  "voided" : true
+}

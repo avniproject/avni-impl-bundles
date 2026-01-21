@@ -1,0 +1,7 @@
+{
+  "name" : "NRC Admission Encounter Cancellation",
+  "uuid" : "79620e77-5ab8-46b7-8fb6-d72e83edad61",
+  "formType" : "ProgramEncounterCancellation",
+  "formElementGroups" : [ ],
+  "decisionConcepts" : [ ]
+}

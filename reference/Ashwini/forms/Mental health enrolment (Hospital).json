@@ -1,0 +1,541 @@
+{
+  "name" : "Mental health enrolment (Hospital)",
+  "uuid" : "a55d1eb6-903c-4fd5-8da9-c445247d6787",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "56f1650d-ce19-4467-a99b-85134dbca61e",
+    "name" : "Mental health enrolment (Hospital)",
+    "displayOrder" : -1.0,
+    "formElements" : [ {
+      "name" : "MH Diagnosis [H]",
+      "uuid" : "65ca0c44-bc76-419e-a4c3-e0aea295bb6c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "MH Diagnosis [H]",
+        "uuid" : "03eead89-c927-47d0-a1cc-0071c9b150ec",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Psychoactive and substance use disorder [H]",
+          "uuid" : "4ac76390-de97-4212-9be2-5bf839bf78a5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Post Traumatic Stress Disorder [H]",
+          "uuid" : "0111896c-4e29-4a28-9572-04cdb0d7fb29",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Anxiety disorder [H]",
+          "uuid" : "668894c2-149f-4999-a629-f536aaea437e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Diagnosis others [H]",
+          "uuid" : "f2685817-a7a2-4d2d-b568-d27d2bf3d9f5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Organic disorder(Delirium,Dementia) [H]",
+          "uuid" : "9c641381-7174-45d4-8811-a17e5ca1110f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "MH Psychosis [H]",
+          "uuid" : "08704ef3-b288-402f-82f1-b23ac8735744",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "keyValues" : [ ],
+          "media" : [ ]
+        }, {
+          "name" : "Personality disorder [H]",
+          "uuid" : "52c6b9d2-5a41-4e78-b985-57f0b1b0c630",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mania [H]",
+          "uuid" : "9d0d7c20-b601-4bdd-8917-d3573b339e74",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Bipolar disorder [H]",
+          "uuid" : "aa711880-c582-4134-a62d-8a8b6819d5cc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Psychosexual disorders [H]",
+          "uuid" : "b2a70c81-8be5-48c1-bfc1-d8d21d82874b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Somatoform disorders [H]",
+          "uuid" : "4345699c-804b-4374-a65e-0d27d6638a8f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Schizophrenia [H]",
+          "uuid" : "df9c2a4e-fd8f-45c1-914b-b7330ee54378",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Epilepsy [H]",
+          "uuid" : "f5fed886-0ddf-431e-b26b-76a87660024b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Obsessive compulsive disorder [H]",
+          "uuid" : "ded69143-24e0-4821-891c-b9c842cee871",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Depression [H]",
+          "uuid" : "b85eb49c-54c5-421c-b058-59f2f11f7e9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    }, {
+      "name" : "MH When was the diagnosis made [H]",
+      "uuid" : "dd458e46-7e8c-4f47-8c3a-d07368501b12",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "MH When was the diagnosis made [H]",
+        "uuid" : "de21d1b9-1889-4bf1-a2d8-eb52a9376e45",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "MH Presenting complaints [H]",
+      "uuid" : "73a1cb62-994b-4548-8d15-39f0579d30c4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "MH Presenting complaints [H]",
+        "uuid" : "2ed53993-5969-4e1d-97c3-846a7bc9e487",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "MH History of presenting illness [H]",
+      "uuid" : "5d90eae6-00a5-4042-8cc4-c8df32e1f85f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "MH History of presenting illness [H]",
+        "uuid" : "d53c60bc-9eb9-48fd-bf98-841142a68a27",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "MH Family history [H]",
+      "uuid" : "972b3fcf-e442-4060-9da8-e17b079efc9f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "MH Family history [H]",
+        "uuid" : "21a21154-b7fa-471b-99d6-0ec23a2439ca",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "MH Treatment history [H]",
+      "uuid" : "82f318ca-add6-4e41-8f3c-6d85d1a94af5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "MH Treatment history [H]",
+        "uuid" : "58d971c5-82b3-4a0c-89e9-44c0fe555693",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "MH Is the patient under medication [H]",
+      "uuid" : "d4d3c8fd-81e5-46d5-a367-39ca5153d8ac",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "MH Is the patient under medication [H]",
+        "uuid" : "343919ff-904f-4b5c-8d12-c773b0cbf4d8",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "False [H]",
+          "uuid" : "50b20dc3-41e9-4d9c-b2af-266647214c57",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "True [H]",
+          "uuid" : "7e9a5117-bc2b-45e4-b92c-cd5796f9d36b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "MH medicine other [H]",
+      "uuid" : "524f2676-9011-4400-9289-b2fef78eef8a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "MH medicine other [H]",
+        "uuid" : "b6b59591-3886-4d69-9ad1-e360a2723cd3",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "What was the reason for stopping medication [H]",
+      "uuid" : "f3d12b32-67d4-467f-8ab7-17173c8cbb1d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "What was the reason for stopping medication [H]",
+        "uuid" : "23ca13de-54bd-43e0-abca-543342562432",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Symptoms got releived [H]",
+          "uuid" : "445446b6-ee27-4124-80fe-1e34eab42338",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not compliant with treatment [H]",
+          "uuid" : "f6c1d522-0740-4a2e-be8b-6ad6fbd79c78",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Stopping medicine others [H]",
+          "uuid" : "d0af649e-c193-4e28-9b40-6e14c1678821",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "What medicines are being given [H]",
+      "uuid" : "91e2321d-44a2-4089-b580-3004d2a3cff9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "What medicines are being given [H]",
+        "uuid" : "6e06faf5-c869-49b0-9f93-73a25cdaaaa1",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "T.Risperidone [H]",
+          "uuid" : "95b925db-32ea-46ea-9025-c94d4ed0e03c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 18.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Alprazolam [H]",
+          "uuid" : "9f974235-282d-4546-8c01-cb71362ca9ce",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Inj.Fluphenazine [H]",
+          "uuid" : "61a90f6a-c2b6-473a-b10d-e90005d558d9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 25.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Clobazan [H]",
+          "uuid" : "14d2d242-3eca-42df-8cd4-472170463529",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Carbobamazapine [H]",
+          "uuid" : "0d523695-9ad1-435f-9c38-fa7d626858c8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 26.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Phenytoin [H]",
+          "uuid" : "51f715c2-46e5-41e8-a728-499612186e24",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 23.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Medicine Others [H]",
+          "uuid" : "71960a25-29dc-4472-aa1b-9bcf8659b9a9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 27.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Sodium Valproate [H]",
+          "uuid" : "afaa339d-fcc3-4e3e-a790-22eec7463142",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 19.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Amitryptyllin [H]",
+          "uuid" : "314b549c-d2bf-4d5d-8e52-52b83b63e1c7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Sertralin [H]",
+          "uuid" : "26a2fd3e-425e-4b9c-9aa5-48d6b332c0f2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 20.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Clozapine [H]",
+          "uuid" : "95fc11ba-28fb-4a5d-a250-23909933baff",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Quetipine [H]",
+          "uuid" : "1ce56eb9-4cf2-4a67-b97b-9e940236daa6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Lorazepim [H]",
+          "uuid" : "46f55dec-ba2c-40fd-bee7-1175c5bdb375",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Phenobarbitone [H]",
+          "uuid" : "4e54295b-ed1e-4a1c-a048-a7e329ee84c0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 22.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Aripiprazole [H]",
+          "uuid" : "8ff0269b-7a1d-49f8-9c73-e5dcbd9a9274",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Olanzapine [H]",
+          "uuid" : "cd42689f-c0ee-4a68-aed4-5119a94a0713",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Clonazepam [H]",
+          "uuid" : "95a14f80-6e61-4b66-9d3d-cde31893eb6b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Inj.Fluoxetine [H]",
+          "uuid" : "2b2999e5-1bee-4b32-91eb-7153cebcf6d9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 24.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Amisulpride [H]",
+          "uuid" : "9c40a9e7-ba00-4dca-aeac-1cbaa9e1dc8a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Pacitine [H]",
+          "uuid" : "2e6a6e85-f071-4e47-a758-e633cacb91e9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Imipramine [H]",
+          "uuid" : "5fe4aac8-9bec-4612-8044-61623c951d5e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Lithium Carbonate [H]",
+          "uuid" : "a4218b81-fffa-4e0a-8073-53fb527b15e1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Escitalapram [H]",
+          "uuid" : "61f04219-4221-401c-b68f-4f09d095d6b3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Donamem [H]",
+          "uuid" : "d557d554-a024-4c8d-900b-a811d26cc3a3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 21.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Fluoxetine [H]",
+          "uuid" : "78e04751-9585-4775-b8b7-1a8cbd392f19",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Haloperidol [H]",
+          "uuid" : "b9740f2d-0587-4da6-9592-69dbc6acae0c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "T.Mirtazapine [H]",
+          "uuid" : "ee17aa4a-f0cb-4782-bb34-0b4b2950efb1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 17.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    } ],
+    "display" : "Mental health enrolment (Hospital)",
+    "timed" : false
+  } ],
+  "decisionConcepts" : [ ]
+}

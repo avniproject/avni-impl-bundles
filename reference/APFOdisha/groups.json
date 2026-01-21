@@ -1,0 +1,31 @@
+[ {
+  "uuid" : "948e3c3f-192d-48a8-b7c0-12aad9155766",
+  "id" : 681,
+  "name" : "Poshan Sathi"
+}, {
+  "uuid" : "0d816e07-c783-414f-9812-575601adb781",
+  "id" : 682,
+  "name" : "QRT users"
+}, {
+  "uuid" : "509ea127-d6d0-4eac-b904-02012fe486f0",
+  "id" : 680,
+  "name" : "Everyone",
+  "notEveryoneGroup" : false
+}, {
+  "uuid" : "87f29170-fb20-44be-a6b6-0cbe0da8a2e2",
+  "id" : 683,
+  "name" : "PMU"
+}, {
+  "uuid" : "799d528a-fe6f-4789-9b72-f337c46c638b",
+  "id" : 1063,
+  "name" : "Dev",
+  "hasAllPrivileges" : true
+}, {
+  "uuid" : "8b39301f-b0f5-438e-9f9c-dd7b3c8aec10",
+  "id" : 2533,
+  "name" : "Supervisors"
+}, {
+  "uuid" : "aef4775e-c239-4a9b-b0bb-9819abfc2441",
+  "id" : 2770,
+  "name" : "Metabase Users"
+} ]

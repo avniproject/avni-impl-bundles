@@ -1,0 +1,320 @@
+{
+  "name" : "Excavating Machine Registration",
+  "uuid" : "8d061e01-1f31-4cee-9141-d20f2266897a",
+  "formType" : "IndividualProfile",
+  "formElementGroups" : [ {
+    "uuid" : "25d3c5e9-129b-4198-8518-05604dfd45d9",
+    "name" : "Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Machine Registration Number",
+      "uuid" : "9c5e7178-317a-41ce-912a-d0c8d2230e77",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Machine Registration Number",
+        "uuid" : "2924bd06-24ff-43ee-bb3e-3de81017cab3",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Type of Machine",
+      "uuid" : "71e3bd7a-18bb-4881-943e-6cf2eeb595e0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Type of Machine",
+        "uuid" : "89e5dfbe-d42a-44ee-b986-acf8458003b4",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Poclain",
+          "uuid" : "f21b1c40-2454-4673-b4cc-0544b791eb70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "JCB",
+          "uuid" : "831d8c1b-62e9-49d8-b861-747a00f32d80",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Waterbody",
+      "uuid" : "bf1538f2-41f5-48c0-ae95-c97cfc1261f5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Waterbody",
+        "uuid" : "00ca9cc6-92aa-4f59-88b1-f6d61ea11c27",
+        "dataType" : "Subject",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ {
+          "key" : "subjectTypeUUID",
+          "value" : "3f2d84a7-15db-4244-ab98-ccc8649edab6"
+        } ],
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Model of machine",
+      "uuid" : "f26bd3bd-d500-4130-9c75-99c5515ad347",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Model of machine",
+        "uuid" : "3f5b39a1-26ee-4b9e-8dcf-b5e203e377c7",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Contractor's name",
+      "uuid" : "29f73e44-ae64-45e0-8bc4-643c4803ec66",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Contractor's name",
+        "uuid" : "38b8f175-35fa-4338-a564-5cc9165d68ec",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInRegistration(\"Machine\").not.containsAnswerConceptName('Owned by NGO');\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Manufacturing year of machine",
+      "uuid" : "c65d371f-7db0-4a45-9e1f-60ae22631549",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Manufacturing year of machine",
+        "uuid" : "1942ac8e-e9b4-4cb4-8b60-19caa4f0ae11",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "validFormat" : {
+        "regex" : "(19\\d{2})|(200\\d)|(201\\d)|(202[0-2])",
+        "descriptionKey" : "EnterAValidYear"
+      },
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Contractor's Mobile number",
+      "uuid" : "9ffa1377-1817-4f02-a942-f0209410fc0f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Contractor's Mobile number",
+        "uuid" : "64ac503c-47ba-4489-82c7-172d7b80c1f9",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInRegistration(\"Machine\").not.containsAnswerConceptName('Owned by NGO');\n  return statusBuilder.build();\n};",
+      "validFormat" : {
+        "regex" : "^[0-9]{10}$",
+        "descriptionKey" : "Valid10DigitNumbers"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "Machine is?",
+      "uuid" : "a8225657-3bf0-429c-97f8-40dfa0c5524c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Machine",
+        "uuid" : "1a4a2fa6-4099-4684-b7e5-a7d9e5cdee36",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Rented",
+          "uuid" : "005e5031-a2b9-4979-b267-50f678361612",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Owned by NGO",
+          "uuid" : "03bd73a8-5979-46d1-933b-38d037d9f9bd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "How the rent of the machine is paid?",
+      "uuid" : "46e06a0b-74cf-440f-b31e-fd87b06ed52b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "How the rent of the machine is paid",
+        "uuid" : "2916893c-f276-4b5e-9016-204fdeb394cd",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Per hour",
+          "uuid" : "b9793695-71e7-4ac5-92b5-9b76450a6149",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Per trolley",
+          "uuid" : "e9278f73-54cc-41e4-9159-301ac3240c8a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInRegistration(\"Machine\").not.containsAnswerConceptName('Owned by NGO');\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Rent for machine per hour",
+      "uuid" : "1d1c8453-ed61-4265-b1a9-d80b22d33652",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Rent for machine per hour",
+        "uuid" : "dd8e01c9-ad6b-4403-b15a-cda58216e4fa",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 200.0,
+        "highAbsolute" : 2000.0,
+        "lowNormal" : 200.0,
+        "highNormal" : 2000.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({individual, formElement});\n   statusBuilder.show().when.valueInRegistration(\"How the rent of the machine is paid\").containsAnswerConceptName('Per hour');\n return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Rent for machine per trolley",
+      "uuid" : "0ec960f1-4031-4fd3-9cfd-06549c165f76",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Rent for machine per trolley",
+        "uuid" : "2fc27901-fe58-4e82-8d70-e22c1ac4afb5",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 11.0,
+        "highAbsolute" : 199.0,
+        "lowNormal" : 11.0,
+        "highNormal" : 199.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({individual, formElement});\n   statusBuilder.show().when.valueInRegistration(\"How the rent of the machine is paid\").containsAnswerConceptName('Per trolley');\n return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Amount for diesel is paid by",
+      "uuid" : "92b4b467-fe17-4b00-8750-0e8bf71a9ba8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Amount for diesel is paid by",
+        "uuid" : "521bcbf6-ebaa-4e7b-992f-a634812908af",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Donor",
+          "uuid" : "b3747a7b-c0e2-456c-8366-2bcbc912fb8f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Farmer",
+          "uuid" : "9c052913-2e30-40d3-a25b-f22c7ae81f38",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Government",
+          "uuid" : "1844678c-8f05-41bd-b120-6e715b0625fd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Make of machine",
+      "uuid" : "ccfbdb2c-4973-4e07-85dc-e4cf078ebc0a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Make of machine",
+        "uuid" : "bf4f6f21-eff3-4b2b-90b2-be5f9a1561d9",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5002.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "display" : "Details",
+    "timed" : false
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

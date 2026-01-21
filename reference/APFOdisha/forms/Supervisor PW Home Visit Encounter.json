@@ -1,0 +1,210 @@
+{
+  "name" : "Supervisor PW Home Visit Encounter",
+  "uuid" : "e246ff37-dc99-4b55-b0d8-163c0a3adac8",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "30583329-1b2b-4acd-ab29-a0d8f2222610",
+    "name" : "Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Did Poshan Sathi visit your place in the current month?",
+      "uuid" : "b1f99795-4e8b-46d9-804c-8eab4fc75307",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Did Poshan Sathi visit your place in the current month?",
+        "uuid" : "c780f9cd-3902-406e-8769-cb5b219b411c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Could you counsel the women?",
+      "uuid" : "827dc7f7-3613-4db1-bd5d-7f1e6ed23e57",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Could You counsel the women?",
+        "uuid" : "71e51b3e-7b99-4afb-9d75-7fd270b59a70",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "8ebbf088-f292-483e-9084-7de919ce67b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "a77bd700-1409-4d52-93bc-9fe32c0e169b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "What are the parameters the women was counseled?",
+      "uuid" : "bb108660-8fae-43ec-b8fc-b9cf5d97d9cc",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "What are the Parameters the women was counseled?",
+        "uuid" : "a9f6ae56-f78f-4c5c-a146-c35aed755baf",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Any Medical conditions",
+          "uuid" : "ed54d020-ae60-4518-be47-c4c1a386c231",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Weight gain",
+          "uuid" : "ea75b5c6-75d0-4e34-b2cd-c3f2daf93bb5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Institutional delivery",
+          "uuid" : "643e379a-8f39-4ebd-b515-7f3179d3e465",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Routine ANC check-up",
+          "uuid" : "99075642-222e-49a7-9b43-35bac64e7513",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Anemia",
+          "uuid" : "5483b558-c36a-439c-80c3-065f7f331a34",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Food habits",
+          "uuid" : "d8bce98f-cd6d-463c-9120-dcb014e39911",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"71e51b3e-7b99-4afb-9d75-7fd270b59a70\").containsAnswerConceptName(\"8ebbf088-f292-483e-9084-7de919ce67b7\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Could You counsel the women?",
+                "conceptUuid" : "71e51b3e-7b99-4afb-9d75-7fd270b59a70",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "8ebbf088-f292-483e-9084-7de919ce67b7" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Any Medical conditions,please specify",
+      "uuid" : "bcd97f6a-62bd-4e5a-af64-7ef43ab8a66b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Any Medical conditions,please specify",
+        "uuid" : "e2755b56-e560-4d7d-a8ff-53252cea75f7",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"a9f6ae56-f78f-4c5c-a146-c35aed755baf\").containsAnswerConceptName(\"ed54d020-ae60-4518-be47-c4c1a386c231\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "What are the Parameters the women was counseled?",
+                "conceptUuid" : "a9f6ae56-f78f-4c5c-a146-c35aed755baf",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Any Medical conditions" ],
+                "answerConceptUuids" : [ "ed54d020-ae60-4518-be47-c4c1a386c231" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    } ],
+    "display" : "Details",
+    "timed" : false
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const validationResults = [];\n  \n  const isMaxVisitDateTimeGreaterThanToday = moment(programEncounter.maxVisitDateTime).isBefore(moment(), 'day');\n\n  if (isMaxVisitDateTimeGreaterThanToday) {\n    validationResults.push(imports.common.createValidationError(\"You cannot complete an overdue visit. Please cancel this visit.\"));  \n  }\n     // Get schedule date (earliest visit date)\n    const scheduleDate = programEncounter.earliestVisitDateTime;\n  \n    // Check if encounter date is before schedule month\n    const isBeforeScheduleMonth = moment(programEncounter.encounterDateTime)\n        .isBefore(moment(scheduleDate));\n\n    // Check if encounter date is after schedule month\n    const isAfterScheduleMonth = moment(programEncounter.encounterDateTime)\n        .isAfter(moment(scheduleDate).endOf('month'));\n\n    if (isBeforeScheduleMonth) {\n        validationResults.push(imports.common.createValidationError(\"Cannot fill this form before the scheduled date\"));\n    }\n  \n  return validationResults;\n};",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

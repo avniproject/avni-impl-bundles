@@ -1,0 +1,8 @@
+{
+  "name" : "NRC Discharge Encounter Cancellation (voided~9688)",
+  "uuid" : "eda68b83-b4b4-4392-a40c-433a7b6a3685",
+  "formType" : "ProgramEncounterCancellation",
+  "formElementGroups" : [ ],
+  "decisionConcepts" : [ ],
+  "voided" : true
+}

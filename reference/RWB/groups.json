@@ -1,0 +1,39 @@
+[ {
+  "uuid" : "944cbe12-5643-45e9-8e97-c7d2f9729272",
+  "id" : 823,
+  "name" : "Primary Users"
+}, {
+  "uuid" : "69af7d5a-0dac-4116-845b-0f8cac0813fe",
+  "id" : 802,
+  "name" : "Everyone",
+  "notEveryoneGroup" : false
+}, {
+  "uuid" : "152e8aa7-d378-4c31-a849-a92e30bfb65a",
+  "id" : 824,
+  "name" : "Auditors"
+}, {
+  "uuid" : "f0661aac-03b5-477b-9122-54af5d235475",
+  "id" : 826,
+  "name" : "Project Supervisors"
+}, {
+  "uuid" : "5e4a2b89-6f41-4bb0-95f5-3122d83bdec7",
+  "id" : 825,
+  "name" : "Project Leads"
+}, {
+  "uuid" : "c8d2396f-a527-49b8-8dbc-5b9a29530849",
+  "id" : 827,
+  "name" : "Admin"
+}, {
+  "uuid" : "e13c2526-546d-4a10-8e2a-25f6c9ff0a31",
+  "id" : 1671,
+  "name" : "Only Uploading rights"
+}, {
+  "uuid" : "5e54b959-c4ca-4f66-ad75-519deab88ed5",
+  "id" : 828,
+  "name" : "Supervisors (voided~828)",
+  "voided" : true
+}, {
+  "uuid" : "3644b511-8f39-4285-ab2b-ab226ef934ce",
+  "id" : 1760,
+  "name" : "API"
+} ]
