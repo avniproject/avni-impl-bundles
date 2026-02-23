@@ -1,0 +1,2172 @@
+{
+  "name" : "MMU Mobile Medical Unit Visit Encounter",
+  "uuid" : "d3671831-8c95-45af-a9a4-844d1c3e140e",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "a851d348-095f-4ea2-a366-b79850f05a3a",
+    "name" : "Complaints & Symptoms",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Complaints and Symptoms (Coded)",
+      "uuid" : "be856a2b-b3b3-4275-a53d-d5e322d6be52",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Complaints and Symptoms (coded)",
+        "uuid" : "73631263-5078-490a-a6c6-e6502aba98c4",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Fever",
+          "uuid" : "0b7f3334-f81e-4d84-a13d-b35011e34456",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 22.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Abscess (Mawad in tissues)",
+          "uuid" : "5c76f86d-2960-472d-a5b5-c6e0b20fe7b3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Bone Fractures",
+          "uuid" : "5a5fc0f3-d2f7-4e67-872e-2e394665aa6c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Infection - Other areas",
+          "uuid" : "d9b0f442-4dcb-4fc8-bbcc-c4cf9ff03b34",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 33.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Headache",
+          "uuid" : "4085f165-ccb8-409b-9d6e-ea7755cf123e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 27.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pain - Teeth",
+          "uuid" : "8f31261a-a584-4fd6-9ac7-3eadf8c9280e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 48.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Head Injury / wound",
+          "uuid" : "10c258d3-f454-4c21-b401-9aa72cea7aee",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 26.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Weakness",
+          "uuid" : "25ec9a8c-07df-471c-afac-4919d016464d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 57.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Vaginal Cyst",
+          "uuid" : "f56c72e5-7cca-4cb8-a598-c6f29e2d694f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 55.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Eczema",
+          "uuid" : "85c2944b-2f79-4b65-a739-2f4b6508d50d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 19.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Infection - Nails",
+          "uuid" : "3d34bd7a-63f7-4992-b4ce-10f575b21d0c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 32.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "UTI",
+          "uuid" : "7db494f6-b2de-4c31-a837-e6668d9e9f04",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 54.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Accident",
+          "uuid" : "80824328-aaf2-41f3-b389-0205a58d76d2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Wound",
+          "uuid" : "5126ffae-a2a3-4474-aa3f-73d2a576d42c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 59.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Fire Burn",
+          "uuid" : "0ce3330f-e42d-418c-9e2b-e42ecfb5d5a5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 23.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Infection - Ear",
+          "uuid" : "f3ad3906-d2c2-42c3-8103-f463e14c5521",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 29.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Infection - Genital area",
+          "uuid" : "ab8c933b-70b5-40c3-baf0-85436265bcfb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 31.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Anemic",
+          "uuid" : "6a9ab6e8-be08-4583-848a-aa49babba8ef",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Dysentery (Pechis)",
+          "uuid" : "1199436e-7df3-4bda-b82f-e5a15e243647",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 18.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Piles",
+          "uuid" : "f9664df0-f642-48c3-86cf-23e9f048fbf0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 50.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Infection - Fungal",
+          "uuid" : "9bdef455-7a91-448d-8ce9-229f5699776d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 28.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 60.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Eye - Burning",
+          "uuid" : "72fd116e-3de5-4bfe-ba01-6bb3cafdd10c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 20.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Injury",
+          "uuid" : "e98451e2-2109-4846-ba4e-b94a03544970",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 34.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mensturation (Periods) problem",
+          "uuid" : "09f69d88-3788-4827-85b6-1fcd6f3ea320",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 37.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pain - Abdomen",
+          "uuid" : "e5ba90be-8155-4209-88af-38cda4e54752",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 39.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pain - Eye",
+          "uuid" : "69cf7c95-f324-487b-bd3b-9460d752abd1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 45.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Dizziness",
+          "uuid" : "89968a5b-88e9-41e9-8563-f5620d4d63ab",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 17.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Alergic",
+          "uuid" : "f015d422-9a6b-4db9-bf65-d24b8ca07c4f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pain - Ear",
+          "uuid" : "60d643fd-5368-499e-a15a-2904558236a0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 43.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Urethra / Urine Burning",
+          "uuid" : "3ca983ca-9372-496c-b533-439a08eb2e3c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 53.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Constipation",
+          "uuid" : "5d689696-9104-4885-8e6f-f50c178aeebf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cold",
+          "uuid" : "bddfcbbf-b706-4e08-845e-cd64dd43752a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Cough (Short term)",
+          "uuid" : "e3d6d365-4d14-402b-a4f3-8c160101d475",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Eye - Low vision",
+          "uuid" : "5bd5d106-7b02-4b8f-8202-d4508e44ba24",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 21.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tingling in body parts",
+          "uuid" : "5544bdaf-e289-432b-9af5-4fec58f18bd6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 52.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "White Discharge",
+          "uuid" : "1ff880ff-477d-4519-a664-a612a393dd60",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 58.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Infection - Eye",
+          "uuid" : "056c5b42-0ffa-4beb-8ad8-94e8187bb1c2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 30.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pain - Epigastric",
+          "uuid" : "9d3114de-32d8-406e-9878-2d444aac1eec",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 44.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Gas pain",
+          "uuid" : "b2d92099-cf28-4a37-9fe6-9ed2d61f5b1a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 25.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pain - Chest",
+          "uuid" : "0b584290-919f-4af1-bb1e-6c81202613e5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 42.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cough with Blood",
+          "uuid" : "44399888-e21d-49e7-b4c4-fcfd42a72e4f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Itching",
+          "uuid" : "f53446fe-921f-4603-ba86-f8a091d86228",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 35.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Vomiting",
+          "uuid" : "8126ae79-28d5-4587-bca1-1c8f518b48f4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 56.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pustule (Pus like pimples)",
+          "uuid" : "5c132ce3-8e0c-471a-9343-8e8a15ab5154",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 51.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pain - Whole Body",
+          "uuid" : "e8004924-59e7-4d6b-bdd2-9d6ed26b4d22",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 41.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "BP - Low (hypotension)",
+          "uuid" : "f2c6a1ea-8bbd-4f20-88cf-261213bca65d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Dirrehoa",
+          "uuid" : "dff5944a-6ed2-4abf-ae0b-51365cf48571",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Acidity",
+          "uuid" : "96c17d14-f663-4b62-ba28-1efe49ee9ddd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pain - Back",
+          "uuid" : "e0eec194-033c-4aed-942b-480e17d5b97d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 40.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pain - Joint",
+          "uuid" : "17c5c132-874d-4319-8036-05c6f70ecfad",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 46.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Chicken Pox",
+          "uuid" : "0475bb54-af2f-4397-8da1-d41cd02e5ff4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pain - Cheeks",
+          "uuid" : "d2848725-fca0-4322-81cf-b894403fb629",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 49.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Gastric problem",
+          "uuid" : "505afd13-9e22-4c24-a16c-5727aca2d501",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 24.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "BP - High (hypertension)",
+          "uuid" : "d11fa2df-6fef-4a16-b213-0b43e1775b51",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "ANC Woman",
+          "uuid" : "bae7d6be-59f4-44a8-ac47-2d3bbe05c0a3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cough (Prolonged)",
+          "uuid" : "2c524f6c-ca91-4f8d-a13a-5ef14018dccf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mouth ulcers (Chhale)",
+          "uuid" : "af7eb4aa-1f9f-4b56-b335-e45375addb71",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 38.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Loose Motions",
+          "uuid" : "0abd2ccf-ec5d-4f90-88a0-dab00f2d4b1a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 36.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pain - Knee",
+          "uuid" : "9a3e6de8-e6f1-4ecf-935a-20ea208eb550",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 47.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Other Complaint and Symptoms",
+      "uuid" : "1f4cb7a7-1be1-4e52-9a00-8f8a908b0bc9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Complaints and Symptoms",
+        "uuid" : "617e4dc9-5de4-4663-b18a-3c8c43c51c3d",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"73631263-5078-490a-a6c6-e6502aba98c4\").containsAnswerConceptName(\"05ea583c-51d2-412d-ad00-06c432ffe538\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Complaints and Symptoms",
+                "conceptUuid" : "73631263-5078-490a-a6c6-e6502aba98c4",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "05ea583c-51d2-412d-ad00-06c432ffe538" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Complaints & Symptoms"
+  }, {
+    "uuid" : "d189a1ef-a45d-4f99-b8cc-a4dd0f66c149",
+    "name" : "Diagnosis & referral",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Other Complaint and Symptoms",
+      "uuid" : "45f5be64-a595-429a-87e7-1a9851c31424",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Complaints and Symptoms",
+        "uuid" : "617e4dc9-5de4-4663-b18a-3c8c43c51c3d",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Provisional Diagnosis type",
+      "uuid" : "f486996a-078e-4047-b78d-6b974a33873d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Provisional Diagnosis type",
+        "uuid" : "2cfaf43a-e2a7-4d5a-82bf-74bc33603580",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Acute",
+          "uuid" : "392f9576-f112-4693-8091-8bb168464bdd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Chronic",
+          "uuid" : "e7592122-40a8-4ef1-87ae-ea5824ecc8a4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Provisional Chronic Diagnosis",
+      "uuid" : "dba94c13-0d20-48be-8d69-26b6e1de0fe6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "MMU Provisional Chronic Diagnosis",
+        "uuid" : "5a82b6ec-6fae-464a-8213-0f127052cfd1",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Sickle Cell Disease",
+          "uuid" : "981ad210-a025-417d-b814-f4c647e1b7c6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Viral Fever",
+          "uuid" : "f747bda0-7e47-424b-b826-f0203d6475da",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "itching",
+          "uuid" : "66a0bbc0-579b-4e97-ba94-fbc6b48eb83d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Cold and Cough",
+          "uuid" : "dcd912e3-41db-4b68-9421-d5dd6f72c241",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Body Ache",
+          "uuid" : "7dba1853-3147-47da-b016-7d306d19320f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Severe Anemia-Iron Deficiency",
+          "uuid" : "fc50f2a3-5f97-44b5-beb1-80d53fd1053b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Diabetes",
+          "uuid" : "674f348f-5075-4c85-8bc2-9edfdee27505",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "abscess (फोड़ा )",
+          "uuid" : "e9c333f6-2351-491c-87a0-832fa4942f35",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Fungal Infection",
+          "uuid" : "46a599b5-26eb-46d9-ba5f-b819e59672f7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Anemia Other type",
+          "uuid" : "b82ec231-6670-4d38-b159-fad742f7f825",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Epilepsy",
+          "uuid" : "a34bf7a0-4d55-41fa-855a-0b8094f369f7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hypertension",
+          "uuid" : "998d1bae-05d8-47b9-89b8-0254829f238f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Scabies",
+          "uuid" : "e6b85a4c-04cf-4738-bbb4-1884d853f2e5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Food Poisoning",
+          "uuid" : "c78d2791-e86c-4645-ab58-f4962cd74f43",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Thalassemia",
+          "uuid" : "70866aba-d585-48ba-993c-1fa86498751c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cold",
+          "uuid" : "bddfcbbf-b706-4e08-845e-cd64dd43752a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Abdominal Pain",
+          "uuid" : "da047d68-ca98-459d-93be-c3c579965ecf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pulmonary TB",
+          "uuid" : "b16db8af-7b45-4dd0-aae2-226259623179",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cancer",
+          "uuid" : "e8480835-eca9-44ff-920c-dd0c909a4492",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Likely Epilepsy (voided~257484)",
+          "uuid" : "1aa41029-0349-47ec-95b2-a12008b99541",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Iron Defficiency Anemia",
+          "uuid" : "9c2739ab-7241-47d3-a8e0-66cb2c4f360f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"2cfaf43a-e2a7-4d5a-82bf-74bc33603580\").containsAnswerConceptName(\"e7592122-40a8-4ef1-87ae-ea5824ecc8a4\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Provisional Diagnosis type",
+                "conceptUuid" : "2cfaf43a-e2a7-4d5a-82bf-74bc33603580",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Chronic" ],
+                "answerConceptUuids" : [ "e7592122-40a8-4ef1-87ae-ea5824ecc8a4" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Provisional Acute Diagnosis",
+      "uuid" : "f0a47c40-cbc9-4dfa-9ac3-91dc9db299fc",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Provisional Acute Diagnosis list",
+        "uuid" : "502e2164-39b5-4bb2-9ac8-9662fa0d077d",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Eczema",
+          "uuid" : "85c2944b-2f79-4b65-a739-2f4b6508d50d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Filariasis",
+          "uuid" : "4364a05d-0406-46fb-8fca-ff107901877f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Upper respiratory tract Infection",
+          "uuid" : "adda9a16-8deb-4f73-bd5d-e67037d0a5c9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Scabies",
+          "uuid" : "e6b85a4c-04cf-4738-bbb4-1884d853f2e5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Reproductive tract infection (RTI)",
+          "uuid" : "86801543-4a90-4f60-bff4-494ea06a2f0b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Urinary Tract Infection",
+          "uuid" : "69072b54-1258-4851-917f-0657667f3bcd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pneumonia/Lower respiratory tract infection",
+          "uuid" : "d39f5ce9-e36a-4da7-9012-1c8505a78c9e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Fungal Infection",
+          "uuid" : "46a599b5-26eb-46d9-ba5f-b819e59672f7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Diarrhea",
+          "uuid" : "eaacc06f-a678-4588-a864-a1a21da2286e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Malaria",
+          "uuid" : "0dee2973-eebe-4699-b676-b770fdd1c411",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Fever (viral)",
+          "uuid" : "988be79e-6ad1-40a9-98ef-1088523074ba",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Gastroenteritis",
+          "uuid" : "d9302639-a187-47df-92e0-6b8b989b342f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"2cfaf43a-e2a7-4d5a-82bf-74bc33603580\").containsAnswerConceptName(\"392f9576-f112-4693-8091-8bb168464bdd\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Provisional Diagnosis type",
+                "conceptUuid" : "2cfaf43a-e2a7-4d5a-82bf-74bc33603580",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Acute" ],
+                "answerConceptUuids" : [ "392f9576-f112-4693-8091-8bb168464bdd" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Other Provisional Diagnosis",
+      "uuid" : "ccd60c1a-e84d-48bc-878b-5855879016a4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other Provisional Diagnosis",
+        "uuid" : "9161a1fc-b514-469d-b61f-b85d00d1253f",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"2cfaf43a-e2a7-4d5a-82bf-74bc33603580\").containsAnswerConceptName(\"05ea583c-51d2-412d-ad00-06c432ffe538\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Provisional Diagnosis type",
+                "conceptUuid" : "2cfaf43a-e2a7-4d5a-82bf-74bc33603580",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "05ea583c-51d2-412d-ad00-06c432ffe538" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Whether the patient required referral?",
+      "uuid" : "825c64e3-b6c7-4001-ab86-c04da231a764",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Whether the patient required referral",
+        "uuid" : "bc4933fc-818e-42fa-a47c-67d327485536",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Urgent",
+          "uuid" : "c453cc0e-44db-49e6-af27-f69c8f646f35",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Semi - Urgent",
+          "uuid" : "a7b825b5-3c4d-4c9e-95a8-ab197806efe7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Diagnosis & referral"
+  }, {
+    "uuid" : "710183e9-7675-4303-9b9d-17777c23b694",
+    "name" : "Examinations / Tests done there",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Which Examination were done?",
+      "uuid" : "bf9125f4-9c89-4710-9f7d-2f9ce521c814",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Which Examination were done?",
+        "uuid" : "e0040723-b906-4bf0-a7be-402dc0142cf2",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Pulse",
+          "uuid" : "2d3b8f90-6123-4dbf-b866-4f56ac7d24c8",
+          "dataType" : "Numeric",
+          "answers" : [ ],
+          "order" : 2.0,
+          "lowNormal" : 60.0,
+          "highNormal" : 100.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Temperature recorded",
+          "uuid" : "a7fb5b9d-42d2-4638-8ca5-ece15f6202b9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Respiratory Rate",
+          "uuid" : "70d617f9-3c14-4ec2-8d0f-97c837f6ab37",
+          "dataType" : "Numeric",
+          "answers" : [ ],
+          "order" : 5.0,
+          "lowNormal" : 16.0,
+          "highNormal" : 20.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Blood Pressure",
+          "uuid" : "1aae1eeb-79d8-4ed1-ab87-307128381ae0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Respiratory rate recorded",
+          "uuid" : "7062b6f1-a89a-4a16-bd86-b6e81dd29070",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pulse recorded",
+          "uuid" : "df2c3c8a-6864-4a0a-bf67-9fd3c7795e7f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Temperature taken?",
+          "uuid" : "5ce7fd35-a943-4dac-9b12-a069ba9dc549",
+          "dataType" : "Coded",
+          "answers" : [ {
+            "name" : "No",
+            "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 1.0,
+            "active" : true,
+            "media" : [ ]
+          }, {
+            "name" : "Yes",
+            "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 0.0,
+            "active" : true,
+            "media" : [ ]
+          } ],
+          "order" : 5.0,
+          "active" : true,
+          "keyValues" : [ ],
+          "media" : [ ]
+        }, {
+          "name" : "Temperature",
+          "uuid" : "e6edb61c-c3d9-44c8-abf7-4fd09fe39ec9",
+          "dataType" : "Numeric",
+          "answers" : [ ],
+          "order" : 1.0,
+          "lowNormal" : 97.0,
+          "highNormal" : 99.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Which Tests were conducted in field",
+      "uuid" : "6abae97e-3214-4d31-8c08-f79a613fcfb7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Tests conducted in field",
+        "uuid" : "710d6daf-f405-4673-b107-4e6d478a7b9e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Hb Level",
+          "uuid" : "63e5b287-7529-498f-81d3-e9cae89617cc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "RBS",
+          "uuid" : "6c354a50-c797-422f-a497-bef000e9c054",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "UPT (Urine Pregnancy Test)",
+          "uuid" : "9c80df3d-f6ca-4bd0-ba93-e1af825e139c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Malaria RD Kit",
+          "uuid" : "6f956e14-ab92-46b3-9f59-f4fee1510bf2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Temperature value?",
+      "uuid" : "596e5f33-49de-43b3-9850-e6c779e33439",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Temperature",
+        "uuid" : "e6edb61c-c3d9-44c8-abf7-4fd09fe39ec9",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 97.0,
+        "highNormal" : 99.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"e0040723-b906-4bf0-a7be-402dc0142cf2\").containsAnswerConceptName(\"a7fb5b9d-42d2-4638-8ca5-ece15f6202b9\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Which Examination were done?",
+                "conceptUuid" : "e0040723-b906-4bf0-a7be-402dc0142cf2",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Temperature recorded" ],
+                "answerConceptUuids" : [ "a7fb5b9d-42d2-4638-8ca5-ece15f6202b9" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Pulse",
+      "uuid" : "e180b0b6-b2bc-4242-be9b-bfed8c36bf45",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Pulse",
+        "uuid" : "2d3b8f90-6123-4dbf-b866-4f56ac7d24c8",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 60.0,
+        "highNormal" : 100.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"e0040723-b906-4bf0-a7be-402dc0142cf2\").containsAnswerConceptName(\"df2c3c8a-6864-4a0a-bf67-9fd3c7795e7f\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Which Examination were done?",
+                "conceptUuid" : "e0040723-b906-4bf0-a7be-402dc0142cf2",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Pulse recorded" ],
+                "answerConceptUuids" : [ "df2c3c8a-6864-4a0a-bf67-9fd3c7795e7f" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Blood Pressure Systolic",
+      "uuid" : "4fe60e3e-8608-4041-9638-a66d4d0ed9ac",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Systolic",
+        "uuid" : "2a04bf88-6346-4eda-a86c-8a2afc011b22",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 400.0,
+        "lowNormal" : 90.0,
+        "highNormal" : 140.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"e0040723-b906-4bf0-a7be-402dc0142cf2\").containsAnswerConceptName(\"1aae1eeb-79d8-4ed1-ab87-307128381ae0\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Which Examination were done?",
+                "conceptUuid" : "e0040723-b906-4bf0-a7be-402dc0142cf2",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Blood Pressure" ],
+                "answerConceptUuids" : [ "1aae1eeb-79d8-4ed1-ab87-307128381ae0" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Blood Pressure Diastolic",
+      "uuid" : "c767363c-76e7-4c55-9e85-50ed9d5bb965",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Diastolic",
+        "uuid" : "1e2d41a2-5b6a-4ad7-ab91-51d3cdf122bd",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 10.0,
+        "highAbsolute" : 250.0,
+        "lowNormal" : 50.0,
+        "highNormal" : 90.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"e0040723-b906-4bf0-a7be-402dc0142cf2\").containsAnswerConceptName(\"1aae1eeb-79d8-4ed1-ab87-307128381ae0\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Which Examination were done?",
+                "conceptUuid" : "e0040723-b906-4bf0-a7be-402dc0142cf2",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Blood Pressure" ],
+                "answerConceptUuids" : [ "1aae1eeb-79d8-4ed1-ab87-307128381ae0" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "respiratory rate",
+      "uuid" : "a5226f85-851f-4aaf-b73b-2bd1333e0f5f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Respiratory Rate",
+        "uuid" : "70d617f9-3c14-4ec2-8d0f-97c837f6ab37",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 16.0,
+        "highNormal" : 20.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"e0040723-b906-4bf0-a7be-402dc0142cf2\").containsAnswerConceptName(\"7062b6f1-a89a-4a16-bd86-b6e81dd29070\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Which Examination were done?",
+                "conceptUuid" : "e0040723-b906-4bf0-a7be-402dc0142cf2",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Respiratory rate recorded" ],
+                "answerConceptUuids" : [ "7062b6f1-a89a-4a16-bd86-b6e81dd29070" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Random Blood Sugar test",
+      "uuid" : "56aae31f-c469-4f60-8755-e18e76c7e932",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Random Blood Sugar Levels",
+        "uuid" : "18809ab4-1de9-4484-963d-75da949c6a0e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 20.0,
+        "highAbsolute" : 700.0,
+        "lowNormal" : 70.0,
+        "highNormal" : 140.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"710d6daf-f405-4673-b107-4e6d478a7b9e\").containsAnswerConceptName(\"6c354a50-c797-422f-a497-bef000e9c054\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Tests conducted in field",
+                "conceptUuid" : "710d6daf-f405-4673-b107-4e6d478a7b9e",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "RBS" ],
+                "answerConceptUuids" : [ "6c354a50-c797-422f-a497-bef000e9c054" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Malaria RD test",
+      "uuid" : "a70c6ab6-02ec-4f42-a72d-75c1b4f21564",
+      "keyValues" : [ {
+        "key" : "ExcludedAnswers",
+        "value" : [ "Data Not Available", "Test not happened" ]
+      } ],
+      "concept" : {
+        "name" : "Malaria Test",
+        "uuid" : "3bc74424-526f-4d44-8a45-b26f8ee4b4fb",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Data Not Available",
+          "uuid" : "1deacad0-83b7-4f3e-9ae6-3bcb676c92ec",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Test not happened",
+          "uuid" : "13f4f438-efc5-4a79-8c23-23479218a942",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Negative",
+          "uuid" : "ad1f0481-a8ed-411a-ac00-d0435a670269",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Positive",
+          "uuid" : "479cd95a-54ef-4818-b84a-09b478fc68b8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"710d6daf-f405-4673-b107-4e6d478a7b9e\").containsAnswerConceptName(\"6f956e14-ab92-46b3-9f59-f4fee1510bf2\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Tests conducted in field",
+                "conceptUuid" : "710d6daf-f405-4673-b107-4e6d478a7b9e",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Malaria RD Kit" ],
+                "answerConceptUuids" : [ "6f956e14-ab92-46b3-9f59-f4fee1510bf2" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Urine Pregnancy Test",
+      "uuid" : "13a13ebc-b101-46e1-8f57-7ac06fcf0d6a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Urine pregnancy test",
+        "uuid" : "ae076480-008d-47ca-9fab-a5300a626e42",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Positive",
+          "uuid" : "479cd95a-54ef-4818-b84a-09b478fc68b8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Negative",
+          "uuid" : "ad1f0481-a8ed-411a-ac00-d0435a670269",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"710d6daf-f405-4673-b107-4e6d478a7b9e\").containsAnswerConceptName(\"9c80df3d-f6ca-4bd0-ba93-e1af825e139c\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Tests conducted in field",
+                "conceptUuid" : "710d6daf-f405-4673-b107-4e6d478a7b9e",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "UPT (Urine Pregnancy Test)" ],
+                "answerConceptUuids" : [ "9c80df3d-f6ca-4bd0-ba93-e1af825e139c" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Hb Level",
+      "uuid" : "69db5afd-9943-4483-9384-90327df91ce1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Hb",
+        "uuid" : "f9ecabbc-2df2-4bfc-a6fa-aa417c50e11b",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 12.0,
+        "highNormal" : 15.5,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"710d6daf-f405-4673-b107-4e6d478a7b9e\").containsAnswerConceptName(\"63e5b287-7529-498f-81d3-e9cae89617cc\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Tests conducted in field",
+                "conceptUuid" : "710d6daf-f405-4673-b107-4e6d478a7b9e",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Hb Level" ],
+                "answerConceptUuids" : [ "63e5b287-7529-498f-81d3-e9cae89617cc" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Examinations / Tests done there"
+  }, {
+    "uuid" : "f2522d45-490c-4420-9b68-b60f560454f2",
+    "name" : "Medicines - Tablet",
+    "displayOrder" : 4.0,
+    "formElements" : [ {
+      "name" : "Tablet / Capsules - Choose medicines given to the patient",
+      "uuid" : "c2bc6971-c7e0-466c-8bec-1cd4754f2325",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Tablet / Capsules - Choose medicines given to the patient - MH",
+        "uuid" : "2b85223a-b200-48d5-b486-5e6d7b576831",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Becadex",
+          "uuid" : "b374a138-a8ef-4344-a456-5e8215e47ba0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cefixime 200 mg",
+          "uuid" : "ba5ffbb5-7ff3-4f8a-a09e-cf6e616b843b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ibuprofen 400 mg",
+          "uuid" : "02c458d6-0cf2-4fc4-8e9d-81fc72b35ffd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Metronidazole 400 mg",
+          "uuid" : "febf68b3-c072-4ad1-a790-c4eabbb93ed1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Metoclopramide 10 mg",
+          "uuid" : "7ffb0983-6e49-434f-9a9f-9d66c163a9ca",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Paracetamol 500 mg",
+          "uuid" : "c76d2e4f-6cee-41b1-ab29-4e0dd106fbb4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Zinc 20 mg",
+          "uuid" : "da37959e-c076-46ac-b1b9-1fb772f669f6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Dicyclomine 20mg + Paracetamol 325 mg",
+          "uuid" : "c4557796-1f43-44dc-8095-f344ac045724",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Chlorpheniramine",
+          "uuid" : "987afaec-2500-436d-989e-8a4dddc969b5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ciprofloxacin 500 mg",
+          "uuid" : "a8bb3a97-9149-4195-9ba8-a9dcd35dcc0d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Amoxicillin 500 mg",
+          "uuid" : "c69af2fc-5ab2-4e80-bd34-873aa97e312c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Doxycycline 100 mg",
+          "uuid" : "332b0779-ceb6-4361-8952-71b3b48c65b3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Famotidine",
+          "uuid" : "c56f636b-96d1-4fa1-90dd-a48dcad5e00a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Vitamin C",
+          "uuid" : "5345aee6-bcc3-4b30-a449-47af7faf62ec",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Calcium + Vit D3 500 mg",
+          "uuid" : "625a7742-4ac8-4dd8-a7c7-fc5c6444b687",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Azithromycin 500 mg",
+          "uuid" : "4ae7ebbb-2097-4530-9b6b-c01768560911",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Fersifol / IFA 60",
+          "uuid" : "33127b3b-ebc7-42dc-a09f-d3771df71ce9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 17.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Medicines - Tablet"
+  }, {
+    "uuid" : "875a0935-d68e-4119-916e-4e7d36b91c94",
+    "name" : "Medicines - Syrup",
+    "displayOrder" : 5.0,
+    "formElements" : [ {
+      "name" : "Syrup - Choose medicines given to the patient",
+      "uuid" : "3d33913b-6f10-4c73-bde6-c7b8ab72f2b7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Syrup Medicines given to patient - MH",
+        "uuid" : "d09848c6-6c56-4a60-99f9-e5c294ee6c63",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Zincovit 200 ml",
+          "uuid" : "70bfb076-6015-4611-b3cc-cd5b3442a96d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Amoxicillin + clav 30 ml 200mg/5ml",
+          "uuid" : "66cc01f2-c87c-4b74-9b55-64f838885345",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Chlorpheniramine 100 ml",
+          "uuid" : "b7a7b191-be82-4e86-8e52-96c0dd8917ad",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Metronidazole",
+          "uuid" : "94dff083-9836-4604-b4c1-2e299fa8743d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Azithromycin 15 ml 100mg/5ml",
+          "uuid" : "b2de749c-106a-4f76-82db-6efd40f19da8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Metoclopramide 1mg/1ml",
+          "uuid" : "411bfb87-2968-4903-a743-9de7df501e84",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Paracetamol 60 ml 125 mg/5 ml",
+          "uuid" : "6a3c8e95-8313-4d8f-87e9-9a6f7b841a1e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Medicines - Syrup"
+  }, {
+    "uuid" : "a69bf121-907c-47c3-90a9-810ac0bd1efe",
+    "name" : "Other Medicines",
+    "displayOrder" : 6.0,
+    "formElements" : [ {
+      "name" : "Drop, Lotion, Ointment, powder etc",
+      "uuid" : "553bfee6-7e91-4628-a47b-c4493db57792",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Drop, Lotion, Ointment, powder etc",
+        "uuid" : "5964d182-0a2d-40f0-b52f-01a893e8dac1",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ciprofloxacin - Drop",
+          "uuid" : "36729fab-5b3b-4e84-889a-53f7b3ea3814",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lindane 4.5 L - Lotion",
+          "uuid" : "85431c21-8e7f-4f56-8dd7-a7d57d027da1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Vyaghri 100 gm - Paste",
+          "uuid" : "198f5099-cbf9-4d19-b453-4fd11431dc32",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Plastic bottle 50 ml",
+          "uuid" : "da39a01c-399d-4a62-a2a0-7301aba93f4e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Permethrin - Oitment",
+          "uuid" : "6dba1653-40a2-4cf9-bd1e-4e1ca6265313",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Guduchi - Powder",
+          "uuid" : "7b7ae90b-332b-4d58-85fb-f5d60b85126b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Other Medicine Formulation type, Name, dose, & Quantity",
+      "uuid" : "3cd8060e-d3f5-42e3-8398-51585d45b1ad",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other Medicine Formulation type, Name, dose, & Quantity",
+        "uuid" : "fec2e0bf-2b10-467c-8820-b770f091bb33",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Decisions to be taken",
+      "uuid" : "96802b51-5528-4997-921e-edf2b3d68dc3",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Decisions to be taken",
+        "uuid" : "66cf35bb-3579-497b-a6f8-7d620659835f",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"bc4933fc-818e-42fa-a47c-67d327485536\").containsAnswerConceptName(\"c453cc0e-44db-49e6-af27-f69c8f646f35\").matches();\n    \n  const condition12 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"bc4933fc-818e-42fa-a47c-67d327485536\").containsAnswerConceptName(\"a7b825b5-3c4d-4c9e-95a8-ab197806efe7\").matches();\n  \n  if(condition11 ){\n    value = \"Urgent Referral required - Please take phone Follow-up within 3 days whether the patient referred or not\";  \n}\n    if(condition12 ){\n    value = \"Please note that this patient need referral on Semi-Urgent basis\";  \n}\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "details" : {
+            "value" : "Urgent Referral required - Please take phone Follow-up within 3 days whether the patient referred or not"
+          },
+          "actionType" : "value"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Whether the patient required referral",
+                "conceptUuid" : "bc4933fc-818e-42fa-a47c-67d327485536",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Urgent" ],
+                "answerConceptUuids" : [ "c453cc0e-44db-49e6-af27-f69c8f646f35" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      }, {
+        "actions" : [ {
+          "details" : {
+            "value" : "Please note that this patient need referral on Semi-Urgent basis"
+          },
+          "actionType" : "value"
+        } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Whether the patient required referral",
+                "conceptUuid" : "bc4933fc-818e-42fa-a47c-67d327485536",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Semi - Urgent" ],
+                "answerConceptUuids" : [ "a7b825b5-3c4d-4c9e-95a8-ab197806efe7" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "Remark",
+      "uuid" : "c7493f8a-377c-46ad-b307-4bd761ba98da",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Remarks",
+        "uuid" : "8ec9d5ed-e707-4493-a3eb-ece0ed564ab4",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Other Medicines"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({ params, imports }) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({programEncounter});\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter}).when.valueInEncounter(\"5a82b6ec-6fae-464a-8213-0f127052cfd1\").defined.matches();\n    \n  const condition12 = new imports.rulesConfig.RuleCondition({programEncounter}).when.valueInEncounter(\"bc4933fc-818e-42fa-a47c-67d327485536\").containsAnswerConceptNameOtherThan(\"e7b50c78-3d90-484d-a224-9887887780dc\").matches();\n  \n  if(condition11 ){\n    const earliestDate = moment(programEncounter.encounterDateTime).add(15, 'days').toDate();\n    const maxDate = moment(programEncounter.encounterDateTime).add(17, 'days').toDate();\n    scheduleBuilder.add({name: \"Chronic Patient Follow up\", encounterType: \"Chronic Patient Follow up\", earliestDate, maxDate});  \n}\n    if(condition12 ){\n    const earliestDate = moment(programEncounter.encounterDateTime).add(1, 'days').toDate();\n    const maxDate = moment(programEncounter.encounterDateTime).add(3, 'days').toDate();\n    scheduleBuilder.add({name: \"MMU Referral\", encounterType: \"MMU Referral\", earliestDate, maxDate});  \n}\n  \n  return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ],
+  "visitScheduleDeclarativeRule" : [ {
+    "actions" : [ {
+      "details" : {
+        "dateField" : "encounterDateTime",
+        "daysToOverdue" : "17",
+        "encounterName" : "Chronic Patient Follow up",
+        "encounterType" : "Chronic Patient Follow up",
+        "daysToSchedule" : "15"
+      },
+      "actionType" : "scheduleVisit"
+    }, { } ],
+    "conditions" : [ {
+      "compoundRule" : {
+        "rules" : [ {
+          "lhs" : {
+            "type" : "concept",
+            "scope" : "encounter",
+            "conceptName" : "MMU Provisional Chronic Diagnosis",
+            "conceptUuid" : "5a82b6ec-6fae-464a-8213-0f127052cfd1",
+            "conceptDataType" : "Coded"
+          },
+          "rhs" : { },
+          "operator" : "defined"
+        } ],
+        "conjunction" : "and"
+      }
+    } ]
+  }, {
+    "actions" : [ {
+      "details" : {
+        "dateField" : "encounterDateTime",
+        "daysToOverdue" : "3",
+        "encounterName" : "MMU Referral",
+        "encounterType" : "MMU Referral",
+        "daysToSchedule" : "1"
+      },
+      "actionType" : "scheduleVisit"
+    } ],
+    "conditions" : [ {
+      "compoundRule" : {
+        "rules" : [ {
+          "lhs" : {
+            "type" : "concept",
+            "scope" : "encounter",
+            "conceptName" : "Whether the patient required referral",
+            "conceptUuid" : "bc4933fc-818e-42fa-a47c-67d327485536",
+            "conceptDataType" : "Coded"
+          },
+          "rhs" : {
+            "type" : "answerConcept",
+            "answerConceptNames" : [ "No" ],
+            "answerConceptUuids" : [ "e7b50c78-3d90-484d-a224-9887887780dc" ]
+          },
+          "operator" : "containsAnswerConceptNameOtherThan"
+        } ],
+        "conjunction" : "or"
+      }
+    } ]
+  } ]
+}

@@ -1,0 +1,67 @@
+[ {
+  "uuid" : "2f58fac5-b12e-4859-ba15-98faacec1436",
+  "voided" : false,
+  "dashboardUUID" : "d3c5d54a-11ed-4b6b-8149-fbd7e6826714",
+  "groupUUID" : "64867bed-6f9d-4666-9785-7b787e4cdc4a",
+  "groupName" : "Lab Facility",
+  "dashboardName" : "Lab Facility",
+  "dashboardDescription" : "",
+  "groupOneOfTheDefaultGroups" : false,
+  "primaryDashboard" : true,
+  "secondaryDashboard" : false
+}, {
+  "uuid" : "916c4c24-a545-456e-8d74-5c7ece7fe1a4",
+  "voided" : true,
+  "dashboardUUID" : "c4d3bc0a-027e-4a6a-87dd-85e5b7285523",
+  "groupUUID" : "4ba008af-9c91-4b63-8aab-ff94af9db909",
+  "groupName" : "Everyone",
+  "dashboardName" : "Default Dashboard",
+  "dashboardDescription" : null,
+  "groupOneOfTheDefaultGroups" : true,
+  "primaryDashboard" : true,
+  "secondaryDashboard" : false
+}, {
+  "uuid" : "319b9ad2-4dfa-4d36-9e1d-e708af54958d",
+  "voided" : true,
+  "dashboardUUID" : "c4d3bc0a-027e-4a6a-87dd-85e5b7285523",
+  "groupUUID" : "98c7e290-fee2-4b49-b1bc-b7220b93122d",
+  "groupName" : "Counsellors",
+  "dashboardName" : "Default Dashboard",
+  "dashboardDescription" : null,
+  "groupOneOfTheDefaultGroups" : false,
+  "primaryDashboard" : true,
+  "secondaryDashboard" : false
+}, {
+  "uuid" : "7dd0d25d-b0f2-44a4-859d-c1d247e6e9e0",
+  "voided" : true,
+  "dashboardUUID" : "c4d3bc0a-027e-4a6a-87dd-85e5b7285523",
+  "groupUUID" : "4ba008af-9c91-4b63-8aab-ff94af9db909",
+  "groupName" : "Everyone",
+  "dashboardName" : "Default Dashboard",
+  "dashboardDescription" : null,
+  "groupOneOfTheDefaultGroups" : true,
+  "primaryDashboard" : true,
+  "secondaryDashboard" : false
+}, {
+  "uuid" : "027ea6c0-b594-4989-9afd-a1b423493e49",
+  "voided" : false,
+  "dashboardUUID" : "0f6e0688-ec2d-4994-9667-c96b59cfdb63",
+  "groupUUID" : "c48abb1a-c9c4-4469-a579-5c491ffbd364",
+  "groupName" : "MMU & MH Field users",
+  "dashboardName" : "Maternal Health",
+  "dashboardDescription" : "",
+  "groupOneOfTheDefaultGroups" : false,
+  "primaryDashboard" : true,
+  "secondaryDashboard" : false
+}, {
+  "uuid" : "0a883b54-dc25-4480-8450-12b5562a5b92",
+  "voided" : false,
+  "dashboardUUID" : "c4d3bc0a-027e-4a6a-87dd-85e5b7285523",
+  "groupUUID" : "c48abb1a-c9c4-4469-a579-5c491ffbd364",
+  "groupName" : "MMU & MH Field users",
+  "dashboardName" : "Default Dashboard",
+  "dashboardDescription" : null,
+  "groupOneOfTheDefaultGroups" : false,
+  "primaryDashboard" : false,
+  "secondaryDashboard" : false
+} ]

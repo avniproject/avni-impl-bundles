@@ -1,0 +1,7 @@
+{
+  "name" : "Sickle cell testing Encounter Cancellation",
+  "uuid" : "9085a377-5476-46f5-a91e-770792a98bb6",
+  "formType" : "IndividualEncounterCancellation",
+  "formElementGroups" : [ ],
+  "decisionConcepts" : [ ]
+}

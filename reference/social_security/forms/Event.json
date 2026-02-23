@@ -1,0 +1,128 @@
+{
+  "name" : "Event",
+  "uuid" : "1d5c8b76-3430-4aca-9462-f723204b0ddb",
+  "formType" : "IndividualProfile",
+  "formElementGroups" : [ {
+    "uuid" : "47198547-5ea1-41b7-92e5-9d4ca7395d72",
+    "name" : "Event Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Select the event",
+      "uuid" : "85c92cd3-7e94-4dfa-8683-49c320339d3d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Select the event",
+        "uuid" : "26296caa-c77a-4813-aad1-e305aefb7c6c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Awareness Camps",
+          "uuid" : "aa6b6be7-534e-4e6a-b1aa-04d84af4d153",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Social Security Camps",
+          "uuid" : "189c305b-b9c8-4a35-a74e-78d10ebe4200",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Date of Event",
+      "uuid" : "77ecd339-9dad-48c2-bd0c-4d1542cf07c5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Date of event",
+        "uuid" : "b4df27d8-24d4-47f4-8a4f-a8f1c60ecd87",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Name of the Area",
+      "uuid" : "81610e83-525d-4a28-bdaf-1ae4a2c4f20a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of the area",
+        "uuid" : "ffb1f6f3-9657-43cb-901e-c18e7c0f364d",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "No of participants",
+      "uuid" : "7fdd6cab-c11e-42cc-967b-e27b24d1c107",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No of participants",
+        "uuid" : "394796d3-c0a0-4404-aa7c-eaa0e9b99fe4",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 1.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Event Image",
+      "uuid" : "ec5ed1a1-8deb-42b8-ac5e-df657ddbdc76",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Event image",
+        "uuid" : "bdf79f83-e583-4888-932f-7b182a9e9506",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Signature Sheet File",
+      "uuid" : "3f1d676d-ce7b-4d3f-afaf-45bf4e3f8dc9",
+      "keyValues" : [ {
+        "key" : "allowedMaxSize",
+        "value" : 1
+      } ],
+      "concept" : {
+        "name" : "Signature sheet file",
+        "uuid" : "70c0726d-9438-4a99-8418-d33bf38095d5",
+        "dataType" : "File",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Event Details"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

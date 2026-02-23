@@ -1,0 +1,111 @@
+[ {
+  "uuid" : "726853d3-c8de-48c7-936c-ab8a3e174d5a",
+  "id" : 482,
+  "name" : "Approval",
+  "description" : "Standard",
+  "sections" : [ {
+    "uuid" : "d904665d-6d09-4455-84e9-7a50f88b42e9",
+    "id" : 779,
+    "name" : "Approval statistics",
+    "description" : "Check out the overall summary below",
+    "viewType" : "Tile",
+    "displayOrder" : 1.0,
+    "dashboardUUID" : "726853d3-c8de-48c7-936c-ab8a3e174d5a",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "a0f075c9-6116-409f-a2a5-8c107b8ebd97",
+      "displayOrder" : 3.0,
+      "dashboardSectionUUID" : "d904665d-6d09-4455-84e9-7a50f88b42e9",
+      "reportCardUUID" : "92201a89-bb29-4a4e-9b6c-23f3800b6dbe",
+      "voided" : false
+    }, {
+      "uuid" : "6d049266-e4cf-4131-bec0-9a76c3dc323f",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "d904665d-6d09-4455-84e9-7a50f88b42e9",
+      "reportCardUUID" : "9cc7893c-b4b8-4939-bf2f-b50b38bbc542",
+      "voided" : false
+    }, {
+      "uuid" : "fa70c9cc-71b4-401b-b98e-80e0946ab23f",
+      "displayOrder" : 5.0,
+      "dashboardSectionUUID" : "d904665d-6d09-4455-84e9-7a50f88b42e9",
+      "reportCardUUID" : "dee1e6d7-de9a-4df9-9237-82fd2cfe214f",
+      "voided" : false
+    }, {
+      "uuid" : "3c11abd6-60ab-4fd5-8726-fa6f71faf929",
+      "displayOrder" : 4.0,
+      "dashboardSectionUUID" : "d904665d-6d09-4455-84e9-7a50f88b42e9",
+      "reportCardUUID" : "54ceae49-dad9-418c-b3ed-8864f89f3883",
+      "voided" : false
+    }, {
+      "uuid" : "c9d4f685-7b76-4838-a30d-432a1d9ad799",
+      "displayOrder" : 2.0,
+      "dashboardSectionUUID" : "d904665d-6d09-4455-84e9-7a50f88b42e9",
+      "reportCardUUID" : "b6c94138-f643-4a85-a8ad-03b3e78a56d6",
+      "voided" : false
+    } ],
+    "voided" : false
+  }, {
+    "uuid" : "54207a11-1540-43ad-aec2-2047ba7fab4c",
+    "id" : 778,
+    "name" : "Last 24 hours statistics",
+    "description" : "Check out the overall summary below",
+    "viewType" : "Tile",
+    "displayOrder" : 3.0,
+    "dashboardUUID" : "726853d3-c8de-48c7-936c-ab8a3e174d5a",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "0aca1682-7d71-4bb7-ae1e-483f07c2fb29",
+      "displayOrder" : 3.0,
+      "dashboardSectionUUID" : "54207a11-1540-43ad-aec2-2047ba7fab4c",
+      "reportCardUUID" : "cc5ca2c6-b691-4a78-8ba9-86780226c980",
+      "voided" : false
+    }, {
+      "uuid" : "7ec2d6ed-657d-4c8a-9124-860b1008e2cc",
+      "displayOrder" : 2.0,
+      "dashboardSectionUUID" : "54207a11-1540-43ad-aec2-2047ba7fab4c",
+      "reportCardUUID" : "ad74695e-25e4-447f-9e39-d1b25a67e4e3",
+      "voided" : false
+    }, {
+      "uuid" : "0a88a338-621d-4c1f-90aa-aff9ca9c7895",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "54207a11-1540-43ad-aec2-2047ba7fab4c",
+      "reportCardUUID" : "681253e9-6a74-431a-8a66-fbf5dae7ec36",
+      "voided" : false
+    } ],
+    "voided" : false
+  }, {
+    "uuid" : "2523b318-f5ed-43cd-b75c-df6d7302802b",
+    "id" : 777,
+    "name" : "Subject overview",
+    "description" : "Check out the overall summary below",
+    "viewType" : "Tile",
+    "displayOrder" : 2.0,
+    "dashboardUUID" : "726853d3-c8de-48c7-936c-ab8a3e174d5a",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "b474f3df-d097-4dac-86a2-8af840aa4da7",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "2523b318-f5ed-43cd-b75c-df6d7302802b",
+      "reportCardUUID" : "15b74d69-481f-41ad-b03f-ce7b6e922d0b",
+      "voided" : false
+    }, {
+      "uuid" : "f77baa01-59f6-4bba-b795-bd6fc942d49f",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "2523b318-f5ed-43cd-b75c-df6d7302802b",
+      "reportCardUUID" : "5b6e4f4f-d50a-4517-bd49-f38f1230c783",
+      "voided" : false
+    }, {
+      "uuid" : "8d85d56e-ce8e-4949-8e96-54ca5036e55b",
+      "displayOrder" : 2.0,
+      "dashboardSectionUUID" : "2523b318-f5ed-43cd-b75c-df6d7302802b",
+      "reportCardUUID" : "0d53d083-28a4-409e-820f-8d214c099418",
+      "voided" : false
+    }, {
+      "uuid" : "54d42776-7239-4404-b32a-3cffb715969f",
+      "displayOrder" : 2.0,
+      "dashboardSectionUUID" : "2523b318-f5ed-43cd-b75c-df6d7302802b",
+      "reportCardUUID" : "dee1e6d7-de9a-4df9-9237-82fd2cfe214f",
+      "voided" : false
+    } ],
+    "voided" : false
+  } ],
+  "filters" : [ ],
+  "voided" : false
+} ]

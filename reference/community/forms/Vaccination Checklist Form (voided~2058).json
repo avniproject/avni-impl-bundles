@@ -1,0 +1,30 @@
+{
+  "name" : "Vaccination Checklist Form (voided~2058)",
+  "uuid" : "1579166d-b7ec-49ca-a60f-08f68ee27826",
+  "formType" : "ChecklistItem",
+  "formElementGroups" : [ {
+    "uuid" : "be001f18-9920-4fba-8fc8-12caa7e1720a",
+    "name" : "Vaccination",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "empty-formelement-name",
+      "uuid" : "d03af2dd-b33a-41dd-a220-3bea10496d9d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Placeholder for counselling form element",
+        "uuid" : "b4e5a662-97bf-4846-b9b7-9baeab4d89c4",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Vaccination"
+  } ],
+  "decisionConcepts" : [ ],
+  "voided" : true
+}

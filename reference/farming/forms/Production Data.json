@@ -1,0 +1,419 @@
+{
+  "name" : "Production Data",
+  "uuid" : "169742e0-e34f-4296-8a45-caedce0c4fa9",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "99af9913-f172-497d-9371-668541289f89",
+    "name" : "Production Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Number of Fruiting Plant",
+      "uuid" : "85f9f2f5-9ed5-4b90-9a5e-7fe664b1e04e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of Fruiting Plant",
+        "uuid" : "1caaedae-bda3-4ac8-a2ff-8c83b62e9288",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Year",
+      "uuid" : "b1bbff75-7017-4c17-a0dc-dd8a289bc383",
+      "keyValues" : [ {
+        "key" : "ExcludedAnswers",
+        "value" : [ "5th and more" ]
+      } ],
+      "concept" : {
+        "name" : "Years",
+        "uuid" : "0b78d29a-7cca-4fe6-af6c-7aa1f8ad024f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "9th",
+          "uuid" : "b1f5438c-a81b-4332-a38c-ae20744102cf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "10th",
+          "uuid" : "65147bb9-af65-41dc-8303-81cd7ed0ed63",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2nd",
+          "uuid" : "a9680646-53f5-4ecc-9d53-15055d491a69",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "5th and more",
+          "uuid" : "e9aaeaeb-aed4-4277-9882-b24e263edafc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3rd",
+          "uuid" : "8b82be71-3add-47be-bf85-f1c38d44447a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "4th",
+          "uuid" : "eff8e112-af15-414f-8cf3-897115dbff09",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "5th",
+          "uuid" : "59424a6b-af2e-4782-9830-86208e734b73",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "8th",
+          "uuid" : "121f063b-1a12-4626-952e-80343035ccdf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1st",
+          "uuid" : "d14396f8-a6ac-4875-aaed-a9d8ef04e239",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "6th",
+          "uuid" : "3ce93883-4d69-452a-bd7c-6cbe59ec8640",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "7th",
+          "uuid" : "9900200e-6003-4d5b-88b4-be4d09ddd120",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Name of fruit",
+      "uuid" : "01af4fa8-1c46-4073-83ab-29b21cd86d52",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of the Fruit Plant",
+        "uuid" : "bfa64304-4a0a-4858-870e-c0ffc32e1297",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Sweet lime",
+          "uuid" : "6aff16d6-986b-4038-8f50-2e485d52d014",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jamun",
+          "uuid" : "8806cb63-8e00-4cd0-a88f-885b82e5a6ad",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Guava",
+          "uuid" : "5e2992ff-f428-4471-862f-6a664b66bbb6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mango",
+          "uuid" : "ac169e86-e440-4ead-bfe7-1dd82d3a04a0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lemon",
+          "uuid" : "9b930b80-67d6-43d4-ac48-83978a32f12d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Aonla",
+          "uuid" : "14454b33-7c48-4749-a276-2b07e29bec4f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Amla",
+          "uuid" : "fafe06ae-37bf-477b-bf10-419765907c66",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jackfruit",
+          "uuid" : "f43a9898-dd26-44b9-a60f-56044198de4b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ber",
+          "uuid" : "8d47b3de-50e3-4548-b061-4902834e9e91",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n    const alovaUUID = '14454b33-7c48-4749-a276-2b07e29bec4f';\n    const berUUID = '8d47b3de-50e3-4548-b061-4902834e9e91';\n    const guavaUUID = '5e2992ff-f428-4471-862f-6a664b66bbb6';\n    const jamunUUID = '8806cb63-8e00-4cd0-a88f-885b82e5a6ad';\n    const jackFruitUUID = 'f43a9898-dd26-44b9-a60f-56044198de4b';\n    const lemonUUID = '9b930b80-67d6-43d4-ac48-83978a32f12d';\n    const mangoUUID = 'ac169e86-e440-4ead-bfe7-1dd82d3a04a0';\n    const sweetLimeUUID = '6aff16d6-986b-4038-8f50-2e485d52d014';\n    const otherUUID = '287164fa-3899-485f-9c1f-61401bc6359d';\n    let thisMonthFruits = [otherUUID];\n    let answersToShow = [];\n    const allOptions = [alovaUUID, berUUID, guavaUUID, jamunUUID, jackFruitUUID, lemonUUID, mangoUUID, sweetLimeUUID, otherUUID];\n\n    const fruitChartMonthWise = {\n        1: {month: 'January', fruits: [alovaUUID, lemonUUID]},\n        2: {month: 'February', fruits: [alovaUUID]},\n        3: {month: 'March', fruits: [berUUID, guavaUUID]},\n        4: {month: 'April', fruits: [berUUID, guavaUUID, lemonUUID, sweetLimeUUID]},\n        5: {month: 'May', fruits: [sweetLimeUUID]},\n        6: {month: 'June', fruits: [mangoUUID]},\n        7: {month: 'July', fruits: [jackFruitUUID, mangoUUID, lemonUUID]},\n        8: {month: 'August', fruits: [jackFruitUUID]},\n        9: {month: 'September', fruits: [jamunUUID, sweetLimeUUID]},\n        10: {month: 'October', fruits: [lemonUUID, sweetLimeUUID]},\n        11: {month: 'November', fruits: []},\n        12: {month: 'December', fruits: []}\n    }\n\n    const todayMonth = moment().month() + 1; // months in moment.js are 0-indexed\n\n    const matchedFruitSet = fruitChartMonthWise[todayMonth];\n\n    if(matchedFruitSet.fruits.length > 0) {\n        thisMonthFruits.push(...matchedFruitSet.fruits)\n    }\n\n    thisMonthFruits = _.uniq(thisMonthFruits);\n\n    let toBeHidden = _.difference(allOptions, thisMonthFruits)\n\n    if(toBeHidden && toBeHidden.length > 0){\n        _.forEach(toBeHidden, (answer) => {\n            const answerToSkip = formElement.getAnswerWithConceptUuid(answer);\n            if (answerToSkip) answersToSkip.push(answerToSkip);\n        });\n    }\n    \n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors, answersToShow);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Number of Fruiting Plant",
+      "uuid" : "1a92d092-e984-4ddc-ab76-0d214e513db0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of Fruiting Plant",
+        "uuid" : "1caaedae-bda3-4ac8-a2ff-8c83b62e9288",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n\n    let enteredNumber = programEncounter.getObservationValue(\"Number of Fruiting Plant\");\n\n    if(enteredNumber && !isNaN(enteredNumber) && !Number.isInteger(enteredNumber)){\n        validationErrors.push(\"Entered number should be an integer\");\n    }\n\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Number of  plant 1",
+      "uuid" : "a75fc5d8-c442-4b37-b4f8-75065077c907",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of plant 1",
+        "uuid" : "a695397a-09b4-4633-9f38-6117dd96062e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Total Production",
+      "uuid" : "3291b6f0-26e4-4833-b070-35b8d5ca40d0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total production",
+        "uuid" : "cea79c68-6954-4bc1-9955-229ce2d22eb3",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Household Consumption",
+      "uuid" : "d55cd61b-6c20-43e7-a967-b944a4e052e9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Household Consumption",
+        "uuid" : "625438a7-876a-480c-9e40-5da6fec66cfb",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Total quantity Sold in market",
+      "uuid" : "27fb674c-d672-4784-98c0-94346203cbe5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total quantity sold in market",
+        "uuid" : "8b3c04ab-b1c1-4bc1-b38a-b6c051707967",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Average Rate per Kg",
+      "uuid" : "54008732-3e5f-4b75-b866-f91edaac20c8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Average Rate per kg",
+        "uuid" : "1ed06e37-87e6-4b78-869b-1a67c6d8b33b",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Total Income from Orchard",
+      "uuid" : "88bc534e-d5dd-42fd-9cad-0405ec10f2aa",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Total Income from Orchard",
+        "uuid" : "d70aaae8-ac0e-422b-9f9b-c7d8402c75b0",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n\n  const totalProduction = programEncounter.getObservationValue('cea79c68-6954-4bc1-9955-229ce2d22eb3');\n  const averageRate = programEncounter.getObservationValue('1ed06e37-87e6-4b78-869b-1a67c6d8b33b');\n  if(totalProduction >= 0 && averageRate >= 0) {\n    const totalIncome = totalProduction * averageRate;\n    \n    value = Number(totalIncome.toFixed(2));\n  }\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Number of Fruiting Plant - Kharif",
+      "uuid" : "799c70c1-17cf-4433-855c-a4a981f4aa67",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of Fruiting Plant - Kharif",
+        "uuid" : "1820edbe-c635-4816-bec1-baa284307db1",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of Fruiting Plant - Rabi",
+      "uuid" : "9efb2dc7-0840-4439-adef-241940e59825",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of Fruiting Plant - Rabi",
+        "uuid" : "150342cb-46f8-4685-a7da-23d5cf8e076f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of Fruiting Plant - Zaid",
+      "uuid" : "d7d858e3-741d-4b9f-86f6-117a490d5c7d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of Fruiting Plant - Zaid",
+        "uuid" : "c094bc03-2665-43dd-b792-fbb84415d192",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Household Consumption",
+      "uuid" : "2bf2855e-8781-46b5-8294-44c986ebc8e1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Household Consumption",
+        "uuid" : "625438a7-876a-480c-9e40-5da6fec66cfb",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Production Details"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

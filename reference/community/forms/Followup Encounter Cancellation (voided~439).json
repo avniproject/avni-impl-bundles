@@ -1,0 +1,8 @@
+{
+  "name" : "Followup Encounter Cancellation (voided~439)",
+  "uuid" : "c88ce6fe-7cd7-48eb-bcb4-76ce5b1f0f21",
+  "formType" : "ProgramEncounterCancellation",
+  "formElementGroups" : [ ],
+  "decisionConcepts" : [ ],
+  "voided" : true
+}

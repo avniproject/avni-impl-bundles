@@ -1,0 +1,293 @@
+{
+  "name" : "Associate Farmer Onboarding Encounter",
+  "uuid" : "54b4a6cd-29eb-4ff6-8717-f8e651685bcd",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "5329a88e-3e68-44c3-ad10-5c648c506356",
+    "name" : "Plot Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Crop Name",
+      "uuid" : "30ec49f4-7a4e-4c28-bb8f-f276f241aa82",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Crop name",
+        "uuid" : "092fcc4b-da80-44c4-adf6-257b9b5fa6dc",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Long melon",
+          "uuid" : "8ce24f68-6d0f-44fb-b39a-fb1a169f0415",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cowpea",
+          "uuid" : "d5db3f55-44bb-4e5d-86e3-bccce9364cc0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Green gram",
+          "uuid" : "a3d76033-fb19-4e59-925b-c5409d911788",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "B",
+          "uuid" : "585462ab-97e3-4a79-8638-b26d21bc1c9e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lentil",
+          "uuid" : "c50830b0-3009-49f9-897b-8b96a6113ccb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "C",
+          "uuid" : "ef4cbc46-5790-40a6-9da6-89057c0d7fdc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Green Coriander",
+          "uuid" : "4ab5b6df-236a-41ca-8112-7b658f89930d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Carrot",
+          "uuid" : "cc83fae3-b93f-403b-8f52-2dc67b7dc0dd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Spinach",
+          "uuid" : "dcac9dd8-b24f-4b75-b168-beff35b4785c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lady's Finger",
+          "uuid" : "846f1324-de88-46ca-b2e1-53a64a62639d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Black gram",
+          "uuid" : "edc64af3-d049-4e8a-978a-ca0eb9ad00c3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Round Gourd",
+          "uuid" : "d7f66cb3-b7a1-4d84-8718-ad5c5db76483",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pea",
+          "uuid" : "b90777e7-fa0a-4d13-95ef-76076509c377",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "A",
+          "uuid" : "1d5d2734-2b63-456a-bfd0-099b92f27017",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Green Fenugreek",
+          "uuid" : "af4f8834-462d-4a2a-8cc0-c5a92bd4ff94",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Gram",
+          "uuid" : "6a40bace-73b7-4ddc-8483-a8081e637604",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Early Pegion pea",
+          "uuid" : "3da55d35-38d4-4adf-9ad0-6552265f4737",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cluster Bean",
+          "uuid" : "9b505590-481b-4005-98ba-b19e78f673bd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Linseed",
+          "uuid" : "e58d8cb4-0a91-46fd-b603-5f82307f3eb4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Variety name",
+      "uuid" : "76bec0db-578b-459d-9b11-1c0948f94555",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Variety Name",
+        "uuid" : "058c727d-8d5d-4409-8d89-e5899b671441",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "X",
+          "uuid" : "f346cb99-c380-4b55-a724-35279c9677e4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Z",
+          "uuid" : "6418455b-ea1b-4005-bf7e-830c78a19146",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Y",
+          "uuid" : "15a8fb44-b672-41f0-ad96-8a08a5124582",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Plot Details"
+  }, {
+    "uuid" : "2d2a3546-88c9-4093-a09d-3c6bf312086d",
+    "name" : "Land Preparation",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Have you adopted any improved practices for Land Preparation?",
+      "uuid" : "9b8ad75b-71b9-4099-bfef-3f9d80089a3a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Have you adopted any improved practices for Land Preparation?",
+        "uuid" : "ba300f3d-e484-49d7-a6d6-fbf02d8626a4",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "no",
+          "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "yes",
+          "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "If yes which of the following practices have been adopted?",
+      "uuid" : "bb0f7d6e-df5e-4585-b5f3-495d80c838fa",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "If yes which of the following practices have been adopted?",
+        "uuid" : "f44a4738-b26d-4a16-aadd-d11dda87bb2f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "B",
+          "uuid" : "585462ab-97e3-4a79-8638-b26d21bc1c9e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "A",
+          "uuid" : "1d5d2734-2b63-456a-bfd0-099b92f27017",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Land Preparation"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

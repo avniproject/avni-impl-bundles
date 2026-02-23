@@ -1,0 +1,64 @@
+[ {
+  "name" : "Family (voided~1799)",
+  "uuid" : "0659063b-6805-4789-b229-f0e12d9a95df",
+  "active" : true,
+  "type" : "Household",
+  "subjectSummaryRule" : "",
+  "programEligibilityCheckRule" : "",
+  "allowEmptyLocation" : false,
+  "allowMiddleName" : false,
+  "lastNameOptional" : false,
+  "allowProfilePicture" : false,
+  "uniqueName" : false,
+  "shouldSyncByLocation" : true,
+  "settings" : {
+    "displayRegistrationDetails" : true,
+    "displayPlannedEncounters" : true
+  },
+  "household" : true,
+  "group" : true,
+  "directlyAssignable" : false,
+  "voided" : true
+}, {
+  "name" : "Farmer",
+  "uuid" : "28b51317-86e9-4b33-b70d-437c8d667f95",
+  "active" : true,
+  "type" : "Person",
+  "subjectSummaryRule" : "",
+  "programEligibilityCheckRule" : "",
+  "allowEmptyLocation" : false,
+  "allowMiddleName" : false,
+  "lastNameOptional" : false,
+  "allowProfilePicture" : false,
+  "uniqueName" : false,
+  "shouldSyncByLocation" : true,
+  "settings" : {
+    "displayRegistrationDetails" : true,
+    "displayPlannedEncounters" : true
+  },
+  "household" : false,
+  "group" : false,
+  "directlyAssignable" : false,
+  "voided" : false
+}, {
+  "name" : "Family (voided~1800)",
+  "uuid" : "9046f644-37ac-4923-9dcb-453f6e50114d",
+  "active" : true,
+  "type" : "Household",
+  "subjectSummaryRule" : "",
+  "programEligibilityCheckRule" : "",
+  "allowEmptyLocation" : false,
+  "allowMiddleName" : false,
+  "lastNameOptional" : false,
+  "allowProfilePicture" : false,
+  "uniqueName" : false,
+  "shouldSyncByLocation" : true,
+  "settings" : {
+    "displayRegistrationDetails" : true,
+    "displayPlannedEncounters" : true
+  },
+  "household" : true,
+  "group" : true,
+  "directlyAssignable" : false,
+  "voided" : true
+} ]

@@ -1,0 +1,15 @@
+[ {
+  "name" : "Social Security",
+  "uuid" : "381e6958-17dc-4f94-94fc-a47c665ed426",
+  "colour" : "#ff0000",
+  "voided" : false,
+  "active" : null,
+  "enrolmentEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const moment = imports.moment;\n  let eligibility = true;\n  \n  const isConsentGiven = new imports.rulesConfig.RuleCondition({individual}).when.valueInRegistration(\"5076eb11-40bb-4fd9-85c7-471cdfa7747e\").containsAnyAnswerConceptName(\"1a812300-4963-4243-87d0-ea4924f2e057\",\"86dc226b-d19d-437a-a864-ccfa58635ba2\").matches();\n  \n  eligibility = isConsentGiven && individual.enrolments.length === 0;\n  \n  return eligibility;\n};",
+  "enrolmentSummaryRule" : "",
+  "enrolmentEligibilityCheckDeclarativeRule" : null,
+  "manualEligibilityCheckRequired" : false,
+  "showGrowthChart" : false,
+  "manualEnrolmentEligibilityCheckRule" : "",
+  "manualEnrolmentEligibilityCheckDeclarativeRule" : null,
+  "allowMultipleEnrolments" : false
+} ]

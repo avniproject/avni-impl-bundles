@@ -1,0 +1,489 @@
+{
+  "name" : "VHSND Registration",
+  "uuid" : "1fc20682-a288-41b2-bdb6-9c5e65a0c41e",
+  "formType" : "IndividualProfile",
+  "formElementGroups" : [ {
+    "uuid" : "5365931f-55c2-43ab-bca0-82f7aa13ca34",
+    "name" : "Other details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Sector Name",
+      "uuid" : "0e49f0ee-70e5-4152-9543-5ead07c78559",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "VHSND Sector PHNI",
+        "uuid" : "c8c3b76c-ddbe-45aa-a794-c3f834b23061",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Karpa",
+          "uuid" : "dc12189a-61ce-48f3-aafd-238d5ee57eae",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Khamraudh",
+          "uuid" : "dce4ba20-1922-4014-8707-15abcec90eb8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Section Name",
+      "uuid" : "ddf131f6-0897-4127-acc5-fffbd13e3c62",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Section Name - PHNI",
+        "uuid" : "d3c46a27-4fed-4838-83a3-689a41fd20ab",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Badi Tummi",
+          "uuid" : "2116c5c5-d1b9-4385-835a-fbd13a617c11",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Nagula",
+          "uuid" : "64ac6022-259d-45e5-8301-598b495e06e5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Padmaniya",
+          "uuid" : "6a691442-3c1a-4dbd-8294-e182d83a484b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Dudhmaniya",
+          "uuid" : "be4ad661-8844-418d-aa84-3d68af93ad10",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jaithari",
+          "uuid" : "5cb62f0d-971a-4142-b3c7-679b4ef59eb2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ledhra",
+          "uuid" : "232d488e-b842-4c30-a31b-641cfbd4e2b5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sarai",
+          "uuid" : "93c0fb28-b010-4bb2-9d0b-0d98112a677a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Padri",
+          "uuid" : "8465c3e3-34a1-4ea3-807f-1bd0019e4cdf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Khamraudh",
+          "uuid" : "dce4ba20-1922-4014-8707-15abcec90eb8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Gonda",
+          "uuid" : "2f9b9d17-e8f1-4b55-94d8-55972b704464",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Karpa",
+          "uuid" : "dc12189a-61ce-48f3-aafd-238d5ee57eae",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ufari Kala",
+          "uuid" : "25ceddd8-99f7-4421-81c3-fc68a5a61eb3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Alhwar",
+          "uuid" : "150b0a60-4484-47a7-b0ea-0d630f0da6f3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Dhuradhar",
+          "uuid" : "d2bfe452-95b6-4af5-a189-f247e8c3d22b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration(\"c8c3b76c-ddbe-45aa-a794-c3f834b23061\").containsAnswerConceptName(\"dce4ba20-1922-4014-8707-15abcec90eb8\").matches();\n    \n  const condition12 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration(\"c8c3b76c-ddbe-45aa-a794-c3f834b23061\").containsAnswerConceptName(\"dc12189a-61ce-48f3-aafd-238d5ee57eae\").matches();\n  \n  if(condition11 ) {\n    _.forEach([\"dc12189a-61ce-48f3-aafd-238d5ee57eae\",\"25ceddd8-99f7-4421-81c3-fc68a5a61eb3\",\"64ac6022-259d-45e5-8301-598b495e06e5\",\"2f9b9d17-e8f1-4b55-94d8-55972b704464\",\"232d488e-b842-4c30-a31b-641cfbd4e2b5\",\"be4ad661-8844-418d-aa84-3d68af93ad10\",\"8465c3e3-34a1-4ea3-807f-1bd0019e4cdf\",\"150b0a60-4484-47a7-b0ea-0d630f0da6f3\",\"93c0fb28-b010-4bb2-9d0b-0d98112a677a\"], (answer) => {\n        const answerToSkip = formElement.getAnswerWithConceptUuid(answer);\n        if (answerToSkip) answersToSkip.push(answerToSkip);\n    });\n};\n    if(condition12 ) {\n    _.forEach([\"dce4ba20-1922-4014-8707-15abcec90eb8\",\"5cb62f0d-971a-4142-b3c7-679b4ef59eb2\",\"d2bfe452-95b6-4af5-a189-f247e8c3d22b\",\"6a691442-3c1a-4dbd-8294-e182d83a484b\",\"2116c5c5-d1b9-4385-835a-fbd13a617c11\"], (answer) => {\n        const answerToSkip = formElement.getAnswerWithConceptUuid(answer);\n        if (answerToSkip) answersToSkip.push(answerToSkip);\n    });\n};\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "details" : {
+            "answersToSkip" : [ "Karpa", "Ufari Kala", "Nagula", "Gonda", "Ledhra", "Dudhmaniya", "Padri", "Alhwar", "Sarai" ],
+            "answerUuidsToSkip" : [ "dc12189a-61ce-48f3-aafd-238d5ee57eae", "25ceddd8-99f7-4421-81c3-fc68a5a61eb3", "64ac6022-259d-45e5-8301-598b495e06e5", "2f9b9d17-e8f1-4b55-94d8-55972b704464", "232d488e-b842-4c30-a31b-641cfbd4e2b5", "be4ad661-8844-418d-aa84-3d68af93ad10", "8465c3e3-34a1-4ea3-807f-1bd0019e4cdf", "150b0a60-4484-47a7-b0ea-0d630f0da6f3", "93c0fb28-b010-4bb2-9d0b-0d98112a677a" ]
+          },
+          "actionType" : "skipAnswers"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "registration",
+                "conceptName" : "VHSND Sector PHNI",
+                "conceptUuid" : "c8c3b76c-ddbe-45aa-a794-c3f834b23061",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Khamraudh" ],
+                "answerConceptUuids" : [ "dce4ba20-1922-4014-8707-15abcec90eb8" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      }, {
+        "actions" : [ {
+          "details" : {
+            "answersToSkip" : [ "Khamraudh", "Jaithari", "Dhuradhar", "Padmaniya", "Badi Tummi" ],
+            "answerUuidsToSkip" : [ "dce4ba20-1922-4014-8707-15abcec90eb8", "5cb62f0d-971a-4142-b3c7-679b4ef59eb2", "d2bfe452-95b6-4af5-a189-f247e8c3d22b", "6a691442-3c1a-4dbd-8294-e182d83a484b", "2116c5c5-d1b9-4385-835a-fbd13a617c11" ]
+          },
+          "actionType" : "skipAnswers"
+        } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "registration",
+                "conceptName" : "VHSND Sector PHNI",
+                "conceptUuid" : "c8c3b76c-ddbe-45aa-a794-c3f834b23061",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Karpa" ],
+                "answerConceptUuids" : [ "dc12189a-61ce-48f3-aafd-238d5ee57eae" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "VHSND Venue",
+      "uuid" : "997b403d-81ea-4b54-9e85-235c6106609b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "VHSND Venue",
+        "uuid" : "86238925-ee03-49ea-9fc8-28854f01fece",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Other Location",
+          "uuid" : "f0943c2a-36b9-406e-99f7-846cc0eb4e08",
+          "dataType" : "Text",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Anganwadi Center",
+          "uuid" : "3269c355-1adc-4ea3-8524-6fe6555a3595",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Gram Panchayat Bhawan",
+          "uuid" : "6e2aae57-a006-4a23-b062-db80f55a20b1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "School",
+          "uuid" : "e7431b46-2a3d-4be4-b03b-6610ed8d3681",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "At Any open place",
+          "uuid" : "80d88cb4-19c1-4eaf-9e00-b188b9553fad",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "SHC",
+          "uuid" : "1584c1aa-7d4a-468e-a16f-a2b630d01737",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "VHSND Venue (other)",
+      "uuid" : "6e8d997c-b0f5-4710-87b3-638b31db3164",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "VHSND Venue (other)",
+        "uuid" : "9f5eb237-2b95-43f9-8110-d9943f2bfe8b",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration(\"86238925-ee03-49ea-9fc8-28854f01fece\").containsAnswerConceptName(\"05ea583c-51d2-412d-ad00-06c432ffe538\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "registration",
+                "conceptName" : "VHND Venue",
+                "conceptUuid" : "86238925-ee03-49ea-9fc8-28854f01fece",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "05ea583c-51d2-412d-ad00-06c432ffe538" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Sector Name",
+      "uuid" : "d2e77fac-aed4-457d-8b99-37414763225b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "VHSND Sector PHNI (delete) (voided~335041)",
+        "uuid" : "61de6a56-500d-4e22-a6c1-e5621baed506",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Titahi - Jaithari",
+          "uuid" : "59e9aaee-aec8-4509-a43d-756ea8458db4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Karpa",
+          "uuid" : "dc12189a-61ce-48f3-aafd-238d5ee57eae",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Khamraudh",
+          "uuid" : "dce4ba20-1922-4014-8707-15abcec90eb8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ],
+        "voided" : true
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "VHSND planned week",
+      "uuid" : "164ff77d-7883-44a9-973c-ddd2edf727c9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "VHSND planned week",
+        "uuid" : "d9bdb94e-da1c-41c9-82ff-082ecf2979f6",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "3rd week",
+          "uuid" : "cba0b566-c5ad-4058-a672-f78fe4e84470",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "4th week",
+          "uuid" : "8b933bde-8d36-4735-8329-ba84f647eb0a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1st week",
+          "uuid" : "1930e7a9-9d90-4272-bfd7-de9d3e387b72",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2nd week",
+          "uuid" : "fac92691-098a-4b67-9e13-ca5e95ef6969",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "VHSND Planned day",
+      "uuid" : "7876eee0-d189-427d-b0cc-83b7a356faf1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "VHSND Planned day",
+        "uuid" : "18a1e22f-e6b9-4299-a4e9-10e9ddbfbaaf",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Tuesday",
+          "uuid" : "7f08b397-6fd7-45f9-b148-310720eb6799",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Friday",
+          "uuid" : "64f7c9a6-9cdb-4495-bdf0-a7313faa169f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Other details"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({ params, imports }) => {\n  const individual = params.entity;\n  const moment = imports.moment;\n  const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({individual});\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({individual}).when.valueInRegistration(\"86238925-ee03-49ea-9fc8-28854f01fece\").defined.matches();\n  \n  if(condition11 ){\n    const earliestDate = moment(individual.registrationDate).add(30, 'days').toDate();\n    const maxDate = moment(individual.registrationDate).add(37, 'days').toDate();\n    scheduleBuilder.add({name: \"VHND Supportive Supervision visit\", encounterType: \"VHND Supportive Supervision visit\", earliestDate, maxDate});  \n}\n  \n  return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ],
+  "visitScheduleDeclarativeRule" : [ {
+    "actions" : [ {
+      "details" : {
+        "dateField" : "registrationDate",
+        "daysToOverdue" : "37",
+        "encounterName" : "VHND Supportive Supervision visit",
+        "encounterType" : "VHND Supportive Supervision visit",
+        "daysToSchedule" : "30"
+      },
+      "actionType" : "scheduleVisit"
+    }, { } ],
+    "conditions" : [ {
+      "compoundRule" : {
+        "rules" : [ {
+          "lhs" : {
+            "type" : "concept",
+            "scope" : "registration",
+            "conceptName" : "VHND Venue",
+            "conceptUuid" : "86238925-ee03-49ea-9fc8-28854f01fece",
+            "conceptDataType" : "Coded"
+          },
+          "rhs" : { },
+          "operator" : "defined"
+        } ]
+      }
+    } ]
+  } ]
+}

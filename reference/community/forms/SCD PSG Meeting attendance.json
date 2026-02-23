@@ -1,0 +1,598 @@
+{
+  "name" : "SCD PSG Meeting attendance",
+  "uuid" : "158d5e83-0162-43b1-85d4-1929e853b0dc",
+  "formType" : "Encounter",
+  "formElementGroups" : [ {
+    "uuid" : "4cb62551-89eb-4bbf-ab5d-bf88a9f51b4a",
+    "name" : "Date of PSG Meeting",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Date of PSG Meeting",
+      "uuid" : "3ad89f22-1228-4225-a901-e53b7253c46a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Date of PSG Meeting",
+        "uuid" : "acf8e9fb-3ba2-4d41-ac3d-0ec62f60a15f",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Counsellor in-charge of PSGM",
+      "uuid" : "1e7f800c-5a11-4b27-9e9c-b8eb018a6b3c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Counsellor in-charge of PSGM",
+        "uuid" : "69b44bdd-a92f-4a06-8ab5-f2edd9fdef3c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Roshani Rathour",
+          "uuid" : "3f961b2f-0545-40d9-ab20-f2455fa830c3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ishwar Mohale",
+          "uuid" : "2083e17a-d573-4ea4-a61b-69502b8d0623",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sushil Dwivedy",
+          "uuid" : "615861a1-f4e3-41df-9ac7-74732f8c13c1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sharda Prasad",
+          "uuid" : "c3e51ce7-5e20-4d10-923c-d8fec90ec7ad",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Laxmi Patker",
+          "uuid" : "784f3c13-00d8-4f9d-936b-de6f00cbfe31",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pavan Gupta",
+          "uuid" : "23ceb8c2-3de4-4fb9-88da-e86627ab1844",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Renu Sahu",
+          "uuid" : "399ae468-429d-48cf-bc31-486c3042fc03",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Rajesh",
+          "uuid" : "af093ce5-fb09-496a-b9cf-15df6deeffb6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Vaibhavi Dubey",
+          "uuid" : "dcf1e9b9-1a2c-4107-a7b4-187008aff675",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Duty Doctor Name",
+      "uuid" : "49d0a5b7-c12f-4dc6-acd3-de125a86a087",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Duty Doctor Name",
+        "uuid" : "714b330b-99a5-44b3-b530-8fda9df5a991",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "No. of Nurses on duty",
+      "uuid" : "375872d1-434e-4d90-ac05-93ec8234019e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of Nurses on duty",
+        "uuid" : "519acc52-2197-4680-8823-2191fd6369db",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 9.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "No. of LTs on Duty",
+      "uuid" : "bfc739ff-6c3c-429b-8d98-c58be700e501",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of LTs on Duty",
+        "uuid" : "ce8a7034-b952-4ea2-b641-ffb2fbd77be3",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 9.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Total persons in PSGM",
+      "uuid" : "771fe1b6-0ff8-444c-96cc-bccdb7442ce5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total Pesons in PSGM",
+        "uuid" : "5a36475e-6e4c-4cb7-bb40-1f18e20b50b6",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "No. of SS Patients attended PSG Meeting",
+      "uuid" : "cd1170c1-b120-4be7-a33e-8fbb0301da92",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of SS attended PSGM",
+        "uuid" : "d4b4aba2-19c2-4499-8419-f753debd8e12",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "No. of AS Members participated",
+      "uuid" : "52545853-cded-46a6-9540-aa49cd92ca62",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of AS Members participated",
+        "uuid" : "4660204d-f115-45b4-a05b-34f794ac8afd",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "No. of Hydroxyurea Capsules given",
+      "uuid" : "425b8c91-b94b-4f29-b50c-786a3b9fbc17",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of Hydroxyurea 500mg capsules given to patients",
+        "uuid" : "b16deb47-750c-4318-abcc-5a3dcf0d87b3",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Date of PSG Meeting"
+  }, {
+    "uuid" : "37cbeb3c-0c0b-4060-a0b0-a2f4b49930ac",
+    "name" : "Patient Information",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Total persons in PSGM (including patient attenders)",
+      "uuid" : "e89eaafa-37ea-45ae-bdaf-12f372eda14b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total Pesons in PSGM",
+        "uuid" : "5a36475e-6e4c-4cb7-bb40-1f18e20b50b6",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "No. of SS Patients attended PSG Meeting",
+      "uuid" : "a449ef88-325b-488d-a0cd-da928a05da09",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of SS attended PSGM",
+        "uuid" : "d4b4aba2-19c2-4499-8419-f753debd8e12",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  let totalPesonsInPsgmObservation = encounter.findObservation('5a36475e-6e4c-4cb7-bb40-1f18e20b50b6');\n  let totalPesonsInPsgmValue = _.isEmpty(totalPesonsInPsgmObservation) ? totalPesonsInPsgmObservation : totalPesonsInPsgmObservation.getReadableValue();\n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"d4b4aba2-19c2-4499-8419-f753debd8e12\").greaterThan(totalPesonsInPsgmValue).matches();\n  \n  if(condition11 ){\n    validationErrors.push(\"SS रोगियों की संख्या PSGM में आये कुल व्यक्तियों से ज्यादा भरी गयी है |\");  \n}\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "details" : {
+            "validationError" : "SS रोगियों की संख्या PSGM में आये कुल व्यक्तियों से ज्यादा भरी गयी है |"
+          },
+          "actionType" : "validationError"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "No. of SS attended PSGM",
+                "conceptUuid" : "d4b4aba2-19c2-4499-8419-f753debd8e12",
+                "conceptDataType" : "Numeric"
+              },
+              "rhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Total Pesons in PSGM",
+                "conceptUuid" : "5a36475e-6e4c-4cb7-bb40-1f18e20b50b6"
+              },
+              "operator" : "greaterThan"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "no. of new SS patients Enrolled",
+      "uuid" : "840d18f4-0c28-4a90-ba3e-3ab8cb0bb663",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "no. of new SS patients Enrolled (PSGM)",
+        "uuid" : "6bc0311e-d965-4e9c-8ee8-f30218190089",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "No. of Serious / referred SS patients",
+      "uuid" : "f09fec24-3559-4441-859a-ae153f212861",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of Serious / referred SS patients (PSGM)",
+        "uuid" : "86121e36-60cb-4f96-9342-ca630d36eb97",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "lowNormal" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "No. of ANC SS participated in PSGM",
+      "uuid" : "49ed704b-fe25-412d-9c54-1cd8560a0352",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of ANC SS participated in PSGM",
+        "uuid" : "cc9ba5a6-8a9b-4c88-8808-547156e54675",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "No. of AS Members participated",
+      "uuid" : "27c5e94f-d8d5-4050-9298-9bbfc1cdb25b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of AS Members participated",
+        "uuid" : "4660204d-f115-45b4-a05b-34f794ac8afd",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n\n  // Fetch observations\n  function getObsValue(uuid) {\n    const obs = encounter.findObservation(uuid);\n    const val = _.isEmpty(obs) ? obs : obs.getReadableValue();\n    return val ? Number(val) : 0;\n  }\n\n  const allValue = getObsValue(\"5a36475e-6e4c-4cb7-bb40-1f18e20b50b6\"); // All\n  const asValue  = getObsValue(\"4660204d-f115-45b4-a05b-34f794ac8afd\"); // AS\n  const ssValue  = getObsValue(\"d4b4aba2-19c2-4499-8419-f753debd8e12\"); // SS\n\n  // Apply the condition: if All < (AS + SS)\n  if (allValue < (asValue + ssValue)) {\n    validationErrors.push(\"SS + AS की संख्या कुल उपस्थित व्यक्तियों से अधिक है। कृपया जांचें।\");\n  }\n\n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};\n",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "No. of other type of patients (Not SCD) participated in PSGM",
+      "uuid" : "4507a054-a212-4d5c-8e02-9df1e7df6979",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of other type of patients (Not SCD) participated in PSGM",
+        "uuid" : "d84381f4-f7bb-4337-ba40-ffc689638829",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "lowNormal" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "No. of SCD screening sample collected",
+      "uuid" : "4ee188ce-9c48-42e4-bd2a-e00fc1b3f753",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of SCD screening sample collected",
+        "uuid" : "505c5efe-a11c-48a7-8e39-7ee9ab4ec88e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "How many Hydroxyurea capsules were issued by govt",
+      "uuid" : "9e53daa6-50c9-42cd-94b9-98ffcf7dcd19",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of Hydroxyurea Capsules issued by govt",
+        "uuid" : "b39dc2f9-b6b7-46cf-a29f-8ee50136720e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "No. of Hydroxyurea Capsules given to patients",
+      "uuid" : "92898b51-d415-4a58-b411-8f5572fb9b34",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of Hydroxyurea 500mg capsules given to patients",
+        "uuid" : "b16deb47-750c-4318-abcc-5a3dcf0d87b3",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "No. of patients received PCV Vaccination in PSGM",
+      "uuid" : "02e6252d-a270-45c4-b4f9-2fd6757a2644",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of patients received PCV Vaccination in PSGM",
+        "uuid" : "849141cd-e9f5-4f36-b4ab-053f2cfe0832",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "lowNormal" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Any other information?",
+      "uuid" : "8020bf9e-2487-4eb3-b17d-e9793b9c26d7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Any other information (PSGM)",
+        "uuid" : "be0cd33d-6284-4c37-86cf-86e2e1e97b11",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Patient Information"
+  }, {
+    "uuid" : "c1a573db-69c3-4350-a4e6-ef7f68c1167f",
+    "name" : "Test, Medicine & Vaccination",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "How many Hydroxyurea capsules were issued by govt",
+      "uuid" : "c1d28faf-993b-4def-9ce6-884c766f67e1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of Hydroxyurea Capsules issued by govt",
+        "uuid" : "b39dc2f9-b6b7-46cf-a29f-8ee50136720e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "No. of Hydroxyurea Capsules given to patients",
+      "uuid" : "437abd09-c26a-4b44-a172-c4451bd20755",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of Hydroxyurea 500mg capsules given to patients",
+        "uuid" : "b16deb47-750c-4318-abcc-5a3dcf0d87b3",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "No. of patients received PCV Vaccination in PSGM",
+      "uuid" : "fda9cacb-7b97-4f45-a6ea-a15fbb4e1cd1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of patients received PCV Vaccination in PSGM",
+        "uuid" : "849141cd-e9f5-4f36-b4ab-053f2cfe0832",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "lowNormal" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "No. of patients whose CBC test done",
+      "uuid" : "990057ab-12e6-4907-a04d-67d4511d0c50",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of patients whose CBC test done (PSGM)",
+        "uuid" : "35be250d-592b-43ef-9f31-23a2b6fcf83a",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "lowNormal" : 5.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Would you like to share challenges faced by you in PSGM",
+      "uuid" : "267f7aa3-144b-472b-92fa-691c4fe288f7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Challenges in PSGM",
+        "uuid" : "49c19328-c915-4fff-9776-a3a6e15f5967",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Any other information?",
+      "uuid" : "f58dc083-1e2e-43ee-a6dc-eda87b869598",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Any other information (PSGM)",
+        "uuid" : "be0cd33d-6284-4c37-86cf-86e2e1e97b11",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Test, Medicine & Vaccination"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({ params, imports }) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({encounter});\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter}).when.valueInEncounter(\"acf8e9fb-3ba2-4d41-ac3d-0ec62f60a15f\").defined.matches();\n  \n  if(condition11 ){\n    const earliestDate = moment(encounter.encounterDateTime).add(30, 'days').toDate();\n    const maxDate = moment(encounter.encounterDateTime).add(33, 'days').toDate();\n    scheduleBuilder.add({name: \"SCD PSG Meeting attendance\", encounterType: \"SCD PSG Meeting attendance\", earliestDate, maxDate});  \n}\n  \n  return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ],
+  "visitScheduleDeclarativeRule" : [ {
+    "actions" : [ {
+      "details" : {
+        "dateField" : "encounterDateTime",
+        "daysToOverdue" : "33",
+        "encounterName" : "SCD PSG Meeting attendance",
+        "encounterType" : "SCD PSG Meeting attendance",
+        "daysToSchedule" : "30"
+      },
+      "actionType" : "scheduleVisit"
+    }, { } ],
+    "conditions" : [ {
+      "compoundRule" : {
+        "rules" : [ {
+          "lhs" : {
+            "type" : "concept",
+            "scope" : "encounter",
+            "conceptName" : "Date of PSG Meeting",
+            "conceptUuid" : "acf8e9fb-3ba2-4d41-ac3d-0ec62f60a15f",
+            "conceptDataType" : "Date"
+          },
+          "rhs" : { },
+          "operator" : "defined"
+        } ],
+        "conjunction" : "and"
+      }
+    } ]
+  } ]
+}

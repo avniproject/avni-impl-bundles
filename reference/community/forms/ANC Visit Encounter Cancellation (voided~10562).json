@@ -1,0 +1,66 @@
+{
+  "name" : "ANC Visit Encounter Cancellation (voided~10562)",
+  "uuid" : "2601a6f2-dceb-4126-808c-b6a50a16edb4",
+  "formType" : "ProgramEncounterCancellation",
+  "formElementGroups" : [ {
+    "uuid" : "f7425735-aeec-42f7-954c-de2dc9be7d72",
+    "name" : "Cancellation reason form",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Reason for cancellation",
+      "uuid" : "0d76fade-9eff-4c66-8d3f-15e8bd1f8f9b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Reason for maternal health enrolment cancellation",
+        "uuid" : "d4491dec-e276-4b65-a499-50f8cff51691",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Migration",
+          "uuid" : "229fac5f-468e-46f0-b812-bdcc56840b6c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Maternal Death",
+          "uuid" : "475b4eba-f2ef-4d09-ac27-3913e0b23373",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not Required",
+          "uuid" : "e11497db-ab32-4a35-ab39-a5bc78356a37",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Cancellation reason form"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ],
+  "voided" : true
+}

@@ -1,0 +1,3046 @@
+[ {
+  "name" : "0-2 hours",
+  "uuid" : "76ae6942-d6e0-4118-97ee-b34df4b88845",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "0-2 km",
+  "uuid" : "c62d9b4e-1df7-4330-ba75-bf60588bf254",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "0-2 years",
+  "uuid" : "e8cc65f3-2009-49e5-9de3-3ba8ce6a33b4",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "1 or <1 day per week",
+  "uuid" : "9ce02d0b-7804-4986-8c83-004fb6037dbb",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "1-5",
+  "uuid" : "ccb05a32-6874-4b25-9d66-c61c1c2aff05",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "2-3 days per week",
+  "uuid" : "6311d6fb-2d45-49b4-8e55-ad69baffc0c9",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "2-4 hours",
+  "uuid" : "d74d9153-1b55-4484-b266-b31c25523069",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "2-5 km",
+  "uuid" : "c229e9bc-88a6-4e28-a539-d7b5cc94714e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "2-5 years",
+  "uuid" : "ef7ac4b5-6d2f-4c09-b38c-42c65cdf9374",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "4-6 days in a week",
+  "uuid" : "eff03361-8022-4e7d-a215-26278c6e48c0",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "4-8 hours",
+  "uuid" : "47e13544-dcb7-4132-b965-55f6407be975",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "5-10 years",
+  "uuid" : "0c1c24a4-83de-4182-aa62-4c04a04896b7",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "5-8 km",
+  "uuid" : "54ae409b-7e1e-4612-9654-ccf27dc0bd11",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "5-9",
+  "uuid" : "cd9f51a3-0da7-42c5-8299-b037c0147077",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "8-10 km",
+  "uuid" : "4c52f068-b6de-4dde-91e8-af1212179c73",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "> 10 km",
+  "uuid" : "3674d3ed-76e9-4a41-8e30-d6600d0655e9",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Aadhaar card",
+  "uuid" : "944f37b6-9148-4cd3-8b2f-3c475c0aeab3",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Aadhaar Card Correction",
+  "uuid" : "a48091a0-5739-439d-a2d1-26b16763da3c",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Aadhaar card number",
+  "uuid" : "afd5c9d5-b2f1-4ac4-a62d-73c4e3ee38f0",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Aadhar card and Aadhar seeding",
+  "uuid" : "e69cce91-8e68-42b8-bdbe-1a15c6c5a4aa",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Address line 1",
+  "uuid" : "00aa2937-97c7-4481-a20e-cc74a74eb71f",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Address line 2",
+  "uuid" : "950bc0fc-21cf-4f2a-96cb-c7aca471e3e1",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "All days of the week",
+  "uuid" : "5ed58b31-7e0c-448a-8f31-13d95a89da79",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Anganwadi",
+  "uuid" : "7aa5c64d-7027-4cda-a150-1b4aef552da5",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Any other",
+  "uuid" : "89153ed9-033c-4277-bd1e-e5c7b55da39e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Any other capital - Specify",
+  "uuid" : "3491e211-d452-4e8b-816c-45bb685aac5d",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Any other place where you buy scrap",
+  "uuid" : "ef2324db-a851-49d2-a9f6-565b3bf114a1",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Any other place where you got capitalization",
+  "uuid" : "99b2a665-e4d9-46aa-8b24-ec49cff70e9a",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Any other way you carry your waste",
+  "uuid" : "4aa2c0ff-b5c8-497a-99f8-499db8368a1e",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Anywhere Within City Limits",
+  "uuid" : "b7792d57-9a53-4d52-bd94-a57431f3bd42",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Are you a member of a any union",
+  "uuid" : "232b118a-d02f-436c-8dcc-4db5f82433b8",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  }, {
+    "name" : "No Response",
+    "uuid" : "f1b375f9-b14a-4a3e-8a9c-4288664e69ad",
+    "unique" : true,
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Are you a member of any SHG",
+  "uuid" : "4f209370-4871-4b84-a1c4-71fefe1c892f",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Are you studying presently",
+  "uuid" : "f4f7185b-a88b-4653-ba22-e222d542eb3b",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Area",
+  "uuid" : "9f66cdf6-0ae0-40a8-a4e3-e0fcef99c642",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Area(s)",
+  "uuid" : "91641ef9-099b-4c54-bacf-20d3cb61bc5f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Arogya Karnataka & Ayushmanbhava",
+  "uuid" : "e9a6f24b-059f-4fd8-bec6-d1b176150ef1",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Arogya Karnataka (Ayushman Bharath)",
+  "uuid" : "e5212a2f-8800-4711-8398-17e605269426",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Audio",
+  "uuid" : "86dc226b-d19d-437a-a864-ccfa58635ba2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Auto tipper",
+  "uuid" : "10ddbdd0-c9fa-4071-8b62-d87c27440e3a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Awareness Camps",
+  "uuid" : "aa6b6be7-534e-4e6a-b1aa-04d84af4d153",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Bank A/C",
+  "uuid" : "a9c6a4a1-e4dc-46bc-b36f-20044ba80cb7",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Bank account transfer",
+  "uuid" : "f3889010-5794-4cd8-8526-182628736637",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Basis of Income",
+  "uuid" : "9a8c6b49-eb56-4e85-a995-69325aac4ab9",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Hourly Fixed Rate",
+    "uuid" : "00aeeaeb-311b-42a7-acde-e68e24b71540",
+    "order" : 0.0
+  }, {
+    "name" : "Daily Fixed Rate",
+    "uuid" : "5d59e34c-a9f0-4241-a3f2-7ae91d02a818",
+    "order" : 1.0
+  }, {
+    "name" : "Weekly Fixed Rate",
+    "uuid" : "df769a75-a489-4d2e-b273-5e0806564234",
+    "order" : 2.0
+  }, {
+    "name" : "Monthly Fixed Rate",
+    "uuid" : "0671dfab-aafb-49a4-8c41-0bffde62dba4",
+    "order" : 3.0
+  }, {
+    "name" : "Piece/Trip Rate",
+    "uuid" : "55b73042-79e7-447f-b12e-76c0fb264493",
+    "order" : 4.0
+  }, {
+    "name" : "Quantity of Waste Collected",
+    "uuid" : "e7f6d560-48c6-40b1-a478-27be8b096bf2",
+    "order" : 5.0
+  }, {
+    "name" : "Work Difficulty",
+    "uuid" : "13517c80-6e10-487a-bab4-d07c2364c14e",
+    "order" : 6.0
+  }, {
+    "name" : "No Response",
+    "uuid" : "f1b375f9-b14a-4a3e-8a9c-4288664e69ad",
+    "unique" : true,
+    "order" : 7.0
+  }, {
+    "name" : "Other",
+    "uuid" : "59f7d502-48e4-48e4-a6f7-15046fec16c3",
+    "order" : 8.0
+  } ]
+}, {
+  "name" : "Basket",
+  "uuid" : "672f14a7-c658-4aa4-ba6f-82da74ddc39c",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "BC",
+  "uuid" : "efdf292a-e72e-4bd4-8fbe-01f5ffa958ea",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Between Rs. 100 - 200 per day",
+  "uuid" : "e3772874-61ea-4646-9675-0e43dbc8837d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Between Rs. 300 - 400 per week",
+  "uuid" : "44f8215b-efd8-4894-bf24-79280d608db1",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Birth certificate",
+  "uuid" : "bcb0e99f-1a89-4872-84b7-b6875b499b70",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Bottle Waste",
+  "uuid" : "56e17c8c-01e1-4282-b8c2-5e73a1696552",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Buddhism",
+  "uuid" : "955f5f45-4459-4852-9bc4-baad8f4d9427",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Cardboard",
+  "uuid" : "7e48b885-21db-43d5-97c7-75a045d0b0e1",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Carry on shoulder",
+  "uuid" : "f3573cdc-8b7a-4120-bba7-6c13e3f264bc",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Cash",
+  "uuid" : "1f2523ff-f50a-46d9-ade9-8cf776b14435",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Caste",
+  "uuid" : "cdb601de-e7b4-468f-b91f-39b76eed9627",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Caste/Community",
+  "uuid" : "d7f7ee32-e261-4d5c-b067-5acb74c23f7c",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "General",
+    "uuid" : "23f592c8-5b79-49cc-829f-a396d1df8e5b",
+    "order" : 0.0
+  }, {
+    "name" : "ST",
+    "uuid" : "5e27c579-1201-4b61-81d5-3493ef9e0724",
+    "order" : 1.0
+  }, {
+    "name" : "SC-Arunthathiyar",
+    "uuid" : "a0059abc-aafc-4681-9b03-1df9b57a4444",
+    "order" : 2.0
+  }, {
+    "name" : "SC-Thoti",
+    "uuid" : "5ba30897-2bff-44ff-8050-855c93755388",
+    "order" : 3.0
+  }, {
+    "name" : "SC-Paraiyar",
+    "uuid" : "0c107d1f-bf36-495f-a77f-64d469553496",
+    "order" : 4.0
+  }, {
+    "name" : "SC-Others",
+    "uuid" : "eacf8e34-59c2-486d-a60e-a93810194623",
+    "order" : 5.0
+  }, {
+    "name" : "BC",
+    "uuid" : "efdf292a-e72e-4bd4-8fbe-01f5ffa958ea",
+    "order" : 6.0
+  }, {
+    "name" : "MBC",
+    "uuid" : "ffd93790-7f91-423f-81f3-1b3e7254ac52",
+    "order" : 7.0
+  }, {
+    "name" : "FC",
+    "uuid" : "a526a34c-19b2-47d9-81ac-e4d7760d2fa9",
+    "order" : 8.0
+  }, {
+    "name" : "No Response",
+    "uuid" : "f1b375f9-b14a-4a3e-8a9c-4288664e69ad",
+    "unique" : true,
+    "order" : 9.0
+  }, {
+    "name" : "Other",
+    "uuid" : "59f7d502-48e4-48e4-a6f7-15046fec16c3",
+    "order" : 10.0
+  } ]
+}, {
+  "name" : "Caste/Community - Please Specify",
+  "uuid" : "707a616c-ffa2-4548-a06c-c3a7dde91649",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Cheque",
+  "uuid" : "de0456c7-5932-46ae-81bd-84744018fa76",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Christianity",
+  "uuid" : "06bcd1a9-656c-4d6a-ba7f-f10d1f112091",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Class 10 Fail",
+  "uuid" : "6a3a7b75-e98d-4d16-8140-3d067f38429a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Class 10 Pass",
+  "uuid" : "304fd52d-1af1-4f2f-bad4-6de28315fe4f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Collection of Hair (in gram)",
+  "uuid" : "9ce58e17-67ef-456b-9cce-9a4e2295bc54",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Comments",
+  "uuid" : "78df181d-90c8-445d-a572-305c90eea500",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Commercial establishments",
+  "uuid" : "c9475dd5-1a5b-4a70-9617-913a7449d00c",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Computer and other E-Waste",
+  "uuid" : "30582701-a8b2-40bb-8dc6-0cd65bc086ba",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Consent is not available",
+  "uuid" : "b161152d-4433-4175-b7ea-3c9cb208899f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Cycle",
+  "uuid" : "c450ea5e-b82e-44fe-8c75-0823c0bd707d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Cycle Rickshaw",
+  "uuid" : "3f1b0d20-5ceb-4edd-862f-72bebaf7444a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Daily Fixed Rate",
+  "uuid" : "5d59e34c-a9f0-4241-a3f2-7ae91d02a818",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Date of event",
+  "uuid" : "b4df27d8-24d4-47f4-8a4f-a8f1c60ecd87",
+  "dataType" : "Date",
+  "active" : true
+}, {
+  "name" : "Death Certificate",
+  "uuid" : "f415585d-4ba3-4eab-9f4a-c4dd53fe3b04",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Degree Fail",
+  "uuid" : "588633d6-296b-4026-aca6-4b2a9ec989fe",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Degree Pass",
+  "uuid" : "17c05fe3-a4ae-4707-8e1a-bc4d159d6866",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Description of the other social security id",
+  "uuid" : "ad2bd9a7-7322-437a-9f32-129fa9712184",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Devaraju URS Post metric courses",
+  "uuid" : "eb3a09e4-9e64-447c-b71e-8e8bda3227ad",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Diploma",
+  "uuid" : "d39ab558-36a0-4a19-9567-858c88684b85",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Disable Pension",
+  "uuid" : "259c08e2-92fe-4107-ac6f-5a8fe7df15a0",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Disable Scholarship",
+  "uuid" : "2638fdde-d623-4f12-a9c3-4d860bbb454f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Divorced",
+  "uuid" : "51597132-eeb6-49ca-8395-c403deb2afe9",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Do you also go for a rounds before or after work",
+  "uuid" : "3ae1280c-a888-4d87-8a6e-548669b1d342",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Do you also work at ULB site/Plant/Landfill",
+  "uuid" : "f09f8a0c-8599-4f3a-97b2-d9d3cf3bd9ef",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Do you collect any other type of waste",
+  "uuid" : "27a86f04-7436-42f1-915a-1d96e38fa95b",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Do you get disable pensions",
+  "uuid" : "f2e2f5c2-5a19-4884-9428-35ed7935038e",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  }, {
+    "name" : "No Response",
+    "uuid" : "f1b375f9-b14a-4a3e-8a9c-4288664e69ad",
+    "order" : 2.0,
+    "voided" : true
+  } ]
+}, {
+  "name" : "Do you get segregated waste",
+  "uuid" : "e85899e4-74bb-4d84-9032-21821567c102",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Do you have an occupational identity card",
+  "uuid" : "71d0fad7-2d2f-43a4-b2cf-7919ecc41995",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Do you have any partial/total disablement that affects your day-to-day functioning",
+  "uuid" : "972316de-ce98-4bb0-847b-8437f5508eb6",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Do you have birth certificate",
+  "uuid" : "dce04145-58d9-482a-941b-a21100b10e98",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Do you have income certificate",
+  "uuid" : "9d54dd4c-fa5c-46cd-ab0f-f29470697cfd",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "E Shram",
+  "uuid" : "29044121-0664-41f3-b99d-a51087f9593d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Enter rate in INR",
+  "uuid" : "96601e92-5131-4a4b-aca9-978b6488a3d0",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Event image",
+  "uuid" : "bdf79f83-e583-4888-932f-7b182a9e9506",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Failed",
+  "uuid" : "488c1ec3-a6d0-4e8f-a973-50fbff121f47",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "FC",
+  "uuid" : "a526a34c-19b2-47d9-81ac-e4d7760d2fa9",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Female household member",
+  "uuid" : "8be4e675-ec85-4945-8608-866061150db5",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Few days a month",
+  "uuid" : "c0c911a3-d9b6-491a-a775-f6cc602986bf",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Free Exam Training for SC/ST and Backward",
+  "uuid" : "9414d55f-8afe-4594-a37e-78319014fd37",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Free LPG connections",
+  "uuid" : "67e38c44-98e9-477e-bc53-7895b3b291e4",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Frequency of work",
+  "uuid" : "3ea1633d-3b3b-496e-878c-b0c33869b0b2",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Once in a month",
+    "uuid" : "3c2cb243-9891-4f44-bbec-5f97e281d5bb",
+    "order" : 0.0
+  }, {
+    "name" : "1 or <1 day per week",
+    "uuid" : "9ce02d0b-7804-4986-8c83-004fb6037dbb",
+    "order" : 1.0
+  }, {
+    "name" : "2-3 days per week",
+    "uuid" : "6311d6fb-2d45-49b4-8e55-ad69baffc0c9",
+    "order" : 2.0
+  }, {
+    "name" : "4-6 days in a week",
+    "uuid" : "eff03361-8022-4e7d-a215-26278c6e48c0",
+    "order" : 3.0
+  }, {
+    "name" : "All days of the week",
+    "uuid" : "5ed58b31-7e0c-448a-8f31-13d95a89da79",
+    "order" : 4.0
+  }, {
+    "name" : "Few days a month",
+    "uuid" : "c0c911a3-d9b6-491a-a775-f6cc602986bf",
+    "order" : 5.0
+  }, {
+    "name" : "Other",
+    "uuid" : "59f7d502-48e4-48e4-a6f7-15046fec16c3",
+    "order" : 6.0
+  } ]
+}, {
+  "name" : "General",
+  "uuid" : "23f592c8-5b79-49cc-829f-a396d1df8e5b",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "General scheme application date",
+  "uuid" : "ebbb0b17-a0ef-4c22-8758-12fec0abb4cd",
+  "dataType" : "Date",
+  "active" : true
+}, {
+  "name" : "General scheme application id",
+  "uuid" : "fc6cb2af-8905-493e-9c4c-618a4e61043a",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "General scheme image",
+  "uuid" : "1ca24356-a513-4e0e-920f-4e1a95c0215f",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "General scheme open date",
+  "uuid" : "f57ba9ac-493e-49d4-85dd-03af3c1e0cfe",
+  "dataType" : "Date",
+  "active" : true
+}, {
+  "name" : "General scheme received",
+  "uuid" : "e49e413f-bdcb-477f-bf79-bbeaf61d3fd3",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "General scheme received on",
+  "uuid" : "8e203a16-b090-44bc-96b4-fe9c8e0219b4",
+  "dataType" : "Date",
+  "active" : true
+}, {
+  "name" : "General schemes",
+  "uuid" : "bd6c59ff-24a1-404d-ba3e-9bc7cec65470",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Glass",
+  "uuid" : "ffe672c7-3d61-4798-afc1-21330e0abca3",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Hair Waste Picker",
+  "uuid" : "2c4b71cb-6a68-4c3c-9b48-749712e4141b",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Hand cart",
+  "uuid" : "eb56748c-aa8a-4d12-9eff-d30b8fffe5c0",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Have not been to school",
+  "uuid" : "d7155047-4b9d-495e-903b-21767da0cbc4",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "High School (8/9/10)",
+  "uuid" : "08bf0194-fa13-426a-ab54-a3867621a9e1",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Hinduism",
+  "uuid" : "1e5e6b35-25d0-49cf-ad51-d87957ca7b2f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Hostel Admission",
+  "uuid" : "663c9de8-c010-422f-843c-38801deb4a42",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Hourly Fixed Rate",
+  "uuid" : "00aeeaeb-311b-42a7-acde-e68e24b71540",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "House Renovation",
+  "uuid" : "c921ef01-2b38-4a9f-89be-a01683351f7f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Household number",
+  "uuid" : "2b2033b8-93a2-46cd-b2a6-ec6e57453930",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Households",
+  "uuid" : "233b0903-e021-496f-8fde-f6d540d366ec",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Houses for homeless",
+  "uuid" : "4df7adf6-34d4-44ba-a3b8-6ec4f951b038",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Housing",
+  "uuid" : "c3b9c5f6-67a5-4906-ad41-6e283ad93185",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "How do you carry your waste after collection from households/establishments",
+  "uuid" : "73fe470f-7a3f-44c3-91fe-bb9d388b7116",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Auto tipper",
+    "uuid" : "10ddbdd0-c9fa-4071-8b62-d87c27440e3a",
+    "order" : 0.0
+  }, {
+    "name" : "Basket",
+    "uuid" : "672f14a7-c658-4aa4-ba6f-82da74ddc39c",
+    "order" : 1.0
+  }, {
+    "name" : "Carry on shoulder",
+    "uuid" : "f3573cdc-8b7a-4120-bba7-6c13e3f264bc",
+    "order" : 2.0
+  }, {
+    "name" : "Hand cart",
+    "uuid" : "eb56748c-aa8a-4d12-9eff-d30b8fffe5c0",
+    "order" : 3.0
+  }, {
+    "name" : "Mini door Auto",
+    "uuid" : "7e0e6f04-bd03-4e39-8d0c-014c4b288d93",
+    "order" : 4.0
+  }, {
+    "name" : "Other",
+    "uuid" : "59f7d502-48e4-48e4-a6f7-15046fec16c3",
+    "order" : 5.0
+  } ]
+}, {
+  "name" : "How do you transport your collected waste",
+  "uuid" : "5fa62a47-14e9-4ad1-83fc-536659f19eef",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Cycle",
+    "uuid" : "c450ea5e-b82e-44fe-8c75-0823c0bd707d",
+    "order" : 0.0
+  }, {
+    "name" : "Hand cart",
+    "uuid" : "eb56748c-aa8a-4d12-9eff-d30b8fffe5c0",
+    "order" : 1.0
+  }, {
+    "name" : "Motorized vehicle",
+    "uuid" : "d7f1d53d-291d-424f-bebb-64d8a4574f0f",
+    "order" : 2.0
+  }, {
+    "name" : "On shoulder / head",
+    "uuid" : "65528aa0-1c21-49fc-9fd6-473d5880cdfe",
+    "order" : 3.0
+  }, {
+    "name" : "Cycle Rickshaw",
+    "uuid" : "3f1b0d20-5ceb-4edd-862f-72bebaf7444a",
+    "order" : 4.0
+  }, {
+    "name" : "No Response",
+    "uuid" : "f1b375f9-b14a-4a3e-8a9c-4288664e69ad",
+    "unique" : true,
+    "order" : 5.0
+  } ]
+}, {
+  "name" : "How do you want to record consent",
+  "uuid" : "5076eb11-40bb-4fd9-85c7-471cdfa7747e",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Audio",
+    "uuid" : "86dc226b-d19d-437a-a864-ccfa58635ba2",
+    "order" : 0.0
+  }, {
+    "name" : "Picture",
+    "uuid" : "1a812300-4963-4243-87d0-ea4924f2e057",
+    "order" : 1.0
+  }, {
+    "name" : "Consent is not available",
+    "uuid" : "b161152d-4433-4175-b7ea-3c9cb208899f",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "How long do you carry the collected waste if no vehicle is available",
+  "uuid" : "ece98f3c-b4ae-479d-931b-77e32da2193d",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "0-2 km",
+    "uuid" : "c62d9b4e-1df7-4330-ba75-bf60588bf254",
+    "order" : 0.0
+  }, {
+    "name" : "2-5 km",
+    "uuid" : "c229e9bc-88a6-4e28-a539-d7b5cc94714e",
+    "order" : 1.0
+  }, {
+    "name" : "5-8 km",
+    "uuid" : "54ae409b-7e1e-4612-9654-ccf27dc0bd11",
+    "order" : 2.0
+  }, {
+    "name" : "8-10 km",
+    "uuid" : "4c52f068-b6de-4dde-91e8-af1212179c73",
+    "order" : 3.0
+  }, {
+    "name" : "> 10 km",
+    "uuid" : "3674d3ed-76e9-4a41-8e30-d6600d0655e9",
+    "order" : 4.0
+  }, {
+    "name" : "No Response",
+    "uuid" : "f1b375f9-b14a-4a3e-8a9c-4288664e69ad",
+    "unique" : true,
+    "order" : 5.0
+  } ]
+}, {
+  "name" : "How long have you been a informal waste worker",
+  "uuid" : "0770d08d-8bed-4a8f-89b3-42a00da966c3",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "0-2 years",
+    "uuid" : "e8cc65f3-2009-49e5-9de3-3ba8ce6a33b4",
+    "order" : 0.0
+  }, {
+    "name" : "2-5 years",
+    "uuid" : "ef7ac4b5-6d2f-4c09-b38c-42c65cdf9374",
+    "order" : 1.0
+  }, {
+    "name" : "5-10 years",
+    "uuid" : "0c1c24a4-83de-4182-aa62-4c04a04896b7",
+    "order" : 2.0
+  }, {
+    "name" : "More than 10 years",
+    "uuid" : "69273b32-f0f4-4a3c-889a-991332b2679f",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "How long have you been a informal waste worker (Itinerant buyer) (voided~220326)",
+  "uuid" : "7060426e-77cd-434b-8ad3-6216b41c7e05",
+  "dataType" : "Coded",
+  "active" : true,
+  "voided" : true,
+  "answers" : [ {
+    "name" : "0-2 years",
+    "uuid" : "e8cc65f3-2009-49e5-9de3-3ba8ce6a33b4",
+    "order" : 0.0
+  }, {
+    "name" : "2-5 years",
+    "uuid" : "ef7ac4b5-6d2f-4c09-b38c-42c65cdf9374",
+    "order" : 1.0
+  }, {
+    "name" : "5-10 years",
+    "uuid" : "0c1c24a4-83de-4182-aa62-4c04a04896b7",
+    "order" : 2.0
+  }, {
+    "name" : "More than 10 years",
+    "uuid" : "69273b32-f0f4-4a3c-889a-991332b2679f",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "How many houses you cover for collection",
+  "uuid" : "dae6720d-515b-4400-9c15-ac19499de2a7",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "How much Bottles waste you buy per week in (Kg)",
+  "uuid" : "6f1a3a1d-ba31-4618-a8fe-d8541849d884",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "How much Computer and other E-Waste waste you buy per week in (Kg)",
+  "uuid" : "bddc7b5c-c769-47d5-83fa-c0a840eb839f",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "How much do you earn",
+  "uuid" : "14bcca66-2950-4c6b-a43a-e49ce320f2f4",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Between Rs. 100 - 200 per day",
+    "uuid" : "e3772874-61ea-4646-9675-0e43dbc8837d",
+    "order" : 0.0
+  }, {
+    "name" : "Rs. 200 - 300 per day",
+    "uuid" : "bd8e2472-c1e7-4105-9506-1807fa7aad4e",
+    "order" : 1.0
+  }, {
+    "name" : "Rs. 300 and above per day",
+    "uuid" : "392e03dd-4425-443e-8f59-a8c2c97429f2",
+    "order" : 2.0
+  }, {
+    "name" : "Between Rs. 300 - 400 per week",
+    "uuid" : "44f8215b-efd8-4894-bf24-79280d608db1",
+    "order" : 3.0
+  }, {
+    "name" : "Rs. 400 - 600 per week",
+    "uuid" : "a919e19d-c0af-44cc-8d6e-b86ebfae704b",
+    "order" : 4.0
+  }, {
+    "name" : "Rs. 600 and above per week",
+    "uuid" : "853c6df2-d082-4e4c-be7f-88c6d15d156b",
+    "order" : 5.0
+  }, {
+    "name" : "No Response",
+    "uuid" : "f1b375f9-b14a-4a3e-8a9c-4288664e69ad",
+    "unique" : true,
+    "order" : 6.0
+  } ]
+}, {
+  "name" : "How much Metal waste you buy per week in (Kg)",
+  "uuid" : "a4bd8c07-4b06-4782-84f7-bc7fe1edc9db",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "How much News paper waste you buy per week in (Kg)",
+  "uuid" : "1e499f89-1b4f-47c4-b407-60c8310fcb57",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "How much of waste do you collect per day (in Kg's)",
+  "uuid" : "76b2f838-4058-4815-bf5e-b84ce20be4b8",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "How much Paper-White waste you buy per week in (Kg)",
+  "uuid" : "e0734965-4c83-4e91-87fa-f26ac52dd351",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "How much Plastic waste you buy per week in (Kg)",
+  "uuid" : "80eca531-bcf1-423a-a904-a4dded3da72a",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "How much you buy per week in (Kg)",
+  "uuid" : "52d7d6f3-e5d7-457e-a5ad-5c88c483e122",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "I have the minimum qualification required",
+  "uuid" : "0d1eb96a-8bac-4255-a58b-12a667e58bb5",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "I was stopped by my family to study further",
+  "uuid" : "8adba362-3473-46b0-a81f-f76b3cc66918",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Inside and Outside City/Town",
+  "uuid" : "2cab2d42-eef6-42a0-b85d-0086bd7c28c3",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Is general scheme application submitted",
+  "uuid" : "16985f7c-1f02-43a5-838e-b9555b035b56",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Is kyc application submitted",
+  "uuid" : "d7fd672c-b079-4aea-8e68-d41e18095b47",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Is your present address the same as the permanent address",
+  "uuid" : "27ce22b5-c976-4b14-8a56-0f95923a620c",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Islam",
+  "uuid" : "b8456488-dd73-4690-8aaf-f9b7790c4199",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Itinerant buyer",
+  "uuid" : "b72a5b39-f965-45a2-a07d-356c1c4b9629",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Jainism",
+  "uuid" : "86c36deb-f63e-463a-bc26-637eccab9a7e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Janani Shishu Suraksha Yojana",
+  "uuid" : "bc9e4aee-afd4-4dc7-a5dc-9fdb496402b3",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Kousalya Skill Development Training for Unemployment Youths",
+  "uuid" : "b858d36b-c7fb-4143-9839-b165cb60c8c2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "KYC",
+  "uuid" : "16946237-255e-4988-acee-f9a3643b9698",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "KYC application date",
+  "uuid" : "164d4167-1da5-4b45-a14d-f918d501139e",
+  "dataType" : "Date",
+  "active" : true
+}, {
+  "name" : "KYC application id",
+  "uuid" : "637d35b1-aa74-4ce3-ab38-bc1928ffe995",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "KYC image",
+  "uuid" : "fee98763-2143-42cb-8c0a-7e553a0d39eb",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "KYC open date",
+  "uuid" : "b3d409f9-2da1-435b-9fe6-48c4e2fddf18",
+  "dataType" : "Date",
+  "active" : true
+}, {
+  "name" : "KYC received",
+  "uuid" : "500fba31-8424-4996-8035-14e0a625f715",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "KYC received on",
+  "uuid" : "fee74853-e32e-446c-a766-14c2614e28c0",
+  "dataType" : "Date",
+  "active" : true
+}, {
+  "name" : "Landfill",
+  "uuid" : "6f71ee68-b164-4a5d-b075-dfd8cc46818e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Landmark 1",
+  "uuid" : "c898baf5-3f83-4140-aa58-42999ff4495a",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Laptop Bhagya",
+  "uuid" : "221d8dc9-a051-41d0-a28a-f9e0a04a6c0e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Level of education",
+  "uuid" : "fa40cb29-6216-43a4-ab00-2388ad016973",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Have not been to school",
+    "uuid" : "d7155047-4b9d-495e-903b-21767da0cbc4",
+    "order" : 0.0
+  }, {
+    "name" : "1-5",
+    "uuid" : "ccb05a32-6874-4b25-9d66-c61c1c2aff05",
+    "order" : 1.0
+  }, {
+    "name" : "5-9",
+    "uuid" : "cd9f51a3-0da7-42c5-8299-b037c0147077",
+    "order" : 2.0
+  }, {
+    "name" : "Class 10 Fail",
+    "uuid" : "6a3a7b75-e98d-4d16-8140-3d067f38429a",
+    "order" : 3.0
+  }, {
+    "name" : "Class 10 Pass",
+    "uuid" : "304fd52d-1af1-4f2f-bad4-6de28315fe4f",
+    "order" : 4.0
+  }, {
+    "name" : "Pre-Degree/Diploma Fail",
+    "uuid" : "37392999-8498-46a2-a87b-ce9d622ca5c6",
+    "order" : 5.0
+  }, {
+    "name" : "Pre-Degree/Diploma Pass",
+    "uuid" : "fc27fca9-2735-4a08-aa01-dcdb898cad62",
+    "order" : 6.0
+  }, {
+    "name" : "Degree Fail",
+    "uuid" : "588633d6-296b-4026-aca6-4b2a9ec989fe",
+    "order" : 7.0
+  }, {
+    "name" : "Degree Pass",
+    "uuid" : "17c05fe3-a4ae-4707-8e1a-bc4d159d6866",
+    "order" : 8.0
+  }, {
+    "name" : "Post-Graduate",
+    "uuid" : "e85481c9-afbd-4908-92fd-9b08b82ab959",
+    "order" : 9.0
+  }, {
+    "name" : "Skill/Vocational Training",
+    "uuid" : "f78bb512-0960-45b2-baf8-c1e9eb9228db",
+    "order" : 10.0
+  }, {
+    "name" : "Other",
+    "uuid" : "59f7d502-48e4-48e4-a6f7-15046fec16c3",
+    "order" : 11.0
+  } ]
+}, {
+  "name" : "Level of Education - Please Specify",
+  "uuid" : "856c2e17-c2eb-471f-9dfa-777661c96abc",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Loan",
+  "uuid" : "6301c759-e3e1-49b1-ba33-490cc0a980bf",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Male household member",
+  "uuid" : "c9d06045-03f6-45c9-a137-571a6263a5bc",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Marital status",
+  "uuid" : "915a7390-d361-45c8-939b-df37513971de",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Single",
+    "uuid" : "3c5224d2-0a43-4770-9e95-591b26a560f4",
+    "order" : 0.0
+  }, {
+    "name" : "Married",
+    "uuid" : "adb157b3-5692-49a7-ade9-73e2e972c787",
+    "order" : 1.0
+  }, {
+    "name" : "Widowed",
+    "uuid" : "55fc5b9d-aa01-4968-aad2-1c535472f78d",
+    "order" : 2.0
+  }, {
+    "name" : "Separated",
+    "uuid" : "9801e0a9-728d-4895-ad87-a490cf0d7c49",
+    "order" : 3.0
+  }, {
+    "name" : "Divorced",
+    "uuid" : "51597132-eeb6-49ca-8395-c403deb2afe9",
+    "order" : 4.0
+  } ]
+}, {
+  "name" : "Married",
+  "uuid" : "adb157b3-5692-49a7-ade9-73e2e972c787",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "MBC",
+  "uuid" : "ffd93790-7f91-423f-81f3-1b3e7254ac52",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Metal",
+  "uuid" : "a730b355-56f1-4ced-8c60-10b38aa54a96",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Metal Waste",
+  "uuid" : "e4714af8-7d60-4da6-9854-d6a637dd3363",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Middle School (6-7)",
+  "uuid" : "e04fd683-7505-46cf-8915-33cf02356d7b",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Mini door Auto",
+  "uuid" : "7e0e6f04-bd03-4e39-8d0c-014c4b288d93",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Mobile contact number",
+  "uuid" : "c566ee48-9669-44e4-8c58-d5242c9c1e70",
+  "dataType" : "PhoneNumber",
+  "active" : true,
+  "keyValues" : [ {
+    "key" : "verifyPhoneNumber",
+    "value" : false
+  } ]
+}, {
+  "name" : "Mode of Payment",
+  "uuid" : "0d9badc6-9f1d-4313-9d68-aed04b594501",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Cash",
+    "uuid" : "1f2523ff-f50a-46d9-ade9-8cf776b14435",
+    "order" : 0.0
+  }, {
+    "name" : "Bank account transfer",
+    "uuid" : "f3889010-5794-4cd8-8526-182628736637",
+    "order" : 1.0
+  }, {
+    "name" : "Cheque",
+    "uuid" : "de0456c7-5932-46ae-81bd-84744018fa76",
+    "order" : 2.0
+  }, {
+    "name" : "Other",
+    "uuid" : "59f7d502-48e4-48e4-a6f7-15046fec16c3",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Mode of Travel",
+  "uuid" : "4b3aa554-87c9-4cdf-9876-6807b5a2971c",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Cycle",
+    "uuid" : "c450ea5e-b82e-44fe-8c75-0823c0bd707d",
+    "order" : 0.0
+  }, {
+    "name" : "Hand cart",
+    "uuid" : "eb56748c-aa8a-4d12-9eff-d30b8fffe5c0",
+    "order" : 1.0
+  }, {
+    "name" : "Motorized vehicle",
+    "uuid" : "d7f1d53d-291d-424f-bebb-64d8a4574f0f",
+    "order" : 2.0
+  }, {
+    "name" : "On shoulder / head",
+    "uuid" : "65528aa0-1c21-49fc-9fd6-473d5880cdfe",
+    "order" : 3.0
+  }, {
+    "name" : "No Response",
+    "uuid" : "f1b375f9-b14a-4a3e-8a9c-4288664e69ad",
+    "unique" : true,
+    "order" : 4.0
+  } ]
+}, {
+  "name" : "Monthly Fixed Rate",
+  "uuid" : "0671dfab-aafb-49a4-8c41-0bffde62dba4",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "More than 10 years",
+  "uuid" : "69273b32-f0f4-4a3c-889a-991332b2679f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "More than 8 hours",
+  "uuid" : "e44cac6b-b5bb-464b-b54f-bc5b9e691f57",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Mostly households / mostly small establishments",
+  "uuid" : "aa63dccc-f16c-4a7b-adae-469b919ce8e2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Mostly industries",
+  "uuid" : "28685619-f6d0-4575-9650-49a52db9ddf8",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Mostly offices/hotels/companies",
+  "uuid" : "8e56be29-0d7f-4de2-9260-5fbd92b878b9",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Motorized vehicle",
+  "uuid" : "d7f1d53d-291d-424f-bebb-64d8a4574f0f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Name",
+  "uuid" : "d813f593-3cba-4a97-8389-e1dff739b31f",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Name of the area",
+  "uuid" : "ffb1f6f3-9657-43cb-901e-c18e7c0f364d",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Name of the other social security id",
+  "uuid" : "af904b73-bc8d-4248-b5d3-c50578dfbcc0",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Name of the SHG",
+  "uuid" : "e645466e-90b5-4a83-80b1-70ee6a8fcbd7",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Name of the union(s)",
+  "uuid" : "1d1d8201-4910-4aea-954d-ca0ca836ebc0",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "News Paper",
+  "uuid" : "9a99896f-d969-4c68-b99f-d447c4fd70ad",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "No",
+  "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "No interest in formal education",
+  "uuid" : "2becf783-f39c-4444-9f98-0c832958c059",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "No of participants",
+  "uuid" : "394796d3-c0a0-4404-aa7c-eaa0e9b99fe4",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 1.0,
+  "active" : true
+}, {
+  "name" : "No Response",
+  "uuid" : "f1b375f9-b14a-4a3e-8a9c-4288664e69ad",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "No schools nearby/Schools have bad infrastructure",
+  "uuid" : "5f8a4027-cbdb-4c7e-b41a-414420ebb6c2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "No. of hours of work in a day",
+  "uuid" : "f2276394-f0ca-435d-b29c-9f937c335083",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "0-2 hours",
+    "uuid" : "76ae6942-d6e0-4118-97ee-b34df4b88845",
+    "order" : 0.0
+  }, {
+    "name" : "2-4 hours",
+    "uuid" : "d74d9153-1b55-4484-b266-b31c25523069",
+    "order" : 1.0
+  }, {
+    "name" : "4-8 hours",
+    "uuid" : "47e13544-dcb7-4132-b965-55f6407be975",
+    "order" : 2.0
+  }, {
+    "name" : "More than 8 hours",
+    "uuid" : "e44cac6b-b5bb-464b-b54f-bc5b9e691f57",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Non-Believer",
+  "uuid" : "d641de65-3365-43fd-af8a-61359995e22a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Number of waste pickers in the family",
+  "uuid" : "17dc73d7-e11f-4512-8fc8-5d3eb984ceb9",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Nursery School (LKG/UKG)",
+  "uuid" : "d531e3ec-e260-4abc-a39b-8155157a620a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Old Age Pension",
+  "uuid" : "7dd46c98-734c-4ff3-b2fa-c4fbee4d79c4",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "On shoulder / head",
+  "uuid" : "65528aa0-1c21-49fc-9fd6-473d5880cdfe",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Once in a month",
+  "uuid" : "3c2cb243-9891-4f44-bbec-5f97e281d5bb",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Open Market",
+  "uuid" : "2f7efdd4-b889-4800-bf8c-39fc19c1e3b5",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Other",
+  "uuid" : "59f7d502-48e4-48e4-a6f7-15046fec16c3",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Other: Skill/Vocational Training",
+  "uuid" : "a1789d4e-3c45-4da9-a863-e80879cc35e3",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Outside City",
+  "uuid" : "4659ef18-e1bc-4e9e-a933-66817f3ba772",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "PAN card",
+  "uuid" : "62bea48b-aa09-4914-bd9a-ebc97b80a05e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Paper",
+  "uuid" : "dcd17fc1-9a99-48df-9fe5-9d0401b9b6e3",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Paper-White",
+  "uuid" : "8014838e-deed-4cf3-a298-d4573a9e1408",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Passport",
+  "uuid" : "4b0522f7-e4a0-4887-916a-6a9d30e19d13",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Peer Pressure",
+  "uuid" : "a9042a2d-8f7e-4f9e-a5f9-90ddde8ee983",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Permanent address city",
+  "uuid" : "9fc5fa2a-bb30-4a85-8dca-860ead382f41",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Permanent address line 1",
+  "uuid" : "c4073a1a-7fc9-457b-b452-23ca2d9554de",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Permanent address line 2",
+  "uuid" : "64fa4e56-312c-4cc2-aff4-7821863db70f",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Permanent address S=state",
+  "uuid" : "379c9a3a-7f74-44c3-aa6c-c1026c464c5f",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Permanent area",
+  "uuid" : "990a2415-37b8-445f-84c6-13eb2762f10c",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Permanent landmark 1",
+  "uuid" : "b66d96f3-cd47-48c0-87ba-9c16e570679a",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Permanent pincode",
+  "uuid" : "e192207d-07f8-4f19-9235-8e5dbde9ed15",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Photo of the other social security id",
+  "uuid" : "af8330f8-4a3d-45c2-9733-68c07a79f546",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Photo of the person",
+  "uuid" : "ea8876f9-bafa-464d-8b15-b4e5d0699b75",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Physically challenged Pension",
+  "uuid" : "a84dc57b-413a-477e-8aeb-d1adfc77686a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Picture",
+  "uuid" : "1a812300-4963-4243-87d0-ea4924f2e057",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Piece/Trip Rate",
+  "uuid" : "55b73042-79e7-447f-b12e-76c0fb264493",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Pincode",
+  "uuid" : "fd80ef15-a8be-4b35-93eb-93a46afd276b",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Plastic",
+  "uuid" : "51c408ec-aa2a-4352-baa9-c12e5e8eaf6e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Plastic Waste",
+  "uuid" : "3ce8362e-4279-4adf-a9f4-7c86e5d1634c",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Please describe the other kind of waste",
+  "uuid" : "9a3f5211-305f-49bb-a225-d5defe8587a2",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Please describe the other kind of waste you buy",
+  "uuid" : "d23a4d8a-9d33-4751-914a-6416bf9bc230",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Please elaborate",
+  "uuid" : "cda67975-d856-45f3-ba2a-4df4f9bdb94a",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Please explain the other reason",
+  "uuid" : "ecf36765-3a1c-4b44-9681-17b4f21959ab",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Please record the consent audio",
+  "uuid" : "73fa29ee-6e99-4c01-93c5-e6e441b9c468",
+  "dataType" : "Audio",
+  "active" : true
+}, {
+  "name" : "Please select the class/course",
+  "uuid" : "8142f4df-21f9-4098-921f-842d087c65d7",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Anganwadi",
+    "uuid" : "7aa5c64d-7027-4cda-a150-1b4aef552da5",
+    "order" : 0.0
+  }, {
+    "name" : "Nursery School (LKG/UKG)",
+    "uuid" : "d531e3ec-e260-4abc-a39b-8155157a620a",
+    "order" : 1.0
+  }, {
+    "name" : "Primary School (1-5)",
+    "uuid" : "e5d23347-26d4-42cf-ae54-1d3bf558e55a",
+    "order" : 2.0
+  }, {
+    "name" : "Middle School (6-7)",
+    "uuid" : "e04fd683-7505-46cf-8915-33cf02356d7b",
+    "order" : 3.0
+  }, {
+    "name" : "High School (8/9/10)",
+    "uuid" : "08bf0194-fa13-426a-ab54-a3867621a9e1",
+    "order" : 4.0
+  }, {
+    "name" : "Diploma",
+    "uuid" : "d39ab558-36a0-4a19-9567-858c88684b85",
+    "order" : 5.0
+  }, {
+    "name" : "Pre-Degree (11/12)",
+    "uuid" : "2285bcfb-c5fd-4997-9f69-c521836c4373",
+    "order" : 6.0
+  }, {
+    "name" : "Under-Graduate Degree",
+    "uuid" : "9f8d2931-b1a0-419c-9dea-3e2a79323d05",
+    "order" : 7.0
+  }, {
+    "name" : "Post-Graduate Degree",
+    "uuid" : "37cab442-d349-4549-a158-e3301e527f8e",
+    "order" : 8.0
+  }, {
+    "name" : "Other: Skill/Vocational Training",
+    "uuid" : "a1789d4e-3c45-4da9-a863-e80879cc35e3",
+    "order" : 9.0
+  } ]
+}, {
+  "name" : "Please select the reason(s) for discontinuation",
+  "uuid" : "2f71810b-c323-4a26-8aad-0ac603d3e5e5",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Failed",
+    "uuid" : "488c1ec3-a6d0-4e8f-a973-50fbff121f47",
+    "order" : 0.0
+  }, {
+    "name" : "I was stopped by my family to study further",
+    "uuid" : "8adba362-3473-46b0-a81f-f76b3cc66918",
+    "order" : 1.0
+  }, {
+    "name" : "Poverty/Could not afford it financially",
+    "uuid" : "659502d0-12fe-4a29-9906-7f51f60207a8",
+    "order" : 2.0
+  }, {
+    "name" : "No interest in formal education",
+    "uuid" : "2becf783-f39c-4444-9f98-0c832958c059",
+    "order" : 3.0
+  }, {
+    "name" : "No schools nearby/Schools have bad infrastructure",
+    "uuid" : "5f8a4027-cbdb-4c7e-b41a-414420ebb6c2",
+    "order" : 4.0
+  }, {
+    "name" : "Peer Pressure",
+    "uuid" : "a9042a2d-8f7e-4f9e-a5f9-90ddde8ee983",
+    "order" : 5.0
+  }, {
+    "name" : "I have the minimum qualification required",
+    "uuid" : "0d1eb96a-8bac-4255-a58b-12a667e58bb5",
+    "order" : 6.0
+  }, {
+    "name" : "No Response",
+    "uuid" : "f1b375f9-b14a-4a3e-8a9c-4288664e69ad",
+    "unique" : true,
+    "order" : 7.0
+  }, {
+    "name" : "Other",
+    "uuid" : "59f7d502-48e4-48e4-a6f7-15046fec16c3",
+    "order" : 8.0
+  } ]
+}, {
+  "name" : "Please specify other religion",
+  "uuid" : "be648be9-84df-41a1-9b93-47326c05fdb5",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Please upload the consent picture",
+  "uuid" : "7126f575-f30c-4b16-9204-ee94e07ead28",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Post Metric Scholarship",
+  "uuid" : "a23b832d-3e52-4a75-91ec-15fdf9216ff2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Post Metric Scholarship for Backward Class",
+  "uuid" : "9933a95f-1275-40c9-9a94-7e8ed4b8facd",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Post Office Bank A/C",
+  "uuid" : "f8667290-a866-47a1-884b-d7555eda5db2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Post-Graduate",
+  "uuid" : "e85481c9-afbd-4908-92fd-9b08b82ab959",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Post-Graduate Degree",
+  "uuid" : "37cab442-d349-4549-a158-e3301e527f8e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Poverty/Could not afford it financially",
+  "uuid" : "659502d0-12fe-4a29-9906-7f51f60207a8",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Prasuthi Aarike Scheme",
+  "uuid" : "9cce610a-6691-4e17-9cbc-f3423ddef8c4",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Pre-Degree (11/12)",
+  "uuid" : "2285bcfb-c5fd-4997-9f69-c521836c4373",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Pre-Degree/Diploma Fail",
+  "uuid" : "37392999-8498-46a2-a87b-ce9d622ca5c6",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Pre-Degree/Diploma Pass",
+  "uuid" : "fc27fca9-2735-4a08-aa01-dcdb898cad62",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Present address city",
+  "uuid" : "71daeff3-1222-4d45-b99c-f92a3e18848c",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Present address state",
+  "uuid" : "a7b5595a-a5d4-48e5-8a2b-9f6dfcefda63",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Primary School (1-5)",
+  "uuid" : "e5d23347-26d4-42cf-ae54-1d3bf558e55a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Prize Money for post metric",
+  "uuid" : "078dbb26-3861-4a56-84a7-747ac51d8e0f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Prize Money for SSLC",
+  "uuid" : "204d5909-c367-4976-8631-3bbcb660efd4",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Public spaces",
+  "uuid" : "780f3a16-c035-41fa-bebc-a4e7fd98b3ff",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Quantity of Waste Collected",
+  "uuid" : "e7f6d560-48c6-40b1-a478-27be8b096bf2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Ration Card/Anthya Annodhaya Yojane AAY",
+  "uuid" : "bd76897c-f3df-48ca-b1c8-c30c86a37413",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Rechargeable LED bulb",
+  "uuid" : "87489a10-155f-468e-9f4b-a681d70ea39f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Religion",
+  "uuid" : "5749c7ba-6d0b-4094-b01e-4f369e7bc32a",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Buddhism",
+    "uuid" : "955f5f45-4459-4852-9bc4-baad8f4d9427",
+    "order" : 0.0
+  }, {
+    "name" : "Christianity",
+    "uuid" : "06bcd1a9-656c-4d6a-ba7f-f10d1f112091",
+    "order" : 1.0
+  }, {
+    "name" : "Hinduism",
+    "uuid" : "1e5e6b35-25d0-49cf-ad51-d87957ca7b2f",
+    "order" : 2.0
+  }, {
+    "name" : "Islam",
+    "uuid" : "b8456488-dd73-4690-8aaf-f9b7790c4199",
+    "order" : 3.0
+  }, {
+    "name" : "Jainism",
+    "uuid" : "86c36deb-f63e-463a-bc26-637eccab9a7e",
+    "order" : 4.0
+  }, {
+    "name" : "Sikhism",
+    "uuid" : "08d9c553-0b11-4d6a-87d5-2b49d1794b11",
+    "order" : 5.0
+  }, {
+    "name" : "Non-Believer",
+    "uuid" : "d641de65-3365-43fd-af8a-61359995e22a",
+    "order" : 6.0
+  }, {
+    "name" : "No Response",
+    "uuid" : "f1b375f9-b14a-4a3e-8a9c-4288664e69ad",
+    "unique" : true,
+    "order" : 7.0
+  }, {
+    "name" : "Other",
+    "uuid" : "59f7d502-48e4-48e4-a6f7-15046fec16c3",
+    "order" : 8.0
+  } ]
+}, {
+  "name" : "Residential Certificate",
+  "uuid" : "bb5e10b4-76e8-4043-80e5-f314bceea2f8",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Road scrap",
+  "uuid" : "6ce2d37a-80c1-44c7-bccc-3252853950e4",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Roadside",
+  "uuid" : "c403bb74-bdc0-4f4b-9285-0b9a5363ac28",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Rs. 200 - 300 per day",
+  "uuid" : "bd8e2472-c1e7-4105-9506-1807fa7aad4e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Rs. 300 and above per day",
+  "uuid" : "392e03dd-4425-443e-8f59-a8c2c97429f2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Rs. 400 - 600 per week",
+  "uuid" : "a919e19d-c0af-44cc-8d6e-b86ebfae704b",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Rs. 600 and above per week",
+  "uuid" : "853c6df2-d082-4e4c-be7f-88c6d15d156b",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "RTE",
+  "uuid" : "32a46958-4629-4651-a59a-9230aacd6acc",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Sandhya Suraksha",
+  "uuid" : "615e7010-71c4-4896-bd89-6948d3a45b77",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "SC-Arunthathiyar",
+  "uuid" : "a0059abc-aafc-4681-9b03-1df9b57a4444",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "SC-Others",
+  "uuid" : "eacf8e34-59c2-486d-a60e-a93810194623",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "SC-Paraiyar",
+  "uuid" : "0c107d1f-bf36-495f-a77f-64d469553496",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "SC-Thoti",
+  "uuid" : "5ba30897-2bff-44ff-8050-855c93755388",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Scholarship",
+  "uuid" : "eacc5033-60b9-4af2-8ba5-b9ba35204f78",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Scholarship for High School Girls",
+  "uuid" : "126db527-0dac-43b4-a2db-772b5f500315",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Scholorship for Higher Education for girls (PUC)",
+  "uuid" : "48d23bd9-f2aa-4402-bf4e-66c4fd7f2d11",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Scrap trader",
+  "uuid" : "59d4d0b2-5b26-4490-aca0-215c61871085",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Select schemes to be availed",
+  "uuid" : "150ed276-043a-429c-a467-c04338d7b246",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Post Office Bank A/C",
+    "uuid" : "f8667290-a866-47a1-884b-d7555eda5db2",
+    "order" : 0.0
+  }, {
+    "name" : "Ration Card/Anthya Annodhaya Yojane AAY",
+    "uuid" : "bd76897c-f3df-48ca-b1c8-c30c86a37413",
+    "order" : 1.0
+  }, {
+    "name" : "Free LPG connections",
+    "uuid" : "67e38c44-98e9-477e-bc53-7895b3b291e4",
+    "order" : 2.0
+  }, {
+    "name" : "Arogya Karnataka & Ayushmanbhava",
+    "uuid" : "e9a6f24b-059f-4fd8-bec6-d1b176150ef1",
+    "order" : 3.0
+  }, {
+    "name" : "Death Certificate",
+    "uuid" : "f415585d-4ba3-4eab-9f4a-c4dd53fe3b04",
+    "order" : 4.0
+  }, {
+    "name" : "Housing",
+    "uuid" : "c3b9c5f6-67a5-4906-ad41-6e283ad93185",
+    "order" : 5.0
+  }, {
+    "name" : "Old Age Pension",
+    "uuid" : "7dd46c98-734c-4ff3-b2fa-c4fbee4d79c4",
+    "order" : 6.0
+  }, {
+    "name" : "Physically challenged Pension",
+    "uuid" : "a84dc57b-413a-477e-8aeb-d1adfc77686a",
+    "order" : 7.0
+  }, {
+    "name" : "Post Metric Scholarship",
+    "uuid" : "a23b832d-3e52-4a75-91ec-15fdf9216ff2",
+    "order" : 8.0
+  }, {
+    "name" : "RTE",
+    "uuid" : "32a46958-4629-4651-a59a-9230aacd6acc",
+    "order" : 9.0
+  }, {
+    "name" : "Scholarship",
+    "uuid" : "eacc5033-60b9-4af2-8ba5-b9ba35204f78",
+    "order" : 10.0
+  }, {
+    "name" : "Sukanya Samrudhi Yojana",
+    "uuid" : "9380b908-811b-40c8-a891-8c646de0ce6b",
+    "order" : 11.0
+  }, {
+    "name" : "Widow Pension",
+    "uuid" : "a4e5ccdf-61d6-4bfc-8093-4d09db462ca5",
+    "order" : 12.0
+  }, {
+    "name" : "Aadhar card and Aadhar seeding",
+    "uuid" : "e69cce91-8e68-42b8-bdbe-1a15c6c5a4aa",
+    "order" : 13.0
+  }, {
+    "name" : "Arogya Karnataka (Ayushman Bharath)",
+    "uuid" : "e5212a2f-8800-4711-8398-17e605269426",
+    "order" : 14.0
+  }, {
+    "name" : "Devaraju URS Post metric courses",
+    "uuid" : "eb3a09e4-9e64-447c-b71e-8e8bda3227ad",
+    "order" : 15.0
+  }, {
+    "name" : "Disable Pension",
+    "uuid" : "259c08e2-92fe-4107-ac6f-5a8fe7df15a0",
+    "order" : 16.0
+  }, {
+    "name" : "Disable Scholarship",
+    "uuid" : "2638fdde-d623-4f12-a9c3-4d860bbb454f",
+    "order" : 17.0
+  }, {
+    "name" : "E Shram",
+    "uuid" : "29044121-0664-41f3-b99d-a51087f9593d",
+    "order" : 18.0
+  }, {
+    "name" : "Free Exam Training for SC/ST and Backward",
+    "uuid" : "9414d55f-8afe-4594-a37e-78319014fd37",
+    "order" : 19.0
+  }, {
+    "name" : "Hostel Admission",
+    "uuid" : "663c9de8-c010-422f-843c-38801deb4a42",
+    "order" : 20.0
+  }, {
+    "name" : "House Renovation",
+    "uuid" : "c921ef01-2b38-4a9f-89be-a01683351f7f",
+    "order" : 21.0
+  }, {
+    "name" : "Houses for homeless",
+    "uuid" : "4df7adf6-34d4-44ba-a3b8-6ec4f951b038",
+    "order" : 22.0
+  }, {
+    "name" : "Janani Shishu Suraksha Yojana",
+    "uuid" : "bc9e4aee-afd4-4dc7-a5dc-9fdb496402b3",
+    "order" : 23.0
+  }, {
+    "name" : "Kousalya Skill Development Training for Unemployment Youths",
+    "uuid" : "b858d36b-c7fb-4143-9839-b165cb60c8c2",
+    "order" : 24.0
+  }, {
+    "name" : "Laptop Bhagya",
+    "uuid" : "221d8dc9-a051-41d0-a28a-f9e0a04a6c0e",
+    "order" : 25.0
+  }, {
+    "name" : "Post Metric Scholarship for Backward Class",
+    "uuid" : "9933a95f-1275-40c9-9a94-7e8ed4b8facd",
+    "order" : 26.0
+  }, {
+    "name" : "Prasuthi Aarike Scheme",
+    "uuid" : "9cce610a-6691-4e17-9cbc-f3423ddef8c4",
+    "order" : 27.0
+  }, {
+    "name" : "Prize Money for post metric",
+    "uuid" : "078dbb26-3861-4a56-84a7-747ac51d8e0f",
+    "order" : 28.0
+  }, {
+    "name" : "Prize Money for SSLC",
+    "uuid" : "204d5909-c367-4976-8631-3bbcb660efd4",
+    "order" : 29.0
+  }, {
+    "name" : "Rechargeable LED bulb",
+    "uuid" : "87489a10-155f-468e-9f4b-a681d70ea39f",
+    "order" : 30.0
+  }, {
+    "name" : "Sandhya Suraksha",
+    "uuid" : "615e7010-71c4-4896-bd89-6948d3a45b77",
+    "order" : 31.0
+  }, {
+    "name" : "Scholorship for Higher Education for girls (PUC)",
+    "uuid" : "48d23bd9-f2aa-4402-bf4e-66c4fd7f2d11",
+    "order" : 32.0
+  }, {
+    "name" : "Scholarship for High School Girls",
+    "uuid" : "126db527-0dac-43b4-a2db-772b5f500315",
+    "order" : 33.0
+  }, {
+    "name" : "SHG Micro Loan with Subsidy",
+    "uuid" : "71d1e16b-5de5-4235-8066-c4805a172871",
+    "order" : 34.0
+  }, {
+    "name" : "Simple Marriage for SC/ST",
+    "uuid" : "8f81651d-8c57-42df-b43a-3fcace6c751f",
+    "order" : 35.0
+  }, {
+    "name" : "Single parent scholarship",
+    "uuid" : "2fdb0d0e-c172-454f-85cd-a9b382a7ca37",
+    "order" : 36.0
+  }, {
+    "name" : "Suvidha Sanitary Pad",
+    "uuid" : "b205203e-3375-4719-bea3-1e0b28de2cb3",
+    "order" : 37.0
+  }, {
+    "name" : "Thayi Bhagya",
+    "uuid" : "4a9ea619-43f3-438c-8e22-dffb29d3b18a",
+    "order" : 38.0
+  }, {
+    "name" : "Thayi Bhagya plus",
+    "uuid" : "81d84538-2a81-4f2c-bb49-bc7e07615f59",
+    "order" : 39.0
+  }, {
+    "name" : "Udaan",
+    "uuid" : "bb0f2054-ca69-4c72-9fbd-0aa0fd2df461",
+    "order" : 40.0
+  }, {
+    "name" : "Vamsha Vriksha",
+    "uuid" : "ddfc2599-21aa-47ff-a5b9-15baf7d15f6b",
+    "order" : 41.0
+  }, {
+    "name" : "Vidhyasiri",
+    "uuid" : "b63206e3-c8ab-4e04-b83a-154afef67129",
+    "order" : 42.0
+  }, {
+    "name" : "Widow Re-marriage",
+    "uuid" : "49dc4c56-293e-41e1-bc20-d9422431cbd9",
+    "order" : 43.0
+  } ],
+  "keyValues" : [ ]
+}, {
+  "name" : "Select the event",
+  "uuid" : "26296caa-c77a-4813-aad1-e305aefb7c6c",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Social Security Camps",
+    "uuid" : "189c305b-b9c8-4a35-a74e-78d10ebe4200",
+    "order" : 0.0
+  }, {
+    "name" : "Awareness Camps",
+    "uuid" : "aa6b6be7-534e-4e6a-b1aa-04d84af4d153",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Select the KYC service to be availed",
+  "uuid" : "ef0e90e6-a22d-49ca-9e7f-8343b876dbaa",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Aadhaar card",
+    "uuid" : "944f37b6-9148-4cd3-8b2f-3c475c0aeab3",
+    "order" : 0.0
+  }, {
+    "name" : "Aadhaar Card Correction",
+    "uuid" : "a48091a0-5739-439d-a2d1-26b16763da3c",
+    "order" : 1.0
+  }, {
+    "name" : "Bank A/C",
+    "uuid" : "a9c6a4a1-e4dc-46bc-b36f-20044ba80cb7",
+    "order" : 2.0
+  }, {
+    "name" : "Birth certificate",
+    "uuid" : "bcb0e99f-1a89-4872-84b7-b6875b499b70",
+    "order" : 3.0
+  }, {
+    "name" : "PAN card",
+    "uuid" : "62bea48b-aa09-4914-bd9a-ebc97b80a05e",
+    "order" : 4.0
+  }, {
+    "name" : "Residential Certificate",
+    "uuid" : "bb5e10b4-76e8-4043-80e5-f314bceea2f8",
+    "order" : 5.0
+  }, {
+    "name" : "Senior Citizen Card",
+    "uuid" : "2b680cbc-0e96-42f5-997c-80bea04d8ace",
+    "order" : 6.0
+  }, {
+    "name" : "Voter ID",
+    "uuid" : "971cedcb-3c82-4d8b-8109-f8f4d059f8e2",
+    "order" : 7.0
+  }, {
+    "name" : "Waste picker ID card",
+    "uuid" : "7c729d82-9afa-4431-8d4a-9f6b4b129117",
+    "order" : 8.0
+  }, {
+    "name" : "Passport",
+    "uuid" : "4b0522f7-e4a0-4887-916a-6a9d30e19d13",
+    "order" : 9.0
+  }, {
+    "name" : "Caste",
+    "uuid" : "cdb601de-e7b4-468f-b91f-39b76eed9627",
+    "order" : 10.0
+  }, {
+    "name" : "Waste Picker/Labour Union ID",
+    "uuid" : "99d11618-7930-4386-8ed6-5aeec30e4120",
+    "order" : 11.0
+  } ]
+}, {
+  "name" : "Self",
+  "uuid" : "c43f3074-bf61-4ad7-a454-6b47929bfa02",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Senior Citizen Card",
+  "uuid" : "2b680cbc-0e96-42f5-997c-80bea04d8ace",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Separated",
+  "uuid" : "9801e0a9-728d-4895-ad87-a490cf0d7c49",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Services to be availed",
+  "uuid" : "8730418c-64da-43aa-8d88-62d3ec2b7543",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "KYC",
+    "uuid" : "16946237-255e-4988-acee-f9a3643b9698",
+    "order" : 0.0
+  }, {
+    "name" : "General schemes",
+    "uuid" : "bd6c59ff-24a1-404d-ba3e-9bc7cec65470",
+    "order" : 1.0
+  }, {
+    "name" : "Training / Programs",
+    "uuid" : "5d9f7695-1bb9-4d12-b381-b27e9b4d2a80",
+    "order" : 2.0,
+    "voided" : true
+  } ]
+}, {
+  "name" : "SHG",
+  "uuid" : "f6dd59cb-44c5-4648-b7de-bcbd2881234a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "SHG Micro Loan with Subsidy",
+  "uuid" : "71d1e16b-5de5-4235-8066-c4805a172871",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Signature sheet file",
+  "uuid" : "70c0726d-9438-4a99-8418-d33bf38095d5",
+  "dataType" : "File",
+  "active" : true
+}, {
+  "name" : "Sikhism",
+  "uuid" : "08d9c553-0b11-4d6a-87d5-2b49d1794b11",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Simple Marriage for SC/ST",
+  "uuid" : "8f81651d-8c57-42df-b43a-3fcace6c751f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Single",
+  "uuid" : "3c5224d2-0a43-4770-9e95-591b26a560f4",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Single parent scholarship",
+  "uuid" : "2fdb0d0e-c172-454f-85cd-a9b382a7ca37",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Skill/Vocational Training",
+  "uuid" : "f78bb512-0960-45b2-baf8-c1e9eb9228db",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Social Security Camps",
+  "uuid" : "189c305b-b9c8-4a35-a74e-78d10ebe4200",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Solid Waste Door to Door Collector",
+  "uuid" : "e64869ed-1812-4baf-886f-5299d0f67fb1",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Solid Waste Micro Compost Worker",
+  "uuid" : "b300287b-4e04-491e-965c-f8af725e3198",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Sorters at Scrap Shop/DWCC",
+  "uuid" : "6000546d-481c-4d1d-82c2-7150124bb276",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "ST",
+  "uuid" : "5e27c579-1201-4b61-81d5-3493ef9e0724",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Sukanya Samrudhi Yojana",
+  "uuid" : "9380b908-811b-40c8-a891-8c646de0ce6b",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Suvidha Sanitary Pad",
+  "uuid" : "b205203e-3375-4719-bea3-1e0b28de2cb3",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Thayi Bhagya",
+  "uuid" : "4a9ea619-43f3-438c-8e22-dffb29d3b18a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Thayi Bhagya plus",
+  "uuid" : "81d84538-2a81-4f2c-bb49-bc7e07615f59",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Title/Designation",
+  "uuid" : "a547f668-8069-428b-9d7c-1e2284767f45",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Total household member",
+  "uuid" : "b1b200fb-df33-466e-abde-3e38c90b9992",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Total no of children in household",
+  "uuid" : "5f5ae152-7fd7-4322-bfc7-584bc10dd8f9",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Total number of documents",
+  "uuid" : "0c453d84-7e80-4d6f-9b5f-29daaca60489",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Total number of safai sathis covered per month",
+  "uuid" : "9cecff3b-006c-4ca8-8d31-c9e712394ba4",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 1.0,
+  "active" : true
+}, {
+  "name" : "Training / Programs",
+  "uuid" : "5d9f7695-1bb9-4d12-b381-b27e9b4d2a80",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Type of Informal Waste Worker",
+  "uuid" : "78f17df3-4ae5-4358-8244-eb41d15352a5",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Waste Picker",
+    "uuid" : "5df91b87-6fbd-4ae1-aaed-7865327a3687",
+    "order" : 0.0
+  }, {
+    "name" : "Itinerant buyer",
+    "uuid" : "b72a5b39-f965-45a2-a07d-356c1c4b9629",
+    "order" : 1.0
+  }, {
+    "name" : "Sorters at Scrap Shop/DWCC",
+    "uuid" : "6000546d-481c-4d1d-82c2-7150124bb276",
+    "order" : 2.0
+  }, {
+    "name" : "Waste Collectors on ULB Auto Rickshaw/Trucks",
+    "uuid" : "29b42073-edae-4753-bfc5-b4201012a3b2",
+    "order" : 3.0
+  }, {
+    "name" : "Solid Waste Door to Door Collector",
+    "uuid" : "e64869ed-1812-4baf-886f-5299d0f67fb1",
+    "order" : 4.0
+  }, {
+    "name" : "Solid Waste Micro Compost Worker",
+    "uuid" : "b300287b-4e04-491e-965c-f8af725e3198",
+    "order" : 5.0
+  }, {
+    "name" : "Hair Waste Picker",
+    "uuid" : "2c4b71cb-6a68-4c3c-9b48-749712e4141b",
+    "order" : 6.0
+  } ]
+}, {
+  "name" : "Type of waste",
+  "uuid" : "5f6a52d1-13c5-4253-8bd7-2ea92901e3ed",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Udaan",
+  "uuid" : "bb0f2054-ca69-4c72-9fbd-0aa0fd2df461",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Under-Graduate Degree",
+  "uuid" : "9f8d2931-b1a0-419c-9dea-3e2a79323d05",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Upload photo of aadhaar card",
+  "uuid" : "89a4a14c-a80c-4feb-b321-81ffe0b88c93",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Upload photo of aadhaar enrolment id",
+  "uuid" : "c2f5699f-938d-4f12-af31-e08226757eff",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Upload photo of bank account",
+  "uuid" : "fab70921-0d83-4ddd-989b-f67ae2d93480",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Upload photo of birth certificate",
+  "uuid" : "b95af391-65f9-4b68-81c7-b9a1164fc0c8",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Upload photo of cast certificate",
+  "uuid" : "8e5aaa58-d39d-433d-bb4f-254812c2a20e",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Upload photo of driving license card",
+  "uuid" : "08a49915-e0a9-4ed8-b415-0cd42abbe8d9",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Upload photo of E shram card",
+  "uuid" : "32af95cc-daa2-409c-96c9-0fd54629ba28",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Upload photo of income certificate",
+  "uuid" : "8518c15d-66de-4159-8d48-b12f0105066d",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Upload photo of pan card",
+  "uuid" : "7d5d7d7a-28e9-4e5e-bcbc-be6f5a1c75bd",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Upload photo of Ration/BPL card",
+  "uuid" : "3ce09935-3b4d-41bb-8f0b-90386dafd322",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Upload photo of the id",
+  "uuid" : "9953c071-c3c8-4320-a016-3c3e0d8cd0b2",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Upload photo of voter id",
+  "uuid" : "e88685b4-affc-4ae5-824e-3ed6df0ff3db",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Upload the photo of the Health Card",
+  "uuid" : "29eac327-7cae-4643-be8d-15bbbf8e0f19",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Vamsha Vriksha",
+  "uuid" : "ddfc2599-21aa-47ff-a5b9-15baf7d15f6b",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Vidhyasiri",
+  "uuid" : "b63206e3-c8ab-4e04-b83a-154afef67129",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Voter ID",
+  "uuid" : "971cedcb-3c82-4d8b-8109-f8f4d059f8e2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Ward(s)",
+  "uuid" : "468b0fea-87a7-458f-af43-160dcca7cc1d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Waste Collectors on ULB Auto Rickshaw/Trucks",
+  "uuid" : "29b42073-edae-4753-bfc5-b4201012a3b2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Waste Picker",
+  "uuid" : "5df91b87-6fbd-4ae1-aaed-7865327a3687",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Waste picker ID card",
+  "uuid" : "7c729d82-9afa-4431-8d4a-9f6b4b129117",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Waste Picker/Labour Union ID",
+  "uuid" : "99d11618-7930-4386-8ed6-5aeec30e4120",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Weekly Fixed Rate",
+  "uuid" : "df769a75-a489-4d2e-b273-5e0806564234",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "What are the kinds of waste you buy",
+  "uuid" : "54e6c34c-7a42-4145-967d-402e8b9157ff",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Bottle Waste",
+    "uuid" : "56e17c8c-01e1-4282-b8c2-5e73a1696552",
+    "order" : 0.0
+  }, {
+    "name" : "Cardboard",
+    "uuid" : "7e48b885-21db-43d5-97c7-75a045d0b0e1",
+    "order" : 1.0
+  }, {
+    "name" : "Computer and other E-Waste",
+    "uuid" : "30582701-a8b2-40bb-8dc6-0cd65bc086ba",
+    "order" : 2.0
+  }, {
+    "name" : "Glass",
+    "uuid" : "ffe672c7-3d61-4798-afc1-21330e0abca3",
+    "order" : 3.0
+  }, {
+    "name" : "Metal",
+    "uuid" : "a730b355-56f1-4ced-8c60-10b38aa54a96",
+    "order" : 4.0,
+    "voided" : true
+  }, {
+    "name" : "Metal Waste",
+    "uuid" : "e4714af8-7d60-4da6-9854-d6a637dd3363",
+    "order" : 5.0
+  }, {
+    "name" : "News Paper",
+    "uuid" : "9a99896f-d969-4c68-b99f-d447c4fd70ad",
+    "order" : 6.0
+  }, {
+    "name" : "Paper",
+    "uuid" : "dcd17fc1-9a99-48df-9fe5-9d0401b9b6e3",
+    "order" : 7.0,
+    "voided" : true
+  }, {
+    "name" : "Plastic",
+    "uuid" : "51c408ec-aa2a-4352-baa9-c12e5e8eaf6e",
+    "order" : 8.0,
+    "voided" : true
+  }, {
+    "name" : "Paper-White",
+    "uuid" : "8014838e-deed-4cf3-a298-d4573a9e1408",
+    "order" : 9.0
+  }, {
+    "name" : "Plastic Waste",
+    "uuid" : "3ce8362e-4279-4adf-a9f4-7c86e5d1634c",
+    "order" : 10.0
+  }, {
+    "name" : "Road scrap",
+    "uuid" : "6ce2d37a-80c1-44c7-bccc-3252853950e4",
+    "order" : 11.0
+  }, {
+    "name" : "Wires",
+    "uuid" : "ffe3f194-9d84-407e-9193-983a6dafd2d5",
+    "order" : 12.0
+  }, {
+    "name" : "Other",
+    "uuid" : "59f7d502-48e4-48e4-a6f7-15046fec16c3",
+    "order" : 13.0,
+    "voided" : true
+  } ]
+}, {
+  "name" : "What are the kinds of waste you pick/sort",
+  "uuid" : "081644ac-2830-49f1-bc57-a65dbd8950d4",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Cardboard",
+    "uuid" : "7e48b885-21db-43d5-97c7-75a045d0b0e1",
+    "order" : 0.0
+  }, {
+    "name" : "Glass",
+    "uuid" : "ffe672c7-3d61-4798-afc1-21330e0abca3",
+    "order" : 1.0
+  }, {
+    "name" : "Metal",
+    "uuid" : "a730b355-56f1-4ced-8c60-10b38aa54a96",
+    "order" : 2.0
+  }, {
+    "name" : "Paper",
+    "uuid" : "dcd17fc1-9a99-48df-9fe5-9d0401b9b6e3",
+    "order" : 3.0
+  }, {
+    "name" : "Plastic",
+    "uuid" : "51c408ec-aa2a-4352-baa9-c12e5e8eaf6e",
+    "order" : 4.0
+  }, {
+    "name" : "Road scrap",
+    "uuid" : "6ce2d37a-80c1-44c7-bccc-3252853950e4",
+    "order" : 5.0
+  }, {
+    "name" : "Wires",
+    "uuid" : "ffe3f194-9d84-407e-9193-983a6dafd2d5",
+    "order" : 6.0
+  }, {
+    "name" : "Other",
+    "uuid" : "59f7d502-48e4-48e4-a6f7-15046fec16c3",
+    "order" : 7.0
+  } ]
+}, {
+  "name" : "What distance do you walk per day",
+  "uuid" : "a56adef9-8a08-4e80-90cf-a724a4d9e681",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "0-2 km",
+    "uuid" : "c62d9b4e-1df7-4330-ba75-bf60588bf254",
+    "order" : 0.0
+  }, {
+    "name" : "2-5 km",
+    "uuid" : "c229e9bc-88a6-4e28-a539-d7b5cc94714e",
+    "order" : 1.0
+  }, {
+    "name" : "5-8 km",
+    "uuid" : "54ae409b-7e1e-4612-9654-ccf27dc0bd11",
+    "order" : 2.0
+  }, {
+    "name" : "8-10 km",
+    "uuid" : "4c52f068-b6de-4dde-91e8-af1212179c73",
+    "order" : 3.0
+  }, {
+    "name" : "> 10 km",
+    "uuid" : "3674d3ed-76e9-4a41-8e30-d6600d0655e9",
+    "order" : 4.0
+  }, {
+    "name" : "No Response",
+    "uuid" : "f1b375f9-b14a-4a3e-8a9c-4288664e69ad",
+    "unique" : true,
+    "order" : 5.0
+  } ]
+}, {
+  "name" : "What is your daily Capital",
+  "uuid" : "08d582e6-b8dc-46fa-9501-93c048b7cb49",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Self",
+    "uuid" : "c43f3074-bf61-4ad7-a454-6b47929bfa02",
+    "order" : 0.0
+  }, {
+    "name" : "Scrap trader",
+    "uuid" : "59d4d0b2-5b26-4490-aca0-215c61871085",
+    "order" : 1.0
+  }, {
+    "name" : "Any other",
+    "uuid" : "89153ed9-033c-4277-bd1e-e5c7b55da39e",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "What is your daily expenditure on transport",
+  "uuid" : "9e1429e9-f83c-485d-8fb6-9bf3fc8f1750",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Where do you buy your scrap from",
+  "uuid" : "d5a1e68f-dccf-48bd-8eca-608506464ab4",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Mostly households / mostly small establishments",
+    "uuid" : "aa63dccc-f16c-4a7b-adae-469b919ce8e2",
+    "order" : 0.0
+  }, {
+    "name" : "Mostly offices/hotels/companies",
+    "uuid" : "8e56be29-0d7f-4de2-9260-5fbd92b878b9",
+    "order" : 1.0
+  }, {
+    "name" : "Mostly industries",
+    "uuid" : "28685619-f6d0-4575-9650-49a52db9ddf8",
+    "order" : 2.0
+  }, {
+    "name" : "Any other",
+    "uuid" : "89153ed9-033c-4277-bd1e-e5c7b55da39e",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Where Do you collect the waste from",
+  "uuid" : "fb36f481-cc86-498c-aae2-bb55cd625ad0",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Commercial establishments",
+    "uuid" : "c9475dd5-1a5b-4a70-9617-913a7449d00c",
+    "order" : 0.0
+  }, {
+    "name" : "Households",
+    "uuid" : "233b0903-e021-496f-8fde-f6d540d366ec",
+    "order" : 1.0
+  }, {
+    "name" : "Landfill",
+    "uuid" : "6f71ee68-b164-4a5d-b075-dfd8cc46818e",
+    "order" : 2.0
+  }, {
+    "name" : "Public spaces",
+    "uuid" : "780f3a16-c035-41fa-bebc-a4e7fd98b3ff",
+    "order" : 3.0
+  }, {
+    "name" : "Roadside",
+    "uuid" : "c403bb74-bdc0-4f4b-9285-0b9a5363ac28",
+    "order" : 4.0
+  } ]
+}, {
+  "name" : "Where do you get the capital",
+  "uuid" : "3b2a34e8-f021-4ff0-aa30-6bde53d63a25",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Loan",
+    "uuid" : "6301c759-e3e1-49b1-ba33-490cc0a980bf",
+    "order" : 0.0
+  }, {
+    "name" : "Open Market",
+    "uuid" : "2f7efdd4-b889-4800-bf8c-39fc19c1e3b5",
+    "order" : 1.0
+  }, {
+    "name" : "SHG",
+    "uuid" : "f6dd59cb-44c5-4648-b7de-bcbd2881234a",
+    "order" : 2.0
+  }, {
+    "name" : "Any other",
+    "uuid" : "89153ed9-033c-4277-bd1e-e5c7b55da39e",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Where do you sell your collected waste",
+  "uuid" : "1c763792-ea1a-4e75-83cb-84c7de8a845c",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Whether you have aadhaar card",
+  "uuid" : "549d242e-1461-4c8a-9903-f7ac98b75aed",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Whether you have aadhaar enrolment id",
+  "uuid" : "d6fababf-1c75-4fe0-a270-b1e737d32488",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Whether you have any other social security identification schemes",
+  "uuid" : "cfeee666-67bf-40de-91f9-7b7da9250d3f",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Whether you have bank account",
+  "uuid" : "e3a74785-68b0-4bbf-b335-dafc19b5ee52",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Whether you have cast certificate",
+  "uuid" : "5b4c05e7-839d-42e8-801a-54d093769d62",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Whether you have driving license",
+  "uuid" : "99138dc1-b10e-411e-87da-8faf4c7f114c",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Whether you have e shram card",
+  "uuid" : "183b0a1b-e7af-476d-9f87-f72811e51c3a",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Whether you have health card",
+  "uuid" : "36994d2a-03a7-4310-ae64-5ad481dba02e",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Whether you have labour card",
+  "uuid" : "f053b25e-84b1-4308-a196-8064c6757eb5",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Whether you have pan card",
+  "uuid" : "e2d98bf7-39ea-4978-bc7e-a6424ff68da7",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Whether you have Ration/BPL card with your name included",
+  "uuid" : "e26b6a9f-3ef2-464e-8c91-ba1cae3cb905",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Whether you have voter registration card",
+  "uuid" : "5c4aa28f-2deb-4804-b9d3-8f6fea6549a1",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Widow Pension",
+  "uuid" : "a4e5ccdf-61d6-4bfc-8093-4d09db462ca5",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Widow Re-marriage",
+  "uuid" : "49dc4c56-293e-41e1-bc20-d9422431cbd9",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Widowed",
+  "uuid" : "55fc5b9d-aa01-4968-aad2-1c535472f78d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Wires",
+  "uuid" : "ffe3f194-9d84-407e-9193-983a6dafd2d5",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Work Difficulty",
+  "uuid" : "13517c80-6e10-487a-bab4-d07c2364c14e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Working Area",
+  "uuid" : "58267ac6-3ae5-4251-8d16-6547b86304c4",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Area(s)",
+    "uuid" : "91641ef9-099b-4c54-bacf-20d3cb61bc5f",
+    "order" : 0.0
+  }, {
+    "name" : "Ward(s)",
+    "uuid" : "468b0fea-87a7-458f-af43-160dcca7cc1d",
+    "order" : 1.0
+  }, {
+    "name" : "Inside and Outside City/Town",
+    "uuid" : "2cab2d42-eef6-42a0-b85d-0086bd7c28c3",
+    "order" : 2.0
+  }, {
+    "name" : "Anywhere Within City Limits",
+    "uuid" : "b7792d57-9a53-4d52-bd94-a57431f3bd42",
+    "order" : 3.0
+  }, {
+    "name" : "Outside City",
+    "uuid" : "4659ef18-e1bc-4e9e-a933-66817f3ba772",
+    "order" : 4.0
+  }, {
+    "name" : "Zone(s)",
+    "uuid" : "333f1438-871b-49b7-b2c6-269699387ef2",
+    "order" : 5.0
+  }, {
+    "name" : "Other",
+    "uuid" : "59f7d502-48e4-48e4-a6f7-15046fec16c3",
+    "order" : 6.0
+  } ]
+}, {
+  "name" : "Yes",
+  "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Zone(s)",
+  "uuid" : "333f1438-871b-49b7-b2c6-269699387ef2",
+  "dataType" : "NA",
+  "active" : true
+} ]

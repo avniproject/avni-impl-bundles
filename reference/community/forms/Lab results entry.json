@@ -1,0 +1,595 @@
+{
+  "name" : "Lab results entry",
+  "uuid" : "c62528fd-04a8-49dc-9e2e-e5060fa0c51e",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "baebe8ac-1758-476e-b4e1-e8130c72584c",
+    "name" : "Lab test Results",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Solubility result",
+      "uuid" : "6dec6c40-fa6f-442d-a447-37f5d66312dd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Solubility result",
+        "uuid" : "d41b5986-e8b1-41dc-8685-beb4d86abf79",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Positive",
+          "uuid" : "479cd95a-54ef-4818-b84a-09b478fc68b8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Negative",
+          "uuid" : "ad1f0481-a8ed-411a-ac00-d0435a670269",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n statusBuilder.show().when.latestValueInPreviousEncounters(\"Solubility result\").is.notDefined\n            .and.latestValueInPreviousEncounters(\"Electrophoresis result\").is.notDefined;\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Whether Electrophoresis result available",
+      "uuid" : "21935d57-2599-42ad-a89c-58a1612e1a78",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Whether Electrophoresis result available",
+        "uuid" : "508c57f9-da72-4d39-ba89-25af12929dda",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n statusBuilder.show().when.latestValueInPreviousEncounters(\"Electrophoresis result\").is.notDefined;\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Electrophoresis result",
+      "uuid" : "f3f6e6d1-cf48-4e57-b8d7-d77d8107a851",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Electrophoresis result",
+        "uuid" : "0cb6e694-fc5f-45cb-ad71-0bd22ef8b381",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "AA",
+          "uuid" : "daa7c62f-c663-4981-a134-1f662b3036d0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AS",
+          "uuid" : "77ee8a6a-2a01-421f-85ca-fc0ab39abcdb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "SS",
+          "uuid" : "3648a650-2f3e-4c2c-a899-c0a8212aace1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n statusBuilder.show().when.valueInEncounter(\"Whether Electrophoresis result available\").is.yes;\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Whether HPLC result available",
+      "uuid" : "933c0363-9c05-402e-ba79-0f3ec2001733",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Whether HPLC result available",
+        "uuid" : "645d4c3d-8b8a-4de6-85f2-87b5ba73fe86",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  statusBuilder.show().when.latestValueInAllEncounters(\"HPLC Result\").is.notDefined;\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "HPLC result",
+      "uuid" : "e23fd601-2c82-4b4c-bcf6-c1a63e614f22",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "HPLC result",
+        "uuid" : "93eb5a4d-b399-46d3-86d0-6fd4d6443d44",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "S-Beta thal",
+          "uuid" : "75ea50bb-e64d-4734-af99-38d6945242af",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Beta thal trait",
+          "uuid" : "b07f08a5-4cbd-458b-bf98-171c48a62b4a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "SS",
+          "uuid" : "3648a650-2f3e-4c2c-a899-c0a8212aace1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AS",
+          "uuid" : "77ee8a6a-2a01-421f-85ca-fc0ab39abcdb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Beta Thal",
+          "uuid" : "7f32dd91-78d3-4f5c-b43e-a00bff7d6055",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AA",
+          "uuid" : "daa7c62f-c663-4981-a134-1f662b3036d0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "S-Beta thal - trait",
+          "uuid" : "e71107e7-56ed-4dcb-9915-5276e8a2df9e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Whether HPLC result available\").is.yes;\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "HPLC Other result details",
+      "uuid" : "432b6d89-cb30-40f1-98cd-a2820598410b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "HPLC Other result details",
+        "uuid" : "46af77ba-d316-422d-b15c-35d1cb118cd7",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n statusBuilder.show().when.valueInEncounter(\"HPLC result\").containsAnswerConceptName(\"Other\");\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Registration number",
+      "uuid" : "010a16b9-e4d7-4e06-8d4b-a9132514a6ce",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Registration number",
+        "uuid" : "d695a22f-82b0-4f4f-9227-a4f3344d5dcf",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"0cb6e694-fc5f-45cb-ad71-0bd22ef8b381\").containsAnswerConceptName(\"3648a650-2f3e-4c2c-a899-c0a8212aace1\").or.when.valueInEncounter(\"93eb5a4d-b399-46d3-86d0-6fd4d6443d44\").containsAnswerConceptName(\"3648a650-2f3e-4c2c-a899-c0a8212aace1\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Electrophoresis result",
+                "conceptUuid" : "0cb6e694-fc5f-45cb-ad71-0bd22ef8b381",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "SS" ],
+                "answerConceptUuids" : [ "3648a650-2f3e-4c2c-a899-c0a8212aace1" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            }, {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "HPLC result",
+                "conceptUuid" : "93eb5a4d-b399-46d3-86d0-6fd4d6443d44",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "SS" ],
+                "answerConceptUuids" : [ "3648a650-2f3e-4c2c-a899-c0a8212aace1" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "or"
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Lab test Results"
+  }, {
+    "uuid" : "bc74ec7d-b445-41f1-8145-7fc52a8ea5fe",
+    "name" : "HB & Blood group",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Hb",
+      "uuid" : "153bdded-c348-495b-9b37-2d03aac305b0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Hb",
+        "uuid" : "f9ecabbc-2df2-4bfc-a6fa-aa417c50e11b",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 12.0,
+        "highNormal" : 15.5,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Hb range (Copper Sulphate method)",
+      "uuid" : "f056f82e-e3cf-4963-b839-e69ec7c4b18d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Hb range (Copper Sulphate method)",
+        "uuid" : "732a1094-0fbc-48a3-86d6-aa3ba1daf4da",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Less than 7gm/dl",
+          "uuid" : "a1ef27d0-3601-48a4-b631-acac2bfdbfa2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "7 - 9 gm/dl",
+          "uuid" : "91b97fb3-b537-4820-935d-bb49b3768de0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "6 - 9 gm/dl",
+          "uuid" : "bba33e0a-83f6-4488-bfbc-e0b8ed65b110",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Greater than 11gm/dl",
+          "uuid" : "15126cb3-3d33-4061-a9b9-e509f45bcef2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "9 - 11 gm/dl",
+          "uuid" : "13f9cac9-994e-4aea-9d66-c4a998a75c09",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Less than 6gm/dl",
+          "uuid" : "0606518a-f735-45f2-a3fd-0222d1243d19",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "HB & Blood group"
+  }, {
+    "uuid" : "fec1e5a6-f24f-4dc4-b84d-56e17412de7e",
+    "name" : "HB & Blood group",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Hb",
+      "uuid" : "15906c58-e95f-4e10-a110-16e4ed8fe092",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Hb",
+        "uuid" : "f9ecabbc-2df2-4bfc-a6fa-aa417c50e11b",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 12.0,
+        "highNormal" : 15.5,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Hb range (Copper Sulphate method)",
+      "uuid" : "c17d552a-24e1-4af1-a6f8-5b8fe389e777",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Hb range (Copper Sulphate method)",
+        "uuid" : "732a1094-0fbc-48a3-86d6-aa3ba1daf4da",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Less than 7gm/dl",
+          "uuid" : "a1ef27d0-3601-48a4-b631-acac2bfdbfa2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "7 - 9 gm/dl",
+          "uuid" : "91b97fb3-b537-4820-935d-bb49b3768de0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "6 - 9 gm/dl",
+          "uuid" : "bba33e0a-83f6-4488-bfbc-e0b8ed65b110",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Greater than 11gm/dl",
+          "uuid" : "15126cb3-3d33-4061-a9b9-e509f45bcef2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "9 - 11 gm/dl",
+          "uuid" : "13f9cac9-994e-4aea-9d66-c4a998a75c09",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Less than 6gm/dl",
+          "uuid" : "0606518a-f735-45f2-a3fd-0222d1243d19",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "voided" : true,
+    "timed" : false,
+    "display" : "HB & Blood group"
+  } ],
+  "decisionRule" : "//SAMPLE RULE EXAMPLE\n  \"use strict\";\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const decisions = params.decisions;\n     const HBComplicationsBuilder = new imports.rulesConfig.complicationsBuilder({\n        programEncounter: programEncounter,\n        complicationsConcept: 'Hemoglobin genotype'\n    });\n  \n           let solubilityResult = programEncounter.getObservationReadableValue('Solubility result');\n            if(!_.isNil(solubilityResult) && solubilityResult === 'Negative'){\n            HBComplicationsBuilder\n                .addComplication('AA');\n                \n            }\n\n            let electrophoresisResult = programEncounter.getObservationReadableValue('Electrophoresis result');\n            if(!_.isNil(electrophoresisResult) && electrophoresisResult !== 'Other'){\n             HBComplicationsBuilder\n                .addComplication(electrophoresisResult);\n               \n            }\n\n            let hplcResult = programEncounter.getObservationReadableValue('HPLC result');\n            if(!_.isNil(hplcResult)){\n               if(hplcResult === \"Other\"){\n                 HBComplicationsBuilder\n                  .addComplication('Other (HPLC)');\n                }else {\n                  HBComplicationsBuilder\n                    .addComplication(hplcResult);\n                }\n               \n            }\n    \n    decisions.encounterDecisions.push(HBComplicationsBuilder.getComplications());\n    return decisions;\n};",
+  "visitScheduleRule" : "//SAMPLE RULE EXAMPLE\n\"use strict\";\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({\n        programEncounter\n    });\n    \n    const HPLCEncounters = _.chain(programEncounter.programEnrolment.getEncounters(true))\n        .filter((enc) => enc.name === 'HPLC sample collection')\n        .filter((enc) => imports.moment(enc.earliestVisitDateTime).isSame(programEncounter.encounterDateTime) === true)\n        .value();\n\n \n\n    \n\n    let electrophoresisResult = programEncounter.getObservationReadableValue('Electrophoresis result');\n    let HPLCResult =programEncounter.getObservationReadableValue('Whether HPLC result available');\n    if (!_.isNil(electrophoresisResult) && electrophoresisResult === 'Other' && HPLCEncounters.length == 0\n    && HPLCResult === 'No') {\n        scheduleBuilder\n            .add({\n                name: \"HPLC sample collection\",\n                encounterType: \"HPLC sample collection\",\n                earliestDate: imports.moment(programEncounter.encounterDateTime).toDate(),\n                maxDate: imports.moment(programEncounter.encounterDateTime).add(3, 'days').toDate()\n            });\n    }\n\n    const hplcResult = programEncounter.getObservationReadableValue('HPLC result');\nconst BaselineEncounters=programEncounter.programEnrolment.getEncountersOfType(\"Baseline\")\nif(BaselineEncounters.length == 0){\n    if (_.isEqual(hplcResult, 'Beta Thal') || _.isEqual(hplcResult, 'S-Beta thal') || _.isEqual(electrophoresisResult, 'SS') || _.isEqual(hplcResult, 'SS')) {\n        scheduleBuilder\n            .add({\n                name: \"Baseline Form\",\n                encounterType: \"Baseline\",\n                earliestDate: imports.moment(programEncounter.encounterDateTime).toDate(),\n                maxDate: imports.moment(programEncounter.encounterDateTime).add(3, 'days').toDate()\n            });\n    }\n}\n    return scheduleBuilder.getAllUnique(\"encounterType\");\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ {
+    "name" : "Hemoglobin genotype",
+    "uuid" : "e19e68fd-97f1-4803-a1b2-bb850836ff54",
+    "dataType" : "Coded",
+    "answers" : [ {
+      "name" : "AA",
+      "uuid" : "daa7c62f-c663-4981-a134-1f662b3036d0",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 2.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Beta Thal",
+      "uuid" : "7f32dd91-78d3-4f5c-b43e-a00bff7d6055",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 3.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "SS",
+      "uuid" : "3648a650-2f3e-4c2c-a899-c0a8212aace1",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 0.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "AS",
+      "uuid" : "77ee8a6a-2a01-421f-85ca-fc0ab39abcdb",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 1.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Beta thal trait",
+      "uuid" : "b07f08a5-4cbd-458b-bf98-171c48a62b4a",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 4.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Data Not Available",
+      "uuid" : "1deacad0-83b7-4f3e-9ae6-3bcb676c92ec",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 9.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Other (HPLC)",
+      "uuid" : "7472ce22-441c-4f07-9049-d53c943308e0",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 7.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "S-Beta thal - trait",
+      "uuid" : "e71107e7-56ed-4dcb-9915-5276e8a2df9e",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 6.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "S-Beta thal",
+      "uuid" : "75ea50bb-e64d-4734-af99-38d6945242af",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 5.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Test not happened",
+      "uuid" : "13f4f438-efc5-4a79-8c23-23479218a942",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 8.0,
+      "active" : true,
+      "media" : [ ]
+    } ],
+    "active" : true,
+    "media" : [ ]
+  } ]
+}

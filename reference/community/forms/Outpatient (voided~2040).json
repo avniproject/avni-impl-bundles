@@ -1,0 +1,608 @@
+{
+  "name" : "Outpatient (voided~2040)",
+  "uuid" : "e1472f56-c057-4aea-9f46-0decd9d068fe",
+  "formType" : "Encounter",
+  "formElementGroups" : [ {
+    "uuid" : "52c7a463-3044-4ac6-8bfa-dae86fd20878",
+    "name" : "Vitals",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Weight",
+      "uuid" : "7b7fd4ed-61b5-490e-be96-251dcfd9dda4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Weight",
+        "uuid" : "75b1656e-2777-4753-9612-ce03a766a5e1",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 300.0,
+        "lowNormal" : 1.0,
+        "highNormal" : 100.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Height",
+      "uuid" : "d2a80e21-81b9-44e0-b5dd-a6fb7cdcf7ac",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Height",
+        "uuid" : "d883d5fe-e17d-4136-b989-089fa0295e34",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 20.0,
+        "highAbsolute" : 300.0,
+        "lowNormal" : 30.0,
+        "highNormal" : 200.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "BMI",
+      "uuid" : "e32ff173-fef2-4c6f-9440-2a5232fa44e7",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "BMI",
+        "uuid" : "7ac0d759-c50d-4971-88e0-84274224c839",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 18.5,
+        "highNormal" : 24.9,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Temperature",
+      "uuid" : "294c23fb-aef2-499c-b91f-3294df5a28c0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Temperature",
+        "uuid" : "e6edb61c-c3d9-44c8-abf7-4fd09fe39ec9",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 97.0,
+        "highNormal" : 99.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Respiratory Rate",
+      "uuid" : "1840d8b3-93a8-4a17-8ef9-40767e21a0a7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Respiratory Rate",
+        "uuid" : "70d617f9-3c14-4ec2-8d0f-97c837f6ab37",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 16.0,
+        "highNormal" : 20.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Pulse",
+      "uuid" : "d24edbd7-1ee5-4065-9f77-18aacd9bb88d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Pulse",
+        "uuid" : "2d3b8f90-6123-4dbf-b866-4f56ac7d24c8",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 60.0,
+        "highNormal" : 100.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Systolic",
+      "uuid" : "785c1b57-f494-49c1-aa88-499c9e0af894",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Systolic",
+        "uuid" : "2a04bf88-6346-4eda-a86c-8a2afc011b22",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 400.0,
+        "lowNormal" : 90.0,
+        "highNormal" : 140.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Diastolic",
+      "uuid" : "e02226d8-2dd2-4cd7-ae1a-321a40d913f4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Diastolic",
+        "uuid" : "1e2d41a2-5b6a-4ad7-ab91-51d3cdf122bd",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 10.0,
+        "highAbsolute" : 250.0,
+        "lowNormal" : 50.0,
+        "highNormal" : 90.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Vitals"
+  }, {
+    "uuid" : "cfca8e29-cbf2-4fda-a691-b8fa15abab14",
+    "name" : "Physical Examination",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Pallor",
+      "uuid" : "0321fdc2-055f-44ac-a24e-c66314f04127",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Pallor",
+        "uuid" : "226f8715-563b-4a8b-8afa-f75cce2767af",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Present",
+          "uuid" : "57b51d52-981f-4af2-b133-aeffa6d00757",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Absent",
+          "uuid" : "10885638-561a-42b6-8b24-8daa01864c89",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Pedal Edema",
+      "uuid" : "57db3bc2-4a09-4351-bf44-edfe46e00ac1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Pedal Edema",
+        "uuid" : "b441c480-1a19-4ad0-9d0a-196485aacf12",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Present",
+          "uuid" : "57b51d52-981f-4af2-b133-aeffa6d00757",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Absent",
+          "uuid" : "10885638-561a-42b6-8b24-8daa01864c89",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Skin Condition",
+      "uuid" : "bfae2b55-5b91-4a1b-a6df-58d3cacf00b0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Skin Condition",
+        "uuid" : "bff2c24c-32d2-4400-a691-4f43fa59090a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Boils",
+          "uuid" : "cb14a474-cfcb-46cd-97c5-1237cf006dc9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Scabies",
+          "uuid" : "e6b85a4c-04cf-4738-bbb4-1884d853f2e5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Wound",
+          "uuid" : "5126ffae-a2a3-4474-aa3f-73d2a576d42c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ring Worm",
+          "uuid" : "8146a561-0f46-4ada-a63b-cbe29c626137",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Paracheck",
+      "uuid" : "d797bb0c-7f75-4748-9db2-bd0349c1ee65",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Paracheck",
+        "uuid" : "10ac6d19-49f9-4ca1-8d26-aa4f1e9997c8",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Positive for PV",
+          "uuid" : "662c40a4-2694-4b10-9388-1ddb2c53886b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Positive for PF and PV",
+          "uuid" : "9387a474-72ca-48b6-a608-bd3657c5d1ea",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Positive for PF",
+          "uuid" : "ed305c6f-3986-4346-9ae3-e21cbe0b55f7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Negative",
+          "uuid" : "ad1f0481-a8ed-411a-ac00-d0435a670269",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Physical Examination"
+  }, {
+    "uuid" : "866bae7d-1a10-48de-a68d-2aef17f92b6b",
+    "name" : "Complaints",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Complaint",
+      "uuid" : "55bec1f0-a726-4a9d-93eb-eb6e06231d36",
+      "keyValues" : [ {
+        "key" : "ExcludedAnswers",
+        "value" : [ ]
+      } ],
+      "concept" : {
+        "name" : "Complaint",
+        "uuid" : "561c5f87-03f0-4135-be19-88ed548c1ce1",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Vomiting",
+          "uuid" : "8126ae79-28d5-4587-bca1-1c8f518b48f4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Abdominal pain",
+          "uuid" : "7b8829db-9a5a-4177-bab3-6f8e3bb3832c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Boils",
+          "uuid" : "cb14a474-cfcb-46cd-97c5-1237cf006dc9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ring Worm",
+          "uuid" : "8146a561-0f46-4ada-a63b-cbe29c626137",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Giddiness",
+          "uuid" : "4b569ac1-3965-47a0-9ca7-2317f40fdd61",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pregnancy",
+          "uuid" : "adc37af2-06c1-4adf-9f10-0e121b8a49b8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 17.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Diarrhoea",
+          "uuid" : "88af3c67-3828-4f4b-8993-1497a86bf2bf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Fever",
+          "uuid" : "0b7f3334-f81e-4d84-a13d-b35011e34456",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Acidity",
+          "uuid" : "96c17d14-f663-4b62-ba28-1efe49ee9ddd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Chloroquine Resistant Malaria",
+          "uuid" : "567ed59c-7cfb-46ff-a0f5-e2ea042a03b6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Scabies",
+          "uuid" : "e6b85a4c-04cf-4738-bbb4-1884d853f2e5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Headache",
+          "uuid" : "4085f165-ccb8-409b-9d6e-ea7755cf123e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Wound",
+          "uuid" : "5126ffae-a2a3-4474-aa3f-73d2a576d42c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Body Ache",
+          "uuid" : "7dba1853-3147-47da-b016-7d306d19320f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Cold",
+          "uuid" : "bddfcbbf-b706-4e08-845e-cd64dd43752a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Cough",
+          "uuid" : "63658ea8-0447-4180-8026-bed500486e13",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Other Complaint",
+      "uuid" : "ce14e8e6-56c9-40e2-a1c0-9a1f235eeeea",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other OPD Complaint",
+        "uuid" : "a5cabe2e-f2e9-4f15-ad0b-be1434133649",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Is patient being referred to the higher health center?",
+      "uuid" : "ccd84a61-51c5-441f-a016-96da1462331e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is outpatient referred to higher health center?",
+        "uuid" : "2bf14bb0-faa1-4d71-933e-c98e4e0fd458",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Reason for referral",
+      "uuid" : "abf3853a-1dc5-4658-a992-42dd944da94d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Reason for referral",
+        "uuid" : "222054fc-2cf0-4bb5-a66d-7c0888277548",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Not getting cured after receiving complete treatment at health center",
+          "uuid" : "1224317d-0e64-41eb-a73b-09644c63582f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Can’t be treated at health centre level",
+          "uuid" : "02282c77-4aed-4545-b855-a6478b457e1e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Complaints"
+  }, {
+    "uuid" : "b213cfcb-dde8-4593-9fc4-c74e6a17dc2f",
+    "name" : "Drug information",
+    "displayOrder" : 4.0,
+    "formElements" : [ {
+      "name" : "What Malaria treatment tablets are available?",
+      "uuid" : "52b33fd1-29fe-49c2-9bb5-f642f48da1a2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Available malaria treatment tablets",
+        "uuid" : "142c7855-8bb7-4476-b086-c6e393bd8aad",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "ACT Tablets",
+          "uuid" : "9c4ed960-6473-405c-ac2e-68b180d7c880",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lonart Tablets",
+          "uuid" : "dd559add-2b86-455c-b6d9-6e7cb05dc779",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Drug information"
+  } ],
+  "decisionConcepts" : [ ],
+  "voided" : true
+}

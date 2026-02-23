@@ -1,0 +1,746 @@
+{
+  "name" : "Delivery (voided~2042)",
+  "uuid" : "cc6a3c6a-c3cc-488d-a46c-d9d538fcc9c2",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "586b9fc7-7db9-42b5-9e89-ee1f05ac9de8",
+    "name" : "Service Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Date of delivery",
+      "uuid" : "4ff66c5e-becb-4f0c-bb33-59f5546311f4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Date of Pregnancy outcome (Delivery)",
+        "uuid" : "f66b51a3-c0ad-4e40-a5ee-eca2481bd83c",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 0.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Place of delivery",
+      "uuid" : "f48b8eb2-a338-45fd-b63d-3c00d266d388",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Place of delivery",
+        "uuid" : "a0405799-1e3c-40ef-90ba-84c9c0931660",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Private hospital",
+          "uuid" : "8767f6a6-6ca9-41d1-b60e-2c5addf22168",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Primary Health Center",
+          "uuid" : "b4007f93-f288-49aa-b2ad-96f1a0f75a43",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Home",
+          "uuid" : "bb75a86c-05af-4b05-b699-860737d19e57",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Regional Hospital",
+          "uuid" : "0ad759eb-5fb9-4152-b39c-0c80e1c4ecda",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "NGO Hospital",
+          "uuid" : "cdb94629-a710-43f0-b5ce-3921905f24f2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "During Transportation like in Ambulance etc",
+          "uuid" : "3b26f408-cbc6-4afc-a5bd-1d4e22ce77a7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sub Center",
+          "uuid" : "fe24e909-6346-4e84-bacc-2ec5ae85bed8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Government Hospital",
+          "uuid" : "df6303d5-0b78-48e0-8a3c-1a7fec61a9f1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Date of discharge",
+      "uuid" : "77791c29-90ec-485a-9cef-298b9b575dd2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Date of discharge",
+        "uuid" : "b4d6b6b6-fff0-4dda-8f60-aa273ff20250",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Number of days stayed at the hospital post delivery",
+      "uuid" : "a2053871-6568-4969-8eac-8820fd67d928",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Number of days stayed at the hospital post delivery",
+        "uuid" : "a70cca4d-2f79-4f39-8839-2683ad43cba4",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Delivered By",
+      "uuid" : "c317355a-180b-447f-b406-d6dbbeadc17f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Delivered by",
+        "uuid" : "58b6367a-825f-43e2-b6b7-b35a5cbc3a09",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Non-Skilled Birth Attendant (NSBA)",
+          "uuid" : "136f5c20-c8be-4028-89cb-8a22571526c2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Medical Officer/ Doctor",
+          "uuid" : "c5a95b60-61b9-4861-a9a2-9b783e768b27",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "TBA (Trained Birth Attendant)",
+          "uuid" : "f6947afd-9592-4ac8-808a-4cd5bdc1443e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Relative",
+          "uuid" : "5dcdbebc-913e-46a5-a254-dd38d2956c80",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Nurse",
+          "uuid" : "f2060c53-4cb4-4b35-9bb6-6f717a8a3f56",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Auxillary Nurse Midwife",
+          "uuid" : "d3f764e5-938a-42dd-bdef-02614d424f8d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Doctor",
+          "uuid" : "062071e7-85a9-4da0-9d59-c27b00e53a60",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Service Details"
+  }, {
+    "uuid" : "fa392acd-d9bf-4b90-b520-bc28d61300b8",
+    "name" : "Medical Details",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Type of delivery",
+      "uuid" : "f9453d8c-2085-4435-840f-3ddcd79f788f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Type of delivery",
+        "uuid" : "69d0acf1-c32b-4694-9bc2-874b5e7a44c8",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Normal",
+          "uuid" : "ba43b326-18a1-4f8d-ad04-29b0371461e0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Instrumental",
+          "uuid" : "eeaf9b42-71f7-49d4-80c6-a498619d1645",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Caesarean Section",
+          "uuid" : "f5192c76-f772-4e84-8fea-16d980de15bc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Number of babies",
+      "uuid" : "1e5583d4-24f0-4a45-b712-f753eb48c8f9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of babies",
+        "uuid" : "884cd2fb-1e50-4a2e-a9ae-2b90d4a78ede",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 1.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Delivery outcome",
+      "uuid" : "14ebb121-7602-4644-81b3-6e171cea19ab",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Delivery outcome <Not used>",
+        "uuid" : "36b7b1a8-d191-4bbe-ad3c-0e25a48334e0",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Early Neonatal death within first 24 Hours of birth",
+          "uuid" : "63c6e46e-77ea-44d7-bb46-ae4f16acb399",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Live birth and Still birth",
+          "uuid" : "231982cb-bacc-4d8b-8ee7-be47bdd4d47e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Still Birth",
+          "uuid" : "797c7923-1993-49d9-b759-1706aae62ae9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Live Birth",
+          "uuid" : "e3999b21-821c-4c6e-9953-156e70b9217c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Delivery Complications",
+      "uuid" : "d4d13b86-435f-4fe6-bb74-6a00cd41b174",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Delivery Complications",
+        "uuid" : "42fcfd17-4e35-4981-96b3-1d028915d808",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Uterine Rupture",
+          "uuid" : "ae847737-5be5-4c55-8abe-db3606c2de6b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Obstructed Labour",
+          "uuid" : "3654f7c6-e515-4653-8298-50dfb54d2152",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Vaginal Rupture",
+          "uuid" : "3e562cd9-a23c-415b-922d-c4c86d788444",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Maternal Death",
+          "uuid" : "475b4eba-f2ef-4d09-ac27-3913e0b23373",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PPH (postpartum haemorrhage)",
+          "uuid" : "4ed8b24e-e031-4289-9c1e-70bde07a80a4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Sex of newborn",
+      "uuid" : "d45a091c-b70d-4a66-a98e-32592f0ba3e6'",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Sex of newborn",
+        "uuid" : "88b8cac0-0522-4ee2-a9e8-e287af00be32",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Female",
+          "uuid" : "09e1b06f-26be-4f7a-8121-5dba3a11b684",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Male",
+          "uuid" : "7038d549-4a3b-4600-b856-f6f3d123fbd8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Gender of new born1",
+      "uuid" : "205013a3-b967-4b42-ac0b-9ffe99fe88f9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Gender of new born1",
+        "uuid" : "0c26df89-e22e-4ea6-a20b-280d0b431774",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Other Gender",
+          "uuid" : "d56700ea-fac8-4255-8403-7f8f3b755335",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Female",
+          "uuid" : "09e1b06f-26be-4f7a-8121-5dba3a11b684",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Male",
+          "uuid" : "7038d549-4a3b-4600-b856-f6f3d123fbd8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Gender of new born2",
+      "uuid" : "598a7f46-b0e9-40b6-b4b4-1312e6238819",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Gender of new born2",
+        "uuid" : "7804e278-e352-4c85-a3f1-12ff97ac1d6b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Male",
+          "uuid" : "7038d549-4a3b-4600-b856-f6f3d123fbd8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Female",
+          "uuid" : "09e1b06f-26be-4f7a-8121-5dba3a11b684",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other Gender",
+          "uuid" : "d56700ea-fac8-4255-8403-7f8f3b755335",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Gender of new born3",
+      "uuid" : "51bc43a2-1ee7-4f37-a3b1-e81aec1135e0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Gender of new born3",
+        "uuid" : "49c5461d-1103-4b17-bc80-6bc502db2558",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Other Gender",
+          "uuid" : "d56700ea-fac8-4255-8403-7f8f3b755335",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Male",
+          "uuid" : "7038d549-4a3b-4600-b856-f6f3d123fbd8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Female",
+          "uuid" : "09e1b06f-26be-4f7a-8121-5dba3a11b684",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Medical Details"
+  }, {
+    "uuid" : "b4c1288e-23d6-4612-a4da-7ad6047a9f83",
+    "name" : "Still born babies' details",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Number of still born babies",
+      "uuid" : "07b9d7ef-0b65-4e8b-8bda-1eafe5a7f507",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of still born babies",
+        "uuid" : "482a696a-4834-4cbe-b529-95b9699e9884",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Gender of stillborn1",
+      "uuid" : "f598bad9-ffd5-499e-ac65-d3f1d3050ef7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Gender of stillborn1",
+        "uuid" : "d1842738-a4a9-4122-9194-c0eb84e055dd",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Male",
+          "uuid" : "7038d549-4a3b-4600-b856-f6f3d123fbd8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other Gender",
+          "uuid" : "d56700ea-fac8-4255-8403-7f8f3b755335",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Female",
+          "uuid" : "09e1b06f-26be-4f7a-8121-5dba3a11b684",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Weight of stillborn1",
+      "uuid" : "d7b930af-a7b4-44f1-9bf9-57440ff936cf",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Weight of stillborn1",
+        "uuid" : "bd1eb295-238f-485b-9b9a-4dde399deda8",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Gender of stillborn2",
+      "uuid" : "02326e62-285d-459b-99ae-248e829146a7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Gender of stillborn2",
+        "uuid" : "6ad7e09b-526f-4a9d-994f-0b878af3968f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Male",
+          "uuid" : "7038d549-4a3b-4600-b856-f6f3d123fbd8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Female",
+          "uuid" : "09e1b06f-26be-4f7a-8121-5dba3a11b684",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other Gender",
+          "uuid" : "d56700ea-fac8-4255-8403-7f8f3b755335",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Weight of stillborn2",
+      "uuid" : "b8d47bca-d12c-4510-a660-dc87d7fb6845",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Weight of stillborn2",
+        "uuid" : "1d4ed4f9-2e91-4539-8cf2-9c61f455f3c9",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Gender of stillborn3",
+      "uuid" : "f5152230-2b81-4765-8e99-e739ab30cc73",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Gender of stillborn3",
+        "uuid" : "a091cf0f-ba83-468a-a91e-86807afdbd36",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Other Gender",
+          "uuid" : "d56700ea-fac8-4255-8403-7f8f3b755335",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Female",
+          "uuid" : "09e1b06f-26be-4f7a-8121-5dba3a11b684",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Male",
+          "uuid" : "7038d549-4a3b-4600-b856-f6f3d123fbd8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Weight of stillborn3",
+      "uuid" : "2b1b7e80-5ba9-42ba-a4ef-895a5653cd13",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Weight of stillborn3",
+        "uuid" : "80a00613-202a-4b47-b6ce-2fa8e186f839",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Still born babies' details"
+  } ],
+  "decisionConcepts" : [ ],
+  "voided" : true
+}

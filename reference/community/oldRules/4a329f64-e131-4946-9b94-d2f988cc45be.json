@@ -1,0 +1,15 @@
+{
+  "ruleDependencyUUID" : "45fab234-2325-4028-a12d-15f29a87e3fc",
+  "entity" : {
+    "uuid" : "d8e956f9-c34b-4e38-a50a-786d4ab08737",
+    "type" : "Form"
+  },
+  "entityUUID" : "d8e956f9-c34b-4e38-a50a-786d4ab08737",
+  "entityType" : "Form",
+  "type" : "ViewFilter",
+  "executionOrder" : 100.0,
+  "data" : { },
+  "name" : "JSS Sickle Cell Screening Registration View Filter",
+  "uuid" : "4a329f64-e131-4946-9b94-d2f988cc45be",
+  "fnName" : "SickleCellRegistrationViewHandlerJSS"
+}

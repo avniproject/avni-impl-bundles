@@ -1,0 +1,8 @@
+{
+  "name" : "Base screening Encounter Cancellation (voided~435)",
+  "uuid" : "4a4729bd-86d9-4c4b-a33c-e104828f87ff",
+  "formType" : "ProgramEncounterCancellation",
+  "formElementGroups" : [ ],
+  "decisionConcepts" : [ ],
+  "voided" : true
+}

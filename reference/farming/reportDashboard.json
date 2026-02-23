@@ -1,0 +1,284 @@
+[ {
+  "uuid" : "c4d3bc0a-027e-4a6a-87dd-85e5b7285523",
+  "id" : 1632,
+  "name" : "Default Dashboard",
+  "sections" : [ {
+    "uuid" : "2ce712c2-3fa3-4ca4-9703-95766ef512c2",
+    "id" : 3274,
+    "name" : "Registration Overview",
+    "description" : "",
+    "viewType" : "Tile",
+    "displayOrder" : 3.0,
+    "dashboardUUID" : "c4d3bc0a-027e-4a6a-87dd-85e5b7285523",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "e02a68ed-c02b-4cba-a5b5-6a5c71ab5eb8",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "2ce712c2-3fa3-4ca4-9703-95766ef512c2",
+      "reportCardUUID" : "a1673f8a-c394-4bcf-8b6f-63d83a5443e2",
+      "voided" : false
+    } ],
+    "voided" : false
+  }, {
+    "uuid" : "fb302038-25a1-4cd6-9f56-80ef67b21103",
+    "id" : 3276,
+    "name" : "Recent Statistics",
+    "description" : "",
+    "viewType" : "Tile",
+    "displayOrder" : 2.0,
+    "dashboardUUID" : "c4d3bc0a-027e-4a6a-87dd-85e5b7285523",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "383b8df8-93d8-43d9-bc96-545e1176fe63",
+      "displayOrder" : 2.0,
+      "dashboardSectionUUID" : "fb302038-25a1-4cd6-9f56-80ef67b21103",
+      "reportCardUUID" : "e1036b69-df46-4351-9916-10cd4cfcb6bd",
+      "voided" : false
+    }, {
+      "uuid" : "8afecd6c-741c-4871-86f1-bce171f8bfd8",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "fb302038-25a1-4cd6-9f56-80ef67b21103",
+      "reportCardUUID" : "f366f35a-5c4f-4ff7-b510-2dc9f5f88847",
+      "voided" : false
+    }, {
+      "uuid" : "9fb198b6-ae10-4c3f-a8e6-652b7d1b7e9c",
+      "displayOrder" : 3.0,
+      "dashboardSectionUUID" : "fb302038-25a1-4cd6-9f56-80ef67b21103",
+      "reportCardUUID" : "dd961ee1-9d4e-4ec9-99f0-99b36672be7c",
+      "voided" : false
+    } ],
+    "voided" : false
+  }, {
+    "uuid" : "741711ef-df17-4884-8928-20dee701479e",
+    "id" : 3275,
+    "name" : "Visit Details",
+    "description" : "",
+    "viewType" : "Tile",
+    "displayOrder" : 1.0,
+    "dashboardUUID" : "c4d3bc0a-027e-4a6a-87dd-85e5b7285523",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "4dff9285-88b3-43de-a90b-9823ab32e433",
+      "displayOrder" : 2.0,
+      "dashboardSectionUUID" : "741711ef-df17-4884-8928-20dee701479e",
+      "reportCardUUID" : "85ce7239-e8b5-4e57-b07d-66c18cee47b2",
+      "voided" : false
+    }, {
+      "uuid" : "4d139c45-1854-46ec-ad80-40725f7b9b8a",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "741711ef-df17-4884-8928-20dee701479e",
+      "reportCardUUID" : "6085c2f4-52e7-4b08-85b6-d6b2612b4cf5",
+      "voided" : false
+    } ],
+    "voided" : false
+  } ],
+  "filters" : [ {
+    "uuid" : "20367018-a168-43ff-a28f-64cd46ad3e2c",
+    "id" : 1848,
+    "name" : "Subject Type",
+    "filterConfig" : {
+      "type" : "SubjectType",
+      "subjectTypeUUID" : null,
+      "widget" : null,
+      "groupSubjectTypeFilter" : null,
+      "observationBasedFilter" : null
+    },
+    "voided" : false
+  }, {
+    "uuid" : "efea5b8d-d621-47d0-a02c-c9b1a667b680",
+    "id" : 1847,
+    "name" : "As On Date",
+    "filterConfig" : {
+      "type" : "AsOnDate",
+      "subjectTypeUUID" : null,
+      "widget" : null,
+      "groupSubjectTypeFilter" : null,
+      "observationBasedFilter" : null
+    },
+    "voided" : false
+  } ],
+  "voided" : false
+}, {
+  "uuid" : "93f9e8ab-af6b-4f05-b156-e96aa6e6091a",
+  "id" : 1633,
+  "name" : "Registration",
+  "description" : "",
+  "sections" : [ {
+    "uuid" : "75fdc83f-e976-453b-bc1c-fa5954156751",
+    "id" : 3277,
+    "name" : "Overview",
+    "description" : "",
+    "viewType" : "Tile",
+    "displayOrder" : 100.0,
+    "dashboardUUID" : "93f9e8ab-af6b-4f05-b156-e96aa6e6091a",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "08df3a8c-c35c-41c3-98fe-4bf2d866b732",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "75fdc83f-e976-453b-bc1c-fa5954156751",
+      "reportCardUUID" : "74cb65d7-b3b7-4886-8338-991edbf68309",
+      "voided" : false
+    } ],
+    "voided" : false
+  } ],
+  "filters" : [ ],
+  "voided" : false
+}, {
+  "uuid" : "670f4b89-ea61-43a6-9d83-3f999dbea586",
+  "id" : 1634,
+  "name" : "CSA Program",
+  "description" : "",
+  "sections" : [ {
+    "uuid" : "a5325d00-e56d-419a-9bc7-63f7e6d9d3f9",
+    "id" : 3280,
+    "name" : "Overdue",
+    "description" : "",
+    "viewType" : "Tile",
+    "displayOrder" : 100.0,
+    "dashboardUUID" : "670f4b89-ea61-43a6-9d83-3f999dbea586",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "ba4367f1-71b0-4d81-ab4e-7c995e8b81b2",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "a5325d00-e56d-419a-9bc7-63f7e6d9d3f9",
+      "reportCardUUID" : "b4d65a18-539b-46d4-aa20-bc1953681817",
+      "voided" : false
+    } ],
+    "voided" : false
+  }, {
+    "uuid" : "16476fa0-63ac-4b74-af4d-f848cf8ca9e6",
+    "id" : 3278,
+    "name" : "Farmer Type",
+    "description" : "",
+    "viewType" : "Tile",
+    "displayOrder" : 100.0,
+    "dashboardUUID" : "670f4b89-ea61-43a6-9d83-3f999dbea586",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "be2e60e0-a991-4ae1-a0fc-028c3c77d344",
+      "displayOrder" : 3.0,
+      "dashboardSectionUUID" : "16476fa0-63ac-4b74-af4d-f848cf8ca9e6",
+      "reportCardUUID" : "54290fd5-c1be-4af6-a880-b72c944e76e5",
+      "voided" : false
+    }, {
+      "uuid" : "37b52333-adaa-41c6-9c7f-f3173e64aabb",
+      "displayOrder" : 2.0,
+      "dashboardSectionUUID" : "16476fa0-63ac-4b74-af4d-f848cf8ca9e6",
+      "reportCardUUID" : "f5746709-1aaa-4245-9e28-2ab37a142a2e",
+      "voided" : false
+    }, {
+      "uuid" : "46578123-abc1-469d-9a51-3e2d86a46863",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "16476fa0-63ac-4b74-af4d-f848cf8ca9e6",
+      "reportCardUUID" : "40affe7e-cc59-4106-b562-ca2254425f7f",
+      "voided" : false
+    } ],
+    "voided" : false
+  }, {
+    "uuid" : "88a00027-eaa4-4d88-aad1-5bd44025a028",
+    "id" : 3279,
+    "name" : "Crop Type",
+    "description" : "",
+    "viewType" : "Tile",
+    "displayOrder" : 100.0,
+    "dashboardUUID" : "670f4b89-ea61-43a6-9d83-3f999dbea586",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "dea45dbd-3e03-47f5-afa2-113a4011c9d0",
+      "displayOrder" : -1.0,
+      "dashboardSectionUUID" : "88a00027-eaa4-4d88-aad1-5bd44025a028",
+      "reportCardUUID" : "40affe7e-cc59-4106-b562-ca2254425f7f",
+      "voided" : true
+    }, {
+      "uuid" : "e620b01d-b90e-4f72-9cf2-ebcecc0808d4",
+      "displayOrder" : 4.0,
+      "dashboardSectionUUID" : "88a00027-eaa4-4d88-aad1-5bd44025a028",
+      "reportCardUUID" : "613c648c-82f9-47e4-bfd6-027e5bd20ee8",
+      "voided" : false
+    }, {
+      "uuid" : "a0a79919-c978-4df4-8b16-f65d740953f7",
+      "displayOrder" : 3.0,
+      "dashboardSectionUUID" : "88a00027-eaa4-4d88-aad1-5bd44025a028",
+      "reportCardUUID" : "5be4675d-d131-4f63-8dfe-5c7416cf4d36",
+      "voided" : false
+    }, {
+      "uuid" : "51c1dfd0-3e7d-4ea4-9ff0-b7621c90bb34",
+      "displayOrder" : 2.0,
+      "dashboardSectionUUID" : "88a00027-eaa4-4d88-aad1-5bd44025a028",
+      "reportCardUUID" : "f8194f12-f8b3-4a39-905f-947c6ea3463c",
+      "voided" : false
+    }, {
+      "uuid" : "774cbc72-fea9-4816-9696-0720dc2f2324",
+      "displayOrder" : -1.0,
+      "dashboardSectionUUID" : "88a00027-eaa4-4d88-aad1-5bd44025a028",
+      "reportCardUUID" : "613c648c-82f9-47e4-bfd6-027e5bd20ee8",
+      "voided" : true
+    }, {
+      "uuid" : "d1afbfa4-8cc0-4fe5-8e80-a1eeb2232055",
+      "displayOrder" : -1.0,
+      "dashboardSectionUUID" : "88a00027-eaa4-4d88-aad1-5bd44025a028",
+      "reportCardUUID" : "54290fd5-c1be-4af6-a880-b72c944e76e5",
+      "voided" : true
+    }, {
+      "uuid" : "dcf8d3e8-026d-438f-8412-a063497fdfe0",
+      "displayOrder" : -1.0,
+      "dashboardSectionUUID" : "88a00027-eaa4-4d88-aad1-5bd44025a028",
+      "reportCardUUID" : "f5746709-1aaa-4245-9e28-2ab37a142a2e",
+      "voided" : true
+    } ],
+    "voided" : false
+  } ],
+  "filters" : [ ],
+  "voided" : false
+}, {
+  "uuid" : "cf273198-d8e4-43cd-aaee-39f9e4989ebb",
+  "id" : 1635,
+  "name" : "Hoticulture Program",
+  "description" : "",
+  "sections" : [ {
+    "uuid" : "b45141cb-9e93-423a-9cb5-876327ecd504",
+    "id" : 3281,
+    "name" : "Enrollment",
+    "description" : "",
+    "viewType" : "Tile",
+    "displayOrder" : 100.0,
+    "dashboardUUID" : "cf273198-d8e4-43cd-aaee-39f9e4989ebb",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "98c37923-75f8-4544-bbee-78617528e2fa",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "b45141cb-9e93-423a-9cb5-876327ecd504",
+      "reportCardUUID" : "cabdf2c4-ca79-4214-aeca-994287b5f599",
+      "voided" : false
+    }, {
+      "uuid" : "0eca9ba6-4ed1-4ce2-b071-133cf1196e09",
+      "displayOrder" : 2.0,
+      "dashboardSectionUUID" : "b45141cb-9e93-423a-9cb5-876327ecd504",
+      "reportCardUUID" : "028a7cd1-6dc9-4190-82f2-7acffc01e0e9",
+      "voided" : false
+    } ],
+    "voided" : false
+  }, {
+    "uuid" : "3335b658-5f83-40a9-abeb-abc1379a8d63",
+    "id" : 3282,
+    "name" : "Overdue",
+    "description" : "",
+    "viewType" : "Tile",
+    "displayOrder" : 100.0,
+    "dashboardUUID" : "cf273198-d8e4-43cd-aaee-39f9e4989ebb",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "2e5e8802-6286-424e-b828-935451e0dbdf",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "3335b658-5f83-40a9-abeb-abc1379a8d63",
+      "reportCardUUID" : "13158182-3b9c-4904-8a6c-d79ec000025b",
+      "voided" : false
+    }, {
+      "uuid" : "4e9211b9-b24a-4494-98a0-3f0f354aadbe",
+      "displayOrder" : 3.0,
+      "dashboardSectionUUID" : "3335b658-5f83-40a9-abeb-abc1379a8d63",
+      "reportCardUUID" : "9f3e3fd2-47c0-47cd-a7fb-15dcc3ee7b9e",
+      "voided" : false
+    }, {
+      "uuid" : "d6647a1f-dd8c-4f10-a56e-11885076e140",
+      "displayOrder" : 2.0,
+      "dashboardSectionUUID" : "3335b658-5f83-40a9-abeb-abc1379a8d63",
+      "reportCardUUID" : "c645f1c7-7a3e-48b5-b82e-6f5a4f3cf14e",
+      "voided" : false
+    } ],
+    "voided" : false
+  } ],
+  "filters" : [ ],
+  "voided" : false
+} ]

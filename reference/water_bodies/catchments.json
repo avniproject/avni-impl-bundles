@@ -1,0 +1,17 @@
+{
+  "catchments" : [ {
+    "name" : "Maharashtra Water Bodies",
+    "uuid" : "39210255-fc95-47c6-824d-50b58b23c5a9",
+    "locations" : [ {
+      "uuid" : "05520dcf-0801-459d-ae64-86d843e0875d"
+    } ],
+    "voided" : false
+  }, {
+    "name" : "Karnataka Water Bodies",
+    "uuid" : "b6113bdc-afaa-4b30-b6d4-fb4b069fc477",
+    "locations" : [ {
+      "uuid" : "3596a846-d8e3-4820-bbee-1cc68b857882"
+    } ],
+    "voided" : false
+  } ]
+}

@@ -1,0 +1,106 @@
+{
+  "name" : "Visit Cancel Form",
+  "uuid" : "bcf1ca63-5da9-418b-b148-fc492f343f9d",
+  "formType" : "ProgramEncounterCancellation",
+  "formElementGroups" : [ {
+    "uuid" : "29185d22-abe2-47c6-826f-545454ab165f",
+    "name" : "General",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Reason of Cancel",
+      "uuid" : "7d50b83e-a64b-4546-a4ca-3cce5eccb699",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Reason of cancelation of visit",
+        "uuid" : "0aeb78e6-e839-4299-8488-39e6df71e6ce",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Visit not required",
+          "uuid" : "8620595b-be67-4b16-89a7-79233d8e705c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Individual not available during visit period",
+          "uuid" : "5fa214ff-cbb8-4f5b-971a-e88266eae353",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Duplicate Visit",
+          "uuid" : "ad046ac1-a7a4-4a18-92ec-97194789e76f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Other Reason",
+      "uuid" : "67c60516-9a98-4221-9c47-fc8b31295746",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other reason for visit cancellation",
+        "uuid" : "83bd8146-2011-4a6e-8da1-327526740012",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInCancelEncounter(\"0aeb78e6-e839-4299-8488-39e6df71e6ce\").containsAnswerConceptName(\"05ea583c-51d2-412d-ad00-06c432ffe538\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "cancelEncounter",
+                "conceptName" : "Reason of cancelation of visit",
+                "conceptUuid" : "0aeb78e6-e839-4299-8488-39e6df71e6ce",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "05ea583c-51d2-412d-ad00-06c432ffe538" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "General"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({programEncounter});\n    const ruleCondition = new imports.rulesConfig.RuleCondition({programEncounter});\n\n    const isLmpPresent = ruleCondition.when.valueInEnrolment('Last menstrual period').defined.matches();\n\n    const hasDelivery = programEncounter.programEnrolment.encounters.some(encounter =>\n        encounter.encounterType.name === \"Delivery Encounter\" &&\n        encounter.encounterDateTime &&\n        !encounter.voided &&\n        !encounter.cancelDateTime\n    );\n\n    const encounterType = programEncounter.encounterType.name;\n    \n    if (!hasDelivery && encounterType === \"High Risk Followups\") {\n        scheduleBuilder.add({\n            name: \"MH High Risk Follow-up\",\n            encounterType: \"High Risk Followups\",\n            earliestDate: moment(programEncounter.earliestVisitDateTime).add(30, 'days').toDate(),\n            maxDate: moment(programEncounter.earliestVisitDateTime).add(37, 'days').toDate()\n        });\n    }\n\n    if (isLmpPresent && !hasDelivery && encounterType === \"ANC Follow-up Visit\") {\n        const lmpDate = moment(programEncounter.findObservationInEntireEnrolment('Last menstrual period').getValue());\n        const trimesterOfRegistration = programEncounter.getObservationReadableValue('Trimester of Registration in govt ANC program');\n        const currentEncounterName = programEncounter.name;\n        const ancSchedules = [\n            {current: \"ANC Follow-up Visit 1\", next: \"ANC Follow-up Visit 2\", days: 175, overdue: 189},\n            {current: \"ANC Follow-up Visit 2\", next: \"ANC Follow-up Visit 3\", days: 235, overdue: 250},\n            {current: \"ANC Follow-up Visit 3\", next: \"ANC Follow-up Visit 4\", days: 260, overdue: 275},\n        ];\n        const nextVisit = ancSchedules.find(visit => visit.current === currentEncounterName);\n        if (nextVisit) {\n            scheduleBuilder.add({\n                name: nextVisit.next,\n                encounterType: \"ANC Follow-up Visit\",\n                earliestDate: lmpDate.clone().add(nextVisit.days, 'days').toDate(),\n                maxDate: lmpDate.clone().add(nextVisit.overdue, 'days').toDate()\n            });\n        }\n        if (currentEncounterName === \"ANC Follow-up Visit 3\") {\n            scheduleBuilder.add({\n                name: \"Delivery Encounter\",\n                encounterType: \"Delivery Encounter\",\n                earliestDate: lmpDate.clone().add(250, 'days').toDate(),\n                maxDate: lmpDate.clone().add(280, 'days').toDate()\n            });\n        }\n    }\n\n    return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

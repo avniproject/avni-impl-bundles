@@ -1,0 +1,45 @@
+[ {
+  "uuid" : "e0dc696b-bd64-4aae-ab80-4d909ac95f8d",
+  "voided" : false,
+  "dashboardUUID" : "726853d3-c8de-48c7-936c-ab8a3e174d5a",
+  "groupUUID" : "5e4a2b89-6f41-4bb0-95f5-3122d83bdec7",
+  "groupName" : "Project Leads (voided~1906)",
+  "dashboardName" : "Approval",
+  "dashboardDescription" : "Standard",
+  "groupOneOfTheDefaultGroups" : false,
+  "primaryDashboard" : false,
+  "secondaryDashboard" : false
+}, {
+  "uuid" : "a7186058-81d6-4155-b279-1b5c62f07d9e",
+  "voided" : false,
+  "dashboardUUID" : "726853d3-c8de-48c7-936c-ab8a3e174d5a",
+  "groupUUID" : "f0661aac-03b5-477b-9122-54af5d235475",
+  "groupName" : "Project Supervisors",
+  "dashboardName" : "Approval",
+  "dashboardDescription" : "Standard",
+  "groupOneOfTheDefaultGroups" : false,
+  "primaryDashboard" : false,
+  "secondaryDashboard" : false
+}, {
+  "uuid" : "d1e7b115-c661-4570-b852-b3d08ead08b7",
+  "voided" : false,
+  "dashboardUUID" : "726853d3-c8de-48c7-936c-ab8a3e174d5a",
+  "groupUUID" : "bef0419b-47ed-430c-a646-8bd5d30f901f",
+  "groupName" : "Everyone",
+  "dashboardName" : "Approval",
+  "dashboardDescription" : "Standard",
+  "groupOneOfTheDefaultGroups" : true,
+  "primaryDashboard" : false,
+  "secondaryDashboard" : false
+}, {
+  "uuid" : "3b0c722a-0c91-4a5f-b02a-db65ba38c629",
+  "voided" : false,
+  "dashboardUUID" : "726853d3-c8de-48c7-936c-ab8a3e174d5a",
+  "groupUUID" : "944cbe12-5643-45e9-8e97-c7d2f9729272",
+  "groupName" : "Primary Users",
+  "dashboardName" : "Approval",
+  "dashboardDescription" : "Standard",
+  "groupOneOfTheDefaultGroups" : false,
+  "primaryDashboard" : true,
+  "secondaryDashboard" : false
+} ]

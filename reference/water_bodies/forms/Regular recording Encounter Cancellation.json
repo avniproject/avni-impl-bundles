@@ -1,0 +1,7 @@
+{
+  "name" : "Regular recording Encounter Cancellation",
+  "uuid" : "1e3f09a7-1a7b-411c-93a1-f92693e90fee",
+  "formType" : "IndividualEncounterCancellation",
+  "formElementGroups" : [ ],
+  "decisionConcepts" : [ ]
+}

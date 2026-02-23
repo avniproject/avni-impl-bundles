@@ -1,0 +1,7 @@
+{
+  "name" : "Intercrop Encounter Cancellation",
+  "uuid" : "e86ebe0c-adf8-4a57-bad8-2214fa292cd2",
+  "formType" : "ProgramEncounterCancellation",
+  "formElementGroups" : [ ],
+  "decisionConcepts" : [ ]
+}

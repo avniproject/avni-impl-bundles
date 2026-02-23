@@ -1,0 +1,34 @@
+{
+  "name" : "MH Enrollment Part - 2 Cancellation (voided~10686)",
+  "uuid" : "54d8c995-9ba5-4f54-b337-3fd44cf5bad3",
+  "formType" : "ProgramEncounterCancellation",
+  "formElementGroups" : [ {
+    "uuid" : "3abe71c5-1e68-45e2-8e93-93cc4f7574e4",
+    "name" : "Reason for cancellation",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Reason for cancellation of MH Enrollment part - 2 form",
+      "uuid" : "e94acd73-f280-49ec-a035-957e4ceac953",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Reason for cancellation of MH Enrollment part - 2 form",
+        "uuid" : "40695621-dabb-452d-8e1f-7de35d395c5f",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Reason for cancellation"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ],
+  "voided" : true
+}

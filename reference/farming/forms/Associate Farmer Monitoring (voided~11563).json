@@ -1,0 +1,189 @@
+{
+  "name" : "Associate Farmer Monitoring (voided~11563)",
+  "uuid" : "1931574d-9543-46cd-86e2-230dfacab875",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "3d64e4c0-e13a-4c2a-aa38-3e23cc856954",
+    "name" : "Basic",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Date of Visit",
+      "uuid" : "10067ad7-8bbf-4ab0-8588-7b06d54aed0c",
+      "keyValues" : [ {
+        "key" : "durationOptions",
+        "value" : [ "years", "months", "days" ]
+      }, {
+        "key" : "datePickerMode",
+        "value" : "calendar"
+      } ],
+      "concept" : {
+        "name" : "Date of Visit",
+        "uuid" : "7ba30eb7-e2e9-4660-a42d-95a54cfcdcbf",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "What Practices have been adopted",
+      "uuid" : "b1ae5f47-5e79-4a5a-b160-2e656bec5986",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Which of the nutrition management practices have been adopted",
+        "uuid" : "02e1a8e8-8188-4412-aace-fc0530c7ac6d",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "NPK Consotia applied",
+          "uuid" : "f0ad53d2-e37c-4e4b-b0de-30d9b9dd2ad2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Compost applied",
+          "uuid" : "474913be-4d7d-433e-adb0-1f5dbd203cd6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "FYM applied",
+          "uuid" : "d0b87a1d-b3dc-436f-a955-bc1dfd88b056",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "C",
+          "uuid" : "ef4cbc46-5790-40a6-9da6-89057c0d7fdc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ghanajeevamrit applied",
+          "uuid" : "ba360f1a-d875-456b-be19-d602a7366c17",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "A",
+          "uuid" : "1d5d2734-2b63-456a-bfd0-099b92f27017",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Vermicompost applied",
+          "uuid" : "c3ae8dee-2270-4a46-8061-b979077c1142",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "B",
+          "uuid" : "585462ab-97e3-4a79-8638-b26d21bc1c9e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jeevamrit sprayed",
+          "uuid" : "dfbc41b4-d758-4b3e-b67a-f46212f03085",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jeevamrit applied in soil",
+          "uuid" : "9c4f9b5f-9c5d-4f83-80e2-d35678640c7f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Bio Stimulant sprayed",
+          "uuid" : "3c8a18f6-922a-462f-b61a-b8a793f3a440",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Basic"
+  }, {
+    "uuid" : "6a037e26-c85c-4044-bb5d-5c0cce448816",
+    "name" : "Integrated Pest Management (IPM)",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Have you adopted any improved practice for Pest & Weed Management?",
+      "uuid" : "c68a4d18-b169-43ec-bedb-78c8f065b786",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Have you adopted any improved practice for Pest & Weed Management?",
+        "uuid" : "f5dbd24e-10d7-4b2c-8065-811142afac85",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "yes",
+          "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "no",
+          "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Integrated Pest Management (IPM)"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ],
+  "voided" : true
+}

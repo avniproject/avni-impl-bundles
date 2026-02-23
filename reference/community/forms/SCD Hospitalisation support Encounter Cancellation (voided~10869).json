@@ -1,0 +1,8 @@
+{
+  "name" : "SCD Hospitalisation support Encounter Cancellation (voided~10869)",
+  "uuid" : "58631e37-3c1d-4495-8130-a2f2ec73e914",
+  "formType" : "ProgramEncounterCancellation",
+  "formElementGroups" : [ ],
+  "decisionConcepts" : [ ],
+  "voided" : true
+}

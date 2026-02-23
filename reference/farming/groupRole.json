@@ -1,0 +1,45 @@
+[ {
+  "uuid" : "05cce4b3-f439-4302-9b20-bb5cd0f17543",
+  "groupSubjectTypeUUID" : "0659063b-6805-4789-b229-f0e12d9a95df",
+  "memberSubjectTypeUUID" : "28b51317-86e9-4b33-b70d-437c8d667f95",
+  "role" : "Head of household",
+  "subjectMemberName" : "Farmer",
+  "groupRoleUUID" : "05cce4b3-f439-4302-9b20-bb5cd0f17543",
+  "maximumNumberOfMembers" : 1,
+  "minimumNumberOfMembers" : 1,
+  "primary" : false,
+  "voided" : true
+}, {
+  "uuid" : "5264afc9-e682-4888-be1b-45e3611c9545",
+  "groupSubjectTypeUUID" : "0659063b-6805-4789-b229-f0e12d9a95df",
+  "memberSubjectTypeUUID" : "28b51317-86e9-4b33-b70d-437c8d667f95",
+  "role" : "Member",
+  "subjectMemberName" : "Farmer",
+  "groupRoleUUID" : "5264afc9-e682-4888-be1b-45e3611c9545",
+  "maximumNumberOfMembers" : 100,
+  "minimumNumberOfMembers" : 1,
+  "primary" : false,
+  "voided" : true
+}, {
+  "uuid" : "239d687b-27a7-4b08-a642-c0844292eb3b",
+  "groupSubjectTypeUUID" : "9046f644-37ac-4923-9dcb-453f6e50114d",
+  "memberSubjectTypeUUID" : "28b51317-86e9-4b33-b70d-437c8d667f95",
+  "role" : "Head of household",
+  "subjectMemberName" : "Farmer",
+  "groupRoleUUID" : "239d687b-27a7-4b08-a642-c0844292eb3b",
+  "maximumNumberOfMembers" : 1,
+  "minimumNumberOfMembers" : 1,
+  "primary" : false,
+  "voided" : true
+}, {
+  "uuid" : "9435896a-5178-4b24-a872-288c552d09e1",
+  "groupSubjectTypeUUID" : "9046f644-37ac-4923-9dcb-453f6e50114d",
+  "memberSubjectTypeUUID" : "28b51317-86e9-4b33-b70d-437c8d667f95",
+  "role" : "Member",
+  "subjectMemberName" : "Farmer",
+  "groupRoleUUID" : "9435896a-5178-4b24-a872-288c552d09e1",
+  "maximumNumberOfMembers" : 100,
+  "minimumNumberOfMembers" : 1,
+  "primary" : false,
+  "voided" : true
+} ]

@@ -1,0 +1,50 @@
+{
+  "name" : "Lab results entry Encounter Cancellation (voided~286)",
+  "uuid" : "39c6422a-0888-4797-ab49-e56508561c77",
+  "formType" : "ProgramEncounterCancellation",
+  "formElementGroups" : [ {
+    "uuid" : "7f85b6bd-b19d-4633-98a4-32e05e4a50c9",
+    "name" : "General",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Reason for Cancel",
+      "uuid" : "463def5b-d0e7-49ec-89ae-6847942200ec",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Reason of Cancel",
+        "uuid" : "6edec75b-d9a0-4dd9-8f6d-a208052d634e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Visit not Required",
+          "uuid" : "593ffe4c-b566-47cc-9a7b-47796ec0a5aa",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "General"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ],
+  "voided" : true
+}

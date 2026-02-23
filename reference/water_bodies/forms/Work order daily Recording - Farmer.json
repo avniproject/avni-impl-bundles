@@ -1,0 +1,358 @@
+{
+  "name" : "Work order daily Recording - Farmer",
+  "uuid" : "9049ec9f-c6e1-4975-9dba-80cfe5385892",
+  "formType" : "Encounter",
+  "formElementGroups" : [ {
+    "uuid" : "97ef5de8-90fa-4859-a329-6cffff22ba7e",
+    "name" : "Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Silt taken by",
+      "uuid" : "fe34baa9-abe5-42bc-9556-fb59d8178f7d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Silt taken by",
+        "uuid" : "54e7ad6d-f13c-4de4-a941-edcfc35a41fe",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Farmer",
+          "uuid" : "9c052913-2e30-40d3-a25b-f22c7ae81f38",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Gram Panchayat",
+          "uuid" : "e286903c-8c23-4d58-8439-0678c8b81cfc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "0a09f401-14e4-41bb-a1a6-c25dbc5e0733",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n \n  const locationProperty = encounter.individual.lowestAddressLevel.locationProperties;\n  \n  if(!_.isEqual(locationProperty,undefined)){  \n   let isFarmerInvolvedNO = -1;\n   const isFarmerData = locationProperty\n            .filter((e) => e.concept.name === 'Farmer involvement');  \n  \n      if(isFarmerData.length > 0 ){\n        const isFarmerInvolved = isFarmerData[0].valueJSON;  \n       \n        isFarmerInvolvedNO = isFarmerInvolved.search(\"ad0cc7f5-53fd-4298-8ff2-06d306e242ba\");\n      }    \n  const showCondition = isFarmerInvolvedNO != -1;\n  statusBuilder.show().whenItem(showCondition).is.truthy;   \n  \n  }else {  \n     statusBuilder.show().whenItem(false).is.truthy;\n  }  \n   return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Specify, other who is taking silt",
+      "uuid" : "2e9eabcc-f16b-43e8-b6bf-ab0aa6383e14",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other person taking silt",
+        "uuid" : "2e8150be-19af-4b73-a96d-921ae7fb453d",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Silt taken by\").containsAnswerConceptName('Other');\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Farmer",
+      "uuid" : "e33cd126-2af0-4330-9a35-1c454167e0b7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Farmer/Beneficiary",
+        "uuid" : "ba36fe5a-a3ef-4c79-a4d4-bc9c6a6c8532",
+        "dataType" : "Subject",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ {
+          "key" : "subjectTypeUUID",
+          "value" : "73271784-512d-4435-8dc8-0f102b99d682"
+        } ],
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : " 'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  const individualService = params.services.individualService;\n  \n  const subjects = individualService.getSubjectsInLocation(encounter.individual.lowestAddressLevel, 'Farmer');\n  const approvedSubjects = subjects.filter((e) => e.latestEntityApprovalStatus.approvalStatus.status === 'Approved');\n  \n  const uuids = _.map(approvedSubjects, ({uuid}) => uuid);\n  statusBuilder.showAnswers(...uuids).when.valueInEncounter(\"Silt taken by\").containsAnswerConceptName('Farmer').or.when.valueInEncounter(\"Silt taken by\").is.notDefined;\n  \n  let selectedSubject = encounter.getObservationReadableValue('Farmer/Beneficiary');\n  \n  if(selectedSubject != undefined){\n  let showCondition = !_.includes(uuids,selectedSubject);\n  statusBuilder.validationError(\"Selected farmer registration is not approved\").whenItem(showCondition).is.truthy;\n  }\n    \n // statusBuilder.show().when.valueInEncounter(\"Silt taken //by\").containsAnswerConceptName('Farmer').not;\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Excavating Machine",
+      "uuid" : "df232024-5263-4270-9f9f-4b6b1761fbf6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Excavating Machine",
+        "uuid" : "14b70adc-847d-4b5e-808f-d6d24b4b3279",
+        "dataType" : "Subject",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ {
+          "key" : "subjectTypeUUID",
+          "value" : "561ddbf6-3a6d-4088-a369-514dcfc44f19"
+        } ],
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : " 'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  const individualService = params.services.individualService;\n  \n  const subjects = individualService.getSubjectsInLocation(encounter.individual.lowestAddressLevel, 'Excavating Machine');\n  const approvedSubjects = subjects.filter((e) => e.latestEntityApprovalStatus.approvalStatus.status === 'Approved');\n \n  \n  const uuids = _.map(approvedSubjects, ({uuid}) => uuid);\n  statusBuilder.showAnswers(...uuids);\n  \n  let selectedSubject = encounter.getObservationReadableValue('Excavating Machine');\n  \n  if(selectedSubject != undefined){\n  let showCondition = !_.includes(uuids,selectedSubject);\n  statusBuilder.validationError(\"Selected machine registration is not approved\").whenItem(showCondition).is.truthy;\n  }\n  \n    \n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Number of trolleys carted",
+      "uuid" : "8135ca39-7ca5-44d2-94a9-a3f83441d714",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of trolleys carted",
+        "uuid" : "584fe343-02f0-4977-9034-5fc87d40bbf1",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "highAbsolute" : 999.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Capacity of trolleys in cu.m.",
+      "uuid" : "48cfa590-44da-4cfa-8ba3-2881dd35548a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Capacity of trolleys in cu.m.",
+        "uuid" : "62379fbe-8615-4e93-b194-ce1a1dbfbffd",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "2.8",
+          "uuid" : "69e6a155-6bb4-4cf9-8dec-0b8057f1931f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.2",
+          "uuid" : "e8306ab5-2c22-4565-b1a9-5a7491f97c8c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.5",
+          "uuid" : "248a4fa2-7d0c-4b14-8191-3ec9e787cfc8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3.5",
+          "uuid" : "669cd23d-50b2-443c-8490-68525ec324ef",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of trolleys carted\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Number of hyvas/dumper carted",
+      "uuid" : "913d8495-068a-4fe6-a579-f686c1142527",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of hyvas/dumper carted",
+        "uuid" : "0d1ed0d7-2c6b-419a-afb4-40b2550db7f0",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "highAbsolute" : 999.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Capacity of Hyva/Dumper in cu.m.",
+      "uuid" : "c2c9fe6d-362b-4da8-afdc-8dc639cf6962",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Capacity of Hyva/Dumper in cu.m.",
+        "uuid" : "b1634598-6bea-4a6d-af7e-9808a751530b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "16",
+          "uuid" : "19286f0a-957c-4674-b9c9-42ac6c2476ce",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "18",
+          "uuid" : "5404d563-5b50-47ae-a3f1-49c71496b3a2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "20",
+          "uuid" : "f6608f94-3bff-4a6d-a38b-ef14b1e40fa1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "14",
+          "uuid" : "7c956ebb-acc0-41a0-afdc-c810ddba485a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "25",
+          "uuid" : "68211d18-45fe-4053-9639-9480df9de238",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of hyvas/dumper carted\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Total Silt carted",
+      "uuid" : "d6807d1b-a3e3-410e-9a8f-076068eee7b8",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Total Silt carted",
+        "uuid" : "b679d7de-ef1e-477f-907b-d2eb8a76cd63",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const encounter = params.entity;\n    const formElement = params.formElement;\n    let capacityOfTrolleys = 0;\n    let capacityOfHyva = 0;\n    let value = 0;\n    let numberOfTrolleys = encounter.getObservationReadableValue('Number of trolleys carted') ? encounter.getObservationReadableValue('Number of trolleys carted') : 0;\n    let numberOfHyvas = encounter.getObservationReadableValue('Number of hyvas/dumper carted') ? encounter.getObservationReadableValue('Number of hyvas/dumper carted') : 0;\n    if (numberOfTrolleys > 0)\n        capacityOfTrolleys = encounter.getObservationReadableValue('Capacity of trolleys in cu.m.');\n    if (numberOfHyvas > 0)\n        capacityOfHyva = encounter.getObservationReadableValue('Capacity of Hyva/Dumper in cu.m.');\n    value = (numberOfTrolleys * capacityOfTrolleys) + (numberOfHyvas * capacityOfHyva);\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, value.toFixed(2));\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Purpose of carting silt",
+      "uuid" : "674bf371-2aac-4cdd-8506-357cef2a957d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Purpose of carting silt",
+        "uuid" : "6771609d-e2c4-4b13-9d0e-2c0f364ea653",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Other",
+          "uuid" : "0a09f401-14e4-41bb-a1a6-c25dbc5e0733",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Road Construction",
+          "uuid" : "4e6f1ac9-bad1-40bb-afc9-1f70016d4fa2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Bund Making",
+          "uuid" : "a99feaf0-2807-427a-bc04-cc5fbd7a3e2e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Agriculture",
+          "uuid" : "50ef3b8e-78aa-4948-ae7d-eb8c0899e18e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Plot Leveling",
+          "uuid" : "15598f28-112d-43e6-b76d-86a2bae51fba",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n \n  const locationProperty = encounter.individual.lowestAddressLevel.locationProperties;\n  \n  if(!_.isEqual(locationProperty,undefined)){  \n   let isFarmerInvolvedNO = -1;\n   const isFarmerData = locationProperty\n            .filter((e) => e.concept.name === 'Farmer involvement');  \n  \n      if(isFarmerData.length > 0 ){\n        const isFarmerInvolved = isFarmerData[0].valueJSON;    \n        isFarmerInvolvedNO = isFarmerInvolved.search(\"ad0cc7f5-53fd-4298-8ff2-06d306e242ba\");\n      }    \n  const showCondition = isFarmerInvolvedNO != -1;\n  statusBuilder.show().whenItem(showCondition).is.truthy;   \n  \n  }else {  \n     statusBuilder.show().whenItem(false).is.truthy;\n  }  \n   return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Other purpose of carting silt",
+      "uuid" : "d799f45d-d6d5-4c44-ba15-74eba202407f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other purpose of carting silt",
+        "uuid" : "7ba0b900-67b0-4e80-a233-69fff7a5bc63",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Purpose of carting silt\").containsAnswerConceptName('Other');\n  return statusBuilder.build();\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Remarks",
+      "uuid" : "a6c1d88e-e0f4-4ba4-a91c-fd326566ae50",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Remarks",
+        "uuid" : "11e22c88-b032-45f9-a35c-49d38e793d09",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Details"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({ params, imports }) => {\n  const encounter = params.entity;\n  const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({\n    encounter\n  });\n  \n  let machine = encounter.getObservationReadableValue('Excavating Machine');\n  console.log('machine',machine);\n       \n  return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

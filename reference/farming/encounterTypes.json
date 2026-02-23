@@ -1,0 +1,81 @@
+[ {
+  "name" : "Crop Card",
+  "uuid" : "7e2ca43d-176e-4f51-b67b-76ae639e05f0",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Associate Farmer Monitoring (voided~3945)",
+  "uuid" : "8d38e41d-23e1-47d8-b33e-8e8c366a71b2",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false,
+  "voided" : true
+}, {
+  "name" : "Family Baseline (voided~4967)",
+  "uuid" : "72240767-c98a-4b82-8714-f7657ad12acd",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false,
+  "voided" : true
+}, {
+  "name" : "Survival Rate",
+  "uuid" : "31890b61-c64c-4390-b0a4-c7758e7a4b8d",
+  "entityEligibilityCheckRule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  return false;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Lead Farmer Onboarding",
+  "uuid" : "2454ff25-4d0d-4af2-abc3-2d2123ea8c0a",
+  "entityEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n    const individual = params.entity;\n    const moment = imports.moment;\n    let eligibility = true;\n    const leadFarmerUUID = \"87c7e983-93c8-4efe-be44-8a57534fce53\";\n\n    const activeProgramEnrolment = individual.enrolments\n        .filter((enrl) =>\n            enrl.program.name == 'CSA' &&\n            enrl.enrolmentDateTime != null &&\n            enrl.programExitDateTime == null &&\n            enrl.voided == false\n        )\n        .sort((a, b) => moment(b.enrolmentDateTime).diff(moment(a.enrolmentDateTime)));\n\n    if(activeProgramEnrolment.length == 0) {\n        return false;\n    }\n    \n    const latestEnrolment = activeProgramEnrolment[0];\n\n    const isLeadFarmer = latestEnrolment.getObservationValue(\"97f801a6-343b-4d03-a1d5-fc80c4e01035\") == leadFarmerUUID;\n    \n    eligibility = isLeadFarmer;\n    \n    return eligibility;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Associate Farmer Onboarding",
+  "uuid" : "cc78e94b-79e4-4bf4-b29a-c0bfb52221ea",
+  "entityEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n    const individual = params.entity;\n    const moment = imports.moment;\n    let eligibility = true;\n    const associateFarmerUUID = \"4110d321-2979-4f5f-8b85-e9da731cde35\";\n\n    const activeProgramEnrolment = individual.enrolments\n        .filter((enrl) =>\n            enrl.program.name == 'CSA' &&\n            enrl.enrolmentDateTime != null &&\n            enrl.programExitDateTime == null &&\n            enrl.voided == false\n        )\n        .sort((a, b) => moment(b.enrolmentDateTime).diff(moment(a.enrolmentDateTime)));\n\n    if(activeProgramEnrolment.length == 0) {\n        return false;\n    }\n    \n    const latestEnrolment = activeProgramEnrolment[0];\n\n    const isAssociateFarmer = latestEnrolment.getObservationValue(\"97f801a6-343b-4d03-a1d5-fc80c4e01035\") == associateFarmerUUID;\n    \n    eligibility = isAssociateFarmer;\n    \n    return eligibility;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Associate Farmer Monitoring",
+  "uuid" : "0acf5997-d04c-4a03-932a-89d52ed59562",
+  "entityEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n    const individual = params.entity;\n    const moment = imports.moment;\n    let eligibility = true;\n    const associateFarmerUUID = \"4110d321-2979-4f5f-8b85-e9da731cde35\";\n\n    const activeProgramEnrolment = individual.enrolments\n        .filter((enrl) =>\n            enrl.program.name == 'CSA' &&\n            enrl.enrolmentDateTime != null &&\n            enrl.programExitDateTime == null &&\n            enrl.voided == false\n        )\n        .sort((a, b) => moment(b.enrolmentDateTime).diff(moment(a.enrolmentDateTime)));\n\n    if(activeProgramEnrolment.length == 0) {\n        return false;\n    }\n    \n    const latestEnrolment = activeProgramEnrolment[0];\n\n    const isAssociateFarmer = latestEnrolment.getObservationValue(\"97f801a6-343b-4d03-a1d5-fc80c4e01035\") == associateFarmerUUID;\n    \n    eligibility = isAssociateFarmer;\n    \n    return eligibility;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Intercrop",
+  "uuid" : "25e83532-34c1-4312-a52a-68e4436ec14c",
+  "entityEligibilityCheckRule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n    const individual = params.entity;\n    const moment = imports.moment;\n\n    const activeProgramEnrolment = individual.enrolments\n        .filter((enrl) =>\n            enrl.program.name == 'Horticulture / Orchard Enrolment' &&\n            enrl.enrolmentDateTime != null &&\n            enrl.programExitDateTime == null &&\n            enrl.voided == false\n        )\n        .sort((a, b) => moment(b.enrolmentDateTime).diff(moment(a.enrolmentDateTime)));\n\n    if(activeProgramEnrolment.length == 0) {\n        return false;\n    }\n    \n    const latestEnrolment = activeProgramEnrolment[0];\n\n    const enrolmentDateTime = latestEnrolment.enrolmentDateTime\n    const today = moment().startOf('day');\n    const threeYearsFromEnrolmentDate = moment(enrolmentDateTime).add(3, 'years').startOf('day');\n\n    if(today.isSameOrBefore(threeYearsFromEnrolmentDate)) {\n        return true;\n    }\n\n    return false;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Family Baseline",
+  "uuid" : "d9838ed3-a4b6-4062-acf7-e2bdc757567b",
+  "entityEligibilityCheckRule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  return false;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Orchard Management",
+  "uuid" : "1f68e501-6880-4074-8518-131d3236b5ef",
+  "entityEligibilityCheckRule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  return false;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Lead Farmer Monitoring",
+  "uuid" : "b6e23e42-774b-4248-95c9-ca251df0b495",
+  "entityEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n    const individual = params.entity;\n    const moment = imports.moment;\n    let eligibility = true;\n    const leadFarmerUUID = \"87c7e983-93c8-4efe-be44-8a57534fce53\";\n\n    const activeProgramEnrolment = individual.enrolments\n        .filter((enrl) =>\n            enrl.program.name == 'CSA' &&\n            enrl.enrolmentDateTime != null &&\n            enrl.programExitDateTime == null &&\n            enrl.voided == false\n        )\n        .sort((a, b) => moment(b.enrolmentDateTime).diff(moment(a.enrolmentDateTime)));\n\n    if(activeProgramEnrolment.length == 0) {\n        return false;\n    }\n    \n    const latestEnrolment = activeProgramEnrolment[0];\n\n    const isLeadFarmer = latestEnrolment.getObservationValue(\"97f801a6-343b-4d03-a1d5-fc80c4e01035\") == leadFarmerUUID;\n    \n    eligibility = isLeadFarmer;\n    \n    return eligibility;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Production Data",
+  "uuid" : "f00c4ad5-f04f-44c4-ab66-8e807e42c128",
+  "entityEligibilityCheckRule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n    const individual = params.entity;\n    const moment = imports.moment;\n\n    const activeProgramEnrolment = individual.enrolments\n        .filter((enrl) =>\n            enrl.program.name == 'Horticulture / Orchard Enrolment' &&\n            enrl.enrolmentDateTime != null &&\n            enrl.programExitDateTime == null &&\n            enrl.voided == false\n        )\n        .sort((a, b) => moment(b.enrolmentDateTime).diff(moment(a.enrolmentDateTime)));\n\n    if(activeProgramEnrolment.length == 0) {\n        return false;\n    }\n    \n    const latestEnrolment = activeProgramEnrolment[0];\n\n    const enrolmentDateTime = latestEnrolment.enrolmentDateTime\n    const today = moment().startOf('day');\n    const threeYearsFromEnrolmentDate = moment(enrolmentDateTime).add(3, 'years').startOf('day');\n\n    if(today.isAfter(threeYearsFromEnrolmentDate)) {\n        return true;\n    }\n\n    return false;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Orchard Development",
+  "uuid" : "5ce8cc6e-8c50-49a6-9143-1a639baafab0",
+  "entityEligibilityCheckRule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n    const individual = params.entity;\n    const moment = imports.moment;\n\n    const activeProgramEnrolment = individual.enrolments\n        .filter((enrl) =>\n            enrl.program.name == 'Horticulture / Orchard Enrolment' &&\n            enrl.enrolmentDateTime != null &&\n            enrl.programExitDateTime == null &&\n            enrl.voided == false\n        )\n        .sort((a, b) => moment(b.enrolmentDateTime).diff(moment(a.enrolmentDateTime)));\n\n    if(activeProgramEnrolment.length == 0) {\n        return false;\n    }\n    \n    const latestEnrolment = activeProgramEnrolment[0];\n\n    const orchardDevelopmentEncounters = latestEnrolment.getEncountersOfType('Orchard Development');\n\n    if(orchardDevelopmentEncounters && orchardDevelopmentEncounters.length > 0) {\n\n        const firstEncounter = orchardDevelopmentEncounters[orchardDevelopmentEncounters.length - 1];\n        const baseDate = firstEncounter.earliestVisitDateTime || firstEncounter.encounterDateTime;\n    \n        const baseYear = moment(baseDate).year();\n\n        // Only For months April to June of the Enrolment Year\n        const todaysYear = moment().year();\n        const todaysMonth = moment().month() + 1;\n        const isAprilToJune = todaysMonth >= 4 && todaysMonth <= 6;\n        \n        if(todaysYear == baseYear && isAprilToJune) {\n            return true;\n        }\n    }\n\n    return false;\n};",
+  "active" : true,
+  "immutable" : true
+} ]

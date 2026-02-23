@@ -1,0 +1,293 @@
+{
+  "name" : "Lead Farmer Onboarding Encounter",
+  "uuid" : "cf87a9a3-ecf6-4d24-bd93-5bc6c622a295",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "2964cf89-4751-4603-898b-07f512c07947",
+    "name" : "Land Preparation",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Soil Testing",
+      "uuid" : "d7b8c932-e863-4fcb-a3ae-854b42865183",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Soil Testing",
+        "uuid" : "a1e5e646-a468-4efd-a44c-08ec749c8f9f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "no",
+          "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "yes",
+          "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Land Preparation",
+      "uuid" : "7f865b0a-0a65-4af8-9b97-3b4740ee895d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Land Preparation",
+        "uuid" : "43e9ea68-f1f8-4e64-bcbe-ab0911703c0f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "yes",
+          "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "no",
+          "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Land Preparation"
+  }, {
+    "uuid" : "7edad5a4-02a7-44c5-98e6-67998fee717b",
+    "name" : "Seed Management",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Variety name of the Main Crop",
+      "uuid" : "84140b5e-0280-4bb0-a9fb-2535f44ecd5c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Variety name of the Main Crop",
+        "uuid" : "d0bfa0a1-6255-45fa-82aa-6cf459c2773f",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Seed Quantity",
+      "uuid" : "a22c18a1-3625-42fd-b50d-cf73fdb81c41",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Seed Quantity",
+        "uuid" : "572c1184-b783-4b06-a902-e69356aec469",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.1,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Seed Management"
+  }, {
+    "uuid" : "98b7cf9e-828c-4b48-9814-df35e86c6a54",
+    "name" : "Sowing Management",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Any Seed management activities initiated?",
+      "uuid" : "e33070e5-c99b-4c99-8d91-45977ee061e4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Any Seed management activities initiated",
+        "uuid" : "8a8f035d-ea82-452b-9c27-d39dc0e3de86",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "yes",
+          "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "no",
+          "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "If, Please mention the adopted Seed management adopted",
+      "uuid" : "549a9a5a-d89a-4aa9-96a5-efdba078c690",
+      "keyValues" : [ {
+        "key" : "ExcludedAnswers",
+        "value" : [ "Seed Treatment," ]
+      } ],
+      "concept" : {
+        "name" : "If yes, Please mention the adopted Seed management adopted",
+        "uuid" : "2e4d7cec-a7db-43bf-910c-100ee1422888",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Seed Treatment",
+          "uuid" : "ca466c6b-d590-445a-b9d8-73f4e6506795",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Seed Treatment,",
+          "uuid" : "9bb0c791-450c-4eff-90a8-99068557b08c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Diversified Seed",
+          "uuid" : "6aad3208-d3db-45bd-9309-d609417723b9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "any sowing activities initiated?",
+      "uuid" : "75585622-2f48-4ab6-9ee5-7bd6c212b38d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Any sowing activities initiated",
+        "uuid" : "fa542295-5f83-4196-b338-b777616a5f30",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "yes",
+          "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "no",
+          "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Sowing Management"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

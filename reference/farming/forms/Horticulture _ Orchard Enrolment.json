@@ -1,0 +1,688 @@
+{
+  "name" : "Horticulture / Orchard Enrolment",
+  "uuid" : "de356a65-e026-46ec-b77a-e4cb39fa6efd",
+  "formType" : "ProgramEnrolment",
+  "formElementGroups" : [ {
+    "uuid" : "0333b905-9b88-4f88-a989-79a765899602",
+    "name" : "Orchard Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Name of the Fruit Plant",
+      "uuid" : "92675597-47b4-43cb-9967-177f68227efb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of the Fruit Plant",
+        "uuid" : "bfa64304-4a0a-4858-870e-c0ffc32e1297",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Sweet lime",
+          "uuid" : "6aff16d6-986b-4038-8f50-2e485d52d014",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jamun",
+          "uuid" : "8806cb63-8e00-4cd0-a88f-885b82e5a6ad",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Guava",
+          "uuid" : "5e2992ff-f428-4471-862f-6a664b66bbb6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mango",
+          "uuid" : "ac169e86-e440-4ead-bfe7-1dd82d3a04a0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lemon",
+          "uuid" : "9b930b80-67d6-43d4-ac48-83978a32f12d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Aonla",
+          "uuid" : "14454b33-7c48-4749-a276-2b07e29bec4f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Amla",
+          "uuid" : "fafe06ae-37bf-477b-bf10-419765907c66",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jackfruit",
+          "uuid" : "f43a9898-dd26-44b9-a60f-56044198de4b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ber",
+          "uuid" : "8d47b3de-50e3-4548-b061-4902834e9e91",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Name of the fruit plant",
+      "uuid" : "4e3d84fc-0521-4126-8eac-7e18863af819",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of the Fruit Plant",
+        "uuid" : "bfa64304-4a0a-4858-870e-c0ffc32e1297",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Sweet lime",
+          "uuid" : "6aff16d6-986b-4038-8f50-2e485d52d014",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jamun",
+          "uuid" : "8806cb63-8e00-4cd0-a88f-885b82e5a6ad",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Guava",
+          "uuid" : "5e2992ff-f428-4471-862f-6a664b66bbb6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mango",
+          "uuid" : "ac169e86-e440-4ead-bfe7-1dd82d3a04a0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lemon",
+          "uuid" : "9b930b80-67d6-43d4-ac48-83978a32f12d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Aonla",
+          "uuid" : "14454b33-7c48-4749-a276-2b07e29bec4f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Amla",
+          "uuid" : "fafe06ae-37bf-477b-bf10-419765907c66",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jackfruit",
+          "uuid" : "f43a9898-dd26-44b9-a60f-56044198de4b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ber",
+          "uuid" : "8d47b3de-50e3-4548-b061-4902834e9e91",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n    const enrolment = params.entity;\n    const questionGroupIndex = params.questionGroupIndex;\n    const formElement = params.formElement;\n    const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n\n    let allPlants = encounter.findGroupedObservation('Fruit plant list');\n    const answersToBeSkipped = [];\n    for (let index = 0; index < allDripItems.length; index++) {\n        let dripItem = allDripItems[index];\n        if (index !== questionGroupIndex) {\n            const answer = dripItem.findObservationByConceptUUID('Drip item details');\n            if (answer) {\n                answersToBeSkipped.push(answer.getReadableValue());\n            }\n        }\n    }\n    if (answersToBeSkipped.length > 0) {\n        statusBuilder.skipAnswers(...answersToBeSkipped);\n    }\n    return statusBuilder.build();\n};\n",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Fruit plant list",
+      "uuid" : "e51fc97f-ea69-47ee-8c48-64499462820f",
+      "keyValues" : [ {
+        "key" : "repeatable",
+        "value" : true
+      } ],
+      "concept" : {
+        "name" : "Fruit plant list",
+        "uuid" : "bd58a2c9-a8bd-4a67-836e-0a1cf5ecd53e",
+        "dataType" : "QuestionGroup",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "",
+      "mandatory" : false
+    }, {
+      "name" : "Total plantation Area",
+      "uuid" : "8411d7ae-70ba-4c71-ab5f-64790cfeb0ff",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total Plantation Area",
+        "uuid" : "efce9a2d-ba34-465b-b6d7-19e4286c6056",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Silt applied",
+      "uuid" : "54c2bff5-d9bf-4d5e-85f2-8ba9bdf03f08",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Silt applied",
+        "uuid" : "5e9a5834-b80b-418c-b4de-fa30f54d7992",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Name of the fruit plant planted",
+      "uuid" : "96a36e08-2f14-400d-b24e-2d2db9cd4453",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of the Fruit Plant",
+        "uuid" : "bfa64304-4a0a-4858-870e-c0ffc32e1297",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Sweet lime",
+          "uuid" : "6aff16d6-986b-4038-8f50-2e485d52d014",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jamun",
+          "uuid" : "8806cb63-8e00-4cd0-a88f-885b82e5a6ad",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Guava",
+          "uuid" : "5e2992ff-f428-4471-862f-6a664b66bbb6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mango",
+          "uuid" : "ac169e86-e440-4ead-bfe7-1dd82d3a04a0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lemon",
+          "uuid" : "9b930b80-67d6-43d4-ac48-83978a32f12d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Aonla",
+          "uuid" : "14454b33-7c48-4749-a276-2b07e29bec4f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Amla",
+          "uuid" : "fafe06ae-37bf-477b-bf10-419765907c66",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jackfruit",
+          "uuid" : "f43a9898-dd26-44b9-a60f-56044198de4b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ber",
+          "uuid" : "8d47b3de-50e3-4548-b061-4902834e9e91",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "",
+      "parentFormElementUuid" : "e51fc97f-ea69-47ee-8c48-64499462820f",
+      "mandatory" : true
+    }, {
+      "name" : "Other fruit plant, please specify",
+      "uuid" : "36d0e529-4168-4768-b815-cc8f87787e49",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other fruit plant",
+        "uuid" : "d48dc606-6120-4ddc-a114-6d088f34e762",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.questionGroupValueInEnrolment(\"bfa64304-4a0a-4858-870e-c0ffc32e1297\", \"bd58a2c9-a8bd-4a67-836e-0a1cf5ecd53e\", params.questionGroupIndex).containsAnswerConceptName(\"287164fa-3899-485f-9c1f-61401bc6359d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "questionGroupEnrolment",
+                "conceptName" : "Name of the Fruit Plant",
+                "conceptUuid" : "bfa64304-4a0a-4858-870e-c0ffc32e1297",
+                "conceptDataType" : "Coded",
+                "parentConceptUuid" : "bd58a2c9-a8bd-4a67-836e-0a1cf5ecd53e"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "287164fa-3899-485f-9c1f-61401bc6359d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "parentFormElementUuid" : "e51fc97f-ea69-47ee-8c48-64499462820f",
+      "mandatory" : true
+    }, {
+      "name" : "Number of plants planted",
+      "uuid" : "90374271-f892-45b0-8ebe-72c56302fd9b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of plants",
+        "uuid" : "4a3b7494-e2e6-4a0b-aace-374c8e58204f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "lowNormal" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const programEnrolment = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n\n    const questionGroupIndex = params.questionGroupIndex;\n    const questionGroups = programEnrolment.getObservationValue('Fruit plant list');\n    if(questionGroups && questionGroups.length > questionGroupIndex){\n        const questionGroup = questionGroups[questionGroupIndex];\n        let enteredNumber = questionGroup.findObservationByConceptUUID(\"Number of plants\");\n\n        if(enteredNumber){\n            enteredNumber = enteredNumber.getReadableValue();\n            if(enteredNumber && !isNaN(enteredNumber) && !Number.isInteger(enteredNumber)){\n                validationErrors.push(\"Entered number should be an integer\");\n            }\n        }\n    }\n    \n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "parentFormElementUuid" : "e51fc97f-ea69-47ee-8c48-64499462820f",
+      "mandatory" : true
+    }, {
+      "name" : "Total Plantation Area",
+      "uuid" : "9dbba523-34ec-4cad-a359-9ec806cab003",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total Plantation Area",
+        "uuid" : "efce9a2d-ba34-465b-b6d7-19e4286c6056",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "e51fc97f-ea69-47ee-8c48-64499462820f",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of Mango plant",
+      "uuid" : "5e72da8a-ecfd-4878-ab44-589cebc7f8be",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of plant 1",
+        "uuid" : "a695397a-09b4-4633-9f38-6117dd96062e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInEnrolment(\"bfa64304-4a0a-4858-870e-c0ffc32e1297\").containsAnswerConceptName(\"ac169e86-e440-4ead-bfe7-1dd82d3a04a0\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "enrolment",
+                "conceptName" : "Name of the fruit plant",
+                "conceptUuid" : "bfa64304-4a0a-4858-870e-c0ffc32e1297",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Mango" ],
+                "answerConceptUuids" : [ "ac169e86-e440-4ead-bfe7-1dd82d3a04a0" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Number of Lemon plant",
+      "uuid" : "758f39a6-450c-411f-8a77-3a920b4acba2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of Lemon plant",
+        "uuid" : "0cb1d1b0-5fa8-4af5-996a-1134da24a223",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInEnrolment(\"bfa64304-4a0a-4858-870e-c0ffc32e1297\").containsAnswerConceptName(\"9b930b80-67d6-43d4-ac48-83978a32f12d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "enrolment",
+                "conceptName" : "Name of the fruit plant",
+                "conceptUuid" : "bfa64304-4a0a-4858-870e-c0ffc32e1297",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Lemon" ],
+                "answerConceptUuids" : [ "9b930b80-67d6-43d4-ac48-83978a32f12d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Number of Guava plant",
+      "uuid" : "8f894561-1b02-47ce-8409-e38dead02266",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of Guava plant",
+        "uuid" : "8ff000cf-08b0-46f7-bb00-6ef57de29d50",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInEnrolment(\"bfa64304-4a0a-4858-870e-c0ffc32e1297\").containsAnswerConceptName(\"5e2992ff-f428-4471-862f-6a664b66bbb6\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "enrolment",
+                "conceptName" : "Name of the fruit plant",
+                "conceptUuid" : "bfa64304-4a0a-4858-870e-c0ffc32e1297",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Guava" ],
+                "answerConceptUuids" : [ "5e2992ff-f428-4471-862f-6a664b66bbb6" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Number of Amla plant",
+      "uuid" : "8c8a9be7-43f3-45a3-8d36-33c5cabb6b06",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of Amla plant",
+        "uuid" : "43a3185f-d796-483d-8000-59d41f6ef2fc",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInEnrolment(\"bfa64304-4a0a-4858-870e-c0ffc32e1297\").containsAnswerConceptName(\"fafe06ae-37bf-477b-bf10-419765907c66\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "enrolment",
+                "conceptName" : "Name of the fruit plant",
+                "conceptUuid" : "bfa64304-4a0a-4858-870e-c0ffc32e1297",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Amla" ],
+                "answerConceptUuids" : [ "fafe06ae-37bf-477b-bf10-419765907c66" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Number of the Fruit Plant Mango",
+      "uuid" : "b244dadb-0589-4133-a1de-da6f8976ce0f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of the Fruit Plant Mango",
+        "uuid" : "58572df7-8606-4848-a231-87bb32139ee1",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of the Fruit Plant Lemon",
+      "uuid" : "6ea50809-3ffd-48d9-a59d-d0d2cbe8bb8f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of the Fruit Plant Lemon",
+        "uuid" : "d01411a0-11d2-4539-950a-0290c5c0c6ca",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 15.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of the Fruit Plant Guava",
+      "uuid" : "36e36141-0927-4703-a124-da2772fa5c44",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of the Fruit Plant Guava",
+        "uuid" : "f4d0bd5d-4a45-4a46-bc11-58cbded9bc8b",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 16.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Orchard Details"
+  }, {
+    "uuid" : "4d01232d-689d-48b9-9446-af7252065f7f",
+    "name" : "Farmer Details",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Nominated as Master Farmer",
+      "uuid" : "22992ad3-186c-42dc-aff2-1a4da193653c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Nominated as Master Farmer",
+        "uuid" : "f8c5f4c0-58cb-4085-a2c4-2d414078ce58",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Farmer Details"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({ params, imports }) => {\n    const programEnrolment = params.entity;\n    const moment = imports.moment;\n    const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({programEnrolment});\n\n    const isAlreadyScheduled = programEnrolment.getEncountersOfType(\"Orchard Development\").length > 0;\n\n    const baseDate = programEnrolment.enrolmentDateTime;\n\n    if(!isAlreadyScheduled){\n        const enrolmentDate = moment(baseDate).startOf('day');\n        let earliestDate = null;\n        const enrolmentYear = enrolmentDate.year();\n        const enrolmentMonth = enrolmentDate.month() + 1;\n        const isBeforeApril = enrolmentMonth < 4;\n        const isAfterJune = enrolmentMonth > 6;\n        const isInBetweenAprilAndJune = enrolmentMonth >= 4 && enrolmentMonth <= 6;\n\n        if(isBeforeApril){\n            earliestDate = moment(baseDate).startOf('year').add(3, 'months').startOf('month').toDate();\n        }\n        else if(isAfterJune){\n            earliestDate = moment(baseDate).startOf('year').add(1, 'year').add(3, 'months').startOf('month').toDate();\n        }\n        else if(isInBetweenAprilAndJune){\n            earliestDate = moment(programEnrolment.enrolmentDateTime).startOf('day').toDate();\n        }\n\n        if(earliestDate) {\n            let maxDate = moment(earliestDate).startOf('year').add(5, 'months').endOf('month').toDate();\n            scheduleBuilder.add({name: \"Orchard Development Follow-up 1\", encounterType: \"Orchard Development\", earliestDate, maxDate});  \n        }\n    }\n    \n    return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

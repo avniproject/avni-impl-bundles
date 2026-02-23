@@ -1,0 +1,9 @@
+[ {
+  "uuid" : "1613b93b-42c3-4ea5-bc2f-a5c2898b5118",
+  "id" : 46,
+  "displayKey" : "JSS internal site",
+  "type" : "Link",
+  "group" : "Functionality",
+  "linkFunction" : "'use strict';\n  ({params}) => {return \"https://sites.google.com/itbhu.ac.in/jss\"}",
+  "voided" : false
+} ]

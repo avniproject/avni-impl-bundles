@@ -1,0 +1,385 @@
+{
+  "name" : "Lab Test Form",
+  "uuid" : "d2ae6f61-3ba9-463d-89e3-9c541cf372b0",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "fd886ebb-a489-4a6c-b05e-e9fec78a2f27",
+    "name" : "General Information",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Date of HB",
+      "uuid" : "30bfe937-aebb-4a8d-9ac8-432cc89604bd",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "Default"
+      } ],
+      "concept" : {
+        "name" : "Date of HB",
+        "uuid" : "e224ebe2-beb1-447e-962b-2ae537a9c466",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "HB",
+      "uuid" : "56670162-1696-403d-8e1e-9a7cada86e4c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Hb",
+        "uuid" : "f9ecabbc-2df2-4bfc-a6fa-aa417c50e11b",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 12.0,
+        "highNormal" : 15.5,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Date of Creatinine",
+      "uuid" : "8817fb61-8075-4866-9141-8837c1757200",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "Default"
+      } ],
+      "concept" : {
+        "name" : "Date of Creatinine",
+        "uuid" : "8d8f2952-0adf-4a11-ad13-c36289323fc5",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Creatinine",
+      "uuid" : "6cb380ff-4658-4579-82c4-1fa9737655bd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Creatinine",
+        "uuid" : "dd9d3dc9-93fa-4d3f-b4f2-601bc2d354a7",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Date of Eye examination",
+      "uuid" : "b116dc5a-5d5f-40ca-aab8-4a63bb2cce32",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Date of Eye examination",
+        "uuid" : "c4913e83-2a3b-4064-a43e-3998db4abbbb",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Eye Examination",
+      "uuid" : "f533ee90-f47e-4d31-bbf8-0bd829ee5ff9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Eye Examination",
+        "uuid" : "7690f0e2-eb7c-4a0a-9d37-c6f39a743fc7",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Retinopathy",
+          "uuid" : "7204df62-cb67-4e4c-8cee-f5c0eeed7b9c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "keyValues" : [ ],
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Specify Other",
+      "uuid" : "976ca37d-6ba7-4096-9f6f-b036c8caf6cb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Specify Other",
+        "uuid" : "104d3a2b-9683-430c-85c2-a38c9f2f27f8",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new   \n  imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  statusBuilder.show().when.valueInEnrolment('Eye Examination').containsAnswerConceptName(\"Other\");\n  return statusBuilder.build();\n};",
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "General Information"
+  }, {
+    "uuid" : "d6a5fdd6-3a58-4212-b42a-8bc5048ca90f",
+    "name" : "Complete Blood Count",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Date of CBC Test",
+      "uuid" : "dd1e06b8-a6c7-4d29-8ad9-0bddd252333c",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "Default"
+      } ],
+      "concept" : {
+        "name" : "Date of CBC Test",
+        "uuid" : "5b70a06c-a081-4b6a-8725-7a952bf0e636",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "WBC count",
+      "uuid" : "d4ec9819-e527-4752-b516-c036f3ad7f63",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "WBC count",
+        "uuid" : "99b56931-1b5a-46e0-8c21-351dab9daa32",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "WBC Difference",
+      "uuid" : "0e8a6a2d-3592-4878-a10e-5d96b9287f46",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "WBC Difference",
+        "uuid" : "635c0f65-9735-4424-b904-4a57829b2a85",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "RBC Count",
+      "uuid" : "c5110740-c1ea-4105-a5e6-585ea3aff9bd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "RBC Count",
+        "uuid" : "3254b860-d494-4404-8f55-1cb630c666b7",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Platelet count",
+      "uuid" : "f01a990c-5df5-4fe9-b5a6-26c50a76ae35",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Platelet count",
+        "uuid" : "ee40e0ed-9202-407b-89dc-13873d63c54d",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Complete Blood Count"
+  }, {
+    "uuid" : "0ad19ebf-6c5e-4cf2-94ca-ab12de6b451e",
+    "name" : "Liver Function Test",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Date of Liver Function Test",
+      "uuid" : "27f924cc-8429-4bfd-9138-9684962da2e6",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "Default"
+      } ],
+      "concept" : {
+        "name" : "Date of Liver Function Test",
+        "uuid" : "2780abda-1388-4edf-b5b2-696c40156d5e",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "S.Bilirubin",
+      "uuid" : "d30ecac1-95d9-42ea-b238-6c53c1982c1a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "S.Bilirubin",
+        "uuid" : "51a63591-0503-4aec-a472-8edd2557d8a4",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "SGOT",
+      "uuid" : "1d89602b-af75-4411-8d9f-cadac15f3117",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SGOT",
+        "uuid" : "5831ed28-8c49-4b81-b136-6908b4bd8d9b",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "SGPT",
+      "uuid" : "a84107ee-0572-4251-b833-9181d51826f1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "SGPT",
+        "uuid" : "6a4b42b2-b497-4033-966e-0ce6bfec8fc5",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Total Proteins",
+      "uuid" : "58d5f71e-34b2-4fc5-a9b6-1e1deed35609",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total Proteins",
+        "uuid" : "4d211df5-ecf8-4782-ad63-5081d1436d96",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Alkaline Phosphate",
+      "uuid" : "da351c68-8386-4087-9f6f-d25f1e180509",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Alkaline Phosphate",
+        "uuid" : "0612a25d-5760-44ec-9150-191e78cdf789",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Albumin",
+      "uuid" : "ee56b19e-fc83-425a-95f7-210cc1eb9d61",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Albumin",
+        "uuid" : "adb810ff-776d-40fa-be78-c9b9f24968d8",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Globulin",
+      "uuid" : "ded8508d-04ed-4ecc-9af9-601e779e1d8f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Globulin",
+        "uuid" : "a5e52116-2bf5-4ed2-aadb-5107ceda9860",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "A. G. Ratio",
+      "uuid" : "5666d835-533a-4d5d-ad3d-883514bef12f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "A. G. Ratio",
+        "uuid" : "bd5f075f-7de7-414d-adbd-2c355cecf6bf",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Liver Function Test"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

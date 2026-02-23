@@ -1,0 +1,277 @@
+[ {
+  "name" : "HPLC sample collection",
+  "uuid" : "e99184ad-9082-43d0-9726-7644e37543dd",
+  "entityEligibilityCheckRule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  return false;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Lab test",
+  "uuid" : "f2e5f0b7-1b42-4b37-8e9a-d19e588a101c",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Check Up",
+  "uuid" : "1b09307d-e03e-4532-a12a-cdaef74b2dc3",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Base screening",
+  "uuid" : "f599f393-c50e-48d1-a89e-e73295e570ea",
+  "entityEligibilityCheckRule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  return false;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Baseline",
+  "uuid" : "fc3d6184-920b-42aa-8c83-379401241fea",
+  "entityEligibilityCheckRule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  return false;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Sample shipment",
+  "uuid" : "a786ca25-c32d-4b8a-b8f1-9d5154cfbde3",
+  "entityEligibilityCheckRule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  return false;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Lab results entry",
+  "uuid" : "8166375f-c95f-435b-b103-d3d70e0af06f",
+  "entityEligibilityCheckRule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  return false;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Sickle cell testing entry",
+  "uuid" : "f7f0a465-5047-4ce6-8163-bb0ba899797f",
+  "entityEligibilityCheckRule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  return false;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Epilepsy Followup",
+  "uuid" : "e6ee694a-d70f-413c-b0f7-3520e7cdb6af",
+  "entityEligibilityCheckRule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  return true;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Sample (voided~2832)",
+  "uuid" : "c79d7b09-bdcd-4cb5-a2d2-8cb3c637cd89",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false,
+  "voided" : true
+}, {
+  "name" : "Sample Taqi (voided~2833)",
+  "uuid" : "e595d1c3-9fb4-4fa6-96c1-294671cdacd8",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false,
+  "voided" : true
+}, {
+  "name" : "Taqi (voided~2834)",
+  "uuid" : "ee2a1156-41f2-40ef-8ccd-9f7064f407d3",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false,
+  "voided" : true
+}, {
+  "name" : "Epilepsy exit (voided~2830)",
+  "uuid" : "185c2329-c4a4-4de8-ba29-c449b8ef3da9",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false,
+  "voided" : true
+}, {
+  "name" : "test (voided~2842)",
+  "uuid" : "88d8be0c-a9e8-4d6d-924e-edc48335a9af",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false,
+  "voided" : true
+}, {
+  "name" : "SCD Followup Jan 2024",
+  "uuid" : "57b394a3-ad88-427a-8ee5-ea0b11a079f6",
+  "entityEligibilityCheckRule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  return false;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "MH Enrollment Part - 2",
+  "uuid" : "473a6940-f618-493d-8cd5-7d08f6caf746",
+  "entityEligibilityCheckRule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  return false;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "MH Referral Follow Ups",
+  "uuid" : "bdc7049e-9ad9-4b2c-952f-ab540e7a7b65",
+  "entityEligibilityCheckRule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  return false;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "ANC Follow-up Visit",
+  "uuid" : "b82afc4c-0026-4b20-820e-ce0facbfb40f",
+  "entityEligibilityCheckRule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  return false;\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Delivery Encounter",
+  "uuid" : "837f0d4d-20c5-4ad3-bfeb-e386145616c1",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "High Risk Followups",
+  "uuid" : "7f22a7d6-7c18-488a-92ea-5126357ed04b",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "High Risk Enrolment",
+  "uuid" : "433ed8ae-2410-44a0-8eca-5c5b0ddd9501",
+  "entityEligibilityCheckRule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  return !(individual.enrolments.filter(enl => enl.program.name === \"Maternal Health\")[0].encounters.some(enc => enc.encounterType.name === 'High Risk Enrolment' && !enc.cancelDateTime));\n};",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "MMU Referral",
+  "uuid" : "8b7842b6-4979-4597-8f8f-4ea48ec650c3",
+  "entityEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const moment = imports.moment;\n  let eligibility = true;\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({individual}).when.valueInRegistration(\"bc4933fc-818e-42fa-a47c-67d327485536\").containsAnswerConceptNameOtherThan(\"e7b50c78-3d90-484d-a224-9887887780dc\").matches();\n  \n  eligibility = condition11 ;\n  \n  return eligibility;\n};",
+  "active" : true,
+  "entityEligibilityCheckDeclarativeRule" : [ {
+    "actions" : [ {
+      "actionType" : "showEncounterType"
+    }, { } ],
+    "conditions" : [ {
+      "compoundRule" : {
+        "rules" : [ {
+          "lhs" : {
+            "type" : "concept",
+            "scope" : "registration",
+            "conceptName" : "Whether the patient required referral",
+            "conceptUuid" : "bc4933fc-818e-42fa-a47c-67d327485536",
+            "conceptDataType" : "Coded"
+          },
+          "rhs" : {
+            "type" : "answerConcept",
+            "answerConceptNames" : [ "No" ],
+            "answerConceptUuids" : [ "e7b50c78-3d90-484d-a224-9887887780dc" ]
+          },
+          "operator" : "containsAnswerConceptNameOtherThan"
+        } ],
+        "conjunction" : "and"
+      }
+    } ]
+  } ],
+  "immutable" : false
+}, {
+  "name" : "Mobile Medical Unit Visit",
+  "uuid" : "82c7e03a-b58d-4ba4-83e3-90c78303f374",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Chronic Patient Follow up",
+  "uuid" : "f320e58c-8a30-4f2e-8042-6f5945594041",
+  "entityEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const moment = imports.moment;\n  let eligibility = true;\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({individual}).when.valueInRegistration(\"5a82b6ec-6fae-464a-8213-0f127052cfd1\").defined.matches();\n  \n  eligibility = condition11 ;\n  \n  return eligibility;\n};",
+  "active" : true,
+  "entityEligibilityCheckDeclarativeRule" : [ {
+    "actions" : [ {
+      "actionType" : "showEncounterType"
+    }, { } ],
+    "conditions" : [ {
+      "compoundRule" : {
+        "rules" : [ {
+          "lhs" : {
+            "type" : "concept",
+            "scope" : "registration",
+            "conceptName" : "MMU Provisional Chronic Diagnosis",
+            "conceptUuid" : "5a82b6ec-6fae-464a-8213-0f127052cfd1",
+            "conceptDataType" : "Coded"
+          },
+          "rhs" : { },
+          "operator" : "defined"
+        } ],
+        "conjunction" : "and"
+      }
+    } ]
+  } ],
+  "immutable" : false
+}, {
+  "name" : "SCD Hospitalisation support",
+  "uuid" : "18b986de-dd1a-478d-8163-485cd01dbad2",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "MH Lab Investigations (voided~4618)",
+  "uuid" : "b73c9699-e585-4d1d-a5a7-0f50649ad170",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false,
+  "voided" : true
+}, {
+  "name" : "VHND Supportive Supervision visit",
+  "uuid" : "f05aa06f-93d6-4310-b452-9c40c68b8cee",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "SCD PSG Meeting attendance",
+  "uuid" : "1a65bfde-9ed0-488c-8b1d-9fd0d26a69a4",
+  "entityEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const moment = imports.moment;\n  let eligibility = true;\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({individual}).when.valueInRegistration(\"4cd6ad00-52b6-42c7-817a-a408271178de\").containsAnswerConceptName(\"981ad210-a025-417d-b814-f4c647e1b7c6\").matches();\n  \n  eligibility = condition11 ;\n  \n  return eligibility;\n};",
+  "active" : true,
+  "entityEligibilityCheckDeclarativeRule" : [ {
+    "actions" : [ {
+      "actionType" : "showEncounterType"
+    }, { } ],
+    "conditions" : [ {
+      "compoundRule" : {
+        "rules" : [ {
+          "lhs" : {
+            "type" : "concept",
+            "scope" : "registration",
+            "conceptName" : "PSG of Disease",
+            "conceptUuid" : "4cd6ad00-52b6-42c7-817a-a408271178de",
+            "conceptDataType" : "Coded"
+          },
+          "rhs" : {
+            "type" : "answerConcept",
+            "answerConceptNames" : [ "Sickle Cell Disease" ],
+            "answerConceptUuids" : [ "981ad210-a025-417d-b814-f4c647e1b7c6" ]
+          },
+          "operator" : "containsAnswerConceptName"
+        } ],
+        "conjunction" : "and"
+      }
+    } ]
+  } ],
+  "immutable" : false
+}, {
+  "name" : "Epilepsy PSG meeting attendance",
+  "uuid" : "7779da9b-f8e9-4f7f-bf05-36830eb46be5",
+  "entityEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const moment = imports.moment;\n  let eligibility = true;\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({individual}).when.valueInRegistration(\"4cd6ad00-52b6-42c7-817a-a408271178de\").containsAnswerConceptName(\"a34bf7a0-4d55-41fa-855a-0b8094f369f7\").matches();\n  \n  eligibility = condition11 ;\n  \n  return eligibility;\n};",
+  "active" : true,
+  "entityEligibilityCheckDeclarativeRule" : [ {
+    "actions" : [ {
+      "actionType" : "showEncounterType"
+    }, { } ],
+    "conditions" : [ {
+      "compoundRule" : {
+        "rules" : [ {
+          "lhs" : {
+            "type" : "concept",
+            "scope" : "registration",
+            "conceptName" : "PSG of Disease",
+            "conceptUuid" : "4cd6ad00-52b6-42c7-817a-a408271178de",
+            "conceptDataType" : "Coded"
+          },
+          "rhs" : {
+            "type" : "answerConcept",
+            "answerConceptNames" : [ "Epilepsy" ],
+            "answerConceptUuids" : [ "a34bf7a0-4d55-41fa-855a-0b8094f369f7" ]
+          },
+          "operator" : "containsAnswerConceptName"
+        } ],
+        "conjunction" : "and"
+      }
+    } ]
+  } ],
+  "immutable" : false
+} ]

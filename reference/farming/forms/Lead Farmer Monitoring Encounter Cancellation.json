@@ -1,0 +1,18 @@
+{
+  "name" : "Lead Farmer Monitoring Encounter Cancellation",
+  "uuid" : "e9068688-ff26-42ab-a792-4f2f4d5220cd",
+  "formType" : "ProgramEncounterCancellation",
+  "formElementGroups" : [ {
+    "uuid" : "8fc59ae8-2a1b-445d-827a-637774131650",
+    "name" : "Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ ],
+    "timed" : false,
+    "display" : "Details"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({ params, imports }) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({programEncounter});\n    const encounterType = programEncounter.encounterType.name;\n\n    const currentFollowupName = programEncounter.name;\n\n    let num = parseInt(currentFollowupName.split(' ').pop());\n    if(isNaN(num)) {\n        num = 1;\n    } else {\n        num++;\n    }\n    let nextFollowupName = `Lead Farmer Monitoring Follow-up ${num}`;\n\n    const isAlreadyScheduled = programEncounter.programEnrolment.getEncountersOfType(encounterType)\n        .some(encounter => encounter.name == nextFollowupName);\n\n    const alreadyFiveVisitsAreScheduled = programEncounter.programEnrolment.getEncountersOfType(encounterType).length >= 5;\n\n    const isProgramActive = programEncounter.programEnrolment.programExitDateTime == null;\n    \n    if(!isAlreadyScheduled && isProgramActive && !alreadyFiveVisitsAreScheduled){\n        const earliestDate = moment(programEncounter.earliestVisitDateTime).add(30, 'days').startOf('day').toDate();\n        const maxDate = moment(earliestDate).add(7, 'days').endOf('day').endOf('day').toDate();\n        scheduleBuilder.add({name: nextFollowupName, encounterType: encounterType, earliestDate, maxDate});  \n    }\n    \n    return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

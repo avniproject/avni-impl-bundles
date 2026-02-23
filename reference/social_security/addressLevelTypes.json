@@ -1,0 +1,22 @@
+[ {
+  "uuid" : "61e16ae2-6582-4f94-a03a-f8cd74ef369c",
+  "id" : 1723,
+  "name" : "State",
+  "level" : 5.0
+}, {
+  "uuid" : "70212199-d99b-453d-b9bc-160d60ee5835",
+  "id" : 1724,
+  "name" : "City",
+  "level" : 4.0,
+  "parent" : {
+    "uuid" : "61e16ae2-6582-4f94-a03a-f8cd74ef369c"
+  }
+}, {
+  "uuid" : "79fd2f63-01f5-4ca1-9b20-576a5feaaad4",
+  "id" : 1725,
+  "name" : "Area",
+  "level" : 3.0,
+  "parent" : {
+    "uuid" : "70212199-d99b-453d-b9bc-160d60ee5835"
+  }
+} ]

@@ -1,0 +1,21 @@
+{
+  "operationalPrograms" : [ {
+    "uuid" : "b6544242-1f84-441b-844e-8b5a97992057",
+    "program" : {
+      "uuid" : "e4d8c65f-7343-4f66-a1d0-436baa030630",
+      "voided" : false
+    },
+    "name" : "CSA",
+    "programSubjectLabel" : "",
+    "voided" : false
+  }, {
+    "uuid" : "32b60137-75c7-4097-83c6-2e92a072ccc4",
+    "program" : {
+      "uuid" : "9d13b117-0d68-44a1-8a9e-b3e173d4b21c",
+      "voided" : false
+    },
+    "name" : "Horticulture / Orchard Enrolment",
+    "programSubjectLabel" : "",
+    "voided" : false
+  } ]
+}

@@ -1,0 +1,1272 @@
+{
+  "name" : "CSA Enrolment",
+  "uuid" : "293b7c6b-6526-40e7-824b-600b8e4f83d7",
+  "formType" : "ProgramEnrolment",
+  "formElementGroups" : [ {
+    "uuid" : "1c1a6738-1c16-4c97-8eb5-653a10ff4623",
+    "name" : "CSA onboarding",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Crop Type / Season",
+      "uuid" : "c4f3074c-4fa1-4150-917a-45a18d713c83",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Crop Type / Season",
+        "uuid" : "5f5f172c-3f12-4c95-8825-7b94d682ce77",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Kharif",
+          "uuid" : "58583b46-f8a3-486a-9903-9908899d44ef",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Zaid",
+          "uuid" : "c0f902da-88e1-4206-84ea-29a6e20ba51b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Rabi",
+          "uuid" : "b167e259-fc52-4f34-8043-3416692f707b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const programEnrolment = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let answersToShow = [];\n    let validationErrors = [];\n    const kharifUUID = '58583b46-f8a3-486a-9903-9908899d44ef';\n    const rabiUUID = 'b167e259-fc52-4f34-8043-3416692f707b';\n    const zaidUUID = 'c0f902da-88e1-4206-84ea-29a6e20ba51b';\n    let allAnswerConcepts = [kharifUUID, rabiUUID, zaidUUID];\n    let toBeShownList = [];\n\n    const enrolmentDateTime = moment(programEnrolment.enrolmentDateTime).startOf('day');\n\n    const currentMonth = enrolmentDateTime.month(); // 0 = Jan, 11 = Dec\n\n    if (currentMonth >= 6 && currentMonth <= 11) toBeShownList.push(kharifUUID);\n    if (currentMonth >= 9 || currentMonth <= 4) toBeShownList.push(rabiUUID);\n    if (currentMonth >= 3 && currentMonth <= 5) toBeShownList.push(zaidUUID);\n\n    toBeShownList = _.uniq(toBeShownList);\n\n    let toBeHidden = _.difference(allAnswerConcepts, toBeShownList);\n    \n\n    if(toBeHidden && toBeHidden.length > 0){\n        _.forEach(toBeHidden, (answer) => {\n            const answerToSkip = formElement.getAnswerWithConceptUuid(answer);\n            if (answerToSkip) answersToSkip.push(answerToSkip);\n        });\n    }\n\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors, answersToShow);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Farmer Type",
+      "uuid" : "b0f5cf19-3d51-4c3a-898d-59d7c0490047",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Farmer Type",
+        "uuid" : "97f801a6-343b-4d03-a1d5-fc80c4e01035",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Lead Farmer",
+          "uuid" : "87c7e983-93c8-4efe-be44-8a57534fce53",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Associate Farmer",
+          "uuid" : "4110d321-2979-4f5f-8b85-e9da731cde35",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Master Farmer",
+          "uuid" : "d77e23f0-8337-40ca-a3f4-fa616ccc4279",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "",
+      "mandatory" : true
+    }, {
+      "name" : "Is crop card plot?",
+      "uuid" : "7ca79867-374e-4ac6-955b-0d5f65f3c48a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is crop card plot",
+        "uuid" : "6518e9f7-e29e-44e4-9205-52534fffa86d",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "CSA Demonstration Area",
+      "uuid" : "a02e4cd0-b751-43c5-9fa7-f6ec467783b5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "CSA Demonstration Area",
+        "uuid" : "8b4b1bdb-d4f5-4979-8744-56708407f060",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Slit Applied?",
+      "uuid" : "80a52d98-6ae6-4d70-8ad3-b3eea9d43e02",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Slit Applied?",
+        "uuid" : "b41dd1ca-81b8-416b-a4de-03a5a86e4780",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "yes",
+          "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "no",
+          "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Silt Applied",
+      "uuid" : "067a8d33-0827-4dad-913c-28fbbc2c1803",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "slit applied",
+        "uuid" : "e035d6d6-ae33-44ce-b809-3aad6b89fabb",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "yes",
+          "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "no",
+          "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Slit Applied",
+      "uuid" : "01fa7411-5535-44fc-9e6e-1207229b1d21",
+      "keyValues" : [ {
+        "key" : "ExcludedAnswers",
+        "value" : [ "no" ]
+      } ],
+      "concept" : {
+        "name" : "Slit Applied",
+        "uuid" : "0d5ac429-4def-4038-a579-c1f63eb9f65f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "no",
+          "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "yes",
+          "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "CSA onboarding"
+  }, {
+    "uuid" : "cafef088-c991-4d3a-ab2b-2b1babf3a956",
+    "name" : "Land Preparation",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Soil Testing",
+      "uuid" : "fece776f-bc9f-443c-868c-171dc6e0fc1b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Soil Testing",
+        "uuid" : "a1e5e646-a468-4efd-a44c-08ec749c8f9f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "no",
+          "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "yes",
+          "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Land Preparation",
+      "uuid" : "670cea25-aee5-4f90-8953-9a859b913324",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Land Preparation",
+        "uuid" : "43e9ea68-f1f8-4e64-bcbe-ab0911703c0f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "yes",
+          "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "no",
+          "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Which of the following land preparation practices have been adopted?",
+      "uuid" : "b7c1134e-62cd-46d4-95da-072cf5d15608",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Which of the following land preparation practices have been adopted?",
+        "uuid" : "dd51d78d-2249-4752-87f9-0aacad45630e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Ploughing",
+          "uuid" : "a208e87d-a4f2-49eb-8485-9896af0ab6de",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ploughing + 2 Harrowing",
+          "uuid" : "84b2c196-754c-4fe7-a1ba-07f1bec7e146",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ploughing + 1 Harrowing",
+          "uuid" : "ac21209f-13bb-42ef-9c25-06f2906de80e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInEnrolment(\"43e9ea68-f1f8-4e64-bcbe-ab0911703c0f\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "enrolment",
+                "conceptName" : "Land Preparation",
+                "conceptUuid" : "43e9ea68-f1f8-4e64-bcbe-ab0911703c0f",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Cost of land Preparation Practices",
+      "uuid" : "5c2cfa0e-7cc4-497a-9162-f07a17cebacb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cost of land Preparation Practices",
+        "uuid" : "6f182ab9-d813-49d4-a327-7a9cd0f9ca9b",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInEnrolment(\"43e9ea68-f1f8-4e64-bcbe-ab0911703c0f\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "enrolment",
+                "conceptName" : "Land Preparation",
+                "conceptUuid" : "43e9ea68-f1f8-4e64-bcbe-ab0911703c0f",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Land Preparation activities initiated?",
+      "uuid" : "7b4c4977-a204-44da-9b87-72589c9c7d5a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Land Preparation activities initiated",
+        "uuid" : "1bf4cf5b-f257-43f9-b273-bbe8fdb2487a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Which of the following initiated practices have been adopted?",
+      "uuid" : "4123e1e9-5c21-4698-80c4-ecb6b056a17b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Which of the following initiated practices have been adopted",
+        "uuid" : "91705f5d-a21b-4860-85fc-71b55f0a94f9",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Ridging",
+          "uuid" : "c767ed55-2682-4fc8-99df-298b35759ef9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Levelling",
+          "uuid" : "93d919d0-3e24-45a5-8f81-285ab6a4e8b9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Border Strip preparation",
+          "uuid" : "ad52c453-fa14-45f9-b6dc-db0e963fb318",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mulching",
+          "uuid" : "d8eb23d5-b520-4c85-8e26-cf1d738ea217",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInEnrolment(\"1bf4cf5b-f257-43f9-b273-bbe8fdb2487a\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "enrolment",
+                "conceptName" : "Land Preparation activities initiated",
+                "conceptUuid" : "1bf4cf5b-f257-43f9-b273-bbe8fdb2487a",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Other practices adopted, please specify",
+      "uuid" : "477353f3-ca88-4159-bdf2-7f6040318795",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other practices adopted",
+        "uuid" : "3c7ef754-627a-4fc1-bb92-986acdfd1833",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInEnrolment(\"91705f5d-a21b-4860-85fc-71b55f0a94f9\").containsAnswerConceptName(\"287164fa-3899-485f-9c1f-61401bc6359d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "enrolment",
+                "conceptName" : "Which of the following initiated practices have been adopted",
+                "conceptUuid" : "91705f5d-a21b-4860-85fc-71b55f0a94f9",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "287164fa-3899-485f-9c1f-61401bc6359d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Total cost for Land Preparation",
+      "uuid" : "921dffaf-0292-4051-a6fb-422db1a4d603",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total cost for Land Preparation",
+        "uuid" : "a72a3afc-9489-4208-8f0e-fc9b8befc24b",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Land Preparation"
+  }, {
+    "uuid" : "e308e1a8-48c5-4ff8-8dc1-33d24bca25d1",
+    "name" : "Seed Management",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Seed Management",
+      "uuid" : "d35dd0d2-757e-4789-b239-202489276963",
+      "keyValues" : [ {
+        "key" : "repeatable",
+        "value" : true
+      } ],
+      "concept" : {
+        "name" : "Seed Management",
+        "uuid" : "5b430a2c-8765-4953-a669-5e2c042eb2f8",
+        "dataType" : "QuestionGroup",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Variety name of the Main Crop",
+      "uuid" : "094b0235-59a9-47bb-888d-880b9edaf366",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Variety name of the Main Crop",
+        "uuid" : "d0bfa0a1-6255-45fa-82aa-6cf459c2773f",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "d35dd0d2-757e-4789-b239-202489276963",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Name of the main crop",
+      "uuid" : "4d81a753-c7f2-4dbb-8d50-8f44ddc41689",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of the main crop",
+        "uuid" : "a2a7c060-cf8f-4eff-a6a7-d14a54d413e8",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "d35dd0d2-757e-4789-b239-202489276963",
+      "mandatory" : true
+    }, {
+      "name" : "Variety name of the Main Crop",
+      "uuid" : "3f7c8fe1-ed9c-486a-89c4-12f8b403780e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Variety name of the Main Crop",
+        "uuid" : "d0bfa0a1-6255-45fa-82aa-6cf459c2773f",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "d35dd0d2-757e-4789-b239-202489276963",
+      "mandatory" : true
+    }, {
+      "name" : "Seed Type",
+      "uuid" : "bfc1c403-e00b-4e3c-a4c0-7782e8197a98",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Seed Type",
+        "uuid" : "0410bc94-75f3-44cb-b333-74fed56a439b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Certified TL",
+          "uuid" : "44ca540b-253c-4fb8-a406-83b95e2bd456",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Foundation",
+          "uuid" : "9f4b991f-0a8a-469e-b03f-02ab46744379",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Own",
+          "uuid" : "c31b1ce3-fc75-4678-b2f3-b9178ecc8360",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Breeder",
+          "uuid" : "a042f2e2-d6e8-4011-b160-440f957939ee",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "d35dd0d2-757e-4789-b239-202489276963",
+      "mandatory" : true
+    }, {
+      "name" : "Seed Quantity",
+      "uuid" : "9fad2257-bf8d-4d41-a16e-5d47e3cb56bc",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Seed Quantity",
+        "uuid" : "572c1184-b783-4b06-a902-e69356aec469",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.1,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "d35dd0d2-757e-4789-b239-202489276963",
+      "mandatory" : true
+    }, {
+      "name" : "Cost of Seed",
+      "uuid" : "9a86b699-92ad-4b5a-ad2b-332c7566bd6b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cost of Seed",
+        "uuid" : "440a1d0c-2c20-4311-9849-bdaab3ce1676",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 1.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "d35dd0d2-757e-4789-b239-202489276963",
+      "mandatory" : true
+    }, {
+      "name" : "Border/Mix Crop Name",
+      "uuid" : "a77d207b-eb4d-428e-b592-5d45a2470e50",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Border/Mix Crop Name",
+        "uuid" : "ed42c35b-35be-4651-8a61-743eac39e13f",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "d35dd0d2-757e-4789-b239-202489276963",
+      "mandatory" : true
+    }, {
+      "name" : "Variety name of the Main Crop",
+      "uuid" : "69ed45d0-7dad-4bd4-93e2-e3067badfd36",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Variety name of the Main Crop",
+        "uuid" : "d0bfa0a1-6255-45fa-82aa-6cf459c2773f",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "d35dd0d2-757e-4789-b239-202489276963",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Seed Management"
+  }, {
+    "uuid" : "43b6373d-4cd5-4564-aef6-eddb64ec84a6",
+    "name" : "Sowing Management",
+    "displayOrder" : 4.0,
+    "formElements" : [ {
+      "name" : "Any Seed management activities initiated?",
+      "uuid" : "34b06bfb-140f-4a68-874e-ff87fbd9d7e3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Any Seed management activities initiated",
+        "uuid" : "8a8f035d-ea82-452b-9c27-d39dc0e3de86",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "yes",
+          "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "no",
+          "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Please mention the Seed management adopted",
+      "uuid" : "986de83d-c15d-4f3c-8b84-4f25d3585ce5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Please mention the Seed management adopted",
+        "uuid" : "17c616d1-e14c-43b7-a31e-e8467f8a2333",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Treated with chemicals",
+          "uuid" : "c923cbae-1803-4483-9946-5db09aa4603c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Treated with NPK consotia",
+          "uuid" : "d7e717e9-91d3-4c6c-9c90-518718e20003",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Treated with beejamrit",
+          "uuid" : "c0edb029-f15d-43e1-92fa-29c3f6790e58",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInEnrolment(\"8a8f035d-ea82-452b-9c27-d39dc0e3de86\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "enrolment",
+                "conceptName" : "Any Seed management activities initiated",
+                "conceptUuid" : "8a8f035d-ea82-452b-9c27-d39dc0e3de86",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Other Seed management adopted",
+      "uuid" : "02d8e16d-22e8-4473-aa54-1e5b20ce46e1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other Seed management adopted",
+        "uuid" : "b0abfe4f-c671-4f53-afc4-44db4a85d27a",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInEnrolment(\"17c616d1-e14c-43b7-a31e-e8467f8a2333\").containsAnswerConceptName(\"287164fa-3899-485f-9c1f-61401bc6359d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "enrolment",
+                "conceptName" : "Please mention the Seed management adopted",
+                "conceptUuid" : "17c616d1-e14c-43b7-a31e-e8467f8a2333",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "287164fa-3899-485f-9c1f-61401bc6359d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "Date of Sowing",
+      "uuid" : "85e6e184-16ea-489f-b136-7632cc5ee2f3",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "calendar"
+      } ],
+      "concept" : {
+        "name" : "Date of Sowing",
+        "uuid" : "ffe54f94-09f6-4439-a6b0-de9f228193d4",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInEnrolment(\"8a8f035d-ea82-452b-9c27-d39dc0e3de86\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n\n  let selectedDate = programEnrolment.getObservationValue(\"ffe54f94-09f6-4439-a6b0-de9f228193d4\");\n\n    if(selectedDate) {\n        const today = moment().startOf('day');\n        selectedDate = moment(selectedDate).startOf('day');\n    \n        if(selectedDate.isAfter(today)) {\n            validationErrors.push(\"Selected Date cannot be in the future.\");\n        }\n    }\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Any Sowing activities initiated?",
+      "uuid" : "b24665c1-2be0-4406-8e56-e0c0c10740cf",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Any sowing activities initiated",
+        "uuid" : "fa542295-5f83-4196-b338-b777616a5f30",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "yes",
+          "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "no",
+          "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Please mention the adopted Sowing Management adopted",
+      "uuid" : "f2e7c8b1-115a-4da1-a3c0-c09f0810f396",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Please mention the adopted Sowing Management adopted",
+        "uuid" : "1154deec-6c42-46c0-b854-3533385053b4",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Border sowing",
+          "uuid" : "6e3e2368-28b1-4902-a220-e96826123d92",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Inter cropping",
+          "uuid" : "20058b23-87bc-4342-8b8b-d3ebcf9340af",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Line sowing",
+          "uuid" : "2e9b4dca-6ff4-4f53-94c7-41e72193d684",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInEnrolment(\"fa542295-5f83-4196-b338-b777616a5f30\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "enrolment",
+                "conceptName" : "Any sowing activities initiated",
+                "conceptUuid" : "fa542295-5f83-4196-b338-b777616a5f30",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Other, sowing management adopted",
+      "uuid" : "0b0129d0-ee49-4999-8c17-233134e52ae6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other, sowing management adopted",
+        "uuid" : "cde6f3a8-5dea-4d17-869e-0d32e7ba7ed3",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInEnrolment(\"1154deec-6c42-46c0-b854-3533385053b4\").containsAnswerConceptName(\"287164fa-3899-485f-9c1f-61401bc6359d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "enrolment",
+                "conceptName" : "Please mention the adopted Sowing Management adopted",
+                "conceptUuid" : "1154deec-6c42-46c0-b854-3533385053b4",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "287164fa-3899-485f-9c1f-61401bc6359d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "Cost of Sowing Management",
+      "uuid" : "bbcab821-fcbf-4615-beca-6e6216b2f84d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cost of Sowing Management",
+        "uuid" : "2b3b6d99-3be1-441d-96b3-922db40b793e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Please mention the adopted Sowing Management adopted",
+      "uuid" : "13f03c01-f7bc-4635-a9ff-a966ed54492b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Please mention the adopted Sowing Management adopted",
+        "uuid" : "1154deec-6c42-46c0-b854-3533385053b4",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Border sowing",
+          "uuid" : "6e3e2368-28b1-4902-a220-e96826123d92",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Inter cropping",
+          "uuid" : "20058b23-87bc-4342-8b8b-d3ebcf9340af",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Line sowing",
+          "uuid" : "2e9b4dca-6ff4-4f53-94c7-41e72193d684",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInEnrolment(\"fa542295-5f83-4196-b338-b777616a5f30\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "enrolment",
+                "conceptName" : "Any sowing activities initiated",
+                "conceptUuid" : "fa542295-5f83-4196-b338-b777616a5f30",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Please mention the adopted Sowing Management adopted",
+      "uuid" : "69bb2640-c451-4a91-a681-10febda5026d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Please mention the adopted Sowing Management adopted (voided~350705)",
+        "uuid" : "25d93bad-d596-4ae0-9330-75ab29332663",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ],
+        "voided" : true
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Sowing Management"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({ params, imports }) => {\n    const programEnrolment = params.entity;\n    const moment = imports.moment;\n    const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({programEnrolment});\n    const cropTypeUUID = '5f5f172c-3f12-4c95-8825-7b94d682ce77';\n    const kharifUUID = '58583b46-f8a3-486a-9903-9908899d44ef';\n    const rabiUUID = 'b167e259-fc52-4f34-8043-3416692f707b';\n    const zaidUUID = 'c0f902da-88e1-4206-84ea-29a6e20ba51b';\n\n    const cropType = programEnrolment.getObservationValue(cropTypeUUID);\n    \n    \n    const isAlreadyScheduled = programEnrolment.getEncountersOfType(\"Lead Farmer Monitoring\").length > 0;\n\n    if(!isAlreadyScheduled){\n\n        const earliestDate = moment(programEnrolment.enrolmentDateTime).add(30, 'days').startOf('day').toDate();\n        const maxDate = moment(earliestDate).add(7, 'days').endOf('day').toDate();\n        scheduleBuilder.add({name: \"Lead Farmer Monitoring Follow-up 1\", encounterType: \"Lead Farmer Monitoring\", earliestDate, maxDate});  \n    }\n    \n    return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

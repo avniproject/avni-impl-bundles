@@ -1,0 +1,132 @@
+{
+  "name" : "Sample shipment",
+  "uuid" : "886898af-3c16-450c-a5ba-ed6f0f77c387",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "e462ded2-22fb-40e6-b1e8-5a1a3689ecd4",
+    "name" : "Sample collection/shipment details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Sample sent to",
+      "uuid" : "a1ba9d43-f3f8-40ab-8686-5b1c97e3329d",
+      "keyValues" : [ {
+        "key" : "ExcludedAnswers",
+        "value" : [ "CHC Kotma", "Lab CHC Rajendragram" ]
+      } ],
+      "concept" : {
+        "name" : "Laboratory",
+        "uuid" : "c392dcf2-c4c5-475f-a7c4-f84e9498b0df",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "CHC Kotma",
+          "uuid" : "cd056b81-7d9a-4fbd-9bf4-1303a5b4d090",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HPLC lab Bilaspur",
+          "uuid" : "9068e470-c670-4a93-a046-ff6d859c1dc5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lab CHC Karpa",
+          "uuid" : "6676e275-4d2d-4f13-ab38-31234f41d37a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lab CHC Rajendragram",
+          "uuid" : "d8fde700-29bd-4cc8-bd7d-d39b9f100fc1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "DH Dindori HPLC",
+          "uuid" : "b9f75e70-87b5-4640-ae11-ff34a6db28c8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "SCACM Lab, Anuppur",
+          "uuid" : "6bd47365-e913-43f4-9d66-2be4dce62a37",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "SCACM Nodal lab Dindori",
+          "uuid" : "bdf822bd-6b2d-4e40-afc5-60497ed99fb8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "DH Shahdol",
+          "uuid" : "8e36a4dc-be50-4e6f-92e9-d76fc819ce2d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n    const formElementGroup = params.formElementGroup;\n    const programEncounter = params.entity;\n    const solResultAvail = programEncounter.getObservationReadableValue(\"Whether prep and/or solubility result from field available\");\n    const solResultField = programEncounter.getObservationReadableValue(\"Solubility result from field\");\n\n   // const value = (_.isEqual(solResultAvail, 'yes') && _.isEqual(solResultField, 'Positive')) || _.isEqual(solResultAvail, 'no');\n    return formElementGroup.formElements.map(({uuid}) => {\n        return new imports.rulesConfig.FormElementStatus(uuid, true, null);\n    });\n\n};",
+    "timed" : false,
+    "display" : "Sample collection/shipment details"
+  } ],
+  "decisionRule" : "//SAMPLE RULE EXAMPLE\n  \"use strict\";\n({params, imports}) => {\n    const programEncounter = params.entity;\n     const decisions = params.decisions;\n    const ComplicationsBuilder = new imports.rulesConfig.complicationsBuilder({\n        programEncounter: programEncounter,\n        complicationsConcept: 'Sample shipped for'\n    });\n    \n    \n    const sampleCollectedFor = programEncounter.programEnrolment.getObservationReadableValueInEntireEnrolment(\"Sample collected for\");\n    if(_.includes(sampleCollectedFor, 'Electrophoresis')){\n      ComplicationsBuilder\n            .addComplication('Electrophoresis');\n    }\n    \n     if(_.includes(sampleCollectedFor, 'HPLC')){\n      ComplicationsBuilder\n            .addComplication('HPLC');\n    }\n    \n    decisions.encounterDecisions.push(ComplicationsBuilder.getComplications());\n    return decisions;\n    \n};",
+  "visitScheduleRule" : "//SAMPLE RULE EXAMPLE\n\"use strict\";\n({ params, imports }) => {\n  const programEncounter = params.entity;\n  const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({\n    programEncounter\n  });\n  \n    const labEncounters = _.chain(programEncounter.programEnrolment.getEncounters(true))\n        .filter((enc) => enc.name === 'Lab results entry')\n        .filter((enc) => imports.moment(enc.earliestVisitDateTime).isSame(programEncounter.encounterDateTime) === true)\n        .value();\n  if(labEncounters.length == 0){\n  scheduleBuilder\n        .add({\n            name: \"Lab results entry\",\n            encounterType: \"Lab results entry\",\n            earliestDate: imports.moment(programEncounter.encounterDateTime).toDate(),\n            maxDate: imports.moment(programEncounter.encounterDateTime).add(3, 'days').toDate()\n        });\n      }  \n  return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ {
+    "name" : "Sample shipped for",
+    "uuid" : "83234150-e08d-4581-a615-aa71efd96433",
+    "dataType" : "Coded",
+    "answers" : [ {
+      "name" : "Electrophoresis",
+      "uuid" : "6201104e-3360-4a55-b87e-22f84ec1eec2",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 2.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "HPLC",
+      "uuid" : "0765e9dd-8104-42aa-8f5c-2bb1e4a61d9f",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 3.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Solubility",
+      "uuid" : "2ea592b9-19dd-4215-a354-d3cd4263e0d9",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 1.0,
+      "active" : true,
+      "media" : [ ]
+    } ],
+    "active" : true,
+    "media" : [ ]
+  } ]
+}

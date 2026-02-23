@@ -1,0 +1,7 @@
+{
+  "name" : "Family Baseline Encounter Cancellation",
+  "uuid" : "b5b83cab-b86d-46c4-8396-4a6d686c5349",
+  "formType" : "IndividualEncounterCancellation",
+  "formElementGroups" : [ ],
+  "decisionConcepts" : [ ]
+}

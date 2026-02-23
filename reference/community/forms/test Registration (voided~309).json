@@ -1,0 +1,8 @@
+{
+  "name" : "test Registration (voided~309)",
+  "uuid" : "aae4b594-b326-4461-9e89-61f484300f12",
+  "formType" : "IndividualProfile",
+  "formElementGroups" : [ ],
+  "decisionConcepts" : [ ],
+  "voided" : true
+}

@@ -1,0 +1,35 @@
+{
+  "operationalSubjectTypes" : [ {
+    "uuid" : "710a17f6-f39c-451d-a79a-2d2efb976b6e",
+    "subjectType" : {
+      "uuid" : "b180f6af-2bd8-480f-b2e4-afe0ad64e0f9",
+      "voided" : false
+    },
+    "name" : "Individual",
+    "voided" : false
+  }, {
+    "uuid" : "c1dc7332-395d-4348-aae2-ffe24c35e9de",
+    "subjectType" : {
+      "uuid" : "8291169b-6a40-4a82-b317-815c02df02ce",
+      "voided" : false
+    },
+    "name" : "Household",
+    "voided" : false
+  }, {
+    "uuid" : "1707b640-1f83-40ca-89c0-f81363d7d000",
+    "subjectType" : {
+      "uuid" : "e7e91eb3-9672-4392-8b1b-681c0062f421",
+      "voided" : false
+    },
+    "name" : "Event (voided~1359)",
+    "voided" : true
+  }, {
+    "uuid" : "7df0edb1-94aa-4cb4-b362-04519312818e",
+    "subjectType" : {
+      "uuid" : "67f8a0fa-f5ff-4bb7-8862-6c4aa31483e7",
+      "voided" : false
+    },
+    "name" : "Target (voided~1360)",
+    "voided" : true
+  } ]
+}

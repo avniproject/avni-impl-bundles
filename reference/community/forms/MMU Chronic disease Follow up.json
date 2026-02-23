@@ -1,0 +1,133 @@
+{
+  "name" : "MMU Chronic disease Follow up",
+  "uuid" : "481b2331-3967-4a21-b6b3-86bbc35bef3a",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "d79a77c2-b78d-4e24-af93-7d46f67be2ce",
+    "name" : "Patient Follow-up",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Is the patient on appropriate treatment",
+      "uuid" : "0c6ef883-b594-493c-906f-a16b65e6ace9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is the patient on appropriate treatment",
+        "uuid" : "c6e3d4a0-6ba8-45e0-a7a7-df96910b3ebe",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Reason for not on appropriate treatment",
+      "uuid" : "c7a3a945-a0f2-417a-9187-985ab87581ea",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Reason for not on appropriate treatment",
+        "uuid" : "153aa6c0-828a-4bb7-a480-f9489c44a880",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"c6e3d4a0-6ba8-45e0-a7a7-df96910b3ebe\").containsAnswerConceptName(\"e7b50c78-3d90-484d-a224-9887887780dc\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Is the patient on appropriate treatment",
+                "conceptUuid" : "c6e3d4a0-6ba8-45e0-a7a7-df96910b3ebe",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "No" ],
+                "answerConceptUuids" : [ "e7b50c78-3d90-484d-a224-9887887780dc" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Is patient stable ?",
+      "uuid" : "f0ba8f62-b9b9-454d-9209-34ae44e00fbd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is patient stable ?",
+        "uuid" : "a7340522-67fc-42c4-aa54-4447e013b0d4",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Patient Follow-up"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({ params, imports }) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({programEncounter});\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter}).when.valueInEncounter(\"c6e3d4a0-6ba8-45e0-a7a7-df96910b3ebe\").defined.matches();\n  \n  if(condition11 ){\n    const earliestDate = moment(programEncounter.encounterDateTime).add(15, 'days').toDate();\n    const maxDate = moment(programEncounter.encounterDateTime).add(17, 'days').toDate();\n    scheduleBuilder.add({name: \"Chronic Patient Follow up\", encounterType: \"Chronic Patient Follow up\", earliestDate, maxDate});  \n}\n  \n  return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ],
+  "visitScheduleDeclarativeRule" : [ {
+    "actions" : [ {
+      "details" : {
+        "dateField" : "encounterDateTime",
+        "daysToOverdue" : "17",
+        "encounterName" : "Chronic Patient Follow up",
+        "encounterType" : "Chronic Patient Follow up",
+        "daysToSchedule" : "15"
+      },
+      "actionType" : "scheduleVisit"
+    }, { } ],
+    "conditions" : [ {
+      "compoundRule" : {
+        "rules" : [ {
+          "lhs" : {
+            "type" : "concept",
+            "scope" : "encounter",
+            "conceptName" : "Is the patient on appropriate treatment",
+            "conceptUuid" : "c6e3d4a0-6ba8-45e0-a7a7-df96910b3ebe",
+            "conceptDataType" : "Coded"
+          },
+          "rhs" : { },
+          "operator" : "defined"
+        } ],
+        "conjunction" : "and"
+      }
+    } ]
+  } ]
+}

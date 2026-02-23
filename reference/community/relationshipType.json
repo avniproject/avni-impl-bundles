@@ -1,0 +1,181 @@
+[ {
+  "uuid" : "1d9c019a-9350-44f9-9ef9-a699f0d94a13",
+  "id" : 491,
+  "individualAIsToBRelation" : {
+    "uuid" : "eeb49484-a07d-49f7-bb4b-932b713fbc66",
+    "id" : 593,
+    "name" : "father",
+    "genders" : [ "Male" ]
+  },
+  "individualBIsToARelation" : {
+    "uuid" : "7e876220-20b4-4c17-87b7-0e235926f7a6",
+    "id" : 591,
+    "name" : "son",
+    "genders" : [ "Male" ]
+  }
+}, {
+  "uuid" : "d84d15c2-3d09-416e-8c26-9709ce3c90da",
+  "id" : 492,
+  "individualAIsToBRelation" : {
+    "uuid" : "5a77c22b-a24f-456e-84a3-9bd12e104f73",
+    "id" : 594,
+    "name" : "mother",
+    "genders" : [ "Female" ]
+  },
+  "individualBIsToARelation" : {
+    "uuid" : "7e876220-20b4-4c17-87b7-0e235926f7a6",
+    "id" : 591,
+    "name" : "son",
+    "genders" : [ "Male" ]
+  }
+}, {
+  "uuid" : "1db2a945-0692-481e-a68c-aaf7cc246d64",
+  "id" : 493,
+  "individualAIsToBRelation" : {
+    "uuid" : "eeb49484-a07d-49f7-bb4b-932b713fbc66",
+    "id" : 593,
+    "name" : "father",
+    "genders" : [ "Male" ]
+  },
+  "individualBIsToARelation" : {
+    "uuid" : "91fd32f2-0261-46a1-92e4-4c201247c9a3",
+    "id" : 592,
+    "name" : "daughter",
+    "genders" : [ "Female" ]
+  }
+}, {
+  "uuid" : "99ad5750-bdf8-40e6-964c-01cf806707b7",
+  "id" : 494,
+  "individualAIsToBRelation" : {
+    "uuid" : "5a77c22b-a24f-456e-84a3-9bd12e104f73",
+    "id" : 594,
+    "name" : "mother",
+    "genders" : [ "Female" ]
+  },
+  "individualBIsToARelation" : {
+    "uuid" : "91fd32f2-0261-46a1-92e4-4c201247c9a3",
+    "id" : 592,
+    "name" : "daughter",
+    "genders" : [ "Female" ]
+  }
+}, {
+  "uuid" : "89d85d58-de14-4249-b9bb-61d4abb94b77",
+  "id" : 495,
+  "individualAIsToBRelation" : {
+    "uuid" : "334ea293-fd10-4dab-92f3-04ce153e27aa",
+    "id" : 595,
+    "name" : "husband",
+    "genders" : [ "Male" ]
+  },
+  "individualBIsToARelation" : {
+    "uuid" : "0ab14ce3-cbdb-4cb7-8601-353bebe408c9",
+    "id" : 596,
+    "name" : "wife",
+    "genders" : [ "Female" ]
+  }
+}, {
+  "uuid" : "2a6a496c-6063-4383-8857-0c10a831d85c",
+  "id" : 496,
+  "individualAIsToBRelation" : {
+    "uuid" : "4809d13f-4ab1-49d7-aa57-ee71a821bc3f",
+    "id" : 597,
+    "name" : "brother",
+    "genders" : [ "Male" ]
+  },
+  "individualBIsToARelation" : {
+    "uuid" : "4809d13f-4ab1-49d7-aa57-ee71a821bc3f",
+    "id" : 597,
+    "name" : "brother",
+    "genders" : [ "Male" ]
+  }
+}, {
+  "uuid" : "765bc1ed-441a-414d-b62a-672103b35c95",
+  "id" : 497,
+  "individualAIsToBRelation" : {
+    "uuid" : "4809d13f-4ab1-49d7-aa57-ee71a821bc3f",
+    "id" : 597,
+    "name" : "brother",
+    "genders" : [ "Male" ]
+  },
+  "individualBIsToARelation" : {
+    "uuid" : "a081882c-6775-4caa-98cd-9720a0d11dfc",
+    "id" : 598,
+    "name" : "sister",
+    "genders" : [ "Female" ]
+  }
+}, {
+  "uuid" : "3731d4b6-80f4-410b-baf7-2c0fcc38fe1f",
+  "id" : 498,
+  "individualAIsToBRelation" : {
+    "uuid" : "a081882c-6775-4caa-98cd-9720a0d11dfc",
+    "id" : 598,
+    "name" : "sister",
+    "genders" : [ "Female" ]
+  },
+  "individualBIsToARelation" : {
+    "uuid" : "a081882c-6775-4caa-98cd-9720a0d11dfc",
+    "id" : 598,
+    "name" : "sister",
+    "genders" : [ "Female" ]
+  }
+}, {
+  "uuid" : "8458bbe3-aa87-4c7c-b5e2-a139e01bd88f",
+  "id" : 499,
+  "individualAIsToBRelation" : {
+    "uuid" : "0d0b0e92-79d4-49c1-b33b-cf0508ea550c",
+    "id" : 601,
+    "name" : "grandfather",
+    "genders" : [ "Male" ]
+  },
+  "individualBIsToARelation" : {
+    "uuid" : "4474c0f3-9d35-4622-a65a-5688f633a274",
+    "id" : 599,
+    "name" : "grandson",
+    "genders" : [ "Male" ]
+  }
+}, {
+  "uuid" : "28edbf6e-98eb-4218-8950-01d97be476da",
+  "id" : 500,
+  "individualAIsToBRelation" : {
+    "uuid" : "8c382726-92be-4e3e-8b6e-2b032c5cd6a8",
+    "id" : 602,
+    "name" : "grandmother",
+    "genders" : [ "Female" ]
+  },
+  "individualBIsToARelation" : {
+    "uuid" : "4474c0f3-9d35-4622-a65a-5688f633a274",
+    "id" : 599,
+    "name" : "grandson",
+    "genders" : [ "Male" ]
+  }
+}, {
+  "uuid" : "1724ff11-95c5-42c2-b697-f40f1105d696",
+  "id" : 501,
+  "individualAIsToBRelation" : {
+    "uuid" : "0d0b0e92-79d4-49c1-b33b-cf0508ea550c",
+    "id" : 601,
+    "name" : "grandfather",
+    "genders" : [ "Male" ]
+  },
+  "individualBIsToARelation" : {
+    "uuid" : "82691c26-c042-48d4-972b-664bcb348fc4",
+    "id" : 600,
+    "name" : "granddaughter",
+    "genders" : [ "Female" ]
+  }
+}, {
+  "uuid" : "ace301c1-2815-42c1-943e-c7b44f64b376",
+  "id" : 502,
+  "individualAIsToBRelation" : {
+    "uuid" : "8c382726-92be-4e3e-8b6e-2b032c5cd6a8",
+    "id" : 602,
+    "name" : "grandmother",
+    "genders" : [ "Female" ]
+  },
+  "individualBIsToARelation" : {
+    "uuid" : "82691c26-c042-48d4-972b-664bcb348fc4",
+    "id" : 600,
+    "name" : "granddaughter",
+    "genders" : [ "Female" ]
+  }
+} ]

@@ -1,0 +1,7 @@
+[ {
+  "name" : "Avail Service",
+  "uuid" : "19d37597-1471-409e-972d-311d18f1d1d7",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false
+} ]

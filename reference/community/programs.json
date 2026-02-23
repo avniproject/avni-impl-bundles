@@ -1,0 +1,114 @@
+[ {
+  "name" : "Mobile Medical Unit",
+  "uuid" : "707cbfcf-5313-43e5-92d5-e176dacb1504",
+  "colour" : "#ebf005",
+  "voided" : false,
+  "active" : null,
+  "enrolmentEligibilityCheckRule" : "",
+  "enrolmentSummaryRule" : "",
+  "enrolmentEligibilityCheckDeclarativeRule" : null,
+  "manualEligibilityCheckRequired" : false,
+  "showGrowthChart" : false,
+  "manualEnrolmentEligibilityCheckRule" : "",
+  "manualEnrolmentEligibilityCheckDeclarativeRule" : null,
+  "allowMultipleEnrolments" : false
+}, {
+  "name" : "Sickle Cell",
+  "uuid" : "e93303fa-f465-4db7-a945-d4fd6295f2b9",
+  "colour" : "darkred",
+  "voided" : false,
+  "active" : null,
+  "enrolmentEligibilityCheckRule" : null,
+  "enrolmentSummaryRule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n    const summaries = [];\n    const programEnrolment = params.programEnrolment;\n\n\n    \n\n\n    const hb = programEnrolment.findObservationInEntireEnrolment('Hb');\n    if (!_.isNil(hb) && !_.isEqual(hb, undefined)) {\n        summaries.push({name: 'Hb', value: hb.getValue()});\n    }\n    const bloodGroup = programEnrolment.findObservationInEntireEnrolment('Blood group');\n    if (!_.isNil(bloodGroup) && !_.isEqual(bloodGroup, undefined)) {\n        summaries.push({name: 'Blood group', value: bloodGroup.getValue()});\n    }\n    const genotype = programEnrolment.findLatestObservationInEntireEnrolment('Hemoglobin genotype');\n    if (!_.isNil(genotype) && !_.isEqual(genotype, undefined)) {\n        summaries.push({name: 'Hemoglobin genotype', value: genotype.getValue()});\n    } else {\n        const electrophoresisResult = programEnrolment.findObservationInEntireEnrolment('Electrophoresis result');\n        if (!_.isNil(electrophoresisResult) && !_.isEqual(electrophoresisResult, undefined)) {\n            summaries.push({name: 'Electrophoresis result', value: electrophoresisResult.getValue()});\n        }\n    }\n\n    const hydroxyureaDate = programEnrolment.findLatestObservationFromEncounters('Date of starting of Hydroxyurea');\n    let followUpEncounterDate;\n    //  let followup;\n    const encounters = programEnrolment.encounters;\n    let followup = _.filter(encounters, e => e.encounterType.uuid === 'e6ee694a-d70f-413c-b0f7-3520e7cdb6af')\n    if (!_.isEmpty(followup)) {\n        followUpEncounterDate = followup[0].encounterDateTime;\n    }\n\n\n    const hBDate = programEnrolment.findLatestObservationFromEncounters('Date of HB');\n    if (!_.isNil(hBDate) || !_.isNil(hydroxyureaDate)) {\n        var scheduleDate;\n        if (!_.isNil(hBDate) && !_.isEqual(hBDate, undefined)) {\n            scheduleDate = imports.moment(hBDate.getValue()).add(1, 'months').toDate();\n            if ( imports.moment().isSameOrBefore(scheduleDate, 'day'))\n                summaries.push({name: 'HB Schedule', value: imports.moment(scheduleDate).format(\"DD/MMM/YYYY\")});\n            else\n                summaries.push({name: 'HB Test Status', value: 'Overdue'});\n        } else {\n            if (!_.isNil(followUpEncounterDate) && !_.isEqual(followUpEncounterDate, undefined)) {\n                scheduleDate = followUpEncounterDate;\n                summaries.push({name: 'HB Schedule', value: imports.moment(scheduleDate).format(\"DD/MMM/YYYY\")});\n            }\n        }\n    }\n\n    const creatinineDate = programEnrolment.findLatestObservationFromEncounters('Date of Creatinine');\n    if (!_.isNil(creatinineDate) || !_.isNil(hydroxyureaDate)) {\n        var scheduleDate;\n        if (!_.isNil(creatinineDate) && !_.isEqual(creatinineDate, undefined)) {\n            scheduleDate = imports.moment(creatinineDate.getValue()).add(12, 'months').toDate();\n            if (imports.moment().isSameOrBefore(scheduleDate, 'day'))\n                summaries.push({name: 'Creatinine Schedule', value: imports.moment(scheduleDate).format(\"DD/MMM/YYYY\")});\n            else\n                summaries.push({name: 'Creatinine Test Status', value: 'Overdue'});\n\n        } else {\n            if (!_.isNil(followUpEncounterDate)) {\n                scheduleDate = followUpEncounterDate;\n                summaries.push({name: 'Creatinine Schedule', value: imports.moment(scheduleDate).format(\"DD/MMM/YYYY\")});\n            }\n        }\n    }\n\n    const eyeExaminationDate = programEnrolment.findLatestObservationFromEncounters('Date of Eye examination');\n    if (!_.isNil(eyeExaminationDate) || !_.isNil(hydroxyureaDate)) {\n        var scheduleDate;\n        if (!_.isNil(eyeExaminationDate) && !_.isEqual(eyeExaminationDate, undefined)) {\n            scheduleDate = imports.moment(eyeExaminationDate.getValue()).add(12, 'months').toDate();\n            if (imports.moment().isSameOrBefore(scheduleDate, 'day'))\n                summaries.push({\n                    name: 'Eye Examination Schedule',\n                    value: imports.moment(scheduleDate).format(\"DD/MMM/YYYY\")\n                });\n            else\n                summaries.push({name: 'Eye Examination Status', value: 'Overdue'});\n\n        } else {\n            if (!_.isNil(followUpEncounterDate)) {\n                scheduleDate = followUpEncounterDate;\n                summaries.push({\n                    name: 'Eye Examination Schedule',\n                    value: imports.moment(scheduleDate).format(\"DD/MMM/YYYY\")\n                });\n            }\n        }\n\n    }\n\n\n    const cbcDate = programEnrolment.findLatestObservationFromEncounters('Date of CBC Test');\n    if (!_.isNil(cbcDate) || !_.isNil(hydroxyureaDate)) {\n        var scheduleDate;\n        if (!_.isNil(cbcDate) && !_.isEqual(cbcDate, undefined)) {\n            scheduleDate =  imports.moment(cbcDate.getValue()).add(3, 'months').toDate();\n            if (imports.moment().isSameOrBefore(scheduleDate, 'day'))\n                summaries.push({name: 'CBC Schedule', value: imports.moment(scheduleDate).format(\"DD/MMM/YYYY\")});\n            else\n                summaries.push({name: 'CBC Test Status', value: 'Overdue'});\n        } else {\n            if (!_.isNil(followUpEncounterDate)) {\n                scheduleDate = followUpEncounterDate;\n                summaries.push({name: 'CBC Schedule', value: imports.moment(scheduleDate).format(\"DD/MMM/YYYY\")});\n            }\n        }\n    }\n\n    const lftDate = programEnrolment.findLatestObservationFromEncounters('Date of Liver Function Test');\n    if (!_.isNil(lftDate) || !_.isNil(hydroxyureaDate)) {\n        var scheduleDate;\n        if (!_.isNil(lftDate) && !_.isEqual(lftDate, undefined)) {\n            scheduleDate =   imports.moment(lftDate.getValue()).add(12, 'months').toDate();\n            if (imports.moment().isSameOrBefore(scheduleDate, 'day'))\n                summaries.push({\n                    name: 'Liver Function Test Schedule',\n                    value: imports.moment(scheduleDate).format(\"DD/MMM/YYYY\")\n                });\n            else\n                summaries.push({name: 'Liver Function Test Status', value: 'Overdue'});\n\n        } else {\n            if (!_.isNil(followUpEncounterDate)) {\n                scheduleDate = followUpEncounterDate;\n                summaries.push({\n                    name: 'Liver Function Test Schedule',\n                    value: imports.moment(scheduleDate).format(\"DD/MMM/YYYY\")\n                });\n            }\n        }\n\n    }\n\n\n    return summaries;\n};",
+  "enrolmentEligibilityCheckDeclarativeRule" : null,
+  "manualEligibilityCheckRequired" : false,
+  "showGrowthChart" : false,
+  "manualEnrolmentEligibilityCheckRule" : null,
+  "manualEnrolmentEligibilityCheckDeclarativeRule" : null,
+  "allowMultipleEnrolments" : false
+}, {
+  "name" : "Epilepsy MP",
+  "uuid" : "69a436a4-e6fb-42ed-a75c-d58d793f693e",
+  "colour" : "#1c62d3",
+  "voided" : false,
+  "active" : null,
+  "enrolmentEligibilityCheckRule" : "",
+  "enrolmentSummaryRule" : "",
+  "enrolmentEligibilityCheckDeclarativeRule" : null,
+  "manualEligibilityCheckRequired" : false,
+  "showGrowthChart" : false,
+  "manualEnrolmentEligibilityCheckRule" : "",
+  "manualEnrolmentEligibilityCheckDeclarativeRule" : null,
+  "allowMultipleEnrolments" : false
+}, {
+  "name" : "Maternal Health",
+  "uuid" : "5e927691-06c9-455a-b2fb-c300cea84f2e",
+  "colour" : "#10f041",
+  "voided" : false,
+  "active" : null,
+  "enrolmentEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const moment = imports.moment;\n  let eligibility = true;\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({individual}).when.gender.equals(\"Female\").and.when.ageInYears.greaterThan(12).and.when.ageInYears.lessThan(50).matches();\n  \n  const condition21 = new imports.rulesConfig.RuleCondition({individual}).when.valueInRegistration(\"c254e204-3a7c-4e13-bac2-abfca94c9528\").containsAnswerConceptName(\"b86a3c8e-1a51-41dd-a53d-8769302addac\").matches();\n  \n  eligibility = condition11 || condition21 ;\n  \n  return eligibility;\n};",
+  "enrolmentSummaryRule" : "",
+  "enrolmentEligibilityCheckDeclarativeRule" : [ {
+    "actions" : [ {
+      "actionType" : "showProgram"
+    }, { } ],
+    "conditions" : [ {
+      "conjunction" : "or",
+      "compoundRule" : {
+        "rules" : [ {
+          "lhs" : {
+            "type" : "gender"
+          },
+          "rhs" : {
+            "type" : "value",
+            "value" : "Female"
+          },
+          "operator" : "equals"
+        }, {
+          "lhs" : {
+            "type" : "ageInYears"
+          },
+          "rhs" : {
+            "type" : "value",
+            "value" : 12
+          },
+          "operator" : "greaterThan"
+        }, {
+          "lhs" : {
+            "type" : "ageInYears"
+          },
+          "rhs" : {
+            "type" : "value",
+            "value" : 50
+          },
+          "operator" : "lessThan"
+        } ],
+        "conjunction" : "and"
+      }
+    }, {
+      "compoundRule" : {
+        "rules" : [ {
+          "lhs" : {
+            "type" : "concept",
+            "scope" : "registration",
+            "conceptName" : "Type of person screened",
+            "conceptUuid" : "c254e204-3a7c-4e13-bac2-abfca94c9528",
+            "conceptDataType" : "Coded"
+          },
+          "rhs" : {
+            "type" : "answerConcept",
+            "answerConceptNames" : [ "Pregnant women" ],
+            "answerConceptUuids" : [ "b86a3c8e-1a51-41dd-a53d-8769302addac" ]
+          },
+          "operator" : "containsAnswerConceptName"
+        } ],
+        "conjunction" : "and"
+      }
+    } ]
+  } ],
+  "manualEligibilityCheckRequired" : false,
+  "showGrowthChart" : false,
+  "manualEnrolmentEligibilityCheckRule" : "",
+  "manualEnrolmentEligibilityCheckDeclarativeRule" : null,
+  "allowMultipleEnrolments" : false
+} ]

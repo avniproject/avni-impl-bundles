@@ -1,0 +1,23 @@
+[ {
+  "uuid" : "b0d4612d-fdea-4df8-a18a-f381e1774366",
+  "voided" : false,
+  "dashboardUUID" : "ad815bc3-87a2-4a0e-a3a5-83941b1acdfc",
+  "groupUUID" : "42872f1d-4803-43be-b6d7-9f318eb2aa70",
+  "groupName" : "Administrators",
+  "dashboardName" : "Home",
+  "dashboardDescription" : "",
+  "groupOneOfTheDefaultGroups" : true,
+  "primaryDashboard" : false,
+  "secondaryDashboard" : false
+}, {
+  "uuid" : "f20cb21c-7da5-4c2c-9d5d-4746b4f4caee",
+  "voided" : false,
+  "dashboardUUID" : "ad815bc3-87a2-4a0e-a3a5-83941b1acdfc",
+  "groupUUID" : "f34d0e50-a0e5-47dc-a2e9-b891527d47e3",
+  "groupName" : "Everyone",
+  "dashboardName" : "Home",
+  "dashboardDescription" : "",
+  "groupOneOfTheDefaultGroups" : true,
+  "primaryDashboard" : true,
+  "secondaryDashboard" : false
+} ]

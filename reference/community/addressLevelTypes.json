@@ -1,0 +1,93 @@
+[ {
+  "uuid" : "71b4acc1-392b-49f8-9ac4-6a31d17b08ed",
+  "id" : 300,
+  "name" : "District",
+  "level" : 4.0
+}, {
+  "uuid" : "74593ddd-013d-49ba-bb90-1a6a49766245",
+  "id" : 301,
+  "name" : "Block",
+  "level" : 3.0,
+  "parent" : {
+    "uuid" : "71b4acc1-392b-49f8-9ac4-6a31d17b08ed"
+  }
+}, {
+  "uuid" : "aa27821f-7379-45ee-a83d-1c64602b009b",
+  "id" : 2051,
+  "name" : "Health and Wellness Center",
+  "level" : 2.5,
+  "parent" : {
+    "uuid" : "74593ddd-013d-49ba-bb90-1a6a49766245"
+  }
+}, {
+  "uuid" : "c8b37bdb-a9a7-418c-881c-0e7649b9707f",
+  "id" : 302,
+  "name" : "Village",
+  "level" : 2.0,
+  "parent" : {
+    "uuid" : "aa27821f-7379-45ee-a83d-1c64602b009b"
+  }
+}, {
+  "uuid" : "8a1718c8-d81f-4ecc-8fa2-f5c0e8ce91a2",
+  "id" : 43,
+  "name" : "Village list (voided~2029)",
+  "level" : 1.0,
+  "voided" : true
+}, {
+  "uuid" : "d0b65584-3e81-4a8f-b470-48b7165fa922",
+  "id" : 272,
+  "name" : "���sn (voided~2022)",
+  "level" : 6.0,
+  "voided" : true
+}, {
+  "uuid" : "05f6912c-dc02-48b8-b480-83baab7e637e",
+  "id" : 273,
+  "name" : "District~(voided 273)",
+  "level" : 5.0,
+  "parent" : {
+    "uuid" : "d0b65584-3e81-4a8f-b470-48b7165fa922"
+  },
+  "voided" : true
+}, {
+  "uuid" : "ede0600f-25aa-4c88-9421-45b862d5d9cb",
+  "id" : 274,
+  "name" : "Block~(voided 274)",
+  "level" : 4.0,
+  "parent" : {
+    "uuid" : "05f6912c-dc02-48b8-b480-83baab7e637e"
+  },
+  "voided" : true
+}, {
+  "uuid" : "4909307b-0c78-456f-86a6-95583c8e5a95",
+  "id" : 275,
+  "name" : "Level (voided~2025)",
+  "level" : 3.0,
+  "parent" : {
+    "uuid" : "ede0600f-25aa-4c88-9421-45b862d5d9cb"
+  },
+  "voided" : true
+}, {
+  "uuid" : "9e914cba-03db-45d9-9f4b-c22990e767c5",
+  "id" : 276,
+  "name" : "Village name (voided~2026)",
+  "level" : 2.0,
+  "parent" : {
+    "uuid" : "4909307b-0c78-456f-86a6-95583c8e5a95"
+  },
+  "voided" : true
+}, {
+  "uuid" : "b102fd6e-5408-49a4-8580-15fc154dfd37",
+  "id" : 277,
+  "name" : "Tru (voided~2027)",
+  "level" : 1.0,
+  "parent" : {
+    "uuid" : "9e914cba-03db-45d9-9f4b-c22990e767c5"
+  },
+  "voided" : true
+}, {
+  "uuid" : "2c5197d3-01d4-4aeb-b8c4-5a0a5fa8562c",
+  "id" : 42,
+  "name" : "School Screening (voided~2028)",
+  "level" : 2.0,
+  "voided" : true
+} ]

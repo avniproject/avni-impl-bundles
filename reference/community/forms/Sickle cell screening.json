@@ -1,0 +1,2006 @@
+{
+  "name" : "Sickle cell screening",
+  "uuid" : "0723fd75-dc66-4aae-a3c9-31a09c9c4c7a",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "e21264d1-1dd7-4a8f-a949-364d2d4fa873",
+    "name" : "Sickle cell screening history",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Whether old report available?",
+      "uuid" : "26d3b3fa-03f9-44f2-a278-7657aa2fc0b7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Whether old report available",
+        "uuid" : "843cec0f-5f7d-451f-be22-68c7167ffc64",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Already Diagnosed from ?",
+      "uuid" : "3fef298f-7d57-4bc4-8b07-0c9a88f81a6f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Already Diagnosed from - Place name?",
+        "uuid" : "5b79c73f-6b63-40c9-a572-58539fbed2be",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Shahdol Medical College",
+          "uuid" : "ddde9150-aca0-47c4-8d1f-94f578e3a803",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "NIRTH ICMR Jabalpur",
+          "uuid" : "b5ecc4c3-316c-4a0d-bad0-2c98dd5f2e16",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC level",
+          "uuid" : "1e7d2a13-2dbd-433f-a7f3-8f10ae4e3416",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "DH Shahdol",
+          "uuid" : "8e36a4dc-be50-4e6f-92e9-d76fc819ce2d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Private",
+          "uuid" : "bd21f0b6-b64c-452e-82dc-0b508c864bdb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "DH Dindori",
+          "uuid" : "02df5519-1496-4ea5-9ae0-4ee150b251c6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "SCIC Raipur",
+          "uuid" : "4fa001b3-ea63-495c-bd61-60d854d54649",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Bilaspur",
+          "uuid" : "5284f12b-af50-4be1-86d3-111652858021",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Narmada Traders (POCT)",
+          "uuid" : "6d6b89c1-28d9-46d7-bb6c-92acbc557eea",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "JSS Ganiyari",
+          "uuid" : "d7d3bf68-7134-4153-86e1-bb0e4966440c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "DH Anuppur",
+          "uuid" : "5ae1697e-d67f-4e26-a209-74d4721f2013",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"843cec0f-5f7d-451f-be22-68c7167ffc64\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Whether old report available",
+                "conceptUuid" : "843cec0f-5f7d-451f-be22-68c7167ffc64",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Result from old report",
+      "uuid" : "011ea26d-cc18-4e72-9e9e-a08cb218b50c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Result from old sickle cell test report",
+        "uuid" : "3f0d938b-d7e6-4372-b2a0-e787430880f8",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Other (HPLC)",
+          "uuid" : "7472ce22-441c-4f07-9049-d53c943308e0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AS",
+          "uuid" : "77ee8a6a-2a01-421f-85ca-fc0ab39abcdb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "SS",
+          "uuid" : "3648a650-2f3e-4c2c-a899-c0a8212aace1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AA",
+          "uuid" : "daa7c62f-c663-4981-a134-1f662b3036d0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Beta Thal",
+          "uuid" : "7f32dd91-78d3-4f5c-b43e-a00bff7d6055",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Unconfirmed (Electrophoresis)",
+          "uuid" : "4dafecda-4c47-4962-a276-32e9da36515d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "S-Beta thal - trait",
+          "uuid" : "e71107e7-56ed-4dcb-9915-5276e8a2df9e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "S-Beta thal",
+          "uuid" : "75ea50bb-e64d-4734-af99-38d6945242af",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Beta thal trait",
+          "uuid" : "b07f08a5-4cbd-458b-bf98-171c48a62b4a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Whether old report available\").is.yes;\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Registration number",
+      "uuid" : "584ebb2b-82d7-45bf-8490-5d314954c2a3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Registration number",
+        "uuid" : "d695a22f-82b0-4f4f-9227-a4f3344d5dcf",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"3f0d938b-d7e6-4372-b2a0-e787430880f8\").containsAnswerConceptName(\"3648a650-2f3e-4c2c-a899-c0a8212aace1\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Result from old sickle cell test report",
+                "conceptUuid" : "3f0d938b-d7e6-4372-b2a0-e787430880f8",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "SS" ],
+                "answerConceptUuids" : [ "3648a650-2f3e-4c2c-a899-c0a8212aace1" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "or"
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "HPLC Other result details",
+      "uuid" : "30862954-22b1-423f-affa-7b0d08385b40",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "HPLC Other result details",
+        "uuid" : "46af77ba-d316-422d-b15c-35d1cb118cd7",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Result from old sickle cell test report\").containsAnswerConceptName(\"Other (HPLC)\");\n  return statusBuilder.build();\n};",
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Sickle cell screening history"
+  }, {
+    "uuid" : "f2ea4c49-47e9-40f2-9cdc-b923bac8a31c",
+    "name" : "Lab test Results",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Solubility result",
+      "uuid" : "f137192d-dc8c-4604-9d09-c8446ca86f68",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Solubility result",
+        "uuid" : "d41b5986-e8b1-41dc-8685-beb4d86abf79",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Positive",
+          "uuid" : "479cd95a-54ef-4818-b84a-09b478fc68b8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Negative",
+          "uuid" : "ad1f0481-a8ed-411a-ac00-d0435a670269",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Whether electrophoresis result available",
+      "uuid" : "0c286c21-f04d-4fbf-a047-386d835726fe",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Whether Electrophoresis result available",
+        "uuid" : "508c57f9-da72-4d39-ba89-25af12929dda",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Electrophoresis result",
+      "uuid" : "69be09d5-dedf-4016-83b9-5d14cab722fd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Electrophoresis result",
+        "uuid" : "0cb6e694-fc5f-45cb-ad71-0bd22ef8b381",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "AA",
+          "uuid" : "daa7c62f-c663-4981-a134-1f662b3036d0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AS",
+          "uuid" : "77ee8a6a-2a01-421f-85ca-fc0ab39abcdb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "SS",
+          "uuid" : "3648a650-2f3e-4c2c-a899-c0a8212aace1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Whether HPLC result available",
+      "uuid" : "09b459c7-fdcf-4e27-9bcf-eb8797662bc5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Whether HPLC result available",
+        "uuid" : "645d4c3d-8b8a-4de6-85f2-87b5ba73fe86",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "HPLC result",
+      "uuid" : "b173c543-d004-4c07-8629-96c0adb1d1f6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "HPLC result",
+        "uuid" : "93eb5a4d-b399-46d3-86d0-6fd4d6443d44",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "S-Beta thal",
+          "uuid" : "75ea50bb-e64d-4734-af99-38d6945242af",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Beta thal trait",
+          "uuid" : "b07f08a5-4cbd-458b-bf98-171c48a62b4a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "SS",
+          "uuid" : "3648a650-2f3e-4c2c-a899-c0a8212aace1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AS",
+          "uuid" : "77ee8a6a-2a01-421f-85ca-fc0ab39abcdb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Beta Thal",
+          "uuid" : "7f32dd91-78d3-4f5c-b43e-a00bff7d6055",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AA",
+          "uuid" : "daa7c62f-c663-4981-a134-1f662b3036d0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "S-Beta thal - trait",
+          "uuid" : "e71107e7-56ed-4dcb-9915-5276e8a2df9e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "HPLC Other result details",
+      "uuid" : "fa1be24a-f1f7-4b8c-ba18-633065768bed",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "HPLC Other result details",
+        "uuid" : "46af77ba-d316-422d-b15c-35d1cb118cd7",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "voided" : true,
+    "timed" : false,
+    "display" : "Lab test Results"
+  }, {
+    "uuid" : "9ed15d8f-ae75-4a3f-bf53-564ba44f58c9",
+    "name" : "Blood Transfusion Check",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "BT check reason",
+      "uuid" : "861bd6ce-ecae-4110-b0e2-ed8b4b95f4e8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Placeholder for counselling form element",
+        "uuid" : "b4e5a662-97bf-4846-b9b7-9baeab4d89c4",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n   statusBuilder.show().when.valueInEncounter(\"Whether old report available\").is.no\n   .or.valueInEncounter(\"Result from old sickle cell test report\").containsAnswerConceptName('Unconfirmed (Electrophoresis)');\n  return statusBuilder.build();\n};",
+      "mandatory" : false
+    }, {
+      "name" : "BT done in last 3 months?",
+      "uuid" : "d787198b-523c-4d22-9645-914aa8d49dd4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Whether BT done in last 3 months",
+        "uuid" : "c1a4e2f9-8dbf-431d-bdbb-19644d7f3eba",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n   statusBuilder.show().when.valueInEncounter(\"Whether old report available\").is.no\n   .or.valueInEncounter(\"Result from old sickle cell test report\").containsAnswerConceptName('Unconfirmed (Electrophoresis)');\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "BT date",
+      "uuid" : "2f17015c-ff8b-4b62-94f5-bfa68f714c3d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "BT date",
+        "uuid" : "87dbdfc1-2bdf-4a8d-9933-a48b9a40ff8a",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n   statusBuilder.show().when.valueInEncounter(\"Whether BT done in last 3 months\").is.yes;\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Collect sample for hb solubility and electrophoresis",
+      "uuid" : "600c0473-48e0-401d-a64d-fa2a70894af2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Placeholder for counselling form element",
+        "uuid" : "b4e5a662-97bf-4846-b9b7-9baeab4d89c4",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  \n  \n  statusBuilder.show().when.valueInEncounter(\"Whether BT done in last 3 months\").is.no\n  .and.valueInEncounter(\"Whether old report available\").is.no;\n\n  \n  return statusBuilder.build();\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Collect sample for HPLC",
+      "uuid" : "69634e2c-0ab4-407c-bcc7-14b88cb7e142",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Placeholder for counselling form element",
+        "uuid" : "b4e5a662-97bf-4846-b9b7-9baeab4d89c4",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const formElement = params.formElement;\n    const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n    statusBuilder.show().when.valueInEncounter(\"Whether BT done in last 3 months\").is.no\n    .and.valueInEncounter(\"Result from old sickle cell test report\").containsAnswerConceptName(\"Unconfirmed (Electrophoresis)\");\n       \n    \n return statusBuilder.build();\n    \n};",
+      "mandatory" : false
+    }, {
+      "name" : "BT check failed revisit instruction",
+      "uuid" : "4ad7e726-29c6-4f5f-ac6d-6e570648ef4d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Placeholder for counselling form element",
+        "uuid" : "b4e5a662-97bf-4846-b9b7-9baeab4d89c4",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Whether BT done in last 3 months\").is.yes\n            .and.valueInEncounter(\"BT date\").is.defined;\n  return statusBuilder.build();\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Sample number",
+      "uuid" : "a9c260b4-a238-4a75-b7a1-5630fb021937",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Sample number",
+        "uuid" : "b0c9dcc7-2c4c-4fa6-9186-0bc11e753ac1",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const formElement = params.formElement;\n    const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n    const btDone = programEncounter.getObservationReadableValue(\"Whether BT done in last 3 months\");\n    const oldReport = programEncounter.getObservationReadableValue(\"Whether old report available\");\n\n    const eleResult = programEncounter.programEnrolment.getObservationReadableValueInEntireEnrolment(\"Electrophoresis result\");\n    const oldScResult = programEncounter.getObservationReadableValue(\"Result from old sickle cell test report\");\n    var value = '';\n\n    var visibility = false;\n    const progName = programEncounter.encounterType.name;\n\n    if ((_.isEqual(progName, 'Base screening') && _.isEqual(btDone, 'No') && _.isEqual(oldReport, 'No')  ) || (_.isEqual(btDone, 'No') && (_.isEqual(eleResult, 'Other') || _.isEqual(oldScResult, 'Unconfirmed (Electrophoresis)')))) {\n\n        value = programEncounter.programEnrolment.getObservationValue(\"8f852186-ccf1-4898-b581-99b37bcae2f1\");\n        visibility=true;\n\n    }\n\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value);\n\n};",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Blood Transfusion Check"
+  }, {
+    "uuid" : "e519cd15-1894-44f2-8b39-d635e9f1edd2",
+    "name" : "HB & Blood group",
+    "displayOrder" : 4.0,
+    "formElements" : [ {
+      "name" : "Hb",
+      "uuid" : "a0c833e1-27cf-418e-9d3f-b90f38c2be1e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Hb",
+        "uuid" : "f9ecabbc-2df2-4bfc-a6fa-aa417c50e11b",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 12.0,
+        "highNormal" : 15.5,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Hb range (Copper Sulphate method)",
+      "uuid" : "1d66e24b-ee1a-4017-8283-4c5ab79e0425",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Hb range (Copper Sulphate method)",
+        "uuid" : "732a1094-0fbc-48a3-86d6-aa3ba1daf4da",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Less than 7gm/dl",
+          "uuid" : "a1ef27d0-3601-48a4-b631-acac2bfdbfa2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "7 - 9 gm/dl",
+          "uuid" : "91b97fb3-b537-4820-935d-bb49b3768de0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "6 - 9 gm/dl",
+          "uuid" : "bba33e0a-83f6-4488-bfbc-e0b8ed65b110",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Greater than 11gm/dl",
+          "uuid" : "15126cb3-3d33-4061-a9b9-e509f45bcef2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "9 - 11 gm/dl",
+          "uuid" : "13f9cac9-994e-4aea-9d66-c4a998a75c09",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Less than 6gm/dl",
+          "uuid" : "0606518a-f735-45f2-a3fd-0222d1243d19",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "",
+      "mandatory" : false
+    }, {
+      "name" : "Blood group",
+      "uuid" : "0c994ce0-ba88-4bdc-9059-21b5cfdfd56c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Blood group",
+        "uuid" : "3493c80a-8af5-40e6-b598-8385c4db2bd7",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "B-",
+          "uuid" : "345712f0-1437-490e-a0d0-6ab6f795f2c6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not known",
+          "uuid" : "52910fb2-ec05-4943-8c71-6504d50e9b40",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "O-",
+          "uuid" : "2870bad6-c36a-4054-84f4-5c2314fe8c23",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "A+",
+          "uuid" : "da859a32-2850-4376-8f14-f49392f8e8cb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "O+",
+          "uuid" : "23629c90-8071-47b8-86c8-f060e03b8722",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AB-",
+          "uuid" : "a68bc952-8abc-44d6-a12b-76e8fdbc3ed3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AB+",
+          "uuid" : "3293d4f4-15e9-4fbe-8cad-d966a9a90385",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "B+",
+          "uuid" : "be517796-a3ea-4feb-ae1f-bdf6ef06f22b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "A-",
+          "uuid" : "69e4b4dc-be2d-476b-8ea5-567c71f57526",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  statusBuilder.show().when.latestValueInPreviousEncounters(\"Blood group\").is.notDefined\n  return statusBuilder.build();\n};",
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "HB & Blood group"
+  }, {
+    "uuid" : "4d7165c2-cce3-44d5-8198-3350b34a8e16",
+    "name" : "Field test results",
+    "displayOrder" : 5.0,
+    "formElements" : [ {
+      "name" : "Is solubility result available from field?",
+      "uuid" : "37fdcb83-1a76-430c-81be-78d3eb517117",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Whether prep and/or solubility result from field available",
+        "uuid" : "5a4cf5f3-5af8-46be-a14a-de205a070367",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n   statusBuilder.show().when.valueInEncounter(\"Whether BT done in last 3 months\").is.no\n   .and.valueInEncounter(\"Whether old report available\").is.no;\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Solubility result from field",
+      "uuid" : "a9d33ca5-9230-452e-87b1-95df0c3d52b6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Solubility result from field",
+        "uuid" : "66b7dc27-d719-4348-ac01-e8f6e7a3930a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Negative",
+          "uuid" : "ad1f0481-a8ed-411a-ac00-d0435a670269",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Positive",
+          "uuid" : "479cd95a-54ef-4818-b84a-09b478fc68b8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Whether prep and/or solubility result from field available\").is.yes;\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Send sample for electrophoresis",
+      "uuid" : "9e83464c-41c8-4566-98d1-03e19cc99e46",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Placeholder for counselling form element",
+        "uuid" : "b4e5a662-97bf-4846-b9b7-9baeab4d89c4",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Whether prep and/or solubility result from field available\").is.yes\n            .and.valueInEncounter(\"Solubility result from field\").containsAnswerConceptName(\"Positive\");\n  return statusBuilder.build();\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Send sample for solubility and electrophoresis",
+      "uuid" : "8e3738ba-c9b3-4664-9e31-56f03e3b77d5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Placeholder for counselling form element",
+        "uuid" : "b4e5a662-97bf-4846-b9b7-9baeab4d89c4",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Whether prep and/or solubility result from field available\").is.no;\n  return statusBuilder.build();\n};",
+      "mandatory" : false
+    } ],
+    "rule" : "",
+    "timed" : false,
+    "display" : "Field test results"
+  }, {
+    "uuid" : "1660ec5b-e1f8-41b3-9bac-abfe2f97b240",
+    "name" : "Sample collection/shipment details",
+    "displayOrder" : 6.0,
+    "formElements" : [ {
+      "name" : "Sample number",
+      "uuid" : "3315bf0f-5216-4df4-8909-1a1d123be355",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Sample number",
+        "uuid" : "b0c9dcc7-2c4c-4fa6-9186-0bc11e753ac1",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Sample sent to",
+      "uuid" : "3a72bac4-bcf6-4503-aa0d-e7f68420bfde",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Laboratory",
+        "uuid" : "c392dcf2-c4c5-475f-a7c4-f84e9498b0df",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "CHC Kotma",
+          "uuid" : "cd056b81-7d9a-4fbd-9bf4-1303a5b4d090",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HPLC lab Bilaspur",
+          "uuid" : "9068e470-c670-4a93-a046-ff6d859c1dc5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lab CHC Karpa",
+          "uuid" : "6676e275-4d2d-4f13-ab38-31234f41d37a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lab CHC Rajendragram",
+          "uuid" : "d8fde700-29bd-4cc8-bd7d-d39b9f100fc1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "DH Dindori HPLC",
+          "uuid" : "b9f75e70-87b5-4640-ae11-ff34a6db28c8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "SCACM Lab, Anuppur",
+          "uuid" : "6bd47365-e913-43f4-9d66-2be4dce62a37",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "SCACM Nodal lab Dindori",
+          "uuid" : "bdf822bd-6b2d-4e40-afc5-60497ed99fb8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "DH Shahdol",
+          "uuid" : "8e36a4dc-be50-4e6f-92e9-d76fc819ce2d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "voided" : true,
+    "timed" : false,
+    "display" : "Sample collection/shipment details"
+  }, {
+    "uuid" : "c0beecac-aee1-4959-aecc-9383073be7f3",
+    "name" : "High risk pregnancy",
+    "displayOrder" : 7.0,
+    "formElements" : [ {
+      "name" : "Whether this is a high risk pregnancy",
+      "uuid" : "c3d8e7f0-8046-4eb0-8e3b-8faaaae9468d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Whether this is a high risk pregnancy",
+        "uuid" : "cecda0a9-869d-4c3c-8a65-4e343777eafe",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n   statusBuilder.show().when.valueInRegistration(\"Type of person screened\").containsAnswerConceptName(\"Pregnant women\");\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Medical history",
+      "uuid" : "7fe62b31-7f65-4f3b-b3e4-5ea0c8ef8bf2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Medical history",
+        "uuid" : "2991127b-7064-4027-a030-4a3a8d0e8aa7",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "RTI (Reproductive tract syndrome)/STI (Sexually transmitted disease)",
+          "uuid" : "35c6e43d-acc5-4980-93de-ce1cbd6cd402",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Syphilis",
+          "uuid" : "27a7116c-0cd9-40ed-a17a-76462ef78e63",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 17.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HIV/AIDS",
+          "uuid" : "8425af99-4a07-4d99-97b2-cf955713a560",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Epilepsy",
+          "uuid" : "a34bf7a0-4d55-41fa-855a-0b8094f369f7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Renal Disease",
+          "uuid" : "2e86955f-0d81-4e80-a1f4-255b3c186bec",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "TB",
+          "uuid" : "ca8a5f57-c409-47ad-8acf-921cdd0fc191",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 18.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hepatitis B Positive",
+          "uuid" : "f9b654e6-628b-4bbf-b3ee-2adc5ab7ea1c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 20.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Diabetes",
+          "uuid" : "674f348f-5075-4c85-8bc2-9edfdee27505",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Heart-related Diseases",
+          "uuid" : "712e683a-337d-49bd-a3d7-f7b0e1b8e22e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other Medical/ Surgical Condition",
+          "uuid" : "bcf88019-5cf6-44c6-9e13-16c7e93eef4c",
+          "dataType" : "Text",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Asthma",
+          "uuid" : "3d6fcc5e-fb31-4222-aa69-a02d43ff91cf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Thalassemia",
+          "uuid" : "70866aba-d585-48ba-993c-1fa86498751c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 19.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hypothyroidism/ Abnormal Thyroid Function",
+          "uuid" : "d7da8b6c-6728-4aa3-9307-e06acc888aa7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 21.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Anaemia",
+          "uuid" : "43ea47d8-8c92-4564-a9df-eee28191f85c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hypertension",
+          "uuid" : "998d1bae-05d8-47b9-89b8-0254829f238f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sickle Cell Diagnosis",
+          "uuid" : "fa81ebfc-2e4f-4547-b8f7-1a405fe7e401",
+          "dataType" : "Coded",
+          "answers" : [ {
+            "name" : "AS",
+            "uuid" : "77ee8a6a-2a01-421f-85ca-fc0ab39abcdb",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 1.0,
+            "unique" : true,
+            "active" : true,
+            "media" : [ ]
+          }, {
+            "name" : "SS",
+            "uuid" : "3648a650-2f3e-4c2c-a899-c0a8212aace1",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 0.0,
+            "unique" : true,
+            "active" : true,
+            "media" : [ ]
+          }, {
+            "name" : "Negative",
+            "uuid" : "ad1f0481-a8ed-411a-ac00-d0435a670269",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 2.0,
+            "unique" : true,
+            "active" : true,
+            "media" : [ ]
+          } ],
+          "order" : 14.0,
+          "abnormal" : true,
+          "active" : true,
+          "keyValues" : [ ],
+          "media" : [ ]
+        }, {
+          "name" : "Sickle cell disease SS",
+          "uuid" : "705b3ef7-e41a-4954-bc3f-9556eb002f3d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "IVF/ ETC",
+          "uuid" : "9ae40491-2af6-4b6c-9d74-c08b06a54ae8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Nephrotic syndrome",
+          "uuid" : "5a798bac-6417-4b36-98c8-13d4380aa69e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sickle Cell (voided~255694)",
+          "uuid" : "37acc93a-8416-4440-ba68-d61ac4ba4c5f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"cecda0a9-869d-4c3c-8a65-4e343777eafe\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").and.when.latestValueInPreviousEncounters(\"2991127b-7064-4027-a030-4a3a8d0e8aa7\").notDefined.matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Whether this is a high risk pregnancy",
+                "conceptUuid" : "cecda0a9-869d-4c3c-8a65-4e343777eafe",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            }, {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "latestInPreviousEncounters",
+                "conceptName" : "Medical history",
+                "conceptUuid" : "2991127b-7064-4027-a030-4a3a8d0e8aa7",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : { },
+              "operator" : "notDefined"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Other medical history",
+      "uuid" : "668d8f2f-41a1-4194-9435-be2f52aa2c9f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other medical history",
+        "uuid" : "451f476d-f6b3-42c1-b1ba-f901a9051233",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"2991127b-7064-4027-a030-4a3a8d0e8aa7\").containsAnswerConceptName(\"05ea583c-51d2-412d-ad00-06c432ffe538\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medical history",
+                "conceptUuid" : "2991127b-7064-4027-a030-4a3a8d0e8aa7",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "05ea583c-51d2-412d-ad00-06c432ffe538" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Complications in past pregnancy",
+      "uuid" : "57a346e1-9a14-4ef2-b0ed-d51050e42428",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Complications in past pregnancy",
+        "uuid" : "35c34397-ebbf-492b-b504-f296836e529d",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 22.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Multiple abortions",
+          "uuid" : "8bb26585-6a85-41c6-ad23-88cca95283be",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Caesarean Section",
+          "uuid" : "f5192c76-f772-4e84-8fea-16d980de15bc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Neonatal death within first 28 days",
+          "uuid" : "58146bb8-9fbe-439b-a472-08e17a8cd4ba",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pregnancy induced hypertension",
+          "uuid" : "5a738df9-b09a-4e7d-b683-189a9cdabcad",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Epilepsy",
+          "uuid" : "a34bf7a0-4d55-41fa-855a-0b8094f369f7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Previous Still Birth",
+          "uuid" : "937a4d2a-7e38-4ca5-8309-113199d4a27e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Severe Anemia",
+          "uuid" : "1aff631c-e487-4202-a862-122b45168ac6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 19.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Blood Group Negative of Child",
+          "uuid" : "73aafba5-f2ae-4ac7-bb68-4a28f2c5f79f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pre Eclampsia",
+          "uuid" : "30ab8f94-0f0d-46d4-ad6b-0082d0327db4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Obstructed Labour",
+          "uuid" : "3654f7c6-e515-4653-8298-50dfb54d2152",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ante Partum hemorrhage (APH)",
+          "uuid" : "bbcab554-15c0-424f-a86f-e12a9ad38a53",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Seizures",
+          "uuid" : "f728efe5-6620-424a-ac91-ad3efe43df97",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 18.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Twins",
+          "uuid" : "d4943a59-16da-45e1-98c1-354c710fdbc0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 20.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PIH (pregnancy induced hypertension)",
+          "uuid" : "9bc67a6f-71ad-4227-aac5-6dfaa0ec9bf3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Low Birth Weight Baby",
+          "uuid" : "1486f5ef-928c-4069-ac10-8e8e1ce904e3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PPH (postpartum haemorrhage)",
+          "uuid" : "4ed8b24e-e031-4289-9c1e-70bde07a80a4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Preterm (<28 weeks)",
+          "uuid" : "a382978b-6ae5-4320-8873-7ee80d8c0657",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Gestational Diabetes (GDM)",
+          "uuid" : "f25f4119-e473-4226-8455-3b53cd2581b6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Deformities at birth",
+          "uuid" : "35d4d5db-6715-4ec2-91d8-b483e4c1fd48",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Retained Placenta",
+          "uuid" : "d211703c-beab-40f3-9e87-a271759c5ec9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 17.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hypertensive Disease in Pregnancy",
+          "uuid" : "388b6585-988d-4f36-a937-782012675168",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 21.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "MultiSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n      statusBuilder.show().when.valueInEncounter(\"Whether this is a high risk pregnancy\").is.yes\n            .and.latestValueInPreviousEncounters(\"Complications in past pregnancy\").is.notDefined;\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Other complications in past pregnancy",
+      "uuid" : "d4fc4e4d-ee8e-469f-96cc-47140b5247ef",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other complications in past pregnancy",
+        "uuid" : "d28efc6f-e38a-4edb-9d62-2250da678b9b",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n statusBuilder.show().when.valueInEncounter(\"Complications in past pregnancy\").containsAnswerConceptName(\"Other\");\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Danger signs in current pregnancy",
+      "uuid" : "61b18bf0-524a-490a-b20b-fe5ffed1fef6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Danger signs in current pregnancy",
+        "uuid" : "ae2fd3ca-1305-4b7d-ac1d-32f59af3e30a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Ante Partum hemorrhage (APH)",
+          "uuid" : "bbcab554-15c0-424f-a86f-e12a9ad38a53",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Eclampsia",
+          "uuid" : "489f07e5-d9e1-478a-969d-3acad587a15e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Anemia",
+          "uuid" : "268fa632-288e-44ad-ab52-774bbd7a2700",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "MUAC<21 cms",
+          "uuid" : "51f14185-4c81-4386-9806-4d7659cd4146",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Diabetes",
+          "uuid" : "674f348f-5075-4c85-8bc2-9edfdee27505",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Multiple foetuses",
+          "uuid" : "c99f5dc0-7dc7-410c-bb4a-997666ac312b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hypertension",
+          "uuid" : "998d1bae-05d8-47b9-89b8-0254829f238f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Smelly Blood flow",
+          "uuid" : "679f6b4e-0c19-4599-81fb-510e503c2bf7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Seizures",
+          "uuid" : "f728efe5-6620-424a-ac91-ad3efe43df97",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Age above 35 or below 17 years",
+          "uuid" : "51fe3e9e-3147-4e35-9c8f-9fa3cba279f8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "High-grade fever",
+          "uuid" : "b967b7ae-a224-4e72-91af-f8d8cebb58ce",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "MultiSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Whether this is a high risk pregnancy\").is.yes;\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Other danger signs in current pregnancy",
+      "uuid" : "ad473a1e-6c00-4605-986e-060827090d84",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other danger signs in current pregnancy",
+        "uuid" : "f98b5204-2c8b-4d9f-bef1-d5803f9413a1",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n statusBuilder.show().when.valueInEncounter(\"Danger signs in current pregnancy\").containsAnswerConceptName(\"Other\");\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "High risk pregnancy"
+  } ],
+  "decisionRule" : "\"use strict\";\n({ params, imports }) => {\n  const programEncounter = params.entity;\n  const decisions = params.decisions;\n\n  // Ensure encounterDecisions is always an array\n  if (!Array.isArray(decisions.encounterDecisions)) {\n    decisions.encounterDecisions = [];\n  }\n\n  // Safe complicationsBuilder fetch\n  const ComplicationsBuilder =\n    imports &&\n    imports.rulesConfig &&\n    imports.rulesConfig.complicationsBuilder;\n\n  if (typeof ComplicationsBuilder !== \"function\") {\n    throw new Error(\"complicationsBuilder is missing or not a function\");\n  }\n\n  // Safe getter function\n  function safeGet(obj, fn) {\n    try {\n      if (!obj) return undefined;\n      return fn(obj);\n    } catch (e) {\n      return undefined;\n    }\n  }\n\n  // Observations\n  const solubilityResultFromField = safeGet(programEncounter, function (e) {\n    return e.getObservationReadableValue(\"Solubility result from field\");\n  });\n\n  const resultFromOldReport = safeGet(programEncounter, function (e) {\n    return e.getObservationReadableValue(\"Result from old sickle cell test report\");\n  });\n\n  const btDoneInLast3Months = safeGet(programEncounter, function (e) {\n    return e.getObservationReadableValue(\"Whether BT done in last 3 months\");\n  });\n\n  const btDone = safeGet(programEncounter, function (e) {\n    return e.getObservationReadableValue(\"Whether BT done in last 3 months\");\n  });\n\n  const oldReport = safeGet(programEncounter, function (e) {\n    return e.getObservationReadableValue(\"Whether old report available\");\n  });\n\n  var eleResult = null;\n  if (programEncounter && programEncounter.programEnrolment) {\n    eleResult = safeGet(programEncounter.programEnrolment, function (e) {\n      return e.getObservationReadableValueInEntireEnrolment(\"Electrophoresis result\");\n    });\n  }\n\n  // HB builder\n  const HBComplicationsBuilder = new ComplicationsBuilder({\n    programEncounter: programEncounter,\n    complicationsConcept: \"Hemoglobin genotype\",\n  });\n\n  if (\n    resultFromOldReport !== \"Unconfirmed (Electrophoresis)\" &&\n    resultFromOldReport !== undefined &&\n    resultFromOldReport !== null\n  ) {\n    HBComplicationsBuilder.addComplication(resultFromOldReport);\n  } else if (\n    solubilityResultFromField &&\n    solubilityResultFromField === \"Negative\"\n  ) {\n    HBComplicationsBuilder.addComplication(\"AA\");\n  }\n\n  // Electrophoresis builder\n  const eleComplicationsBuilder = new ComplicationsBuilder({\n    programEncounter: programEncounter,\n    complicationsConcept: \"Electrophoresis result\",\n  });\n\n  if (resultFromOldReport === \"Unconfirmed (Electrophoresis)\") {\n    eleComplicationsBuilder.addComplication(\"Other\");\n  }\n\n  // Solubility builder\n  const solResultComplicationsBuilder = new ComplicationsBuilder({\n    programEncounter: programEncounter,\n    complicationsConcept: \"Solubility result\",\n  });\n\n  if (solubilityResultFromField !== undefined && solubilityResultFromField !== null) {\n    solResultComplicationsBuilder.addComplication(solubilityResultFromField);\n  }\n\n  // BT builder\n  const btComplicationsBuilder = new ComplicationsBuilder({\n    programEncounter: programEncounter,\n    complicationsConcept: \"BT check status\",\n  });\n\n  if (btDoneInLast3Months === \"No\") {\n    btComplicationsBuilder.addComplication(\"Passed.Sample can be collected\");\n  } else if (btDoneInLast3Months === \"Yes\") {\n    btComplicationsBuilder.addComplication(\"Failed.Revisit in 3 months from BT date\");\n  }\n\n  // Sample collection decision\n  var progName =\n    programEncounter && programEncounter.encounterType\n      ? programEncounter.encounterType.name\n      : null;\n\n  var sampleCollectedFor = [];\n\n  if (\n    (progName === \"Base screening\" &&\n      btDone === \"No\" &&\n      oldReport === \"No\") ||\n    (btDone === \"No\" &&\n      (eleResult === \"Other\" ||\n        resultFromOldReport === \"Unconfirmed (Electrophoresis)\"))\n  ) {\n    if (progName === \"Base screening\" && btDone === \"No\" && oldReport === \"No\") {\n      sampleCollectedFor = [\"Solubility\", \"Electrophoresis\"];\n    }\n    if (\n      btDone === \"No\" &&\n      (eleResult === \"Other\" ||\n        resultFromOldReport === \"Unconfirmed (Electrophoresis)\")\n    ) {\n      sampleCollectedFor = [\"HPLC\"];\n    }\n  }\n\n  // Push function (handles single object returns)\n  function safePush(builder) {\n    if (builder && typeof builder.getComplications === \"function\") {\n      var comps = builder.getComplications();\n      if (comps && typeof comps === \"object\") {\n        decisions.encounterDecisions.push(comps);\n      }\n    }\n  }\n\n  safePush(HBComplicationsBuilder);\n  safePush(eleComplicationsBuilder);\n  safePush(solResultComplicationsBuilder);\n  safePush(btComplicationsBuilder);\n\n  // Always push sample collected for\n  decisions.encounterDecisions.push({\n    name: \"Sample collected for\",\n    value: Array.isArray(sampleCollectedFor) ? sampleCollectedFor : [],\n  });\n\n  return decisions;\n};\n",
+  "visitScheduleRule" : "//SAMPLE RULE EXAMPLE\n\"use strict\";\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({\n        programEncounter\n    });\n    let btDate = programEncounter.getObservationReadableValue('BT date');\n    \n     const baseScreenEncounters = _.chain(programEncounter.programEnrolment.getEncounters(true))\n        .filter((enc) => enc.name === 'Base screening')\n        .filter((enc) => imports.moment(enc.earliestVisitDateTime).isSame(programEncounter.encounterDateTime) === true)\n        .value();\n\n    if (!_.isNil(btDate) && baseScreenEncounters.length == 0) {\n        const dateAfter3MonthsOfBT = imports.moment(btDate).add(3, 'months').toDate();\n\n        scheduleBuilder\n            .add({\n                name: \"Base screening\",\n                encounterType: \"Base screening\",\n                earliestDate: dateAfter3MonthsOfBT,\n                maxDate: imports.moment(dateAfter3MonthsOfBT).add(3, 'days').toDate()\n            });\n    }\n\n    let solResultField = programEncounter.getObservationReadableValue('Whether prep and/or solubility result from field available');\n    let solResult = programEncounter.getObservationReadableValue('Solubility result from field');\n    let btResult = programEncounter.getObservationReadableValue('Whether BT done in last 3 months');\n    // if((_.isEqual(solResultField,'Yes') && _.isEqual(solResult,'Positive')) || _.isEqual(solResultField,'No') ){\n\n   \n\n    let elecResult = programEncounter.programEnrolment.getObservationReadableValueInEntireEnrolment('Electrophoresis result');\n    let oldScResult = programEncounter.getObservationReadableValue('Solubility result from field');\n    let oldReport = programEncounter.getObservationReadableValue('Whether old report available');\n    var resultFromOldReport = programEncounter.getObservationReadableValue('Result from old sickle cell test report');\n\n    \n     const sampleShipEncounters = _.chain(programEncounter.programEnrolment.getEncounters(true))\n        .filter((enc) => enc.name === 'Sample shipment')\n        .filter((enc) => imports.moment(enc.earliestVisitDateTime).isSame(programEncounter.encounterDateTime) === true)\n        .value();\n\n    if (_.isEqual(btResult, 'No') && _.isEqual(oldReport, 'No') && sampleShipEncounters.length == 0) {\n        if ((_.isEqual(solResultField, 'Yes') && _.isEqual(solResult, 'Positive')) || _.isEqual(solResultField, 'No')) {\n            scheduleBuilder\n                .add({\n                    name: \"Sample shipment\",\n                    encounterType: \"Sample shipment\",\n                    earliestDate: imports.moment(programEncounter.encounterDateTime).toDate(),\n                    maxDate: imports.moment(programEncounter.encounterDateTime).add(3, 'days').toDate()\n                });\n        }\n    } else if (_.isEqual(btResult, 'No') &&  sampleShipEncounters.length == 0 && (_.isEqual(elecResult, 'Other') || _.isEqual(resultFromOldReport, 'Unconfirmed (Electrophoresis)'))) {\n        scheduleBuilder\n            .add({\n                name: \"Sample shipment\",\n                encounterType: \"Sample shipment\",\n                earliestDate: imports.moment(programEncounter.encounterDateTime).toDate(),\n                maxDate: imports.moment(programEncounter.encounterDateTime).add(3, 'days').toDate()\n            });\n    }\n\n  const BaselineEncounters=programEncounter.programEnrolment.getEncountersOfType(\"Baseline\")\n               \n    if(BaselineEncounters.length == 0){\n        if(_.isEqual(resultFromOldReport,'Beta Thal') || _.isEqual(resultFromOldReport,'S-Beta thal') || _.isEqual(resultFromOldReport,'SS')){\n        scheduleBuilder\n        .add({\n          name: \"Baseline Form\",\n          encounterType: \"Baseline\",\n          earliestDate: imports.moment(programEncounter.encounterDateTime).toDate(),\n          maxDate: imports.moment(programEncounter.encounterDateTime).add(3, 'days').toDate()\n        });\n      }\n    }\n\n    return scheduleBuilder.getAllUnique(\"encounterType\");\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ {
+    "name" : "Sample collected for",
+    "uuid" : "92e5fc81-5c6f-473a-8d13-415cf45720e2",
+    "dataType" : "Coded",
+    "answers" : [ {
+      "name" : "HPLC",
+      "uuid" : "0765e9dd-8104-42aa-8f5c-2bb1e4a61d9f",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 3.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Solubility",
+      "uuid" : "2ea592b9-19dd-4215-a354-d3cd4263e0d9",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 1.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Electrophoresis",
+      "uuid" : "6201104e-3360-4a55-b87e-22f84ec1eec2",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 2.0,
+      "active" : true,
+      "media" : [ ]
+    } ],
+    "active" : true,
+    "media" : [ ]
+  }, {
+    "name" : "Solubility result",
+    "uuid" : "d41b5986-e8b1-41dc-8685-beb4d86abf79",
+    "dataType" : "Coded",
+    "answers" : [ {
+      "name" : "Positive",
+      "uuid" : "479cd95a-54ef-4818-b84a-09b478fc68b8",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 1.0,
+      "active" : true,
+      "media" : [ ],
+      "voided" : true
+    }, {
+      "name" : "Negative",
+      "uuid" : "ad1f0481-a8ed-411a-ac00-d0435a670269",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 2.0,
+      "active" : true,
+      "media" : [ ]
+    } ],
+    "active" : true,
+    "media" : [ ]
+  }, {
+    "name" : "Hemoglobin genotype",
+    "uuid" : "e19e68fd-97f1-4803-a1b2-bb850836ff54",
+    "dataType" : "Coded",
+    "answers" : [ {
+      "name" : "AA",
+      "uuid" : "daa7c62f-c663-4981-a134-1f662b3036d0",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 2.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Beta Thal",
+      "uuid" : "7f32dd91-78d3-4f5c-b43e-a00bff7d6055",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 3.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "SS",
+      "uuid" : "3648a650-2f3e-4c2c-a899-c0a8212aace1",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 0.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "AS",
+      "uuid" : "77ee8a6a-2a01-421f-85ca-fc0ab39abcdb",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 1.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Beta thal trait",
+      "uuid" : "b07f08a5-4cbd-458b-bf98-171c48a62b4a",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 4.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Data Not Available",
+      "uuid" : "1deacad0-83b7-4f3e-9ae6-3bcb676c92ec",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 9.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Other (HPLC)",
+      "uuid" : "7472ce22-441c-4f07-9049-d53c943308e0",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 7.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "S-Beta thal - trait",
+      "uuid" : "e71107e7-56ed-4dcb-9915-5276e8a2df9e",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 6.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "S-Beta thal",
+      "uuid" : "75ea50bb-e64d-4734-af99-38d6945242af",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 5.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Test not happened",
+      "uuid" : "13f4f438-efc5-4a79-8c23-23479218a942",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 8.0,
+      "active" : true,
+      "media" : [ ]
+    } ],
+    "active" : true,
+    "media" : [ ]
+  } ]
+}

@@ -1,0 +1,58 @@
+[ {
+  "uuid" : "12e20f5c-cf7a-42e8-877e-c139c8baa938",
+  "id" : 2,
+  "batchGenerationSize" : 100,
+  "minimumBalance" : 20,
+  "name" : "JSCS sample identifier source",
+  "options" : {
+    "prefix" : ""
+  },
+  "type" : "userBasedIdentifierGenerator",
+  "minLength" : 5,
+  "maxLength" : 6,
+  "voided" : false
+}, {
+  "uuid" : "12b721d3-3baf-422b-b70f-32550aa27092",
+  "id" : 94,
+  "batchGenerationSize" : 100,
+  "minimumBalance" : 20,
+  "name" : "Epilepsy enrollment identifier source",
+  "options" : { },
+  "type" : "userBasedIdentifierGenerator",
+  "minLength" : 5,
+  "maxLength" : 6,
+  "voided" : false
+}, {
+  "uuid" : "966b897e-5b07-41f9-bf83-9f70d7c65a04",
+  "id" : 152,
+  "batchGenerationSize" : 10000,
+  "minimumBalance" : 0,
+  "name" : "JSCS",
+  "options" : { },
+  "type" : "userBasedIdentifierGenerator",
+  "minLength" : 7,
+  "maxLength" : 7,
+  "voided" : true
+}, {
+  "uuid" : "fd75e3f4-e05f-49d8-9d68-b4c575761a14",
+  "id" : 172,
+  "batchGenerationSize" : 100,
+  "minimumBalance" : 50,
+  "name" : "Mobile Medical Unit ",
+  "options" : { },
+  "type" : "userBasedIdentifierGenerator",
+  "minLength" : 5,
+  "maxLength" : 6,
+  "voided" : false
+}, {
+  "uuid" : "ca9d94c4-4790-403a-afeb-245000dba7c6",
+  "id" : 173,
+  "batchGenerationSize" : 150,
+  "minimumBalance" : 80,
+  "name" : "Maternal health identifier source",
+  "options" : { },
+  "type" : "userBasedIdentifierGenerator",
+  "minLength" : 5,
+  "maxLength" : 6,
+  "voided" : false
+} ]

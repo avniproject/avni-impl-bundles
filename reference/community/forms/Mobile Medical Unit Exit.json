@@ -1,0 +1,7 @@
+{
+  "name" : "Mobile Medical Unit Exit",
+  "uuid" : "50284f1f-4dbb-48f0-83d2-a7b26e6b5e56",
+  "formType" : "ProgramExit",
+  "formElementGroups" : [ ],
+  "decisionConcepts" : [ ]
+}

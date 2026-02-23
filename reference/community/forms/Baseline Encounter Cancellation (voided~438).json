@@ -1,0 +1,8 @@
+{
+  "name" : "Baseline Encounter Cancellation (voided~438)",
+  "uuid" : "cf3d561f-97aa-441d-b3d8-dfdeb2276909",
+  "formType" : "ProgramEncounterCancellation",
+  "formElementGroups" : [ ],
+  "decisionConcepts" : [ ],
+  "voided" : true
+}

@@ -1,0 +1,712 @@
+{
+  "name" : "Farmer Onboarding",
+  "uuid" : "ae33bac0-a1d8-4584-92b2-d9e90088b97c",
+  "formType" : "IndividualProfile",
+  "formElementGroups" : [ {
+    "uuid" : "bbb99bb0-ca6a-4e9c-a9ab-d379d0112b87",
+    "name" : "Family Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Marital Status",
+      "uuid" : "66b1a664-01be-4543-b377-e729e30fffea",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Marital Status",
+        "uuid" : "7fa6d933-6f58-4e89-ae57-e9ad718ebedd",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Unmarried",
+          "uuid" : "7ba29635-a2fe-4029-b3da-97a75f2a699d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Widow",
+          "uuid" : "178ca8f5-6f8b-4fc3-aab3-e588cf6f08be",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Married",
+          "uuid" : "f032d77c-cefc-4e4b-b83e-863d6274909f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Beneficiary Name (Woman member name, if woman is a beneficiary)",
+      "uuid" : "16aacccf-00b6-4915-af2f-0904595889b8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Beneficiary Name",
+        "uuid" : "0cc00099-4b63-4fde-8979-c4775baf6573",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Gender",
+      "uuid" : "c3bbbebd-a424-4914-aaca-100f393ecc76",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "gender",
+        "uuid" : "aefc98f0-9537-4ee9-acf3-8d6ae6a58df5",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "male",
+          "uuid" : "d85197eb-a6f9-4b9d-96e5-a3107fa0bd7e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "female",
+          "uuid" : "197c1a98-66c1-4ddb-b4bb-3f8fc3afcc60",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Marital Status",
+      "uuid" : "37af7dde-9956-40a0-8ac2-0a7d3bd3ecd4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Marital Status",
+        "uuid" : "7fa6d933-6f58-4e89-ae57-e9ad718ebedd",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Unmarried",
+          "uuid" : "7ba29635-a2fe-4029-b3da-97a75f2a699d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Widow",
+          "uuid" : "178ca8f5-6f8b-4fc3-aab3-e588cf6f08be",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Married",
+          "uuid" : "f032d77c-cefc-4e4b-b83e-863d6274909f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Husband/Father's Name",
+      "uuid" : "0a71fe86-0946-4837-ab22-fecb0f1f37ae",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Husband/Father's Name",
+        "uuid" : "e189734f-9397-4a9a-9365-d0643929216e",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Beneficiary Phone No",
+      "uuid" : "aca218e7-ce02-4828-8b01-777b6b68e01e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Beneficiary Phone No",
+        "uuid" : "f048e623-f9a9-4321-a81f-9f810e04f925",
+        "dataType" : "PhoneNumber",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ {
+          "key" : "verifyPhoneNumber",
+          "value" : false
+        } ],
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Beneficiary Phone No.",
+      "uuid" : "12af7b8c-db15-4be0-b93f-f66c99a4f990",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Beneficiary Phone number",
+        "uuid" : "5ab42b01-0751-4707-a251-7b20d40a60b6",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "validFormat" : {
+        "regex" : "^[6-9][0-9]{9}$",
+        "descriptionKey" : "Phone number should be 10 digits"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "Education Qualification",
+      "uuid" : "127972f7-a995-46bc-b207-154a784bf885",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Education Qualification",
+        "uuid" : "ae4c4a0f-85b2-4037-a9d3-ddf74c3167d3",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1-5",
+          "uuid" : "7fccb775-2e08-4ed3-addd-37be75fcd082",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Graduation",
+          "uuid" : "950fd07b-0bb5-452d-ab08-4269e5c23281",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "11-12",
+          "uuid" : "8d6d039a-31e9-402d-b43a-af8a6cddb849",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "6-10",
+          "uuid" : "f849255b-a059-4a99-9b4b-4810c3cafe06",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Other education qualification, please specify",
+      "uuid" : "7d8e6d3a-a2d6-4105-a085-6c98d6c71528",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other education qualification",
+        "uuid" : "f12b796c-633b-46e4-b7bd-86af6fcea66c",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration(\"ae4c4a0f-85b2-4037-a9d3-ddf74c3167d3\").containsAnswerConceptName(\"287164fa-3899-485f-9c1f-61401bc6359d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "registration",
+                "conceptName" : "Education Qualification",
+                "conceptUuid" : "ae4c4a0f-85b2-4037-a9d3-ddf74c3167d3",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "287164fa-3899-485f-9c1f-61401bc6359d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Beneficiary ID",
+      "uuid" : "47c1b1ef-c490-46fc-b12f-27c86e3fa442",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Beneficiary ID",
+        "uuid" : "ae56384a-7630-41a0-8107-d19c09ebdd41",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Job card",
+          "uuid" : "f60f7f0b-e7dc-48f2-b4a5-1d02f1e2a669",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Voter Card",
+          "uuid" : "388c4151-6a9b-4cd3-b5bd-f11beb320cd8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Other ID, please specify",
+      "uuid" : "6d3f1374-40c9-466a-8a1c-9ee29928a7e6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other ID",
+        "uuid" : "7bd675b0-ef82-4e91-a388-d3ff7f7fd5c0",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration(\"ae56384a-7630-41a0-8107-d19c09ebdd41\").containsAnswerConceptName(\"287164fa-3899-485f-9c1f-61401bc6359d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "registration",
+                "conceptName" : "Beneficiary ID",
+                "conceptUuid" : "ae56384a-7630-41a0-8107-d19c09ebdd41",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "287164fa-3899-485f-9c1f-61401bc6359d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Family ID",
+      "uuid" : "53769f3e-ae71-478d-b4b7-0de3ed7e6492",
+      "keyValues" : [ {
+        "key" : "unique",
+        "value" : true
+      } ],
+      "concept" : {
+        "name" : "ID Number",
+        "uuid" : "d224180f-6037-47fc-af25-75650fee1c4c",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Family Status",
+      "uuid" : "5e2e484d-947d-4a7d-b39f-64088ae02784",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Family status",
+        "uuid" : "e63889e0-34b2-4862-80a8-aa1750c27a5b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "APL",
+          "uuid" : "2799fdc8-3173-426d-b782-1730ff877a42",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "BPL",
+          "uuid" : "d3d48146-840d-446c-8e07-a0b34289380a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Adult Male (above 18 years)",
+      "uuid" : "e95ccc08-9405-4ed2-911b-1fa5eb2b979f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Adult Male (above 18 years)",
+        "uuid" : "88f0e3b5-7cf4-486b-bf35-6d58e0f08042",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const enteredNumber = individual.getObservationValue(\"Adult Male (above 18 years)\");\n\n  if(enteredNumber && !isNaN(enteredNumber) && !Number.isInteger(enteredNumber)){\n    validationErrors.push(\"Entered number should be an integer\");\n  }\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Adult Female (above 18 years)",
+      "uuid" : "a0da1840-04b9-4ac2-968c-b2f1997d2e6b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Adult Female (above 18 years)",
+        "uuid" : "c821f7bc-8930-4045-a3ab-95c6d93dc7a7",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 15.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const enteredNumber = individual.getObservationValue(\"Adult Female (above 18 years)\");\n\n  if(enteredNumber && !isNaN(enteredNumber) && !Number.isInteger(enteredNumber)){\n    validationErrors.push(\"Entered number should be an integer\");\n  }\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Male children (under 18 years)",
+      "uuid" : "d9a4bdac-138c-4b58-bd0f-488dc6298056",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Male children (under 18 years)",
+        "uuid" : "d53c2b7c-3d24-4a1c-8668-f57bedd81ddd",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 18.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 16.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const enteredNumber = individual.getObservationValue(\"Male children (under 18 years)\");\n\n  if(enteredNumber && !isNaN(enteredNumber) && !Number.isInteger(enteredNumber)){\n    validationErrors.push(\"Entered number should be an integer\");\n  }\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Female children (under 18 years)",
+      "uuid" : "5f9ebe3d-add4-4494-9e41-59f29c3c9cba",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Female children (under 18 years)",
+        "uuid" : "5f69f540-dccd-4c1d-b428-283ea8b01203",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 18.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 17.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const enteredNumber = individual.getObservationValue(\"Female children (under 18 years)\");\n\n  if(enteredNumber && !isNaN(enteredNumber) && !Number.isInteger(enteredNumber)){\n    validationErrors.push(\"Entered number should be an integer\");\n  }\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Total Own Land Holding",
+      "uuid" : "83272261-7729-4810-a16b-9bc710310299",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total Own Land Holding",
+        "uuid" : "47e59d01-9e20-416c-b3b3-ba33de28b5f6",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 18.0,
+      "type" : "SingleSelect",
+      "rule" : "",
+      "mandatory" : true
+    }, {
+      "name" : "Total Leased in Land",
+      "uuid" : "7c608d97-5097-40ff-858a-595cb7a52e73",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total Leased in Land",
+        "uuid" : "19b5f559-c81a-446c-9e5c-661edc315295",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 19.0,
+      "type" : "SingleSelect",
+      "rule" : "",
+      "mandatory" : true
+    }, {
+      "name" : "Total Land",
+      "uuid" : "78eae2f2-8749-4560-898b-e78dc73bb113",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Total Land",
+        "uuid" : "446a3f3b-eb22-4a81-a08a-080b5440727f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 20.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  \n  const ownLandHolding = individual.getObservationValue('Total Own Land Holding');\n  const leasedInLand = individual.getObservationValue('Total Leased in Land');\n  const value = ownLandHolding + leasedInLand;\n  const finalValue = _.isNumber(value)? value: undefined;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, finalValue, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Family Details"
+  }, {
+    "uuid" : "c366ab69-a26f-44b3-b3bf-e94026f03f18",
+    "name" : "Family Details",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Family Status",
+      "uuid" : "9279b32e-e923-4294-9fd6-298fc6faf3b6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Family status",
+        "uuid" : "e63889e0-34b2-4862-80a8-aa1750c27a5b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "APL",
+          "uuid" : "2799fdc8-3173-426d-b782-1730ff877a42",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "BPL",
+          "uuid" : "d3d48146-840d-446c-8e07-a0b34289380a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Adult Male (above 18 years)",
+      "uuid" : "d366f260-ab6f-4531-8e81-1ad2d00f153c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Adult Male (above 18 years)",
+        "uuid" : "88f0e3b5-7cf4-486b-bf35-6d58e0f08042",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Adult Female (above 18 years)",
+      "uuid" : "ce4eb0cd-4f31-491e-b876-41f6dfd3aa90",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Adult Female (above 18 years)",
+        "uuid" : "c821f7bc-8930-4045-a3ab-95c6d93dc7a7",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Male children (under 18 years)",
+      "uuid" : "f6826480-05d1-4e62-8289-11599771279b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Male children (under 18 years)",
+        "uuid" : "d53c2b7c-3d24-4a1c-8668-f57bedd81ddd",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 18.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Female children (under 18 years)",
+      "uuid" : "b52d5074-668f-4b65-b674-b59554a684a9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Female children (under 18 years)",
+        "uuid" : "5f69f540-dccd-4c1d-b428-283ea8b01203",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 18.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total Own Land Holding",
+      "uuid" : "b3b6eea7-4128-454d-9506-c490a354afa3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total Own Land Holding",
+        "uuid" : "47e59d01-9e20-416c-b3b3-ba33de28b5f6",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total Leased in Land",
+      "uuid" : "3e7aef0c-ed06-440e-8580-101f1ae70de6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total Leased in Land",
+        "uuid" : "19b5f559-c81a-446c-9e5c-661edc315295",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total Land",
+      "uuid" : "b520caff-367b-4d52-89a4-bc0fc8218b06",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Total Land",
+        "uuid" : "446a3f3b-eb22-4a81-a08a-080b5440727f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  \n  const ownLandHolding = individual.getObservationValue('Total Own Land Holding');\n  const leasedInLand = individual.getObservationValue('Total Leased in Land');\n  const value = ownLandHolding + leasedInLand;\n  const finalValue = _.isNumber(value)? value: undefined;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, finalValue, answersToSkip, validationErrors);\n};",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "voided" : true,
+    "timed" : false,
+    "display" : "Family Details"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({ params, imports }) => {\n    const individual = params.entity;\n    const moment = imports.moment;\n    const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({individual});\n    \n    const alreadyScheduled = individual.encounters\n        .filter(encounter => encounter.encounterType.name == \"Family Baseline\").length > 0;\n    \n    if(!alreadyScheduled){\n        const earliestDate = moment(individual.registrationDate).add(0, 'days').startOf('day').toDate();\n        const maxDate = moment(individual.registrationDate).add(15, 'days').endOf('day').toDate();\n        scheduleBuilder.add({name: \"Family Baseline\", encounterType: \"Family Baseline\", earliestDate, maxDate});  \n    }\n    \n    return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

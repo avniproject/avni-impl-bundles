@@ -1,0 +1,8 @@
+{
+  "name" : "Associate Farmer (voided~11560)",
+  "uuid" : "2dafe33b-3161-463b-bca9-67cfa9f15e16",
+  "formType" : "IndividualProfile",
+  "formElementGroups" : [ ],
+  "decisionConcepts" : [ ],
+  "voided" : true
+}

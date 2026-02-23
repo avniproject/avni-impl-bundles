@@ -1,0 +1,2851 @@
+{
+  "name" : "Epilepsy PSG meeting attendance",
+  "uuid" : "6b2be879-3de7-4ef0-bb46-3169eff9ad92",
+  "formType" : "Encounter",
+  "formElementGroups" : [ {
+    "uuid" : "55b99262-0e80-4442-9ad1-9439eb58a39d",
+    "name" : "Duty details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Date of PSG Meeting",
+      "uuid" : "11b675e5-73b7-42f9-a0b2-0bf27346c498",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Date of PSG Meeting",
+        "uuid" : "acf8e9fb-3ba2-4d41-ac3d-0ec62f60a15f",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Counsellor in-charge of PSGM",
+      "uuid" : "dbd8e7f7-3c9e-4302-85a1-2f7300f0878e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Counsellor in-charge of PSGM",
+        "uuid" : "69b44bdd-a92f-4a06-8ab5-f2edd9fdef3c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Roshani Rathour",
+          "uuid" : "3f961b2f-0545-40d9-ab20-f2455fa830c3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ishwar Mohale",
+          "uuid" : "2083e17a-d573-4ea4-a61b-69502b8d0623",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sushil Dwivedy",
+          "uuid" : "615861a1-f4e3-41df-9ac7-74732f8c13c1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sharda Prasad",
+          "uuid" : "c3e51ce7-5e20-4d10-923c-d8fec90ec7ad",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Laxmi Patker",
+          "uuid" : "784f3c13-00d8-4f9d-936b-de6f00cbfe31",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pavan Gupta",
+          "uuid" : "23ceb8c2-3de4-4fb9-88da-e86627ab1844",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Renu Sahu",
+          "uuid" : "399ae468-429d-48cf-bc31-486c3042fc03",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Rajesh",
+          "uuid" : "af093ce5-fb09-496a-b9cf-15df6deeffb6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Vaibhavi Dubey",
+          "uuid" : "dcf1e9b9-1a2c-4107-a7b4-187008aff675",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Duty Doctor Name",
+      "uuid" : "c33598bf-ed48-4bcd-8844-5fe05fd6c251",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Duty Doctor Name",
+        "uuid" : "714b330b-99a5-44b3-b530-8fda9df5a991",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInRegistration(\"cf2bc212-7195-4f5b-b2a2-09dfa6a59765\").containsAnswerConceptName(\"08a02d60-5383-4022-b4b1-923afc84b4d9\").or.when.valueInRegistration(\"cf2bc212-7195-4f5b-b2a2-09dfa6a59765\").containsAnswerConceptName(\"ba73a8c8-2cc3-4020-a966-585dcd7f1301\").or.when.valueInRegistration(\"cf2bc212-7195-4f5b-b2a2-09dfa6a59765\").containsAnswerConceptName(\"50ce0f74-5205-45ac-9201-5157f2bc660e\").or.when.valueInRegistration(\"cf2bc212-7195-4f5b-b2a2-09dfa6a59765\").containsAnswerConceptName(\"f8e47462-cd79-4e48-ae1e-b37d773f53ae\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "registration",
+                "conceptName" : "PSGM Facility type",
+                "conceptUuid" : "cf2bc212-7195-4f5b-b2a2-09dfa6a59765",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "DH" ],
+                "answerConceptUuids" : [ "08a02d60-5383-4022-b4b1-923afc84b4d9" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            }, {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "registration",
+                "conceptName" : "PSGM Facility type",
+                "conceptUuid" : "cf2bc212-7195-4f5b-b2a2-09dfa6a59765",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "CHC" ],
+                "answerConceptUuids" : [ "ba73a8c8-2cc3-4020-a966-585dcd7f1301" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            }, {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "registration",
+                "conceptName" : "PSGM Facility type",
+                "conceptUuid" : "cf2bc212-7195-4f5b-b2a2-09dfa6a59765",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Civil Hospital" ],
+                "answerConceptUuids" : [ "50ce0f74-5205-45ac-9201-5157f2bc660e" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            }, {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "registration",
+                "conceptName" : "PSGM Facility type",
+                "conceptUuid" : "cf2bc212-7195-4f5b-b2a2-09dfa6a59765",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "PHC" ],
+                "answerConceptUuids" : [ "f8e47462-cd79-4e48-ae1e-b37d773f53ae" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "or"
+          }
+        } ]
+      } ],
+      "documentation" : {
+        "label" : "Name of duty doctor",
+        "value" : "59f72c16-9ac0-4fcd-8c83-54c2563cfc8a"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "No. of Nurses / CHO / ANM on duty",
+      "uuid" : "1b7e560c-a33b-4a56-95f9-3206ad556c0c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of Nurses on duty",
+        "uuid" : "519acc52-2197-4680-8823-2191fd6369db",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 9.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "No. of LTs on Duty",
+      "uuid" : "2eb16cee-ecd9-4698-aea5-8a634572bb1e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of LTs on Duty",
+        "uuid" : "ce8a7034-b952-4ea2-b641-ffb2fbd77be3",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 9.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Total persons in PSGM",
+      "uuid" : "6db5867c-45c0-4269-873f-777945b1bfe6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total Pesons in PSGM",
+        "uuid" : "5a36475e-6e4c-4cb7-bb40-1f18e20b50b6",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "No. of SS Patients attended PSG Meeting",
+      "uuid" : "8605ae80-0b72-4138-b9d0-338cef30876f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of SS attended PSGM",
+        "uuid" : "d4b4aba2-19c2-4499-8419-f753debd8e12",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "No. of AS Members participated",
+      "uuid" : "909c55d5-220f-445b-ba03-a9af1c35bc19",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of AS Members participated",
+        "uuid" : "4660204d-f115-45b4-a05b-34f794ac8afd",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "No. of Hydroxyurea Capsules given",
+      "uuid" : "3c5bd592-fedd-4489-986b-dd29d3f3dab9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of Hydroxyurea 500mg capsules given to patients",
+        "uuid" : "b16deb47-750c-4318-abcc-5a3dcf0d87b3",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Duty details"
+  }, {
+    "uuid" : "a9baa30f-245b-4367-9891-4075e1c6789d",
+    "name" : "Patient Information",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Total persons in PSGM (including patient attenders)",
+      "uuid" : "a3f9f8f7-6176-4b2c-ae4d-9d3c2bc8128d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total Pesons in PSGM",
+        "uuid" : "5a36475e-6e4c-4cb7-bb40-1f18e20b50b6",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "No. of Epilepsy patients attended PSG Meeting",
+      "uuid" : "2bee1a42-1d3d-47df-83b4-07e73a087bab",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of Epilepsy patients attended PSG Meeting",
+        "uuid" : "45de0aa0-78f4-4355-b8bc-a62389eaa14f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "lowNormal" : 10.0,
+        "highNormal" : 50.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "No. of new Epilepsy patients Enrolled",
+      "uuid" : "05003af8-bb80-4778-927c-0226c0cdbf91",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of new Epilepsy patients Enrolled",
+        "uuid" : "41de7ff1-9b37-43c8-b8f6-a69cbb7ffe56",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "No. of Serious / referred patients",
+      "uuid" : "8c42affc-b1bb-4149-8785-ffc53d7da4b2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of Serious / referred Epilepsy patients",
+        "uuid" : "7fc984bf-8911-4049-8c75-fba52a7ea510",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "documentation" : {
+        "label" : "Epilepsy Serious patient",
+        "value" : "ce83b166-9946-4292-be35-c419015fa906"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "No. of ANC women with Epilepsy participated in PSGM",
+      "uuid" : "adda33a1-a791-46a6-adee-6d586334237b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of Epileptic ANC attended PSGM",
+        "uuid" : "4c6fef1b-c025-4c42-9064-77f2deb26e4f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "No. of other type of patients (Not Epileptic) participated in PSGM",
+      "uuid" : "b2f34073-cc6a-48a1-9b5d-bca5618a23e8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of Non-Epileptic patients attended PSGM",
+        "uuid" : "5d99711e-fc7b-428e-a611-92adc82137b8",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "No. of SS Patients attended PSG Meeting",
+      "uuid" : "b5e8a269-2de2-4d33-9391-4db5631f3050",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of SS attended PSGM",
+        "uuid" : "d4b4aba2-19c2-4499-8419-f753debd8e12",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  let totalPesonsInPsgmObservation = encounter.findObservation('5a36475e-6e4c-4cb7-bb40-1f18e20b50b6');\n  let totalPesonsInPsgmValue = _.isEmpty(totalPesonsInPsgmObservation) ? totalPesonsInPsgmObservation : totalPesonsInPsgmObservation.getReadableValue();\n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"d4b4aba2-19c2-4499-8419-f753debd8e12\").greaterThan(totalPesonsInPsgmValue).matches();\n  \n  if(condition11 ){\n    validationErrors.push(\"SS रोगियों की संख्या PSGM में आये कुल व्यक्तियों से ज्यादा भरी गयी है |\");  \n}\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "details" : {
+            "validationError" : "SS रोगियों की संख्या PSGM में आये कुल व्यक्तियों से ज्यादा भरी गयी है |"
+          },
+          "actionType" : "validationError"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "No. of SS attended PSGM",
+                "conceptUuid" : "d4b4aba2-19c2-4499-8419-f753debd8e12",
+                "conceptDataType" : "Numeric"
+              },
+              "rhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Total Pesons in PSGM",
+                "conceptUuid" : "5a36475e-6e4c-4cb7-bb40-1f18e20b50b6"
+              },
+              "operator" : "greaterThan"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "no. of new SS patients Enrolled",
+      "uuid" : "c9d9304c-afca-4061-8e03-f98e58641469",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "no. of new SS patients Enrolled (PSGM)",
+        "uuid" : "6bc0311e-d965-4e9c-8ee8-f30218190089",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "No. of Serious / referred SS patients",
+      "uuid" : "14a16350-db79-40ea-b6fa-83a75474d139",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of Serious / referred SS patients (PSGM)",
+        "uuid" : "86121e36-60cb-4f96-9342-ca630d36eb97",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "lowNormal" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "No. of ANC SS participated in PSGM",
+      "uuid" : "ca44643f-82e8-4e4f-b091-0f5f76a67561",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of ANC SS participated in PSGM",
+        "uuid" : "cc9ba5a6-8a9b-4c88-8808-547156e54675",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "No. of AS Members participated",
+      "uuid" : "46ca03c2-976a-4e24-b277-6e40fd8a08c8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of AS Members participated",
+        "uuid" : "4660204d-f115-45b4-a05b-34f794ac8afd",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n\n  // Fetch observations\n  function getObsValue(uuid) {\n    const obs = encounter.findObservation(uuid);\n    const val = _.isEmpty(obs) ? obs : obs.getReadableValue();\n    return val ? Number(val) : 0;\n  }\n\n  const allValue = getObsValue(\"5a36475e-6e4c-4cb7-bb40-1f18e20b50b6\"); // All\n  const asValue  = getObsValue(\"4660204d-f115-45b4-a05b-34f794ac8afd\"); // AS\n  const ssValue  = getObsValue(\"d4b4aba2-19c2-4499-8419-f753debd8e12\"); // SS\n\n  // Apply the condition: if All < (AS + SS)\n  if (allValue < (asValue + ssValue)) {\n    validationErrors.push(\"SS + AS की संख्या कुल उपस्थित व्यक्तियों से अधिक है। कृपया जांचें।\");\n  }\n\n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};\n",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "No. of other type of patients (Not SCD) participated in PSGM",
+      "uuid" : "d7675acb-db68-44dc-a374-fa6d26a069dc",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of other type of patients (Not SCD) participated in PSGM",
+        "uuid" : "d84381f4-f7bb-4337-ba40-ffc689638829",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "lowNormal" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "No. of SCD screening sample collected",
+      "uuid" : "25b13867-a97c-4fcf-b5ab-75ac43d6835a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of SCD screening sample collected",
+        "uuid" : "505c5efe-a11c-48a7-8e39-7ee9ab4ec88e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "How many Hydroxyurea capsules were issued by govt",
+      "uuid" : "ff757be0-9aaa-487e-8b47-d393daade48b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of Hydroxyurea Capsules issued by govt",
+        "uuid" : "b39dc2f9-b6b7-46cf-a29f-8ee50136720e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "No. of Hydroxyurea Capsules given to patients",
+      "uuid" : "825e5a82-1a30-459a-80d8-dd8301557747",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of Hydroxyurea 500mg capsules given to patients",
+        "uuid" : "b16deb47-750c-4318-abcc-5a3dcf0d87b3",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 15.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "No. of patients received PCV Vaccination in PSGM",
+      "uuid" : "b7ba5a39-b3ce-452f-a19b-b6114877f5aa",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of patients received PCV Vaccination in PSGM",
+        "uuid" : "849141cd-e9f5-4f36-b4ab-053f2cfe0832",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "lowNormal" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 16.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Any other information?",
+      "uuid" : "83d5a8f0-c3fe-4baa-8ce9-c5cdf4947322",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Any other information (PSGM)",
+        "uuid" : "be0cd33d-6284-4c37-86cf-86e2e1e97b11",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 17.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Patient Information"
+  }, {
+    "uuid" : "1ade2f4f-4fca-4ac6-9540-ee8ae98430d1",
+    "name" : "Medicines received from Government and JSS",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Medicines from JSS",
+      "uuid" : "414aba04-6482-4447-8d70-c500d78edc87",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Epileptic Medicines from JSS",
+        "uuid" : "25b848ac-bfab-492d-b203-5edaf8605f0c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Tab Phenobarbitone 30 mg",
+          "uuid" : "c5b52f02-d74e-4050-a4cb-4eda2999d232",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Syp Sodium Valproate 40mg / ml",
+          "uuid" : "3571d988-1bce-4ef0-9719-fa276ccde44a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Syp Sodium Valproate 200mg / 5ml",
+          "uuid" : "7973b1a7-9608-4133-ac9b-3ce63d701d2b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab Levetiracetam 500 mg",
+          "uuid" : "fb4f3c41-6a5a-4cba-9be8-2d91db77bb15",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab Sodium Valproate 200mg",
+          "uuid" : "26304279-d598-4b7e-8aa0-29b00bf2a1e9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab Clobazam 5mg",
+          "uuid" : "9adf1390-0ded-4516-bdfb-f4f9953130fa",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab Phenytoin 100mg",
+          "uuid" : "89b4518e-1b3c-4db6-9f64-36d0ceb4f536",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab Carbamazepine 200mg",
+          "uuid" : "da03dc14-b897-49b9-8de9-d67971ab8e59",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Received : How many Carbamazepine 200mg drug were issued by JSS",
+      "uuid" : "9cba03b7-5f32-4110-a307-3c1d9edce65c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Received : How many Carbamazepine 200mg drug were issued by JSS",
+        "uuid" : "90aa1707-edf0-4a62-979d-130de5fe0c97",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"25b848ac-bfab-492d-b203-5edaf8605f0c\").containsAnswerConceptName(\"da03dc14-b897-49b9-8de9-d67971ab8e59\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Epileptic Medicines from JSS",
+                "conceptUuid" : "25b848ac-bfab-492d-b203-5edaf8605f0c",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Carbamazepine 200mg" ],
+                "answerConceptUuids" : [ "da03dc14-b897-49b9-8de9-d67971ab8e59" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Received : How many Phenytoin 100mg drug were issued by JSS",
+      "uuid" : "d4c366be-32a8-4e9c-b5d2-29ff16bc3e21",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Received : How many Phenytoin 100mg drug were issued by JSS",
+        "uuid" : "63bded8e-d3ae-4639-b5b1-e82392e04289",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"25b848ac-bfab-492d-b203-5edaf8605f0c\").containsAnswerConceptName(\"89b4518e-1b3c-4db6-9f64-36d0ceb4f536\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Epileptic Medicines from JSS",
+                "conceptUuid" : "25b848ac-bfab-492d-b203-5edaf8605f0c",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Phenytoin 100mg" ],
+                "answerConceptUuids" : [ "89b4518e-1b3c-4db6-9f64-36d0ceb4f536" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Received - how many Tab Sodium Valproate 200mg issued by JSS",
+      "uuid" : "61db9e97-fa3e-4d18-9583-b67a6317de54",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Received - how many Tab Sodium Valproate 200mg issued by JSS",
+        "uuid" : "b80c11e2-0425-4e46-ae69-0e5217687b0d",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"25b848ac-bfab-492d-b203-5edaf8605f0c\").containsAnswerConceptName(\"26304279-d598-4b7e-8aa0-29b00bf2a1e9\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Epileptic Medicines from JSS",
+                "conceptUuid" : "25b848ac-bfab-492d-b203-5edaf8605f0c",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Sodium Valproate 200mg" ],
+                "answerConceptUuids" : [ "26304279-d598-4b7e-8aa0-29b00bf2a1e9" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "or"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Received - how many Syrup Sodium Valproate 200mg / 5ml issued by JSS",
+      "uuid" : "eb56b431-45fc-47b4-beb9-6cf2553a21bd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity - Syrup Sodium Valproate 200mg / 5 ml issued by JSS",
+        "uuid" : "8ec3826f-712a-440e-a33a-5708c26f9630",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"25b848ac-bfab-492d-b203-5edaf8605f0c\").containsAnswerConceptName(\"7973b1a7-9608-4133-ac9b-3ce63d701d2b\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Epileptic Medicines from JSS",
+                "conceptUuid" : "25b848ac-bfab-492d-b203-5edaf8605f0c",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Syp Sodium Valproate 200mg / 5ml" ],
+                "answerConceptUuids" : [ "7973b1a7-9608-4133-ac9b-3ce63d701d2b" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Received - how many Syrup Sodium Valproate 40mg / ml issued by JSS",
+      "uuid" : "4460b443-1e0b-4166-bb95-e65423c83684",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity - Syrup Sodium Valproate 40mg / ml issued by JSS",
+        "uuid" : "8ce2a4f4-11c2-40fa-8006-35e4652368ba",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"25b848ac-bfab-492d-b203-5edaf8605f0c\").containsAnswerConceptName(\"3571d988-1bce-4ef0-9719-fa276ccde44a\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Epileptic Medicines from JSS",
+                "conceptUuid" : "25b848ac-bfab-492d-b203-5edaf8605f0c",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Syp Sodium Valproate 40mg / ml" ],
+                "answerConceptUuids" : [ "3571d988-1bce-4ef0-9719-fa276ccde44a" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Received : how many Clobazam 5mg issued by JSS",
+      "uuid" : "7a16d629-0c12-43ac-a67d-2e91b86c5b87",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity - Clobazam 5mg from JSS",
+        "uuid" : "3c495248-6510-440d-a951-cad6ed9ae261",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"25b848ac-bfab-492d-b203-5edaf8605f0c\").containsAnswerConceptName(\"9adf1390-0ded-4516-bdfb-f4f9953130fa\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Epileptic Medicines from JSS",
+                "conceptUuid" : "25b848ac-bfab-492d-b203-5edaf8605f0c",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Clobazam 5mg" ],
+                "answerConceptUuids" : [ "9adf1390-0ded-4516-bdfb-f4f9953130fa" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Received : How many Tab Phenobarbitone 30 mg issued by JSS",
+      "uuid" : "93a313cb-b6de-48d5-b4bc-17d73f4821ae",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity - Tab Phenobarbitone 30 mg from JSS",
+        "uuid" : "22eb5f48-f0b1-49b4-aba2-22c960e63e36",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"25b848ac-bfab-492d-b203-5edaf8605f0c\").containsAnswerConceptName(\"c5b52f02-d74e-4050-a4cb-4eda2999d232\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Epileptic Medicines from JSS",
+                "conceptUuid" : "25b848ac-bfab-492d-b203-5edaf8605f0c",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Phenobarbitone 30 mg" ],
+                "answerConceptUuids" : [ "c5b52f02-d74e-4050-a4cb-4eda2999d232" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Received : How many Tab Levetiracetam 500 mg issued by JSS",
+      "uuid" : "d3e65fc5-6cf1-4890-b865-a8925435114d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity - Tab Levetiracetam 500 from JSS",
+        "uuid" : "c39a036f-748a-4698-b403-531b6d1fc3ab",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"25b848ac-bfab-492d-b203-5edaf8605f0c\").containsAnswerConceptName(\"fb4f3c41-6a5a-4cba-9be8-2d91db77bb15\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Epileptic Medicines from JSS",
+                "conceptUuid" : "25b848ac-bfab-492d-b203-5edaf8605f0c",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Levetiracetam 500 mg" ],
+                "answerConceptUuids" : [ "fb4f3c41-6a5a-4cba-9be8-2d91db77bb15" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Medicines Received from government",
+      "uuid" : "6e30e240-5266-45fb-9efc-bff66af8fefd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Medicines Received from government - Epilepsy",
+        "uuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Syp Sodium Valproate 40mg / ml",
+          "uuid" : "3571d988-1bce-4ef0-9719-fa276ccde44a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab Carbamazepine 200mg",
+          "uuid" : "da03dc14-b897-49b9-8de9-d67971ab8e59",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab Levetiracetam 500 mg",
+          "uuid" : "fb4f3c41-6a5a-4cba-9be8-2d91db77bb15",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Syp Sodium Valproate 200mg / 5ml",
+          "uuid" : "7973b1a7-9608-4133-ac9b-3ce63d701d2b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab Phenobarbitone 30 mg",
+          "uuid" : "c5b52f02-d74e-4050-a4cb-4eda2999d232",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Phenobarbitone 30 mg Tablet",
+          "uuid" : "e0d149ae-e9a2-44df-89b7-8fb3b42a67c2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab Phenytoin 100mg",
+          "uuid" : "89b4518e-1b3c-4db6-9f64-36d0ceb4f536",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sodium Valproate 200mg",
+          "uuid" : "dfc7ad53-4b0e-4c81-aaee-8b7e7f16955f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab Sodium Valproate 200mg",
+          "uuid" : "26304279-d598-4b7e-8aa0-29b00bf2a1e9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Carbamazepine 200mg",
+          "uuid" : "d5b5a203-4f4d-41b3-b7eb-e837bda30329",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Levetiracetam 500 mg tablet",
+          "uuid" : "53eea329-db9b-426d-8958-f964806008b8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab Clobazam 5mg",
+          "uuid" : "9adf1390-0ded-4516-bdfb-f4f9953130fa",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Phenytoin 100mg",
+          "uuid" : "beac2796-1f90-45e8-b3c8-abb1d13167b5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Clobazam 5mg",
+          "uuid" : "7e60a922-67bd-42a3-a4db-ec66af8296ce",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "MultiSelect",
+      "documentation" : {
+        "label" : "Medicines Received from government",
+        "value" : "8b419b73-910d-44b0-b2dc-4247b0a383ef"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "Received : How many Carbamazepine 200mg drug were issued by govt",
+      "uuid" : "844e40d0-0317-40f9-8023-b3458d263447",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "How many Carbamazepine 200mg drug were issued by govt",
+        "uuid" : "75fb4879-8dbc-430f-a62a-f06bb8f344ad",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1\").containsAnswerConceptName(\"da03dc14-b897-49b9-8de9-d67971ab8e59\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medicines Received from government - Epilepsy",
+                "conceptUuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Carbamazepine 200mg" ],
+                "answerConceptUuids" : [ "da03dc14-b897-49b9-8de9-d67971ab8e59" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "documentation" : {
+        "label" : "fill 0 if not received / distributed any Medicine",
+        "value" : "de2b14e2-d444-4cfb-be05-5daf1275c938"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "Received : How many Phenytoin 100mg drug were issued by govt",
+      "uuid" : "57d702bd-a43c-4fb1-8b55-340f82ceb24d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "How many Phenytoin 100mg drug were issued by govt",
+        "uuid" : "24743f47-5636-4e25-a677-0f09c65f5777",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1\").containsAnswerConceptName(\"89b4518e-1b3c-4db6-9f64-36d0ceb4f536\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medicines Received from government - Epilepsy",
+                "conceptUuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Phenytoin 100mg" ],
+                "answerConceptUuids" : [ "89b4518e-1b3c-4db6-9f64-36d0ceb4f536" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "documentation" : {
+        "label" : "fill 0 if not received / distributed any Medicine",
+        "value" : "de2b14e2-d444-4cfb-be05-5daf1275c938"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "Received - how many Tab Sodium Valproate 200mg issued by government",
+      "uuid" : "b9b54764-7544-4de7-857c-aedf679d6998",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity - Tab Sodium Valproate 200mg from government",
+        "uuid" : "f8288b67-cb14-4bcd-a265-46b786f03346",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1\").containsAnswerConceptName(\"26304279-d598-4b7e-8aa0-29b00bf2a1e9\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medicines Received from government - Epilepsy",
+                "conceptUuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Sodium Valproate 200mg" ],
+                "answerConceptUuids" : [ "26304279-d598-4b7e-8aa0-29b00bf2a1e9" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "or"
+          }
+        } ]
+      } ],
+      "documentation" : {
+        "label" : "fill 0 if not received / distributed any Medicine",
+        "value" : "de2b14e2-d444-4cfb-be05-5daf1275c938"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "Received - how many Syrup Sodium Valproate 200mg / ml issued by government",
+      "uuid" : "a5962716-ee3e-4fcd-8037-59efd8fa6f6a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity -  Syrup Sodium Valproate 200mg / 5 ml issued by government",
+        "uuid" : "3e0740f4-3dcf-419e-8d1f-f5a5feea551c",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1\").containsAnswerConceptName(\"7973b1a7-9608-4133-ac9b-3ce63d701d2b\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medicines Received from government - Epilepsy",
+                "conceptUuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Syp Sodium Valproate 200mg / 5ml" ],
+                "answerConceptUuids" : [ "7973b1a7-9608-4133-ac9b-3ce63d701d2b" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Received - how many Syrup Sodium Valproate 40mg / ml issued by government",
+      "uuid" : "c29aaa04-517c-4212-8285-40b3d2518915",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity - Syrup Sodium Valproate 40mg / ml issued by government",
+        "uuid" : "0b8505e0-29e3-44e4-b328-b4a50dfd1065",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 15.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1\").containsAnswerConceptName(\"3571d988-1bce-4ef0-9719-fa276ccde44a\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medicines Received from government - Epilepsy",
+                "conceptUuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Syp Sodium Valproate 40mg / ml" ],
+                "answerConceptUuids" : [ "3571d988-1bce-4ef0-9719-fa276ccde44a" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Received : how many Clobazam 5mg  issued by government",
+      "uuid" : "4dff8252-7954-4458-a13d-b50db9b8e713",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity - Clobazam 5mg from government",
+        "uuid" : "ec000357-6778-4bf2-86fe-2aeefd332673",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 16.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1\").containsAnswerConceptName(\"9adf1390-0ded-4516-bdfb-f4f9953130fa\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medicines Received from government - Epilepsy",
+                "conceptUuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Clobazam 5mg" ],
+                "answerConceptUuids" : [ "9adf1390-0ded-4516-bdfb-f4f9953130fa" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "documentation" : {
+        "label" : "fill 0 if not received / distributed any Medicine",
+        "value" : "de2b14e2-d444-4cfb-be05-5daf1275c938"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "Received : How many Tab Phenobarbitone 30 mg issued by government",
+      "uuid" : "086cd72e-9826-4fd9-825b-a64e3f068ca8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity - Tab Phenobarbitone 30 mg from government",
+        "uuid" : "900f430e-978c-4dc6-9d4d-9c624eb112fc",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 17.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1\").containsAnswerConceptName(\"c5b52f02-d74e-4050-a4cb-4eda2999d232\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medicines Received from government - Epilepsy",
+                "conceptUuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Phenobarbitone 30 mg" ],
+                "answerConceptUuids" : [ "c5b52f02-d74e-4050-a4cb-4eda2999d232" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "documentation" : {
+        "label" : "fill 0 if not received / distributed any Medicine",
+        "value" : "de2b14e2-d444-4cfb-be05-5daf1275c938"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "Received : How many Tab Levetiracetam 500 mg issued by government",
+      "uuid" : "75a80cb3-0d5b-428a-ba4f-930a066ae6a8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity - Tab Levetiracetam 500 mg from government",
+        "uuid" : "e0155785-1efd-4eee-8673-33e2acc8d71a",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 18.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1\").containsAnswerConceptName(\"fb4f3c41-6a5a-4cba-9be8-2d91db77bb15\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medicines Received from government - Epilepsy",
+                "conceptUuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Levetiracetam 500 mg" ],
+                "answerConceptUuids" : [ "fb4f3c41-6a5a-4cba-9be8-2d91db77bb15" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "documentation" : {
+        "label" : "fill 0 if not received / distributed any Medicine",
+        "value" : "de2b14e2-d444-4cfb-be05-5daf1275c938"
+      },
+      "mandatory" : true
+    } ],
+    "textColour" : "#ee1111",
+    "backgroundColour" : "#c3a670",
+    "timed" : false,
+    "display" : "Medicines received from Government and JSS"
+  }, {
+    "uuid" : "be306109-c912-41ec-819b-c215e6b72bdc",
+    "name" : "Medicines Distributed",
+    "displayOrder" : 4.0,
+    "formElements" : [ {
+      "name" : "How many Carbmazapine 200mg drug were issued by govt",
+      "uuid" : "12c9bebf-2596-4c99-b770-0c3c4559068a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of Hydroxyurea Capsules issued by govt",
+        "uuid" : "b39dc2f9-b6b7-46cf-a29f-8ee50136720e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Medicines Received from government",
+      "uuid" : "cd57ac98-1b6b-4e28-a028-549c56f19da7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Medicines Received from government - Epilepsy",
+        "uuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Syp Sodium Valproate 40mg / ml",
+          "uuid" : "3571d988-1bce-4ef0-9719-fa276ccde44a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab Carbamazepine 200mg",
+          "uuid" : "da03dc14-b897-49b9-8de9-d67971ab8e59",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab Levetiracetam 500 mg",
+          "uuid" : "fb4f3c41-6a5a-4cba-9be8-2d91db77bb15",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Syp Sodium Valproate 200mg / 5ml",
+          "uuid" : "7973b1a7-9608-4133-ac9b-3ce63d701d2b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab Phenobarbitone 30 mg",
+          "uuid" : "c5b52f02-d74e-4050-a4cb-4eda2999d232",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Phenobarbitone 30 mg Tablet",
+          "uuid" : "e0d149ae-e9a2-44df-89b7-8fb3b42a67c2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab Phenytoin 100mg",
+          "uuid" : "89b4518e-1b3c-4db6-9f64-36d0ceb4f536",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sodium Valproate 200mg",
+          "uuid" : "dfc7ad53-4b0e-4c81-aaee-8b7e7f16955f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab Sodium Valproate 200mg",
+          "uuid" : "26304279-d598-4b7e-8aa0-29b00bf2a1e9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Carbamazepine 200mg",
+          "uuid" : "d5b5a203-4f4d-41b3-b7eb-e837bda30329",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Levetiracetam 500 mg tablet",
+          "uuid" : "53eea329-db9b-426d-8958-f964806008b8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab Clobazam 5mg",
+          "uuid" : "9adf1390-0ded-4516-bdfb-f4f9953130fa",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Phenytoin 100mg",
+          "uuid" : "beac2796-1f90-45e8-b3c8-abb1d13167b5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Clobazam 5mg",
+          "uuid" : "7e60a922-67bd-42a3-a4db-ec66af8296ce",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "MultiSelect",
+      "documentation" : {
+        "label" : "Medicines Received from government",
+        "value" : "8b419b73-910d-44b0-b2dc-4247b0a383ef"
+      },
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Medicines from JSS",
+      "uuid" : "8c9e8fe2-5bb7-445c-afed-3e418e586ffd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Epileptic Medicines from JSS",
+        "uuid" : "25b848ac-bfab-492d-b203-5edaf8605f0c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Tab Phenobarbitone 30 mg",
+          "uuid" : "c5b52f02-d74e-4050-a4cb-4eda2999d232",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Syp Sodium Valproate 40mg / ml",
+          "uuid" : "3571d988-1bce-4ef0-9719-fa276ccde44a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Syp Sodium Valproate 200mg / 5ml",
+          "uuid" : "7973b1a7-9608-4133-ac9b-3ce63d701d2b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab Levetiracetam 500 mg",
+          "uuid" : "fb4f3c41-6a5a-4cba-9be8-2d91db77bb15",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab Sodium Valproate 200mg",
+          "uuid" : "26304279-d598-4b7e-8aa0-29b00bf2a1e9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab Clobazam 5mg",
+          "uuid" : "9adf1390-0ded-4516-bdfb-f4f9953130fa",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab Phenytoin 100mg",
+          "uuid" : "89b4518e-1b3c-4db6-9f64-36d0ceb4f536",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab Carbamazepine 200mg",
+          "uuid" : "da03dc14-b897-49b9-8de9-d67971ab8e59",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "MultiSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Received : How many Carbamazepine 200mg drug were issued by govt",
+      "uuid" : "2055fb79-994a-4af7-8af3-eb38322d8529",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "How many Carbamazepine 200mg drug were issued by govt",
+        "uuid" : "75fb4879-8dbc-430f-a62a-f06bb8f344ad",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1\").containsAnswerConceptName(\"da03dc14-b897-49b9-8de9-d67971ab8e59\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medicines Received from government - Epilepsy",
+                "conceptUuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Carbamazepine 200mg" ],
+                "answerConceptUuids" : [ "da03dc14-b897-49b9-8de9-d67971ab8e59" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "documentation" : {
+        "label" : "fill 0 if not received / distributed any Medicine",
+        "value" : "de2b14e2-d444-4cfb-be05-5daf1275c938"
+      },
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Received : How many Phenytoin 100mg drug were issued by govt",
+      "uuid" : "16db1024-d5eb-4caa-b03d-ea1cf13a6441",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "How many Phenytoin 100mg drug were issued by govt",
+        "uuid" : "24743f47-5636-4e25-a677-0f09c65f5777",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1\").containsAnswerConceptName(\"89b4518e-1b3c-4db6-9f64-36d0ceb4f536\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medicines Received from government - Epilepsy",
+                "conceptUuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Phenytoin 100mg" ],
+                "answerConceptUuids" : [ "89b4518e-1b3c-4db6-9f64-36d0ceb4f536" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "documentation" : {
+        "label" : "fill 0 if not received / distributed any Medicine",
+        "value" : "de2b14e2-d444-4cfb-be05-5daf1275c938"
+      },
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Received - how many Tab Sodium Valproate 200mg issued by government",
+      "uuid" : "af773bbd-bfb4-41a1-bb03-edc91013b14e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity - Tab Sodium Valproate 200mg from government",
+        "uuid" : "f8288b67-cb14-4bcd-a265-46b786f03346",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1\").containsAnswerConceptName(\"26304279-d598-4b7e-8aa0-29b00bf2a1e9\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medicines Received from government - Epilepsy",
+                "conceptUuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Sodium Valproate 200mg" ],
+                "answerConceptUuids" : [ "26304279-d598-4b7e-8aa0-29b00bf2a1e9" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "or"
+          }
+        } ]
+      } ],
+      "documentation" : {
+        "label" : "fill 0 if not received / distributed any Medicine",
+        "value" : "de2b14e2-d444-4cfb-be05-5daf1275c938"
+      },
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Received - how many Syrup Sodium Valproate 200mg / ml issued by government",
+      "uuid" : "dd4d8b5b-0186-40cc-84c1-f7e5b7a506f3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity -  Syrup Sodium Valproate 200mg / 5 ml issued by government",
+        "uuid" : "3e0740f4-3dcf-419e-8d1f-f5a5feea551c",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1\").containsAnswerConceptName(\"7973b1a7-9608-4133-ac9b-3ce63d701d2b\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medicines Received from government - Epilepsy",
+                "conceptUuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Syp Sodium Valproate 200mg / 5ml" ],
+                "answerConceptUuids" : [ "7973b1a7-9608-4133-ac9b-3ce63d701d2b" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Received - how many Syrup Sodium Valproate 40mg / ml issued by government",
+      "uuid" : "5b3b095b-c92a-45e1-a3e1-c0e603b0a329",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity - Syrup Sodium Valproate 40mg / ml issued by government",
+        "uuid" : "0b8505e0-29e3-44e4-b328-b4a50dfd1065",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1\").containsAnswerConceptName(\"3571d988-1bce-4ef0-9719-fa276ccde44a\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medicines Received from government - Epilepsy",
+                "conceptUuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Syp Sodium Valproate 40mg / ml" ],
+                "answerConceptUuids" : [ "3571d988-1bce-4ef0-9719-fa276ccde44a" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Received : how many Clobazam 5mg  issued by government",
+      "uuid" : "886987bf-29e5-4eb4-b3f3-e9bdb092a6ab",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity - Clobazam 5mg from government",
+        "uuid" : "ec000357-6778-4bf2-86fe-2aeefd332673",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1\").containsAnswerConceptName(\"9adf1390-0ded-4516-bdfb-f4f9953130fa\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medicines Received from government - Epilepsy",
+                "conceptUuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Clobazam 5mg" ],
+                "answerConceptUuids" : [ "9adf1390-0ded-4516-bdfb-f4f9953130fa" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "documentation" : {
+        "label" : "fill 0 if not received / distributed any Medicine",
+        "value" : "de2b14e2-d444-4cfb-be05-5daf1275c938"
+      },
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Received : How many Tab Phenobarbitone 30 mg issued by government",
+      "uuid" : "b424bb6b-4375-4ade-8d77-4cfc4b7266f5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity - Tab Phenobarbitone 30 mg from government",
+        "uuid" : "900f430e-978c-4dc6-9d4d-9c624eb112fc",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1\").containsAnswerConceptName(\"c5b52f02-d74e-4050-a4cb-4eda2999d232\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medicines Received from government - Epilepsy",
+                "conceptUuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Phenobarbitone 30 mg" ],
+                "answerConceptUuids" : [ "c5b52f02-d74e-4050-a4cb-4eda2999d232" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "documentation" : {
+        "label" : "fill 0 if not received / distributed any Medicine",
+        "value" : "de2b14e2-d444-4cfb-be05-5daf1275c938"
+      },
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Received : How many Tab Levetiracetam 500 mg issued by government",
+      "uuid" : "76133fe1-389a-4126-b012-453604f27d46",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity - Tab Levetiracetam 500 mg from government",
+        "uuid" : "e0155785-1efd-4eee-8673-33e2acc8d71a",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1\").containsAnswerConceptName(\"fb4f3c41-6a5a-4cba-9be8-2d91db77bb15\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medicines Received from government - Epilepsy",
+                "conceptUuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Levetiracetam 500 mg" ],
+                "answerConceptUuids" : [ "fb4f3c41-6a5a-4cba-9be8-2d91db77bb15" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "documentation" : {
+        "label" : "fill 0 if not received / distributed any Medicine",
+        "value" : "de2b14e2-d444-4cfb-be05-5daf1275c938"
+      },
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Distributed : How many Carbamazepine 200mg drug were given to patients",
+      "uuid" : "fd002f1f-d40f-4e50-b15a-29d1f024f383",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "How many Carbamazepine 200mg drug were given to patients",
+        "uuid" : "1a40c2b6-2a1f-4a57-a255-1e01a0bb2b6d",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1\").containsAnswerConceptName(\"da03dc14-b897-49b9-8de9-d67971ab8e59\").or.when.valueInEncounter(\"25b848ac-bfab-492d-b203-5edaf8605f0c\").containsAnswerConceptName(\"da03dc14-b897-49b9-8de9-d67971ab8e59\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medicines Received from government - Epilepsy",
+                "conceptUuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Carbamazepine 200mg" ],
+                "answerConceptUuids" : [ "da03dc14-b897-49b9-8de9-d67971ab8e59" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            }, {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Epileptic Medicines from JSS",
+                "conceptUuid" : "25b848ac-bfab-492d-b203-5edaf8605f0c",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Carbamazepine 200mg" ],
+                "answerConceptUuids" : [ "da03dc14-b897-49b9-8de9-d67971ab8e59" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "or"
+          }
+        } ]
+      } ],
+      "documentation" : {
+        "label" : "fill 0 if not received / distributed any Medicine",
+        "value" : "de2b14e2-d444-4cfb-be05-5daf1275c938"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "Distributed : How many Phenytoin 100mg drug were given to patients",
+      "uuid" : "369d08df-a628-4e48-8043-cb8f2133c643",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "How many Phenytoin 100mg drug were given to patients",
+        "uuid" : "b774d6c1-b585-465f-8922-042265bcc2ac",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1\").containsAnswerConceptName(\"89b4518e-1b3c-4db6-9f64-36d0ceb4f536\").or.when.valueInEncounter(\"25b848ac-bfab-492d-b203-5edaf8605f0c\").containsAnswerConceptName(\"89b4518e-1b3c-4db6-9f64-36d0ceb4f536\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medicines Received from government - Epilepsy",
+                "conceptUuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Phenytoin 100mg" ],
+                "answerConceptUuids" : [ "89b4518e-1b3c-4db6-9f64-36d0ceb4f536" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            }, {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Epileptic Medicines from JSS",
+                "conceptUuid" : "25b848ac-bfab-492d-b203-5edaf8605f0c",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Phenytoin 100mg" ],
+                "answerConceptUuids" : [ "89b4518e-1b3c-4db6-9f64-36d0ceb4f536" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "or"
+          }
+        } ]
+      } ],
+      "documentation" : {
+        "label" : "fill 0 if not received / distributed any Medicine",
+        "value" : "de2b14e2-d444-4cfb-be05-5daf1275c938"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "Distributed : how many Tab Sodium Valproate 200mg given to patients",
+      "uuid" : "57b451d7-597b-44fb-afd6-bdb22501d18c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity - Tab Sodium Valproate 200mg given to patients",
+        "uuid" : "0585074b-fa98-4e12-bff7-30c581ed6574",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1\").containsAnswerConceptName(\"26304279-d598-4b7e-8aa0-29b00bf2a1e9\").or.when.valueInEncounter(\"25b848ac-bfab-492d-b203-5edaf8605f0c\").containsAnswerConceptName(\"26304279-d598-4b7e-8aa0-29b00bf2a1e9\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medicines Received from government - Epilepsy",
+                "conceptUuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Sodium Valproate 200mg" ],
+                "answerConceptUuids" : [ "26304279-d598-4b7e-8aa0-29b00bf2a1e9" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            }, {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Epileptic Medicines from JSS",
+                "conceptUuid" : "25b848ac-bfab-492d-b203-5edaf8605f0c",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Sodium Valproate 200mg" ],
+                "answerConceptUuids" : [ "26304279-d598-4b7e-8aa0-29b00bf2a1e9" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "or"
+          }
+        } ]
+      } ],
+      "documentation" : {
+        "label" : "fill 0 if not received / distributed any Medicine",
+        "value" : "de2b14e2-d444-4cfb-be05-5daf1275c938"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "Distributed : how many Syrup Sodium Valproate 200mg / ml given to patients",
+      "uuid" : "9687ebc5-51b9-47df-b931-67c563506829",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity - Syrup Sodium Valproate 200mg / ml given to patients",
+        "uuid" : "c5345f95-b35f-43d8-8a6e-ad865a771b92",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 15.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1\").containsAnswerConceptName(\"7973b1a7-9608-4133-ac9b-3ce63d701d2b\").or.when.valueInEncounter(\"25b848ac-bfab-492d-b203-5edaf8605f0c\").containsAnswerConceptName(\"7973b1a7-9608-4133-ac9b-3ce63d701d2b\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medicines Received from government - Epilepsy",
+                "conceptUuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Syp Sodium Valproate 200mg / 5ml" ],
+                "answerConceptUuids" : [ "7973b1a7-9608-4133-ac9b-3ce63d701d2b" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            }, {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Epileptic Medicines from JSS",
+                "conceptUuid" : "25b848ac-bfab-492d-b203-5edaf8605f0c",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Syp Sodium Valproate 200mg / 5ml" ],
+                "answerConceptUuids" : [ "7973b1a7-9608-4133-ac9b-3ce63d701d2b" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "or"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Distributed how many Syp Sodium Valproate 40mg / ml given to patients",
+      "uuid" : "fd48e64e-30b3-45ce-8fed-c62dc371010c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity - Syp Sodium Valproate 40mg / ml given to patients",
+        "uuid" : "063f4842-890f-41a0-82d4-81f57ac32d2f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 16.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1\").containsAnswerConceptName(\"3571d988-1bce-4ef0-9719-fa276ccde44a\").or.when.valueInEncounter(\"25b848ac-bfab-492d-b203-5edaf8605f0c\").containsAnswerConceptName(\"3571d988-1bce-4ef0-9719-fa276ccde44a\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medicines Received from government - Epilepsy",
+                "conceptUuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Syp Sodium Valproate 40mg / ml" ],
+                "answerConceptUuids" : [ "3571d988-1bce-4ef0-9719-fa276ccde44a" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            }, {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Epileptic Medicines from JSS",
+                "conceptUuid" : "25b848ac-bfab-492d-b203-5edaf8605f0c",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Syp Sodium Valproate 40mg / ml" ],
+                "answerConceptUuids" : [ "3571d988-1bce-4ef0-9719-fa276ccde44a" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "or"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Distributed : how many Clobazam 5mg given to patients",
+      "uuid" : "aaf11843-cdf5-446e-9a69-e62ad3511e90",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity - Clobazam 5mg given to patients",
+        "uuid" : "2d46acba-b073-4aef-be1f-ed9d2f7799fd",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 17.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1\").containsAnswerConceptName(\"9adf1390-0ded-4516-bdfb-f4f9953130fa\").or.when.valueInEncounter(\"25b848ac-bfab-492d-b203-5edaf8605f0c\").containsAnswerConceptName(\"9adf1390-0ded-4516-bdfb-f4f9953130fa\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medicines Received from government - Epilepsy",
+                "conceptUuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Clobazam 5mg" ],
+                "answerConceptUuids" : [ "9adf1390-0ded-4516-bdfb-f4f9953130fa" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            }, {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Epileptic Medicines from JSS",
+                "conceptUuid" : "25b848ac-bfab-492d-b203-5edaf8605f0c",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Clobazam 5mg" ],
+                "answerConceptUuids" : [ "9adf1390-0ded-4516-bdfb-f4f9953130fa" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "or"
+          }
+        } ]
+      } ],
+      "documentation" : {
+        "label" : "fill 0 if not received / distributed any Medicine",
+        "value" : "de2b14e2-d444-4cfb-be05-5daf1275c938"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "Distributed : How many Tab Phenobarbitone 30 mg given to patients",
+      "uuid" : "38ca18f8-7f10-420d-8d58-6bc1fd147585",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity - Tab Phenobarbitone 30 mg given to patients",
+        "uuid" : "a0626241-4e2e-4200-8647-29e4b551279e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 18.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1\").containsAnswerConceptName(\"c5b52f02-d74e-4050-a4cb-4eda2999d232\").or.when.valueInEncounter(\"25b848ac-bfab-492d-b203-5edaf8605f0c\").containsAnswerConceptName(\"c5b52f02-d74e-4050-a4cb-4eda2999d232\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medicines Received from government - Epilepsy",
+                "conceptUuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Phenobarbitone 30 mg" ],
+                "answerConceptUuids" : [ "c5b52f02-d74e-4050-a4cb-4eda2999d232" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            }, {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Epileptic Medicines from JSS",
+                "conceptUuid" : "25b848ac-bfab-492d-b203-5edaf8605f0c",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Phenobarbitone 30 mg" ],
+                "answerConceptUuids" : [ "c5b52f02-d74e-4050-a4cb-4eda2999d232" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "or"
+          }
+        } ]
+      } ],
+      "documentation" : {
+        "label" : "fill 0 if not received / distributed any Medicine",
+        "value" : "de2b14e2-d444-4cfb-be05-5daf1275c938"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "Distributed : How many Tab Levetiracetam 500 mg given to patients",
+      "uuid" : "e81b0f4c-fff2-41fd-b4e9-ef09c0a568be",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity - Tab Levetiracetam 500 mg given to patients",
+        "uuid" : "f6c26d85-ee0e-43dc-b1f4-b8a45f6894b3",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 19.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1\").containsAnswerConceptName(\"fb4f3c41-6a5a-4cba-9be8-2d91db77bb15\").or.when.valueInEncounter(\"25b848ac-bfab-492d-b203-5edaf8605f0c\").containsAnswerConceptName(\"fb4f3c41-6a5a-4cba-9be8-2d91db77bb15\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medicines Received from government - Epilepsy",
+                "conceptUuid" : "57cd1080-b9a2-4f5f-bf5d-ee6be7dec2e1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Levetiracetam 500 mg" ],
+                "answerConceptUuids" : [ "fb4f3c41-6a5a-4cba-9be8-2d91db77bb15" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            }, {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Epileptic Medicines from JSS",
+                "conceptUuid" : "25b848ac-bfab-492d-b203-5edaf8605f0c",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Tab Levetiracetam 500 mg" ],
+                "answerConceptUuids" : [ "fb4f3c41-6a5a-4cba-9be8-2d91db77bb15" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "or"
+          }
+        } ]
+      } ],
+      "documentation" : {
+        "label" : "fill 0 if not received / distributed any Medicine",
+        "value" : "de2b14e2-d444-4cfb-be05-5daf1275c938"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "No. of Hydroxyurea Capsules given to patients",
+      "uuid" : "1237efa1-8eb2-4c40-b513-b2d02f9df677",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of Hydroxyurea 500mg capsules given to patients",
+        "uuid" : "b16deb47-750c-4318-abcc-5a3dcf0d87b3",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 20.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "No. of patients received PCV Vaccination in PSGM",
+      "uuid" : "c8fd9efe-5927-41f9-bb63-335e51ae443a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of patients received PCV Vaccination in PSGM",
+        "uuid" : "849141cd-e9f5-4f36-b4ab-053f2cfe0832",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "lowNormal" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 21.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "No. of patients whose CBC test done",
+      "uuid" : "710e82e6-b6a1-4674-b7eb-0fb49147a861",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of patients whose CBC test done (PSGM)",
+        "uuid" : "35be250d-592b-43ef-9f31-23a2b6fcf83a",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "lowNormal" : 5.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 22.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "No. of epileptic pregnant women given sodium valproate",
+      "uuid" : "2e8248d8-0279-47c1-bf52-6541b03ec3ae",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of epileptic pregnant women given sodium valproate",
+        "uuid" : "cb498c23-de4c-4c4f-98fe-1fd8eac858b9",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "lowNormal" : 0.0,
+        "highNormal" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 23.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Would you like to share challenges faced by you in PSGM",
+      "uuid" : "5ce1c893-d904-4346-a936-b3bf04d2ae5f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Challenges in PSGM",
+        "uuid" : "49c19328-c915-4fff-9776-a3a6e15f5967",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 24.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Any other information?",
+      "uuid" : "bf77c876-01da-45d2-84c4-d73549483a7d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Any other information (PSGM)",
+        "uuid" : "be0cd33d-6284-4c37-86cf-86e2e1e97b11",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 25.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Medicines Distributed"
+  }, {
+    "uuid" : "e47ae519-7e4a-481e-99ee-03323cd4239d",
+    "name" : "Other info",
+    "displayOrder" : 5.0,
+    "formElements" : [ {
+      "name" : "No. of epileptic pregnant women given sodium valproate",
+      "uuid" : "86f7470c-771f-4b4b-8bb2-149eb16eda56",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "No. of epileptic pregnant women given sodium valproate",
+        "uuid" : "cb498c23-de4c-4c4f-98fe-1fd8eac858b9",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "lowNormal" : 0.0,
+        "highNormal" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  let noOfEpilepticPregnantWomenGivenSodiumValproateObservation = encounter.findObservation('cb498c23-de4c-4c4f-98fe-1fd8eac858b9');\n  let noOfEpilepticPregnantWomenGivenSodiumValproateValue = _.isEmpty(noOfEpilepticPregnantWomenGivenSodiumValproateObservation) ? noOfEpilepticPregnantWomenGivenSodiumValproateObservation : noOfEpilepticPregnantWomenGivenSodiumValproateObservation.getReadableValue();\n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"4c6fef1b-c025-4c42-9064-77f2deb26e4f\").lessThan(noOfEpilepticPregnantWomenGivenSodiumValproateValue).matches();\n  \n  if(condition11 ){\n    validationErrors.push(\"जितनी एपिलेप्टिक गर्भवती महिलायें मीटिंग में शामिल हुई है उससे ज्यादा को दवाइयाँ कैसे दी जा सकती है, कृपया चेक करो की सही जानकारी भरी है ?\");  \n}\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "details" : {
+            "validationError" : "जितनी एपिलेप्टिक गर्भवती महिलायें मीटिंग में शामिल हुई है उससे ज्यादा को दवाइयाँ कैसे दी जा सकती है, कृपया चेक करो की सही जानकारी भरी है ?"
+          },
+          "actionType" : "validationError"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "No. of Epileptic ANC attended PSGM",
+                "conceptUuid" : "4c6fef1b-c025-4c42-9064-77f2deb26e4f",
+                "conceptDataType" : "Numeric"
+              },
+              "rhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "No. of epileptic pregnant women given sodium valproate",
+                "conceptUuid" : "cb498c23-de4c-4c4f-98fe-1fd8eac858b9"
+              },
+              "operator" : "lessThan"
+            } ]
+          }
+        } ]
+      } ],
+      "documentation" : {
+        "label" : "Don't give Sodium valproate to Epileptic women",
+        "value" : "802174fe-feee-4a72-b453-388f0cb113e4"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "Would you like to share challenges faced by you and desired solutions of this PSGM",
+      "uuid" : "b5bfda8d-2c8f-418c-9ecb-f6fe1c07f57f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Challenges in PSGM",
+        "uuid" : "49c19328-c915-4fff-9776-a3a6e15f5967",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "documentation" : {
+        "label" : "Challenges faced in PSG",
+        "value" : "014fc7a5-a4d2-40fe-8ec2-4cb69ad19ad2"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "Any other information?",
+      "uuid" : "3537c1c2-f73c-4a98-859c-bab6eb7ebb1c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Any other information (PSGM)",
+        "uuid" : "be0cd33d-6284-4c37-86cf-86e2e1e97b11",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "documentation" : {
+        "label" : "Mandatory Any other info (text)",
+        "value" : "8301b205-da10-46f8-8e7e-75ba02db845c"
+      },
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Other info"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({ params, imports }) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({encounter});\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter}).when.valueInEncounter(\"acf8e9fb-3ba2-4d41-ac3d-0ec62f60a15f\").defined.matches();\n  \n  if(condition11 ){\n    const earliestDate = moment(encounter.encounterDateTime).add(30, 'days').toDate();\n    const maxDate = moment(encounter.encounterDateTime).add(33, 'days').toDate();\n    scheduleBuilder.add({name: \"Epilepsy PSG meeting attendance\", encounterType: \"Epilepsy PSG meeting attendance\", earliestDate, maxDate});  \n}\n  \n  return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ],
+  "visitScheduleDeclarativeRule" : [ {
+    "actions" : [ {
+      "details" : {
+        "dateField" : "encounterDateTime",
+        "daysToOverdue" : "33",
+        "encounterName" : "Epilepsy PSG meeting attendance",
+        "encounterType" : "Epilepsy PSG meeting attendance",
+        "daysToSchedule" : "30"
+      },
+      "actionType" : "scheduleVisit"
+    }, { } ],
+    "conditions" : [ {
+      "compoundRule" : {
+        "rules" : [ {
+          "lhs" : {
+            "type" : "concept",
+            "scope" : "encounter",
+            "conceptName" : "Date of PSG Meeting",
+            "conceptUuid" : "acf8e9fb-3ba2-4d41-ac3d-0ec62f60a15f",
+            "conceptDataType" : "Date"
+          },
+          "rhs" : { },
+          "operator" : "defined"
+        } ],
+        "conjunction" : "and"
+      }
+    } ]
+  } ]
+}

@@ -1,0 +1,156 @@
+{
+  "name" : "Well Registration",
+  "uuid" : "90b201f3-2bf9-4e49-b570-9fef948e022a",
+  "formType" : "IndividualProfile",
+  "formElementGroups" : [ {
+    "uuid" : "fc5d3114-026d-4214-ab3b-10bd3e1e9fc7",
+    "name" : "Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Type of well",
+      "uuid" : "752568ae-25a5-4325-be24-6c76d365ea82",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Type of well",
+        "uuid" : "0d748856-aeec-4f6e-83c7-1463b1a5b678",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Dugwell",
+          "uuid" : "965337c3-e001-489b-b17c-6d52b644075f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Open well",
+          "uuid" : "88a181e0-f374-4b7d-b287-7192e48bb6d4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tube well",
+          "uuid" : "013b4e53-bf42-441e-8718-2a1a504d0243",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "0a09f401-14e4-41bb-a1a6-c25dbc5e0733",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Other type of well",
+      "uuid" : "df49dd91-c108-4ecc-8eff-9cfb79a97a94",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other type of well",
+        "uuid" : "2c32a617-3e83-44d2-a724-46f0b23e29cc",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInRegistration(\"Type of well\").containsAnswerConceptName('Other');\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Owner of the well",
+      "uuid" : "c5283489-2a39-4e97-b192-b85cf9ba2d5c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Owner of the well",
+        "uuid" : "d8801e99-760d-4831-a709-ca2346e7adca",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Well Image (Inside)",
+      "uuid" : "b76c27fa-3311-4252-ace9-a5c33ef64e72",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Well Image 1",
+        "uuid" : "52ff5563-e677-47e2-93e6-e1a159c7718e",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Well Image (Outside)",
+      "uuid" : "c0a9565b-d927-4221-8cdf-d0e95bb2c7dd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Well Image 2",
+        "uuid" : "17562cc6-7e54-457f-916a-07505dfa753a",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Well Image",
+      "uuid" : "f7e96f57-cf9b-4966-aea2-476958beaf8c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Well Image 3",
+        "uuid" : "8e1ad3ab-13c6-4155-85ea-9ee14f036553",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Water level in well during registration",
+      "uuid" : "7085707f-f2ee-489d-8697-0fc2cbb8030e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Water level in well during registration",
+        "uuid" : "ffa5b342-acb5-4606-a922-763bf8a428bf",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Details"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

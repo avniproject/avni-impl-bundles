@@ -1,0 +1,196 @@
+{
+  "name" : "Sickle cell testing entry Encounter",
+  "uuid" : "5769525e-1953-4d54-828e-e7eae294e75b",
+  "formType" : "Encounter",
+  "formElementGroups" : [ {
+    "uuid" : "68d9db55-4dd3-4760-952b-b33e7b985775",
+    "name" : "Testing counts",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Year and month of the testing",
+      "uuid" : "470b0107-e392-41ed-b9f9-67e72f508ef4",
+      "keyValues" : [ {
+        "key" : "durationOptions",
+        "value" : [ "years", "months" ]
+      } ],
+      "concept" : {
+        "name" : "Year and month of the testing",
+        "uuid" : "c55076a9-40d3-41ad-bb2e-e401bb3a28bd",
+        "dataType" : "Duration",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Is data for the current month available",
+      "uuid" : "34495b6f-9625-40ef-bc47-cf383f03234e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is data for the current month available",
+        "uuid" : "115992e9-ed1d-4fc7-8830-a2960e33572a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Number of non pregnant screened cases",
+      "uuid" : "f1ccfbde-63cc-4002-8b78-b9c347e81a01",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of non pregnant screened cases",
+        "uuid" : "59ba3238-5c95-4521-8afe-54cd94f2e9c3",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter('Is data for the current month available').containsAnswerConceptName(\"Yes\")\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Number of pregnant screened cases",
+      "uuid" : "7603bda6-6da9-475b-9205-c08ae56e7b63",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of pregnant screened cases",
+        "uuid" : "98af020e-aa03-46b7-88b8-ae9ae466d6be",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter('Is data for the current month available').containsAnswerConceptName(\"Yes\")\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Number of non pregnant solubility positive cases",
+      "uuid" : "6144e2b1-af80-46ea-a2ce-206dbb57b3e3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of non pregnant solubility positive cases",
+        "uuid" : "f444df59-a999-4798-87fe-830ffb4cd3b0",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter('Is data for the current month available').containsAnswerConceptName(\"Yes\")\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Number of pregnant solubility positive cases",
+      "uuid" : "ebe6ed5f-d2b3-41ce-90b5-863aefee0d90",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of pregnant solubility positive cases",
+        "uuid" : "209c56a1-a7b8-4ee2-93f8-55e78ead2467",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter('Is data for the current month available').containsAnswerConceptName(\"Yes\")\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Number of non pregnant AS cases",
+      "uuid" : "df2ac5c6-ab47-469b-9d2e-815716405ecc",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of non pregnant AS cases",
+        "uuid" : "28bd197f-ba0b-46dd-b5c8-39e834120325",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter('Is data for the current month available').containsAnswerConceptName(\"Yes\")\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Number of pregnant AS cases",
+      "uuid" : "c5a8c0a4-fb71-41aa-886f-67fa7068ecc8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of pregnant AS cases",
+        "uuid" : "a3da5e35-fb5a-4133-8766-5d182dafb72e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter('Is data for the current month available').containsAnswerConceptName(\"Yes\")\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Number of non pregnant SS cases",
+      "uuid" : "80319184-5be6-4c6c-b6af-300cfe903b09",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of non pregnant SS cases",
+        "uuid" : "fb5c25ce-bc98-4baf-a8e2-e70f3c144596",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter('Is data for the current month available').containsAnswerConceptName(\"Yes\")\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Number of pregnant SS cases",
+      "uuid" : "66b08cfe-a0d2-4c0d-8363-0cc538e8b216",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of pregnant SS cases",
+        "uuid" : "c036aa59-3344-4c7b-b1b7-7b01be54b053",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter('Is data for the current month available').containsAnswerConceptName(\"Yes\")\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Testing counts"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\n\"use strict\";\n({params, imports}) => {\n    const encounter = params.entity;\n    const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({encounter});\n    //encounterDateTime is added to handle the cases during the uploads\n    const earliestDate = imports.moment(encounter.earliestVisitDateTime || encounter.encounterDateTime).add(1, 'M').startOf('month').add(24, 'days').toDate();\n    const maxDate = imports.moment(earliestDate).add('15', 'd').toDate();\n    const nameSufix = imports.moment(earliestDate).format(\"MMM YYYY\");\n    scheduleBuilder.add({\n            name: `Sickle cell testing entry for ${nameSufix}`,\n            encounterType: 'Sickle cell testing entry',\n            earliestDate,\n            maxDate\n        });\n    return scheduleBuilder.getAllUnique(\"encounterType\");\n};",
+  "validationRule" : "'use strict';\n({params, imports}) => {\n    const encounter = params.entity;\n    const validationResults = [];\n    const totalNonPregnant = encounter.getObservationReadableValue('Number of non pregnant screened cases');\n    const totalPregnant = encounter.getObservationReadableValue('Number of pregnant screened cases');\n    const nonPregnantSol = encounter.getObservationReadableValue('Number of non pregnant solubility positive cases');\n    const pregnantSol = encounter.getObservationReadableValue('Number of pregnant solubility positive cases');\n    const nonPregnantAS = encounter.getObservationReadableValue('Number of non pregnant AS cases');\n    const pregnantAS = encounter.getObservationReadableValue('Number of pregnant AS cases');\n    const nonPregnantSS = encounter.getObservationReadableValue('Number of non pregnant SS cases');\n    const pregnantSS = encounter.getObservationReadableValue('Number of pregnant SS cases');\n    const moment = imports.moment;\n    \n    if(moment(encounter.encounterDateTime).isBefore(moment(encounter.earliestVisitDateTime), 'day')) {\n      validationResults.push(imports.common.createValidationError(\"Cannot fill the data before the schedule date\"));\n    }\n    if (totalPregnant < pregnantSol) {\n        validationResults.push(imports.common.createValidationError('Total pregnant solublity positive cases cannot be more than total pregnant screened cases'))\n    }\n    if (totalNonPregnant < nonPregnantSol) {\n        validationResults.push(imports.common.createValidationError('Total non pregnant solublity positive cases cannot be more than total non pregnant screened cases'))\n    }\n    if(pregnantSol < (pregnantAS + pregnantSS)) {\n        validationResults.push(imports.common.createValidationError('(Total pregnant AS + total pregnant SS) cases cannot be more than total pregnant solubility positive cases'))\n    }\n    if(nonPregnantSol < (nonPregnantAS + nonPregnantSS)) {\n        validationResults.push(imports.common.createValidationError('(Total non pregnant AS + total non pregnant SS) cases cannot be more than total non pregnant solubility positive cases'))\n    }\n    return validationResults;\n};\n",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

@@ -1,0 +1,8 @@
+{
+  "name" : "Daily Plan Registration (voided~592)",
+  "uuid" : "556f3f81-0aa5-4b79-bbd3-ba83ad6fdfe3",
+  "formType" : "IndividualProfile",
+  "formElementGroups" : [ ],
+  "decisionConcepts" : [ ],
+  "voided" : true
+}

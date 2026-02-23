@@ -1,0 +1,15 @@
+{
+  "ruleDependencyUUID" : "45fab234-2325-4028-a12d-15f29a87e3fc",
+  "entity" : {
+    "uuid" : "0723fd75-dc66-4aae-a3c9-31a09c9c4c7a",
+    "type" : "Form"
+  },
+  "entityUUID" : "0723fd75-dc66-4aae-a3c9-31a09c9c4c7a",
+  "entityType" : "Form",
+  "type" : "VisitSchedule",
+  "executionOrder" : 10.0,
+  "data" : { },
+  "name" : "ScheduleVisitsDuringScreening",
+  "uuid" : "99de0f1b-5453-4ae6-9a53-72c92d4cdd26",
+  "fnName" : "ScheduleVisitsDuringScreening"
+}

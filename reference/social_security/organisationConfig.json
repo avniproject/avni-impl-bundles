@@ -1,0 +1,13 @@
+{
+  "uuid" : "aec8d2ee-c192-4f10-932f-69006c0bff78",
+  "settings" : {
+    "languages" : [ "en" ],
+    "customRegistrationLocations" : [ ],
+    "donotRequirePasswordChangeOnFirstLogin" : false,
+    "saveDrafts" : false,
+    "searchResultFields" : [ ],
+    "searchFilters" : [ ],
+    "myDashboardFilters" : [ ]
+  },
+  "worklistUpdationRule" : ""
+}

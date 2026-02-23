@@ -1,0 +1,7 @@
+{
+  "name" : "Farmer Interaction  Encounter Cancellation",
+  "uuid" : "20aa8a97-5848-4892-8b95-7614f8a8d5c7",
+  "formType" : "IndividualEncounterCancellation",
+  "formElementGroups" : [ ],
+  "decisionConcepts" : [ ]
+}

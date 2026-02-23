@@ -1,0 +1,215 @@
+[ {
+  "uuid" : "05520dcf-0801-459d-ae64-86d843e0875d",
+  "name" : "Maharashtra",
+  "level" : 5.0,
+  "type" : "State",
+  "addressLevelTypeUUID" : "45433d73-d504-432a-866b-1d163652a30d",
+  "locationProperties" : null
+}, {
+  "uuid" : "e610e0b5-0ac7-4201-8ffd-7a1827be31c4",
+  "name" : "Pune",
+  "level" : 4.0,
+  "parent" : {
+    "uuid" : "05520dcf-0801-459d-ae64-86d843e0875d"
+  },
+  "type" : "District",
+  "addressLevelTypeUUID" : "f2271d1a-7ec2-4eae-9147-47d83512934f",
+  "locationProperties" : null
+}, {
+  "uuid" : "fdc4d8ce-3ccb-43fa-af79-8452faa9c731",
+  "name" : "Haveli",
+  "level" : 3.0,
+  "parent" : {
+    "uuid" : "e610e0b5-0ac7-4201-8ffd-7a1827be31c4"
+  },
+  "type" : "Taluka",
+  "addressLevelTypeUUID" : "cf4a90b7-9b41-4035-9105-0e2212299328",
+  "locationProperties" : null
+}, {
+  "uuid" : "7bb195c9-53cd-44a6-8842-ce99603f6dbf",
+  "name" : "Aundh",
+  "level" : 2.0,
+  "parent" : {
+    "uuid" : "fdc4d8ce-3ccb-43fa-af79-8452faa9c731"
+  },
+  "type" : "Gp/village",
+  "addressLevelTypeUUID" : "1fc53f12-2705-4398-b786-a6b9eb4f68cd",
+  "locationProperties" : null
+}, {
+  "uuid" : "a52c09c9-c70e-4713-bc40-86666111044c",
+  "name" : "Bhivpuri",
+  "level" : 1.0,
+  "parent" : {
+    "uuid" : "7bb195c9-53cd-44a6-8842-ce99603f6dbf"
+  },
+  "type" : "Dam",
+  "addressLevelTypeUUID" : "05fa1ebe-ca9d-426b-aa02-020a4f035d1b",
+  "locationProperties" : null
+}, {
+  "uuid" : "93aafa4a-5216-4a3a-bc33-8f500d26797c",
+  "name" : "Nagpur",
+  "level" : 4.0,
+  "parent" : {
+    "uuid" : "05520dcf-0801-459d-ae64-86d843e0875d"
+  },
+  "type" : "District",
+  "addressLevelTypeUUID" : "f2271d1a-7ec2-4eae-9147-47d83512934f",
+  "locationProperties" : null
+}, {
+  "uuid" : "73e41f21-a13c-4ab5-8ab3-abeeab771750",
+  "name" : "Katol",
+  "level" : 3.0,
+  "parent" : {
+    "uuid" : "93aafa4a-5216-4a3a-bc33-8f500d26797c"
+  },
+  "type" : "Taluka",
+  "addressLevelTypeUUID" : "cf4a90b7-9b41-4035-9105-0e2212299328",
+  "locationProperties" : null
+}, {
+  "uuid" : "8398d100-892d-4344-9ca9-3eb403f00b6c",
+  "name" : "Narkhed",
+  "level" : 2.0,
+  "parent" : {
+    "uuid" : "73e41f21-a13c-4ab5-8ab3-abeeab771750"
+  },
+  "type" : "Gp/village",
+  "addressLevelTypeUUID" : "1fc53f12-2705-4398-b786-a6b9eb4f68cd",
+  "locationProperties" : null
+}, {
+  "uuid" : "cc9f614a-77d4-4d05-a790-37c903cab7db",
+  "name" : "Dhom",
+  "level" : 1.0,
+  "parent" : {
+    "uuid" : "8398d100-892d-4344-9ca9-3eb403f00b6c"
+  },
+  "type" : "Dam",
+  "addressLevelTypeUUID" : "05fa1ebe-ca9d-426b-aa02-020a4f035d1b",
+  "locationProperties" : null
+}, {
+  "uuid" : "a10e009f-5fc3-445f-9a8e-0ef477a2a60b",
+  "name" : "Nashik",
+  "level" : 4.0,
+  "parent" : {
+    "uuid" : "05520dcf-0801-459d-ae64-86d843e0875d"
+  },
+  "type" : "District",
+  "addressLevelTypeUUID" : "f2271d1a-7ec2-4eae-9147-47d83512934f",
+  "locationProperties" : null
+}, {
+  "uuid" : "2a8d3c33-29b2-4e9c-98b0-e0552aca0f0a",
+  "name" : "Dindori",
+  "level" : 3.0,
+  "parent" : {
+    "uuid" : "a10e009f-5fc3-445f-9a8e-0ef477a2a60b"
+  },
+  "type" : "Taluka",
+  "addressLevelTypeUUID" : "cf4a90b7-9b41-4035-9105-0e2212299328",
+  "locationProperties" : null
+}, {
+  "uuid" : "326cbb72-4b5d-48c1-a87c-d120766c4b9a",
+  "name" : "Vinchur",
+  "level" : 2.0,
+  "parent" : {
+    "uuid" : "2a8d3c33-29b2-4e9c-98b0-e0552aca0f0a"
+  },
+  "type" : "Gp/village",
+  "addressLevelTypeUUID" : "1fc53f12-2705-4398-b786-a6b9eb4f68cd",
+  "locationProperties" : null
+}, {
+  "uuid" : "e8f4b5f1-e2cc-49b5-aa3a-21e27af4b31b",
+  "name" : "Koyna",
+  "level" : 1.0,
+  "parent" : {
+    "uuid" : "326cbb72-4b5d-48c1-a87c-d120766c4b9a"
+  },
+  "type" : "Dam",
+  "addressLevelTypeUUID" : "05fa1ebe-ca9d-426b-aa02-020a4f035d1b",
+  "locationProperties" : null
+}, {
+  "uuid" : "3596a846-d8e3-4820-bbee-1cc68b857882",
+  "name" : "Karnataka",
+  "level" : 5.0,
+  "type" : "State",
+  "addressLevelTypeUUID" : "45433d73-d504-432a-866b-1d163652a30d",
+  "locationProperties" : null
+}, {
+  "uuid" : "678d6ec6-e62e-4c9d-8f0f-a74b1e87b6be",
+  "name" : "Bangalore Urban",
+  "level" : 4.0,
+  "parent" : {
+    "uuid" : "3596a846-d8e3-4820-bbee-1cc68b857882"
+  },
+  "type" : "District",
+  "addressLevelTypeUUID" : "f2271d1a-7ec2-4eae-9147-47d83512934f",
+  "locationProperties" : null
+}, {
+  "uuid" : "97aeca9b-c3e0-4651-8fe3-f9494d1efc86",
+  "name" : "Bangalore East",
+  "level" : 3.0,
+  "parent" : {
+    "uuid" : "678d6ec6-e62e-4c9d-8f0f-a74b1e87b6be"
+  },
+  "type" : "Taluka",
+  "addressLevelTypeUUID" : "cf4a90b7-9b41-4035-9105-0e2212299328",
+  "locationProperties" : null
+}, {
+  "uuid" : "d9bcdcef-2af3-4e17-b7aa-5450b0f0f150",
+  "name" : "Hoskote",
+  "level" : 2.0,
+  "parent" : {
+    "uuid" : "97aeca9b-c3e0-4651-8fe3-f9494d1efc86"
+  },
+  "type" : "Gp/village",
+  "addressLevelTypeUUID" : "1fc53f12-2705-4398-b786-a6b9eb4f68cd",
+  "locationProperties" : null
+}, {
+  "uuid" : "62da1dc4-784f-4f40-a0a1-34a86e0b9dec",
+  "name" : "Aheri",
+  "level" : 1.0,
+  "parent" : {
+    "uuid" : "d9bcdcef-2af3-4e17-b7aa-5450b0f0f150"
+  },
+  "type" : "Dam",
+  "addressLevelTypeUUID" : "05fa1ebe-ca9d-426b-aa02-020a4f035d1b",
+  "locationProperties" : null
+}, {
+  "uuid" : "52930886-adf5-4c8a-8773-fde2059a8257",
+  "name" : "Mysore",
+  "level" : 4.0,
+  "parent" : {
+    "uuid" : "3596a846-d8e3-4820-bbee-1cc68b857882"
+  },
+  "type" : "District",
+  "addressLevelTypeUUID" : "f2271d1a-7ec2-4eae-9147-47d83512934f",
+  "locationProperties" : null
+}, {
+  "uuid" : "9287dc44-4b39-4012-aba6-b1363174cb55",
+  "name" : "Nanjangud",
+  "level" : 3.0,
+  "parent" : {
+    "uuid" : "52930886-adf5-4c8a-8773-fde2059a8257"
+  },
+  "type" : "Taluka",
+  "addressLevelTypeUUID" : "cf4a90b7-9b41-4035-9105-0e2212299328",
+  "locationProperties" : null
+}, {
+  "uuid" : "16650f97-00b1-4859-a54f-aae7ee4f8850",
+  "name" : "Chikkahalli",
+  "level" : 2.0,
+  "parent" : {
+    "uuid" : "9287dc44-4b39-4012-aba6-b1363174cb55"
+  },
+  "type" : "Gp/village",
+  "addressLevelTypeUUID" : "1fc53f12-2705-4398-b786-a6b9eb4f68cd",
+  "locationProperties" : null
+}, {
+  "uuid" : "3b022625-3697-45cf-b1e9-6097d787af05",
+  "name" : "Albur kere",
+  "level" : 1.0,
+  "parent" : {
+    "uuid" : "16650f97-00b1-4859-a54f-aae7ee4f8850"
+  },
+  "type" : "Dam",
+  "addressLevelTypeUUID" : "05fa1ebe-ca9d-426b-aa02-020a4f035d1b",
+  "locationProperties" : null
+} ]

@@ -1,0 +1,551 @@
+{
+  "name" : "Farmer Registration",
+  "uuid" : "7722b3f6-3299-4771-92f0-e2cf2a3a92ab",
+  "formType" : "IndividualProfile",
+  "formElementGroups" : [ {
+    "uuid" : "e639f2fd-7126-4a65-a4fb-46d7346d93af",
+    "name" : "Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Mobile Number",
+      "uuid" : "65464992-5e4d-4028-8edf-e479c39565dc",
+      "keyValues" : [ {
+        "key" : "unique",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Mobile Number",
+        "uuid" : "660f6741-3ab2-4300-8404-397c4eb82d9e",
+        "dataType" : "PhoneNumber",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ {
+          "key" : "verifyPhoneNumber",
+          "value" : true
+        } ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "",
+      "mandatory" : true
+    }, {
+      "name" : "Waterbody",
+      "uuid" : "7be9de15-af94-4d43-866b-b2985bddfbad",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Waterbody",
+        "uuid" : "00ca9cc6-92aa-4f59-88b1-f6d61ea11c27",
+        "dataType" : "Subject",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ {
+          "key" : "subjectTypeUUID",
+          "value" : "3f2d84a7-15db-4244-ab98-ccc8649edab6"
+        } ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of trolleys required",
+      "uuid" : "2bf7a78d-be9b-4407-8958-ba6ea53f89ee",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of trolleys required",
+        "uuid" : "3829f6c5-fa18-4f75-8ccb-87be38b7a8a5",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Village of the farmer",
+      "uuid" : "55faaa4f-2be7-4ee7-9ea9-d7ee29e17c21",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Village of farmer",
+        "uuid" : "e559b834-75ae-47a1-90bf-6fc76ad3da47",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "validFormat" : {
+        "regex" : "^[A-Z\\ ]+$",
+        "descriptionKey" : "AddAValidVillageNameInCapitalLetters"
+      },
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Gender",
+      "uuid" : "4e8b8821-97bc-48a7-8770-91d8fc886b04",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Gender",
+        "uuid" : "1a49e708-4fb9-4246-9bc7-73e4644014a5",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Female",
+          "uuid" : "a6548912-1705-4075-a346-e16f08d9d5f3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "0a09f401-14e4-41bb-a1a6-c25dbc5e0733",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Male",
+          "uuid" : "e4d500d2-0924-4078-88cc-896cb1e0953e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Capacity of trolleys in cu.m.",
+      "uuid" : "8549bf83-8e0b-420e-86f7-b8c6de244540",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Capacity of trolleys in cu.m.",
+        "uuid" : "62379fbe-8615-4e93-b194-ce1a1dbfbffd",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "2.8",
+          "uuid" : "69e6a155-6bb4-4cf9-8dec-0b8057f1931f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.2",
+          "uuid" : "e8306ab5-2c22-4565-b1a9-5a7491f97c8c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.5",
+          "uuid" : "248a4fa2-7d0c-4b14-8191-3ec9e787cfc8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3.5",
+          "uuid" : "669cd23d-50b2-443c-8490-68525ec324ef",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInRegistration(\"Number of trolleys required\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Number of dependent family members",
+      "uuid" : "71656746-18d2-4e85-bdc5-bb7b8773d1b8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of dependent family members",
+        "uuid" : "b8bed1c9-5133-4901-b754-9848ff32c339",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of hywas required",
+      "uuid" : "afa08392-43aa-4362-b178-a2d24fe6078f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of hywas required",
+        "uuid" : "19403ec0-0813-40a6-a741-54aae61589a8",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Capacity of hywas in cu.m.",
+      "uuid" : "149df271-f8a8-4497-a579-1cba42bc72d2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Capacity of hywas in cu.m.",
+        "uuid" : "88320765-b3f9-47bb-9ad8-db65c9bbda17",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "16",
+          "uuid" : "19286f0a-957c-4674-b9c9-42ac6c2476ce",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "20",
+          "uuid" : "f6608f94-3bff-4a6d-a38b-ef14b1e40fa1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "14",
+          "uuid" : "7c956ebb-acc0-41a0-afdc-c810ddba485a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "18",
+          "uuid" : "5404d563-5b50-47ae-a3f1-49c71496b3a2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "25",
+          "uuid" : "68211d18-45fe-4053-9639-9480df9de238",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInRegistration(\"Number of hywas required\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Total silt required",
+      "uuid" : "008ab04b-973f-4d02-bf56-f31420512c58",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Total silt required",
+        "uuid" : "78c87f77-6b25-4b79-a6d9-5de5faa42c99",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  let numberOfTrolleys =0;\n  let capacityOfTrolleys = 0;\n  let numberOfHyvas = 0;\n  let capacityOfHyva = 0;\n  let value = 0;\n  \n  // Number of trolleys * 2.8 cu.m. + Number of hyvas*Capacity of hyva\n  numberOfTrolleys = encounter.getObservationReadableValue('Number of trolleys required');\n  numberOfHyvas = encounter.getObservationReadableValue('Number of hywas required');\n  \n  if(numberOfTrolleys > 0)\n  capacityOfTrolleys = encounter.getObservationReadableValue('Capacity of trolleys in cu.m.'); \n  \n  if(numberOfHyvas > 0)\n  capacityOfHyva = encounter.getObservationReadableValue('Capacity of hywas in cu.m.');\n  \n  value = (numberOfTrolleys * capacityOfTrolleys)  + (numberOfHyvas * capacityOfHyva);\n         \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, value.toFixed(2));\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Farmer contribution per trolley",
+      "uuid" : "3755033a-b223-44fe-adc9-bc77f59390d5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Farmer contribution per trolley",
+        "uuid" : "8e60502e-3a14-4b64-bba3-4fbbdcfd2983",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Land holding",
+      "uuid" : "70795aa2-bcbf-4711-81f5-c0ba3a2a4ab7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Land holding",
+        "uuid" : "19778a2e-3397-4e79-8a31-9341dc50f336",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Category of farmer",
+      "uuid" : "ae7f35b9-9fbc-468b-b27e-1205ea524a4f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Category of farmer",
+        "uuid" : "afc7de39-650e-442d-9818-ae12448041d7",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Large (above 25 acres)",
+          "uuid" : "3f88926b-0bbd-4dc3-aca8-b8ad5ad30ab0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Small (2.5-4.99 acres)",
+          "uuid" : "003458ff-be84-4937-9c44-636819ec3738",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Medium (10-24.99 acres)",
+          "uuid" : "e67585a0-0a7d-4976-aabe-04e38069149f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Semi-medium (5-9.55 acres)",
+          "uuid" : "0af46156-3b27-4feb-9a0f-7930772d45b6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Marginal (0-2.49 acres)",
+          "uuid" : "d788c182-e7de-48ea-a23a-cef038c588c2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Mobile Number Old",
+      "uuid" : "cd3dd5e0-e8ab-47ad-96bf-a14e4cc7e5e4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Mobile number old",
+        "uuid" : "f11333cd-5103-4bce-88a4-61b063aa7695",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "validFormat" : {
+        "regex" : "^[0-9]{10}$",
+        "descriptionKey" : "Valid10DigitNumbers"
+      },
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Mobile Number",
+      "uuid" : "33d34661-6133-4b08-b474-882034cc33e9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Mobile Number",
+        "uuid" : "660f6741-3ab2-4300-8404-397c4eb82d9e",
+        "dataType" : "PhoneNumber",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ {
+          "key" : "verifyPhoneNumber",
+          "value" : true
+        } ],
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Aadhar number",
+      "uuid" : "c12ab40d-7f30-4f2b-9578-39dbe33375e5",
+      "keyValues" : [ {
+        "key" : "unique",
+        "value" : true
+      } ],
+      "concept" : {
+        "name" : "Aadhar number",
+        "uuid" : "9673ab6f-fed5-4a03-a0ed-a1e74ac7e0b0",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "SingleSelect",
+      "validFormat" : {
+        "regex" : "^[0-9]{12}$",
+        "descriptionKey" : "Valid12DigitNumbers"
+      },
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Survey Number of 7/12 or 8A",
+      "uuid" : "9fdf4c0d-5370-4b38-8f94-98eddc8a47ac",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Survey Number of 7/12 or 8A",
+        "uuid" : "6e7be18a-6372-4795-aeaf-0691ae798bfd",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 15.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Landholding",
+      "uuid" : "3d976f57-7b12-4306-a9e6-47425308e90f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Landholding",
+        "uuid" : "65826c46-e1a8-4976-8acf-417f563d64f8",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 16.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Farm distance from the waterbody",
+      "uuid" : "f15d543d-e729-43d2-b077-69f2f8013be2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Distance from farm",
+        "uuid" : "3e7fd6b7-ecf3-4808-9e37-54653e2f0f8f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 17.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Image of the farmer with his/her farm",
+      "uuid" : "d5e5fbc4-5ae1-47b6-a1e5-2cec37c28ab0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Image of the farmer with his/her farm",
+        "uuid" : "e4a59e54-058f-4634-93dd-3d36a5439b01",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 18.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "INR 500 collected during registration",
+      "uuid" : "550cfa3c-8344-4f45-8e88-98068875f09a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "INR 500 collected during registration",
+        "uuid" : "d5f19bf8-6d39-4d8f-a31a-d7b406a2a193",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 19.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Reason for not collecting registration fee",
+      "uuid" : "645edb24-cfbf-4921-86c2-affafaee24fb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Reason for not collecting registration fee",
+        "uuid" : "3783bccd-48ea-409a-8a29-d45a2760a7c0",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 20.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({individual, formElement});\n   statusBuilder.show().when.valueInRegistration(\"INR 500 collected during registration\").is.no;\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Details"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

@@ -1,0 +1,772 @@
+{
+  "name" : "MH Referral Follow Up Form",
+  "uuid" : "30a0caa6-2d9b-4057-942d-4eecbdce798d",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "fd13a0a4-f4ab-416f-a47b-7769068a11e0",
+    "name" : "Hospital Visits",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Did the patient go to the referred hospital?",
+      "uuid" : "dd1285bf-620e-4225-80ab-a1dfba7182dd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Did the patient go to the referred hospital?",
+        "uuid" : "84836ca4-c0f8-4df9-bcd4-fc3782360643",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "What is the reason?",
+      "uuid" : "dce968a2-f161-43e2-bcc6-f96a7a16ca6a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Reason for not going to the hospital",
+        "uuid" : "7d74816e-54a9-473d-98e2-dd6a7284022d",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"84836ca4-c0f8-4df9-bcd4-fc3782360643\").containsAnswerConceptName(\"e7b50c78-3d90-484d-a224-9887887780dc\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Did the patient go to the referred hospital?",
+                "conceptUuid" : "84836ca4-c0f8-4df9-bcd4-fc3782360643",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "No" ],
+                "answerConceptUuids" : [ "e7b50c78-3d90-484d-a224-9887887780dc" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Next Steps",
+      "uuid" : "d3bc816a-0ec7-4087-b24d-0145ce232031",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Next Steps",
+        "uuid" : "54307142-d92b-413c-9fc7-d534bd929da1",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"84836ca4-c0f8-4df9-bcd4-fc3782360643\").containsAnswerConceptName(\"e7b50c78-3d90-484d-a224-9887887780dc\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "What is the diagnosis?",
+      "uuid" : "6017341a-345e-4930-ac24-934581a2e462",
+      "keyValues" : [ {
+        "key" : "ExcludedAnswers",
+        "value" : [ "Age < 18", "Too much or too little amniotic fluid", "Less than 18 months between pregnancies", "Height < 145 cms", "Age > 35" ]
+      } ],
+      "concept" : {
+        "name" : "Complications in Current Pregnancy",
+        "uuid" : "a4663dce-c750-4367-b673-ebbd9a4482e5",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Multiple foetuses",
+          "uuid" : "c99f5dc0-7dc7-410c-bb4a-997666ac312b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 18.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pre Eclampsia",
+          "uuid" : "30ab8f94-0f0d-46d4-ad6b-0082d0327db4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 24.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "RH Negative Blood Group",
+          "uuid" : "606e74c3-f4bf-4ccb-aee2-b232771403e4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 26.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Age > 35",
+          "uuid" : "3449b4c4-9115-48bf-910a-13ef72d7a193",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Polyhydroamnios",
+          "uuid" : "e2064d83-fdb8-417f-90f8-a26c80666189",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 23.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cervical Insufficiency",
+          "uuid" : "212d6e68-bae1-4813-9b08-5a62ddb78a34",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Hepatitis",
+          "uuid" : "32d058a0-5738-4bc8-8c3d-23ce41c2d901",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PIH (pregnancy induced hypertension)",
+          "uuid" : "9bc67a6f-71ad-4227-aac5-6dfaa0ec9bf3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 20.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Severe Pre Eclampsia",
+          "uuid" : "bdaf1e3a-ee07-472f-94c5-5d6120395e59",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 27.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Malaria",
+          "uuid" : "0dee2973-eebe-4699-b676-b770fdd1c411",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 32.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "BP >=140/90",
+          "uuid" : "ab6064b2-0640-4037-9238-04efb954aede",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "MUAC <23CM",
+          "uuid" : "b4d2080c-c739-4f9a-b7d9-11e3b236fb36",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Preterm Labor or History of Preterm Birth",
+          "uuid" : "13ee5d1e-baac-4e4c-bfbe-ae5d22b06bf4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 25.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Eclampsia",
+          "uuid" : "489f07e5-d9e1-478a-969d-3acad587a15e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Twins",
+          "uuid" : "d4943a59-16da-45e1-98c1-354c710fdbc0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 30.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Foul smelling discharge",
+          "uuid" : "cb521247-5499-4925-bedd-a4c5c3ea8f3d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Placental Abruption (premature separation of the placenta)",
+          "uuid" : "65d315ac-05e2-4254-83c0-b173506995a8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 22.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "BMI: <18.5",
+          "uuid" : "2843a443-d47d-4de1-af2e-d640dc6553ea",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Oligohydroamnios",
+          "uuid" : "c2571c63-fc47-476a-9425-1e4d61a66522",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 19.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "GDM (Gestational Diabetes Mellitus)",
+          "uuid" : "58ca5422-5a2b-44eb-84c9-4d7e968e38cc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Less than 18 months between pregnancies",
+          "uuid" : "bb542b77-2c92-4066-b55a-5775365f8b60",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Foetuses >= 4",
+          "uuid" : "8f35dc05-b54e-402f-9074-d403b7ef6263",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Too much or too little amniotic fluid",
+          "uuid" : "4ada21ba-a388-4fed-8de8-bdc179ff5b83",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 28.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Baby smaller than expected for gestational age",
+          "uuid" : "2a104344-4ca4-439c-9539-9c86d7fd9b24",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Antepartum haemorrhage",
+          "uuid" : "9b7a760c-f332-4117-b177-42f83a29db67",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 31.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Anemia",
+          "uuid" : "268fa632-288e-44ad-ab52-774bbd7a2700",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Height < 145 cms",
+          "uuid" : "a35e3da0-dc75-4e24-9070-41488a7eabf6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Multigravida > 4",
+          "uuid" : "651cb1be-2364-4989-ae90-0c19ad77834b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 17.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Age < 18",
+          "uuid" : "331aee3f-0567-4f75-9efd-722f04606e75",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Triplet",
+          "uuid" : "25c522b8-7f11-4ff0-8096-c7f5ddeba7ab",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 29.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Placenta Previa (placenta covering the cervix)",
+          "uuid" : "2dec6ee9-b9d7-450e-ac59-d3f1bcce70aa",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 21.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"84836ca4-c0f8-4df9-bcd4-fc3782360643\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Did the patient go to the referred hospital?",
+                "conceptUuid" : "84836ca4-c0f8-4df9-bcd4-fc3782360643",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "If other, please specify:",
+      "uuid" : "5384a360-4bed-4d5e-abf1-18370681fdda",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other pregnancy complications",
+        "uuid" : "9ab68204-6336-4074-b99b-7de20549be3b",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptName(\"05ea583c-51d2-412d-ad00-06c432ffe538\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Complications in Current Pregnancy",
+                "conceptUuid" : "a4663dce-c750-4367-b673-ebbd9a4482e5",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "05ea583c-51d2-412d-ad00-06c432ffe538" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Has the patient started the medication?",
+      "uuid" : "8c64fc4e-ff79-4f3b-b21d-569ecb4f9f98",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Has the patient started the medication?",
+        "uuid" : "bb2849cb-0706-4569-9e8b-ca062ec4e4cd",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"84836ca4-c0f8-4df9-bcd4-fc3782360643\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Did the patient go to the referred hospital?",
+                "conceptUuid" : "84836ca4-c0f8-4df9-bcd4-fc3782360643",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Enter the names of the current medication",
+      "uuid" : "e5aacc3d-d555-4947-a182-12a7617e8012",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Current Medication",
+        "uuid" : "8cab2d11-c3ad-460b-89b1-27217f540815",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"bb2849cb-0706-4569-9e8b-ca062ec4e4cd\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Has the patient started the medication?",
+                "conceptUuid" : "bb2849cb-0706-4569-9e8b-ca062ec4e4cd",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Enter the Medication Start Date",
+      "uuid" : "44cc5a1d-0723-45c1-b895-31adba5c29d4",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "calendar"
+      } ],
+      "concept" : {
+        "name" : "Medication Start Date",
+        "uuid" : "f4eaeb50-bc8d-4aac-aa47-14af64eb3802",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"bb2849cb-0706-4569-9e8b-ca062ec4e4cd\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Has the patient started the medication?",
+                "conceptUuid" : "bb2849cb-0706-4569-9e8b-ca062ec4e4cd",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Compliance:  Is the patient adhering to prescribed medications?",
+      "uuid" : "9014caf4-a7c7-42f4-b893-8273dc110683",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is the patient adhering to prescribed medications?",
+        "uuid" : "d24c1d4b-6585-4b12-9720-315efda06b05",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"bb2849cb-0706-4569-9e8b-ca062ec4e4cd\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Has the patient started the medication?",
+                "conceptUuid" : "bb2849cb-0706-4569-9e8b-ca062ec4e4cd",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Is the condition controlled / Managed?",
+      "uuid" : "32317f3d-2031-4bd6-869a-6378324f9d5a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is the condition controlled?",
+        "uuid" : "3a6905ef-f99b-48b1-8122-60943b04ff9b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"d24c1d4b-6585-4b12-9720-315efda06b05\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Specify required intervention if any",
+      "uuid" : "fbb00e27-7f47-4e51-bbe2-4f15675a48eb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Specify Intervention",
+        "uuid" : "b766db85-0d0b-4ecd-8c06-1401d49486f6",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"3a6905ef-f99b-48b1-8122-60943b04ff9b\").containsAnswerConceptName(\"e7b50c78-3d90-484d-a224-9887887780dc\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Is the condition controlled?",
+                "conceptUuid" : "3a6905ef-f99b-48b1-8122-60943b04ff9b",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "No" ],
+                "answerConceptUuids" : [ "e7b50c78-3d90-484d-a224-9887887780dc" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Hospital Visits"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

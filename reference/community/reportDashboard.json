@@ -1,0 +1,401 @@
+[ {
+  "uuid" : "d3c5d54a-11ed-4b6b-8149-fbd7e6826714",
+  "id" : 93,
+  "name" : "Lab Facility",
+  "description" : "",
+  "sections" : [ {
+    "uuid" : "386299f8-d759-4aab-96af-94b8bffa9981",
+    "id" : 139,
+    "name" : "Visit details",
+    "description" : "",
+    "viewType" : "Tile",
+    "displayOrder" : 1.0,
+    "dashboardUUID" : "d3c5d54a-11ed-4b6b-8149-fbd7e6826714",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "ecb930f0-9165-4fc4-89db-7d3c1b4c36b4",
+      "displayOrder" : 2.0,
+      "dashboardSectionUUID" : "386299f8-d759-4aab-96af-94b8bffa9981",
+      "reportCardUUID" : "0672a0f7-f688-4f14-863c-d5de23901e23",
+      "voided" : false
+    }, {
+      "uuid" : "dedf015c-2911-4756-99ea-361d298140b2",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "386299f8-d759-4aab-96af-94b8bffa9981",
+      "reportCardUUID" : "8dd0bf93-6adb-4a8e-afcc-1eaa64c13add",
+      "voided" : false
+    } ],
+    "voided" : false
+  }, {
+    "uuid" : "dde2fab3-dea4-4a31-b51a-883628179666",
+    "id" : 138,
+    "name" : "Overview",
+    "description" : "",
+    "viewType" : "Tile",
+    "displayOrder" : 2.0,
+    "dashboardUUID" : "d3c5d54a-11ed-4b6b-8149-fbd7e6826714",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "6cb838ba-733c-4d3d-87f4-263c3b69ec88",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "dde2fab3-dea4-4a31-b51a-883628179666",
+      "reportCardUUID" : "1b2bad27-6e1c-47d6-bca3-8031287dc485",
+      "voided" : false
+    }, {
+      "uuid" : "778255bc-f2be-456c-9815-ba9aad021bdd",
+      "displayOrder" : 2.0,
+      "dashboardSectionUUID" : "dde2fab3-dea4-4a31-b51a-883628179666",
+      "reportCardUUID" : "620d26a6-c2f7-4411-b894-6d229a49608b",
+      "voided" : false
+    } ],
+    "voided" : false
+  } ],
+  "filters" : [ ],
+  "voided" : false
+}, {
+  "uuid" : "c4d3bc0a-027e-4a6a-87dd-85e5b7285523",
+  "id" : 649,
+  "name" : "Default Dashboard",
+  "sections" : [ {
+    "uuid" : "fb302038-25a1-4cd6-9f56-80ef67b21103",
+    "id" : 1094,
+    "name" : "Recent Statistics",
+    "description" : "",
+    "viewType" : "Tile",
+    "displayOrder" : 2.0,
+    "dashboardUUID" : "c4d3bc0a-027e-4a6a-87dd-85e5b7285523",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "9fb198b6-ae10-4c3f-a8e6-652b7d1b7e9c",
+      "displayOrder" : 3.0,
+      "dashboardSectionUUID" : "fb302038-25a1-4cd6-9f56-80ef67b21103",
+      "reportCardUUID" : "dd961ee1-9d4e-4ec9-99f0-99b36672be7c",
+      "voided" : false
+    }, {
+      "uuid" : "8afecd6c-741c-4871-86f1-bce171f8bfd8",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "fb302038-25a1-4cd6-9f56-80ef67b21103",
+      "reportCardUUID" : "f366f35a-5c4f-4ff7-b510-2dc9f5f88847",
+      "voided" : false
+    }, {
+      "uuid" : "383b8df8-93d8-43d9-bc96-545e1176fe63",
+      "displayOrder" : 2.0,
+      "dashboardSectionUUID" : "fb302038-25a1-4cd6-9f56-80ef67b21103",
+      "reportCardUUID" : "e1036b69-df46-4351-9916-10cd4cfcb6bd",
+      "voided" : false
+    } ],
+    "voided" : false
+  }, {
+    "uuid" : "741711ef-df17-4884-8928-20dee701479e",
+    "id" : 1092,
+    "name" : "Visit Details",
+    "description" : "",
+    "viewType" : "Tile",
+    "displayOrder" : 1.0,
+    "dashboardUUID" : "c4d3bc0a-027e-4a6a-87dd-85e5b7285523",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "4dff9285-88b3-43de-a90b-9823ab32e433",
+      "displayOrder" : 2.0,
+      "dashboardSectionUUID" : "741711ef-df17-4884-8928-20dee701479e",
+      "reportCardUUID" : "85ce7239-e8b5-4e57-b07d-66c18cee47b2",
+      "voided" : false
+    }, {
+      "uuid" : "4d139c45-1854-46ec-ad80-40725f7b9b8a",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "741711ef-df17-4884-8928-20dee701479e",
+      "reportCardUUID" : "6085c2f4-52e7-4b08-85b6-d6b2612b4cf5",
+      "voided" : false
+    }, {
+      "uuid" : "f20c0573-ba60-4fc3-ae1d-dc71b384ae80",
+      "displayOrder" : -1.0,
+      "dashboardSectionUUID" : "741711ef-df17-4884-8928-20dee701479e",
+      "reportCardUUID" : "1597ee30-9080-40fb-87a1-cfe43611c32b",
+      "voided" : true
+    } ],
+    "voided" : false
+  }, {
+    "uuid" : "2ce712c2-3fa3-4ca4-9703-95766ef512c2",
+    "id" : 1093,
+    "name" : "Registration Overview",
+    "description" : "",
+    "viewType" : "Tile",
+    "displayOrder" : 3.0,
+    "dashboardUUID" : "c4d3bc0a-027e-4a6a-87dd-85e5b7285523",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "e02a68ed-c02b-4cba-a5b5-6a5c71ab5eb8",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "2ce712c2-3fa3-4ca4-9703-95766ef512c2",
+      "reportCardUUID" : "a1673f8a-c394-4bcf-8b6f-63d83a5443e2",
+      "voided" : false
+    } ],
+    "voided" : false
+  } ],
+  "filters" : [ {
+    "uuid" : "efea5b8d-d621-47d0-a02c-c9b1a667b680",
+    "id" : 121,
+    "name" : "As On Date",
+    "filterConfig" : {
+      "type" : "AsOnDate",
+      "subjectTypeUUID" : null,
+      "widget" : null,
+      "groupSubjectTypeFilter" : null,
+      "observationBasedFilter" : null
+    },
+    "voided" : false
+  }, {
+    "uuid" : "20367018-a168-43ff-a28f-64cd46ad3e2c",
+    "id" : 122,
+    "name" : "Subject Type",
+    "filterConfig" : {
+      "type" : "SubjectType",
+      "subjectTypeUUID" : null,
+      "widget" : null,
+      "groupSubjectTypeFilter" : null,
+      "observationBasedFilter" : null
+    },
+    "voided" : false
+  }, {
+    "uuid" : "e220be0a-2e1e-41f7-b344-ea8b95d11568",
+    "id" : 132,
+    "name" : "Address",
+    "filterConfig" : {
+      "type" : "Address",
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3",
+      "widget" : null,
+      "groupSubjectTypeFilter" : null,
+      "observationBasedFilter" : null
+    },
+    "voided" : false
+  } ],
+  "voided" : false
+}, {
+  "uuid" : "0f6e0688-ec2d-4994-9667-c96b59cfdb63",
+  "id" : 1281,
+  "name" : "Maternal Health",
+  "description" : "",
+  "sections" : [ {
+    "uuid" : "5ae5f44d-9dbe-4681-9f71-5f18b2e205d3",
+    "id" : 2596,
+    "name" : "Scheduled ",
+    "description" : "",
+    "viewType" : "Tile",
+    "displayOrder" : 3.0,
+    "dashboardUUID" : "0f6e0688-ec2d-4994-9667-c96b59cfdb63",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "466637cf-8c6b-4577-8fbd-751a9355a479",
+      "displayOrder" : 4.0,
+      "dashboardSectionUUID" : "5ae5f44d-9dbe-4681-9f71-5f18b2e205d3",
+      "reportCardUUID" : "0d530830-c8a7-4e02-b3d9-45e92be3face",
+      "voided" : false
+    }, {
+      "uuid" : "1681d7be-4511-4510-abf0-bc596b301c05",
+      "displayOrder" : 6.0,
+      "dashboardSectionUUID" : "5ae5f44d-9dbe-4681-9f71-5f18b2e205d3",
+      "reportCardUUID" : "fd8f3054-346c-4474-8fb0-54eb5633364f",
+      "voided" : false
+    }, {
+      "uuid" : "07b7efbe-e45d-43b1-a70b-15f6aa199cd5",
+      "displayOrder" : 2.0,
+      "dashboardSectionUUID" : "5ae5f44d-9dbe-4681-9f71-5f18b2e205d3",
+      "reportCardUUID" : "d5cc9fbf-c59a-42ea-9934-671156fa2ad1",
+      "voided" : false
+    }, {
+      "uuid" : "ab4d241d-139f-4511-924b-85da5e7e76b6",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "5ae5f44d-9dbe-4681-9f71-5f18b2e205d3",
+      "reportCardUUID" : "a54648ef-8a4c-45ff-bc06-55ad2f10def1",
+      "voided" : false
+    }, {
+      "uuid" : "d77600ae-d9c7-4b76-a4c6-6541b4b29ad9",
+      "displayOrder" : 5.0,
+      "dashboardSectionUUID" : "5ae5f44d-9dbe-4681-9f71-5f18b2e205d3",
+      "reportCardUUID" : "7bf5b7b3-4b4f-4e64-9ada-2d1a5f06247d",
+      "voided" : false
+    }, {
+      "uuid" : "b63e5577-cb03-4b81-bde8-e1c48ff7989e",
+      "displayOrder" : 3.0,
+      "dashboardSectionUUID" : "5ae5f44d-9dbe-4681-9f71-5f18b2e205d3",
+      "reportCardUUID" : "3eb4a223-8a24-4d97-8800-c57e2c53155f",
+      "voided" : false
+    } ],
+    "voided" : false
+  }, {
+    "uuid" : "11ba165b-7bc7-47f9-af97-398cf699edaf",
+    "id" : 2595,
+    "name" : "Overdue / Pending",
+    "description" : "",
+    "viewType" : "Tile",
+    "displayOrder" : 2.0,
+    "dashboardUUID" : "0f6e0688-ec2d-4994-9667-c96b59cfdb63",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "ee6bc222-4ed2-46ac-a0d4-883e89da677e",
+      "displayOrder" : 3.0,
+      "dashboardSectionUUID" : "11ba165b-7bc7-47f9-af97-398cf699edaf",
+      "reportCardUUID" : "101b3062-e989-423e-ad60-b64bccffe882",
+      "voided" : false
+    }, {
+      "uuid" : "a2d77028-ff4a-444c-a4d7-56b24a55d975",
+      "displayOrder" : 6.0,
+      "dashboardSectionUUID" : "11ba165b-7bc7-47f9-af97-398cf699edaf",
+      "reportCardUUID" : "ea232db7-f092-45b5-9ce3-e4c46a9e6d66",
+      "voided" : false
+    }, {
+      "uuid" : "a7ee449f-ac8b-47b5-ad4a-96ab421e9bad",
+      "displayOrder" : 5.0,
+      "dashboardSectionUUID" : "11ba165b-7bc7-47f9-af97-398cf699edaf",
+      "reportCardUUID" : "3776520b-a0b4-4875-8120-de8de72b6252",
+      "voided" : false
+    }, {
+      "uuid" : "a8106043-dc7a-42ed-8ed0-120c95fd4ea4",
+      "displayOrder" : 2.0,
+      "dashboardSectionUUID" : "11ba165b-7bc7-47f9-af97-398cf699edaf",
+      "reportCardUUID" : "f79bc0a5-62ca-4896-b6bd-70213be98edd",
+      "voided" : false
+    }, {
+      "uuid" : "999aba26-ef4c-4104-bc57-82d6ef4cc4da",
+      "displayOrder" : 4.0,
+      "dashboardSectionUUID" : "11ba165b-7bc7-47f9-af97-398cf699edaf",
+      "reportCardUUID" : "8efe3a9d-179c-4330-a607-ce0137f9ddff",
+      "voided" : false
+    }, {
+      "uuid" : "85e6100a-4d2e-4a60-8134-65badefd09f5",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "11ba165b-7bc7-47f9-af97-398cf699edaf",
+      "reportCardUUID" : "41b1c8bd-bd34-4599-b2ea-35fe85ac98ce",
+      "voided" : false
+    } ],
+    "voided" : false
+  }, {
+    "uuid" : "183fce2b-9a79-4c83-9338-383944ade146",
+    "id" : 2597,
+    "name" : "Total till now",
+    "description" : "",
+    "viewType" : "Tile",
+    "displayOrder" : 1.0,
+    "dashboardUUID" : "0f6e0688-ec2d-4994-9667-c96b59cfdb63",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "6e919b6e-a45d-4734-98ff-4c8cd9607847",
+      "displayOrder" : 4.0,
+      "dashboardSectionUUID" : "183fce2b-9a79-4c83-9338-383944ade146",
+      "reportCardUUID" : "5752796a-e1ce-4bd4-b90c-5dab448c8dd2",
+      "voided" : false
+    }, {
+      "uuid" : "6d31f30c-0af2-4c6a-8bb0-dd4109caa01a",
+      "displayOrder" : 2.0,
+      "dashboardSectionUUID" : "183fce2b-9a79-4c83-9338-383944ade146",
+      "reportCardUUID" : "34cc824f-3d9c-43d4-b590-91c1017facf1",
+      "voided" : false
+    }, {
+      "uuid" : "aa210216-6271-4013-8e89-739c0e04cc19",
+      "displayOrder" : 7.0,
+      "dashboardSectionUUID" : "183fce2b-9a79-4c83-9338-383944ade146",
+      "reportCardUUID" : "0c147c83-8f1e-4742-aede-c2c451d27552",
+      "voided" : false
+    }, {
+      "uuid" : "69d8d520-95fe-4b09-af53-b04da8733f88",
+      "displayOrder" : 3.0,
+      "dashboardSectionUUID" : "183fce2b-9a79-4c83-9338-383944ade146",
+      "reportCardUUID" : "f7a2af91-b155-4bd5-9998-e6a80c2d9070",
+      "voided" : false
+    }, {
+      "uuid" : "fd1b1d5c-e26c-45c7-9584-bd3020842a81",
+      "displayOrder" : 6.0,
+      "dashboardSectionUUID" : "183fce2b-9a79-4c83-9338-383944ade146",
+      "reportCardUUID" : "39df70ed-f810-4a19-97f3-e444d37e14e1",
+      "voided" : false
+    }, {
+      "uuid" : "b234e1cd-0b31-4315-9dc7-050f40e37db4",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "183fce2b-9a79-4c83-9338-383944ade146",
+      "reportCardUUID" : "c9c606c3-e699-4a4c-8403-f1e1155ddda4",
+      "voided" : false
+    }, {
+      "uuid" : "94f6f133-7b28-47cc-8201-88a8639659b8",
+      "displayOrder" : 5.0,
+      "dashboardSectionUUID" : "183fce2b-9a79-4c83-9338-383944ade146",
+      "reportCardUUID" : "a3f7d71f-eeb9-4b92-b2e2-344ad0cef84a",
+      "voided" : false
+    } ],
+    "voided" : false
+  }, {
+    "uuid" : "a41177ae-2083-40ab-9b6f-5d587dae5cd8",
+    "id" : 2520,
+    "name" : "comments",
+    "description" : "Pending Comments",
+    "viewType" : "Tile",
+    "displayOrder" : 1.0,
+    "dashboardUUID" : "0f6e0688-ec2d-4994-9667-c96b59cfdb63",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "7ed573b9-d765-4fee-b84e-dbdc563764f2",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "a41177ae-2083-40ab-9b6f-5d587dae5cd8",
+      "reportCardUUID" : "1597ee30-9080-40fb-87a1-cfe43611c32b",
+      "voided" : false
+    } ],
+    "voided" : true
+  } ],
+  "filters" : [ {
+    "uuid" : "a05323bd-017a-4f6a-acae-48672e57f8ce",
+    "id" : 1316,
+    "name" : "Address",
+    "filterConfig" : {
+      "type" : "Address",
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3",
+      "widget" : null,
+      "groupSubjectTypeFilter" : null,
+      "observationBasedFilter" : null
+    },
+    "voided" : false
+  }, {
+    "uuid" : "5d1255d7-2421-49ae-8bfb-e54202381ccd",
+    "id" : 1315,
+    "name" : "Delivery status",
+    "filterConfig" : {
+      "type" : "Concept",
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3",
+      "widget" : null,
+      "groupSubjectTypeFilter" : null,
+      "observationBasedFilter" : {
+        "scope" : "programEncounter",
+        "programUUIDs" : [ "5e927691-06c9-455a-b2fb-c300cea84f2e" ],
+        "encounterTypeUUIDs" : [ "837f0d4d-20c5-4ad3-bfeb-e386145616c1" ],
+        "conceptUUID" : "a748a594-4420-4627-a737-004f771ded13"
+      }
+    },
+    "voided" : true
+  }, {
+    "uuid" : "9f7fe370-66bc-42f6-8494-62f1570204d1",
+    "id" : 1314,
+    "name" : "Subject Type",
+    "filterConfig" : {
+      "type" : "SubjectType",
+      "subjectTypeUUID" : null,
+      "widget" : null,
+      "groupSubjectTypeFilter" : null,
+      "observationBasedFilter" : null
+    },
+    "voided" : false
+  } ],
+  "voided" : false
+}, {
+  "uuid" : "1dfbee1f-d89b-458f-b36b-44b60ea6fcf4",
+  "id" : 1321,
+  "name" : "SCD <Testing>",
+  "description" : "",
+  "sections" : [ {
+    "uuid" : "d9647cbf-81c1-4591-8590-aa1aeb7274a2",
+    "id" : 2608,
+    "name" : "Screening Data",
+    "description" : "",
+    "viewType" : "List",
+    "displayOrder" : 100.0,
+    "dashboardUUID" : "1dfbee1f-d89b-458f-b36b-44b60ea6fcf4",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "c70347a4-28de-4e6b-b4dd-38139300426a",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "d9647cbf-81c1-4591-8590-aa1aeb7274a2",
+      "reportCardUUID" : "6fb0bda1-ae9e-4d23-bb41-ea1b5d5c70fb",
+      "voided" : false
+    } ],
+    "voided" : false
+  } ],
+  "filters" : [ ],
+  "voided" : false
+} ]

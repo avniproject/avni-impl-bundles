@@ -1,0 +1,59 @@
+{
+  "operationalSubjectTypes" : [ {
+    "uuid" : "c0c7c6c9-f8f1-43bb-8be0-e90631a9eca0",
+    "subjectType" : {
+      "uuid" : "f0c8b0d8-d4cb-469b-9f0d-16b5fd4c04c2",
+      "voided" : false
+    },
+    "name" : "test (voided~61)",
+    "voided" : true
+  }, {
+    "uuid" : "b45838d9-5cc3-4fb5-9e19-0545f9f04910",
+    "subjectType" : {
+      "uuid" : "2f12b4df-1603-4896-a637-9c9d62f44326",
+      "voided" : false
+    },
+    "name" : "Daily Plan (voided~103)",
+    "voided" : true
+  }, {
+    "uuid" : "d7f00959-da0a-422b-8df4-4f822fb00b96",
+    "subjectType" : {
+      "uuid" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3",
+      "voided" : false
+    },
+    "name" : "Individual",
+    "voided" : false
+  }, {
+    "uuid" : "03a1bb95-616a-4300-af32-da04eeab2222",
+    "subjectType" : {
+      "uuid" : "eb388475-b88e-4767-8195-1679e5ea7703",
+      "voided" : false
+    },
+    "name" : "Lab Facility",
+    "voided" : false
+  }, {
+    "uuid" : "d763e032-542d-4b9d-b594-34df081fa579",
+    "subjectType" : {
+      "uuid" : "fdc4f4ab-bf42-40c7-bd07-1c8fe3c4deb5",
+      "voided" : false
+    },
+    "name" : "PSG meeting",
+    "voided" : false
+  }, {
+    "uuid" : "b3649717-623b-4357-8840-5bbf2dcae1f9",
+    "subjectType" : {
+      "uuid" : "fc99556e-b594-4dd0-bcda-a0dca8ac55a3",
+      "voided" : false
+    },
+    "name" : "PSG M (voided~1939)",
+    "voided" : true
+  }, {
+    "uuid" : "e08c40fb-3c20-405f-b07e-9b9b63508ff3",
+    "subjectType" : {
+      "uuid" : "87e22c64-1954-4de8-b24d-41bdac3f9e35",
+      "voided" : false
+    },
+    "name" : "VHSND",
+    "voided" : false
+  } ]
+}

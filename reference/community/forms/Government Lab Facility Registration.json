@@ -1,0 +1,125 @@
+{
+  "name" : "Government Lab Facility Registration",
+  "uuid" : "ac5bd2b5-a441-4524-ba90-60f3fbd95bea",
+  "formType" : "IndividualProfile",
+  "formElementGroups" : [ {
+    "uuid" : "da3f4b26-55b7-412e-9415-1282dba277de",
+    "name" : "First group placeholder",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "First group placeholder",
+      "uuid" : "401517f6-bd9d-42f8-b3f8-0afde217adbd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "First group placeholder",
+        "uuid" : "df725f43-88a7-4839-a63b-78729c3b33bc",
+        "dataType" : "NA",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "voided" : true,
+    "timed" : false,
+    "display" : "First group placeholder"
+  }, {
+    "uuid" : "3adce8bf-33e9-43e0-809a-f0ffecc396a8",
+    "name" : "Lab details",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Type of lab",
+      "uuid" : "df404710-ba58-4481-9ae9-6c979fb51401",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Type of lab",
+        "uuid" : "a805b384-4da2-4261-bb3d-845e094dd688",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Civil Hospital",
+          "uuid" : "50ce0f74-5205-45ac-9201-5157f2bc660e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sub Health Center",
+          "uuid" : "50e93401-3d77-4ba7-b5e8-b6798cf4af18",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Primary Health Center",
+          "uuid" : "b4007f93-f288-49aa-b2ad-96f1a0f75a43",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "District Hospital",
+          "uuid" : "6e3cb48a-5428-49d3-bccb-6964f958fdf3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Community Health Center",
+          "uuid" : "936ac2db-3ee3-4594-9428-f4dd27b55e3d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "",
+      "mandatory" : true
+    }, {
+      "name" : "Other lab type",
+      "uuid" : "80f8e769-e24d-4426-82a0-9c36b8e2ffc4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other lab type",
+        "uuid" : "97cde65b-6cde-4551-89d5-ab90a432e1e4",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({individual, formElement});\n  statusBuilder.show().when.valueInRegistration('Type of lab').containsAnswerConceptName('Other');\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const formElementGroup = params.formElementGroup;\n    return formElementGroup.formElements.map(({uuid}) => {\n        return new imports.rulesConfig.FormElementStatus(uuid, true, null);\n    });\n};",
+    "timed" : false,
+    "display" : "Lab details"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({params, imports}) => {\n    const individual = params.entity;\n    const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({individual});\n    const earliestDate = imports.moment(individual.registrationDate).subtract(1,'months').toDate();\n    const maxDate = imports.moment(earliestDate).add(45, 'd').toDate();\n    const nameSufix = imports.moment(earliestDate).format(\"MMM YYYY\");\n    scheduleBuilder.add({\n            name: `Sickle cell testing entry for ${nameSufix}`,\n            encounterType: 'Sickle cell testing entry',\n            earliestDate,\n            maxDate\n        });\n    return scheduleBuilder.getAllUnique(\"encounterType\");\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

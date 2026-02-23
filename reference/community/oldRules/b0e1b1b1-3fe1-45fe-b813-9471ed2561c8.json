@@ -1,0 +1,15 @@
+{
+  "ruleDependencyUUID" : "45fab234-2325-4028-a12d-15f29a87e3fc",
+  "entity" : {
+    "uuid" : "0723fd75-dc66-4aae-a3c9-31a09c9c4c7a",
+    "type" : "Form"
+  },
+  "entityUUID" : "0723fd75-dc66-4aae-a3c9-31a09c9c4c7a",
+  "entityType" : "Form",
+  "type" : "VisitSchedule",
+  "executionOrder" : 100.0,
+  "data" : { },
+  "name" : "JSS Sickle cell screening visit schedule",
+  "uuid" : "b0e1b1b1-3fe1-45fe-b813-9471ed2561c8",
+  "fnName" : "SickleCellScreeningVisitScheduleJSS"
+}

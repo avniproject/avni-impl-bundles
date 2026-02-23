@@ -1,0 +1,1083 @@
+{
+  "name" : "Orchard Management",
+  "uuid" : "0b066016-e6c7-4936-aefb-fe17a57199de",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "81af59b4-b65c-4bf2-a85b-99c025cdde02",
+    "name" : "Basics",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Date of Visit",
+      "uuid" : "37e47e8c-fe1a-4994-a696-3fb1537cdd41",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "calendar"
+      }, {
+        "key" : "durationOptions",
+        "value" : [ "years", "months", "days" ]
+      } ],
+      "concept" : {
+        "name" : "Date of Visit",
+        "uuid" : "7ba30eb7-e2e9-4660-a42d-95a54cfcdcbf",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Which Orchard Management practices have you adopted?",
+      "uuid" : "2d011ba1-8603-4b63-93c9-2200f40f9f35",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Which Practices Have you adopted",
+        "uuid" : "b0238e39-a8ef-421f-9c78-56992655abed",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Canopy Management",
+          "uuid" : "70b80188-043e-4a0c-971f-16a6f89a2a95",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Nutrition Management",
+          "uuid" : "a93449cb-0d93-4bdb-8f94-ad72398a2cbc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Irigation Management",
+          "uuid" : "7c4758fc-d837-4bc5-adf3-eb9abc5b3fb2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Nutrition management Practices",
+          "uuid" : "45c2f40f-333e-4756-9e2b-d3ba7acf6721",
+          "dataType" : "Coded",
+          "answers" : [ {
+            "name" : "A",
+            "uuid" : "1d5d2734-2b63-456a-bfd0-099b92f27017",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 0.0,
+            "active" : true,
+            "media" : [ ]
+          }, {
+            "name" : "B",
+            "uuid" : "585462ab-97e3-4a79-8638-b26d21bc1c9e",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 1.0,
+            "active" : true,
+            "media" : [ ]
+          }, {
+            "name" : "C",
+            "uuid" : "ef4cbc46-5790-40a6-9da6-89057c0d7fdc",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 2.0,
+            "active" : true,
+            "media" : [ ]
+          }, {
+            "name" : "Yes",
+            "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 1.0,
+            "active" : true,
+            "media" : [ ]
+          }, {
+            "name" : "No",
+            "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 2.0,
+            "active" : true,
+            "media" : [ ]
+          } ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pest Management",
+          "uuid" : "07729542-0e74-4f71-b74c-1fa4cde23c29",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Other practices adopted",
+      "uuid" : "4cb99a7d-fca6-4a96-8db6-10164a9411c5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other Orchard Management practices adopted",
+        "uuid" : "46d661a3-d83c-4f25-951b-f4249ff3e9c4",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"b0238e39-a8ef-421f-9c78-56992655abed\").containsAnswerConceptName(\"287164fa-3899-485f-9c1f-61401bc6359d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Which Practices Have you adopted",
+                "conceptUuid" : "b0238e39-a8ef-421f-9c78-56992655abed",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "287164fa-3899-485f-9c1f-61401bc6359d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Basics"
+  }, {
+    "uuid" : "c4f62a3d-15b6-4dd0-b824-bde400b9ed92",
+    "name" : "Canopy Management",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "In Which Plant have you did Canopy Management",
+      "uuid" : "005939da-8db1-412b-9d75-a80151c6bcfa",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "In Which Plant have you did Canopy Management",
+        "uuid" : "910a4660-d8ad-4d68-a80c-c3d322c98c53",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Jamun",
+          "uuid" : "8806cb63-8e00-4cd0-a88f-885b82e5a6ad",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lemon",
+          "uuid" : "9b930b80-67d6-43d4-ac48-83978a32f12d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mango",
+          "uuid" : "ac169e86-e440-4ead-bfe7-1dd82d3a04a0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Amla",
+          "uuid" : "fafe06ae-37bf-477b-bf10-419765907c66",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jackfruit",
+          "uuid" : "f43a9898-dd26-44b9-a60f-56044198de4b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Aonla",
+          "uuid" : "14454b33-7c48-4749-a276-2b07e29bec4f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ber",
+          "uuid" : "8d47b3de-50e3-4548-b061-4902834e9e91",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Guava",
+          "uuid" : "5e2992ff-f428-4471-862f-6a664b66bbb6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sweet lime",
+          "uuid" : "6aff16d6-986b-4038-8f50-2e485d52d014",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Other plant canopy management done for, please specify",
+      "uuid" : "19bf74ae-00c4-4387-8125-738afd91d625",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other plant canopy management done for",
+        "uuid" : "ce1e8604-441b-4d15-a37f-c91872d6c8bb",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"910a4660-d8ad-4d68-a80c-c3d322c98c53\").containsAnswerConceptName(\"287164fa-3899-485f-9c1f-61401bc6359d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "In Which Plant have you did Canopy Management",
+                "conceptUuid" : "910a4660-d8ad-4d68-a80c-c3d322c98c53",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "287164fa-3899-485f-9c1f-61401bc6359d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "How many plant have did canopy management ?",
+      "uuid" : "6b9abe95-cfcb-4e92-9ab7-196e4f963eb6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "How many plant have did canopy management",
+        "uuid" : "e22ba9dd-2fdc-41c3-81fa-e28e7f4fcca6",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElementGroup = params.formElementGroup;\n    const _ = imports.lodash;\n    let visibility = true;\n    return formElementGroup.formElements.map((formElement) => {\n        \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"b0238e39-a8ef-421f-9c78-56992655abed\").containsAnswerConceptName(\"70b80188-043e-4a0c-971f-16a6f89a2a95\").matches();\n  \n        visibility = condition11 ;\n  \n        return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, null);\n    });\n};",
+    "declarativeRule" : [ {
+      "actions" : [ {
+        "actionType" : "showFormElementGroup"
+      }, { } ],
+      "conditions" : [ {
+        "compoundRule" : {
+          "rules" : [ {
+            "lhs" : {
+              "type" : "concept",
+              "scope" : "encounter",
+              "conceptName" : "Which Practices Have you adopted",
+              "conceptUuid" : "b0238e39-a8ef-421f-9c78-56992655abed",
+              "conceptDataType" : "Coded"
+            },
+            "rhs" : {
+              "type" : "answerConcept",
+              "answerConceptNames" : [ "Canopy Management" ],
+              "answerConceptUuids" : [ "70b80188-043e-4a0c-971f-16a6f89a2a95" ]
+            },
+            "operator" : "containsAnswerConceptName"
+          } ]
+        }
+      } ]
+    } ],
+    "timed" : false,
+    "display" : "Canopy Management"
+  }, {
+    "uuid" : "394cfb48-a10d-4026-aa64-7be173b54f5e",
+    "name" : "Nutrition Management",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Year",
+      "uuid" : "e5cbaaed-98a5-4ac4-8fea-1c93b3fb4e6b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "year (voided~348452)",
+        "uuid" : "1321897a-6d53-4b3e-993f-5ffce6827e90",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "4th",
+          "uuid" : "eff8e112-af15-414f-8cf3-897115dbff09",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1st",
+          "uuid" : "d14396f8-a6ac-4875-aaed-a9d8ef04e239",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3rd",
+          "uuid" : "8b82be71-3add-47be-bf85-f1c38d44447a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2nd",
+          "uuid" : "a9680646-53f5-4ecc-9d53-15055d491a69",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ],
+        "voided" : true
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "year",
+      "uuid" : "99ca2770-687d-4769-bb92-92c289f12d23",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "year (voided~348452)",
+        "uuid" : "1321897a-6d53-4b3e-993f-5ffce6827e90",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "4th",
+          "uuid" : "eff8e112-af15-414f-8cf3-897115dbff09",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1st",
+          "uuid" : "d14396f8-a6ac-4875-aaed-a9d8ef04e239",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3rd",
+          "uuid" : "8b82be71-3add-47be-bf85-f1c38d44447a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2nd",
+          "uuid" : "a9680646-53f5-4ecc-9d53-15055d491a69",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ],
+        "voided" : true
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Year",
+      "uuid" : "43fc9491-4bce-42b8-a29b-66de64e2f353",
+      "keyValues" : [ {
+        "key" : "ExcludedAnswers",
+        "value" : [ "9th", "7th", "5th", "10th", "6th", "8th" ]
+      } ],
+      "concept" : {
+        "name" : "Years",
+        "uuid" : "0b78d29a-7cca-4fe6-af6c-7aa1f8ad024f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "9th",
+          "uuid" : "b1f5438c-a81b-4332-a38c-ae20744102cf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "10th",
+          "uuid" : "65147bb9-af65-41dc-8303-81cd7ed0ed63",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2nd",
+          "uuid" : "a9680646-53f5-4ecc-9d53-15055d491a69",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "5th and more",
+          "uuid" : "e9aaeaeb-aed4-4277-9882-b24e263edafc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3rd",
+          "uuid" : "8b82be71-3add-47be-bf85-f1c38d44447a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "4th",
+          "uuid" : "eff8e112-af15-414f-8cf3-897115dbff09",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "5th",
+          "uuid" : "59424a6b-af2e-4782-9830-86208e734b73",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "8th",
+          "uuid" : "121f063b-1a12-4626-952e-80343035ccdf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1st",
+          "uuid" : "d14396f8-a6ac-4875-aaed-a9d8ef04e239",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "6th",
+          "uuid" : "3ce93883-4d69-452a-bd7c-6cbe59ec8640",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "7th",
+          "uuid" : "9900200e-6003-4d5b-88b4-be4d09ddd120",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Manure Details",
+      "uuid" : "e7c6772e-ef25-4960-ab4f-49ee222ff657",
+      "keyValues" : [ {
+        "key" : "repeatable",
+        "value" : true
+      } ],
+      "concept" : {
+        "name" : "Manure Details",
+        "uuid" : "885db988-32a2-401d-8703-967944d27e6e",
+        "dataType" : "QuestionGroup",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Name of the Manure Used",
+      "uuid" : "07589eb1-2055-418c-971a-1ae14d8c726c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of the Manure Used",
+        "uuid" : "80918f25-28c7-4f4d-b5ef-074edbf9cccd",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "e7c6772e-ef25-4960-ab4f-49ee222ff657",
+      "mandatory" : true
+    }, {
+      "name" : "Quantity of the Manure",
+      "uuid" : "3c1cbfb1-e4c7-43f8-b529-f7d49907860f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity of the Manure",
+        "uuid" : "214ca5af-1e43-465b-9a55-e65a26d7bcba",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "e7c6772e-ef25-4960-ab4f-49ee222ff657",
+      "mandatory" : true
+    }, {
+      "name" : "Name of the Manure Used",
+      "uuid" : "fdb3cd66-b54a-4ebb-b476-d33972d7a961",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of the Manure Used in Nutrition Management",
+        "uuid" : "f570f49d-a05d-4969-a78b-9a08618fc364",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Vermicompost",
+          "uuid" : "bbd4b0f7-3788-48fc-86ed-fee39451e84c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jeevamrit",
+          "uuid" : "f1320ea8-708c-4ba8-b7cc-938dc504f1cd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ghanajeevamrit",
+          "uuid" : "d6ef5430-e5a6-4439-b60f-9663507e3a5a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "FYM",
+          "uuid" : "7c54c40b-17f7-4bbc-b3eb-1779470889e3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Quantity of the Manure",
+      "uuid" : "0fb5fcf4-2b36-43cc-a15e-bba8a3ed1dfd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity of the Manure",
+        "uuid" : "214ca5af-1e43-465b-9a55-e65a26d7bcba",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Name of the Manure Used",
+      "uuid" : "6de0b9fe-731a-45c8-a32f-377eb5f3e3e6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of the Manure Used",
+        "uuid" : "80918f25-28c7-4f4d-b5ef-074edbf9cccd",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElementGroup = params.formElementGroup;\n    const _ = imports.lodash;\n    let visibility = true;\n    return formElementGroup.formElements.map((formElement) => {\n        \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"b0238e39-a8ef-421f-9c78-56992655abed\").containsAnswerConceptName(\"a93449cb-0d93-4bdb-8f94-ad72398a2cbc\").matches();\n  \n        visibility = condition11 ;\n  \n        return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, null);\n    });\n};",
+    "declarativeRule" : [ {
+      "actions" : [ {
+        "actionType" : "showFormElementGroup"
+      }, { } ],
+      "conditions" : [ {
+        "compoundRule" : {
+          "rules" : [ {
+            "lhs" : {
+              "type" : "concept",
+              "scope" : "encounter",
+              "conceptName" : "Which Practices Have you adopted",
+              "conceptUuid" : "b0238e39-a8ef-421f-9c78-56992655abed",
+              "conceptDataType" : "Coded"
+            },
+            "rhs" : {
+              "type" : "answerConcept",
+              "answerConceptNames" : [ "Nutrition Management" ],
+              "answerConceptUuids" : [ "a93449cb-0d93-4bdb-8f94-ad72398a2cbc" ]
+            },
+            "operator" : "containsAnswerConceptName"
+          } ]
+        }
+      } ]
+    } ],
+    "timed" : false,
+    "display" : "Nutrition Management"
+  }, {
+    "uuid" : "cdcddc0d-04a3-4dd4-87bb-27cb97f2039f",
+    "name" : "Pest Management",
+    "displayOrder" : 4.0,
+    "formElements" : [ {
+      "name" : "Year",
+      "uuid" : "ec93a3f3-6756-4c2d-a0e7-a4c0013973a9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "YEAR (voided~348453)",
+        "uuid" : "bd7d0b48-1504-4714-8e15-f1fb106e10b1",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "4th",
+          "uuid" : "eff8e112-af15-414f-8cf3-897115dbff09",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3rd",
+          "uuid" : "8b82be71-3add-47be-bf85-f1c38d44447a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2nd",
+          "uuid" : "a9680646-53f5-4ecc-9d53-15055d491a69",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1st",
+          "uuid" : "d14396f8-a6ac-4875-aaed-a9d8ef04e239",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ],
+        "voided" : true
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Year",
+      "uuid" : "45807110-044a-4a90-b71b-bcd2b9e7be8d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Pest Management Year",
+        "uuid" : "1690f219-075b-4f9a-ae98-547099be3114",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "5th and more",
+          "uuid" : "e9aaeaeb-aed4-4277-9882-b24e263edafc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1st",
+          "uuid" : "d14396f8-a6ac-4875-aaed-a9d8ef04e239",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "4th",
+          "uuid" : "eff8e112-af15-414f-8cf3-897115dbff09",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2nd",
+          "uuid" : "a9680646-53f5-4ecc-9d53-15055d491a69",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3rd",
+          "uuid" : "8b82be71-3add-47be-bf85-f1c38d44447a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Pest or Symptoms Name",
+      "uuid" : "dac41468-2f1b-4c67-b38d-0cb1c9efecf6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Pest or Symptoms Name used for Pest Management",
+        "uuid" : "b3fa24b7-112d-4424-9b0b-8c21e82040af",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Fruit borer (hole in fruits)",
+          "uuid" : "930e3061-6096-492f-b6fa-8f5af0025f58",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Nematode (Yellowness & stuning growth of plant)",
+          "uuid" : "b154b9fe-82b9-428e-af22-4656a12c45bb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Aphids (colonies of small insects on tender parts)",
+          "uuid" : "4a180ad8-edd0-4b71-a0c0-944b7f6ce45e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jassids (Yellowing and upward curling of leaves)",
+          "uuid" : "589909ce-a279-49c7-8b5d-bedff7af1c22",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Fruitfly (Maggots in the fruit)",
+          "uuid" : "6a128905-8373-4977-a585-1ee948c4361e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Brak eating catterpillar (Chewed wood and excreta on branches)",
+          "uuid" : "a8bd83fe-6a36-4e5a-8e33-8724c1f900f9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Stem borer (Holes in stem)",
+          "uuid" : "c6d4a1cb-c51b-4049-b5b3-676377f549b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Leaf minor (White blotches on leaves)",
+          "uuid" : "13709b72-39e5-4fdd-b602-f57f606f8040",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Other pest or symptoms used, please specify",
+      "uuid" : "42aa6c6b-26e9-4c76-84b5-1a9f4a9154a3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other pest or symptoms used,",
+        "uuid" : "239b78d4-3b15-4835-bcfc-9bdb58d6fb37",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"b3fa24b7-112d-4424-9b0b-8c21e82040af\").containsAnswerConceptName(\"287164fa-3899-485f-9c1f-61401bc6359d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Pest or Symptoms Name used for Pest Management",
+                "conceptUuid" : "b3fa24b7-112d-4424-9b0b-8c21e82040af",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "287164fa-3899-485f-9c1f-61401bc6359d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Name of the Bio-Pestcide used",
+      "uuid" : "2b197b4d-b19c-484b-bf94-7b6c25f2e1a0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of the Bio-Pestcide used",
+        "uuid" : "c34f4b0d-4884-4900-9f52-b286f97a724a",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Quantity of the Bio-Pestcide used",
+      "uuid" : "c5e30c0f-5cf9-4fd8-8f6e-36626162c562",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity of the Bio-Pestcide used",
+        "uuid" : "c1f26bcc-e341-4454-b72f-35f134396e71",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n\n    let enteredNumber = programEncounter.getObservationValue(\"Quantity of the Bio-Pestcide used\");\n\n    if(enteredNumber && !isNaN(enteredNumber) && !Number.isInteger(enteredNumber)){\n        validationErrors.push(\"Entered number should be an integer\");\n    }\n\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Cost of the Bio-Pesticide Used",
+      "uuid" : "d69d4d68-0398-467d-8b48-45977d6564c9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cost of the Bio-Pesticide Used",
+        "uuid" : "21245092-770f-4738-b72e-38fd5dce255b",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Pest or Symptoms Name",
+      "uuid" : "6551a295-5b36-4544-b7e4-2e9f15a13d26",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Pest or Symptoms Name",
+        "uuid" : "005f757b-1e5b-494e-9ee0-6d5be36f72f7",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElementGroup = params.formElementGroup;\n    const _ = imports.lodash;\n    let visibility = true;\n    return formElementGroup.formElements.map((formElement) => {\n        \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"b0238e39-a8ef-421f-9c78-56992655abed\").containsAnswerConceptName(\"07729542-0e74-4f71-b74c-1fa4cde23c29\").matches();\n  \n        visibility = condition11 ;\n  \n        return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, null);\n    });\n};",
+    "declarativeRule" : [ {
+      "actions" : [ {
+        "actionType" : "showFormElementGroup"
+      }, { } ],
+      "conditions" : [ {
+        "compoundRule" : {
+          "rules" : [ {
+            "lhs" : {
+              "type" : "concept",
+              "scope" : "encounter",
+              "conceptName" : "Which Practices Have you adopted",
+              "conceptUuid" : "b0238e39-a8ef-421f-9c78-56992655abed",
+              "conceptDataType" : "Coded"
+            },
+            "rhs" : {
+              "type" : "answerConcept",
+              "answerConceptNames" : [ "Pest Management" ],
+              "answerConceptUuids" : [ "07729542-0e74-4f71-b74c-1fa4cde23c29" ]
+            },
+            "operator" : "containsAnswerConceptName"
+          } ]
+        }
+      } ]
+    } ],
+    "timed" : false,
+    "display" : "Pest Management"
+  }, {
+    "uuid" : "c3c9c7ee-eaa2-4d5c-95b4-dc2d1fea658a",
+    "name" : "Any Other Remarks",
+    "displayOrder" : 5.0,
+    "formElements" : [ {
+      "name" : "Any Other Remarks",
+      "uuid" : "c8dee42c-6d91-4984-b2e2-53c61bc94ddb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Any Other Remarks",
+        "uuid" : "51f36698-9e16-47e8-bce1-ed86db1cecd8",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Any Other Remarks"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({ params, imports }) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({programEncounter});\n    const encounterType = programEncounter.encounterType.name;\n\n    const currentFollowupName = programEncounter.name;\n\n    let num = parseInt(currentFollowupName.split(' ').pop());\n    if(isNaN(num)) {\n        num = 1;\n    } else {\n        num++;\n    }\n    let nextFollowupName = `Orchard Management Follow-up ${num}`;\n\n    const isAlreadyScheduled = programEncounter.programEnrolment.getEncountersOfType(encounterType)\n        .some(encounter => encounter.name == nextFollowupName);\n\n    const isProgramActive = programEncounter.programEnrolment.programExitDateTime == null;\n    \n    if(!isAlreadyScheduled && isProgramActive){\n        const earliestDate = moment(programEncounter.earliestVisitDateTime).add(3, 'months').startOf('day').toDate();\n        const maxDate = moment(earliestDate).add(30, 'days').endOf('day').toDate();\n        scheduleBuilder.add({name: nextFollowupName, encounterType: encounterType, earliestDate, maxDate});  \n    }\n    \n    return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

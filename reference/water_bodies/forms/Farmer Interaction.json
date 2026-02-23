@@ -1,0 +1,1382 @@
+{
+  "name" : "Farmer Interaction",
+  "uuid" : "7777ef7a-77cd-44c4-ad05-30d485a804e1",
+  "formType" : "Encounter",
+  "formElementGroups" : [ {
+    "uuid" : "71f93980-0648-40c3-b9df-7e27882b4f32",
+    "name" : "Observations",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "How did the farmer know about the program?",
+      "uuid" : "a7cf1887-8f99-4378-a0d3-45142850a343",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "How did the farmer know about the program?",
+        "uuid" : "48d727f7-2657-4577-85e1-4a7e9f553f92",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Benefits of silt, according to the farmer",
+      "uuid" : "360c1bb3-6518-474c-a70b-56922bef0be6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Benefits of silt, according to the farmer",
+        "uuid" : "569a5338-8987-44b8-bde5-f3bef8d84cea",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "How is the NGO allocating silt quantity to the farmers?",
+      "uuid" : "2a1032f9-15e0-4edd-ad87-3875e5f4fecb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "How is the NGO allocating silt quantity to the farmers?",
+        "uuid" : "6a9dcbe1-64f4-4a10-b2e2-cea1abef94a8",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Transportation used to cart the silt",
+      "uuid" : "fea154e0-8e96-47e1-b2d1-7ad270db41b4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Transportation used to cart the silt",
+        "uuid" : "356c787d-e5d9-467e-8fc6-c94d3bc0c9fc",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Hywa",
+          "uuid" : "4f65555d-7070-4c8e-8b42-c9eca1ea5ad8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tractor trolley",
+          "uuid" : "02c699f4-8747-450d-9e54-70831f22f221",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Tractor trolley/hywa is?",
+      "uuid" : "53449087-b4a5-49db-89ae-7f4064bde78c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Tractor trolley/hywa is?",
+        "uuid" : "eb86fc8f-0069-4dc8-aa21-9e1b8cada1b3",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Rented",
+          "uuid" : "005e5031-a2b9-4979-b267-50f678361612",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Owned by NGO",
+          "uuid" : "03bd73a8-5979-46d1-933b-38d037d9f9bd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Silt requested by the farmer - Number of trolleys",
+      "uuid" : "49eb3d58-329f-4af9-9dd6-d5463f8a5fbe",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Silt requested by the farmer - Number of trolleys",
+        "uuid" : "a974588d-fea7-4ad8-87a9-3d3acd0a29b9",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Transportation used to cart the silt\").containsAnswerConceptName('Tractor trolley');\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Silt requested by the farmer - Number of Hywas",
+      "uuid" : "f47ed0ab-a4cb-47d1-8d48-33f405fc6262",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Silt requested by the farmer - Number of hywas",
+        "uuid" : "f5857f8e-32e1-436f-ad53-5632296cb048",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Transportation used to cart the silt\").containsAnswerConceptName('Hywa');\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Silt requested by the farmer - Capacity of hywas in cu.m.",
+      "uuid" : "84522165-fd51-4c5d-a6c2-c5e0bf75b0e4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Silt requested by the farmer - Capacity of hywas in cu.m.",
+        "uuid" : "4d1ee0a3-f9b0-473a-bbd6-79dd1f0d7562",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "16",
+          "uuid" : "19286f0a-957c-4674-b9c9-42ac6c2476ce",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "14",
+          "uuid" : "7c956ebb-acc0-41a0-afdc-c810ddba485a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "18",
+          "uuid" : "5404d563-5b50-47ae-a3f1-49c71496b3a2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "20",
+          "uuid" : "f6608f94-3bff-4a6d-a38b-ef14b1e40fa1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "25",
+          "uuid" : "68211d18-45fe-4053-9639-9480df9de238",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Silt requested by the farmer - Number of hywas\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Silt carted by farmer - Number of trolleys",
+      "uuid" : "f5a6d17e-4fc5-41cb-8095-0922f4529016",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Silt carted by farmer - Number of trolleys",
+        "uuid" : "9f713f35-3fa7-4f98-b4b9-c5be0e8812b1",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Transportation used to cart the silt\").containsAnswerConceptName('Tractor trolley');\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Silt carted by farmer - Number of hywas",
+      "uuid" : "07c031ec-c277-466c-988d-91dffb6fba4c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Silt carted by farmer - Number of hywas",
+        "uuid" : "d813fcad-f940-475b-a718-ab62230f9d3f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Transportation used to cart the silt\").containsAnswerConceptName('Hywa');\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Silt carted by farmer - Capacity of hywas in cu.m.",
+      "uuid" : "d63d7f55-01e4-4544-80b9-8ec183fcbf6f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Silt carted by farmer - Capacity of hywas in cu.m.",
+        "uuid" : "5ceb5eb3-6f69-4c0b-898e-7ce7d543f296",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "16",
+          "uuid" : "19286f0a-957c-4674-b9c9-42ac6c2476ce",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "25",
+          "uuid" : "68211d18-45fe-4053-9639-9480df9de238",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "14",
+          "uuid" : "7c956ebb-acc0-41a0-afdc-c810ddba485a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "20",
+          "uuid" : "f6608f94-3bff-4a6d-a38b-ef14b1e40fa1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "18",
+          "uuid" : "5404d563-5b50-47ae-a3f1-49c71496b3a2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Silt carted by farmer - Number of hywas\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Family members carting silt under the farmers name",
+      "uuid" : "26049790-7e27-48d7-b5bd-78c4578887bf",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Family members carting silt under the farmers name",
+        "uuid" : "20157210-7101-4eaa-8875-f993e52e01a9",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "highAbsolute" : 99.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Amount of silt carted by the family members - Number of trolleys",
+      "uuid" : "5d3d4209-d5cb-4357-9f42-41b836ff6220",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Amount of silt carted by the family members - Number of trolleys",
+        "uuid" : "1bd245b5-79c4-43a1-a493-466d69bf3c6f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Family members carting silt under the farmers name\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Amount of silt carted by the family members - Number of hywas",
+      "uuid" : "2d75351d-c61b-45fc-b897-e02f3d860ca2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Amount of silt carted by the family member - Number of hywas",
+        "uuid" : "1c0392ce-3b3c-45df-b10f-359c28ad20f3",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Family members carting silt under the farmers name\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Amount of silt carted by the family members - Capacity of hywas",
+      "uuid" : "61494c63-f286-48e0-ae66-012fc45d3c22",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Amount of silt carted by the family members - Capacity of hywas",
+        "uuid" : "6c66462a-fa66-422f-8e28-3738008e9328",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "16",
+          "uuid" : "19286f0a-957c-4674-b9c9-42ac6c2476ce",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "14",
+          "uuid" : "7c956ebb-acc0-41a0-afdc-c810ddba485a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "20",
+          "uuid" : "f6608f94-3bff-4a6d-a38b-ef14b1e40fa1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "25",
+          "uuid" : "68211d18-45fe-4053-9639-9480df9de238",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "18",
+          "uuid" : "5404d563-5b50-47ae-a3f1-49c71496b3a2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 15.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Amount of silt carted by the family members - Number of hywas\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Total silt requested by the family members – Number of trolleys",
+      "uuid" : "a5137333-386d-4724-9f3d-34734ab9ce99",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total silt requested by the family members - Number of trolleys",
+        "uuid" : "c2ba151d-b954-4f3e-94df-2772478833f6",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 16.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Family members carting silt under the farmers name\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Total silt requested by the family members – Number of hywas",
+      "uuid" : "27ab8a0b-b223-4668-84bd-1d4c7acfebd7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total silt requested by the family members – Number of hywas",
+        "uuid" : "909c6a3e-b7e3-4264-b0f4-b88fec13bcc1",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 17.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Family members carting silt under the farmers name\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Total silt requested by the family members - Capacity of hywas",
+      "uuid" : "e5567125-4683-49e6-a1d4-8f33e4462066",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total silt requested by the family members - Capacity of hywas",
+        "uuid" : "a90e98aa-ae5a-4629-8ed5-ed6c20d3fd6c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "25",
+          "uuid" : "68211d18-45fe-4053-9639-9480df9de238",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "18",
+          "uuid" : "5404d563-5b50-47ae-a3f1-49c71496b3a2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "14",
+          "uuid" : "7c956ebb-acc0-41a0-afdc-c810ddba485a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "20",
+          "uuid" : "f6608f94-3bff-4a6d-a38b-ef14b1e40fa1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "16",
+          "uuid" : "19286f0a-957c-4674-b9c9-42ac6c2476ce",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 18.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Total silt requested by the family members – Number of hywas\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Landholding of the family members",
+      "uuid" : "6cb36f1d-e23b-4879-8153-9d75faca2896",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Landholding of the family members",
+        "uuid" : "3f171488-b62d-4d24-87f9-06e2115e85dc",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 19.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Family members carting silt under the farmers name\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Negotiation done by",
+      "uuid" : "c63e72d9-a7db-49d2-b846-4fe589f1c853",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Negotiation done by",
+        "uuid" : "5bba4016-bd0a-48c5-8494-dd6a0d7b2faa",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Individually",
+          "uuid" : "308c40ab-626c-4dac-be55-ce24393ed985",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Collective Group",
+          "uuid" : "9c6997ba-6676-4b71-868d-321d78b26538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 20.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Rent paid by",
+      "uuid" : "e012df84-f89b-4629-983b-77c2724691d5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Rent paid by",
+        "uuid" : "afde7b39-6d59-4615-9753-300d54feeb82",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "INR/KM",
+          "uuid" : "07b56d22-fe66-442d-ad53-3b7945af5f6d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "INR/Day",
+          "uuid" : "d59c283a-3f54-4524-89cf-25beffd623b7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "INR/Trip",
+          "uuid" : "38923e7a-e982-48f2-af06-d9bb98b7c193",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "0a09f401-14e4-41bb-a1a6-c25dbc5e0733",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 21.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Amount",
+      "uuid" : "50a10c0c-4406-4356-a7ee-31993f931e22",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Amount",
+        "uuid" : "2b5635ee-e4c4-4587-a796-c3a1f48f6fac",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 22.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Distance between the desilting site and farmland",
+      "uuid" : "866ba1c6-320a-4ba4-8cb6-a2e5c50abf39",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Distance between the desilting site and farmland",
+        "uuid" : "2d105970-2492-4549-bb73-0d1c6a25be40",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Less than 5km",
+          "uuid" : "8b3c4edd-cb2b-4d20-94e6-0a5259b915ac",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Less than 1 km",
+          "uuid" : "2c375aee-1738-4f1c-9c2d-48bee0d034a8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Between 1 to 2  km",
+          "uuid" : "6099de54-7336-4097-b420-bc2598358df5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Between 3 to 5 km",
+          "uuid" : "e918f284-0613-43b0-9dd6-49be5dc0c893",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Between 2 to 3 km",
+          "uuid" : "d7f18cce-6ca1-489f-b02e-d78a12d4b81f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 23.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Additional expenses by the farmer, if any",
+      "uuid" : "3b170298-0ec3-43c4-a0c9-8e9de231ef71",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Additional expenses by the farmer, if any",
+        "uuid" : "dc3a21e0-8e6f-45aa-a3ff-7fc6e317c3ce",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 24.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Please mention, additional expenses by the farmer",
+      "uuid" : "a38eaef7-a777-4b0e-887b-4abe8df5090a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Additional expenses done by the farmer",
+        "uuid" : "088d4cd7-99ac-485e-8b2a-ca272362937e",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 25.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Additional expenses by the farmer, if any\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Additional amount",
+      "uuid" : "cda812ef-1e65-4705-a05b-fbf39d0e6f7e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Additional amount",
+        "uuid" : "4f8b3d6e-52c5-4f1b-97f7-6ae86a87f131",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 26.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Number of hyvas/dumper carted\").is.greaterThan(0);\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Area already covered with silt",
+      "uuid" : "e80f5081-e28c-44f2-be65-de4c9a0e4498",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Area already covered with silt",
+        "uuid" : "0ad3fabb-01dd-4de0-a137-7a05809daa05",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 27.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Area to be covered with silt",
+      "uuid" : "0cec2608-6aa6-48ca-b86d-3e8f2e86d502",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Area to be covered with silt",
+        "uuid" : "557117b9-f92a-4408-9297-fddf17eb98ca",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 28.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Total area to be covered by silt",
+      "uuid" : "932c5114-3783-43ce-a889-7c4d130640b1",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Total area to be covered by silt",
+        "uuid" : "ccb8a2df-d6e2-4a00-91c6-641101edafed",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 29.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  let areaAlreadyCovered = 0;\n  let areaToBeCovered = 0;\n \n  let value = 0;\n  \n  areaAlreadyCovered = encounter.getObservationReadableValue('Area already covered with silt');\n  areaToBeCovered = encounter.getObservationReadableValue('Area to be covered with silt');\n \n  value = areaAlreadyCovered  + areaToBeCovered;\n         \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, value.toFixed(2));\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Type of land silt is spread on",
+      "uuid" : "ab83ff51-3f58-451f-a934-fe3c2f00f4e4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Type of land silt is spread on",
+        "uuid" : "99bdda89-3d3a-4b90-87a1-e5ecd04c3c23",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Fertile",
+          "uuid" : "c66691ef-5dbc-4053-b9dd-f13a54b09a78",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Barren",
+          "uuid" : "56bab187-29ab-48ee-a5f0-cda1939599f4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 30.0,
+      "type" : "SingleSelect",
+      "rule" : "",
+      "mandatory" : true
+    }, {
+      "name" : "Total area to be covered with silt",
+      "uuid" : "211e4fc7-3886-4857-b194-76b55a918f7f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total area to be covered with silt",
+        "uuid" : "731bb5be-1614-412e-8c23-da0bee30a5f0",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 31.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  let areaAlreadyCovered = 0;\n  let areaToBeCovered = 0;\n \n  let value = 0;\n  \n  areaAlreadyCovered = encounter.getObservationReadableValue('Area already covered with silt');\n  areaToBeCovered = encounter.getObservationReadableValue('Area to be covered with silt');\n \n  value = areaAlreadyCovered  + areaToBeCovered;\n         \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, value.toFixed(2));\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Problems faced while carting silt",
+      "uuid" : "507a415d-6983-494c-b5df-2bfdede096ae",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Problems faced while carting silt",
+        "uuid" : "975a64c4-9136-4fe7-8c30-425ddf73e22c",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 32.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Anyone including machine operator, site coordinator or any other NGO representative proposed for providing additional silt at an extra cost to you?",
+      "uuid" : "eeb82d91-f4a6-49c7-b10e-2da8c99d7d77",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Anyone including machine operator, site coordinator or any other NGO representative proposed for providing additional silt at an extra cost to you?",
+        "uuid" : "5b17327f-f909-455a-98d9-c9e6a37581a1",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 33.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Crops grown by the farmer",
+      "uuid" : "b6ed780f-e02b-41fb-a96b-a0108e0bb2e6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Crops grown by the farmer",
+        "uuid" : "d2088a63-ace4-4d0f-91b0-ee0e3a636ecb",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 34.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Ways to recover the amount spent on silt by the farmer",
+      "uuid" : "a0e6dda1-9268-4fda-ae99-813bebe634fd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Ways to recover the amount spent on silt by the farmer",
+        "uuid" : "cecc9514-a79b-4369-b15a-378075953d10",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 35.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Did farmer take the silt under program before this year?",
+      "uuid" : "6142524b-a5fd-4058-beaa-5e548f89e3f2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Did farmer take the silt under program before this year?",
+        "uuid" : "28448f53-4dfa-476e-a002-30a7e8af79d0",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 36.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "When did you take the silt under program before this year?",
+      "uuid" : "aff829e9-932c-4f20-8891-43bc751db9f4",
+      "keyValues" : [ {
+        "key" : "durationOptions",
+        "value" : [ "years" ]
+      } ],
+      "concept" : {
+        "name" : "When did you take the silt under GDGS before this year?",
+        "uuid" : "208bf875-efc3-4c31-b136-278f2c32a36b",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 37.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Did farmer take the silt under GDGS before this year?\").is.yes;\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Area covered by silt",
+      "uuid" : "20a8bdc8-6fe8-4d0b-9e31-d222e701a78f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Area covered by silt",
+        "uuid" : "4aa17f04-4302-4d22-af27-9aa7e9476a6e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 38.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Did farmer take the silt under program before this year?\").is.yes;\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Type of land on which silt was spread",
+      "uuid" : "5e372982-3d52-47bf-8e4a-e79374bc3f18",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Type of land on which silt was spread",
+        "uuid" : "f9498b5a-bd44-479b-ad1c-346fbad9b560",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Barren",
+          "uuid" : "56bab187-29ab-48ee-a5f0-cda1939599f4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Fertile",
+          "uuid" : "c66691ef-5dbc-4053-b9dd-f13a54b09a78",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 39.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Did farmer take the silt under program before this year?\").is.yes;\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Major crops grown",
+      "uuid" : "725b8e90-73a7-4a91-9a06-6bdc071f8bb9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Major crops grown",
+        "uuid" : "9e5dc4c8-3c77-4b58-96c7-495adac4c9d5",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 40.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Did farmer take the silt under program before this year?\").is.yes;\n  return statusBuilder.build();\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Increase in productivity",
+      "uuid" : "5a144d20-95c3-482c-ae49-84868b4acf45",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Increase in productivity",
+        "uuid" : "57821286-0950-4133-93e2-bc70db871080",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 41.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Did farmer take the silt under program before this year?\").is.yes;\n  return statusBuilder.build();\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Increase in income",
+      "uuid" : "45e9b2a7-e787-470e-8b0b-0d92e0c376d5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Increase in income",
+        "uuid" : "fff49051-69ed-4655-b9d4-e93f767df5ce",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 42.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Did farmer take the silt under program before this year?\").is.yes;\n  return statusBuilder.build();\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Is farmer taking silt from other source?",
+      "uuid" : "33548680-01b4-4f7b-991c-41628cd693c0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is farmer taking silt from other source",
+        "uuid" : "85682fc4-f2ec-44b2-aed9-559e5aac2d49",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 43.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Other Source",
+      "uuid" : "6a8f3eca-8d43-4124-b76a-37e0931ced3b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other Source",
+        "uuid" : "8e67e961-1f5a-45ba-b771-121e2b322a4d",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 44.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Is farmer taking silt from other source\").is.yes;\n  return statusBuilder.build();\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Additional amount paid apart from carting cost",
+      "uuid" : "8f3fc726-7a48-413e-8167-30dfd99584d3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Additional amount paid apart from carting cost",
+        "uuid" : "4e352093-e754-4bb0-9653-b2e69a95fe04",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 45.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Is farmer taking silt from other source\").is.yes;\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Other observation 1",
+      "uuid" : "f393e441-6b5a-4253-b70d-b8b29fc8f9ba",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other observation 1",
+        "uuid" : "55d4842e-d7ae-4cfb-bca5-37b177917047",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 46.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Other observation 2",
+      "uuid" : "31bd6f2b-6218-43ac-99e1-abf65fbdb9da",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other observation 2",
+        "uuid" : "b30712b3-8ab1-476a-b36c-250c4aca12bb",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 47.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Observations"
+  }, {
+    "uuid" : "f46cd8f1-ee1b-469e-b09c-60ef7dab4fd1",
+    "name" : "Closing comments by Auditor",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Challenges faced during the interview",
+      "uuid" : "da10553d-3cb3-4cb4-97e6-71dd3d02894c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Challenges faced during the interview",
+        "uuid" : "4bcbb98d-4689-46a8-99c2-97790f130287",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Location of the interaction with the farmer",
+      "uuid" : "2f3b600a-1e93-4f60-b263-8df3cbd22c28",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Location of the interaction with the farmer",
+        "uuid" : "7e47d561-191a-40b2-87d3-694d73f9ca25",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Home of farmer",
+          "uuid" : "50d2a947-48e3-432e-a708-a301dc78c4d5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "0a09f401-14e4-41bb-a1a6-c25dbc5e0733",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Common place in village",
+          "uuid" : "d7fc9d24-4228-492a-9555-5891c0699b71",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Farmland of farmer",
+          "uuid" : "aa3141fa-77c2-4761-af25-e259c7f9be94",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Desilting site",
+          "uuid" : "3879c66e-d5c3-469c-9f98-bbfa20732f47",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Other location of interaction with farmer",
+      "uuid" : "a71311dd-2495-4020-8dd3-d91d9091730a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other location of interaction with farmer",
+        "uuid" : "040146c0-303f-45c1-a801-82ce73cef893",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Location of the interaction with the farmer\").containsAnswerConceptName('Other');\n  return statusBuilder.build();\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Location of the interaction with the farmer",
+      "uuid" : "d08d9838-0576-4278-ba1f-5e4c0647eaba",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Location of the interaction with the farmer (voided~83772)",
+        "uuid" : "339204d5-d5d0-4375-b82b-a45df7f4c0ea",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ],
+        "voided" : true
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Upload Image - Farmland",
+      "uuid" : "b5f2292d-3090-4fd5-b142-80748c4418f7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Image - Farmland",
+        "uuid" : "fa171bc5-81b9-4842-8014-b3449f069889",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Upload Video - Farmland",
+      "uuid" : "993e2737-d2d0-4ab6-829d-40d316e4cff1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Video - Farmland",
+        "uuid" : "a21a4572-aa12-4da3-8098-b26b61db5eff",
+        "dataType" : "Video",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Upload Image - Village",
+      "uuid" : "f5898e7b-a421-49ad-aaf4-1da906340b9d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Image - Village",
+        "uuid" : "497dafd9-7207-42c1-b800-0f7f9d4eba9b",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Upload Video - Village",
+      "uuid" : "1c6badb8-1558-4cd7-a562-440867e919a9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Upload Video - Village",
+        "uuid" : "bb392a5f-c13a-4a61-b9cd-1e4b96a9cea4",
+        "dataType" : "Video",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Deviations found",
+      "uuid" : "d110c895-9114-46a9-b715-8797d422fc77",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Deviations found",
+        "uuid" : "acc116df-89b7-4052-ac0c-9f7716e7687b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Silt carted by farmer as per data",
+      "uuid" : "eda8f4e4-aa3a-4c9d-9a75-18cd95ea7e8a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Silt carted by farmer as per data",
+        "uuid" : "788eb5c1-5350-47d4-99f0-767fcdad972a",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Deviations found\").is.yes;\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Silt carted by farmer as per interaction",
+      "uuid" : "616b934c-30c2-4a69-9806-514c2eb691d4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Silt carted by farmer as per interaction",
+        "uuid" : "fe241a65-364c-4a16-99f5-7d6853c6cd19",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Deviations found\").is.yes;\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Comments",
+      "uuid" : "5cacf69d-564f-486a-9e66-ed7dba0d8058",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Comments",
+        "uuid" : "45dd32cc-16a0-4ae3-ada2-1cbd887b6bec",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Deviations found\").is.yes;\n  return statusBuilder.build();\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Other observations",
+      "uuid" : "3ccef0da-47d2-412d-ae7a-72731a146455",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other observations",
+        "uuid" : "3bb27d2f-7401-470d-8825-330ce7feac05",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Closing comments by Auditor"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

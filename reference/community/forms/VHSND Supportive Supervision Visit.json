@@ -1,0 +1,3194 @@
+{
+  "name" : "VHSND Supportive Supervision Visit",
+  "uuid" : "413056ad-0810-4093-8e36-8b4571c3c26c",
+  "formType" : "Encounter",
+  "formElementGroups" : [ {
+    "uuid" : "40105a21-6f7a-4f28-b1f4-9fbedcddcf2d",
+    "name" : "VHSND Place",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "VHSND Status",
+      "uuid" : "11b9993e-4189-421f-82c1-1353ade57272",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "VHSND Status",
+        "uuid" : "724bc1b1-333a-4542-8c8a-c2a1c708cefc",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Functional",
+          "uuid" : "b4252308-967f-4ecc-ae1f-62ab7397fff4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Non-Functional",
+          "uuid" : "a50c3905-f21c-4a67-9c70-7fa92e883ace",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Session not conducted",
+          "uuid" : "9f3fafc4-e31e-4907-93d5-00b0626dc6a4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "On Hold",
+          "uuid" : "956bb006-cbdc-489e-968c-6cf86cbc99cb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "documentation" : {
+        "label" : "VHSND status description",
+        "value" : "10885b67-96a5-4896-8cd6-8953490a419d"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "VHSND - Reason for non-functional / not conducted this month",
+      "uuid" : "13e7aebb-8dc3-4167-8c23-90de0a51d15e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "VHSND - Reason for non-functional / not conducted",
+        "uuid" : "4493a41b-bf37-433c-a68c-36e853727ba8",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "ANM Posted but not available for the session",
+          "uuid" : "4ab28e2b-4995-4f47-97b0-b2a9297ae9ff",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Govt team conducted Immunisation only",
+          "uuid" : "2a6c1165-1288-4da0-bfbc-b1552078519e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other reason",
+          "uuid" : "0f2e0d61-be16-467b-b7f1-3032479bfa76",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "ANM Not posted",
+          "uuid" : "a7e47b3e-e807-4fd0-a9d2-0e3f878db2b4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Community didn't allowed the session",
+          "uuid" : "19ec55de-fc95-47c6-8cdf-c2d0d6898404",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"724bc1b1-333a-4542-8c8a-c2a1c708cefc\").containsAnswerConceptName(\"a50c3905-f21c-4a67-9c70-7fa92e883ace\").or.when.valueInEncounter(\"724bc1b1-333a-4542-8c8a-c2a1c708cefc\").containsAnswerConceptName(\"956bb006-cbdc-489e-968c-6cf86cbc99cb\").or.when.valueInEncounter(\"724bc1b1-333a-4542-8c8a-c2a1c708cefc\").containsAnswerConceptName(\"9f3fafc4-e31e-4907-93d5-00b0626dc6a4\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "VHSND Status",
+                "conceptUuid" : "724bc1b1-333a-4542-8c8a-c2a1c708cefc",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Non-Functional" ],
+                "answerConceptUuids" : [ "a50c3905-f21c-4a67-9c70-7fa92e883ace" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            }, {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "VHSND Status",
+                "conceptUuid" : "724bc1b1-333a-4542-8c8a-c2a1c708cefc",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "On Hold" ],
+                "answerConceptUuids" : [ "956bb006-cbdc-489e-968c-6cf86cbc99cb" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            }, {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "VHSND Status",
+                "conceptUuid" : "724bc1b1-333a-4542-8c8a-c2a1c708cefc",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Session not conducted" ],
+                "answerConceptUuids" : [ "9f3fafc4-e31e-4907-93d5-00b0626dc6a4" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "or"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Other reason for non-functionality / not conducted of VHSND",
+      "uuid" : "2a72cec6-bc7a-4b13-8c62-4b2b5a8ca815",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other reason for non functionality of VHSND",
+        "uuid" : "2cfdceb9-3c97-4f44-9ece-72246fd1ff0f",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"4493a41b-bf37-433c-a68c-36e853727ba8\").containsAnswerConceptName(\"0f2e0d61-be16-467b-b7f1-3032479bfa76\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "VHSND - Reason for non-functional / not conducted",
+                "conceptUuid" : "4493a41b-bf37-433c-a68c-36e853727ba8",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other reason" ],
+                "answerConceptUuids" : [ "0f2e0d61-be16-467b-b7f1-3032479bfa76" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "VHSND / Immunisation Date",
+      "uuid" : "0fb48ff4-f9a6-4e1d-ad51-c9bfa60bd680",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "VHSND / Immunisation Date",
+        "uuid" : "b3891d21-307b-4f70-9454-a7e4c27aa6dd",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"724bc1b1-333a-4542-8c8a-c2a1c708cefc\").containsAnswerConceptName(\"b4252308-967f-4ecc-ae1f-62ab7397fff4\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "VHSND Status",
+                "conceptUuid" : "724bc1b1-333a-4542-8c8a-c2a1c708cefc",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Functional" ],
+                "answerConceptUuids" : [ "b4252308-967f-4ecc-ae1f-62ab7397fff4" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "or"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "VHSND Session Organised as per plan?",
+      "uuid" : "60eec983-9188-42a8-8aa7-091537cfd60b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "VHSND Session Organised as per plan?",
+        "uuid" : "7e66f004-05fa-4e6b-92a4-2a0f7661d9a9",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No - ANM was not available on scheduled date",
+          "uuid" : "2f840f4e-d63b-441c-802c-9f3d584190ad",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No - Other reason",
+          "uuid" : "b74c6edc-6782-4e7b-a109-8f13f86e33a2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No - Due to vaccine un-availability",
+          "uuid" : "b1e0aa5a-d9fb-4748-997d-40e62c6f9821",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No - Due to public holiday / festival",
+          "uuid" : "917a0125-3345-41cd-a7a6-b3baf97bb036",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"724bc1b1-333a-4542-8c8a-c2a1c708cefc\").containsAnswerConceptName(\"b4252308-967f-4ecc-ae1f-62ab7397fff4\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "VHSND Status",
+                "conceptUuid" : "724bc1b1-333a-4542-8c8a-c2a1c708cefc",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Functional" ],
+                "answerConceptUuids" : [ "b4252308-967f-4ecc-ae1f-62ab7397fff4" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "VHSND Session Organised as per plan?",
+      "uuid" : "7a9e4c01-a57b-4237-9606-df9784d2d6c7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "VHSND Session Organised as per plan?",
+        "uuid" : "7e66f004-05fa-4e6b-92a4-2a0f7661d9a9",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No - ANM was not available on scheduled date",
+          "uuid" : "2f840f4e-d63b-441c-802c-9f3d584190ad",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No - Other reason",
+          "uuid" : "b74c6edc-6782-4e7b-a109-8f13f86e33a2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No - Due to vaccine un-availability",
+          "uuid" : "b1e0aa5a-d9fb-4748-997d-40e62c6f9821",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No - Due to public holiday / festival",
+          "uuid" : "917a0125-3345-41cd-a7a6-b3baf97bb036",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"724bc1b1-333a-4542-8c8a-c2a1c708cefc\").containsAnswerConceptName(\"b4252308-967f-4ecc-ae1f-62ab7397fff4\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "VHND Status",
+                "conceptUuid" : "724bc1b1-333a-4542-8c8a-c2a1c708cefc",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Functional" ],
+                "answerConceptUuids" : [ "b4252308-967f-4ecc-ae1f-62ab7397fff4" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "VHSND Place was available?",
+      "uuid" : "c2fb494a-d7b9-4012-97b1-7fb5e1acf289",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "VHSND Place was available?",
+        "uuid" : "a91149c3-9e82-4fb6-81bc-97b4b8f36d71",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"724bc1b1-333a-4542-8c8a-c2a1c708cefc\").containsAnswerConceptName(\"b4252308-967f-4ecc-ae1f-62ab7397fff4\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "VHSND Status",
+                "conceptUuid" : "724bc1b1-333a-4542-8c8a-c2a1c708cefc",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Functional" ],
+                "answerConceptUuids" : [ "b4252308-967f-4ecc-ae1f-62ab7397fff4" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Was the VHSND place good",
+      "uuid" : "25ffe749-f42b-41ae-8a79-8d2ab3725b46",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Was the VHSND place good",
+        "uuid" : "4bfdb80e-9c03-4d81-8b69-d6550d86d201",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"724bc1b1-333a-4542-8c8a-c2a1c708cefc\").containsAnswerConceptName(\"b4252308-967f-4ecc-ae1f-62ab7397fff4\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "VHSND Status",
+                "conceptUuid" : "724bc1b1-333a-4542-8c8a-c2a1c708cefc",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Functional" ],
+                "answerConceptUuids" : [ "b4252308-967f-4ecc-ae1f-62ab7397fff4" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Toilet facility available at VHSND session site?",
+      "uuid" : "b58da71c-2d85-4307-8491-f5eeebd05bcf",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Toilet facility available at VHSND session site?",
+        "uuid" : "2be6f7bc-d63a-4808-8357-3bd61cc8029f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes but not functional",
+          "uuid" : "ee32f99c-78e8-4a85-b4d0-74593949abb1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"724bc1b1-333a-4542-8c8a-c2a1c708cefc\").containsAnswerConceptName(\"b4252308-967f-4ecc-ae1f-62ab7397fff4\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "VHSND Status",
+                "conceptUuid" : "724bc1b1-333a-4542-8c8a-c2a1c708cefc",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Functional" ],
+                "answerConceptUuids" : [ "b4252308-967f-4ecc-ae1f-62ab7397fff4" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "water facility available near to the VHSND Center?",
+      "uuid" : "30e47c84-5ae6-48b5-aca2-f4eac82007af",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "water facility near to the VHSND Center?",
+        "uuid" : "30e0aa13-58b8-4b1b-bfda-88f3dfb78e4e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"724bc1b1-333a-4542-8c8a-c2a1c708cefc\").containsAnswerConceptName(\"b4252308-967f-4ecc-ae1f-62ab7397fff4\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "VHSND Status",
+                "conceptUuid" : "724bc1b1-333a-4542-8c8a-c2a1c708cefc",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Functional" ],
+                "answerConceptUuids" : [ "b4252308-967f-4ecc-ae1f-62ab7397fff4" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Which furniture / items not available at session site?",
+      "uuid" : "c4156091-d0e3-468e-9217-ef47077bf01f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "furniture / items not available at session site?",
+        "uuid" : "358734e5-b263-415a-acd5-477099c08670",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Chair",
+          "uuid" : "a316a1fc-c17b-415f-9478-70736241b94b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Curtain stand",
+          "uuid" : "05d4e614-4f35-440d-95b6-bf73e9c72b18",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Bench",
+          "uuid" : "04d25166-028f-425b-9766-8de7f9586214",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Torch",
+          "uuid" : "4bc4104f-dd00-4a52-b5f4-a63160c51326",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Table",
+          "uuid" : "7df56dd6-4ce9-453d-94d8-9f67602643ec",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Dari for meeting",
+          "uuid" : "52fb6523-78a0-46b8-889c-c4d49d58ad32",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "ANC checkup table",
+          "uuid" : "5c8f83a0-df4e-4c88-b1c4-a247dc34b34c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Stool for ANC table",
+          "uuid" : "6f73fbb5-594f-4f90-817d-ed2fcb6aad54",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "All available",
+          "uuid" : "7dd181c5-cab3-4d79-93b2-1c84b60077c2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"724bc1b1-333a-4542-8c8a-c2a1c708cefc\").containsAnswerConceptName(\"b4252308-967f-4ecc-ae1f-62ab7397fff4\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "VHSND Status",
+                "conceptUuid" : "724bc1b1-333a-4542-8c8a-c2a1c708cefc",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Functional" ],
+                "answerConceptUuids" : [ "b4252308-967f-4ecc-ae1f-62ab7397fff4" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    } ],
+    "textColour" : "#000000",
+    "backgroundColour" : "#9793e5",
+    "timed" : false,
+    "display" : "VHSND Place"
+  }, {
+    "uuid" : "f5ff49b5-d126-46f7-b8bb-152beb9c8f84",
+    "name" : "VHSND Participation",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Who were absent from following?",
+      "uuid" : "6eb33752-a573-4894-b62b-33b552578892",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Absency from VHSND session",
+        "uuid" : "543bbce1-8f61-4c27-9213-dd97bbaa631a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Anganwadi Sahayika",
+          "uuid" : "b38ee927-3795-4548-800b-e90feb8f00ea",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "ICDS Supervisor",
+          "uuid" : "7d71b14a-162d-4b49-84e1-61627ae95518",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "ASHA Worker",
+          "uuid" : "6edbf531-2b30-4265-b041-00a04057f617",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "ASHA Sahyogini",
+          "uuid" : "663c67b1-6d6c-4a5e-ad94-d19fa97e0f33",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "MPW",
+          "uuid" : "86365660-be3f-4d90-acdb-6e2b29461b98",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "ANM",
+          "uuid" : "178839cc-e99b-4d41-ad76-efc90df7d584",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHO",
+          "uuid" : "6b40a428-7a02-4d48-ac7b-a484d96a3a53",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "All present",
+          "uuid" : "815dc6e9-fe29-4ab6-932f-c6b28c51ea85",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Health Supervisor",
+          "uuid" : "dc445b40-293b-4af8-b55a-d6940a7af58d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Anganwadi Worker",
+          "uuid" : "0983629b-c9dd-4c74-9cac-abbd41e52fc4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Who were absent from following?",
+      "uuid" : "4b98d496-01fe-4375-9a8c-ceae6e7fe642",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Absency from VHSND session",
+        "uuid" : "543bbce1-8f61-4c27-9213-dd97bbaa631a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Anganwadi Sahayika",
+          "uuid" : "b38ee927-3795-4548-800b-e90feb8f00ea",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "ICDS Supervisor",
+          "uuid" : "7d71b14a-162d-4b49-84e1-61627ae95518",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "ASHA Worker",
+          "uuid" : "6edbf531-2b30-4265-b041-00a04057f617",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "ASHA Sahyogini",
+          "uuid" : "663c67b1-6d6c-4a5e-ad94-d19fa97e0f33",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "MPW",
+          "uuid" : "86365660-be3f-4d90-acdb-6e2b29461b98",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "ANM",
+          "uuid" : "178839cc-e99b-4d41-ad76-efc90df7d584",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHO",
+          "uuid" : "6b40a428-7a02-4d48-ac7b-a484d96a3a53",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "All present",
+          "uuid" : "815dc6e9-fe29-4ab6-932f-c6b28c51ea85",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Health Supervisor",
+          "uuid" : "dc445b40-293b-4af8-b55a-d6940a7af58d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Anganwadi Worker",
+          "uuid" : "0983629b-c9dd-4c74-9cac-abbd41e52fc4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Number of OPDs done in VHSND",
+      "uuid" : "2e0b84d4-10c5-4306-8a68-daa47d628c4e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "OPDs done in VHSND",
+        "uuid" : "c0ddeca1-f458-459f-a669-fb8004de689a",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "lowNormal" : 10.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "How many pregnant women participated",
+      "uuid" : "c22ac556-88de-48de-a0d7-e2734bf12f7c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "PW participated in VHSND",
+        "uuid" : "8ddda634-4b9b-430e-9137-6c21f0f8dbd7",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Is the ASHA worker mobilising pregnant women by visiting houses?",
+      "uuid" : "9247821d-aaca-4c44-8289-09c7cd804485",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "ASHA mobilising PW door to door?",
+        "uuid" : "3249156a-a20f-4172-b9f9-1150a8774c4d",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Which checkup equipment was not available ?",
+      "uuid" : "1065c10d-29be-4ebc-9bd1-3a0a08bb8b85",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Equipment at VHSND session site",
+        "uuid" : "7c9d67de-caec-40e4-a7b3-fc9cc7f5c75b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Adult Weighing machine (Functional)",
+          "uuid" : "178de738-3c65-43eb-b39b-1510c028a9b4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Spring balance infantometer for New Born",
+          "uuid" : "50f7fb87-000d-43b4-8aa3-7286f7b67426",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 23.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "MUAC Tape",
+          "uuid" : "c5bd4462-c5e2-4e7b-bb52-ac06045a4f92",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 19.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Baby Blanket",
+          "uuid" : "2b7566fc-fa4d-45dc-aa8a-6adb950db8a3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cotton",
+          "uuid" : "886fb08f-2f72-4a03-992e-c09c91c2c457",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hb Level color scale",
+          "uuid" : "a5398128-0aa3-4cc2-ac4f-f7bd73155f47",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hub Cutter",
+          "uuid" : "46b69275-9ec2-402a-85a0-ef9cd3a3bac3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Digital watch /stopwatch/ ARI Timer",
+          "uuid" : "b3015ea7-5baf-49d0-bef3-4a177dea40ca",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "MCP Card - ANM (more than two)",
+          "uuid" : "2e44dcb9-728a-4689-89d7-cf1e6a3da4fb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 17.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "MUCP Tape",
+          "uuid" : "1ae39f19-a7e4-46b9-87b9-d2fb703c17fe",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 20.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Glucometer (functional) with strip",
+          "uuid" : "d40f4183-d313-4ceb-9f58-0ff9aade3cfe",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "N/10 HCL - ANM",
+          "uuid" : "a8d0fbfe-cc12-484a-b303-ca935dc32879",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 21.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Distil water - ANM",
+          "uuid" : "9d63e171-b132-47b6-889c-a025f80cf9d6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Malaria RD Kit",
+          "uuid" : "6f956e14-ab92-46b3-9f59-f4fee1510bf2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Infantometer for children < 2 years",
+          "uuid" : "59d9a6e0-6930-440b-a70a-977ec985c843",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "BP Machine (functional)",
+          "uuid" : "f37c5de1-21c5-4d68-acae-1f8e2f666af5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Digital Hb level estimation machine (functional) - ANM",
+          "uuid" : "f14e8b4a-aaae-4581-a944-95008b2c42a9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AD Syringe - ANM",
+          "uuid" : "24942a76-e814-4dcc-bd37-a3f9bd68be12",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Urine Container",
+          "uuid" : "70e7116d-c436-49e5-83c1-5fc22d962ab6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 28.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "UPT Kit",
+          "uuid" : "128dfbc5-5839-4360-9aa1-be0161a08397",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 27.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Stadiometer/Stretcher meter",
+          "uuid" : "d1907edd-f75a-470e-a430-9a9317c67875",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 24.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pulse-oximeter (functional)",
+          "uuid" : "e97aff16-7581-45e9-bf77-9e097194ba03",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 22.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HIV test kit - ANM",
+          "uuid" : "8c40193e-96f7-48de-ba34-45f909993953",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Paldi",
+          "uuid" : "97dd9b00-74a5-413e-ad93-03ecfbe1d76b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 21.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Thermometer (Functional)",
+          "uuid" : "17a4f159-b677-4e40-a89f-1e951088cb6c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 26.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "5 ml Syringe",
+          "uuid" : "0a47f6d9-5028-4928-99ee-f6d0eb03e2b6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 18.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Stethoscope",
+          "uuid" : "6afb9f4c-1d05-456b-a444-7addd6071e48",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 25.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HBNC Warm Bag",
+          "uuid" : "38e356e8-5843-4184-a0f6-bc36f5fc96fb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "All available",
+          "uuid" : "7dd181c5-cab3-4d79-93b2-1c84b60077c2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 29.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Fetoscope (functional) / Fetal doppler",
+          "uuid" : "d5ad224b-1623-4fa2-aea8-593620007363",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "MultiSelect",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const encounter = params.entity;\n    const moment = imports.moment;\n    const formElementGroup = params.formElementGroup;\n    const _ = imports.lodash;\n    let visibility = true;\n    return formElementGroup.formElements.map((formElement) => {\n        \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"724bc1b1-333a-4542-8c8a-c2a1c708cefc\").containsAnswerConceptName(\"b4252308-967f-4ecc-ae1f-62ab7397fff4\").matches();\n  \n        visibility = condition11 ;\n  \n        return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, null);\n    });\n};",
+    "declarativeRule" : [ {
+      "actions" : [ {
+        "actionType" : "showFormElementGroup"
+      }, { } ],
+      "conditions" : [ {
+        "compoundRule" : {
+          "rules" : [ {
+            "lhs" : {
+              "type" : "concept",
+              "scope" : "encounter",
+              "conceptName" : "VHSND Status",
+              "conceptUuid" : "724bc1b1-333a-4542-8c8a-c2a1c708cefc",
+              "conceptDataType" : "Coded"
+            },
+            "rhs" : {
+              "type" : "answerConcept",
+              "answerConceptNames" : [ "Functional" ],
+              "answerConceptUuids" : [ "b4252308-967f-4ecc-ae1f-62ab7397fff4" ]
+            },
+            "operator" : "containsAnswerConceptName"
+          } ]
+        }
+      } ]
+    } ],
+    "timed" : false,
+    "display" : "VHSND Participation"
+  }, {
+    "uuid" : "23b48941-3baf-4821-90a0-68d85ddd1d07",
+    "name" : "Medicines, Vaccination, & Checkups",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Which checkup equipment / item was not available ?",
+      "uuid" : "50583f59-8866-44b1-93a9-c0a1e5364554",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Equipment at VHSND session site",
+        "uuid" : "7c9d67de-caec-40e4-a7b3-fc9cc7f5c75b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Adult Weighing machine (Functional)",
+          "uuid" : "178de738-3c65-43eb-b39b-1510c028a9b4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Spring balance infantometer for New Born",
+          "uuid" : "50f7fb87-000d-43b4-8aa3-7286f7b67426",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 23.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "MUAC Tape",
+          "uuid" : "c5bd4462-c5e2-4e7b-bb52-ac06045a4f92",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 19.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Baby Blanket",
+          "uuid" : "2b7566fc-fa4d-45dc-aa8a-6adb950db8a3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cotton",
+          "uuid" : "886fb08f-2f72-4a03-992e-c09c91c2c457",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hb Level color scale",
+          "uuid" : "a5398128-0aa3-4cc2-ac4f-f7bd73155f47",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hub Cutter",
+          "uuid" : "46b69275-9ec2-402a-85a0-ef9cd3a3bac3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Digital watch /stopwatch/ ARI Timer",
+          "uuid" : "b3015ea7-5baf-49d0-bef3-4a177dea40ca",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "MCP Card - ANM (more than two)",
+          "uuid" : "2e44dcb9-728a-4689-89d7-cf1e6a3da4fb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 17.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "MUCP Tape",
+          "uuid" : "1ae39f19-a7e4-46b9-87b9-d2fb703c17fe",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 20.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Glucometer (functional) with strip",
+          "uuid" : "d40f4183-d313-4ceb-9f58-0ff9aade3cfe",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "N/10 HCL - ANM",
+          "uuid" : "a8d0fbfe-cc12-484a-b303-ca935dc32879",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 21.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Distil water - ANM",
+          "uuid" : "9d63e171-b132-47b6-889c-a025f80cf9d6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Malaria RD Kit",
+          "uuid" : "6f956e14-ab92-46b3-9f59-f4fee1510bf2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Infantometer for children < 2 years",
+          "uuid" : "59d9a6e0-6930-440b-a70a-977ec985c843",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "BP Machine (functional)",
+          "uuid" : "f37c5de1-21c5-4d68-acae-1f8e2f666af5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Digital Hb level estimation machine (functional) - ANM",
+          "uuid" : "f14e8b4a-aaae-4581-a944-95008b2c42a9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AD Syringe - ANM",
+          "uuid" : "24942a76-e814-4dcc-bd37-a3f9bd68be12",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Urine Container",
+          "uuid" : "70e7116d-c436-49e5-83c1-5fc22d962ab6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 28.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "UPT Kit",
+          "uuid" : "128dfbc5-5839-4360-9aa1-be0161a08397",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 27.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Stadiometer/Stretcher meter",
+          "uuid" : "d1907edd-f75a-470e-a430-9a9317c67875",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 24.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pulse-oximeter (functional)",
+          "uuid" : "e97aff16-7581-45e9-bf77-9e097194ba03",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 22.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HIV test kit - ANM",
+          "uuid" : "8c40193e-96f7-48de-ba34-45f909993953",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Paldi",
+          "uuid" : "97dd9b00-74a5-413e-ad93-03ecfbe1d76b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 21.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Thermometer (Functional)",
+          "uuid" : "17a4f159-b677-4e40-a89f-1e951088cb6c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 26.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "5 ml Syringe",
+          "uuid" : "0a47f6d9-5028-4928-99ee-f6d0eb03e2b6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 18.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Stethoscope",
+          "uuid" : "6afb9f4c-1d05-456b-a444-7addd6071e48",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 25.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HBNC Warm Bag",
+          "uuid" : "38e356e8-5843-4184-a0f6-bc36f5fc96fb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "All available",
+          "uuid" : "7dd181c5-cab3-4d79-93b2-1c84b60077c2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 29.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Fetoscope (functional) / Fetal doppler",
+          "uuid" : "d5ad224b-1623-4fa2-aea8-593620007363",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Which medicines were not available ?",
+      "uuid" : "dcf6ac37-3a4d-483d-b2f6-1a3a357c43bb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Medicine unavailable at VHSND Session",
+        "uuid" : "eb04e14d-1a45-4226-81f4-8bdba1b23513",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Folic Acid (more than 100)",
+          "uuid" : "f97db432-d392-4b6f-bf8b-991f133eeb4e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab cotrimoxazole (More than 30 tablet)",
+          "uuid" : "2839b098-8a10-44ae-b185-160818a7dd06",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab - Iron folic acid (Blue) 100 mg",
+          "uuid" : "a7b20e9f-c543-4ae5-a37d-e084a2c7a736",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Inj - Gentamicin 80mg/2ml (More than 2 vial )",
+          "uuid" : "77e80dd8-8fcb-4a69-84b1-9d4a8966608a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab Albendazole (for chewing) - 400mg",
+          "uuid" : "bb7271ed-553f-4397-b7fb-c259934c0e88",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab - Paracetamol 500mg",
+          "uuid" : "ac9e566d-baab-486b-af7a-fa3bcb1ff00b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab - Iron folic acid (Pink) 45 + 0.4 mg (vipas Junior)",
+          "uuid" : "c334e4da-365f-4d4e-8132-21b831c74f04",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Syrup- Amoxicillin 125mg/5mg (More than 3 bottle)",
+          "uuid" : "ee6da424-b8ed-4888-ab60-1a4fb4c37744",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab - Zinc",
+          "uuid" : "6e3e6ffe-6011-4bdf-88b7-79a0bb643129",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Syp - Iron folic acid bottle (with 1ml dropper / Auto dispenser)",
+          "uuid" : "3e25cfc6-ad11-47ac-a98a-0ac8b242b882",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "All available",
+          "uuid" : "7dd181c5-cab3-4d79-93b2-1c84b60077c2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ttab - Calcium 500 mg",
+          "uuid" : "16321955-0560-46b3-8283-8acb1e2696ac",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab - Iron folic acid (Red) 100 mg",
+          "uuid" : "e8294d22-ffa9-4789-85e3-6eb66b2d7dd2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "ORS Packet (More than 10)",
+          "uuid" : "a6a4f2cd-5440-4ffc-ae28-ea6702412c3a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Vitamin-A bottle with measuring spoon",
+          "uuid" : "2ee52828-f93d-4565-b5a7-3d68daf07460",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Quantity of Tab - Iron folic acid (Red) 100 mg",
+      "uuid" : "9c27ff0a-bde7-4dff-a96e-a7c1a4bbe4ae",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity of Tab - Iron folic acid (Red) 100 mg",
+        "uuid" : "3b7cd52e-faa3-4e0d-bb80-e60a00619345",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 599.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Quantity of Tab - calcium Carbonate - with vitamin D3 500 mg",
+      "uuid" : "61187348-6d7f-4cb0-8dad-c7afd4cdcc5d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity of Tab - calcium Carbonate - with vitamin D3 500 mg",
+        "uuid" : "9ccce57b-ef2c-40fa-9c7f-190d0561ad64",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 900.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Quantity of tab Albendazol (for chweing) - 400mg",
+      "uuid" : "f32fca8f-6fc3-4bcb-8ac9-9730d0fe50b7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity of tab Albendazole (for chewing) - 400mg",
+        "uuid" : "fad67759-fa86-42f1-8b10-f9c0c84f8613",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 19.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Quantity 75gram glucose pouch",
+      "uuid" : "853fa80e-6dc7-47cb-bd71-30c8684fd176",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity 75gram glucose pouch",
+        "uuid" : "465abf72-4ce1-4f86-b01e-5f3f43e42fea",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowNormal" : 9.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Which medicines were not available ?",
+      "uuid" : "cf82be6d-1f6e-4d18-89e6-efc5c3ffc32a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Medicine unavailable at VHSND Session",
+        "uuid" : "eb04e14d-1a45-4226-81f4-8bdba1b23513",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Folic Acid (more than 100)",
+          "uuid" : "f97db432-d392-4b6f-bf8b-991f133eeb4e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab cotrimoxazole (More than 30 tablet)",
+          "uuid" : "2839b098-8a10-44ae-b185-160818a7dd06",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab - Iron folic acid (Blue) 100 mg",
+          "uuid" : "a7b20e9f-c543-4ae5-a37d-e084a2c7a736",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Inj - Gentamicin 80mg/2ml (More than 2 vial )",
+          "uuid" : "77e80dd8-8fcb-4a69-84b1-9d4a8966608a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab Albendazole (for chewing) - 400mg",
+          "uuid" : "bb7271ed-553f-4397-b7fb-c259934c0e88",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab - Paracetamol 500mg",
+          "uuid" : "ac9e566d-baab-486b-af7a-fa3bcb1ff00b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab - Iron folic acid (Pink) 45 + 0.4 mg (vipas Junior)",
+          "uuid" : "c334e4da-365f-4d4e-8132-21b831c74f04",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Syrup- Amoxicillin 125mg/5mg (More than 3 bottle)",
+          "uuid" : "ee6da424-b8ed-4888-ab60-1a4fb4c37744",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab - Zinc",
+          "uuid" : "6e3e6ffe-6011-4bdf-88b7-79a0bb643129",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Syp - Iron folic acid bottle (with 1ml dropper / Auto dispenser)",
+          "uuid" : "3e25cfc6-ad11-47ac-a98a-0ac8b242b882",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "All available",
+          "uuid" : "7dd181c5-cab3-4d79-93b2-1c84b60077c2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ttab - Calcium 500 mg",
+          "uuid" : "16321955-0560-46b3-8283-8acb1e2696ac",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tab - Iron folic acid (Red) 100 mg",
+          "uuid" : "e8294d22-ffa9-4789-85e3-6eb66b2d7dd2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "ORS Packet (More than 10)",
+          "uuid" : "a6a4f2cd-5440-4ffc-ae28-ea6702412c3a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Vitamin-A bottle with measuring spoon",
+          "uuid" : "2ee52828-f93d-4565-b5a7-3d68daf07460",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Did the vaccines reached on time?",
+      "uuid" : "b37990cf-2ade-42ac-b8cd-fdefe1f0eb98",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Vaccines reached on time?",
+        "uuid" : "1fc768fb-5ce4-4d9f-9a17-2033e7573c3c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Which Vaccine was not available?",
+      "uuid" : "0426f86f-7ebc-4fa7-b5f8-45777dbe23a5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Which Vaccine was not available at VHSND session",
+        "uuid" : "5bc45588-4a67-4593-8b0e-fc883f6139c3",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Vaccine diluent",
+          "uuid" : "bc09a6c3-2622-4826-9cb1-92f5e99887e5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pentavalent",
+          "uuid" : "d2d16d86-e19a-42d4-bbe3-b9acde103c08",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "DPT",
+          "uuid" : "95f4d2c8-12a3-4198-aff1-d2c772436306",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Misels Rubella Vaccine",
+          "uuid" : "a9986f82-b25f-44fc-92ec-54411fb7b755",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "BCG Vaccine",
+          "uuid" : "768e95ca-a4c8-49a3-9f08-472bb949a368",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "IPB FIPV Vaccine",
+          "uuid" : "1303e696-fb3e-4b47-a679-9f996dee5bc5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "All available",
+          "uuid" : "7dd181c5-cab3-4d79-93b2-1c84b60077c2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "BOPV N9",
+          "uuid" : "a3f46d43-59d0-43d2-81e1-40fb7e1a9317",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PCV vaccine",
+          "uuid" : "661b238f-b43a-4fb9-a0ba-83afe4abde5b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Which checkup of ANCs not done properly ?",
+      "uuid" : "28c6091b-93b1-4e5d-ab63-8ab9f0e08f5d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Non-functionality of ANC Checkups",
+        "uuid" : "f422550e-1fb9-499f-b705-d00a3ec2594c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Spo2 (oxygen level)",
+          "uuid" : "cc34bbe8-dd06-4c34-97fa-9b116cd163c1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Temperature",
+          "uuid" : "e6edb61c-c3d9-44c8-abf7-4fd09fe39ec9",
+          "dataType" : "Numeric",
+          "answers" : [ ],
+          "order" : 12.0,
+          "lowNormal" : 97.0,
+          "highNormal" : 99.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Vaccination of Pregnant women (TD)",
+          "uuid" : "d8c82d0b-ca6b-4b55-b7cb-e61419150baa",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Respiratory rate in children",
+          "uuid" : "264b6c4b-c9f8-4fbc-b4a7-ae0efc7b4536",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hb Level using Colour Scale",
+          "uuid" : "0f25f891-118e-416a-bfd8-a664cdb21805",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "MUAC",
+          "uuid" : "75d4529f-2d3d-4f73-866a-e19df0b0b793",
+          "dataType" : "Numeric",
+          "answers" : [ ],
+          "order" : 8.0,
+          "lowNormal" : 23.0,
+          "highNormal" : 33.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Oral Glucose Tolerance Test (OGTT)",
+          "uuid" : "66bc2693-73bf-4214-a380-4eeca345b499",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Height measurement",
+          "uuid" : "42adfb0c-6abb-46f1-8019-de5515409cea",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hb Level test using digital Hb Meter",
+          "uuid" : "5e2fec2a-1366-4ce1-9f93-2b5f93484960",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "High Risk PW identification & referral",
+          "uuid" : "431ace21-dc5b-402f-aa12-a8dc5a6c02c8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Urine albumin Sugar test",
+          "uuid" : "ca7c7d85-7f50-4ed1-b6ff-03b8ef78dae8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "All tests done properly",
+          "uuid" : "67b00456-95d6-487b-a975-6605cf06e4ef",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 17.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Weight measurement",
+          "uuid" : "28b81b60-65b0-44f2-b5de-47a2d23d6cd0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Basic metabolic index (BMI) PW",
+          "uuid" : "caf36639-e0de-4c44-9c24-9c5009a08884",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "BP measurement",
+          "uuid" : "83ae7041-1187-404f-bfbd-6b0f68cc891a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Abdominal Pulpatation",
+          "uuid" : "868d37a8-9aca-4d3d-adea-cf37ed871c5c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Urine test using Rystic",
+          "uuid" : "42c6743e-c714-45dc-994c-6338adeb3a74",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Which Vaccine was not available?",
+      "uuid" : "e6fa510e-a3c3-4395-87ee-287577af86cc",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Which Vaccine was not available at VHSND session",
+        "uuid" : "5bc45588-4a67-4593-8b0e-fc883f6139c3",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Vaccine diluent",
+          "uuid" : "bc09a6c3-2622-4826-9cb1-92f5e99887e5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pentavalent",
+          "uuid" : "d2d16d86-e19a-42d4-bbe3-b9acde103c08",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "DPT",
+          "uuid" : "95f4d2c8-12a3-4198-aff1-d2c772436306",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Misels Rubella Vaccine",
+          "uuid" : "a9986f82-b25f-44fc-92ec-54411fb7b755",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "BCG Vaccine",
+          "uuid" : "768e95ca-a4c8-49a3-9f08-472bb949a368",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "IPB FIPV Vaccine",
+          "uuid" : "1303e696-fb3e-4b47-a679-9f996dee5bc5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "All available",
+          "uuid" : "7dd181c5-cab3-4d79-93b2-1c84b60077c2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "BOPV N9",
+          "uuid" : "a3f46d43-59d0-43d2-81e1-40fb7e1a9317",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PCV vaccine",
+          "uuid" : "661b238f-b43a-4fb9-a0ba-83afe4abde5b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Which checkup of ANCs not done properly ?",
+      "uuid" : "f9d91bc0-d61b-4697-8b28-ad0bee2e45da",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Non-functionality of ANC Checkups",
+        "uuid" : "f422550e-1fb9-499f-b705-d00a3ec2594c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Spo2 (oxygen level)",
+          "uuid" : "cc34bbe8-dd06-4c34-97fa-9b116cd163c1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Temperature",
+          "uuid" : "e6edb61c-c3d9-44c8-abf7-4fd09fe39ec9",
+          "dataType" : "Numeric",
+          "answers" : [ ],
+          "order" : 12.0,
+          "lowNormal" : 97.0,
+          "highNormal" : 99.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Vaccination of Pregnant women (TD)",
+          "uuid" : "d8c82d0b-ca6b-4b55-b7cb-e61419150baa",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Respiratory rate in children",
+          "uuid" : "264b6c4b-c9f8-4fbc-b4a7-ae0efc7b4536",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hb Level using Colour Scale",
+          "uuid" : "0f25f891-118e-416a-bfd8-a664cdb21805",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "MUAC",
+          "uuid" : "75d4529f-2d3d-4f73-866a-e19df0b0b793",
+          "dataType" : "Numeric",
+          "answers" : [ ],
+          "order" : 8.0,
+          "lowNormal" : 23.0,
+          "highNormal" : 33.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Oral Glucose Tolerance Test (OGTT)",
+          "uuid" : "66bc2693-73bf-4214-a380-4eeca345b499",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Height measurement",
+          "uuid" : "42adfb0c-6abb-46f1-8019-de5515409cea",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hb Level test using digital Hb Meter",
+          "uuid" : "5e2fec2a-1366-4ce1-9f93-2b5f93484960",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "High Risk PW identification & referral",
+          "uuid" : "431ace21-dc5b-402f-aa12-a8dc5a6c02c8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Urine albumin Sugar test",
+          "uuid" : "ca7c7d85-7f50-4ed1-b6ff-03b8ef78dae8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "All tests done properly",
+          "uuid" : "67b00456-95d6-487b-a975-6605cf06e4ef",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 17.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Weight measurement",
+          "uuid" : "28b81b60-65b0-44f2-b5de-47a2d23d6cd0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Basic metabolic index (BMI) PW",
+          "uuid" : "caf36639-e0de-4c44-9c24-9c5009a08884",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "BP measurement",
+          "uuid" : "83ae7041-1187-404f-bfbd-6b0f68cc891a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Abdominal Pulpatation",
+          "uuid" : "868d37a8-9aca-4d3d-adea-cf37ed871c5c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Urine test using Rystic",
+          "uuid" : "42c6743e-c714-45dc-994c-6338adeb3a74",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const encounter = params.entity;\n    const moment = imports.moment;\n    const formElementGroup = params.formElementGroup;\n    const _ = imports.lodash;\n    let visibility = true;\n    return formElementGroup.formElements.map((formElement) => {\n        \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"724bc1b1-333a-4542-8c8a-c2a1c708cefc\").containsAnswerConceptName(\"b4252308-967f-4ecc-ae1f-62ab7397fff4\").matches();\n  \n        visibility = condition11 ;\n  \n        return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, null);\n    });\n};",
+    "declarativeRule" : [ {
+      "actions" : [ {
+        "actionType" : "showFormElementGroup"
+      }, { } ],
+      "conditions" : [ {
+        "compoundRule" : {
+          "rules" : [ {
+            "lhs" : {
+              "type" : "concept",
+              "scope" : "encounter",
+              "conceptName" : "VHSND Status",
+              "conceptUuid" : "724bc1b1-333a-4542-8c8a-c2a1c708cefc",
+              "conceptDataType" : "Coded"
+            },
+            "rhs" : {
+              "type" : "answerConcept",
+              "answerConceptNames" : [ "Functional" ],
+              "answerConceptUuids" : [ "b4252308-967f-4ecc-ae1f-62ab7397fff4" ]
+            },
+            "operator" : "containsAnswerConceptName"
+          } ]
+        }
+      } ]
+    } ],
+    "timed" : false,
+    "display" : "Medicines, Vaccination, & Checkups"
+  }, {
+    "uuid" : "a9394303-cb40-4b84-8d46-d64a28a7fdbb",
+    "name" : "Documentation, and material availability",
+    "displayOrder" : 4.0,
+    "formElements" : [ {
+      "name" : "Which IEC Material was not available ?",
+      "uuid" : "b2dea3a4-81fb-4946-9723-e62d26800b8a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Unavailability of IEC Materials",
+        "uuid" : "598de4c3-afdc-416a-bf2f-2cdaa520170f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Hand wash process poster",
+          "uuid" : "17d305f8-b440-489a-8bca-925b1f0c05fb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pneumonia management poster / banner",
+          "uuid" : "573f85a4-395b-4204-b87b-3e3847791931",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Breastfeeding related IEC material shown there?",
+          "uuid" : "a6d48203-acac-4bd4-826c-e008e5cdb2bf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Diarrhoea management by ORS and Zinc",
+          "uuid" : "37646a42-8a3a-45e5-8501-fa1d46fea924",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Complementary foods",
+          "uuid" : "4f28bb04-6654-4094-b15f-6106908c53bc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pamphlet",
+          "uuid" : "d96ee003-c341-4f1c-aff1-37971aaee9f7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Wall painting",
+          "uuid" : "9833eb11-56d8-4f0d-9ab9-3dd34934a5fb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "All available",
+          "uuid" : "7dd181c5-cab3-4d79-93b2-1c84b60077c2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Poster",
+          "uuid" : "1dc0f666-b5f3-470b-907b-f0c5d2c1cb9a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other Banner / Posters",
+          "uuid" : "c6c6a27b-be7f-4382-9eea-6346df165692",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Audio system",
+          "uuid" : "253d932e-a499-432c-9acf-07df6e7a9fea",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mic",
+          "uuid" : "135e3dbc-52e3-4791-85c0-73137da47421",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "ANC / HRPW Counselling flip book",
+          "uuid" : "42640e60-38d0-4b3b-865a-1c2796a832a2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "ASHA doesn't have which of the following list?",
+      "uuid" : "4aa77e44-3ba1-409a-9ddf-4224620b1dbd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "ASHA doesn't have which of the following Updated list?",
+        "uuid" : "8f3eb156-36a8-4814-8c51-afa69d650fdd",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "High Risk Pregnant Women",
+          "uuid" : "d51aa606-09dd-4632-a071-fc489cc1085f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Have all lists",
+          "uuid" : "8570491e-23ac-4f04-b148-3b9930802841",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pregnant women",
+          "uuid" : "b86a3c8e-1a51-41dd-a53d-8769302addac",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Children",
+          "uuid" : "934bc1b8-64b5-4be6-b42d-760fe33630c7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Eligible couples",
+          "uuid" : "f29717be-2a2c-4b72-bb72-a2ebe466669b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Vaccination due list",
+          "uuid" : "25d73af3-4140-47d6-9669-04820064c8ec",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "ANM doesn't have which of the following list?",
+      "uuid" : "77b39223-8591-4712-a53c-e4f21ea0a334",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "ANM doesn't have which of the following list?",
+        "uuid" : "357427ee-183e-431a-924b-8be5100c7757",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Have all lists",
+          "uuid" : "8570491e-23ac-4f04-b148-3b9930802841",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pregnant women",
+          "uuid" : "b86a3c8e-1a51-41dd-a53d-8769302addac",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "High risk PW",
+          "uuid" : "f3af3bd1-9742-4330-a39f-afea72d68038",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Children",
+          "uuid" : "934bc1b8-64b5-4be6-b42d-760fe33630c7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Eligible couples",
+          "uuid" : "f29717be-2a2c-4b72-bb72-a2ebe466669b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "AWW doesn't have which of the following list?",
+      "uuid" : "1874d4cc-2ddf-438f-ba1c-1eab616d266a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "AWW doesn't have which of the following list?",
+        "uuid" : "4b9b1a91-defa-4784-b75c-30254bad8cdb",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Updated list of vaccination (drop out and left out children) at Anganwadi not maintained",
+          "uuid" : "0f316c97-85f5-48b0-8a82-5022048dd826",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "High risk PW",
+          "uuid" : "f3af3bd1-9742-4330-a39f-afea72d68038",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pregnant women",
+          "uuid" : "b86a3c8e-1a51-41dd-a53d-8769302addac",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Have all lists",
+          "uuid" : "8570491e-23ac-4f04-b148-3b9930802841",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Children",
+          "uuid" : "934bc1b8-64b5-4be6-b42d-760fe33630c7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Eligible couples",
+          "uuid" : "f29717be-2a2c-4b72-bb72-a2ebe466669b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "in Session which of the following report and record availability / related work is not being done ?",
+      "uuid" : "baa2e3e7-89e5-4050-a2c4-3f8c3a4a9731",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Report & records work non-functionality at VHSND",
+        "uuid" : "63caebbf-b6a6-444c-9f42-20081949ac0e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "ASHA diary not maintained properly",
+          "uuid" : "294e6f4e-4295-430d-9a37-e037a6ad9ea0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "MCP card available, but entries not done properly",
+          "uuid" : "eea4bd72-735f-410f-bac5-a9deb2c5012b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Due list of beneficiaries of national programs/ schemes",
+          "uuid" : "572d4f84-69b4-4668-a001-36c321009068",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Updated list of vaccination (drop out and left out children) at Anganwadi not maintained",
+          "uuid" : "0f316c97-85f5-48b0-8a82-5022048dd826",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "ASHA, Anganwadi, & ANM doesn't have updated list of Children, Pregnant women, Eligible couples, & High risk PW",
+          "uuid" : "a1a2ab70-64d6-4f90-89f3-ab5602d65c70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "All records available and are maintained properly",
+          "uuid" : "b3204e88-8b5b-48f1-9ca9-9614410fcfd9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "ANM has pregnant women & vaccination registration but not managed properly",
+          "uuid" : "c678dd61-72b9-4f32-8cbe-ce7435619701",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "At this VHSND which list / card was not available?",
+      "uuid" : "f2d7b2ef-af18-48b6-adcd-bfc50500c987",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Line list / card unavailability at VHSND",
+        "uuid" : "d7865ca0-c511-4c9c-a836-899ba332b95b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "SCD patient diary",
+          "uuid" : "4ec2c955-6b1c-438d-856c-b82dd409ff7e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "All available",
+          "uuid" : "7dd181c5-cab3-4d79-93b2-1c84b60077c2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Beneficiary list",
+          "uuid" : "0c32bd10-2678-4a41-82e2-ab4228a8fd55",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "MCP Card",
+          "uuid" : "b1764abe-8e9c-4e13-ba1f-e7079d66673c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Which of the following services not provided by Anganwadi worker during VHSND",
+      "uuid" : "806f821f-cd95-4f8f-96b9-ff1565dc9d29",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "AWW services not functional at VHSND",
+        "uuid" : "94532faf-9d54-465a-9293-c07f3aef5d44",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Take home ration not given to 6 month - 3 years child",
+          "uuid" : "2788a9ac-e13f-4619-a566-2969571f591b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Take home ration not given to Adolescent girls",
+          "uuid" : "63f1a545-1cd6-44ea-b26c-649b82fdac25",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Take home ration not given to Pregnant women",
+          "uuid" : "c4095bd5-81bf-4747-b30a-8a9bfa703542",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Take home ration not given to breast feeding women",
+          "uuid" : "acb65237-7304-44d9-a14e-21a262ca29a3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Weight measurement of 0 - 6 years children",
+          "uuid" : "6ce9bc0f-b70d-47ac-b25a-3519b7de514e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "All above works being done",
+          "uuid" : "8bde95b9-2eb6-4709-bfe6-7d0021bc3fa0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "All works being done",
+          "uuid" : "49a71b3a-f84a-4562-8e7b-64ca324d4bfa",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "AWW not doing weight measurement properly",
+          "uuid" : "17762c7f-6a79-4608-99ff-1c7e9ac2e017",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Inaccurate entry of weight in the growth chart",
+          "uuid" : "6dc87979-93fa-495f-9d1b-96c522c1d23d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Take home ration given?",
+      "uuid" : "1b5dfe44-c462-443f-834c-e7b9c5def57f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Take home ration given?",
+        "uuid" : "e13705b8-bfa0-4434-9134-7f8c704ca4d6",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Given to 6 month to 3 years child, Pregnant women, Adolescent girls, Breast feeding women",
+          "uuid" : "b28bb09c-a3fb-43ff-af67-4b3af71f3dbe",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not given to 6 month - 3 years child",
+          "uuid" : "5b87acea-2d70-48a3-acb5-6f5e0e4f7f9d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not given to Pregnant women",
+          "uuid" : "998043ca-3f8f-4ab0-933b-7b66ee439af7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not given to breast feeding women",
+          "uuid" : "32794e78-adf6-4680-8b00-0aaef3ea3675",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Take home ration not available",
+          "uuid" : "c0f16599-eaf5-4962-9de1-f99966122db0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not given to Adolescent girls",
+          "uuid" : "d0b3a9ed-f7d2-4212-b2c7-90f009b834cd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Any other details / information ?",
+      "uuid" : "f3d774fc-948e-4f74-a737-9afd456d93c7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other details - VHSND session",
+        "uuid" : "ff65501c-0c4d-41d3-8fe1-1b31749f1f37",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const encounter = params.entity;\n    const moment = imports.moment;\n    const formElementGroup = params.formElementGroup;\n    const _ = imports.lodash;\n    let visibility = true;\n    return formElementGroup.formElements.map((formElement) => {\n        \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"724bc1b1-333a-4542-8c8a-c2a1c708cefc\").containsAnswerConceptName(\"b4252308-967f-4ecc-ae1f-62ab7397fff4\").matches();\n  \n        visibility = condition11 ;\n  \n        return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, null);\n    });\n};",
+    "declarativeRule" : [ {
+      "actions" : [ {
+        "actionType" : "showFormElementGroup"
+      }, { } ],
+      "conditions" : [ {
+        "compoundRule" : {
+          "rules" : [ {
+            "lhs" : {
+              "type" : "concept",
+              "scope" : "encounter",
+              "conceptName" : "VHSND Status",
+              "conceptUuid" : "724bc1b1-333a-4542-8c8a-c2a1c708cefc",
+              "conceptDataType" : "Coded"
+            },
+            "rhs" : {
+              "type" : "answerConcept",
+              "answerConceptNames" : [ "Functional" ],
+              "answerConceptUuids" : [ "b4252308-967f-4ecc-ae1f-62ab7397fff4" ]
+            },
+            "operator" : "containsAnswerConceptName"
+          } ]
+        }
+      } ]
+    } ],
+    "timed" : false,
+    "display" : "Documentation, and material availability"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({ params, imports }) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({encounter});\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter}).when.valueInEncounter(\"b3891d21-307b-4f70-9454-a7e4c27aa6dd\").defined.matches();\n    \n  const condition12 = new imports.rulesConfig.RuleCondition({encounter}).when.valueInEncounter(\"724bc1b1-333a-4542-8c8a-c2a1c708cefc\").containsAnswerConceptName(\"a50c3905-f21c-4a67-9c70-7fa92e883ace\").matches();\n    \n  const condition13 = new imports.rulesConfig.RuleCondition({encounter}).when.valueInEncounter(\"724bc1b1-333a-4542-8c8a-c2a1c708cefc\").containsAnswerConceptName(\"956bb006-cbdc-489e-968c-6cf86cbc99cb\").matches();\n  \n  if(condition11 ){\n    const earliestDate = moment(encounter.getObservationReadableValue('b3891d21-307b-4f70-9454-a7e4c27aa6dd')).add(30, 'days').toDate();\n    const maxDate = moment(encounter.getObservationReadableValue('b3891d21-307b-4f70-9454-a7e4c27aa6dd')).add(37, 'days').toDate();\n    scheduleBuilder.add({name: \"VHND Supportive Supervision - Regular visit\", encounterType: \"VHND Supportive Supervision visit\", earliestDate, maxDate});  \n}\n    if(condition12 ){\n    const earliestDate = moment(encounter.encounterDateTime).add(30, 'days').toDate();\n    const maxDate = moment(encounter.encounterDateTime).add(37, 'days').toDate();\n    scheduleBuilder.add({name: \"VHND Supportive Supervision - initial visit\", encounterType: \"VHND Supportive Supervision visit\", earliestDate, maxDate});  \n}\n    if(condition13 ){\n    const earliestDate = moment(encounter.encounterDateTime).add(30, 'days').toDate();\n    const maxDate = moment(encounter.encounterDateTime).add(37, 'days').toDate();\n    scheduleBuilder.add({name: \"VHND Supportive Supervision revival\", encounterType: \"VHND Supportive Supervision visit\", earliestDate, maxDate});  \n}\n  \n  return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ],
+  "visitScheduleDeclarativeRule" : [ {
+    "actions" : [ {
+      "details" : {
+        "dateField" : "VHSND Date",
+        "dateFieldUuid" : "b3891d21-307b-4f70-9454-a7e4c27aa6dd",
+        "daysToOverdue" : "37",
+        "encounterName" : "VHND Supportive Supervision - Regular visit",
+        "encounterType" : "VHND Supportive Supervision visit",
+        "daysToSchedule" : "30"
+      },
+      "actionType" : "scheduleVisit"
+    }, { } ],
+    "conditions" : [ {
+      "conjunction" : "or",
+      "compoundRule" : {
+        "rules" : [ {
+          "lhs" : {
+            "type" : "concept",
+            "scope" : "encounter",
+            "conceptName" : "VHSND Date",
+            "conceptUuid" : "b3891d21-307b-4f70-9454-a7e4c27aa6dd",
+            "conceptDataType" : "Date"
+          },
+          "rhs" : { },
+          "operator" : "defined"
+        } ],
+        "conjunction" : "and"
+      }
+    } ]
+  }, {
+    "actions" : [ {
+      "details" : {
+        "dateField" : "encounterDateTime",
+        "daysToOverdue" : "37",
+        "encounterName" : "VHND Supportive Supervision - initial visit",
+        "encounterType" : "VHND Supportive Supervision visit",
+        "daysToSchedule" : "30"
+      },
+      "actionType" : "scheduleVisit"
+    } ],
+    "conditions" : [ {
+      "compoundRule" : {
+        "rules" : [ {
+          "lhs" : {
+            "type" : "concept",
+            "scope" : "encounter",
+            "conceptName" : "VHND Status",
+            "conceptUuid" : "724bc1b1-333a-4542-8c8a-c2a1c708cefc",
+            "conceptDataType" : "Coded"
+          },
+          "rhs" : {
+            "type" : "answerConcept",
+            "answerConceptNames" : [ "Non-Functional" ],
+            "answerConceptUuids" : [ "a50c3905-f21c-4a67-9c70-7fa92e883ace" ]
+          },
+          "operator" : "containsAnswerConceptName"
+        } ],
+        "conjunction" : "or"
+      }
+    } ]
+  }, {
+    "actions" : [ {
+      "details" : {
+        "dateField" : "encounterDateTime",
+        "daysToOverdue" : "37",
+        "encounterName" : "VHND Supportive Supervision revival",
+        "encounterType" : "VHND Supportive Supervision visit",
+        "daysToSchedule" : "30"
+      },
+      "actionType" : "scheduleVisit"
+    } ],
+    "conditions" : [ {
+      "compoundRule" : {
+        "rules" : [ {
+          "lhs" : {
+            "type" : "concept",
+            "scope" : "encounter",
+            "conceptName" : "VHND Status",
+            "conceptUuid" : "724bc1b1-333a-4542-8c8a-c2a1c708cefc",
+            "conceptDataType" : "Coded"
+          },
+          "rhs" : {
+            "type" : "answerConcept",
+            "answerConceptNames" : [ "On Hold" ],
+            "answerConceptUuids" : [ "956bb006-cbdc-489e-968c-6cf86cbc99cb" ]
+          },
+          "operator" : "containsAnswerConceptName"
+        } ]
+      }
+    } ]
+  } ]
+}

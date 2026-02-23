@@ -1,0 +1,46 @@
+[ {
+  "uuid" : "8e7122bb-926c-4311-bbb1-c2ae9f4ce9dc",
+  "id" : 3728,
+  "name" : "Everyone",
+  "notEveryoneGroup" : false
+}, {
+  "uuid" : "70b1c131-800f-4122-a277-8a5ef4872896",
+  "id" : 3730,
+  "name" : "District Leads (voided~3168)",
+  "voided" : true
+}, {
+  "uuid" : "5c68d4a9-7981-4ddf-b45f-d2c9186033f9",
+  "id" : 3731,
+  "name" : "Block Lead"
+}, {
+  "uuid" : "eaf2441c-ed4a-408c-b840-b24bdc80871b",
+  "id" : 3732,
+  "name" : "Admin"
+}, {
+  "uuid" : "1c3afcfc-ed5f-42f6-af4a-83eba21ee056",
+  "id" : 3733,
+  "name" : "Community Volunteers"
+}, {
+  "uuid" : "f610a3be-89c2-488a-9ce4-798cb23f7b8d",
+  "id" : 3734,
+  "name" : "Team Lead"
+}, {
+  "uuid" : "3b86f45b-1c49-4419-8386-9c6d39b304c3",
+  "id" : 3735,
+  "name" : "Group Leads (voided~2523)",
+  "voided" : true
+}, {
+  "uuid" : "f7ddc101-f244-4cb2-b351-27c526126a53",
+  "id" : 3736,
+  "name" : "Partner Lead"
+}, {
+  "uuid" : "0da63dfc-f972-4929-9814-dbff0c641526",
+  "id" : 3737,
+  "name" : "PMU (voided~2526)",
+  "voided" : true
+}, {
+  "uuid" : "79a65bcf-7151-4ef9-8c66-affea2fe4a16",
+  "id" : 3738,
+  "name" : "Professionals (voided~3165)",
+  "voided" : true
+} ]

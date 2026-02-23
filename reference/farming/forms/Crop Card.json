@@ -1,0 +1,79 @@
+{
+  "name" : "Crop Card",
+  "uuid" : "a0383bcf-1262-46fc-b6ac-991fc7ea3af5",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "5a87e682-c5ec-4b53-a143-009c6dc1faa9",
+    "name" : "Crop Harvesting",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Is this plot part of Crop Cutting experiment?",
+      "uuid" : "01353943-cd94-45cf-9fd5-c3271fbc45ae",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is this plot part of Crop Cutting experiment?",
+        "uuid" : "8ee8b72d-7692-4d90-b0c0-0e074b1ef46b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "no",
+          "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "yes",
+          "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "What was the total crop yield from 1*1 sq. meter area",
+      "uuid" : "1cf7414f-e57e-4ad1-913d-7baea9f4742c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "What was the total crop yield from 1*1 sq. meter area (Kg.)",
+        "uuid" : "fd71f0f0-5f1d-47da-9bcd-c16c897505f2",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Total crop yield from area under Program Area ?",
+      "uuid" : "6bed8135-280e-44a2-92b7-725e8abaa4f8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total crop yield from area under Program Area ?",
+        "uuid" : "24de4cae-25b3-4ba6-a0e8-b72881675feb",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Crop Harvesting"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

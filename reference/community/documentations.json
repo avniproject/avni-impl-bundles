@@ -1,0 +1,115 @@
+[ {
+  "uuid" : "802174fe-feee-4a72-b453-388f0cb113e4",
+  "name" : "Don't give Sodium valproate to Epileptic women",
+  "documentationItems" : [ {
+    "uuid" : "30462f29-13a9-41de-a80c-1c20552219c7",
+    "content" : "{\"blocks\":[{\"key\":\"6eb88\",\"text\":\"गर्भवती महिलाओं को Sodium Valproate दवाई नहीं दी जानी चाहिए | अगर गलती से दी गयी है तो कृपया उनहे जानकारी दे की ये वाली दवाई नहीं खानी है |\\nअगर किसी को भी नहीं दी है तो संख्या 0 भरें |\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":176,\"length\":1,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+    "contentHtml" : "<p>गर्भवती महिलाओं को Sodium Valproate दवाई नहीं दी जानी चाहिए | अगर गलती से दी गयी है तो कृपया उनहे जानकारी दे की ये वाली दवाई नहीं खानी है |<br>अगर किसी को भी नहीं दी है तो संख्या <strong>0</strong> भरें |</p>\n",
+    "language" : "hi_IN",
+    "documentationUUID" : "802174fe-feee-4a72-b453-388f0cb113e4"
+  }, {
+    "uuid" : "09fc0c05-da54-40de-bf84-b015e70bbf30",
+    "content" : "{\"blocks\":[{\"key\":\"3mmg2\",\"text\":\"गर्भवती महिलाओं को Sodium Valproate दवाई नहीं दी जानी चाहिए | अगर गलती से दी गयी है तो कृपया उनहे जानकारी दे की ये वाली दवाई नहीं खानी है |\\nअगर किसी को भी नहीं दी है तो संख्या 0 भरें | \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":184,\"style\":\"bgcolor-rgb(250,250,250)\"},{\"offset\":0,\"length\":184,\"style\":\"fontsize-18\"},{\"offset\":0,\"length\":184,\"style\":\"fontfamily--apple-system, BlinkMacSystemFont, \\\"Segoe UI\\\", Roboto, \\\"Helvetica Neue\\\", Arial, \\\"Noto Sans\\\", sans-serif, \\\"Apple Color Emoji\\\", \\\"Segoe UI Emoji\\\", \\\"Segoe UI Symbol\\\", \\\"Noto Color Emoji\"},{\"offset\":0,\"length\":61,\"style\":\"color-rgb(226,80,65)\"},{\"offset\":61,\"length\":1,\"style\":\"color-rgb(33,33,33)\"},{\"offset\":139,\"length\":45,\"style\":\"color-rgb(33,33,33)\"},{\"offset\":62,\"length\":77,\"style\":\"color-rgb(65,168,95)\"},{\"offset\":176,\"length\":1,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+    "contentHtml" : "<p><span style=\"color: rgb(226,80,65);background-color: rgb(250,250,250);font-size: 18px;font-family: -apple-system, BlinkMacSystemFont,\" color=\"\">गर्भवती महिलाओं को Sodium Valproate दवाई नहीं दी जानी चाहिए |</span><span style=\"color: rgb(33,33,33);background-color: rgb(250,250,250);font-size: 18px;font-family: -apple-system, BlinkMacSystemFont,\" color=\"\"> </span><span style=\"color: rgb(65,168,95);background-color: rgb(250,250,250);font-size: 18px;font-family: -apple-system, BlinkMacSystemFont,\" color=\"\">अगर गलती से दी गयी है तो कृपया उनहे जानकारी दे की ये वाली दवाई नहीं खानी है |</span><span style=\"color: rgb(33,33,33);background-color: rgb(250,250,250);font-size: 18px;font-family: -apple-system, BlinkMacSystemFont,\" color=\"\"><br>अगर किसी को भी नहीं दी है तो संख्या <strong>0</strong> भरें |</span>&nbsp;</p>\n",
+    "language" : "en",
+    "documentationUUID" : "802174fe-feee-4a72-b453-388f0cb113e4"
+  } ]
+}, {
+  "uuid" : "8301b205-da10-46f8-8e7e-75ba02db845c",
+  "name" : "Mandatory Any other info (text)",
+  "documentationItems" : [ {
+    "uuid" : "70888bff-aad5-4812-8bd8-8804a728c215",
+    "content" : "{\"blocks\":[{\"key\":\"732r9\",\"text\":\"अन्य कोई जानकारी देनी है तो कृपया यहाँ लिखे, अगर कोई जानकारी नहीं है तो \\\"0\\\" लिखे |\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+    "contentHtml" : "<p>अन्य कोई जानकारी देनी है तो कृपया यहाँ लिखे, अगर कोई जानकारी नहीं है तो \"0\" लिखे |</p>\n",
+    "language" : "en",
+    "documentationUUID" : "8301b205-da10-46f8-8e7e-75ba02db845c"
+  }, {
+    "uuid" : "43739d2d-1c77-48d1-a1c9-d92349926a64",
+    "content" : "{\"blocks\":[{\"key\":\"3i26v\",\"text\":\"अन्य कोई जानकारी साझा करना चाहते हो तो कृपया इसमें भरे | अगर कुछ भी नहीं है तो NA टाइप करे |\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":79,\"length\":3,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+    "contentHtml" : "<p>अन्य कोई जानकारी साझा करना चाहते हो तो कृपया इसमें भरे | अगर कुछ भी नहीं है तो <strong>NA </strong>टाइप करे |</p>\n",
+    "language" : "hi_IN",
+    "documentationUUID" : "8301b205-da10-46f8-8e7e-75ba02db845c"
+  } ]
+}, {
+  "uuid" : "014fc7a5-a4d2-40fe-8ec2-4cb69ad19ad2",
+  "name" : "Challenges faced in PSG",
+  "documentationItems" : [ {
+    "uuid" : "9d25cbbc-f3aa-4166-8717-13b0e82118ff",
+    "content" : "{\"blocks\":[{\"key\":\"eqsbj\",\"text\":\"मीटिंग करने में जो भी मुश्किलें आई है कृपया क्रमानुसार लिखें | अगर कोई मुश्किल नहीं आई तो \\\"NA\\\" लिखे |\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+    "contentHtml" : "<p>मीटिंग करने में जो भी मुश्किलें आई है कृपया क्रमानुसार लिखें | अगर कोई मुश्किल नहीं आई तो \"NA\" लिखे |</p>\n",
+    "language" : "en",
+    "documentationUUID" : "014fc7a5-a4d2-40fe-8ec2-4cb69ad19ad2"
+  }, {
+    "uuid" : "d01514f3-8473-4dfb-b8a5-2118a00dac04",
+    "content" : "{\"blocks\":[{\"key\":\"cvbtv\",\"text\":\"मीटिंग करने में जो कठिनाइयाँ आई कृपया वो यहाँ पॉइंट बाय पॉइंट लिखे | अगर कोई कठिनाइयाँ नहीं आई तो \\\"NA\\\" टाइप करें |\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":19,\"length\":10,\"style\":\"color-rgb(33,33,33)\"},{\"offset\":19,\"length\":10,\"style\":\"bgcolor-rgb(250,250,250)\"},{\"offset\":19,\"length\":10,\"style\":\"fontsize-18\"},{\"offset\":19,\"length\":10,\"style\":\"fontfamily--apple-system, BlinkMacSystemFont, \\\"Segoe UI\\\", Roboto, \\\"Helvetica Neue\\\", Arial, \\\"Noto Sans\\\", sans-serif, \\\"Apple Color Emoji\\\", \\\"Segoe UI Emoji\\\", \\\"Segoe UI Symbol\\\", \\\"Noto Color Emoji\"},{\"offset\":99,\"length\":2,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+    "contentHtml" : "<p>मीटिंग करने में जो <span style=\"color: rgb(33,33,33);background-color: rgb(250,250,250);font-size: 18px;font-family: -apple-system, BlinkMacSystemFont,\" color=\"\">कठिनाइयाँ </span>आई कृपया वो यहाँ पॉइंट बाय पॉइंट लिखे | अगर कोई कठिनाइयाँ नहीं आई तो \"<strong>NA</strong>\" टाइप करें |</p>\n",
+    "language" : "hi_IN",
+    "documentationUUID" : "014fc7a5-a4d2-40fe-8ec2-4cb69ad19ad2"
+  } ]
+}, {
+  "uuid" : "de2b14e2-d444-4cfb-be05-5daf1275c938",
+  "name" : "fill 0 if not received / distributed any Medicine",
+  "documentationItems" : [ {
+    "uuid" : "02db373d-0e38-45f9-9975-9ba4c27340b6",
+    "content" : "{\"blocks\":[{\"key\":\"42sf4\",\"text\":\"अगर कोई दवाई ना दी गयी हो तो 0 संख्या भरे |\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+    "contentHtml" : "<p>अगर कोई दवाई ना दी गयी हो तो 0 संख्या भरे |</p>\n",
+    "language" : "en",
+    "documentationUUID" : "de2b14e2-d444-4cfb-be05-5daf1275c938"
+  }, {
+    "uuid" : "6cddcf50-edfc-4f24-8604-6f4184e17828",
+    "content" : "{\"blocks\":[{\"key\":\"cq8q0\",\"text\":\"अगर कोई दवाई नहीं मिली / दी गयी है तो \\\"0\\\" भरे|\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":39,\"length\":1,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+    "contentHtml" : "<p>अगर कोई दवाई नहीं मिली / दी गयी है तो \"<strong>0</strong>\" भरे|</p>\n",
+    "language" : "hi_IN",
+    "documentationUUID" : "de2b14e2-d444-4cfb-be05-5daf1275c938"
+  } ]
+}, {
+  "uuid" : "8b419b73-910d-44b0-b2dc-4247b0a383ef",
+  "name" : "Medicines Received from government",
+  "documentationItems" : [ {
+    "uuid" : "cd9eadc5-4e90-45d3-80a9-81d14c8e98d4",
+    "content" : "{\"blocks\":[{\"key\":\"6ai3t\",\"text\":\"सरकारी विभाग से कोन कोन सी दवाई मिली है कृपया वह चुने| चुनने के बाद हर दवाई के लिए एक सवाल खुलेगा जिसमे जितनी दवाई सरकारी विभाग से मिली है उसकी संख्या भी भरनी होगी |\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a4h6a\",\"text\":\"कृपया जन स्वास्थ्य सहयोग की तरफ से अगर दवाइयाँ लाए हो तो वो यहाँ नहीं भरनी है |\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+    "contentHtml" : "<p>सरकारी विभाग से कोन कोन सी दवाई मिली है कृपया वह चुने| चुनने के बाद हर दवाई के लिए एक सवाल खुलेगा जिसमे जितनी दवाई सरकारी विभाग से मिली है उसकी संख्या भी भरनी होगी |</p>\n<p>कृपया जन स्वास्थ्य सहयोग की तरफ से अगर दवाइयाँ लाए हो तो वो यहाँ नहीं भरनी है |</p>\n",
+    "language" : "en",
+    "documentationUUID" : "8b419b73-910d-44b0-b2dc-4247b0a383ef"
+  } ]
+}, {
+  "uuid" : "59f72c16-9ac0-4fcd-8c83-54c2563cfc8a",
+  "name" : "Name of duty doctor",
+  "documentationItems" : [ {
+    "uuid" : "fc8ba116-78fe-41a3-94b4-abfa76271034",
+    "content" : "{\"blocks\":[{\"key\":\"geiv\",\"text\":\"अगर कोई डॉक्टर ड्यूटी पर नहीं आया तो \\\"No Doctor\\\" भरें |\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":37,\"length\":12,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+    "contentHtml" : "<p>अगर कोई डॉक्टर ड्यूटी पर नहीं आया तो <strong>\"No Doctor\" </strong>भरें |</p>\n",
+    "language" : "en",
+    "documentationUUID" : "59f72c16-9ac0-4fcd-8c83-54c2563cfc8a"
+  } ]
+}, {
+  "uuid" : "10885b67-96a5-4896-8cd6-8953490a419d",
+  "name" : "VHSND status description",
+  "documentationItems" : [ {
+    "uuid" : "f40f2ab5-9633-4b7b-a3e7-9baca7c88eea",
+    "content" : "{\"blocks\":[{\"key\":\"9iu2d\",\"text\":\"Functional : अगर इस माह मे कभी भी VHSND का आयोजन हुआ है तो कृपया यह चुने |\",\"type\":\"ordered-list-item\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":11,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"8glt2\",\"text\":\"Session not Conducted : अगर सिर्फ उस माह मे किसी वजह से vhsnd सेशन नहीं हुआ है तो इसे चुने |\",\"type\":\"ordered-list-item\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":23,\"style\":\"BOLD\"},{\"offset\":27,\"length\":13,\"style\":\"bgcolor-rgb(247,218,100)\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"975hi\",\"text\":\"On Hold : अगर लगातार 2 / 3 माह से सेशन नहीं किया जा रहा है तो यह चुने |\",\"type\":\"ordered-list-item\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":7,\"style\":\"BOLD\"},{\"offset\":14,\"length\":16,\"style\":\"bgcolor-rgb(251,160,38)\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"93n1n\",\"text\":\"Non -Functional : अगर सरकारी anm पोस्टेड नहीं है, या वो कार्य नहीं कर रही है, या किसी भी कारण से 3 माह से ज्यादा VHSND सेशन का आयोजन नहीं हो रहा है तो यह चुने |\",\"type\":\"ordered-list-item\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":17,\"style\":\"BOLD\"},{\"offset\":29,\"length\":19,\"style\":\"bgcolor-rgb(235,107,86)\"},{\"offset\":97,\"length\":50,\"style\":\"bgcolor-rgb(235,107,86)\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+    "contentHtml" : "<ol>\n<li><strong>Functional </strong>: अगर इस माह मे कभी भी VHSND का आयोजन हुआ है तो कृपया यह चुने |</li>\n<li><strong>Session not Conducted :</strong> अगर<span style=\"background-color: rgb(247,218,100);\"> सिर्फ उस माह</span> मे किसी वजह से vhsnd सेशन नहीं हुआ है तो इसे चुने |</li>\n<li><strong>On Hold</strong> : अगर <span style=\"background-color: rgb(251,160,38);\">लगातार 2 / 3 माह</span> से सेशन नहीं किया जा रहा है तो यह चुने |</li>\n<li><strong>Non -Functional :</strong> अगर सरकारी <span style=\"background-color: rgb(235,107,86);\">anm पोस्टेड नहीं है</span>, या वो कार्य नहीं कर रही है, या किसी भी कारण से <span style=\"background-color: rgb(235,107,86);\">3 माह से ज्यादा VHSND सेशन का आयोजन नहीं हो रहा है</span> तो यह चुने |</li>\n</ol>\n",
+    "language" : "en",
+    "documentationUUID" : "10885b67-96a5-4896-8cd6-8953490a419d"
+  } ]
+}, {
+  "uuid" : "ce83b166-9946-4292-be35-c419015fa906",
+  "name" : "Epilepsy Serious patient",
+  "documentationItems" : [ {
+    "uuid" : "90906e71-8408-4176-b24e-72a49e121bc9",
+    "content" : "{\"blocks\":[{\"key\":\"fdt5m\",\"text\":\"Epilepsy Serious patient -\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"47t7c\",\"text\":\"अगर लगातार 2 माह में दो बार झटके आ रहे है\",\"type\":\"ordered-list-item\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"eo19p\",\"text\":\"या फिर अभी कोई serious injury है जो ठीक नहीं हुई है \",\"type\":\"ordered-list-item\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"1cmic\",\"text\":\"\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+    "contentHtml" : "<p>Epilepsy Serious patient -</p>\n<ol>\n<li>अगर लगातार 2 माह में दो बार झटके आ रहे है</li>\n<li>या फिर अभी कोई serious injury है जो ठीक नहीं हुई है&nbsp;</li>\n</ol>\n<p></p>\n",
+    "language" : "en",
+    "documentationUUID" : "ce83b166-9946-4292-be35-c419015fa906"
+  } ]
+}, {
+  "uuid" : "f1780d95-5d18-467f-b7bb-fc89d095ed70",
+  "name" : "VHsND Venue",
+  "documentationItems" : [ {
+    "uuid" : "541ad25a-0445-4e57-9771-cd260621b256",
+    "content" : "{\"blocks\":[{\"key\":\"72uon\",\"text\":\"vhsnd गाँव मे किस जगह / स्थान पर आयोजित किया जाता है \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+    "contentHtml" : "<p>vhsnd गाँव मे किस जगह / स्थान पर आयोजित किया जाता है&nbsp;</p>\n",
+    "language" : "en",
+    "documentationUUID" : "f1780d95-5d18-467f-b7bb-fc89d095ed70"
+  } ]
+} ]

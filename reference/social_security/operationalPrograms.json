@@ -1,0 +1,12 @@
+{
+  "operationalPrograms" : [ {
+    "uuid" : "9c57ea79-3ded-4833-8b58-93c2c1178ba7",
+    "program" : {
+      "uuid" : "381e6958-17dc-4f94-94fc-a47c665ed426",
+      "voided" : false
+    },
+    "name" : "Social Security",
+    "programSubjectLabel" : "",
+    "voided" : false
+  } ]
+}

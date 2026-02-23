@@ -1,0 +1,232 @@
+{
+  "uuid" : "4075479f-e379-4a57-b522-2f8415d737e6",
+  "settings" : {
+    "enableComments" : true,
+    "languages" : [ "en", "hi_IN" ],
+    "customRegistrationLocations" : [ {
+      "subjectTypeUUID" : "eb388475-b88e-4767-8195-1679e5ea7703",
+      "locationTypeUUIDs" : [ "c8b37bdb-a9a7-418c-881c-0e7649b9707f" ]
+    }, {
+      "subjectTypeUUID" : "fc99556e-b594-4dd0-bcda-a0dca8ac55a3",
+      "locationTypeUUIDs" : [ "c8b37bdb-a9a7-418c-881c-0e7649b9707f" ]
+    }, {
+      "subjectTypeUUID" : "fdc4f4ab-bf42-40c7-bd07-1c8fe3c4deb5",
+      "locationTypeUUIDs" : [ "c8b37bdb-a9a7-418c-881c-0e7649b9707f" ]
+    } ],
+    "saveDrafts" : true,
+    "maxAddressDisplayInlineCount" : 100,
+    "hideTotalForProgram" : false,
+    "myDashboardFilters" : [ {
+      "type" : "Address",
+      "widget" : "Default",
+      "titleKey" : "Address",
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3"
+    }, {
+      "type" : "AsOnDate",
+      "titleKey" : "As on Date",
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3"
+    }, {
+      "type" : "Gender",
+      "titleKey" : "Gender",
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3"
+    }, {
+      "type" : "Concept",
+      "scope" : "programEncounter",
+      "titleKey" : "High Risk PW",
+      "conceptName" : "High Risk Pregnancy?",
+      "conceptUUID" : "47f496cc-6527-4b34-b327-bdb9119e8d75",
+      "conceptDataType" : "Coded",
+      "scopeParameters" : {
+        "programUUIDs" : [ "5e927691-06c9-455a-b2fb-c300cea84f2e" ],
+        "encounterTypeUUIDs" : [ "433ed8ae-2410-44a0-8eca-5c5b0ddd9501" ]
+      },
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3"
+    } ],
+    "showSummaryButton" : true,
+    "extensions" : [ {
+      "label" : "Print SS card",
+      "fileName" : "ssCard.html",
+      "extensionScope" : {
+        "name" : "Search Results",
+        "uuid" : "",
+        "scopeType" : "Search Results"
+      }
+    }, {
+      "label" : "Print dignostic report",
+      "fileName" : "dignosticCard.html",
+      "extensionScope" : {
+        "name" : "Search Results",
+        "uuid" : "",
+        "scopeType" : "Search Results"
+      }
+    } ],
+    "showHierarchicalLocation" : false,
+    "searchResultFields" : [ {
+      "subjectTypeName" : "VHND",
+      "subjectTypeUUID" : "87e22c64-1954-4de8-b24d-41bdac3f9e35",
+      "searchResultConcepts" : [ {
+        "name" : "VHND Planned day",
+        "uuid" : "18a1e22f-e6b9-4299-a4e9-10e9ddbfbaaf",
+        "displayOrder" : 1
+      } ]
+    } ],
+    "enableCannedReports" : true,
+    "searchFilters" : [ {
+      "type" : "Name",
+      "widget" : "Default",
+      "titleKey" : "Name",
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3"
+    }, {
+      "type" : "Age",
+      "widget" : "Default",
+      "titleKey" : "Age",
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3"
+    }, {
+      "type" : "SearchAll",
+      "widget" : "Default",
+      "titleKey" : "SearchAll",
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3"
+    }, {
+      "type" : "RegistrationDate",
+      "widget" : "Range",
+      "titleKey" : "Date Range",
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3"
+    }, {
+      "type" : "Name",
+      "widget" : "Default",
+      "titleKey" : "Lab facility name",
+      "subjectTypeUUID" : "eb388475-b88e-4767-8195-1679e5ea7703"
+    }, {
+      "type" : "Concept",
+      "scope" : "programEncounter",
+      "widget" : "Default",
+      "titleKey" : "SCD Hemoglobin genotype",
+      "conceptName" : "Hemoglobin genotype",
+      "conceptUUID" : "e19e68fd-97f1-4803-a1b2-bb850836ff54",
+      "conceptDataType" : "Coded",
+      "scopeParameters" : {
+        "programUUIDs" : [ "e93303fa-f465-4db7-a945-d4fd6295f2b9" ],
+        "encounterTypeUUIDs" : [ "f599f393-c50e-48d1-a89e-e73295e570ea", "8166375f-c95f-435b-b103-d3d70e0af06f" ]
+      },
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3"
+    }, {
+      "type" : "Concept",
+      "scope" : "programEnrolment",
+      "widget" : "Default",
+      "titleKey" : "Program",
+      "conceptName" : "Program Name - Epilepsy (For Search)",
+      "conceptUUID" : "b45c153d-3de1-4f5b-8c20-47c5502d5460",
+      "conceptDataType" : "Coded",
+      "scopeParameters" : {
+        "programUUIDs" : [ "e93303fa-f465-4db7-a945-d4fd6295f2b9", "69a436a4-e6fb-42ed-a75c-d58d793f693e", "707cbfcf-5313-43e5-92d5-e176dacb1504", "5e927691-06c9-455a-b2fb-c300cea84f2e" ],
+        "encounterTypeUUIDs" : [ ]
+      },
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3"
+    }, {
+      "type" : "Concept",
+      "scope" : "programEncounter",
+      "titleKey" : "Already Diagnosed SCD",
+      "conceptName" : "Whether old report available",
+      "conceptUUID" : "843cec0f-5f7d-451f-be22-68c7167ffc64",
+      "conceptDataType" : "Coded",
+      "scopeParameters" : {
+        "programUUIDs" : [ "e93303fa-f465-4db7-a945-d4fd6295f2b9" ],
+        "encounterTypeUUIDs" : [ "f599f393-c50e-48d1-a89e-e73295e570ea" ]
+      },
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3"
+    }, {
+      "type" : "Name",
+      "titleKey" : "PSG Meeting Name",
+      "subjectTypeUUID" : "fdc4f4ab-bf42-40c7-bd07-1c8fe3c4deb5"
+    }, {
+      "type" : "Concept",
+      "scope" : "registration",
+      "titleKey" : "PSG Meeting Type",
+      "conceptName" : "PSG of Disease",
+      "conceptUUID" : "4cd6ad00-52b6-42c7-817a-a408271178de",
+      "conceptDataType" : "Coded",
+      "scopeParameters" : {
+        "programUUIDs" : [ ],
+        "encounterTypeUUIDs" : [ ]
+      },
+      "subjectTypeUUID" : "fdc4f4ab-bf42-40c7-bd07-1c8fe3c4deb5"
+    }, {
+      "type" : "Concept",
+      "scope" : "encounter",
+      "titleKey" : "Counsellor in-charge",
+      "conceptName" : "Counsellor in-charge of PSGM",
+      "conceptUUID" : "69b44bdd-a92f-4a06-8ab5-f2edd9fdef3c",
+      "conceptDataType" : "Coded",
+      "scopeParameters" : {
+        "programUUIDs" : [ ],
+        "encounterTypeUUIDs" : [ "1a65bfde-9ed0-488c-8b1d-9fd0d26a69a4", "7779da9b-f8e9-4f7f-bf05-36830eb46be5" ]
+      },
+      "subjectTypeUUID" : "fdc4f4ab-bf42-40c7-bd07-1c8fe3c4deb5"
+    }, {
+      "type" : "Name",
+      "titleKey" : "VHSND Name",
+      "subjectTypeUUID" : "87e22c64-1954-4de8-b24d-41bdac3f9e35"
+    }, {
+      "type" : "Concept",
+      "scope" : "registration",
+      "titleKey" : "VHSND planned week",
+      "conceptName" : "VHSND planned week",
+      "conceptUUID" : "d9bdb94e-da1c-41c9-82ff-082ecf2979f6",
+      "conceptDataType" : "Coded",
+      "scopeParameters" : {
+        "programUUIDs" : [ ],
+        "encounterTypeUUIDs" : [ ]
+      },
+      "subjectTypeUUID" : "87e22c64-1954-4de8-b24d-41bdac3f9e35"
+    }, {
+      "type" : "Concept",
+      "scope" : "registration",
+      "titleKey" : "Sector Name",
+      "conceptName" : "VHSND Sector PHNI",
+      "conceptUUID" : "c8c3b76c-ddbe-45aa-a794-c3f834b23061",
+      "conceptDataType" : "Coded",
+      "scopeParameters" : {
+        "programUUIDs" : [ ],
+        "encounterTypeUUIDs" : [ ]
+      },
+      "subjectTypeUUID" : "87e22c64-1954-4de8-b24d-41bdac3f9e35"
+    }, {
+      "type" : "Concept",
+      "scope" : "registration",
+      "titleKey" : "Section",
+      "conceptName" : "Section Name - PHNI",
+      "conceptUUID" : "d3c46a27-4fed-4838-83a3-689a41fd20ab",
+      "conceptDataType" : "Coded",
+      "scopeParameters" : {
+        "programUUIDs" : [ ],
+        "encounterTypeUUIDs" : [ ]
+      },
+      "subjectTypeUUID" : "87e22c64-1954-4de8-b24d-41bdac3f9e35"
+    }, {
+      "type" : "Address",
+      "titleKey" : "Address",
+      "subjectTypeUUID" : "fdc4f4ab-bf42-40c7-bd07-1c8fe3c4deb5"
+    }, {
+      "type" : "Address",
+      "titleKey" : "Address",
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3"
+    }, {
+      "type" : "Gender",
+      "titleKey" : "Gender",
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3"
+    }, {
+      "type" : "Concept",
+      "scope" : "programEncounter",
+      "titleKey" : "High Risk PW?",
+      "conceptName" : "High Risk Pregnancy?",
+      "conceptUUID" : "47f496cc-6527-4b34-b327-bdb9119e8d75",
+      "conceptDataType" : "Coded",
+      "scopeParameters" : {
+        "programUUIDs" : [ "5e927691-06c9-455a-b2fb-c300cea84f2e" ],
+        "encounterTypeUUIDs" : [ "433ed8ae-2410-44a0-8eca-5c5b0ddd9501" ]
+      },
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3"
+    } ]
+  },
+  "worklistUpdationRule" : ""
+}

@@ -1,0 +1,526 @@
+{
+  "name" : "Plant Survival Rate",
+  "uuid" : "291a52a8-5adc-4045-a806-27c3bab01048",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "9e120294-a0ee-4b31-afe9-828ffb7d537d",
+    "name" : "Survival Rate",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Name of the Fruit plant",
+      "uuid" : "de385e70-64c9-4f8f-a61e-30141b2998e4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of the Fruit Plant",
+        "uuid" : "bfa64304-4a0a-4858-870e-c0ffc32e1297",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Sweet lime",
+          "uuid" : "6aff16d6-986b-4038-8f50-2e485d52d014",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jamun",
+          "uuid" : "8806cb63-8e00-4cd0-a88f-885b82e5a6ad",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Guava",
+          "uuid" : "5e2992ff-f428-4471-862f-6a664b66bbb6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mango",
+          "uuid" : "ac169e86-e440-4ead-bfe7-1dd82d3a04a0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lemon",
+          "uuid" : "9b930b80-67d6-43d4-ac48-83978a32f12d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Aonla",
+          "uuid" : "14454b33-7c48-4749-a276-2b07e29bec4f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Amla",
+          "uuid" : "fafe06ae-37bf-477b-bf10-419765907c66",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jackfruit",
+          "uuid" : "f43a9898-dd26-44b9-a60f-56044198de4b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ber",
+          "uuid" : "8d47b3de-50e3-4548-b061-4902834e9e91",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of the Fruit Plant Mango",
+      "uuid" : "db687d38-e658-4711-ae47-269132f6eeec",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of the fruit Plant Mango",
+        "uuid" : "acb12f02-8349-4573-aeaa-cfbd94916523",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"bfa64304-4a0a-4858-870e-c0ffc32e1297\").containsAnswerConceptName(\"ac169e86-e440-4ead-bfe7-1dd82d3a04a0\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Name of the fruit plant",
+                "conceptUuid" : "bfa64304-4a0a-4858-870e-c0ffc32e1297",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Mango" ],
+                "answerConceptUuids" : [ "ac169e86-e440-4ead-bfe7-1dd82d3a04a0" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of the fruit Plant lemon",
+      "uuid" : "06531a6c-7685-4075-b42f-4eafc12b9a15",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of the fruit Plant lemon",
+        "uuid" : "ffd3f1be-4311-402a-a66d-97f24718333c",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"bfa64304-4a0a-4858-870e-c0ffc32e1297\").containsAnswerConceptName(\"9b930b80-67d6-43d4-ac48-83978a32f12d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Name of the fruit plant",
+                "conceptUuid" : "bfa64304-4a0a-4858-870e-c0ffc32e1297",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Lemon" ],
+                "answerConceptUuids" : [ "9b930b80-67d6-43d4-ac48-83978a32f12d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of the fruit plant Guava",
+      "uuid" : "76f38089-bef2-4a5e-8bd4-20c28320695c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of the fruit plant Guava",
+        "uuid" : "49a1feae-2a4c-4e24-a8a5-b994d20ca25b",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"bfa64304-4a0a-4858-870e-c0ffc32e1297\").containsAnswerConceptName(\"5e2992ff-f428-4471-862f-6a664b66bbb6\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Name of the fruit plant",
+                "conceptUuid" : "bfa64304-4a0a-4858-870e-c0ffc32e1297",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Guava" ],
+                "answerConceptUuids" : [ "5e2992ff-f428-4471-862f-6a664b66bbb6" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of the fruit plant Amla",
+      "uuid" : "2d0a4dab-1bd2-4de9-ba40-521e3aef96a7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of the fruit plant Amla",
+        "uuid" : "e50a749e-5fd0-4826-b0d3-f37831d538fb",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"bfa64304-4a0a-4858-870e-c0ffc32e1297\").containsAnswerConceptName(\"fafe06ae-37bf-477b-bf10-419765907c66\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Name of the fruit plant",
+                "conceptUuid" : "bfa64304-4a0a-4858-870e-c0ffc32e1297",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Amla" ],
+                "answerConceptUuids" : [ "fafe06ae-37bf-477b-bf10-419765907c66" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Survival of plant",
+      "uuid" : "0c958ae8-3ff0-48b6-a230-c850f9c6ca64",
+      "keyValues" : [ {
+        "key" : "repeatable",
+        "value" : true
+      }, {
+        "key" : "disableManualActions",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Survival of plant",
+        "uuid" : "4a1ee0ca-7774-4474-8217-361f6dfd614f",
+        "dataType" : "QuestionGroup",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "",
+      "mandatory" : false
+    }, {
+      "name" : "Photo of the plot",
+      "uuid" : "218aad4e-1286-46b3-b1d9-8e2e7e6b2356",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Photo of the plot",
+        "uuid" : "a68205e4-dac8-459a-a1fe-e3649d7a3b0e",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Name of the Fruit plant",
+      "uuid" : "04448c3f-2cb0-4b4e-ab27-674b9e5258cd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of the Fruit Plant",
+        "uuid" : "bfa64304-4a0a-4858-870e-c0ffc32e1297",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Sweet lime",
+          "uuid" : "6aff16d6-986b-4038-8f50-2e485d52d014",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jamun",
+          "uuid" : "8806cb63-8e00-4cd0-a88f-885b82e5a6ad",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Guava",
+          "uuid" : "5e2992ff-f428-4471-862f-6a664b66bbb6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mango",
+          "uuid" : "ac169e86-e440-4ead-bfe7-1dd82d3a04a0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lemon",
+          "uuid" : "9b930b80-67d6-43d4-ac48-83978a32f12d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Aonla",
+          "uuid" : "14454b33-7c48-4749-a276-2b07e29bec4f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Amla",
+          "uuid" : "fafe06ae-37bf-477b-bf10-419765907c66",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jackfruit",
+          "uuid" : "f43a9898-dd26-44b9-a60f-56044198de4b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ber",
+          "uuid" : "8d47b3de-50e3-4548-b061-4902834e9e91",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "",
+      "parentFormElementUuid" : "0c958ae8-3ff0-48b6-a230-c850f9c6ca64",
+      "mandatory" : true
+    }, {
+      "name" : "Other plant, please specify",
+      "uuid" : "5a728f8d-3738-4ff0-8f6c-98d4b3340e7f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other plant",
+        "uuid" : "94d584eb-3c35-4117-9278-12069b23740b",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.questionGroupValueInEncounter(\"bfa64304-4a0a-4858-870e-c0ffc32e1297\", \"4a1ee0ca-7774-4474-8217-361f6dfd614f\", params.questionGroupIndex).containsAnswerConceptName(\"287164fa-3899-485f-9c1f-61401bc6359d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "questionGroupEncounter",
+                "conceptName" : "Name of the Fruit Plant",
+                "conceptUuid" : "bfa64304-4a0a-4858-870e-c0ffc32e1297",
+                "conceptDataType" : "Coded",
+                "parentConceptUuid" : "4a1ee0ca-7774-4474-8217-361f6dfd614f"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "287164fa-3899-485f-9c1f-61401bc6359d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "parentFormElementUuid" : "0c958ae8-3ff0-48b6-a230-c850f9c6ca64",
+      "mandatory" : true
+    }, {
+      "name" : "Number of plants planted",
+      "uuid" : "6a8cca31-066f-43ad-82fe-5f7c1b176b14",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of plants",
+        "uuid" : "4a3b7494-e2e6-4a0b-aace-374c8e58204f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "lowNormal" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n    \n    const questionGroupIndex = params.questionGroupIndex;\n    const questionGroups = programEncounter.getObservationValue('Survival of plant');\n    if(questionGroups && questionGroups.length > questionGroupIndex){\n        const questionGroup = questionGroups[questionGroupIndex];\n        let enteredNumber = questionGroup.findObservationByConceptUUID(\"Number of plants\");\n\n        if(enteredNumber){\n            enteredNumber = enteredNumber.getReadableValue();\n            if(enteredNumber && !isNaN(enteredNumber) && !Number.isInteger(enteredNumber)){\n                validationErrors.push(\"Entered number should be an integer\");\n            }\n        }\n    }\n    \n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "parentFormElementUuid" : "0c958ae8-3ff0-48b6-a230-c850f9c6ca64",
+      "mandatory" : true
+    }, {
+      "name" : "Number of survivor plants",
+      "uuid" : "28a0a353-96b1-4386-b127-bcf09de7dfe6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of survivors",
+        "uuid" : "8a383a38-b585-4001-82e7-db855f1e5d98",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n    \n    const questionGroupIndex = params.questionGroupIndex;\n    const questionGroups = programEncounter.getObservationValue('Survival of plant');\n    if(questionGroups && questionGroups.length > questionGroupIndex){\n        const questionGroup = questionGroups[questionGroupIndex];\n        let enteredNumber = questionGroup.findObservationByConceptUUID(\"Number of survivors\");\n\n        if(enteredNumber){\n            enteredNumber = enteredNumber.getReadableValue();\n            if(enteredNumber && !isNaN(enteredNumber) && !Number.isInteger(enteredNumber)){\n                validationErrors.push(\"Entered number should be an integer\");\n            }\n        }\n    }\n    \n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "parentFormElementUuid" : "0c958ae8-3ff0-48b6-a230-c850f9c6ca64",
+      "mandatory" : true
+    }, {
+      "name" : "Photo of the plot",
+      "uuid" : "1319f1ed-7569-4929-a23a-9b354f1f6757",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Photo of the plot",
+        "uuid" : "a68205e4-dac8-459a-a1fe-e3649d7a3b0e",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "MultiSelect",
+      "rule" : "",
+      "parentFormElementUuid" : "0c958ae8-3ff0-48b6-a230-c850f9c6ca64",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Photo of the plot",
+      "uuid" : "25bdfdff-a28f-4ebe-8d1f-0c5d3f3a03b2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Photo of the plot",
+        "uuid" : "a68205e4-dac8-459a-a1fe-e3649d7a3b0e",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "rule" : "",
+      "parentFormElementUuid" : "0c958ae8-3ff0-48b6-a230-c850f9c6ca64",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Survival Rate"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({ params, imports }) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({programEncounter});\n    const encounterType = programEncounter.encounterType.name;\n\n    const currentFollowupName = programEncounter.name;\n\n    let num = parseInt(currentFollowupName.split(' ').pop());\n    if(isNaN(num)) {\n        num = 1;\n    } else {\n        num++;\n    }\n    let nextFollowupName = `Survival Rate Follow-up ${num}`;\n\n    const isAlreadyScheduled = programEncounter.programEnrolment.getEncountersOfType(encounterType)\n        .some(encounter => encounter.name == nextFollowupName);\n\n    const isProgramActive = programEncounter.programEnrolment.programExitDateTime == null;\n    \n    if(!isAlreadyScheduled && isProgramActive){\n        const earliestDate = moment(programEncounter.earliestVisitDateTime).add(6, 'months').startOf('month').toDate();\n        const maxDate = moment(earliestDate).add(30, 'days').endOf('day').endOf('day').toDate();\n        scheduleBuilder.add({name: nextFollowupName, encounterType: encounterType, earliestDate, maxDate});  \n    }\n    \n    return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

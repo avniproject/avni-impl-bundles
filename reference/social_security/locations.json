@@ -1,0 +1,118 @@
+[ {
+  "uuid" : "ee0b4751-8e66-422e-bd78-01586220e7c5",
+  "name" : "Karnataka",
+  "level" : 5.0,
+  "type" : "State",
+  "addressLevelTypeUUID" : "61e16ae2-6582-4f94-a03a-f8cd74ef369c",
+  "locationProperties" : null
+}, {
+  "uuid" : "18576d87-b9ad-4a1c-b09a-04ec8b8614f6",
+  "name" : "Bangalore",
+  "level" : 4.0,
+  "parent" : {
+    "uuid" : "ee0b4751-8e66-422e-bd78-01586220e7c5"
+  },
+  "type" : "City",
+  "addressLevelTypeUUID" : "70212199-d99b-453d-b9bc-160d60ee5835",
+  "locationProperties" : null
+}, {
+  "uuid" : "5a1ca5ec-6d24-447c-b0d6-d44deae8e114",
+  "name" : "Indiranagar",
+  "level" : 3.0,
+  "parent" : {
+    "uuid" : "18576d87-b9ad-4a1c-b09a-04ec8b8614f6"
+  },
+  "type" : "Area",
+  "addressLevelTypeUUID" : "79fd2f63-01f5-4ca1-9b20-576a5feaaad4",
+  "locationProperties" : null
+}, {
+  "uuid" : "a5015a90-f1d5-4db6-9685-3165ffd2a122",
+  "name" : "Andhra Pradesh",
+  "level" : 5.0,
+  "type" : "State",
+  "addressLevelTypeUUID" : "61e16ae2-6582-4f94-a03a-f8cd74ef369c",
+  "locationProperties" : null
+}, {
+  "uuid" : "7b8ad07d-6ddd-4209-a667-d35700da751c",
+  "name" : "Visakhapatnam",
+  "level" : 4.0,
+  "parent" : {
+    "uuid" : "a5015a90-f1d5-4db6-9685-3165ffd2a122"
+  },
+  "type" : "City",
+  "addressLevelTypeUUID" : "70212199-d99b-453d-b9bc-160d60ee5835",
+  "locationProperties" : null
+}, {
+  "uuid" : "2ffe1996-9539-4f77-b62b-98251035d5d2",
+  "name" : "Dwaraka Nagar",
+  "level" : 3.0,
+  "parent" : {
+    "uuid" : "7b8ad07d-6ddd-4209-a667-d35700da751c"
+  },
+  "type" : "Area",
+  "addressLevelTypeUUID" : "79fd2f63-01f5-4ca1-9b20-576a5feaaad4",
+  "locationProperties" : null
+}, {
+  "uuid" : "f6ab4543-e108-4c0f-a81b-91a10edfc196",
+  "name" : "Delhi",
+  "level" : 5.0,
+  "type" : "State",
+  "addressLevelTypeUUID" : "61e16ae2-6582-4f94-a03a-f8cd74ef369c",
+  "locationProperties" : null
+}, {
+  "uuid" : "42d0c969-df9f-45e9-be86-d005c4ebe1a1",
+  "name" : "Noida",
+  "level" : 4.0,
+  "parent" : {
+    "uuid" : "f6ab4543-e108-4c0f-a81b-91a10edfc196"
+  },
+  "type" : "City",
+  "addressLevelTypeUUID" : "70212199-d99b-453d-b9bc-160d60ee5835",
+  "locationProperties" : null
+}, {
+  "uuid" : "e7815963-4474-4c11-95f2-06760c8260d2",
+  "name" : "Film City",
+  "level" : 3.0,
+  "parent" : {
+    "uuid" : "42d0c969-df9f-45e9-be86-d005c4ebe1a1"
+  },
+  "type" : "Area",
+  "addressLevelTypeUUID" : "79fd2f63-01f5-4ca1-9b20-576a5feaaad4",
+  "locationProperties" : null
+}, {
+  "uuid" : "539a7839-1fcb-43aa-a278-d3d082431089",
+  "name" : "bangalore",
+  "level" : 4.0,
+  "parent" : {
+    "uuid" : "f6ab4543-e108-4c0f-a81b-91a10edfc196"
+  },
+  "type" : "City",
+  "addressLevelTypeUUID" : "70212199-d99b-453d-b9bc-160d60ee5835"
+}, {
+  "uuid" : "4ca09108-8272-4566-a8da-1a2b5ebc8976",
+  "name" : "Maharashtra",
+  "level" : 5.0,
+  "type" : "State",
+  "addressLevelTypeUUID" : "61e16ae2-6582-4f94-a03a-f8cd74ef369c",
+  "locationProperties" : null
+}, {
+  "uuid" : "529d4e5c-0243-4182-b666-c08f7872a7ae",
+  "name" : "Mumbai",
+  "level" : 4.0,
+  "parent" : {
+    "uuid" : "4ca09108-8272-4566-a8da-1a2b5ebc8976"
+  },
+  "type" : "City",
+  "addressLevelTypeUUID" : "70212199-d99b-453d-b9bc-160d60ee5835",
+  "locationProperties" : null
+}, {
+  "uuid" : "d6c7cdfa-c38e-48c7-9b3c-5b166c570dc0",
+  "name" : "Juhu",
+  "level" : 3.0,
+  "parent" : {
+    "uuid" : "529d4e5c-0243-4182-b666-c08f7872a7ae"
+  },
+  "type" : "Area",
+  "addressLevelTypeUUID" : "79fd2f63-01f5-4ca1-9b20-576a5feaaad4",
+  "locationProperties" : null
+} ]

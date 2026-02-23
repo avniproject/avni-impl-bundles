@@ -1,0 +1,559 @@
+{
+  "name" : "Associate Farmer Monitoring",
+  "uuid" : "63d764ec-50e5-4eff-acd3-fc4108c8f322",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "3ca8ec05-bdcc-466f-8363-d2da4fab3a34",
+    "name" : "Basic",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Date of Visit",
+      "uuid" : "1b7b9b48-e38c-41bf-b510-ed0bdc8588a8",
+      "keyValues" : [ {
+        "key" : "durationOptions",
+        "value" : [ "days", "years", "months" ]
+      } ],
+      "concept" : {
+        "name" : "Date of Visit",
+        "uuid" : "7ba30eb7-e2e9-4660-a42d-95a54cfcdcbf",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "What Practices have been adopted",
+      "uuid" : "04bb6922-bc52-4e56-82e8-c19a82710549",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "What CSA Practices has been adopted",
+        "uuid" : "d6c8cb93-35c8-438a-b742-d538dee8ce92",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Irrigation Management",
+          "uuid" : "8e82881a-e68d-4874-a12c-954eb71d8a27",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Irrigation",
+          "uuid" : "8ad802a4-07db-407b-afa4-c83334a41cfc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Integrated Pest Management",
+          "uuid" : "dba85ab5-d1de-489c-b15e-840eaee5df1a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sowing Management Integrated Pest Management (IPM)",
+          "uuid" : "09bfc9ec-7f46-475e-a67d-8221ac5a7181",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Varietal replacement",
+          "uuid" : "9bf8263b-065c-4971-b769-7c362e65c4d1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Nutrition Management",
+          "uuid" : "a93449cb-0d93-4bdb-8f94-ad72398a2cbc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Basic"
+  }, {
+    "uuid" : "109daea6-c379-4514-b582-aede3597ee0a",
+    "name" : "Nutrition Management",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Nutrition management Practices",
+      "uuid" : "3dcb0d0a-a70e-41d0-8168-b089fdab29d0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Nutrition management Practices",
+        "uuid" : "45c2f40f-333e-4756-9e2b-d3ba7acf6721",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "A",
+          "uuid" : "1d5d2734-2b63-456a-bfd0-099b92f27017",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "B",
+          "uuid" : "585462ab-97e3-4a79-8638-b26d21bc1c9e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "C",
+          "uuid" : "ef4cbc46-5790-40a6-9da6-89057c0d7fdc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Which of the following practices have been adopted? ( NM )",
+      "uuid" : "1a3cb849-d2cc-4731-b0e3-74ba342bf41e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Which of the nutrition management practices have been adopted",
+        "uuid" : "02e1a8e8-8188-4412-aace-fc0530c7ac6d",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "NPK Consotia applied",
+          "uuid" : "f0ad53d2-e37c-4e4b-b0de-30d9b9dd2ad2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Compost applied",
+          "uuid" : "474913be-4d7d-433e-adb0-1f5dbd203cd6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "FYM applied",
+          "uuid" : "d0b87a1d-b3dc-436f-a955-bc1dfd88b056",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "C",
+          "uuid" : "ef4cbc46-5790-40a6-9da6-89057c0d7fdc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ghanajeevamrit applied",
+          "uuid" : "ba360f1a-d875-456b-be19-d602a7366c17",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "A",
+          "uuid" : "1d5d2734-2b63-456a-bfd0-099b92f27017",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Vermicompost applied",
+          "uuid" : "c3ae8dee-2270-4a46-8061-b979077c1142",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "B",
+          "uuid" : "585462ab-97e3-4a79-8638-b26d21bc1c9e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jeevamrit sprayed",
+          "uuid" : "dfbc41b4-d758-4b3e-b67a-f46212f03085",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jeevamrit applied in soil",
+          "uuid" : "9c4f9b5f-9c5d-4f83-80e2-d35678640c7f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Bio Stimulant sprayed",
+          "uuid" : "3c8a18f6-922a-462f-b61a-b8a793f3a440",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Cost of Nutrition Management (NM)",
+      "uuid" : "be9298ea-aa87-4d51-96b8-3ae31291dd4c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cost of Nutrition Management",
+        "uuid" : "71897492-5ffc-4542-bbca-ac8f0e53a170",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElementGroup = params.formElementGroup;\n    const _ = imports.lodash;\n    let visibility = true;\n    return formElementGroup.formElements.map((formElement) => {\n        \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"d6c8cb93-35c8-438a-b742-d538dee8ce92\").containsAnswerConceptName(\"a93449cb-0d93-4bdb-8f94-ad72398a2cbc\").matches();\n  \n        visibility = condition11 ;\n  \n        return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, null);\n    });\n};",
+    "declarativeRule" : [ {
+      "actions" : [ {
+        "actionType" : "showFormElementGroup"
+      }, { } ],
+      "conditions" : [ {
+        "compoundRule" : {
+          "rules" : [ {
+            "lhs" : {
+              "type" : "concept",
+              "scope" : "encounter",
+              "conceptName" : "What Practices have been adopted",
+              "conceptUuid" : "d6c8cb93-35c8-438a-b742-d538dee8ce92",
+              "conceptDataType" : "Coded"
+            },
+            "rhs" : {
+              "type" : "answerConcept",
+              "answerConceptNames" : [ "Nutrition Management" ],
+              "answerConceptUuids" : [ "a93449cb-0d93-4bdb-8f94-ad72398a2cbc" ]
+            },
+            "operator" : "containsAnswerConceptName"
+          } ]
+        }
+      } ]
+    } ],
+    "timed" : false,
+    "display" : "Nutrition Management"
+  }, {
+    "uuid" : "8eb6fdf7-1bfa-4b4a-87ba-6de5f21a764b",
+    "name" : "Integrated Pest Management (IPM)",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Which of the following practices have been adopted? ( IPM )",
+      "uuid" : "abf405b0-3c86-488a-9ac5-200327a9168e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Which of the following IPM practices have been adopted",
+        "uuid" : "d7efada9-2cc4-45a0-babe-340342389a04",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Sticky Trap",
+          "uuid" : "ec305687-c800-4c66-9a26-671176068b23",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Faromon Trap",
+          "uuid" : "ccc3eef2-bd8a-4443-8d58-b479f356580f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Light Trap",
+          "uuid" : "6fb4536a-06b2-4212-84ea-a2bbc552a3e1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Trap Crop",
+          "uuid" : "682de3d3-f436-46af-8a96-8d2fddfa2a27",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "A",
+          "uuid" : "1d5d2734-2b63-456a-bfd0-099b92f27017",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "C",
+          "uuid" : "ef4cbc46-5790-40a6-9da6-89057c0d7fdc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "B",
+          "uuid" : "585462ab-97e3-4a79-8638-b26d21bc1c9e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Use of biopesticides",
+          "uuid" : "077e0247-a419-4fa9-8d9e-939f1e4f70e7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hand Picking",
+          "uuid" : "bdc64d16-cc58-43d0-91fd-dd0ff40307c9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Cost of Integrated Pest Management (IPM)",
+      "uuid" : "ebe7f6b2-8fe6-4e24-b54c-637305ed9df0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cost of Integrated Pest Management (IPM)",
+        "uuid" : "4f68d7f4-4717-4523-9d2f-1dcf57dbd733",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElementGroup = params.formElementGroup;\n    const _ = imports.lodash;\n    let visibility = true;\n    return formElementGroup.formElements.map((formElement) => {\n        \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"d6c8cb93-35c8-438a-b742-d538dee8ce92\").containsAnswerConceptName(\"dba85ab5-d1de-489c-b15e-840eaee5df1a\").matches();\n  \n        visibility = condition11 ;\n  \n        return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, null);\n    });\n};",
+    "declarativeRule" : [ {
+      "actions" : [ {
+        "actionType" : "showFormElementGroup"
+      }, { } ],
+      "conditions" : [ {
+        "compoundRule" : {
+          "rules" : [ {
+            "lhs" : {
+              "type" : "concept",
+              "scope" : "encounter",
+              "conceptName" : "What Practices have been adopted",
+              "conceptUuid" : "d6c8cb93-35c8-438a-b742-d538dee8ce92",
+              "conceptDataType" : "Coded"
+            },
+            "rhs" : {
+              "type" : "answerConcept",
+              "answerConceptNames" : [ "Integrated Pest Management" ],
+              "answerConceptUuids" : [ "dba85ab5-d1de-489c-b15e-840eaee5df1a" ]
+            },
+            "operator" : "containsAnswerConceptName"
+          } ]
+        }
+      } ]
+    } ],
+    "timed" : false,
+    "display" : "Integrated Pest Management (IPM)"
+  }, {
+    "uuid" : "6bc54619-0021-4304-b7eb-40158f7ccd94",
+    "name" : "Irrigation",
+    "displayOrder" : 4.0,
+    "formElements" : [ {
+      "name" : "Which of the following practices have been adopted? ( irrigation )",
+      "uuid" : "f717dff2-1326-4744-b2f2-b6af235b97d3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Which of the following irrigation practices have been adopted",
+        "uuid" : "ade9d79b-298b-4ecb-9ac1-0176f04955e6",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Flood",
+          "uuid" : "2b2f73a5-48c5-42da-b6ae-cd013c243a63",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Border Strip",
+          "uuid" : "7535d3de-1ca0-4662-9610-9689332d03d1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "B",
+          "uuid" : "585462ab-97e3-4a79-8638-b26d21bc1c9e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Furrow",
+          "uuid" : "396f62e1-8081-4524-9c68-ef89619461e3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sprinkler",
+          "uuid" : "5aed777a-87c8-4e64-8ac2-4d10f4bd13d7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Drip",
+          "uuid" : "4e891efc-2594-44ff-bcee-257438792f2f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "A",
+          "uuid" : "1d5d2734-2b63-456a-bfd0-099b92f27017",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElementGroup = params.formElementGroup;\n    const _ = imports.lodash;\n    let visibility = true;\n    return formElementGroup.formElements.map((formElement) => {\n        \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"d6c8cb93-35c8-438a-b742-d538dee8ce92\").containsAnswerConceptName(\"8ad802a4-07db-407b-afa4-c83334a41cfc\").matches();\n  \n        visibility = condition11 ;\n  \n        return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, null);\n    });\n};",
+    "declarativeRule" : [ {
+      "actions" : [ {
+        "actionType" : "showFormElementGroup"
+      }, { } ],
+      "conditions" : [ {
+        "compoundRule" : {
+          "rules" : [ {
+            "lhs" : {
+              "type" : "concept",
+              "scope" : "encounter",
+              "conceptName" : "What Practices have been adopted",
+              "conceptUuid" : "d6c8cb93-35c8-438a-b742-d538dee8ce92",
+              "conceptDataType" : "Coded"
+            },
+            "rhs" : {
+              "type" : "answerConcept",
+              "answerConceptNames" : [ "Irrigation" ],
+              "answerConceptUuids" : [ "8ad802a4-07db-407b-afa4-c83334a41cfc" ]
+            },
+            "operator" : "containsAnswerConceptName"
+          } ]
+        }
+      } ]
+    } ],
+    "timed" : false,
+    "display" : "Irrigation"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

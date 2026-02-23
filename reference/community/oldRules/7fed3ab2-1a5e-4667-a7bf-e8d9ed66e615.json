@@ -1,0 +1,15 @@
+{
+  "ruleDependencyUUID" : "45fab234-2325-4028-a12d-15f29a87e3fc",
+  "entity" : {
+    "uuid" : "e93303fa-f465-4db7-a945-d4fd6295f2b9",
+    "type" : "Program"
+  },
+  "entityUUID" : "e93303fa-f465-4db7-a945-d4fd6295f2b9",
+  "entityType" : "Program",
+  "type" : "EnrolmentSummary",
+  "executionOrder" : 100.0,
+  "data" : { },
+  "name" : "Sickle cell screening program summary",
+  "uuid" : "7fed3ab2-1a5e-4667-a7bf-e8d9ed66e615",
+  "fnName" : "SickleCellScreeningProgramRuleJSS"
+}

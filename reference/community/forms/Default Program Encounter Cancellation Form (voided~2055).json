@@ -1,0 +1,78 @@
+{
+  "name" : "Default Program Encounter Cancellation Form (voided~2055)",
+  "uuid" : "aac5c57a-aa01-49bb-ad20-70536dd2907f",
+  "formType" : "ProgramEncounterCancellation",
+  "formElementGroups" : [ {
+    "uuid" : "32fb721e-a825-4f94-97af-27894bd39720",
+    "name" : "Cancel Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Cancel reason",
+      "uuid" : "1cbcd6a6-1ef1-410b-926e-754011d22a58",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Visit cancel reason",
+        "uuid" : "739f9a56-c02c-4f81-927b-69842d78c1e8",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Absent",
+          "uuid" : "10885638-561a-42b6-8b24-8daa01864c89",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Away from village",
+          "uuid" : "72fd70f8-65ae-4ac4-8339-6faf455e04f5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Program exit",
+          "uuid" : "51dfd71b-1b06-4477-9ca3-f88acbafc0db",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Other reason",
+      "uuid" : "1a04eae4-cb00-4cf9-ae7a-fd080ad637f9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other reason for cancelling",
+        "uuid" : "f23251e2-68c6-447b-84c2-285d61e95f0f",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Cancel Details"
+  } ],
+  "decisionConcepts" : [ ],
+  "voided" : true
+}

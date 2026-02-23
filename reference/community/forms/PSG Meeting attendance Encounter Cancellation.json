@@ -1,0 +1,154 @@
+{
+  "name" : "PSG Meeting attendance Encounter Cancellation",
+  "uuid" : "f2b0d484-84d7-4002-88e6-b43a1e3a6c10",
+  "formType" : "IndividualEncounterCancellation",
+  "formElementGroups" : [ {
+    "uuid" : "da9f4e10-d46a-4f42-9654-ae069346442a",
+    "name" : "Reason for cancellation",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Reason for cancellation",
+      "uuid" : "bc560bdd-776d-4faa-9021-e725f18ae36c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Reason - PSGM attendance cancellation",
+        "uuid" : "e649a28f-4e47-4abd-830a-35842fc387da",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Data lost",
+          "uuid" : "e88dbc6f-c10f-4a2e-853f-f27f65436dea",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other reason",
+          "uuid" : "0f2e0d61-be16-467b-b7f1-3032479bfa76",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Duplicate entry",
+          "uuid" : "f49849e9-60ca-4ef8-82ba-979d850ef58c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Incorrect Entry done",
+          "uuid" : "c70ce0ea-b26a-47f1-8a9f-2cb3ec5a18c2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Meeting didn't happened this month",
+          "uuid" : "5dd8993d-fad9-4bc4-b26a-d5632b2509d3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Why meeting didn't happen this month",
+      "uuid" : "878e9760-67f5-488b-805b-d2e62a8492b4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Reason for PSGM not happen",
+        "uuid" : "c10a2d01-fd04-409b-9672-5c97575026bc",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInCancelEncounter(\"e649a28f-4e47-4abd-830a-35842fc387da\").containsAnswerConceptName(\"5dd8993d-fad9-4bc4-b26a-d5632b2509d3\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "cancelEncounter",
+                "conceptName" : "Reason - PSGM attendance cancellation",
+                "conceptUuid" : "e649a28f-4e47-4abd-830a-35842fc387da",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Meeting didn't happened this month" ],
+                "answerConceptUuids" : [ "5dd8993d-fad9-4bc4-b26a-d5632b2509d3" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Other reason",
+      "uuid" : "e198c3dd-a422-4917-a5ec-8a5cc89a921d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other reason for PSGM not happening",
+        "uuid" : "d3328eb9-e306-45e7-b4ff-e7a2766530f5",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInCancelEncounter(\"e649a28f-4e47-4abd-830a-35842fc387da\").containsAnswerConceptName(\"0f2e0d61-be16-467b-b7f1-3032479bfa76\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "cancelEncounter",
+                "conceptName" : "Reason - PSGM attendance cancellation",
+                "conceptUuid" : "e649a28f-4e47-4abd-830a-35842fc387da",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other reason" ],
+                "answerConceptUuids" : [ "0f2e0d61-be16-467b-b7f1-3032479bfa76" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Reason for cancellation"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

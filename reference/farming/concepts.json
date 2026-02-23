@@ -1,0 +1,5001 @@
+[ {
+  "name" : "0",
+  "uuid" : "53a0be5b-1c02-4dac-a20c-69f388d436f7",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "1",
+  "uuid" : "3ecbedce-5611-4f6c-b04c-de5530920733",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "1-5",
+  "uuid" : "7fccb775-2e08-4ed3-addd-37be75fcd082",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "100 Liters",
+  "uuid" : "c9146013-d0d2-42ed-a41d-48046f4559e9",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "10th",
+  "uuid" : "65147bb9-af65-41dc-8303-81cd7ed0ed63",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "11-12",
+  "uuid" : "8d6d039a-31e9-402d-b43a-af8a6cddb849",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "1st",
+  "uuid" : "d14396f8-a6ac-4875-aaed-a9d8ef04e239",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "1x1x1 Feet",
+  "uuid" : "bda14e7d-6233-4ae0-a6ee-b02404b0f0de",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "1x1x1 Meter",
+  "uuid" : "93023eda-01b3-44dc-b778-bac714d6df14",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "2",
+  "uuid" : "ae1d7a6a-909d-4fd2-bca0-8fc9c59d9f32",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "2.5x2.5x2.5 Feet",
+  "uuid" : "fdc4334f-f683-4cd6-93e4-eebc28141d34",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "200 Liters",
+  "uuid" : "7b51a6b2-0417-4797-90f3-5b363ea3bc58",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "2001",
+  "uuid" : "b4d50aef-9ed0-4256-9bef-d90bb833ab2d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "2002",
+  "uuid" : "377fe919-821b-475d-91c6-72a641cc1b73",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "2003",
+  "uuid" : "0a77c159-e710-4fbb-bcab-485f89036255",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "2004",
+  "uuid" : "d9224056-9479-4031-a3e4-ed6ed14a7b83",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "2nd",
+  "uuid" : "a9680646-53f5-4ecc-9d53-15055d491a69",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "2x2x2 Feet",
+  "uuid" : "526edf50-e6fa-4c8b-a225-e9af3fd43ffa",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "3",
+  "uuid" : "ba3dfd63-95bf-4d01-86da-52be30d9893f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "3 Major crop Grown In Kharif",
+  "uuid" : "3f115c4f-d0e8-48e2-bc60-d6b0debb524d",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Paddy",
+    "uuid" : "a508740e-7b71-4bb0-850e-3e48ccf0848f",
+    "order" : 0.0
+  }, {
+    "name" : "Maize",
+    "uuid" : "53a54144-0738-417e-a26c-b6989b55206e",
+    "order" : 1.0
+  }, {
+    "name" : "Jowar",
+    "uuid" : "0f2905e4-98b9-4a16-a1b6-60c52f5e3c61",
+    "order" : 2.0
+  }, {
+    "name" : "Bajra",
+    "uuid" : "ce13022f-b13f-47b9-a127-dbdf1b693472",
+    "order" : 3.0
+  }, {
+    "name" : "Groundnut",
+    "uuid" : "269cffa8-a20a-4ea7-8f27-3eec75bbf3d1",
+    "order" : 4.0
+  }, {
+    "name" : "Til",
+    "uuid" : "89c1d036-8cf2-4efa-bd36-8707022e5aba",
+    "order" : 5.0
+  }, {
+    "name" : "Arhar",
+    "uuid" : "d15ddc07-be40-4797-b670-f99b37919cad",
+    "order" : 6.0
+  }, {
+    "name" : "Mung",
+    "uuid" : "4fe97af9-ceff-4682-bce7-9415537f21f1",
+    "order" : 7.0
+  }, {
+    "name" : "Urd",
+    "uuid" : "97daf09f-6280-484a-a755-4c27582f11eb",
+    "order" : 8.0
+  } ]
+}, {
+  "name" : "3 Major crop Grown in Rabi",
+  "uuid" : "671800cf-8e5d-4da7-b5cb-771756937646",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Wheat",
+    "uuid" : "5dc3df97-005d-4b88-b8af-9010f07af467",
+    "order" : 0.0
+  }, {
+    "name" : "Barley",
+    "uuid" : "9376024c-780c-49f8-9f70-b43cb3e4afd6",
+    "order" : 1.0
+  }, {
+    "name" : "Gram",
+    "uuid" : "6a40bace-73b7-4ddc-8483-a8081e637604",
+    "order" : 2.0
+  }, {
+    "name" : "Pea",
+    "uuid" : "b90777e7-fa0a-4d13-95ef-76076509c377",
+    "order" : 3.0
+  }, {
+    "name" : "Mustard",
+    "uuid" : "dd8309bc-2927-491e-9cf6-c2b853328c12",
+    "order" : 4.0
+  }, {
+    "name" : "Linseed",
+    "uuid" : "e58d8cb4-0a91-46fd-b603-5f82307f3eb4",
+    "order" : 5.0
+  }, {
+    "name" : "Lentil",
+    "uuid" : "c50830b0-3009-49f9-897b-8b96a6113ccb",
+    "order" : 6.0
+  } ]
+}, {
+  "name" : "3 Major crop Grown In Zaid",
+  "uuid" : "b65a99e1-2cde-4d8a-8fed-dc11e697cdb6",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Mung",
+    "uuid" : "4fe97af9-ceff-4682-bce7-9415537f21f1",
+    "order" : 0.0
+  }, {
+    "name" : "Urd",
+    "uuid" : "97daf09f-6280-484a-a755-4c27582f11eb",
+    "order" : 1.0
+  }, {
+    "name" : "Guar",
+    "uuid" : "daae1abd-d083-428b-8173-62ca039f2950",
+    "order" : 2.0
+  }, {
+    "name" : "Chari",
+    "uuid" : "e7c998b1-14f0-4b0a-b004-83ae1dc25c55",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "3rd",
+  "uuid" : "8b82be71-3add-47be-bf85-f1c38d44447a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "3x3x3 Feet",
+  "uuid" : "55fb3ca1-acd3-4666-bfce-d54e37f5fa40",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "4",
+  "uuid" : "d850de37-550f-47ec-b9e2-2ac59bbd77fa",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "4th",
+  "uuid" : "eff8e112-af15-414f-8cf3-897115dbff09",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "5",
+  "uuid" : "64f56450-471a-4d90-bac4-f4af6c2fa6fe",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "5th",
+  "uuid" : "59424a6b-af2e-4782-9830-86208e734b73",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "5th and more",
+  "uuid" : "e9aaeaeb-aed4-4277-9882-b24e263edafc",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "6",
+  "uuid" : "f81667a9-0572-4974-9698-5b9c724a29ad",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "6-10",
+  "uuid" : "f849255b-a059-4a99-9b4b-4810c3cafe06",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "6th",
+  "uuid" : "3ce93883-4d69-452a-bd7c-6cbe59ec8640",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "7th",
+  "uuid" : "9900200e-6003-4d5b-88b4-be4d09ddd120",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "8th",
+  "uuid" : "121f063b-1a12-4626-952e-80343035ccdf",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "9th",
+  "uuid" : "b1f5438c-a81b-4332-a38c-ae20744102cf",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "A",
+  "uuid" : "1d5d2734-2b63-456a-bfd0-099b92f27017",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Adult Female (above 18 years)",
+  "uuid" : "c821f7bc-8930-4045-a3ab-95c6d93dc7a7",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Adult Male (above 18 years)",
+  "uuid" : "88f0e3b5-7cf4-486b-bf35-6d58e0f08042",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Adult male (above 18 years)",
+  "uuid" : "3981d7e1-9511-40a1-9745-f2ad933fdcc1",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Adult-Male (above 18 years)",
+  "uuid" : "3eccfd4c-0ef1-4b8b-9d87-c33c8039c039",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Agriculture",
+  "uuid" : "49da1c77-726d-49c2-ab4f-07fbb9e85602",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Amla",
+  "uuid" : "fafe06ae-37bf-477b-bf10-419765907c66",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Angle/pole provided",
+  "uuid" : "e5511c63-566e-41ed-954d-ce3cda89ca56",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Animal",
+  "uuid" : "582253e1-58b9-4bb2-bf6c-8e497936e6a5",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Any Other Remarks",
+  "uuid" : "51f36698-9e16-47e8-bce1-ed86db1cecd8",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Any other tools",
+  "uuid" : "3aec6d6f-2756-436e-bac4-7c55b6a4abd2",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Any other type of group",
+  "uuid" : "936151c3-11ad-4d84-a25f-cc32654d46b2",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Any Seed management activities initiated",
+  "uuid" : "8a8f035d-ea82-452b-9c27-d39dc0e3de86",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "yes",
+    "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+    "order" : 0.0,
+    "voided" : true
+  }, {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 1.0
+  }, {
+    "name" : "no",
+    "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+    "order" : 1.0,
+    "voided" : true
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Any sowing activities initiated",
+  "uuid" : "fa542295-5f83-4196-b338-b777616a5f30",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "yes",
+    "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+    "order" : 0.0,
+    "voided" : true
+  }, {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 1.0
+  }, {
+    "name" : "no",
+    "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+    "order" : 1.0,
+    "voided" : true
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Aonla",
+  "uuid" : "14454b33-7c48-4749-a276-2b07e29bec4f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Aphids (colonies of small insects on tender parts)",
+  "uuid" : "4a180ad8-edd0-4b71-a0c0-944b7f6ce45e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "APL",
+  "uuid" : "2799fdc8-3173-426d-b782-1730ff877a42",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "April",
+  "uuid" : "c47e708b-8834-4a8f-8d38-4a0a58d1a06c",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Arandi Cake",
+  "uuid" : "9602a850-dfd8-4b46-a233-e553a6f36bcd",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Area",
+  "uuid" : "9a24afc8-287e-4cfc-ad70-7d12b9bc9318",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Acres",
+  "active" : true
+}, {
+  "name" : "Arendi Cake",
+  "uuid" : "44a33f9f-c6c6-4786-8d2c-defdb7ca0391",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Arhar",
+  "uuid" : "d15ddc07-be40-4797-b670-f99b37919cad",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Associate Farmer",
+  "uuid" : "4110d321-2979-4f5f-8b85-e9da731cde35",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Average Production per Acre",
+  "uuid" : "72496de8-7239-4488-adb7-e1a22a1d2d31",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Kg",
+  "active" : true,
+  "keyValues" : [ ]
+}, {
+  "name" : "Average Production per Acre - Kharif",
+  "uuid" : "1a34fe4a-4628-48c5-a70f-37cea81aa6cc",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Average Production per Acre - Rabi",
+  "uuid" : "d1838848-0200-495d-9727-861e6d7f80a2",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Average Production per Acre - Zaid",
+  "uuid" : "ca9ec90e-06e9-49c5-af73-ec3ced44f194",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Average Rate per kg",
+  "uuid" : "1ed06e37-87e6-4b78-869b-1a67c6d8b33b",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Ayushman Bharat",
+  "uuid" : "80bcd4af-420c-42cf-8aa7-b231aea3a89e",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "B",
+  "uuid" : "585462ab-97e3-4a79-8638-b26d21bc1c9e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Bajra",
+  "uuid" : "ce13022f-b13f-47b9-a127-dbdf1b693472",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Bank Loan",
+  "uuid" : "ce7f3a96-d1de-409d-9855-b6fb66f3a355",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Bank Loan Amount",
+  "uuid" : "ab95173a-8963-44b9-bcb8-7629b0de3312",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Bank Loan Interest",
+  "uuid" : "93e3d382-a4b7-49b7-9af6-88ee0b0fd876",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Bank Loan Purpose",
+  "uuid" : "c81ea7aa-9fc0-49d1-89ab-dde229438688",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Consumption (house, education, health, ceremony)",
+    "uuid" : "01951d67-e901-4e0b-bef9-412a1e8e7ce2",
+    "order" : 0.0
+  }, {
+    "name" : "Productive (crops, livestock)",
+    "uuid" : "342b1c4b-d915-4ddb-a792-0f1e63979e4c",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Banks",
+  "uuid" : "a8a113bb-7565-4492-83b7-13062f9a0965",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Nationalized Bank",
+    "uuid" : "fde3bba4-4ee0-42a9-8909-067e83b3c868",
+    "order" : 0.0
+  }, {
+    "name" : "Private Bank",
+    "uuid" : "b7b7222f-ef57-42f4-bbf0-1b1cfd4e4cc5",
+    "order" : 1.0
+  }, {
+    "name" : "Gramin Bank",
+    "uuid" : "662cf0ac-3c44-4e33-a6fe-e844d3012933",
+    "order" : 2.0
+  }, {
+    "name" : "Cooperative Society",
+    "uuid" : "9749406e-bd72-4579-8405-c465166a5e2d",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Barbed wire",
+  "uuid" : "a3c64439-1606-46f4-96e2-d26d489f6c0a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Barley",
+  "uuid" : "9376024c-780c-49f8-9f70-b43cb3e4afd6",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Beneficiary have a bank account",
+  "uuid" : "10e8be0a-783c-4049-92ec-e0e24b32264c",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Beneficiary have a bank account ?",
+  "uuid" : "08c7575f-e7fc-4ae7-9b08-bec8f07b818b",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "yes",
+    "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+    "order" : 0.0
+  }, {
+    "name" : "no",
+    "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Beneficiary ID",
+  "uuid" : "ae56384a-7630-41a0-8107-d19c09ebdd41",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Voter Card",
+    "uuid" : "388c4151-6a9b-4cd3-b5bd-f11beb320cd8",
+    "order" : 0.0
+  }, {
+    "name" : "Job card",
+    "uuid" : "f60f7f0b-e7dc-48f2-b4a5-1d02f1e2a669",
+    "order" : 1.0
+  }, {
+    "name" : "Other",
+    "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Beneficiary Name",
+  "uuid" : "0cc00099-4b63-4fde-8979-c4775baf6573",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Beneficiary Phone No",
+  "uuid" : "f048e623-f9a9-4321-a81f-9f810e04f925",
+  "dataType" : "PhoneNumber",
+  "active" : true,
+  "keyValues" : [ {
+    "key" : "verifyPhoneNumber",
+    "value" : false
+  } ]
+}, {
+  "name" : "Beneficiary Phone number",
+  "uuid" : "5ab42b01-0751-4707-a251-7b20d40a60b6",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Ber",
+  "uuid" : "8d47b3de-50e3-4548-b061-4902834e9e91",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Bio Stimulant sprayed",
+  "uuid" : "3c8a18f6-922a-462f-b61a-b8a793f3a440",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Black gram",
+  "uuid" : "edc64af3-d049-4e8a-978a-ca0eb9ad00c3",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Blindness",
+  "uuid" : "e15cafd9-4f3b-4630-8a44-30140544f4ff",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Bonemeal",
+  "uuid" : "83637f46-fb10-40a6-9c4f-d10c919cba61",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Border sowing",
+  "uuid" : "6e3e2368-28b1-4902-a220-e96826123d92",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Border Strip",
+  "uuid" : "7535d3de-1ca0-4662-9610-9689332d03d1",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Border Strip preparation",
+  "uuid" : "ad52c453-fa14-45f9-b6dc-db0e963fb318",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Border/Mix Crop Name",
+  "uuid" : "ed42c35b-35be-4651-8a61-743eac39e13f",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Bore well",
+  "uuid" : "3076897a-645b-4162-a278-60567e227500",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "BPL",
+  "uuid" : "d3d48146-840d-446c-8e07-a0b34289380a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Brak eating catterpillar (Chewed wood and excreta on branches)",
+  "uuid" : "a8bd83fe-6a36-4e5a-8e33-8724c1f900f9",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Brand/Make of wire",
+  "uuid" : "9bfcf525-71cb-4009-8b84-75cc1c94532d",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Breeder",
+  "uuid" : "a042f2e2-d6e8-4011-b160-440f957939ee",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Buffalo",
+  "uuid" : "0df92c7b-336e-4e90-81b0-9a1855b6729d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "C",
+  "uuid" : "ef4cbc46-5790-40a6-9da6-89057c0d7fdc",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Canal",
+  "uuid" : "4316e651-2d81-44c2-a7d1-53b6819e11f3",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Cannal",
+  "uuid" : "18d8a37c-040b-49c0-b11d-8023859a5631",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Canopy Management",
+  "uuid" : "70b80188-043e-4a0c-971f-16a6f89a2a95",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Capacity of drum",
+  "uuid" : "bce5cf2d-0fce-4710-92b7-795b00db6d8c",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "100 Liters",
+    "uuid" : "c9146013-d0d2-42ed-a41d-48046f4559e9",
+    "order" : 0.0
+  }, {
+    "name" : "200 Liters",
+    "uuid" : "7b51a6b2-0417-4797-90f3-5b363ea3bc58",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Carrot",
+  "uuid" : "cc83fae3-b93f-403b-8f52-2dc67b7dc0dd",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Cemented Pole",
+  "uuid" : "0309d5ef-b527-4b1a-b9e2-b14f55e0b22b",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Certified TL",
+  "uuid" : "44ca540b-253c-4fb8-a406-83b95e2bd456",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Chain link wire",
+  "uuid" : "b754ad54-deca-426f-a978-09a029f9fbc2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Chari",
+  "uuid" : "e7c998b1-14f0-4b0a-b004-83ae1dc25c55",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Checkdam",
+  "uuid" : "6e98d32d-614f-4683-8cec-2607b1a661c6",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Cleaning",
+  "uuid" : "2ddd24a3-cb5c-44dd-9e3d-b50156abda3a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Cluster Bean",
+  "uuid" : "9b505590-481b-4005-98ba-b19e78f673bd",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Community Pond",
+  "uuid" : "1079da6a-6891-4d3f-864e-c87420796c28",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Compost applied",
+  "uuid" : "474913be-4d7d-433e-adb0-1f5dbd203cd6",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Consumption (house, education, health, ceremony)",
+  "uuid" : "01951d67-e901-4e0b-bef9-412a1e8e7ce2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Cooperative Society",
+  "uuid" : "9749406e-bd72-4579-8405-c465166a5e2d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Cost of Angles/Poles",
+  "uuid" : "566ee119-992b-4ac0-ab6c-49160090134b",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Cost of Arandi cake Applied",
+  "uuid" : "88948c2b-57e4-4605-8954-d82be8f01967",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Cost of bonemeal applied",
+  "uuid" : "8927eccb-0a36-406b-9f41-56819b6c75bd",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Cost of drum",
+  "uuid" : "d24c700a-3104-4d67-b28f-3a59f862643f",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "highAbsolute" : 1200.0,
+  "active" : true
+}, {
+  "name" : "Cost of Ghanjeevamrit Applied",
+  "uuid" : "0b8f62bf-6c80-41be-8551-fb61005f629a",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Cost of gypsum applied",
+  "uuid" : "1438e1a1-182b-4357-9400-eac169642b71",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Cost of Integrated Pest Management (IPM)",
+  "uuid" : "4f68d7f4-4717-4523-9d2f-1dcf57dbd733",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Cost of land Preparation Practices",
+  "uuid" : "6f182ab9-d813-49d4-a327-7a9cd0f9ca9b",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Cost of Mahua cake Applied",
+  "uuid" : "003bb1b0-bcfc-46e7-bbdd-bca7ff40021e",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Cost of Neem cake Applied",
+  "uuid" : "0233800c-c0ad-4be7-9325-9b04052ebecd",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Cost of NPK consortia Applied",
+  "uuid" : "4b3f4696-926b-4396-888d-6bf850cacf49",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Cost of Nutrition Management",
+  "uuid" : "71897492-5ffc-4542-bbca-ac8f0e53a170",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Cost of other materials applied",
+  "uuid" : "a5bc9b01-6ea4-40c8-bb70-e1bc2ec00ce3",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Cost of Production",
+  "uuid" : "5dc4905f-4e96-475b-adb8-48cda32ad3e6",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Rs",
+  "active" : true
+}, {
+  "name" : "Cost of secateur",
+  "uuid" : "a20aaf7e-ca15-40ab-a6b2-50cad23ada2e",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "highAbsolute" : 300.0,
+  "active" : true
+}, {
+  "name" : "Cost of Seed",
+  "uuid" : "440a1d0c-2c20-4311-9849-bdaab3ce1676",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 1.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Cost of Sowing Management",
+  "uuid" : "2b3b6d99-3be1-441d-96b3-922db40b793e",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Cost of the Bio-Pesticide Used",
+  "uuid" : "21245092-770f-4738-b72e-38fd5dce255b",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Cost of the Nutrition management",
+  "uuid" : "cad301f4-3b94-4963-8304-038ffc5909f7",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Rs.",
+  "active" : true
+}, {
+  "name" : "Cost of Weed Management",
+  "uuid" : "c7ecd103-4682-4abe-b69f-5ec38745d37c",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "highNormal" : 500.0,
+  "unit" : "Rs",
+  "active" : true
+}, {
+  "name" : "Cow",
+  "uuid" : "cc239258-f666-4ec3-bcb2-6d9e9801f7ad",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Cowpea",
+  "uuid" : "d5db3f55-44bb-4e5d-86e3-bccce9364cc0",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Crop Details",
+  "uuid" : "364ce060-02e2-4930-bf41-84b803af6aff",
+  "dataType" : "QuestionGroup",
+  "active" : true
+}, {
+  "name" : "Crop name",
+  "uuid" : "092fcc4b-da80-44c4-adf6-257b9b5fa6dc",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Black gram",
+    "uuid" : "edc64af3-d049-4e8a-978a-ca0eb9ad00c3",
+    "order" : 1.0
+  }, {
+    "name" : "A",
+    "uuid" : "1d5d2734-2b63-456a-bfd0-099b92f27017",
+    "order" : 1.0,
+    "voided" : true
+  }, {
+    "name" : "B",
+    "uuid" : "585462ab-97e3-4a79-8638-b26d21bc1c9e",
+    "order" : 2.0,
+    "voided" : true
+  }, {
+    "name" : "Early Pegion pea",
+    "uuid" : "3da55d35-38d4-4adf-9ad0-6552265f4737",
+    "order" : 2.0
+  }, {
+    "name" : "C",
+    "uuid" : "ef4cbc46-5790-40a6-9da6-89057c0d7fdc",
+    "order" : 3.0,
+    "voided" : true
+  }, {
+    "name" : "Gram",
+    "uuid" : "6a40bace-73b7-4ddc-8483-a8081e637604",
+    "order" : 3.0
+  }, {
+    "name" : "Pea",
+    "uuid" : "b90777e7-fa0a-4d13-95ef-76076509c377",
+    "order" : 4.0
+  }, {
+    "name" : "Lentil",
+    "uuid" : "c50830b0-3009-49f9-897b-8b96a6113ccb",
+    "order" : 5.0
+  }, {
+    "name" : "Linseed",
+    "uuid" : "e58d8cb4-0a91-46fd-b603-5f82307f3eb4",
+    "order" : 6.0
+  }, {
+    "name" : "Green gram",
+    "uuid" : "a3d76033-fb19-4e59-925b-c5409d911788",
+    "order" : 7.0
+  }, {
+    "name" : "Cluster Bean",
+    "uuid" : "9b505590-481b-4005-98ba-b19e78f673bd",
+    "order" : 8.0
+  }, {
+    "name" : "Cowpea",
+    "uuid" : "d5db3f55-44bb-4e5d-86e3-bccce9364cc0",
+    "order" : 9.0
+  }, {
+    "name" : "Round Gourd",
+    "uuid" : "d7f66cb3-b7a1-4d84-8718-ad5c5db76483",
+    "order" : 10.0
+  }, {
+    "name" : "Lady's Finger",
+    "uuid" : "846f1324-de88-46ca-b2e1-53a64a62639d",
+    "order" : 11.0
+  }, {
+    "name" : "Spinach",
+    "uuid" : "dcac9dd8-b24f-4b75-b168-beff35b4785c",
+    "order" : 12.0
+  }, {
+    "name" : "Green Coriander",
+    "uuid" : "4ab5b6df-236a-41ca-8112-7b658f89930d",
+    "order" : 13.0
+  }, {
+    "name" : "Green Fenugreek",
+    "uuid" : "af4f8834-462d-4a2a-8cc0-c5a92bd4ff94",
+    "order" : 14.0
+  }, {
+    "name" : "Carrot",
+    "uuid" : "cc83fae3-b93f-403b-8f52-2dc67b7dc0dd",
+    "order" : 15.0
+  }, {
+    "name" : "Long melon",
+    "uuid" : "8ce24f68-6d0f-44fb-b39a-fb1a169f0415",
+    "order" : 16.0
+  } ]
+}, {
+  "name" : "Crop Name (voided~280489)",
+  "uuid" : "4dd1a027-3c48-49eb-a9f0-4ac7fbc3406f",
+  "dataType" : "Coded",
+  "active" : true,
+  "voided" : true,
+  "answers" : [ {
+    "name" : "A",
+    "uuid" : "1d5d2734-2b63-456a-bfd0-099b92f27017",
+    "order" : 0.0
+  } ]
+}, {
+  "name" : "Crop name (voided~280555)",
+  "uuid" : "34a7bc18-e17d-42f4-93d1-249034a06492",
+  "dataType" : "Coded",
+  "active" : true,
+  "voided" : true,
+  "answers" : [ {
+    "name" : "Kharif",
+    "uuid" : "58583b46-f8a3-486a-9903-9908899d44ef",
+    "order" : 0.0
+  }, {
+    "name" : "Zaid",
+    "uuid" : "c0f902da-88e1-4206-84ea-29a6e20ba51b",
+    "order" : 1.0
+  }, {
+    "name" : "Rabi",
+    "uuid" : "b167e259-fc52-4f34-8043-3416692f707b",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Crop type",
+  "uuid" : "dd54808e-9fda-4644-bc7b-abef33d19942",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Field crop",
+    "uuid" : "4faef2e5-5249-47bb-a288-fb1383b25baf",
+    "order" : 1.0
+  }, {
+    "name" : "Vegetable",
+    "uuid" : "543d9cbd-1a62-4084-96e0-58c88262f0a2",
+    "order" : 2.0
+  }, {
+    "name" : "Flower",
+    "uuid" : "ec042c02-e04e-4349-8ddc-b1b392828c0c",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Crop Type / Season",
+  "uuid" : "5f5f172c-3f12-4c95-8825-7b94d682ce77",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Kharif",
+    "uuid" : "58583b46-f8a3-486a-9903-9908899d44ef",
+    "order" : 0.0
+  }, {
+    "name" : "Rabi",
+    "uuid" : "b167e259-fc52-4f34-8043-3416692f707b",
+    "order" : 1.0
+  }, {
+    "name" : "Zaid",
+    "uuid" : "c0f902da-88e1-4206-84ea-29a6e20ba51b",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "CropName",
+  "uuid" : "9c3dfcb6-3bdb-40ed-9742-bc8ace2b07ec",
+  "dataType" : "QuestionGroup",
+  "active" : true
+}, {
+  "name" : "Cropping Details - Kharif",
+  "uuid" : "899b8a9a-5591-493f-a6e9-532b15158804",
+  "dataType" : "QuestionGroup",
+  "active" : true
+}, {
+  "name" : "Cropping Details - Rabi",
+  "uuid" : "18d9bfe0-3972-49bb-b3ef-abfdd44532f0",
+  "dataType" : "QuestionGroup",
+  "active" : true
+}, {
+  "name" : "Cropping Details - Zaid",
+  "uuid" : "7d99e6ef-1125-4b95-91f4-b2a49f301181",
+  "dataType" : "QuestionGroup",
+  "active" : true
+}, {
+  "name" : "Crops Name",
+  "uuid" : "b98f7abd-8d01-4412-9aa8-0817aa5f7074",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Wheat",
+    "uuid" : "5dc3df97-005d-4b88-b8af-9010f07af467",
+    "order" : 0.0,
+    "voided" : true
+  }, {
+    "name" : "Bajra",
+    "uuid" : "ce13022f-b13f-47b9-a127-dbdf1b693472",
+    "order" : 1.0,
+    "voided" : true
+  }, {
+    "name" : "Jowar",
+    "uuid" : "0f2905e4-98b9-4a16-a1b6-60c52f5e3c61",
+    "order" : 2.0,
+    "voided" : true
+  }, {
+    "name" : "Onion",
+    "uuid" : "aa2ec926-a4f6-4466-9e17-28bf508d4873",
+    "order" : 3.0
+  }, {
+    "name" : "Garlic",
+    "uuid" : "ad0377af-4db3-474d-89f3-36ae114621ec",
+    "order" : 4.0
+  }, {
+    "name" : "Spinach",
+    "uuid" : "dcac9dd8-b24f-4b75-b168-beff35b4785c",
+    "order" : 5.0
+  }, {
+    "name" : "Tomato",
+    "uuid" : "ba0d7fe2-339f-48ba-9708-1272334e3118",
+    "order" : 6.0
+  } ]
+}, {
+  "name" : "CSA Demonstration Area",
+  "uuid" : "8b4b1bdb-d4f5-4979-8744-56708407f060",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Acre",
+  "active" : true
+}, {
+  "name" : "Date of Sowing",
+  "uuid" : "ffe54f94-09f6-4439-a6b0-de9f228193d4",
+  "dataType" : "Date",
+  "active" : true
+}, {
+  "name" : "Date of Transplantation",
+  "uuid" : "0026a735-591c-4508-a4b5-d0f84aefa02b",
+  "dataType" : "Date",
+  "active" : true
+}, {
+  "name" : "Date of Visit",
+  "uuid" : "7ba30eb7-e2e9-4660-a42d-95a54cfcdcbf",
+  "dataType" : "Date",
+  "active" : true
+}, {
+  "name" : "December",
+  "uuid" : "be86f3b3-16bb-4871-a104-49cf3a4ba811",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Did any of your family members migrate",
+  "uuid" : "a82b20ce-80a6-4d61-9d52-faa10dd08799",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "yes",
+    "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+    "order" : 0.0,
+    "voided" : true
+  }, {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 1.0
+  }, {
+    "name" : "no",
+    "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+    "order" : 1.0,
+    "voided" : true
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Diversified Seed",
+  "uuid" : "6aad3208-d3db-45bd-9309-d609417723b9",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Do any of your family members have disability",
+  "uuid" : "c6d6380a-4eae-4954-817c-c2a208f67e4f",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "yes",
+    "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+    "order" : 0.0,
+    "voided" : true
+  }, {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 1.0
+  }, {
+    "name" : "no",
+    "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+    "order" : 1.0,
+    "voided" : true
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Do you have drinking water sources connection at home",
+  "uuid" : "5ef14b08-c277-4652-a529-747d3913a57e",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "yes",
+    "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+    "order" : 0.0,
+    "voided" : true
+  }, {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 1.0
+  }, {
+    "name" : "no",
+    "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+    "order" : 1.0,
+    "voided" : true
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Does any of your family members migrate",
+  "uuid" : "cf4dc849-3a43-4f5f-b5a1-0c5abe95afb2",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "yes",
+    "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+    "order" : 0.0
+  }, {
+    "name" : "no",
+    "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Doha",
+  "uuid" : "ffba7129-03c5-46f4-8c30-201ad015ff76",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Drip",
+  "uuid" : "4e891efc-2594-44ff-bcee-257438792f2f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Drip Set Power Tiller",
+  "uuid" : "592f4a03-f03d-477b-8419-7227d839d75e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Drying",
+  "uuid" : "4160eaee-1e2b-48dc-9859-2087b384fe7e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Early Pegion pea",
+  "uuid" : "3da55d35-38d4-4adf-9ad0-6552265f4737",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Education Qualification",
+  "uuid" : "ae4c4a0f-85b2-4037-a9d3-ddf74c3167d3",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "1-5",
+    "uuid" : "7fccb775-2e08-4ed3-addd-37be75fcd082",
+    "order" : 1.0
+  }, {
+    "name" : "6-10",
+    "uuid" : "f849255b-a059-4a99-9b4b-4810c3cafe06",
+    "order" : 2.0
+  }, {
+    "name" : "11-12",
+    "uuid" : "8d6d039a-31e9-402d-b43a-af8a6cddb849",
+    "order" : 3.0
+  }, {
+    "name" : "Graduation",
+    "uuid" : "950fd07b-0bb5-452d-ab08-4269e5c23281",
+    "order" : 4.0
+  }, {
+    "name" : "Other",
+    "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+    "order" : 5.0
+  } ]
+}, {
+  "name" : "Electricity Connection of the House",
+  "uuid" : "917631c3-32e0-4638-a3f5-e36e2462a629",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 1.0
+  }, {
+    "name" : "yes",
+    "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+    "order" : 1.0,
+    "voided" : true
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 2.0
+  }, {
+    "name" : "no",
+    "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+    "order" : 2.0,
+    "voided" : true
+  } ]
+}, {
+  "name" : "Family status",
+  "uuid" : "e63889e0-34b2-4862-80a8-aa1750c27a5b",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "APL",
+    "uuid" : "2799fdc8-3173-426d-b782-1730ff877a42",
+    "order" : 0.0
+  }, {
+    "name" : "BPL",
+    "uuid" : "d3d48146-840d-446c-8e07-a0b34289380a",
+    "abnormal" : true,
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Family Status",
+  "uuid" : "1f9c0bc1-c67f-4339-ab59-4edd39fb1874",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "APL",
+    "uuid" : "2799fdc8-3173-426d-b782-1730ff877a42",
+    "order" : 0.0
+  }, {
+    "name" : "BPL",
+    "uuid" : "d3d48146-840d-446c-8e07-a0b34289380a",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Farm Pond",
+  "uuid" : "27809eb9-5175-4b4e-9fca-ef5b62be3daa",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Farmer Type",
+  "uuid" : "97f801a6-343b-4d03-a1d5-fc80c4e01035",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Lead Farmer",
+    "uuid" : "87c7e983-93c8-4efe-be44-8a57534fce53",
+    "order" : 1.0
+  }, {
+    "name" : "Associate Farmer",
+    "uuid" : "4110d321-2979-4f5f-8b85-e9da731cde35",
+    "order" : 2.0
+  }, {
+    "name" : "Master Farmer",
+    "uuid" : "d77e23f0-8337-40ca-a3f4-fa616ccc4279",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Faromon Trap",
+  "uuid" : "ccc3eef2-bd8a-4443-8d58-b479f356580f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "February",
+  "uuid" : "2b0b70bc-94fb-4a96-9f84-74fa0e409193",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "female",
+  "uuid" : "197c1a98-66c1-4ddb-b4bb-3f8fc3afcc60",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Female children (under 18 years)",
+  "uuid" : "5f69f540-dccd-4c1d-b428-283ea8b01203",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "highAbsolute" : 18.0,
+  "active" : true
+}, {
+  "name" : "Fencing provided",
+  "uuid" : "9c2745b8-4cf3-4c56-b71e-7e708ba9d759",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Field crop",
+  "uuid" : "4faef2e5-5249-47bb-a288-fb1383b25baf",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Flood",
+  "uuid" : "2b2f73a5-48c5-42da-b6ae-cd013c243a63",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Flower",
+  "uuid" : "ec042c02-e04e-4349-8ddc-b1b392828c0c",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Foundation",
+  "uuid" : "9f4b991f-0a8a-469e-b03f-02ab46744379",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "FPO (Shareholders)",
+  "uuid" : "f5450b93-225b-4807-b31a-0026dcfb4b3c",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Fruit borer (hole in fruits)",
+  "uuid" : "930e3061-6096-492f-b6fa-8f5af0025f58",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Fruit plant list",
+  "uuid" : "bd58a2c9-a8bd-4a67-836e-0a1cf5ecd53e",
+  "dataType" : "QuestionGroup",
+  "active" : true
+}, {
+  "name" : "Fruitfly (Maggots in the fruit)",
+  "uuid" : "6a128905-8373-4977-a585-1ee948c4361e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Furrow",
+  "uuid" : "396f62e1-8081-4524-9c68-ef89619461e3",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "FYM",
+  "uuid" : "7c54c40b-17f7-4bbc-b3eb-1779470889e3",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "FYM applied",
+  "uuid" : "d0b87a1d-b3dc-436f-a955-bc1dfd88b056",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Garlic",
+  "uuid" : "ad0377af-4db3-474d-89f3-36ae114621ec",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "gender",
+  "uuid" : "aefc98f0-9537-4ee9-acf3-8d6ae6a58df5",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "male",
+    "uuid" : "d85197eb-a6f9-4b9d-96e5-a3107fa0bd7e",
+    "order" : 0.0
+  }, {
+    "name" : "female",
+    "uuid" : "197c1a98-66c1-4ddb-b4bb-3f8fc3afcc60",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Ghanajeevamrit",
+  "uuid" : "d6ef5430-e5a6-4439-b60f-9663507e3a5a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Ghanajeevamrit applied",
+  "uuid" : "ba360f1a-d875-456b-be19-d602a7366c17",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Ghanjeevamrut",
+  "uuid" : "e6892009-e046-4d2a-a508-0a8f8d63a44c",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Goat",
+  "uuid" : "71977069-06d8-42b1-bc70-829512ca710a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Grading",
+  "uuid" : "b4624d79-8446-4c39-bfde-f4cb443b2169",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Graduation",
+  "uuid" : "950fd07b-0bb5-452d-ab08-4269e5c23281",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Gram",
+  "uuid" : "6a40bace-73b7-4ddc-8483-a8081e637604",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Gramin Bank",
+  "uuid" : "662cf0ac-3c44-4e33-a6fe-e844d3012933",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Green Coriander",
+  "uuid" : "4ab5b6df-236a-41ca-8112-7b658f89930d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Green Fenugreek",
+  "uuid" : "af4f8834-462d-4a2a-8cc0-c5a92bd4ff94",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Green gram",
+  "uuid" : "a3d76033-fb19-4e59-925b-c5409d911788",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Groundnut",
+  "uuid" : "269cffa8-a20a-4ea7-8f27-3eec75bbf3d1",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Guar",
+  "uuid" : "daae1abd-d083-428b-8173-62ca039f2950",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Guava",
+  "uuid" : "5e2992ff-f428-4471-862f-6a664b66bbb6",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Gypsum",
+  "uuid" : "8906f8c4-7530-464d-83c9-cbd5f54a53b1",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Hand Picking",
+  "uuid" : "bdc64d16-cc58-43d0-91fd-dd0ff40307c9",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Hand weeding",
+  "uuid" : "a46ac25e-5d7a-4bc7-b6ee-b771060d5dbe",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Have a toilet",
+  "uuid" : "bf4e1add-e2c2-462b-95f6-36744333b64e",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "yes",
+    "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+    "order" : 0.0,
+    "voided" : true
+  }, {
+    "name" : "no",
+    "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+    "order" : 1.0,
+    "voided" : true
+  }, {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 1.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Have you adopted any improved practice for Pest & Weed Management?",
+  "uuid" : "f5dbd24e-10d7-4b2c-8065-811142afac85",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "yes",
+    "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+    "order" : 0.0
+  }, {
+    "name" : "no",
+    "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Have you adopted any improved practice for Post Harvesting",
+  "uuid" : "403ac9b2-7db3-4146-91da-76caf8db9740",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "yes",
+    "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+    "order" : 0.0,
+    "voided" : true
+  }, {
+    "name" : "no",
+    "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+    "order" : 1.0,
+    "voided" : true
+  }, {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 1.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Have you adopted any improved practice for Soil Health & Nutrition?",
+  "uuid" : "f941b4c9-e221-4422-baed-58323e023888",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "yes",
+    "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+    "order" : 0.0
+  }, {
+    "name" : "no",
+    "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Have you adopted any improved practices for Land Preparation?",
+  "uuid" : "ba300f3d-e484-49d7-a6d6-fbf02d8626a4",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "yes",
+    "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+    "order" : 0.0
+  }, {
+    "name" : "no",
+    "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Have you adopted any improved practices for Seed Treatment and Sowing?",
+  "uuid" : "789e015a-db35-4cdd-a838-5191b3c44a77",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "yes",
+    "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+    "order" : 0.0
+  }, {
+    "name" : "no",
+    "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Health",
+  "uuid" : "1461d238-8e3a-41d5-9644-80593e9647bb",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Hearing and Speech Impairment",
+  "uuid" : "c72b08c1-2070-4c84-8d2c-f84115e2e85b",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "House type",
+  "uuid" : "5f75b641-545f-4570-a13c-aa31a40df6d1",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Pakka",
+    "uuid" : "675ba2b2-27d9-4962-8992-34071b4ad7d2",
+    "order" : 1.0
+  }, {
+    "name" : "Kaccha",
+    "uuid" : "32071d3a-1a82-4415-ba0f-800ab06d15fe",
+    "order" : 2.0
+  }, {
+    "name" : "Semi - Pakka",
+    "uuid" : "055c9962-1400-4451-9ca4-b1ee7e4a10c4",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Household Consumption",
+  "uuid" : "625438a7-876a-480c-9e40-5da6fec66cfb",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Kg",
+  "active" : true
+}, {
+  "name" : "How many of your family members are disable",
+  "uuid" : "fb2233bf-e085-477c-8782-462837848da6",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "How many plant have did canopy management",
+  "uuid" : "e22ba9dd-2fdc-41c3-81fa-e28e7f4fcca6",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Husband/Father's Name",
+  "uuid" : "e189734f-9397-4a9a-9365-d0643929216e",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "ID Number",
+  "uuid" : "d224180f-6037-47fc-af25-75650fee1c4c",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "If Other, Please mention ( disability type )",
+  "uuid" : "536ccd0c-0832-431b-8b7e-c4d55ae53d22",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "If yes which of the following practices have been adopted?",
+  "uuid" : "f44a4738-b26d-4a16-aadd-d11dda87bb2f",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "A",
+    "uuid" : "1d5d2734-2b63-456a-bfd0-099b92f27017",
+    "order" : 0.0
+  }, {
+    "name" : "B",
+    "uuid" : "585462ab-97e3-4a79-8638-b26d21bc1c9e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "If yes, Please mention the adopted Seed management adopted",
+  "uuid" : "2e4d7cec-a7db-43bf-910c-100ee1422888",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Diversified Seed",
+    "uuid" : "6aad3208-d3db-45bd-9309-d609417723b9",
+    "order" : 0.0
+  }, {
+    "name" : "Seed Treatment",
+    "uuid" : "ca466c6b-d590-445a-b9d8-73f4e6506795",
+    "order" : 1.0
+  }, {
+    "name" : "Seed Treatment,",
+    "uuid" : "9bb0c791-450c-4eff-90a8-99068557b08c",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "In Which Plant have you did Canopy Management",
+  "uuid" : "910a4660-d8ad-4d68-a80c-c3d322c98c53",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Aonla",
+    "uuid" : "14454b33-7c48-4749-a276-2b07e29bec4f",
+    "order" : 1.0
+  }, {
+    "name" : "Ber",
+    "uuid" : "8d47b3de-50e3-4548-b061-4902834e9e91",
+    "order" : 2.0
+  }, {
+    "name" : "Amla",
+    "uuid" : "fafe06ae-37bf-477b-bf10-419765907c66",
+    "order" : 3.0,
+    "voided" : true
+  }, {
+    "name" : "Guava",
+    "uuid" : "5e2992ff-f428-4471-862f-6a664b66bbb6",
+    "order" : 3.0
+  }, {
+    "name" : "Jamun",
+    "uuid" : "8806cb63-8e00-4cd0-a88f-885b82e5a6ad",
+    "order" : 4.0
+  }, {
+    "name" : "Jackfruit",
+    "uuid" : "f43a9898-dd26-44b9-a60f-56044198de4b",
+    "order" : 5.0
+  }, {
+    "name" : "Lemon",
+    "uuid" : "9b930b80-67d6-43d4-ac48-83978a32f12d",
+    "order" : 6.0
+  }, {
+    "name" : "Mango",
+    "uuid" : "ac169e86-e440-4ead-bfe7-1dd82d3a04a0",
+    "order" : 7.0
+  }, {
+    "name" : "Sweet lime",
+    "uuid" : "6aff16d6-986b-4038-8f50-2e485d52d014",
+    "order" : 8.0
+  }, {
+    "name" : "Other",
+    "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+    "order" : 9.0
+  } ]
+}, {
+  "name" : "Income realized from market",
+  "uuid" : "828102c0-edb9-4198-8548-e2aa07c26fca",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Integrated Pest Management",
+  "uuid" : "dba85ab5-d1de-489c-b15e-840eaee5df1a",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Integrated Pest Management (IPM)",
+  "uuid" : "039a2408-689e-41b5-9d9a-4e077b888ff5",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Integrated Pest Management Details",
+  "uuid" : "1f4e7694-72c7-4b8f-9872-2494713a3678",
+  "dataType" : "QuestionGroup",
+  "active" : true
+}, {
+  "name" : "Inter cropping",
+  "uuid" : "20058b23-87bc-4342-8b8b-d3ebcf9340af",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Irigation Management",
+  "uuid" : "7c4758fc-d837-4bc5-adf3-eb9abc5b3fb2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Iron Angle",
+  "uuid" : "c99172fe-0f8b-4152-b6f6-90328ae96c40",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Irrigarion Source",
+  "uuid" : "27de2dd1-6065-4e71-b8b3-874e3dbdeb41",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Irrigated Area",
+  "uuid" : "14deb862-68c8-4b1e-911c-84daecd2ed72",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Acre",
+  "active" : true
+}, {
+  "name" : "Irrigation",
+  "uuid" : "8ad802a4-07db-407b-afa4-c83334a41cfc",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Irrigation Management",
+  "uuid" : "8e82881a-e68d-4874-a12c-954eb71d8a27",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Irrigation source, please mention type of irrigation source",
+  "uuid" : "80aa797f-b528-4ea7-89e8-45dbba6f2570",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Bore well",
+    "uuid" : "3076897a-645b-4162-a278-60567e227500",
+    "order" : 0.0
+  }, {
+    "name" : "Farm Pond",
+    "uuid" : "27809eb9-5175-4b4e-9fca-ef5b62be3daa",
+    "order" : 1.0
+  }, {
+    "name" : "Community Pond",
+    "uuid" : "1079da6a-6891-4d3f-864e-c87420796c28",
+    "order" : 2.0
+  }, {
+    "name" : "Well",
+    "uuid" : "a4f2d759-2cb0-4f7c-b0b0-28e498732c77",
+    "order" : 3.0
+  }, {
+    "name" : "Canal",
+    "uuid" : "4316e651-2d81-44c2-a7d1-53b6819e11f3",
+    "order" : 4.0
+  }, {
+    "name" : "Stopdam",
+    "uuid" : "cbb6b4a6-8c34-423d-8925-b28c0b0ef200",
+    "order" : 5.0
+  }, {
+    "name" : "Other",
+    "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+    "order" : 6.0
+  } ]
+}, {
+  "name" : "Is crop card plot",
+  "uuid" : "6518e9f7-e29e-44e4-9205-52534fffa86d",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Is this plot part of Crop Cutting experiment",
+  "uuid" : "a604ffa4-39c7-46f1-af8f-c11dcf3291a1",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Is this plot part of Crop Cutting experiment?",
+  "uuid" : "8ee8b72d-7692-4d90-b0c0-0e074b1ef46b",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "yes",
+    "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+    "order" : 0.0
+  }, {
+    "name" : "no",
+    "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Jackfruit",
+  "uuid" : "f43a9898-dd26-44b9-a60f-56044198de4b",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Jamun",
+  "uuid" : "8806cb63-8e00-4cd0-a88f-885b82e5a6ad",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "January",
+  "uuid" : "6bf021f9-626d-4986-9322-1e4b4c6cb3fe",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Jassids (Yellowing and upward curling of leaves)",
+  "uuid" : "589909ce-a279-49c7-8b5d-bedff7af1c22",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Jeevamrit",
+  "uuid" : "f1320ea8-708c-4ba8-b7cc-938dc504f1cd",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Jeevamrit applied in soil",
+  "uuid" : "9c4f9b5f-9c5d-4f83-80e2-d35678640c7f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Jeevamrit sprayed",
+  "uuid" : "dfbc41b4-d758-4b3e-b67a-f46212f03085",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Job card",
+  "uuid" : "f60f7f0b-e7dc-48f2-b4a5-1d02f1e2a669",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Jowar",
+  "uuid" : "0f2905e4-98b9-4a16-a1b6-60c52f5e3c61",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "June",
+  "uuid" : "f2691d3b-4a6f-4d1a-a67b-6e5e605d25fb",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Kaccha",
+  "uuid" : "32071d3a-1a82-4415-ba0f-800ab06d15fe",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Kharif",
+  "uuid" : "58583b46-f8a3-486a-9903-9908899d44ef",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Kharif Area",
+  "uuid" : "edf62721-c124-45bc-bae3-a862ff50274c",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Acre",
+  "active" : true
+}, {
+  "name" : "Kisan Samman Nidhi",
+  "uuid" : "c695b536-fdc8-47c1-87ed-78b3291688ef",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Labour",
+  "uuid" : "dd532c14-fab6-4740-99e1-e3d51ba4267e",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Lady's Finger",
+  "uuid" : "846f1324-de88-46ca-b2e1-53a64a62639d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Land Preparation",
+  "uuid" : "43e9ea68-f1f8-4e64-bcbe-ab0911703c0f",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "yes",
+    "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+    "order" : 0.0,
+    "voided" : true
+  }, {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 1.0
+  }, {
+    "name" : "no",
+    "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+    "order" : 1.0,
+    "voided" : true
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Land Preparation activities initiated",
+  "uuid" : "1bf4cf5b-f257-43f9-b273-bbe8fdb2487a",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Layout date",
+  "uuid" : "e0935e96-4164-4161-9f7f-b88681628fa1",
+  "dataType" : "Date",
+  "active" : true
+}, {
+  "name" : "Lead Farmer",
+  "uuid" : "87c7e983-93c8-4efe-be44-8a57534fce53",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Leaf minor (White blotches on leaves)",
+  "uuid" : "13709b72-39e5-4fdd-b602-f57f606f8040",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Lemon",
+  "uuid" : "9b930b80-67d6-43d4-ac48-83978a32f12d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Lentil",
+  "uuid" : "c50830b0-3009-49f9-897b-8b96a6113ccb",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Levelling",
+  "uuid" : "93d919d0-3e24-45a5-8f81-285ab6a4e8b9",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Life Insurance",
+  "uuid" : "dae94730-b7b2-4d85-97b0-65344cf75791",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Light Trap",
+  "uuid" : "6fb4536a-06b2-4212-84ea-a2bbc552a3e1",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Line sowing",
+  "uuid" : "2e9b4dca-6ff4-4f53-94c7-41e72193d684",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Linseed",
+  "uuid" : "e58d8cb4-0a91-46fd-b603-5f82307f3eb4",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Livestock",
+  "uuid" : "37a577ef-21de-4453-afe9-e3ce05ea8bbb",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Loan Amount",
+  "uuid" : "3f96e1d6-14b8-47dc-b04e-036612befa3b",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Loan Interest",
+  "uuid" : "bdaceadc-082c-4b4b-871d-564437b47b9a",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Locomotor Disability",
+  "uuid" : "795095c6-43cf-40cd-9867-9fdd1aef9a67",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Long melon",
+  "uuid" : "8ce24f68-6d0f-44fb-b39a-fb1a169f0415",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Mahua Cake",
+  "uuid" : "194fc53e-c5d3-4277-ac1f-e01f1ce6c0bf",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Maize",
+  "uuid" : "53a54144-0738-417e-a26c-b6989b55206e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Make/Brand of secateur",
+  "uuid" : "90d62dd6-f396-424d-9927-b0e93d52e6d2",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "male",
+  "uuid" : "d85197eb-a6f9-4b9d-96e5-a3107fa0bd7e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Male children (under 18 years)",
+  "uuid" : "d53c2b7c-3d24-4a1c-8668-f57bedd81ddd",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "highAbsolute" : 18.0,
+  "active" : true
+}, {
+  "name" : "Mango",
+  "uuid" : "ac169e86-e440-4ead-bfe7-1dd82d3a04a0",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Manure Details",
+  "uuid" : "885db988-32a2-401d-8703-967944d27e6e",
+  "dataType" : "QuestionGroup",
+  "active" : true
+}, {
+  "name" : "March",
+  "uuid" : "69704338-2832-4d5a-b636-31c98c114d54",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Marital Status",
+  "uuid" : "7fa6d933-6f58-4e89-ae57-e9ad718ebedd",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Married",
+    "uuid" : "f032d77c-cefc-4e4b-b83e-863d6274909f",
+    "order" : 0.0
+  }, {
+    "name" : "Unmarried",
+    "uuid" : "7ba29635-a2fe-4029-b3da-97a75f2a699d",
+    "order" : 1.0
+  }, {
+    "name" : "Widow",
+    "uuid" : "178ca8f5-6f8b-4fc3-aab3-e588cf6f08be",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Married",
+  "uuid" : "f032d77c-cefc-4e4b-b83e-863d6274909f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Master Farmer",
+  "uuid" : "d77e23f0-8337-40ca-a3f4-fa616ccc4279",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "May",
+  "uuid" : "d2ee97ce-b5d7-47d9-8e81-3fd4641d7fcb",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Mental Illness",
+  "uuid" : "ce7eab16-285e-4055-bf8d-a3eb673274d0",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "MGNREGA",
+  "uuid" : "28a8ab07-54c4-4105-a250-e8f5057768a7",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Microenterprise",
+  "uuid" : "83080a21-9aff-49ed-a124-51e7c4212859",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Money lenders",
+  "uuid" : "17ad8957-4405-419c-acc7-80ecd3b95dac",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Money lenders Loan Amount",
+  "uuid" : "40a13514-ecbd-471a-b767-5d13a1b941ec",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Money lenders Loan Interest",
+  "uuid" : "c2863222-fa56-4965-9c59-1581dfa71eb6",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Motorcycle/Scooter",
+  "uuid" : "aa2fed36-ca3f-4647-9625-f956f2a9226a",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Mulching",
+  "uuid" : "d8eb23d5-b520-4c85-8e26-cf1d738ea217",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Mung",
+  "uuid" : "4fe97af9-ceff-4682-bce7-9415537f21f1",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Mustard",
+  "uuid" : "dd8309bc-2927-491e-9cf6-c2b853328c12",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Name of Agriculture Properties",
+  "uuid" : "94085723-00ab-4700-9990-5068fe565ad3",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Pump Set",
+    "uuid" : "dd869f1f-a55d-4e26-87fa-9b487d1bbcfe",
+    "order" : 0.0
+  }, {
+    "name" : "Tractor Trolley",
+    "uuid" : "d9b8416f-9a4a-4ff0-8e48-d97bec56ef76",
+    "order" : 1.0
+  }, {
+    "name" : "Sprinkler Set",
+    "uuid" : "dcb13bc0-0f46-4ebf-af71-482de1341952",
+    "order" : 2.0
+  }, {
+    "name" : "Drip Set Power Tiller",
+    "uuid" : "592f4a03-f03d-477b-8419-7227d839d75e",
+    "order" : 3.0
+  }, {
+    "name" : "Irrigarion Source",
+    "uuid" : "27de2dd1-6065-4e71-b8b3-874e3dbdeb41",
+    "order" : 4.0
+  }, {
+    "name" : "Other",
+    "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+    "order" : 5.0
+  } ]
+}, {
+  "name" : "Name of Agriculture Properties (voided~350564)",
+  "uuid" : "4b863786-4e94-4982-91c5-6daaf08a08a7",
+  "dataType" : "Text",
+  "active" : true,
+  "voided" : true
+}, {
+  "name" : "Name of crop (voided~303718)",
+  "uuid" : "5113534f-311d-4ada-aaed-54b9c25b6ee5",
+  "dataType" : "Coded",
+  "active" : true,
+  "voided" : true,
+  "answers" : [ {
+    "name" : "Onion",
+    "uuid" : "aa2ec926-a4f6-4466-9e17-28bf508d4873",
+    "order" : 0.0
+  }, {
+    "name" : "Garlic",
+    "uuid" : "ad0377af-4db3-474d-89f3-36ae114621ec",
+    "order" : 1.0
+  }, {
+    "name" : "Spinach",
+    "uuid" : "dcac9dd8-b24f-4b75-b168-beff35b4785c",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Name of other materials applied",
+  "uuid" : "a3830445-4511-454f-9b62-2c851c97527b",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Name of the Bio-Pestcide used",
+  "uuid" : "c34f4b0d-4884-4900-9f52-b286f97a724a",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Name of the crop",
+  "uuid" : "1aa9cdf8-5762-4a9c-bd46-4e252164bfb0",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Onion",
+    "uuid" : "aa2ec926-a4f6-4466-9e17-28bf508d4873",
+    "order" : 1.0
+  }, {
+    "name" : "Spinach",
+    "uuid" : "dcac9dd8-b24f-4b75-b168-beff35b4785c",
+    "order" : 2.0
+  }, {
+    "name" : "Garlic",
+    "uuid" : "ad0377af-4db3-474d-89f3-36ae114621ec",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Name of the Fruit Plant",
+  "uuid" : "bfa64304-4a0a-4858-870e-c0ffc32e1297",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Aonla",
+    "uuid" : "14454b33-7c48-4749-a276-2b07e29bec4f",
+    "order" : 1.0
+  }, {
+    "name" : "Ber",
+    "uuid" : "8d47b3de-50e3-4548-b061-4902834e9e91",
+    "order" : 2.0
+  }, {
+    "name" : "Guava",
+    "uuid" : "5e2992ff-f428-4471-862f-6a664b66bbb6",
+    "order" : 3.0
+  }, {
+    "name" : "Amla",
+    "uuid" : "fafe06ae-37bf-477b-bf10-419765907c66",
+    "order" : 3.0,
+    "voided" : true
+  }, {
+    "name" : "Jamun",
+    "uuid" : "8806cb63-8e00-4cd0-a88f-885b82e5a6ad",
+    "order" : 4.0
+  }, {
+    "name" : "Jackfruit",
+    "uuid" : "f43a9898-dd26-44b9-a60f-56044198de4b",
+    "order" : 5.0
+  }, {
+    "name" : "Lemon",
+    "uuid" : "9b930b80-67d6-43d4-ac48-83978a32f12d",
+    "order" : 6.0
+  }, {
+    "name" : "Mango",
+    "uuid" : "ac169e86-e440-4ead-bfe7-1dd82d3a04a0",
+    "order" : 7.0
+  }, {
+    "name" : "Sweet lime",
+    "uuid" : "6aff16d6-986b-4038-8f50-2e485d52d014",
+    "order" : 8.0
+  }, {
+    "name" : "Other",
+    "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+    "order" : 9.0
+  } ]
+}, {
+  "name" : "Name of the main crop",
+  "uuid" : "a2a7c060-cf8f-4eff-a6a7-d14a54d413e8",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Name of the Manure Used",
+  "uuid" : "80918f25-28c7-4f4d-b5ef-074edbf9cccd",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Name of the Manure Used in Nutrition Management",
+  "uuid" : "f570f49d-a05d-4969-a78b-9a08618fc364",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "FYM",
+    "uuid" : "7c54c40b-17f7-4bbc-b3eb-1779470889e3",
+    "order" : 0.0
+  }, {
+    "name" : "Ghanajeevamrit",
+    "uuid" : "d6ef5430-e5a6-4439-b60f-9663507e3a5a",
+    "order" : 1.0
+  }, {
+    "name" : "Vermicompost",
+    "uuid" : "bbd4b0f7-3788-48fc-86ed-fee39451e84c",
+    "order" : 2.0
+  }, {
+    "name" : "Jeevamrit",
+    "uuid" : "f1320ea8-708c-4ba8-b7cc-938dc504f1cd",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Name of tools with Make/Brand",
+  "uuid" : "9d3f1076-90aa-4907-9c23-90d296e28758",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Nationalized Bank",
+  "uuid" : "fde3bba4-4ee0-42a9-8909-067e83b3c868",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Neem Cake",
+  "uuid" : "6522efd2-37ba-4075-aa2f-a72c492d277b",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Nematode (Yellowness & stuning growth of plant)",
+  "uuid" : "b154b9fe-82b9-428e-af22-4656a12c45bb",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "no",
+  "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "No",
+  "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Nominated as Master Farmer",
+  "uuid" : "f8c5f4c0-58cb-4085-a2c4-2d414078ce58",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "NPK Consortia",
+  "uuid" : "53e47054-b482-49af-a476-e0373d6cfdf3",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "NPK Consotia applied",
+  "uuid" : "f0ad53d2-e37c-4e4b-b0de-30d9b9dd2ad2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "NTFP",
+  "uuid" : "99b4addf-57da-4d0d-a4ae-91866943dbae",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Number Animal",
+  "uuid" : "5f6291ec-0799-4dfb-ac87-2d223a73f6ad",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Number of Amla plant",
+  "uuid" : "43a3185f-d796-483d-8000-59d41f6ef2fc",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of days migrated",
+  "uuid" : "739647eb-4031-45e7-9114-bb53dfd5d3ff",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Number of Fruiting Plant",
+  "uuid" : "1caaedae-bda3-4ac8-a2ff-8c83b62e9288",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Number of Fruiting Plant - Kharif",
+  "uuid" : "1820edbe-c635-4816-bec1-baa284307db1",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of Fruiting Plant - Rabi",
+  "uuid" : "150342cb-46f8-4685-a7da-23d5cf8e076f",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of Fruiting Plant - Zaid",
+  "uuid" : "c094bc03-2665-43dd-b792-fbb84415d192",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of Guava plant",
+  "uuid" : "8ff000cf-08b0-46f7-bb00-6ef57de29d50",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of Lemon plant",
+  "uuid" : "0cb1d1b0-5fa8-4af5-996a-1134da24a223",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of lived plant lemon",
+  "uuid" : "599b63e3-85ca-42c7-a591-64c50398ca9d",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of plant 1",
+  "uuid" : "a695397a-09b4-4633-9f38-6117dd96062e",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of plants",
+  "uuid" : "4a3b7494-e2e6-4a0b-aace-374c8e58204f",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "lowNormal" : 0.0,
+  "active" : true
+}, {
+  "name" : "Number of survivors",
+  "uuid" : "8a383a38-b585-4001-82e7-db855f1e5d98",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of the fruit plant Amla",
+  "uuid" : "e50a749e-5fd0-4826-b0d3-f37831d538fb",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of the Fruit Plant Guava",
+  "uuid" : "f4d0bd5d-4a45-4a46-bc11-58cbded9bc8b",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of the fruit plant Guava",
+  "uuid" : "49a1feae-2a4c-4e24-a8a5-b994d20ca25b",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of the Fruit Plant Lemon",
+  "uuid" : "d01411a0-11d2-4539-950a-0290c5c0c6ca",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of the fruit Plant lemon",
+  "uuid" : "ffd3f1be-4311-402a-a66d-97f24718333c",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of the Fruit Plant Mango",
+  "uuid" : "58572df7-8606-4848-a231-87bb32139ee1",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Number of the fruit Plant Mango",
+  "uuid" : "acb12f02-8349-4573-aeaa-cfbd94916523",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Nutrition Management",
+  "uuid" : "a93449cb-0d93-4bdb-8f94-ad72398a2cbc",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Nutrition management Practices",
+  "uuid" : "45c2f40f-333e-4756-9e2b-d3ba7acf6721",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "A",
+    "uuid" : "1d5d2734-2b63-456a-bfd0-099b92f27017",
+    "order" : 0.0,
+    "voided" : true
+  }, {
+    "name" : "B",
+    "uuid" : "585462ab-97e3-4a79-8638-b26d21bc1c9e",
+    "order" : 1.0,
+    "voided" : true
+  }, {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 1.0
+  }, {
+    "name" : "C",
+    "uuid" : "ef4cbc46-5790-40a6-9da6-89057c0d7fdc",
+    "order" : 2.0,
+    "voided" : true
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Onion",
+  "uuid" : "aa2ec926-a4f6-4466-9e17-28bf508d4873",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Other",
+  "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Other agriculture properties",
+  "uuid" : "c8937586-b960-4da3-99dd-c5f31ac689ae",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other CSA practice adopted, please specify",
+  "uuid" : "f6c0ffa5-47de-460f-b93a-9999e5b2a3f1",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other disability",
+  "uuid" : "262ff584-e3bc-4e23-a65e-23a3c1eba9d6",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other education qualification",
+  "uuid" : "f12b796c-633b-46e4-b7bd-86af6fcea66c",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other fruit plant",
+  "uuid" : "d48dc606-6120-4ddc-a114-6d088f34e762",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other harvesting practise please specify",
+  "uuid" : "67e3e9fe-8efa-433d-b092-d9280edfed60",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other ID",
+  "uuid" : "7bd675b0-ef82-4e91-a388-d3ff7f7fd5c0",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other inputs used, please specify",
+  "uuid" : "73ed84ca-6626-442d-9236-a792dcff7699",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other Irrigation source",
+  "uuid" : "9d66ee03-f0a7-413d-976f-94fe96684c5c",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other month it will provide irrigation water",
+  "uuid" : "1193d58f-7481-48e1-9eed-34148e228424",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other nutrition management practice adopted",
+  "uuid" : "a7262bef-ac78-41f4-8f75-66b290279ce4",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other Orchard Management practices adopted",
+  "uuid" : "46d661a3-d83c-4f25-951b-f4249ff3e9c4",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other pest or symptoms used,",
+  "uuid" : "239b78d4-3b15-4835-bcfc-9bdb58d6fb37",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other pit size, please specify",
+  "uuid" : "7000ac02-d1c3-4fbe-8cdb-10d344ea7760",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other plant",
+  "uuid" : "94d584eb-3c35-4117-9278-12069b23740b",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other plant canopy management done for",
+  "uuid" : "ce1e8604-441b-4d15-a37f-c91872d6c8bb",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other practices adopted",
+  "uuid" : "3c7ef754-627a-4fc1-bb92-986acdfd1833",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other Seed management adopted",
+  "uuid" : "b0abfe4f-c671-4f53-afc4-44db4a85d27a",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other source of irrigation please specify",
+  "uuid" : "5ff598a9-1695-4e61-b393-0b2468f1ebb3",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other type of angle/pole, please specify",
+  "uuid" : "3b0c4ab5-bc14-435a-a22b-c530209652e4",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Other, sowing management adopted",
+  "uuid" : "cde6f3a8-5dea-4d17-869e-0d32e7ba7ed3",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Others",
+  "uuid" : "41af5b53-1c4a-49d5-96b0-a5e2051f691b",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Others Family Annual Income, please specify",
+  "uuid" : "04dbcb5e-a7f9-4fd3-bf63-1c01eee4310b",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Own",
+  "uuid" : "c31b1ce3-fc75-4678-b2f3-b9178ecc8360",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Paddy",
+  "uuid" : "a508740e-7b71-4bb0-850e-3e48ccf0848f",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Pakka",
+  "uuid" : "675ba2b2-27d9-4962-8992-34071b4ad7d2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "PDS",
+  "uuid" : "c5295795-8bcc-4fb7-a4ad-a49a30682112",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Pea",
+  "uuid" : "b90777e7-fa0a-4d13-95ef-76076509c377",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Perennial",
+  "uuid" : "6b30369a-f44b-4349-97fd-1278cf60e636",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Pest Management",
+  "uuid" : "07729542-0e74-4f71-b74c-1fa4cde23c29",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Pest Management Year",
+  "uuid" : "1690f219-075b-4f9a-ae98-547099be3114",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "1st",
+    "uuid" : "d14396f8-a6ac-4875-aaed-a9d8ef04e239",
+    "order" : 0.0
+  }, {
+    "name" : "2nd",
+    "uuid" : "a9680646-53f5-4ecc-9d53-15055d491a69",
+    "order" : 1.0
+  }, {
+    "name" : "3rd",
+    "uuid" : "8b82be71-3add-47be-bf85-f1c38d44447a",
+    "order" : 2.0
+  }, {
+    "name" : "4th",
+    "uuid" : "eff8e112-af15-414f-8cf3-897115dbff09",
+    "order" : 3.0
+  }, {
+    "name" : "5th and more",
+    "uuid" : "e9aaeaeb-aed4-4277-9882-b24e263edafc",
+    "order" : 4.0
+  } ]
+}, {
+  "name" : "Pest or Symptoms Name",
+  "uuid" : "005f757b-1e5b-494e-9ee0-6d5be36f72f7",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Pest or Symptoms Name used for Pest Management",
+  "uuid" : "b3fa24b7-112d-4424-9b0b-8c21e82040af",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Nematode (Yellowness & stuning growth of plant)",
+    "uuid" : "b154b9fe-82b9-428e-af22-4656a12c45bb",
+    "order" : 1.0
+  }, {
+    "name" : "Stem borer (Holes in stem)",
+    "uuid" : "c6d4a1cb-c51b-4049-b5b3-676377f549b7",
+    "order" : 2.0
+  }, {
+    "name" : "Brak eating catterpillar (Chewed wood and excreta on branches)",
+    "uuid" : "a8bd83fe-6a36-4e5a-8e33-8724c1f900f9",
+    "order" : 3.0
+  }, {
+    "name" : "Leaf minor (White blotches on leaves)",
+    "uuid" : "13709b72-39e5-4fdd-b602-f57f606f8040",
+    "order" : 4.0
+  }, {
+    "name" : "Fruitfly (Maggots in the fruit)",
+    "uuid" : "6a128905-8373-4977-a585-1ee948c4361e",
+    "order" : 5.0
+  }, {
+    "name" : "Fruit borer (hole in fruits)",
+    "uuid" : "930e3061-6096-492f-b6fa-8f5af0025f58",
+    "order" : 6.0
+  }, {
+    "name" : "Aphids (colonies of small insects on tender parts)",
+    "uuid" : "4a180ad8-edd0-4b71-a0c0-944b7f6ce45e",
+    "order" : 7.0
+  }, {
+    "name" : "Jassids (Yellowing and upward curling of leaves)",
+    "uuid" : "589909ce-a279-49c7-8b5d-bedff7af1c22",
+    "order" : 8.0
+  }, {
+    "name" : "Other",
+    "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+    "order" : 9.0
+  } ]
+}, {
+  "name" : "photo of plant",
+  "uuid" : "8f852c71-74c9-4296-a85f-afe0b433ccab",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Photo of the plot",
+  "uuid" : "a68205e4-dac8-459a-a1fe-e3649d7a3b0e",
+  "dataType" : "Image",
+  "active" : true
+}, {
+  "name" : "Pit digging completion date",
+  "uuid" : "e7bf01b5-af0c-414a-91d2-da49b3bf9290",
+  "dataType" : "Date",
+  "active" : true
+}, {
+  "name" : "Pit filling completion date",
+  "uuid" : "7e830565-5db5-417c-853f-ea5d23d894d2",
+  "dataType" : "Date",
+  "active" : true
+}, {
+  "name" : "Plant to plan Line spacing",
+  "uuid" : "d511e0c9-529c-40d7-942c-e52db88d0b89",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Plant to plan Row spacing",
+  "uuid" : "f7d971fa-2f40-4571-9320-2118b192fd71",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Plant to plant spacing",
+  "uuid" : "2fae2ff7-f5cf-4775-9789-53339a3c02e8",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 3.0,
+  "highAbsolute" : 4.0,
+  "unit" : "meters",
+  "active" : true
+}, {
+  "name" : "Plastic Drum",
+  "uuid" : "9474170d-cec8-4a20-bb36-d3f959c76ff4",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Please mention the adopted Sowing Management adopted",
+  "uuid" : "1154deec-6c42-46c0-b854-3533385053b4",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Line sowing",
+    "uuid" : "2e9b4dca-6ff4-4f53-94c7-41e72193d684",
+    "order" : 0.0
+  }, {
+    "name" : "Inter cropping",
+    "uuid" : "20058b23-87bc-4342-8b8b-d3ebcf9340af",
+    "order" : 1.0
+  }, {
+    "name" : "Border sowing",
+    "uuid" : "6e3e2368-28b1-4902-a220-e96826123d92",
+    "order" : 2.0
+  }, {
+    "name" : "Other",
+    "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Please mention the adopted Sowing Management adopted (voided~350705)",
+  "uuid" : "25d93bad-d596-4ae0-9330-75ab29332663",
+  "dataType" : "Text",
+  "active" : true,
+  "voided" : true
+}, {
+  "name" : "Please mention the Bio Fertilised Used",
+  "uuid" : "b5ea5638-d093-43fb-b71a-e52e800eb338",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "FYM",
+    "uuid" : "7c54c40b-17f7-4bbc-b3eb-1779470889e3",
+    "order" : 0.0
+  }, {
+    "name" : "Neem Cake",
+    "uuid" : "6522efd2-37ba-4075-aa2f-a72c492d277b",
+    "order" : 1.0
+  }, {
+    "name" : "Mahua Cake",
+    "uuid" : "194fc53e-c5d3-4277-ac1f-e01f1ce6c0bf",
+    "order" : 2.0
+  }, {
+    "name" : "Arendi Cake",
+    "uuid" : "44a33f9f-c6c6-4786-8d2c-defdb7ca0391",
+    "order" : 3.0
+  }, {
+    "name" : "Ghanjeevamrut",
+    "uuid" : "e6892009-e046-4d2a-a508-0a8f8d63a44c",
+    "order" : 4.0
+  } ]
+}, {
+  "name" : "Please mention the name of inputs used",
+  "uuid" : "6399b6bf-3ef1-46f2-90b1-5dbc5e744bca",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "FYM",
+    "uuid" : "7c54c40b-17f7-4bbc-b3eb-1779470889e3",
+    "order" : 0.0
+  }, {
+    "name" : "Neem Cake",
+    "uuid" : "6522efd2-37ba-4075-aa2f-a72c492d277b",
+    "order" : 1.0
+  }, {
+    "name" : "Mahua Cake",
+    "uuid" : "194fc53e-c5d3-4277-ac1f-e01f1ce6c0bf",
+    "order" : 2.0
+  }, {
+    "name" : "Arandi Cake",
+    "uuid" : "9602a850-dfd8-4b46-a233-e553a6f36bcd",
+    "order" : 3.0
+  }, {
+    "name" : "Ghanjeevamrut",
+    "uuid" : "e6892009-e046-4d2a-a508-0a8f8d63a44c",
+    "order" : 4.0
+  }, {
+    "name" : "Bonemeal",
+    "uuid" : "83637f46-fb10-40a6-9c4f-d10c919cba61",
+    "order" : 5.0
+  }, {
+    "name" : "NPK Consortia",
+    "uuid" : "53e47054-b482-49af-a476-e0373d6cfdf3",
+    "order" : 6.0
+  }, {
+    "name" : "Gypsum",
+    "uuid" : "8906f8c4-7530-464d-83c9-cbd5f54a53b1",
+    "order" : 7.0
+  }, {
+    "name" : "Other",
+    "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+    "order" : 8.0
+  } ]
+}, {
+  "name" : "Please mention the Seed management adopted",
+  "uuid" : "17c616d1-e14c-43b7-a31e-e8467f8a2333",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Treated with beejamrit",
+    "uuid" : "c0edb029-f15d-43e1-92fa-29c3f6790e58",
+    "order" : 0.0
+  }, {
+    "name" : "Treated with NPK consotia",
+    "uuid" : "d7e717e9-91d3-4c6c-9c90-518718e20003",
+    "order" : 1.0
+  }, {
+    "name" : "Treated with chemicals",
+    "uuid" : "c923cbae-1803-4483-9946-5db09aa4603c",
+    "order" : 2.0
+  }, {
+    "name" : "Other",
+    "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Ploughing",
+  "uuid" : "a208e87d-a4f2-49eb-8485-9896af0ab6de",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Ploughing + 1 Harrowing",
+  "uuid" : "ac21209f-13bb-42ef-9c25-06f2906de80e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Ploughing + 2 Harrowing",
+  "uuid" : "84b2c196-754c-4fe7-a1ba-07f1bec7e146",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "PM Jyotibimayojana",
+  "uuid" : "f971c3f0-728f-4a65-b656-5b187e5e4501",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Pond",
+  "uuid" : "2b5ab50b-a01e-4410-8b7b-a7fca9efdd3e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Poultry",
+  "uuid" : "0d78dbb1-8b33-4365-ae67-2a6718f1c549",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Private Bank",
+  "uuid" : "b7b7222f-ef57-42f4-bbf0-1b1cfd4e4cc5",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Producer Group / WPG",
+  "uuid" : "f7ce7317-a97e-4e76-9f0d-f63a75cccf30",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Production of Border Crop",
+  "uuid" : "1bd12c69-232d-41b7-ad12-19b8fde53b63",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Kg",
+  "active" : true
+}, {
+  "name" : "Production of Intercrop",
+  "uuid" : "a846dc10-fe26-43d4-8c01-4dd92b84fb6f",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Kg",
+  "active" : true
+}, {
+  "name" : "Production of Main Crop",
+  "uuid" : "5386bae5-f2cc-4cca-9419-9cf04e0b6e9d",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Kg",
+  "active" : true
+}, {
+  "name" : "Productive (crops, livestock)",
+  "uuid" : "342b1c4b-d915-4ddb-a792-0f1e63979e4c",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Pump Set",
+  "uuid" : "dd869f1f-a55d-4e26-87fa-9b487d1bbcfe",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Purposes",
+  "uuid" : "95e63f7d-e66f-44cd-b931-f8a94bf2a8db",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Consumption (house, education, health, ceremony)",
+    "uuid" : "01951d67-e901-4e0b-bef9-412a1e8e7ce2",
+    "order" : 0.0
+  }, {
+    "name" : "Productive (crops, livestock)",
+    "uuid" : "342b1c4b-d915-4ddb-a792-0f1e63979e4c",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Purposes of loan from Relatives/Friends ",
+  "uuid" : "ccb3b749-5fba-4827-80bb-02e80e0eec15",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Consumption (house, education, health, ceremony)",
+    "uuid" : "01951d67-e901-4e0b-bef9-412a1e8e7ce2",
+    "order" : 0.0
+  }, {
+    "name" : "Productive (crops, livestock)",
+    "uuid" : "342b1c4b-d915-4ddb-a792-0f1e63979e4c",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Purposes of Loan Traders/Shopkeepers",
+  "uuid" : "f21e5442-1c48-45a3-9907-73e0c5cf3a79",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Consumption (house, education, health, ceremony)",
+    "uuid" : "01951d67-e901-4e0b-bef9-412a1e8e7ce2",
+    "order" : 0.0
+  }, {
+    "name" : "Productive (crops, livestock)",
+    "uuid" : "342b1c4b-d915-4ddb-a792-0f1e63979e4c",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Purposes of Money lenders Loan",
+  "uuid" : "66d6be36-1bd2-4a1f-908e-999abe978e79",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Consumption (house, education, health, ceremony)",
+    "uuid" : "01951d67-e901-4e0b-bef9-412a1e8e7ce2",
+    "order" : 0.0
+  }, {
+    "name" : "Productive (crops, livestock)",
+    "uuid" : "342b1c4b-d915-4ddb-a792-0f1e63979e4c",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Quantity of Angles/Poles",
+  "uuid" : "0f520166-c850-4b9e-86dc-b62b2cbcc356",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Quantity of Arandi cake Applied (Kg)",
+  "uuid" : "9a6ed3dc-71ce-41f1-9d68-28fc09a78d7d",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "highAbsolute" : 80.0,
+  "active" : true
+}, {
+  "name" : "Quantity of Bonemeal Applied (Kg)",
+  "uuid" : "f1695b2d-f9b5-4599-9e34-570511c5a9db",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "highAbsolute" : 80.0,
+  "active" : true
+}, {
+  "name" : "Quantity of FYM Applied",
+  "uuid" : "82d46243-27a0-42e8-aa87-0d8c7da5a65c",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Quantity of FYM Applied (Quintals)",
+  "uuid" : "324a521d-9ddf-4a1b-ac89-c6c78de36e94",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "highAbsolute" : 15.0,
+  "active" : true
+}, {
+  "name" : "Quantity of Ghanjeevamrit Applied (Quintals)",
+  "uuid" : "cab8bef6-cd60-437a-9174-eaead98cc95b",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "highAbsolute" : 15.0,
+  "active" : true
+}, {
+  "name" : "Quantity of Gypsum applied (Kg)",
+  "uuid" : "5e4ae8f5-0987-48fd-a418-4238da13ce3e",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "highAbsolute" : 20.0,
+  "active" : true
+}, {
+  "name" : "Quantity of Mahua Cake Applied",
+  "uuid" : "37f31138-bcdd-418c-893a-21b3de509bee",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Quantity of Mahua cake Applied (Kg)",
+  "uuid" : "fe63d04f-ad08-4a6b-a55c-2235201c571e",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "highAbsolute" : 80.0,
+  "active" : true
+}, {
+  "name" : "Quantity of Neem cake Applied",
+  "uuid" : "a31479ba-2709-4e38-9518-4e89f2ba8f8b",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Quantity of Neem cake Applied (Kg)",
+  "uuid" : "87cdd19c-bd5d-4774-97e4-c1e28741d821",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "highAbsolute" : 80.0,
+  "active" : true
+}, {
+  "name" : "Quantity of NPK Consotia (Liters)",
+  "uuid" : "1372a7a1-1767-4aed-a585-42ce051ca1a8",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "highAbsolute" : 2.0,
+  "active" : true
+}, {
+  "name" : "Quantity of Nutrients applied",
+  "uuid" : "d46870f2-6074-4e97-be5b-ce0f0756d1bd",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Kg",
+  "active" : true
+}, {
+  "name" : "Quantity of other materials applied",
+  "uuid" : "4b632cb6-cf1c-4fdd-bb0f-4da8d0f3a0a5",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Quantity of the Bio-Pestcide used",
+  "uuid" : "c1f26bcc-e341-4454-b72f-35f134396e71",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Litre",
+  "active" : true
+}, {
+  "name" : "Quantity of the Manure",
+  "uuid" : "214ca5af-1e43-465b-9a55-e65a26d7bcba",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Rabi",
+  "uuid" : "b167e259-fc52-4f34-8043-3416692f707b",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Rabi Area",
+  "uuid" : "ab31f8d6-24af-44ac-a345-1d35f1ca5853",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Acre",
+  "active" : true
+}, {
+  "name" : "Rabi crop name",
+  "uuid" : "e37f4ae5-2b26-457e-b39a-1f65058c044e",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Wheat",
+    "uuid" : "5dc3df97-005d-4b88-b8af-9010f07af467",
+    "order" : 0.0
+  }, {
+    "name" : "Barley",
+    "uuid" : "9376024c-780c-49f8-9f70-b43cb3e4afd6",
+    "order" : 1.0
+  }, {
+    "name" : "Gram",
+    "uuid" : "6a40bace-73b7-4ddc-8483-a8081e637604",
+    "order" : 2.0
+  }, {
+    "name" : "Pea",
+    "uuid" : "b90777e7-fa0a-4d13-95ef-76076509c377",
+    "order" : 3.0
+  }, {
+    "name" : "Mustard",
+    "uuid" : "dd8309bc-2927-491e-9cf6-c2b853328c12",
+    "order" : 4.0
+  }, {
+    "name" : "Linseed",
+    "uuid" : "e58d8cb4-0a91-46fd-b603-5f82307f3eb4",
+    "order" : 5.0
+  }, {
+    "name" : "Lentil",
+    "uuid" : "c50830b0-3009-49f9-897b-8b96a6113ccb",
+    "order" : 6.0
+  } ]
+}, {
+  "name" : "Razor wire",
+  "uuid" : "c7205d4f-f749-456b-a014-dff5d13a7b04",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Relatives/Friends ",
+  "uuid" : "dd3a024b-42e2-4739-8723-c1907e1c913b",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Relatives/Friends Loan Amount",
+  "uuid" : "e39b55fc-35ae-4f66-b995-46e45c7ec340",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Relatives/Friends Loan Interest",
+  "uuid" : "9c4338b3-20bf-47c8-a65e-d847f4ef9fab",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Ridging",
+  "uuid" : "c767ed55-2682-4fc8-99df-298b35759ef9",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "River",
+  "uuid" : "5286228f-af90-48e7-a4cc-af9c2d09d336",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Round Gourd",
+  "uuid" : "d7f66cb3-b7a1-4d84-8718-ad5c5db76483",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Row to Row spacing",
+  "uuid" : "2ad1e2d9-db68-4d67-864f-a3611f25015c",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 4.0,
+  "highAbsolute" : 5.0,
+  "unit" : "meters",
+  "active" : true
+}, {
+  "name" : "Season",
+  "uuid" : "5dd1b169-578e-4317-ac60-e2f6334690be",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Kharif",
+    "uuid" : "58583b46-f8a3-486a-9903-9908899d44ef",
+    "order" : 1.0
+  }, {
+    "name" : "Rabi",
+    "uuid" : "b167e259-fc52-4f34-8043-3416692f707b",
+    "order" : 2.0
+  }, {
+    "name" : "Zaid",
+    "uuid" : "c0f902da-88e1-4206-84ea-29a6e20ba51b",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Seasonal",
+  "uuid" : "05eebb38-7b18-407f-bc39-8853694498d7",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Secateur Provided",
+  "uuid" : "f5a6e016-8f83-4c63-9c24-56d8129a0290",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Seed Management",
+  "uuid" : "5b430a2c-8765-4953-a669-5e2c042eb2f8",
+  "dataType" : "QuestionGroup",
+  "active" : true
+}, {
+  "name" : "Seed Quantity",
+  "uuid" : "572c1184-b783-4b06-a902-e69356aec469",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.1,
+  "unit" : "kg",
+  "active" : true
+}, {
+  "name" : "Seed Treatment",
+  "uuid" : "ca466c6b-d590-445a-b9d8-73f4e6506795",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Seed Treatment,",
+  "uuid" : "9bb0c791-450c-4eff-90a8-99068557b08c",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Seed Type",
+  "uuid" : "0410bc94-75f3-44cb-b333-74fed56a439b",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Breeder",
+    "uuid" : "a042f2e2-d6e8-4011-b160-440f957939ee",
+    "order" : 0.0
+  }, {
+    "name" : "Foundation",
+    "uuid" : "9f4b991f-0a8a-469e-b03f-02ab46744379",
+    "order" : 1.0
+  }, {
+    "name" : "Certified TL",
+    "uuid" : "44ca540b-253c-4fb8-a406-83b95e2bd456",
+    "order" : 2.0
+  }, {
+    "name" : "Own",
+    "uuid" : "c31b1ce3-fc75-4678-b2f3-b9178ecc8360",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Self Help Group (SHG) ",
+  "uuid" : "209ad86d-f08a-4863-9607-776f94799e5d",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Self Help Group Loan",
+  "uuid" : "149740ad-829b-4185-842d-e3a0cca1d5e5",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Semi - Pakka",
+  "uuid" : "055c9962-1400-4451-9ca4-b1ee7e4a10c4",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Sewing Machine",
+  "uuid" : "5cfb6bd0-848a-4787-ac2f-8fccde4c7aaf",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Sheep",
+  "uuid" : "d2d26422-ec2d-4cdd-ad75-ba2c09f097ec",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Silt applied",
+  "uuid" : "5e9a5834-b80b-418c-b4de-fa30f54d7992",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Size of Pit",
+  "uuid" : "b37e20b3-c2d8-40ff-ac7b-2d9e6aa1bf78",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "1x1x1 Feet",
+    "uuid" : "bda14e7d-6233-4ae0-a6ee-b02404b0f0de",
+    "order" : 0.0
+  }, {
+    "name" : "2x2x2 Feet",
+    "uuid" : "526edf50-e6fa-4c8b-a225-e9af3fd43ffa",
+    "order" : 1.0
+  }, {
+    "name" : "2.5x2.5x2.5 Feet",
+    "uuid" : "fdc4334f-f683-4cd6-93e4-eebc28141d34",
+    "order" : 2.0
+  }, {
+    "name" : "3x3x3 Feet",
+    "uuid" : "55fb3ca1-acd3-4666-bfce-d54e37f5fa40",
+    "order" : 3.0
+  }, {
+    "name" : "1x1x1 Meter",
+    "uuid" : "93023eda-01b3-44dc-b778-bac714d6df14",
+    "order" : 4.0
+  }, {
+    "name" : "Other",
+    "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+    "order" : 5.0
+  } ]
+}, {
+  "name" : "Skilled",
+  "uuid" : "2f59d2d7-2a93-4a92-869c-8d9ca0d6e75d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Slit Applied",
+  "uuid" : "0d5ac429-4def-4038-a579-c1f63eb9f65f",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "yes",
+    "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+    "order" : 0.0
+  }, {
+    "name" : "no",
+    "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+    "abnormal" : true,
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "slit applied",
+  "uuid" : "e035d6d6-ae33-44ce-b809-3aad6b89fabb",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "yes",
+    "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+    "order" : 0.0
+  }, {
+    "name" : "no",
+    "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Slit Applied?",
+  "uuid" : "b41dd1ca-81b8-416b-a4de-03a5a86e4780",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "yes",
+    "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+    "order" : 0.0,
+    "voided" : true
+  }, {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 1.0
+  }, {
+    "name" : "no",
+    "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+    "order" : 1.0,
+    "voided" : true
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Social security scheme",
+  "uuid" : "7b9d258a-d313-43fb-9793-c37414af1cf1",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Soil Testing",
+  "uuid" : "a1e5e646-a468-4efd-a44c-08ec749c8f9f",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "yes",
+    "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+    "order" : 0.0,
+    "voided" : true
+  }, {
+    "name" : "no",
+    "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+    "order" : 1.0,
+    "voided" : true
+  }, {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 1.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Sorting",
+  "uuid" : "f6b115d8-51a5-49a8-b869-337f8ba63e0d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Source of Irrigation",
+  "uuid" : "b3b32419-eef8-479d-a871-d8084337c11e",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Well",
+    "uuid" : "a4f2d759-2cb0-4f7c-b0b0-28e498732c77",
+    "order" : 0.0
+  }, {
+    "name" : "Tubewell",
+    "uuid" : "3c54766c-a8a5-4ba9-9b1f-20327ae61cc3",
+    "order" : 1.0
+  }, {
+    "name" : "Pond",
+    "uuid" : "2b5ab50b-a01e-4410-8b7b-a7fca9efdd3e",
+    "order" : 2.0
+  }, {
+    "name" : "Cannal",
+    "uuid" : "18d8a37c-040b-49c0-b11d-8023859a5631",
+    "order" : 3.0
+  }, {
+    "name" : "River",
+    "uuid" : "5286228f-af90-48e7-a4cc-af9c2d09d336",
+    "order" : 4.0
+  }, {
+    "name" : "Doha",
+    "uuid" : "ffba7129-03c5-46f4-8c30-201ad015ff76",
+    "order" : 5.0
+  }, {
+    "name" : "Checkdam",
+    "uuid" : "6e98d32d-614f-4683-8cec-2607b1a661c6",
+    "order" : 6.0
+  }, {
+    "name" : "Other",
+    "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+    "order" : 7.0
+  } ]
+}, {
+  "name" : "Sowing Management Integrated Pest Management (IPM)",
+  "uuid" : "09bfc9ec-7f46-475e-a67d-8221ac5a7181",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Spinach",
+  "uuid" : "dcac9dd8-b24f-4b75-b168-beff35b4785c",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Sprinkler",
+  "uuid" : "5aed777a-87c8-4e64-8ac2-4d10f4bd13d7",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Sprinkler Set",
+  "uuid" : "dcb13bc0-0f46-4ebf-af71-482de1341952",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Stem borer (Holes in stem)",
+  "uuid" : "c6d4a1cb-c51b-4049-b5b3-676377f549b7",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Sticky Trap",
+  "uuid" : "ec305687-c800-4c66-9a26-671176068b23",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Stopdam",
+  "uuid" : "cbb6b4a6-8c34-423d-8925-b28c0b0ef200",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Supported By",
+  "uuid" : "0123d990-f9fc-485c-b85c-cac52418a8b4",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Survival of plant",
+  "uuid" : "4a1ee0ca-7774-4474-8217-361f6dfd614f",
+  "dataType" : "QuestionGroup",
+  "active" : true
+}, {
+  "name" : "Sweet lime",
+  "uuid" : "6aff16d6-986b-4038-8f50-2e485d52d014",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Television",
+  "uuid" : "2db19a73-e051-4fb0-82eb-a0bedc4bf048",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Tempo/Truck ",
+  "uuid" : "34bac86a-ba3a-41b7-8814-cdc7085948ea",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Til",
+  "uuid" : "89c1d036-8cf2-4efa-bd36-8707022e5aba",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Tomato",
+  "uuid" : "ba0d7fe2-339f-48ba-9708-1272334e3118",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Total Area of the orchard",
+  "uuid" : "fa764ce9-2641-422a-af55-e7d67d5f31f4",
+  "dataType" : "Numeric",
+  "unit" : "Bigha",
+  "active" : true
+}, {
+  "name" : "Total Area of the Orchard",
+  "uuid" : "48cb2816-6cf9-415b-b699-69173458084a",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.18,
+  "highAbsolute" : 0.5,
+  "unit" : "Acre",
+  "active" : true
+}, {
+  "name" : "Total Area of the Orchrad",
+  "uuid" : "2dd66345-2d8a-44f9-838d-d51de78ee96e",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Total cost for Land Preparation",
+  "uuid" : "a72a3afc-9489-4208-8f0e-fc9b8befc24b",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Total cost of All the inputs",
+  "uuid" : "61483ed9-af71-429e-b57f-99d31036bff6",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Total Cost of Irrigations",
+  "uuid" : "84b3b322-1720-400e-8eae-b29f210ff8cf",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "highAbsolute" : 12000.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Total cost of other tools",
+  "uuid" : "d5cfeff0-f3f8-49ac-a715-6f8a3dc2ec72",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Total Cost of the FYM Applied",
+  "uuid" : "2a305558-c573-4a66-ae4a-eb4e949f98e4",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Total cost of wire",
+  "uuid" : "813c7d5d-d095-4682-8013-c7d129f14bda",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "active" : true
+}, {
+  "name" : "Total crop yield from area under Program Area",
+  "uuid" : "ea9cc8db-466c-4854-bb70-39f4259c7dc5",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Quintal",
+  "active" : true
+}, {
+  "name" : "Total crop yield from area under Program Area (Calculated)",
+  "uuid" : "c9a31205-a82f-4982-a65a-2f73661e9637",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Quintal",
+  "active" : true
+}, {
+  "name" : "Total crop yield from area under Program Area ?",
+  "uuid" : "24de4cae-25b3-4ba6-a0e8-b72881675feb",
+  "dataType" : "Numeric",
+  "unit" : "quintal",
+  "active" : true
+}, {
+  "name" : "Total Family Income",
+  "uuid" : "bd67fb64-e452-41a2-ac2e-467552c338c0",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Total Farm Land",
+  "uuid" : "ada72f51-7b48-4b0b-b698-4b7a5548bb06",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Acre",
+  "active" : true
+}, {
+  "name" : "Total Gross Income",
+  "uuid" : "c017fff7-decf-41d4-a774-0d81a5ec08e6",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Total Income from Orchard",
+  "uuid" : "d70aaae8-ac0e-422b-9f9b-c7d8402c75b0",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Total Land",
+  "uuid" : "446a3f3b-eb22-4a81-a08a-080b5440727f",
+  "dataType" : "Numeric",
+  "unit" : "Acre",
+  "active" : true
+}, {
+  "name" : "Total Leased in Land",
+  "uuid" : "19b5f559-c81a-446c-9e5c-661edc315295",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Acre",
+  "active" : true
+}, {
+  "name" : "Total number of Irrigation applied",
+  "uuid" : "d1df3060-a2cf-47a1-aa50-5979e7c8901c",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "0",
+    "uuid" : "53a0be5b-1c02-4dac-a20c-69f388d436f7",
+    "order" : 0.0
+  }, {
+    "name" : "1",
+    "uuid" : "3ecbedce-5611-4f6c-b04c-de5530920733",
+    "order" : 1.0
+  }, {
+    "name" : "2",
+    "uuid" : "ae1d7a6a-909d-4fd2-bca0-8fc9c59d9f32",
+    "order" : 2.0
+  }, {
+    "name" : "3",
+    "uuid" : "ba3dfd63-95bf-4d01-86da-52be30d9893f",
+    "order" : 3.0
+  }, {
+    "name" : "4",
+    "uuid" : "d850de37-550f-47ec-b9e2-2ac59bbd77fa",
+    "order" : 4.0
+  }, {
+    "name" : "5",
+    "uuid" : "64f56450-471a-4d90-bac4-f4af6c2fa6fe",
+    "order" : 5.0
+  }, {
+    "name" : "6",
+    "uuid" : "f81667a9-0572-4974-9698-5b9c724a29ad",
+    "order" : 6.0
+  } ]
+}, {
+  "name" : "Total number of rows",
+  "uuid" : "ff8cac94-6d4b-4f32-b351-983ab6ec7b4e",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 5.0,
+  "highAbsolute" : 8.0,
+  "active" : true
+}, {
+  "name" : "Total Own Land Holding",
+  "uuid" : "47e59d01-9e20-416c-b3b3-ba33de28b5f6",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Acre",
+  "active" : true
+}, {
+  "name" : "Total Plantation Area",
+  "uuid" : "efce9a2d-ba34-465b-b6d7-19e4286c6056",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Acre",
+  "active" : true
+}, {
+  "name" : "Total production",
+  "uuid" : "cea79c68-6954-4bc1-9955-229ce2d22eb3",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Kg",
+  "active" : true
+}, {
+  "name" : "Total Production of Crop",
+  "uuid" : "de048a96-f4a3-43bc-bbe6-0bcb01fd7498",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Kgs",
+  "active" : true
+}, {
+  "name" : "Total production of crop Kharif",
+  "uuid" : "3e0b8b3d-9239-4cf2-a182-35afc05967e9",
+  "dataType" : "Numeric",
+  "unit" : "kg",
+  "active" : true
+}, {
+  "name" : "total production of crop Kharif",
+  "uuid" : "bd3cfb6d-6e24-4d28-ad2b-cd1c5be97f80",
+  "dataType" : "Numeric",
+  "unit" : "kg",
+  "active" : true
+}, {
+  "name" : "Total production of Garlic",
+  "uuid" : "373d6f15-6098-4089-bd32-92e339a1749f",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Total production of onion",
+  "uuid" : "083dc60d-3d72-4e20-9544-ec93d3ece224",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Total production of Onion",
+  "uuid" : "22e0e042-64de-4688-9425-73d510a778ee",
+  "dataType" : "Numeric",
+  "unit" : "Kgs",
+  "active" : true
+}, {
+  "name" : "Total production of Spinach",
+  "uuid" : "3a82aae4-96f3-4c35-b792-799b9ca8a87c",
+  "dataType" : "Numeric",
+  "active" : true
+}, {
+  "name" : "Total quantity sold in market",
+  "uuid" : "8b3c04ab-b1c1-4bc1-b38a-b6c051707967",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Kg",
+  "active" : true
+}, {
+  "name" : "Tractor Trolley",
+  "uuid" : "d9b8416f-9a4a-4ff0-8e48-d97bec56ef76",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Traders/Shopkeepers Loan Amount",
+  "uuid" : "af08c632-51c9-4f22-a3ed-ec4ba60a3ea7",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Traders/Shopkeepers ",
+  "uuid" : "37a96748-98b9-4c0b-9578-771ed08948e2",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Traders/Shopkeepers Loan Interest",
+  "uuid" : "d65a4f7b-916f-467c-b174-c33ce72f738a",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "INR",
+  "active" : true
+}, {
+  "name" : "Trap Crop",
+  "uuid" : "682de3d3-f436-46af-8a96-8d2fddfa2a27",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Treated with beejamrit",
+  "uuid" : "c0edb029-f15d-43e1-92fa-29c3f6790e58",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Treated with chemicals",
+  "uuid" : "c923cbae-1803-4483-9946-5db09aa4603c",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Treated with NPK consotia",
+  "uuid" : "d7e717e9-91d3-4c6c-9c90-518718e20003",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Tubewell",
+  "uuid" : "3c54766c-a8a5-4ba9-9b1f-20327ae61cc3",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Type of Angle/pole",
+  "uuid" : "730f2fe1-4d6c-4c2c-9952-0a976a936fc0",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Iron Angle",
+    "uuid" : "c99172fe-0f8b-4152-b6f6-90328ae96c40",
+    "order" : 0.0
+  }, {
+    "name" : "Cemented Pole",
+    "uuid" : "0309d5ef-b527-4b1a-b9e2-b14f55e0b22b",
+    "order" : 1.0
+  }, {
+    "name" : "Wooden Pole",
+    "uuid" : "902fe806-602f-4804-8b37-4cff2b809303",
+    "order" : 2.0
+  }, {
+    "name" : "Other",
+    "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Type of disability",
+  "uuid" : "a0d93e11-d4df-4be1-b89d-525479ea6bb4",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Blindness",
+    "uuid" : "e15cafd9-4f3b-4630-8a44-30140544f4ff",
+    "order" : 1.0
+  }, {
+    "name" : "Locomotor Disability",
+    "uuid" : "795095c6-43cf-40cd-9867-9fdd1aef9a67",
+    "order" : 2.0
+  }, {
+    "name" : "Hearing and Speech Impairment",
+    "uuid" : "c72b08c1-2070-4c84-8d2c-f84115e2e85b",
+    "order" : 3.0
+  }, {
+    "name" : "Others",
+    "uuid" : "41af5b53-1c4a-49d5-96b0-a5e2051f691b",
+    "order" : 4.0,
+    "voided" : true
+  }, {
+    "name" : "Mental Illness",
+    "uuid" : "ce7eab16-285e-4055-bf8d-a3eb673274d0",
+    "order" : 4.0
+  }, {
+    "name" : "Other",
+    "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+    "order" : 5.0
+  } ]
+}, {
+  "name" : "Type of fencing",
+  "uuid" : "73d64d99-5267-4553-b678-d2e90de4808d",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Barbed wire",
+    "uuid" : "a3c64439-1606-46f4-96e2-d26d489f6c0a",
+    "order" : 0.0
+  }, {
+    "name" : "Razor wire",
+    "uuid" : "c7205d4f-f749-456b-a014-dff5d13a7b04",
+    "order" : 1.0
+  }, {
+    "name" : "Chain link wire",
+    "uuid" : "b754ad54-deca-426f-a978-09a029f9fbc2",
+    "order" : 2.0
+  }, {
+    "name" : "Welded wire",
+    "uuid" : "567535b5-3369-468f-a8df-424649f2fa98",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Type of Irrigation",
+  "uuid" : "9970b9ee-e1eb-472d-8ddd-9785de42983a",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Perennial",
+    "uuid" : "6b30369a-f44b-4349-97fd-1278cf60e636",
+    "order" : 0.0
+  }, {
+    "name" : "Seasonal",
+    "uuid" : "05eebb38-7b18-407f-bc39-8853694498d7",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Type of Work Engaged",
+  "uuid" : "4aef8d53-ab31-493e-9993-2d90a55593bf",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Skilled",
+    "uuid" : "2f59d2d7-2a93-4a92-869c-8d9ca0d6e75d",
+    "order" : 0.0
+  }, {
+    "name" : "Unskilled",
+    "uuid" : "72952dbb-ad69-49fb-88f8-9bd643af58a0",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Ujjawala Yojana",
+  "uuid" : "ce1f69c6-72b5-48c2-84bc-d978539d6d1d",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Unmarried",
+  "uuid" : "7ba29635-a2fe-4029-b3da-97a75f2a699d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Unskilled",
+  "uuid" : "72952dbb-ad69-49fb-88f8-9bd643af58a0",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Up to which months it will provide you irrigation water",
+  "uuid" : "15edc29d-d30f-42b4-a919-50b5082df67b",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "December",
+    "uuid" : "be86f3b3-16bb-4871-a104-49cf3a4ba811",
+    "order" : 0.0
+  }, {
+    "name" : "January",
+    "uuid" : "6bf021f9-626d-4986-9322-1e4b4c6cb3fe",
+    "order" : 1.0
+  }, {
+    "name" : "February",
+    "uuid" : "2b0b70bc-94fb-4a96-9f84-74fa0e409193",
+    "order" : 2.0
+  }, {
+    "name" : "March",
+    "uuid" : "69704338-2832-4d5a-b636-31c98c114d54",
+    "order" : 3.0
+  }, {
+    "name" : "April",
+    "uuid" : "c47e708b-8834-4a8f-8d38-4a0a58d1a06c",
+    "order" : 4.0
+  }, {
+    "name" : "May",
+    "uuid" : "d2ee97ce-b5d7-47d9-8e81-3fd4641d7fcb",
+    "order" : 5.0
+  }, {
+    "name" : "June",
+    "uuid" : "f2691d3b-4a6f-4d1a-a67b-6e5e605d25fb",
+    "order" : 6.0
+  }, {
+    "name" : "Other",
+    "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+    "order" : 7.0
+  } ]
+}, {
+  "name" : "Urd",
+  "uuid" : "97daf09f-6280-484a-a755-4c27582f11eb",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Use of biopesticides",
+  "uuid" : "077e0247-a419-4fa9-8d9e-939f1e4f70e7",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Varietal replacement",
+  "uuid" : "9bf8263b-065c-4971-b769-7c362e65c4d1",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Variety Name",
+  "uuid" : "058c727d-8d5d-4409-8d89-e5899b671441",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "X",
+    "uuid" : "f346cb99-c380-4b55-a724-35279c9677e4",
+    "order" : 0.0
+  }, {
+    "name" : "Y",
+    "uuid" : "15a8fb44-b672-41f0-ad96-8a08a5124582",
+    "order" : 1.0
+  }, {
+    "name" : "Z",
+    "uuid" : "6418455b-ea1b-4005-bf7e-830c78a19146",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Variety name of the Main Crop",
+  "uuid" : "d0bfa0a1-6255-45fa-82aa-6cf459c2773f",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "VDC (Membership)",
+  "uuid" : "b70448aa-9927-4ce0-8757-7b18412b64ab",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Vegetable",
+  "uuid" : "543d9cbd-1a62-4084-96e0-58c88262f0a2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Vermicompost",
+  "uuid" : "bbd4b0f7-3788-48fc-86ed-fee39451e84c",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Vermicompost applied",
+  "uuid" : "c3ae8dee-2270-4a46-8061-b979077c1142",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Voter Card",
+  "uuid" : "388c4151-6a9b-4cd3-b5bd-f11beb320cd8",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Weeding Management",
+  "uuid" : "204eaf7b-f502-42ea-8c62-97b5fc646f81",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+}, {
+  "name" : "Weeding with Hoe/Kulpa",
+  "uuid" : "94c13cc1-e2f1-4c26-8d23-7542f248819b",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Welded wire",
+  "uuid" : "567535b5-3369-468f-a8df-424649f2fa98",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Well",
+  "uuid" : "a4f2d759-2cb0-4f7c-b0b0-28e498732c77",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "What CSA Practices has been adopted",
+  "uuid" : "d6c8cb93-35c8-438a-b742-d538dee8ce92",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Integrated Pest Management",
+    "uuid" : "dba85ab5-d1de-489c-b15e-840eaee5df1a",
+    "order" : 1.0,
+    "voided" : true
+  }, {
+    "name" : "Nutrition Management",
+    "uuid" : "a93449cb-0d93-4bdb-8f94-ad72398a2cbc",
+    "order" : 1.0
+  }, {
+    "name" : "Irrigation",
+    "uuid" : "8ad802a4-07db-407b-afa4-c83334a41cfc",
+    "order" : 2.0,
+    "voided" : true
+  }, {
+    "name" : "Varietal replacement",
+    "uuid" : "9bf8263b-065c-4971-b769-7c362e65c4d1",
+    "order" : 2.0
+  }, {
+    "name" : "Irrigation Management",
+    "uuid" : "8e82881a-e68d-4874-a12c-954eb71d8a27",
+    "order" : 3.0
+  }, {
+    "name" : "Sowing Management Integrated Pest Management (IPM)",
+    "uuid" : "09bfc9ec-7f46-475e-a67d-8221ac5a7181",
+    "order" : 4.0
+  }, {
+    "name" : "Other",
+    "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+    "order" : 5.0
+  } ]
+}, {
+  "name" : "What was the total crop yield from 1*1 sq. meter area",
+  "uuid" : "40ed8f88-eac6-4b69-ab72-48ed5ebf7023",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Kg",
+  "active" : true
+}, {
+  "name" : "What was the total crop yield from 1*1 sq. meter area (Kg.)",
+  "uuid" : "fd71f0f0-5f1d-47da-9bcd-c16c897505f2",
+  "dataType" : "Numeric",
+  "unit" : "kg",
+  "active" : true
+}, {
+  "name" : "Wheat",
+  "uuid" : "5dc3df97-005d-4b88-b8af-9010f07af467",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Which of the following initiated practices have been adopted",
+  "uuid" : "91705f5d-a21b-4860-85fc-71b55f0a94f9",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Ridging",
+    "uuid" : "c767ed55-2682-4fc8-99df-298b35759ef9",
+    "order" : 0.0
+  }, {
+    "name" : "Levelling",
+    "uuid" : "93d919d0-3e24-45a5-8f81-285ab6a4e8b9",
+    "order" : 1.0
+  }, {
+    "name" : "Border Strip preparation",
+    "uuid" : "ad52c453-fa14-45f9-b6dc-db0e963fb318",
+    "order" : 2.0
+  }, {
+    "name" : "Mulching",
+    "uuid" : "d8eb23d5-b520-4c85-8e26-cf1d738ea217",
+    "order" : 3.0
+  }, {
+    "name" : "Other",
+    "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+    "order" : 4.0
+  } ]
+}, {
+  "name" : "Which of the following IPM practices have been adopted",
+  "uuid" : "d7efada9-2cc4-45a0-babe-340342389a04",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "A",
+    "uuid" : "1d5d2734-2b63-456a-bfd0-099b92f27017",
+    "order" : 0.0,
+    "voided" : true
+  }, {
+    "name" : "Trap Crop",
+    "uuid" : "682de3d3-f436-46af-8a96-8d2fddfa2a27",
+    "order" : 1.0
+  }, {
+    "name" : "B",
+    "uuid" : "585462ab-97e3-4a79-8638-b26d21bc1c9e",
+    "order" : 1.0,
+    "voided" : true
+  }, {
+    "name" : "Sticky Trap",
+    "uuid" : "ec305687-c800-4c66-9a26-671176068b23",
+    "order" : 2.0
+  }, {
+    "name" : "C",
+    "uuid" : "ef4cbc46-5790-40a6-9da6-89057c0d7fdc",
+    "order" : 2.0,
+    "voided" : true
+  }, {
+    "name" : "Light Trap",
+    "uuid" : "6fb4536a-06b2-4212-84ea-a2bbc552a3e1",
+    "order" : 3.0
+  }, {
+    "name" : "Faromon Trap",
+    "uuid" : "ccc3eef2-bd8a-4443-8d58-b479f356580f",
+    "order" : 4.0
+  }, {
+    "name" : "Hand Picking",
+    "uuid" : "bdc64d16-cc58-43d0-91fd-dd0ff40307c9",
+    "order" : 5.0
+  }, {
+    "name" : "Use of biopesticides",
+    "uuid" : "077e0247-a419-4fa9-8d9e-939f1e4f70e7",
+    "order" : 6.0
+  } ]
+}, {
+  "name" : "Which of the following irrigation practices have been adopted",
+  "uuid" : "ade9d79b-298b-4ecb-9ac1-0176f04955e6",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "A",
+    "uuid" : "1d5d2734-2b63-456a-bfd0-099b92f27017",
+    "order" : 0.0,
+    "voided" : true
+  }, {
+    "name" : "Flood",
+    "uuid" : "2b2f73a5-48c5-42da-b6ae-cd013c243a63",
+    "order" : 1.0
+  }, {
+    "name" : "B",
+    "uuid" : "585462ab-97e3-4a79-8638-b26d21bc1c9e",
+    "order" : 1.0,
+    "voided" : true
+  }, {
+    "name" : "Border Strip",
+    "uuid" : "7535d3de-1ca0-4662-9610-9689332d03d1",
+    "order" : 2.0
+  }, {
+    "name" : "Furrow",
+    "uuid" : "396f62e1-8081-4524-9c68-ef89619461e3",
+    "order" : 3.0
+  }, {
+    "name" : "Sprinkler",
+    "uuid" : "5aed777a-87c8-4e64-8ac2-4d10f4bd13d7",
+    "order" : 4.0
+  }, {
+    "name" : "Drip",
+    "uuid" : "4e891efc-2594-44ff-bcee-257438792f2f",
+    "order" : 5.0
+  } ]
+}, {
+  "name" : "Which of the following land preparation practices have been adopted?",
+  "uuid" : "dd51d78d-2249-4752-87f9-0aacad45630e",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Ploughing",
+    "uuid" : "a208e87d-a4f2-49eb-8485-9896af0ab6de",
+    "order" : 0.0
+  }, {
+    "name" : "Ploughing + 1 Harrowing",
+    "uuid" : "ac21209f-13bb-42ef-9c25-06f2906de80e",
+    "order" : 1.0
+  }, {
+    "name" : "Ploughing + 2 Harrowing",
+    "uuid" : "84b2c196-754c-4fe7-a1ba-07f1bec7e146",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Which of the following practices have been adopted",
+  "uuid" : "ab31f8bf-3173-4c2f-abd1-a3835bd6187a",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Drying",
+    "uuid" : "4160eaee-1e2b-48dc-9859-2087b384fe7e",
+    "order" : 0.0
+  }, {
+    "name" : "Cleaning",
+    "uuid" : "2ddd24a3-cb5c-44dd-9e3d-b50156abda3a",
+    "order" : 1.0
+  }, {
+    "name" : "Sorting",
+    "uuid" : "f6b115d8-51a5-49a8-b869-337f8ba63e0d",
+    "order" : 2.0
+  }, {
+    "name" : "Grading",
+    "uuid" : "b4624d79-8446-4c39-bfde-f4cb443b2169",
+    "order" : 3.0
+  }, {
+    "name" : "Other",
+    "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+    "order" : 4.0
+  } ]
+}, {
+  "name" : "Which of the following Weeding Management practices have been adopted",
+  "uuid" : "bda37c45-de19-4c97-80e2-7f6d024b9fb6",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Hand weeding",
+    "uuid" : "a46ac25e-5d7a-4bc7-b6ee-b771060d5dbe",
+    "order" : 0.0
+  }, {
+    "name" : "Weeding with Hoe/Kulpa",
+    "uuid" : "94c13cc1-e2f1-4c26-8d23-7542f248819b",
+    "order" : 1.0
+  }, {
+    "name" : "Mulching",
+    "uuid" : "d8eb23d5-b520-4c85-8e26-cf1d738ea217",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "Which of the nutrition management practices have been adopted",
+  "uuid" : "02e1a8e8-8188-4412-aace-fc0530c7ac6d",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "A",
+    "uuid" : "1d5d2734-2b63-456a-bfd0-099b92f27017",
+    "order" : 0.0,
+    "voided" : true
+  }, {
+    "name" : "FYM applied",
+    "uuid" : "d0b87a1d-b3dc-436f-a955-bc1dfd88b056",
+    "order" : 1.0
+  }, {
+    "name" : "B",
+    "uuid" : "585462ab-97e3-4a79-8638-b26d21bc1c9e",
+    "order" : 1.0,
+    "voided" : true
+  }, {
+    "name" : "C",
+    "uuid" : "ef4cbc46-5790-40a6-9da6-89057c0d7fdc",
+    "order" : 2.0,
+    "voided" : true
+  }, {
+    "name" : "Ghanajeevamrit applied",
+    "uuid" : "ba360f1a-d875-456b-be19-d602a7366c17",
+    "order" : 2.0
+  }, {
+    "name" : "Vermicompost applied",
+    "uuid" : "c3ae8dee-2270-4a46-8061-b979077c1142",
+    "order" : 3.0
+  }, {
+    "name" : "Compost applied",
+    "uuid" : "474913be-4d7d-433e-adb0-1f5dbd203cd6",
+    "order" : 4.0
+  }, {
+    "name" : "NPK Consotia applied",
+    "uuid" : "f0ad53d2-e37c-4e4b-b0de-30d9b9dd2ad2",
+    "order" : 5.0
+  }, {
+    "name" : "Jeevamrit applied in soil",
+    "uuid" : "9c4f9b5f-9c5d-4f83-80e2-d35678640c7f",
+    "order" : 6.0
+  }, {
+    "name" : "Jeevamrit sprayed",
+    "uuid" : "dfbc41b4-d758-4b3e-b67a-f46212f03085",
+    "order" : 7.0
+  }, {
+    "name" : "Bio Stimulant sprayed",
+    "uuid" : "3c8a18f6-922a-462f-b61a-b8a793f3a440",
+    "order" : 8.0
+  }, {
+    "name" : "Other",
+    "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+    "order" : 9.0
+  } ]
+}, {
+  "name" : "Which Practices Have you adopted",
+  "uuid" : "b0238e39-a8ef-421f-9c78-56992655abed",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Canopy Management",
+    "uuid" : "70b80188-043e-4a0c-971f-16a6f89a2a95",
+    "order" : 1.0
+  }, {
+    "name" : "Nutrition Management",
+    "uuid" : "a93449cb-0d93-4bdb-8f94-ad72398a2cbc",
+    "order" : 2.0
+  }, {
+    "name" : "Nutrition management Practices",
+    "uuid" : "45c2f40f-333e-4756-9e2b-d3ba7acf6721",
+    "order" : 2.0,
+    "voided" : true
+  }, {
+    "name" : "Pest Management",
+    "uuid" : "07729542-0e74-4f71-b74c-1fa4cde23c29",
+    "order" : 3.0
+  }, {
+    "name" : "Irigation Management",
+    "uuid" : "7c4758fc-d837-4bc5-adf3-eb9abc5b3fb2",
+    "order" : 4.0
+  }, {
+    "name" : "Other",
+    "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+    "order" : 5.0
+  } ]
+}, {
+  "name" : "Widow",
+  "uuid" : "178ca8f5-6f8b-4fc3-aab3-e588cf6f08be",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Wooden Pole",
+  "uuid" : "902fe806-602f-4804-8b37-4cff2b809303",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "X",
+  "uuid" : "f346cb99-c380-4b55-a724-35279c9677e4",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Y",
+  "uuid" : "15a8fb44-b672-41f0-ad96-8a08a5124582",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Year",
+  "uuid" : "8224de50-6412-4ed6-bcf2-d23fc88a1b19",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "2001",
+    "uuid" : "b4d50aef-9ed0-4256-9bef-d90bb833ab2d",
+    "order" : 0.0
+  }, {
+    "name" : "2002",
+    "uuid" : "377fe919-821b-475d-91c6-72a641cc1b73",
+    "order" : 1.0
+  }, {
+    "name" : "2003",
+    "uuid" : "0a77c159-e710-4fbb-bcab-485f89036255",
+    "order" : 2.0
+  }, {
+    "name" : "2004",
+    "uuid" : "d9224056-9479-4031-a3e4-ed6ed14a7b83",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "year (voided~348452)",
+  "uuid" : "1321897a-6d53-4b3e-993f-5ffce6827e90",
+  "dataType" : "Coded",
+  "active" : true,
+  "voided" : true,
+  "answers" : [ {
+    "name" : "1st",
+    "uuid" : "d14396f8-a6ac-4875-aaed-a9d8ef04e239",
+    "order" : 0.0
+  }, {
+    "name" : "2nd",
+    "uuid" : "a9680646-53f5-4ecc-9d53-15055d491a69",
+    "order" : 1.0
+  }, {
+    "name" : "3rd",
+    "uuid" : "8b82be71-3add-47be-bf85-f1c38d44447a",
+    "order" : 2.0
+  }, {
+    "name" : "4th",
+    "uuid" : "eff8e112-af15-414f-8cf3-897115dbff09",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "YEAR (voided~348453)",
+  "uuid" : "bd7d0b48-1504-4714-8e15-f1fb106e10b1",
+  "dataType" : "Coded",
+  "active" : true,
+  "voided" : true,
+  "answers" : [ {
+    "name" : "1st",
+    "uuid" : "d14396f8-a6ac-4875-aaed-a9d8ef04e239",
+    "order" : 0.0
+  }, {
+    "name" : "2nd",
+    "uuid" : "a9680646-53f5-4ecc-9d53-15055d491a69",
+    "order" : 1.0
+  }, {
+    "name" : "3rd",
+    "uuid" : "8b82be71-3add-47be-bf85-f1c38d44447a",
+    "order" : 2.0
+  }, {
+    "name" : "4th",
+    "uuid" : "eff8e112-af15-414f-8cf3-897115dbff09",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : "Years",
+  "uuid" : "0b78d29a-7cca-4fe6-af6c-7aa1f8ad024f",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "1st",
+    "uuid" : "d14396f8-a6ac-4875-aaed-a9d8ef04e239",
+    "order" : 1.0
+  }, {
+    "name" : "2nd",
+    "uuid" : "a9680646-53f5-4ecc-9d53-15055d491a69",
+    "order" : 2.0
+  }, {
+    "name" : "3rd",
+    "uuid" : "8b82be71-3add-47be-bf85-f1c38d44447a",
+    "order" : 3.0
+  }, {
+    "name" : "4th",
+    "uuid" : "eff8e112-af15-414f-8cf3-897115dbff09",
+    "order" : 4.0
+  }, {
+    "name" : "5th",
+    "uuid" : "59424a6b-af2e-4782-9830-86208e734b73",
+    "order" : 5.0
+  }, {
+    "name" : "6th",
+    "uuid" : "3ce93883-4d69-452a-bd7c-6cbe59ec8640",
+    "order" : 6.0
+  }, {
+    "name" : "7th",
+    "uuid" : "9900200e-6003-4d5b-88b4-be4d09ddd120",
+    "order" : 7.0
+  }, {
+    "name" : "8th",
+    "uuid" : "121f063b-1a12-4626-952e-80343035ccdf",
+    "order" : 8.0
+  }, {
+    "name" : "9th",
+    "uuid" : "b1f5438c-a81b-4332-a38c-ae20744102cf",
+    "order" : 9.0
+  }, {
+    "name" : "10th",
+    "uuid" : "65147bb9-af65-41dc-8303-81cd7ed0ed63",
+    "order" : 10.0
+  }, {
+    "name" : "5th and more",
+    "uuid" : "e9aaeaeb-aed4-4277-9882-b24e263edafc",
+    "order" : 11.0
+  } ]
+}, {
+  "name" : "yes",
+  "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Yes",
+  "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Z",
+  "uuid" : "6418455b-ea1b-4005-bf7e-830c78a19146",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Zaid",
+  "uuid" : "c0f902da-88e1-4206-84ea-29a6e20ba51b",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Zaid - Area",
+  "uuid" : "3fefe6f2-6a71-4098-886d-0ef91bdf1502",
+  "dataType" : "Numeric",
+  "lowAbsolute" : 0.0,
+  "unit" : "Acre",
+  "active" : true
+}, {
+  "name" : "Zaid crop Name",
+  "uuid" : "fb758a14-cd9f-4a99-8934-e2caf3475a82",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Mung",
+    "uuid" : "4fe97af9-ceff-4682-bce7-9415537f21f1",
+    "order" : 0.0
+  }, {
+    "name" : "Urd",
+    "uuid" : "97daf09f-6280-484a-a755-4c27582f11eb",
+    "order" : 1.0
+  }, {
+    "name" : "Guar",
+    "uuid" : "daae1abd-d083-428b-8173-62ca039f2950",
+    "order" : 2.0
+  }, {
+    "name" : "Chari",
+    "uuid" : "e7c998b1-14f0-4b0a-b004-83ae1dc25c55",
+    "order" : 3.0
+  } ]
+}, {
+  "name" : " Animal Husbandry In",
+  "uuid" : "a7c4a5cc-897f-4ba8-aab3-f41feed86e3e",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Cow",
+    "uuid" : "cc239258-f666-4ec3-bcb2-6d9e9801f7ad",
+    "order" : 0.0
+  }, {
+    "name" : "Buffalo",
+    "uuid" : "0df92c7b-336e-4e90-81b0-9a1855b6729d",
+    "order" : 1.0
+  }, {
+    "name" : "Goat",
+    "uuid" : "71977069-06d8-42b1-bc70-829512ca710a",
+    "order" : 2.0
+  }, {
+    "name" : "Sheep",
+    "uuid" : "d2d26422-ec2d-4cdd-ad75-ba2c09f097ec",
+    "order" : 3.0
+  }, {
+    "name" : "Poultry",
+    "uuid" : "0d78dbb1-8b33-4365-ae67-2a6718f1c549",
+    "order" : 4.0
+  } ]
+}, {
+  "name" : " Animal Husbandry ",
+  "uuid" : "e4359a89-b4e7-46a1-95a9-33185629031b",
+  "dataType" : "QuestionGroup",
+  "active" : true
+}, {
+  "name" : " Crop",
+  "uuid" : "e3375924-1804-4da0-bb24-8a83f1c95541",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Yes",
+    "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+    "order" : 0.0
+  }, {
+    "name" : "No",
+    "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+    "order" : 1.0
+  } ]
+} ]

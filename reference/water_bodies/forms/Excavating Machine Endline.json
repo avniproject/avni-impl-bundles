@@ -1,0 +1,156 @@
+{
+  "name" : "Excavating Machine Endline",
+  "uuid" : "94248002-acd9-4855-8dc3-15491732b5e0",
+  "formType" : "Encounter",
+  "formElementGroups" : [ {
+    "uuid" : "7a1132b4-da37-4a68-8431-4e0eb91f79e5",
+    "name" : "Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Total working hours of machine by hour reading",
+      "uuid" : "480daf33-3eb3-42d2-8e76-56e4bc4751f3",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Total working hours of machine",
+        "uuid" : "e2766243-1ccf-491b-aed0-c55ad97c63eb",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  \n  const individualService = params.services.individualService;\n  \n  const subjects = individualService.getSubjectsInLocation(encounter.individual.lowestAddressLevel, 'Work Order');\n\n  let totalWorkingHours=0;\n\n  _.forEach(subjects, (subject) => { \n  \n     const workOrderSubjectHrs = subject.getEncounters()\n       .filter((enc) => enc.encounterType.name === 'Work order daily Recording - Machine' && enc.voided == false)\n       .filter((enc) => enc.getObservationReadableValue('Excavating Machine')\n        === encounter.individual.uuid)\n       .map((enc) => enc.getObservationReadableValue('Working Hours as per time'))\n       .reduce((total, val) => (!isNaN(val)&& val!=null)? total + val : total+0, 0);   \n    totalWorkingHours = totalWorkingHours + workOrderSubjectHrs;  \n    \n   });\n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, totalWorkingHours);\n};\n",
+      "mandatory" : false
+    }, {
+      "name" : "Total working hours of machine by time",
+      "uuid" : "903ea4ee-2656-452f-a0d5-63ccae642868",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Total working hours of machine by time",
+        "uuid" : "cee52a1c-fe9c-448d-bde6-d71a1df74835",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  \n  const individualService = params.services.individualService;\n  \n  const subjects = individualService\n       .getSubjectsInLocation(encounter.individual.lowestAddressLevel, 'Work Order');\n       \n  let totalWorkingHours=0;\n  const temp  = _.forEach(subjects, (subject) => { \n  \n     const workOrderSubjectHrs = subject.getEncounters()\n       .filter((enc) => enc.encounterType.name === 'Work order daily Recording - Machine')\n       .filter((enc) => enc.getObservationReadableValue('Excavating Machine')\n        === encounter.individual.uuid)\n       .map((enc) => enc.getObservationReadableValue('Working hours of machine as per time'))\n       .reduce((total, val) => total + val, 0);\n  \n    totalWorkingHours = totalWorkingHours + workOrderSubjectHrs;  \n   }); \n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, totalWorkingHours);\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Payment made",
+      "uuid" : "ffda074d-d586-4059-ad8a-293b155957dd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Payment made",
+        "uuid" : "93b8045a-95fa-4c47-a334-df72bc5c3f15",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Partial",
+          "uuid" : "a0f9e7c6-6762-44a1-bf91-302490538942",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Mode of payment",
+      "uuid" : "d4b71e90-c2c0-46a9-ac62-699ddd4e2743",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Mode of payment",
+        "uuid" : "9ed7963e-440d-435d-a3df-f88c0c87b50a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "NEFT",
+          "uuid" : "0c737f33-84c6-455c-b776-e4f6e6c264ff",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cash",
+          "uuid" : "ae773de7-4ed7-497b-a3d7-c43340221a17",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cheque",
+          "uuid" : "4fe1e6af-f8ca-46f4-91e6-0e588755e4ae",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter('Payment made').is.yes;\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Payment amount",
+      "uuid" : "5dbc1ec2-a5d4-4c71-8af8-696bb09498a5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Payment amount",
+        "uuid" : "b237bc40-9314-4e9f-8946-7371b179dc44",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  statusBuilder.show().when.valueInEncounter('Payment made').is.yes;\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Details"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

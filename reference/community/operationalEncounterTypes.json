@@ -1,0 +1,235 @@
+{
+  "operationalEncounterTypes" : [ {
+    "uuid" : "95135ed2-51cc-48a8-b36d-e0be05a5f5d4",
+    "encounterType" : {
+      "uuid" : "f599f393-c50e-48d1-a89e-e73295e570ea",
+      "voided" : false
+    },
+    "name" : "Base screening",
+    "voided" : false
+  }, {
+    "uuid" : "f9bdc722-b00e-4e8e-818a-e019ffb2e51c",
+    "encounterType" : {
+      "uuid" : "a786ca25-c32d-4b8a-b8f1-9d5154cfbde3",
+      "voided" : false
+    },
+    "name" : "Sample shipment",
+    "voided" : false
+  }, {
+    "uuid" : "b69aee56-2426-4bbf-9160-5839f092d453",
+    "encounterType" : {
+      "uuid" : "8166375f-c95f-435b-b103-d3d70e0af06f",
+      "voided" : false
+    },
+    "name" : "Lab results entry",
+    "voided" : false
+  }, {
+    "uuid" : "f67504bf-d672-4ca9-a457-dc6988b5bd50",
+    "encounterType" : {
+      "uuid" : "e99184ad-9082-43d0-9726-7644e37543dd",
+      "voided" : false
+    },
+    "name" : "HPLC sample collection",
+    "voided" : false
+  }, {
+    "uuid" : "ebc2480e-4db2-4861-8421-06985172beae",
+    "encounterType" : {
+      "uuid" : "fc3d6184-920b-42aa-8c83-379401241fea",
+      "voided" : false
+    },
+    "name" : "Baseline",
+    "voided" : false
+  }, {
+    "uuid" : "3bf1df66-5743-4389-98c0-e379946923bf",
+    "encounterType" : {
+      "uuid" : "1b09307d-e03e-4532-a12a-cdaef74b2dc3",
+      "voided" : false
+    },
+    "name" : "Check Up",
+    "voided" : false
+  }, {
+    "uuid" : "4935aeaa-45d5-4fc2-8476-d91e4437e6a5",
+    "encounterType" : {
+      "uuid" : "f2e5f0b7-1b42-4b37-8e9a-d19e588a101c",
+      "voided" : false
+    },
+    "name" : "Lab test",
+    "voided" : false
+  }, {
+    "uuid" : "871e2896-287f-4264-abeb-56ffba28cd19",
+    "encounterType" : {
+      "uuid" : "f7f0a465-5047-4ce6-8163-bb0ba899797f",
+      "voided" : false
+    },
+    "name" : "Sickle cell testing entry",
+    "voided" : false
+  }, {
+    "uuid" : "8ebe4280-6f3f-481f-81dc-c26970a94270",
+    "encounterType" : {
+      "uuid" : "c79d7b09-bdcd-4cb5-a2d2-8cb3c637cd89",
+      "voided" : false
+    },
+    "name" : "Sample (voided~2837)",
+    "voided" : true
+  }, {
+    "uuid" : "2acbf5c8-0181-4812-863b-3681a97eeaa3",
+    "encounterType" : {
+      "uuid" : "e595d1c3-9fb4-4fa6-96c1-294671cdacd8",
+      "voided" : false
+    },
+    "name" : "Sample Taqi (voided~2838)",
+    "voided" : true
+  }, {
+    "uuid" : "a9d89e66-4881-4edb-af92-b352fa239e91",
+    "encounterType" : {
+      "uuid" : "ee2a1156-41f2-40ef-8ccd-9f7064f407d3",
+      "voided" : false
+    },
+    "name" : "Taqi (voided~2839)",
+    "voided" : true
+  }, {
+    "uuid" : "4e1486d5-38e5-46a5-bdef-ea6cca3727ee",
+    "encounterType" : {
+      "uuid" : "57b394a3-ad88-427a-8ee5-ea0b11a079f6",
+      "voided" : false
+    },
+    "name" : "SCD Followup Jan 2024",
+    "voided" : false
+  }, {
+    "uuid" : "5ef7a31a-d7fd-41cf-9fd3-3f729753ed5f",
+    "encounterType" : {
+      "uuid" : "185c2329-c4a4-4de8-ba29-c449b8ef3da9",
+      "voided" : false
+    },
+    "name" : "Epilepsy exit (voided~2835)",
+    "voided" : true
+  }, {
+    "uuid" : "6510f534-25cd-44a9-9f4b-ec01e03bcc7d",
+    "encounterType" : {
+      "uuid" : "88d8be0c-a9e8-4d6d-924e-edc48335a9af",
+      "voided" : false
+    },
+    "name" : "test (voided~2847)",
+    "voided" : true
+  }, {
+    "uuid" : "6f89d255-c0fb-4359-98ee-36d9c517dde5",
+    "encounterType" : {
+      "uuid" : "e6ee694a-d70f-413c-b0f7-3520e7cdb6af",
+      "voided" : false
+    },
+    "name" : "Epilepsy Followup",
+    "voided" : false
+  }, {
+    "uuid" : "a839dff5-7cef-4081-a4cc-8b09462b41e1",
+    "encounterType" : {
+      "uuid" : "82c7e03a-b58d-4ba4-83e3-90c78303f374",
+      "voided" : false
+    },
+    "name" : "Mobile Medical Unit Visit",
+    "voided" : false
+  }, {
+    "uuid" : "51088396-a690-4b7f-9706-1d620007655a",
+    "encounterType" : {
+      "uuid" : "f320e58c-8a30-4f2e-8042-6f5945594041",
+      "voided" : false
+    },
+    "name" : "Chronic Patient Follow up",
+    "voided" : false
+  }, {
+    "uuid" : "6f2d8870-fa7d-436d-9a8c-922749ec8f88",
+    "encounterType" : {
+      "uuid" : "8b7842b6-4979-4597-8f8f-4ea48ec650c3",
+      "voided" : false
+    },
+    "name" : "MMU Referral ",
+    "voided" : false
+  }, {
+    "uuid" : "f06130fa-b1bd-4c55-9c00-f511295094ae",
+    "encounterType" : {
+      "uuid" : "18b986de-dd1a-478d-8163-485cd01dbad2",
+      "voided" : false
+    },
+    "name" : "SCD Hospitalisation support",
+    "voided" : false
+  }, {
+    "uuid" : "da7f5e76-b697-4e00-b9df-8eb53d9cc6b7",
+    "encounterType" : {
+      "uuid" : "b82afc4c-0026-4b20-820e-ce0facbfb40f",
+      "voided" : false
+    },
+    "name" : "ANC Follow-up Visit",
+    "voided" : false
+  }, {
+    "uuid" : "fb76173f-b6d6-4a95-bbe6-dae5dd1c8218",
+    "encounterType" : {
+      "uuid" : "433ed8ae-2410-44a0-8eca-5c5b0ddd9501",
+      "voided" : false
+    },
+    "name" : "High Risk Enrolment",
+    "voided" : false
+  }, {
+    "uuid" : "9e5cbb6d-436b-4e62-86f1-6780a2b21738",
+    "encounterType" : {
+      "uuid" : "837f0d4d-20c5-4ad3-bfeb-e386145616c1",
+      "voided" : false
+    },
+    "name" : "Delivery Encounter",
+    "voided" : false
+  }, {
+    "uuid" : "18fc968a-6d77-484f-9453-49e246aef0e6",
+    "encounterType" : {
+      "uuid" : "473a6940-f618-493d-8cd5-7d08f6caf746",
+      "voided" : false
+    },
+    "name" : "MH Enrollment Part - 2",
+    "voided" : false
+  }, {
+    "uuid" : "0f3b8f86-4314-4fd9-a98b-b26949a970eb",
+    "encounterType" : {
+      "uuid" : "7f22a7d6-7c18-488a-92ea-5126357ed04b",
+      "voided" : false
+    },
+    "name" : "High Risk Followups",
+    "voided" : false
+  }, {
+    "uuid" : "e6e989f5-7baa-4ce7-8fe3-49ffe309f9e5",
+    "encounterType" : {
+      "uuid" : "bdc7049e-9ad9-4b2c-952f-ab540e7a7b65",
+      "voided" : false
+    },
+    "name" : "MH Referral Follow Ups",
+    "voided" : false
+  }, {
+    "uuid" : "650b6826-250c-4a14-b344-df14712cecec",
+    "encounterType" : {
+      "uuid" : "b73c9699-e585-4d1d-a5a7-0f50649ad170",
+      "voided" : false
+    },
+    "name" : "MH Lab Investigations (voided~4581)",
+    "voided" : true
+  }, {
+    "uuid" : "43e429cd-4c1a-4b6c-af33-25e3c55865e2",
+    "encounterType" : {
+      "uuid" : "f05aa06f-93d6-4310-b452-9c40c68b8cee",
+      "voided" : false
+    },
+    "name" : "VHND Supportive Supervision visit",
+    "voided" : false
+  }, {
+    "uuid" : "6b51af72-98bd-4c43-bdcf-793ef39c3531",
+    "encounterType" : {
+      "uuid" : "1a65bfde-9ed0-488c-8b1d-9fd0d26a69a4",
+      "voided" : false
+    },
+    "name" : "SCD PSG Meeting attendance",
+    "voided" : false
+  }, {
+    "uuid" : "df59a3e4-f123-42ab-8239-55aa76356305",
+    "encounterType" : {
+      "uuid" : "7779da9b-f8e9-4f7f-bf05-36830eb46be5",
+      "voided" : false
+    },
+    "name" : "Epilepsy PSG meeting attendance",
+    "voided" : false
+  } ]
+}

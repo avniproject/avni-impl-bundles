@@ -1,0 +1,246 @@
+{
+  "name" : "Gram Panchayat Endline Encounter",
+  "uuid" : "e6198757-7b3f-4bfc-a1d6-0f6a61bac543",
+  "formType" : "Encounter",
+  "formElementGroups" : [ {
+    "uuid" : "3da7eeb2-7a3b-4ce8-bc58-9c2007e59b08",
+    "name" : "Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Name of Point of Contact for Gram Panchayat",
+      "uuid" : "c9b238df-e81a-4e65-b54d-3e68bcb86dcc",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of Point of Contact for Gram Panchayat",
+        "uuid" : "6d6a2c4d-6d11-49af-8818-d135c22d797f",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Contact number of Point of Contact",
+      "uuid" : "ec13a1c7-7e4e-4ca4-b623-ba0ba60cd763",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Contact number of Point of Contact",
+        "uuid" : "36244e72-5d99-46e6-9352-9733a4c9a8c3",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "validFormat" : {
+        "regex" : "^[0-9]{10}$",
+        "descriptionKey" : "Enter a valid 10 digit number"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "Total silt excavated by GP (for non-farm purpose)",
+      "uuid" : "09e9b8dc-3450-459e-a08d-c3225da6166f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total silt excavated by GP (for non-farm purpose)",
+        "uuid" : "1800c876-e957-4070-a527-b1ea81abfacc",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Usage of silt for non-farm purpose",
+      "uuid" : "306a8cea-7011-476a-8719-c0e2abe4c6ae",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Usage of silt for non-farm purpose",
+        "uuid" : "01293170-2c22-4a6b-bfcf-7d6bdda9a138",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Established any water committee",
+      "uuid" : "9d24628e-5af8-4842-b129-1cd758a1d11a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Established any water committee",
+        "uuid" : "d9c6617c-e87d-4f44-90f2-e59e2725b928",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Name of PoC for the committee",
+      "uuid" : "b9462390-2433-4a55-9807-398843856adb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of PoC for the committee",
+        "uuid" : "fc075ceb-2baa-44ef-a1ac-a3944f14cc64",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Contact number of PoC for committee",
+      "uuid" : "19e26c06-a7b7-4944-a053-cccce1ae744b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Contact number of PoC for committee",
+        "uuid" : "49859ba5-b7ba-4f0e-913a-3a4bdc22ce93",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "validFormat" : {
+        "regex" : "^[0-9]{10}$",
+        "descriptionKey" : "Enter a valid 10 digit number"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "Maintenance plan for the WB",
+      "uuid" : "accc857e-cbe5-4a9a-b61e-f04276a39206",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Maintenance plan for the WB",
+        "uuid" : "bd9389eb-1692-4b78-ae90-3e7f482983e1",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Capture Images for usage of silt 1",
+      "uuid" : "dcf5b958-6d3c-4608-bf36-147571ab01d1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Capture Images for usage of silt 1",
+        "uuid" : "7858d7df-014f-418b-8c55-ec8cf3bead15",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Capture Images for usage of silt 2",
+      "uuid" : "53a8ea46-0aaa-406d-bee2-e57b00e3c872",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Capture Images for usage of silt 2",
+        "uuid" : "89ca0e82-50a7-4ca8-9d33-89af4f01645d",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Payment made",
+      "uuid" : "545fff3b-8517-42aa-97d7-0c065c043395",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Payment made",
+        "uuid" : "93b8045a-95fa-4c47-a334-df72bc5c3f15",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "d449e5c9-58ec-4876-ba23-ee17d936d4b5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "ad0cc7f5-53fd-4298-8ff2-06d306e242ba",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Partial",
+          "uuid" : "a0f9e7c6-6762-44a1-bf91-302490538942",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Payment due",
+      "uuid" : "0cab7a30-1fe0-478f-8389-3170b0fa35a8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Payment due",
+        "uuid" : "b6655877-f2af-47be-b3d1-3084d6c83515",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Details"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

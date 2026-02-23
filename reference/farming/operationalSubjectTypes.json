@@ -1,0 +1,27 @@
+{
+  "operationalSubjectTypes" : [ {
+    "uuid" : "0c983f39-042b-49b8-b9b8-448c1ec924d8",
+    "subjectType" : {
+      "uuid" : "28b51317-86e9-4b33-b70d-437c8d667f95",
+      "voided" : false
+    },
+    "name" : "Farmer",
+    "voided" : false
+  }, {
+    "uuid" : "f701dea3-17dc-4206-bc80-274de4358d1f",
+    "subjectType" : {
+      "uuid" : "0659063b-6805-4789-b229-f0e12d9a95df",
+      "voided" : false
+    },
+    "name" : "Family (voided~1801)",
+    "voided" : true
+  }, {
+    "uuid" : "b14f2dd7-9992-472a-acf4-d05ea43e8373",
+    "subjectType" : {
+      "uuid" : "9046f644-37ac-4923-9dcb-453f6e50114d",
+      "voided" : false
+    },
+    "name" : "Family (voided~1802)",
+    "voided" : true
+  } ]
+}

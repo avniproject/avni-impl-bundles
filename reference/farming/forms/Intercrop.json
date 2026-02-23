@@ -1,0 +1,1460 @@
+{
+  "name" : "Intercrop",
+  "uuid" : "c01f920c-009d-4736-85e6-59e5ee5ee312",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "4f86d852-54ef-4518-924f-15ac2e783af9",
+    "name" : "Intercrop",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Year",
+      "uuid" : "a797ae4b-1e5e-4faa-8e29-d6309680fbc3",
+      "keyValues" : [ {
+        "key" : "ExcludedAnswers",
+        "value" : [ "2004", "2001", "2002", "2003" ]
+      } ],
+      "concept" : {
+        "name" : "Year",
+        "uuid" : "8224de50-6412-4ed6-bcf2-d23fc88a1b19",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "2004",
+          "uuid" : "d9224056-9479-4031-a3e4-ed6ed14a7b83",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2003",
+          "uuid" : "0a77c159-e710-4fbb-bcab-485f89036255",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2001",
+          "uuid" : "b4d50aef-9ed0-4256-9bef-d90bb833ab2d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2002",
+          "uuid" : "377fe919-821b-475d-91c6-72a641cc1b73",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Year",
+      "uuid" : "a154613f-0e50-47c9-a6ac-58860207b7a2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "year (voided~348452)",
+        "uuid" : "1321897a-6d53-4b3e-993f-5ffce6827e90",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "4th",
+          "uuid" : "eff8e112-af15-414f-8cf3-897115dbff09",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1st",
+          "uuid" : "d14396f8-a6ac-4875-aaed-a9d8ef04e239",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3rd",
+          "uuid" : "8b82be71-3add-47be-bf85-f1c38d44447a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2nd",
+          "uuid" : "a9680646-53f5-4ecc-9d53-15055d491a69",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ],
+        "voided" : true
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Year",
+      "uuid" : "f020f2cb-31ce-4494-9f7b-6b99f026e0bc",
+      "keyValues" : [ {
+        "key" : "ExcludedAnswers",
+        "value" : [ "4th", "5th and more", "9th", "7th", "5th", "10th", "6th", "8th" ]
+      } ],
+      "concept" : {
+        "name" : "Years",
+        "uuid" : "0b78d29a-7cca-4fe6-af6c-7aa1f8ad024f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "9th",
+          "uuid" : "b1f5438c-a81b-4332-a38c-ae20744102cf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "10th",
+          "uuid" : "65147bb9-af65-41dc-8303-81cd7ed0ed63",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2nd",
+          "uuid" : "a9680646-53f5-4ecc-9d53-15055d491a69",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "5th and more",
+          "uuid" : "e9aaeaeb-aed4-4277-9882-b24e263edafc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3rd",
+          "uuid" : "8b82be71-3add-47be-bf85-f1c38d44447a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "4th",
+          "uuid" : "eff8e112-af15-414f-8cf3-897115dbff09",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "5th",
+          "uuid" : "59424a6b-af2e-4782-9830-86208e734b73",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "8th",
+          "uuid" : "121f063b-1a12-4626-952e-80343035ccdf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1st",
+          "uuid" : "d14396f8-a6ac-4875-aaed-a9d8ef04e239",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "6th",
+          "uuid" : "3ce93883-4d69-452a-bd7c-6cbe59ec8640",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "7th",
+          "uuid" : "9900200e-6003-4d5b-88b4-be4d09ddd120",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Season",
+      "uuid" : "4fd8c008-50a4-4eea-b94b-471a9b6be32e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Season",
+        "uuid" : "5dd1b169-578e-4317-ac60-e2f6334690be",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Zaid",
+          "uuid" : "c0f902da-88e1-4206-84ea-29a6e20ba51b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Kharif",
+          "uuid" : "58583b46-f8a3-486a-9903-9908899d44ef",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Rabi",
+          "uuid" : "b167e259-fc52-4f34-8043-3416692f707b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Crop type",
+      "uuid" : "cbcb2ae6-7d10-4744-8282-2545b39e7cc5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of the crop",
+        "uuid" : "1aa9cdf8-5762-4a9c-bd46-4e252164bfb0",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Garlic",
+          "uuid" : "ad0377af-4db3-474d-89f3-36ae114621ec",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Onion",
+          "uuid" : "aa2ec926-a4f6-4466-9e17-28bf508d4873",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Spinach",
+          "uuid" : "dcac9dd8-b24f-4b75-b168-beff35b4785c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "MultiSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Name of the crop",
+      "uuid" : "865256df-c586-49a8-95a5-b7be7c20a777",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of the crop",
+        "uuid" : "1aa9cdf8-5762-4a9c-bd46-4e252164bfb0",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Garlic",
+          "uuid" : "ad0377af-4db3-474d-89f3-36ae114621ec",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Onion",
+          "uuid" : "aa2ec926-a4f6-4466-9e17-28bf508d4873",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Spinach",
+          "uuid" : "dcac9dd8-b24f-4b75-b168-beff35b4785c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total production of Onion",
+      "uuid" : "bd83b322-9b95-4e31-a0ee-98b7bc176200",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total production of Onion",
+        "uuid" : "22e0e042-64de-4688-9425-73d510a778ee",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"1aa9cdf8-5762-4a9c-bd46-4e252164bfb0\").containsAnswerConceptName(\"aa2ec926-a4f6-4466-9e17-28bf508d4873\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Name of the crop",
+                "conceptUuid" : "1aa9cdf8-5762-4a9c-bd46-4e252164bfb0",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Onion" ],
+                "answerConceptUuids" : [ "aa2ec926-a4f6-4466-9e17-28bf508d4873" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Crop type",
+      "uuid" : "070cb6c5-9b08-4ec0-b6c9-18ee0028ebb2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Crop type",
+        "uuid" : "dd54808e-9fda-4644-bc7b-abef33d19942",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Field crop",
+          "uuid" : "4faef2e5-5249-47bb-a288-fb1383b25baf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Vegetable",
+          "uuid" : "543d9cbd-1a62-4084-96e0-58c88262f0a2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Flower",
+          "uuid" : "ec042c02-e04e-4349-8ddc-b1b392828c0c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Crop Details",
+      "uuid" : "3b886ac9-faca-4388-8ae4-32c719ba69aa",
+      "keyValues" : [ {
+        "key" : "repeatable",
+        "value" : true
+      } ],
+      "concept" : {
+        "name" : "Crop Details",
+        "uuid" : "364ce060-02e2-4930-bf41-84b803af6aff",
+        "dataType" : "QuestionGroup",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"dd54808e-9fda-4644-bc7b-abef33d19942\").containsAnswerConceptName(\"ec042c02-e04e-4349-8ddc-b1b392828c0c\").matches();\n  \n  visibility = !(condition11 );\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "hideFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Crop type",
+                "conceptUuid" : "dd54808e-9fda-4644-bc7b-abef33d19942",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Flower" ],
+                "answerConceptUuids" : [ "ec042c02-e04e-4349-8ddc-b1b392828c0c" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "Crop Name",
+      "uuid" : "1a3af3e8-a206-4a1c-b683-106a0d0764c1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Crop name",
+        "uuid" : "092fcc4b-da80-44c4-adf6-257b9b5fa6dc",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Long melon",
+          "uuid" : "8ce24f68-6d0f-44fb-b39a-fb1a169f0415",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cowpea",
+          "uuid" : "d5db3f55-44bb-4e5d-86e3-bccce9364cc0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Green gram",
+          "uuid" : "a3d76033-fb19-4e59-925b-c5409d911788",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "B",
+          "uuid" : "585462ab-97e3-4a79-8638-b26d21bc1c9e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lentil",
+          "uuid" : "c50830b0-3009-49f9-897b-8b96a6113ccb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "C",
+          "uuid" : "ef4cbc46-5790-40a6-9da6-89057c0d7fdc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Green Coriander",
+          "uuid" : "4ab5b6df-236a-41ca-8112-7b658f89930d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Carrot",
+          "uuid" : "cc83fae3-b93f-403b-8f52-2dc67b7dc0dd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Spinach",
+          "uuid" : "dcac9dd8-b24f-4b75-b168-beff35b4785c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lady's Finger",
+          "uuid" : "846f1324-de88-46ca-b2e1-53a64a62639d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Black gram",
+          "uuid" : "edc64af3-d049-4e8a-978a-ca0eb9ad00c3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Round Gourd",
+          "uuid" : "d7f66cb3-b7a1-4d84-8718-ad5c5db76483",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pea",
+          "uuid" : "b90777e7-fa0a-4d13-95ef-76076509c377",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "A",
+          "uuid" : "1d5d2734-2b63-456a-bfd0-099b92f27017",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Green Fenugreek",
+          "uuid" : "af4f8834-462d-4a2a-8cc0-c5a92bd4ff94",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Gram",
+          "uuid" : "6a40bace-73b7-4ddc-8483-a8081e637604",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Early Pegion pea",
+          "uuid" : "3da55d35-38d4-4adf-9ad0-6552265f4737",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cluster Bean",
+          "uuid" : "9b505590-481b-4005-98ba-b19e78f673bd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Linseed",
+          "uuid" : "e58d8cb4-0a91-46fd-b603-5f82307f3eb4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let answersToShow = [];\n    let validationErrors = [];\n    let toBeShown = [];\n    \n    let allOptions = formElement.getApplicableAnswerConceptUUIDs();\n    const kharifUUID = '58583b46-f8a3-486a-9903-9908899d44ef';\n    const rabiUUID = 'b167e259-fc52-4f34-8043-3416692f707b';\n    const zaidUUID = 'c0f902da-88e1-4206-84ea-29a6e20ba51b';\n    const fieldCropUUID = '4faef2e5-5249-47bb-a288-fb1383b25baf';\n    const vegetableUUID = '543d9cbd-1a62-4084-96e0-58c88262f0a2';\n\n    const season = programEncounter.getObservationValue(\"5dd1b169-578e-4317-ac60-e2f6334690be\");\n    const cropType = programEncounter.getObservationValue(\"dd54808e-9fda-4644-bc7b-abef33d19942\");\n    \n    // Kharif\n    const kharifFeildCrop = season == kharifUUID && cropType == fieldCropUUID;\n    const kharifVegitables = season == kharifUUID && cropType == vegetableUUID;\n    \n    if(kharifFeildCrop ) {\n        toBeShown.push(\"a3d76033-fb19-4e59-925b-c5409d911788\", \"edc64af3-d049-4e8a-978a-ca0eb9ad00c3\", \"9b505590-481b-4005-98ba-b19e78f673bd\", \"3da55d35-38d4-4adf-9ad0-6552265f4737\");\n    }\n    if(kharifVegitables ) {\n        toBeShown.push(\"9b505590-481b-4005-98ba-b19e78f673bd\", \"d5db3f55-44bb-4e5d-86e3-bccce9364cc0\", \"d7f66cb3-b7a1-4d84-8718-ad5c5db76483\", \"846f1324-de88-46ca-b2e1-53a64a62639d\");\n    }\n\n    // Rabi\n    const rabiFeildCrop = season == rabiUUID && cropType == fieldCropUUID;\n    const rabiVegitables = season == rabiUUID && cropType == vegetableUUID;\n    \n    if(rabiFeildCrop ) {\n        toBeShown.push(\"6a40bace-73b7-4ddc-8483-a8081e637604\",\"b90777e7-fa0a-4d13-95ef-76076509c377\",\"c50830b0-3009-49f9-897b-8b96a6113ccb\",\"e58d8cb4-0a91-46fd-b603-5f82307f3eb4\")   \n    }\n    if(rabiVegitables ) {\n        toBeShown.push(\"dcac9dd8-b24f-4b75-b168-beff35b4785c\",\"4ab5b6df-236a-41ca-8112-7b658f89930d\",\"af4f8834-462d-4a2a-8cc0-c5a92bd4ff94\",\"cc83fae3-b93f-403b-8f52-2dc67b7dc0dd\")\n    }\n\n    // Zaid\n    const zaidFeildCrop = season == zaidUUID && cropType == fieldCropUUID;\n    const zaidVegetables = season == zaidUUID && cropType == vegetableUUID;\n    \n    if(zaidFeildCrop ) {\n        toBeShown.push(\"a3d76033-fb19-4e59-925b-c5409d911788\")\n    }\n    if(zaidVegetables ) {\n        toBeShown.push(\"d5db3f55-44bb-4e5d-86e3-bccce9364cc0\",\"9b505590-481b-4005-98ba-b19e78f673bd\",\"8ce24f68-6d0f-44fb-b39a-fb1a169f0415\")\n    }\n\n    toBeShown = _.uniq(toBeShown);\n\n    let toBeHidden = _.difference(allOptions, toBeShown);\n\n    if(toBeHidden && toBeHidden.length > 0){\n        _.forEach(toBeHidden, (answer) => {\n            const answerToSkip = formElement.getAnswerWithConceptUuid(answer);\n            if (answerToSkip) answersToSkip.push(answerToSkip);\n        });\n    }\n\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors, answersToShow);\n};",
+      "parentFormElementUuid" : "3b886ac9-faca-4388-8ae4-32c719ba69aa",
+      "mandatory" : true
+    }, {
+      "name" : "Total Production of Crop",
+      "uuid" : "93707348-6cd5-415a-80da-e6a4801c04c5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total Production of Crop",
+        "uuid" : "de048a96-f4a3-43bc-bbe6-0bcb01fd7498",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "3b886ac9-faca-4388-8ae4-32c719ba69aa",
+      "mandatory" : true
+    }, {
+      "name" : "Income realized from market",
+      "uuid" : "2e5bf971-c820-4487-a5ec-94398d3e3a07",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Income realized from market",
+        "uuid" : "828102c0-edb9-4198-8548-e2aa07c26fca",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "3b886ac9-faca-4388-8ae4-32c719ba69aa",
+      "mandatory" : true
+    }, {
+      "name" : "Crop Name",
+      "uuid" : "26d0d4de-a793-4f2d-b1be-dd9ee5698534",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Crop name",
+        "uuid" : "092fcc4b-da80-44c4-adf6-257b9b5fa6dc",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Long melon",
+          "uuid" : "8ce24f68-6d0f-44fb-b39a-fb1a169f0415",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cowpea",
+          "uuid" : "d5db3f55-44bb-4e5d-86e3-bccce9364cc0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Green gram",
+          "uuid" : "a3d76033-fb19-4e59-925b-c5409d911788",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "B",
+          "uuid" : "585462ab-97e3-4a79-8638-b26d21bc1c9e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lentil",
+          "uuid" : "c50830b0-3009-49f9-897b-8b96a6113ccb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "C",
+          "uuid" : "ef4cbc46-5790-40a6-9da6-89057c0d7fdc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Green Coriander",
+          "uuid" : "4ab5b6df-236a-41ca-8112-7b658f89930d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Carrot",
+          "uuid" : "cc83fae3-b93f-403b-8f52-2dc67b7dc0dd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Spinach",
+          "uuid" : "dcac9dd8-b24f-4b75-b168-beff35b4785c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lady's Finger",
+          "uuid" : "846f1324-de88-46ca-b2e1-53a64a62639d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Black gram",
+          "uuid" : "edc64af3-d049-4e8a-978a-ca0eb9ad00c3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Round Gourd",
+          "uuid" : "d7f66cb3-b7a1-4d84-8718-ad5c5db76483",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pea",
+          "uuid" : "b90777e7-fa0a-4d13-95ef-76076509c377",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "A",
+          "uuid" : "1d5d2734-2b63-456a-bfd0-099b92f27017",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Green Fenugreek",
+          "uuid" : "af4f8834-462d-4a2a-8cc0-c5a92bd4ff94",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Gram",
+          "uuid" : "6a40bace-73b7-4ddc-8483-a8081e637604",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Early Pegion pea",
+          "uuid" : "3da55d35-38d4-4adf-9ad0-6552265f4737",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cluster Bean",
+          "uuid" : "9b505590-481b-4005-98ba-b19e78f673bd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Linseed",
+          "uuid" : "e58d8cb4-0a91-46fd-b603-5f82307f3eb4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total production of Garlic",
+      "uuid" : "4435a6d3-eed6-41b2-883a-9355db07b692",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total production of Garlic",
+        "uuid" : "373d6f15-6098-4089-bd32-92e339a1749f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"1aa9cdf8-5762-4a9c-bd46-4e252164bfb0\").containsAnswerConceptName(\"ad0377af-4db3-474d-89f3-36ae114621ec\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Name of the crop",
+                "conceptUuid" : "1aa9cdf8-5762-4a9c-bd46-4e252164bfb0",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Garlic" ],
+                "answerConceptUuids" : [ "ad0377af-4db3-474d-89f3-36ae114621ec" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total production of Spinach",
+      "uuid" : "f20a53d7-2023-42aa-8df3-7752b3fea289",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total production of Spinach",
+        "uuid" : "3a82aae4-96f3-4c35-b792-799b9ca8a87c",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 15.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"1aa9cdf8-5762-4a9c-bd46-4e252164bfb0\").containsAnswerConceptName(\"dcac9dd8-b24f-4b75-b168-beff35b4785c\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Name of the crop",
+                "conceptUuid" : "1aa9cdf8-5762-4a9c-bd46-4e252164bfb0",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Spinach" ],
+                "answerConceptUuids" : [ "dcac9dd8-b24f-4b75-b168-beff35b4785c" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Crop Name",
+      "uuid" : "9ddb8c70-1c8e-4c3b-83a2-0fc6e44c52f6",
+      "keyValues" : [ {
+        "key" : "repeatable",
+        "value" : true
+      } ],
+      "concept" : {
+        "name" : "CropName",
+        "uuid" : "9c3dfcb6-3bdb-40ed-9742-bc8ace2b07ec",
+        "dataType" : "QuestionGroup",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 16.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Name of crop",
+      "uuid" : "26710b8d-86c3-4119-bb8b-2503e7f30903",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of crop (voided~303718)",
+        "uuid" : "5113534f-311d-4ada-aaed-54b9c25b6ee5",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Onion",
+          "uuid" : "aa2ec926-a4f6-4466-9e17-28bf508d4873",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Spinach",
+          "uuid" : "dcac9dd8-b24f-4b75-b168-beff35b4785c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Garlic",
+          "uuid" : "ad0377af-4db3-474d-89f3-36ae114621ec",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ],
+        "voided" : true
+      },
+      "displayOrder" : 17.0,
+      "type" : "MultiSelect",
+      "parentFormElementUuid" : "9ddb8c70-1c8e-4c3b-83a2-0fc6e44c52f6",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Name of the crop",
+      "uuid" : "eca3f627-7986-45db-8c11-34b03a2fe7e5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of the crop",
+        "uuid" : "1aa9cdf8-5762-4a9c-bd46-4e252164bfb0",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Garlic",
+          "uuid" : "ad0377af-4db3-474d-89f3-36ae114621ec",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Onion",
+          "uuid" : "aa2ec926-a4f6-4466-9e17-28bf508d4873",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Spinach",
+          "uuid" : "dcac9dd8-b24f-4b75-b168-beff35b4785c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 18.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "9ddb8c70-1c8e-4c3b-83a2-0fc6e44c52f6",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total production of onion",
+      "uuid" : "c27a1b69-e806-4151-a574-6852fc01f4a8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total production of Onion",
+        "uuid" : "22e0e042-64de-4688-9425-73d510a778ee",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 19.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"1aa9cdf8-5762-4a9c-bd46-4e252164bfb0\", \"9c3dfcb6-3bdb-40ed-9742-bc8ace2b07ec\", params.questionGroupIndex).containsAnswerConceptName(\"aa2ec926-a4f6-4466-9e17-28bf508d4873\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Name of the crop",
+                "conceptUuid" : "1aa9cdf8-5762-4a9c-bd46-4e252164bfb0",
+                "conceptDataType" : "Coded",
+                "parentConceptUuid" : "9c3dfcb6-3bdb-40ed-9742-bc8ace2b07ec"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Onion" ],
+                "answerConceptUuids" : [ "aa2ec926-a4f6-4466-9e17-28bf508d4873" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "parentFormElementUuid" : "9ddb8c70-1c8e-4c3b-83a2-0fc6e44c52f6",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total production of Garlic",
+      "uuid" : "80ba1781-e3f5-4285-9b9d-3ab6927212a1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total production of Garlic",
+        "uuid" : "373d6f15-6098-4089-bd32-92e339a1749f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 20.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"1aa9cdf8-5762-4a9c-bd46-4e252164bfb0\", \"9c3dfcb6-3bdb-40ed-9742-bc8ace2b07ec\", params.questionGroupIndex).containsAnswerConceptName(\"ad0377af-4db3-474d-89f3-36ae114621ec\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Name of the crop",
+                "conceptUuid" : "1aa9cdf8-5762-4a9c-bd46-4e252164bfb0",
+                "conceptDataType" : "Coded",
+                "parentConceptUuid" : "9c3dfcb6-3bdb-40ed-9742-bc8ace2b07ec"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Garlic" ],
+                "answerConceptUuids" : [ "ad0377af-4db3-474d-89f3-36ae114621ec" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "parentFormElementUuid" : "9ddb8c70-1c8e-4c3b-83a2-0fc6e44c52f6",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total production of Spinach",
+      "uuid" : "462e17ec-962c-4237-9587-1e3ce213320f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total production of Spinach",
+        "uuid" : "3a82aae4-96f3-4c35-b792-799b9ca8a87c",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 21.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"1aa9cdf8-5762-4a9c-bd46-4e252164bfb0\", \"9c3dfcb6-3bdb-40ed-9742-bc8ace2b07ec\", params.questionGroupIndex).containsAnswerConceptName(\"dcac9dd8-b24f-4b75-b168-beff35b4785c\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Name of the crop",
+                "conceptUuid" : "1aa9cdf8-5762-4a9c-bd46-4e252164bfb0",
+                "conceptDataType" : "Coded",
+                "parentConceptUuid" : "9c3dfcb6-3bdb-40ed-9742-bc8ace2b07ec"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Spinach" ],
+                "answerConceptUuids" : [ "dcac9dd8-b24f-4b75-b168-beff35b4785c" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "parentFormElementUuid" : "9ddb8c70-1c8e-4c3b-83a2-0fc6e44c52f6",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Season",
+      "uuid" : "772950c1-0949-4b1f-b19d-eff5eb7055f9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Crop name (voided~280555)",
+        "uuid" : "34a7bc18-e17d-42f4-93d1-249034a06492",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Kharif",
+          "uuid" : "58583b46-f8a3-486a-9903-9908899d44ef",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Zaid",
+          "uuid" : "c0f902da-88e1-4206-84ea-29a6e20ba51b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Rabi",
+          "uuid" : "b167e259-fc52-4f34-8043-3416692f707b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ],
+        "voided" : true
+      },
+      "displayOrder" : 22.0,
+      "type" : "MultiSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Season",
+      "uuid" : "72490214-75b5-4c6b-aca5-19227ff9cbac",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Season",
+        "uuid" : "5dd1b169-578e-4317-ac60-e2f6334690be",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Zaid",
+          "uuid" : "c0f902da-88e1-4206-84ea-29a6e20ba51b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Kharif",
+          "uuid" : "58583b46-f8a3-486a-9903-9908899d44ef",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Rabi",
+          "uuid" : "b167e259-fc52-4f34-8043-3416692f707b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 23.0,
+      "type" : "MultiSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Crop Name",
+      "uuid" : "68d787f3-8aba-4e0f-8e4d-f81398979fca",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Crops Name",
+        "uuid" : "b98f7abd-8d01-4412-9aa8-0817aa5f7074",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Bajra",
+          "uuid" : "ce13022f-b13f-47b9-a127-dbdf1b693472",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Wheat",
+          "uuid" : "5dc3df97-005d-4b88-b8af-9010f07af467",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jowar",
+          "uuid" : "0f2905e4-98b9-4a16-a1b6-60c52f5e3c61",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Garlic",
+          "uuid" : "ad0377af-4db3-474d-89f3-36ae114621ec",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Spinach",
+          "uuid" : "dcac9dd8-b24f-4b75-b168-beff35b4785c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Onion",
+          "uuid" : "aa2ec926-a4f6-4466-9e17-28bf508d4873",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tomato",
+          "uuid" : "ba0d7fe2-339f-48ba-9708-1272334e3118",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 24.0,
+      "type" : "MultiSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Total production of onion",
+      "uuid" : "4d2dcf90-0093-4f28-b131-2da55938e8c1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total production of onion",
+        "uuid" : "083dc60d-3d72-4e20-9544-ec93d3ece224",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 25.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"b98f7abd-8d01-4412-9aa8-0817aa5f7074\").containsAnswerConceptName(\"5dc3df97-005d-4b88-b8af-9010f07af467\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Crops Name",
+                "conceptUuid" : "b98f7abd-8d01-4412-9aa8-0817aa5f7074",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Wheat" ],
+                "answerConceptUuids" : [ "5dc3df97-005d-4b88-b8af-9010f07af467" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total production of Garlic",
+      "uuid" : "1aa9168c-cdf2-4713-940f-c3658baaf572",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total production of Garlic",
+        "uuid" : "373d6f15-6098-4089-bd32-92e339a1749f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 26.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"b98f7abd-8d01-4412-9aa8-0817aa5f7074\").containsAnswerConceptName(\"ce13022f-b13f-47b9-a127-dbdf1b693472\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Crops Name",
+                "conceptUuid" : "b98f7abd-8d01-4412-9aa8-0817aa5f7074",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Bajra" ],
+                "answerConceptUuids" : [ "ce13022f-b13f-47b9-a127-dbdf1b693472" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total production of Spinach",
+      "uuid" : "1ee172c9-a71b-4b58-b4f2-35b51ed44557",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total production of Spinach",
+        "uuid" : "3a82aae4-96f3-4c35-b792-799b9ca8a87c",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 27.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"b98f7abd-8d01-4412-9aa8-0817aa5f7074\").containsAnswerConceptName(\"0f2905e4-98b9-4a16-a1b6-60c52f5e3c61\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Crops Name",
+                "conceptUuid" : "b98f7abd-8d01-4412-9aa8-0817aa5f7074",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Jowar" ],
+                "answerConceptUuids" : [ "0f2905e4-98b9-4a16-a1b6-60c52f5e3c61" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total production of crop Kharif",
+      "uuid" : "1a9e0199-35bd-4e92-87ab-d561ac146964",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "total production of crop Kharif",
+        "uuid" : "bd3cfb6d-6e24-4d28-ad2b-cd1c5be97f80",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 28.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total production of crop Kharif",
+      "uuid" : "bd414284-6af6-4a3f-a2cd-4e99f6256a46",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total production of crop Kharif",
+        "uuid" : "3e0b8b3d-9239-4cf2-a182-35afc05967e9",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 29.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Intercrop"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

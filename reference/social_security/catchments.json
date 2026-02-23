@@ -1,0 +1,10 @@
+{
+  "catchments" : [ {
+    "name" : "Karnataka",
+    "uuid" : "0e20c83c-5ad4-4eda-a8c3-54b24d04a740",
+    "locations" : [ {
+      "uuid" : "ee0b4751-8e66-422e-bd78-01586220e7c5"
+    } ],
+    "voided" : false
+  } ]
+}

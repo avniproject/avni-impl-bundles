@@ -1,0 +1,998 @@
+{
+  "name" : "MH Delivery Encounter",
+  "uuid" : "53835dfb-ccbf-4d8d-ad55-8cfab872e0b0",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "2e405d3d-efb3-4076-9488-532d76b44d4d",
+    "name" : "Delivery Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Delivery Outcomes",
+      "uuid" : "bc83dcc2-695f-47ab-a8be-1ef8af9f887c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Delivery Outcomes",
+        "uuid" : "a748a594-4420-4627-a737-004f771ded13",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Live Birth",
+          "uuid" : "e3999b21-821c-4c6e-9953-156e70b9217c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Moved to Maternal Side",
+          "uuid" : "17fb00ac-2280-41a9-baf3-f05a106badd1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Program Completion",
+          "uuid" : "2eb44825-5c72-41f1-a62c-5f97be1f354b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Moved out of Catchment",
+          "uuid" : "0209d003-4679-4149-a261-97b79f6693e1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Death",
+          "uuid" : "afff87d7-4c40-4dd4-9bf7-8e5d9adb3b83",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Abortion",
+          "uuid" : "03dddd29-c1bb-4231-a17b-55445e247e7d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Still Birth",
+          "uuid" : "797c7923-1993-49d9-b759-1706aae62ae9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Date of Pregnancy outcome (Delivery)",
+      "uuid" : "48a83d24-bb88-40b9-af06-584ef1aab545",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "calendar"
+      } ],
+      "concept" : {
+        "name" : "Date of Pregnancy outcome (Delivery)",
+        "uuid" : "f66b51a3-c0ad-4e40-a5ee-eca2481bd83c",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n    const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"a748a594-4420-4627-a737-004f771ded13\").containsAnswerConceptName(\"797c7923-1993-49d9-b759-1706aae62ae9\").or.when.valueInEncounter(\"a748a594-4420-4627-a737-004f771ded13\").containsAnswerConceptName(\"e3999b21-821c-4c6e-9953-156e70b9217c\").or.when.valueInEncounter(\"a748a594-4420-4627-a737-004f771ded13\").containsAnswerConceptName(\"03dddd29-c1bb-4231-a17b-55445e247e7d\").matches();\n  \n \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Did mother breastfeed the baby within 1 hour after the birth",
+      "uuid" : "a211e181-341c-446d-8fb3-96f4d488796d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Breastfeeding within 1 hour",
+        "uuid" : "db75978e-fba1-449b-8fe5-ad72b5049056",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"a748a594-4420-4627-a737-004f771ded13\").containsAnswerConceptName(\"e3999b21-821c-4c6e-9953-156e70b9217c\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Delivery Outcomes",
+                "conceptUuid" : "a748a594-4420-4627-a737-004f771ded13",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Live Birth" ],
+                "answerConceptUuids" : [ "e3999b21-821c-4c6e-9953-156e70b9217c" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "or"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Gestational Age Category",
+      "uuid" : "ef1696e2-ab72-49ee-b018-6402ec491251",
+      "keyValues" : [ {
+        "key" : "ExcludedAnswers",
+        "value" : [ "Very preterm" ]
+      } ],
+      "concept" : {
+        "name" : "Gestational age category at birth",
+        "uuid" : "24c71448-1068-4dc2-aa2f-8bbb66a5123f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Term (37 -38 weeks)",
+          "uuid" : "61612a0b-72db-46a8-97d5-d9994d86118f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Preterm (<28 weeks)",
+          "uuid" : "a382978b-6ae5-4320-8873-7ee80d8c0657",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Very preterm",
+          "uuid" : "48d13717-d2d4-450e-bb9c-59976237cd90",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Post term/ Post dated (> 39 weeks)",
+          "uuid" : "790ec1c3-3c3a-41f5-95d3-1c8a7f8da525",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Delivery Details"
+  }, {
+    "uuid" : "aa578a06-9b44-4200-8677-c793d9c7cc9f",
+    "name" : "Delivery Facility",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Delivery Facility",
+      "uuid" : "426ca0a6-3333-43d5-a472-ccb715851b0d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Delivery Facility",
+        "uuid" : "0d78b57f-704b-46f9-875a-6ed686c0e8e4",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Non-institutional",
+          "uuid" : "9c483847-bee2-42ab-8591-8ebdd35af1b3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "On the way",
+          "uuid" : "baf7910e-ed6c-46b5-985b-56e2f408d75c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Institutional",
+          "uuid" : "071291ce-e644-4d66-89b9-94d14364effc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Level of Delivery Facility",
+      "uuid" : "7c0a178d-7577-4d1f-a2fe-065a31fde7e6",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Level of Delivery Facility",
+        "uuid" : "4e95d76f-a91d-46bb-b432-4662776c0a53",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "CHC",
+          "uuid" : "ba73a8c8-2cc3-4020-a966-585dcd7f1301",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Private",
+          "uuid" : "bd21f0b6-b64c-452e-82dc-0b508c864bdb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HWC/SHC",
+          "uuid" : "54f8b3d1-132b-4087-80da-8617bcd8d4a2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PHC",
+          "uuid" : "f8e47462-cd79-4e48-ae1e-b37d773f53ae",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "DH",
+          "uuid" : "08a02d60-5383-4022-b4b1-923afc84b4d9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Medical College",
+          "uuid" : "9579ae7a-3c37-41c1-a378-738e551c28cb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"0d78b57f-704b-46f9-875a-6ed686c0e8e4\").containsAnswerConceptName(\"071291ce-e644-4d66-89b9-94d14364effc\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Name of Facility for Institutional Delivery",
+      "uuid" : "82de855d-5d87-4f44-a73c-397b745b0e31",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of Facility for Institutional Delivery",
+        "uuid" : "a014a647-47fe-4dd2-9930-586401f39b63",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "CHC Rajendragram",
+          "uuid" : "fefe8d83-1122-4801-a18a-494d25f04143",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HWC Alwar",
+          "uuid" : "ccdc20c2-518d-48c3-86b6-3475a6d326be",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jabalpur Medical College",
+          "uuid" : "d0a7f1de-a1a2-4d4e-92d3-278421bdd2e7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Shahdol Medical College",
+          "uuid" : "ddde9150-aca0-47c4-8d1f-94f578e3a803",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HWC Gonda",
+          "uuid" : "f8d20a54-395a-4755-9f60-114b604812d9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "DH Shahdol",
+          "uuid" : "8e36a4dc-be50-4e6f-92e9-d76fc819ce2d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Private clinic",
+          "uuid" : "f8ecce6b-48b0-4ac9-adf0-3bb56fd0d7be",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Burhar",
+          "uuid" : "f7b31dfa-243f-4a43-ae4e-cdfb8a4b314a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Karpa",
+          "uuid" : "a17bad58-3e5c-4692-97ca-d639a268c99c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HWC Titahi - Jaithari",
+          "uuid" : "582d0c67-a6d1-4f25-8dc3-6e40131f10ed",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PHC Khamraudh",
+          "uuid" : "52e39cdf-bce7-48bb-9b2c-c6a8d706f9f0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Birsinghpur, Pali",
+          "uuid" : "f2b9e9d3-8104-43bf-891e-ccc4c6e738db",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HWC Ledra",
+          "uuid" : "a3eff426-7073-425c-9e40-777d974b3147",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "JSS Ganiyari",
+          "uuid" : "d7d3bf68-7134-4153-86e1-bb0e4966440c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Private hospital",
+          "uuid" : "8767f6a6-6ca9-41d1-b60e-2c5addf22168",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "DH Anuppur",
+          "uuid" : "5ae1697e-d67f-4e26-a209-74d4721f2013",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"0d78b57f-704b-46f9-875a-6ed686c0e8e4\").containsAnswerConceptName(\"071291ce-e644-4d66-89b9-94d14364effc\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Delivery Facility",
+                "conceptUuid" : "0d78b57f-704b-46f9-875a-6ed686c0e8e4",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Institutional" ],
+                "answerConceptUuids" : [ "071291ce-e644-4d66-89b9-94d14364effc" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Enter the name of other Location of delivery",
+      "uuid" : "c9181610-180d-42c2-8c55-c04439700925",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other Location",
+        "uuid" : "f0943c2a-36b9-406e-99f7-846cc0eb4e08",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"a014a647-47fe-4dd2-9930-586401f39b63\").containsAnswerConceptName(\"05ea583c-51d2-412d-ad00-06c432ffe538\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Delivery Location",
+                "conceptUuid" : "a014a647-47fe-4dd2-9930-586401f39b63",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "05ea583c-51d2-412d-ad00-06c432ffe538" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElementGroup = params.formElementGroup;\n    const _ = imports.lodash;\n    let visibility = true;\n    return formElementGroup.formElements.map((formElement) => {\n        \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"a748a594-4420-4627-a737-004f771ded13\").containsAnswerConceptName(\"797c7923-1993-49d9-b759-1706aae62ae9\").or.when.valueInEncounter(\"a748a594-4420-4627-a737-004f771ded13\").containsAnswerConceptName(\"e3999b21-821c-4c6e-9953-156e70b9217c\").matches();\n  \n        visibility = condition11 ;\n  \n        return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, null);\n    });\n};",
+    "declarativeRule" : [ {
+      "actions" : [ {
+        "actionType" : "showFormElementGroup"
+      }, { } ],
+      "conditions" : [ {
+        "compoundRule" : {
+          "rules" : [ {
+            "lhs" : {
+              "type" : "concept",
+              "scope" : "encounter",
+              "conceptName" : "Delivery Outcomes",
+              "conceptUuid" : "a748a594-4420-4627-a737-004f771ded13",
+              "conceptDataType" : "Coded"
+            },
+            "rhs" : {
+              "type" : "answerConcept",
+              "answerConceptNames" : [ "Still Birth" ],
+              "answerConceptUuids" : [ "797c7923-1993-49d9-b759-1706aae62ae9" ]
+            },
+            "operator" : "containsAnswerConceptName"
+          }, {
+            "lhs" : {
+              "type" : "concept",
+              "scope" : "encounter",
+              "conceptName" : "Delivery Outcomes",
+              "conceptUuid" : "a748a594-4420-4627-a737-004f771ded13",
+              "conceptDataType" : "Coded"
+            },
+            "rhs" : {
+              "type" : "answerConcept",
+              "answerConceptNames" : [ "Live Birth" ],
+              "answerConceptUuids" : [ "e3999b21-821c-4c6e-9953-156e70b9217c" ]
+            },
+            "operator" : "containsAnswerConceptName"
+          } ],
+          "conjunction" : "or"
+        }
+      } ]
+    } ],
+    "timed" : false,
+    "display" : "Delivery Facility"
+  }, {
+    "uuid" : "280ac395-e345-41c4-8c8e-d533886ef1b3",
+    "name" : "Delivery Process",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Type of Delivery",
+      "uuid" : "4e4b980c-7203-4dad-80b3-6dfde2d3a83e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Type of delivery",
+        "uuid" : "69d0acf1-c32b-4694-9bc2-874b5e7a44c8",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Normal",
+          "uuid" : "ba43b326-18a1-4f8d-ad04-29b0371461e0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Instrumental",
+          "uuid" : "eeaf9b42-71f7-49d4-80c6-a498619d1645",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Caesarean Section",
+          "uuid" : "f5192c76-f772-4e84-8fea-16d980de15bc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Complications during Delivery",
+      "uuid" : "ca0558fc-f463-45c1-b399-1245dd352ce9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Complications During Delivery?",
+        "uuid" : "64f923e0-704d-472b-9e34-faa82748a6f9",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "What were the complications?",
+      "uuid" : "675a1455-9b14-4962-9ba1-9660dea33ba4",
+      "keyValues" : [ {
+        "key" : "ExcludedAnswers",
+        "value" : [ "Maternal Death" ]
+      } ],
+      "concept" : {
+        "name" : "Delivery Complications",
+        "uuid" : "42fcfd17-4e35-4981-96b3-1d028915d808",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Uterine Rupture",
+          "uuid" : "ae847737-5be5-4c55-8abe-db3606c2de6b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Obstructed Labour",
+          "uuid" : "3654f7c6-e515-4653-8298-50dfb54d2152",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Vaginal Rupture",
+          "uuid" : "3e562cd9-a23c-415b-922d-c4c86d788444",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Maternal Death",
+          "uuid" : "475b4eba-f2ef-4d09-ac27-3913e0b23373",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PPH (postpartum haemorrhage)",
+          "uuid" : "4ed8b24e-e031-4289-9c1e-70bde07a80a4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"64f923e0-704d-472b-9e34-faa82748a6f9\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Complications During Delivery?",
+                "conceptUuid" : "64f923e0-704d-472b-9e34-faa82748a6f9",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Other complication during delivery",
+      "uuid" : "425e7627-2bc7-49da-b94a-461914cbc82f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other complication during delivery",
+        "uuid" : "f8642aa8-a24f-4f25-8422-852649a980ef",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"42fcfd17-4e35-4981-96b3-1d028915d808\").containsAnswerConceptName(\"05ea583c-51d2-412d-ad00-06c432ffe538\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Delivery Complications",
+                "conceptUuid" : "42fcfd17-4e35-4981-96b3-1d028915d808",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "05ea583c-51d2-412d-ad00-06c432ffe538" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Specify Other complications",
+      "uuid" : "8dd8298f-b70a-4382-ace4-e11cbef82e71",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Any Other Complaint",
+        "uuid" : "079a0348-a308-471d-87dc-715dcb149125",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"42fcfd17-4e35-4981-96b3-1d028915d808\").containsAnswerConceptName(\"05ea583c-51d2-412d-ad00-06c432ffe538\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Delivery Complications",
+                "conceptUuid" : "42fcfd17-4e35-4981-96b3-1d028915d808",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "05ea583c-51d2-412d-ad00-06c432ffe538" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElementGroup = params.formElementGroup;\n    const _ = imports.lodash;\n    let visibility = true;\n    return formElementGroup.formElements.map((formElement) => {\n        \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"a748a594-4420-4627-a737-004f771ded13\").containsAnswerConceptName(\"797c7923-1993-49d9-b759-1706aae62ae9\").or.when.valueInEncounter(\"a748a594-4420-4627-a737-004f771ded13\").containsAnswerConceptName(\"e3999b21-821c-4c6e-9953-156e70b9217c\").matches();\n  \n        visibility = condition11 ;\n  \n        return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, null);\n    });\n};",
+    "declarativeRule" : [ {
+      "actions" : [ {
+        "actionType" : "showFormElementGroup"
+      }, { } ],
+      "conditions" : [ {
+        "compoundRule" : {
+          "rules" : [ {
+            "lhs" : {
+              "type" : "concept",
+              "scope" : "encounter",
+              "conceptName" : "Delivery Outcomes",
+              "conceptUuid" : "a748a594-4420-4627-a737-004f771ded13",
+              "conceptDataType" : "Coded"
+            },
+            "rhs" : {
+              "type" : "answerConcept",
+              "answerConceptNames" : [ "Still Birth" ],
+              "answerConceptUuids" : [ "797c7923-1993-49d9-b759-1706aae62ae9" ]
+            },
+            "operator" : "containsAnswerConceptName"
+          }, {
+            "lhs" : {
+              "type" : "concept",
+              "scope" : "encounter",
+              "conceptName" : "Delivery Outcomes",
+              "conceptUuid" : "a748a594-4420-4627-a737-004f771ded13",
+              "conceptDataType" : "Coded"
+            },
+            "rhs" : {
+              "type" : "answerConcept",
+              "answerConceptNames" : [ "Live Birth" ],
+              "answerConceptUuids" : [ "e3999b21-821c-4c6e-9953-156e70b9217c" ]
+            },
+            "operator" : "containsAnswerConceptName"
+          } ],
+          "conjunction" : "or"
+        }
+      } ]
+    } ],
+    "timed" : false,
+    "display" : "Delivery Process"
+  }, {
+    "uuid" : "5a11e1c3-9d20-4487-91c4-6c95a75bb864",
+    "name" : "Post-Delivery",
+    "displayOrder" : 4.0,
+    "formElements" : [ {
+      "name" : "Did mother breastfeed the baby within 1 hour after the birth",
+      "uuid" : "0390da0c-e3a2-405f-b778-7d8919084d18",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Breastfeeding within 1 hour",
+        "uuid" : "db75978e-fba1-449b-8fe5-ad72b5049056",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"a748a594-4420-4627-a737-004f771ded13\").containsAnswerConceptName(\"e3999b21-821c-4c6e-9953-156e70b9217c\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Delivery Outcomes",
+                "conceptUuid" : "a748a594-4420-4627-a737-004f771ded13",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Live Birth" ],
+                "answerConceptUuids" : [ "e3999b21-821c-4c6e-9953-156e70b9217c" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "or"
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElementGroup = params.formElementGroup;\n    const _ = imports.lodash;\n    let visibility = true;\n    return formElementGroup.formElements.map((formElement) => {\n        \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"a748a594-4420-4627-a737-004f771ded13\").containsAnswerConceptName(\"e3999b21-821c-4c6e-9953-156e70b9217c\").matches();\n  \n        visibility = condition11 ;\n  \n        return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, null);\n    });\n};",
+    "declarativeRule" : [ {
+      "actions" : [ {
+        "actionType" : "showFormElementGroup"
+      }, { } ],
+      "conditions" : [ {
+        "compoundRule" : {
+          "rules" : [ {
+            "lhs" : {
+              "type" : "concept",
+              "scope" : "encounter",
+              "conceptName" : "Delivery Outcomes",
+              "conceptUuid" : "a748a594-4420-4627-a737-004f771ded13",
+              "conceptDataType" : "Coded"
+            },
+            "rhs" : {
+              "type" : "answerConcept",
+              "answerConceptNames" : [ "Live Birth" ],
+              "answerConceptUuids" : [ "e3999b21-821c-4c6e-9953-156e70b9217c" ]
+            },
+            "operator" : "containsAnswerConceptName"
+          } ],
+          "conjunction" : "or"
+        }
+      } ]
+    } ],
+    "voided" : true,
+    "timed" : false,
+    "display" : "Post-Delivery"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

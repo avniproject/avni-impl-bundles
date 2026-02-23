@@ -1,0 +1,1264 @@
+{
+  "name" : "MH High Risk Pregnancy Enrolment",
+  "uuid" : "86c41078-cbf1-46b6-985e-b4232f8d3bb4",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "69891f54-3a65-4a30-912b-6a4e8ad73960",
+    "name" : "High Risk Enrollment",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Is the woman high risk?",
+      "uuid" : "6c8bcbd5-38b1-4e9f-81be-d2218754b707",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Whether this is a high risk pregnancy",
+        "uuid" : "cecda0a9-869d-4c3c-8a65-4e343777eafe",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.ageInYears.lessThan(18).or.when.ageInYears.greaterThan(35).or.when.valueInEntireEnrolment(\"47f496cc-6527-4b34-b327-bdb9119e8d75\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").or.when.valueInEntireEnrolment(\"e09cc275-3ab3-47d6-ac38-81187276213d\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").matches();\n  \n  if(condition11 ){\n    value = \"Yes\";  \n}\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "details" : {
+            "value" : "Yes"
+          },
+          "actionType" : "value"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "ageInYears"
+              },
+              "rhs" : {
+                "type" : "value",
+                "value" : 18
+              },
+              "operator" : "lessThan"
+            }, {
+              "lhs" : {
+                "type" : "ageInYears"
+              },
+              "rhs" : {
+                "type" : "value",
+                "value" : 35
+              },
+              "operator" : "greaterThan"
+            }, {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "entireEnrolment",
+                "conceptName" : "High Risk Pregnancy?",
+                "conceptUuid" : "47f496cc-6527-4b34-b327-bdb9119e8d75",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            }, {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "entireEnrolment",
+                "conceptName" : "Enrolled as High Risk Pregnancy in govt?",
+                "conceptUuid" : "e09cc275-3ab3-47d6-ac38-81187276213d",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "or"
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "If you will save this form, this Pregnancy will be marked 'high risk'",
+      "uuid" : "174c05bf-8da9-40fd-a2dc-0630530054a1",
+      "keyValues" : [ {
+        "key" : "ExcludedAnswers",
+        "value" : [ "No" ]
+      } ],
+      "concept" : {
+        "name" : "High Risk Pregnancy?",
+        "uuid" : "47f496cc-6527-4b34-b327-bdb9119e8d75",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"5f28bfdc-b4f4-4560-bafa-66690d9a9dcc\").defined.matches();\n  \n  if(condition11 ){\n    value = \"High Risk\";  \n}\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "details" : {
+            "value" : "High Risk"
+          },
+          "actionType" : "value"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Address",
+                "conceptUuid" : "5f28bfdc-b4f4-4560-bafa-66690d9a9dcc",
+                "conceptDataType" : "Text"
+              },
+              "rhs" : { },
+              "operator" : "defined"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Select the High Risk Condition",
+      "uuid" : "0f07ab34-db6d-40d1-be21-bcc5934d74fb",
+      "keyValues" : [ {
+        "key" : "ExcludedAnswers",
+        "value" : [ "Age < 18", "Height < 145 cms", "Age > 35", "Multigravida > 4" ]
+      } ],
+      "concept" : {
+        "name" : "Complications in Current Pregnancy",
+        "uuid" : "a4663dce-c750-4367-b673-ebbd9a4482e5",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Multiple foetuses",
+          "uuid" : "c99f5dc0-7dc7-410c-bb4a-997666ac312b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 18.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pre Eclampsia",
+          "uuid" : "30ab8f94-0f0d-46d4-ad6b-0082d0327db4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 24.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "RH Negative Blood Group",
+          "uuid" : "606e74c3-f4bf-4ccb-aee2-b232771403e4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 26.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Age > 35",
+          "uuid" : "3449b4c4-9115-48bf-910a-13ef72d7a193",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Polyhydroamnios",
+          "uuid" : "e2064d83-fdb8-417f-90f8-a26c80666189",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 23.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cervical Insufficiency",
+          "uuid" : "212d6e68-bae1-4813-9b08-5a62ddb78a34",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Hepatitis",
+          "uuid" : "32d058a0-5738-4bc8-8c3d-23ce41c2d901",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PIH (pregnancy induced hypertension)",
+          "uuid" : "9bc67a6f-71ad-4227-aac5-6dfaa0ec9bf3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 20.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Severe Pre Eclampsia",
+          "uuid" : "bdaf1e3a-ee07-472f-94c5-5d6120395e59",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 27.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Malaria",
+          "uuid" : "0dee2973-eebe-4699-b676-b770fdd1c411",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 32.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "BP >=140/90",
+          "uuid" : "ab6064b2-0640-4037-9238-04efb954aede",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "MUAC <23CM",
+          "uuid" : "b4d2080c-c739-4f9a-b7d9-11e3b236fb36",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Preterm Labor or History of Preterm Birth",
+          "uuid" : "13ee5d1e-baac-4e4c-bfbe-ae5d22b06bf4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 25.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Eclampsia",
+          "uuid" : "489f07e5-d9e1-478a-969d-3acad587a15e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Twins",
+          "uuid" : "d4943a59-16da-45e1-98c1-354c710fdbc0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 30.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Foul smelling discharge",
+          "uuid" : "cb521247-5499-4925-bedd-a4c5c3ea8f3d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Placental Abruption (premature separation of the placenta)",
+          "uuid" : "65d315ac-05e2-4254-83c0-b173506995a8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 22.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "BMI: <18.5",
+          "uuid" : "2843a443-d47d-4de1-af2e-d640dc6553ea",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Oligohydroamnios",
+          "uuid" : "c2571c63-fc47-476a-9425-1e4d61a66522",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 19.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "GDM (Gestational Diabetes Mellitus)",
+          "uuid" : "58ca5422-5a2b-44eb-84c9-4d7e968e38cc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Less than 18 months between pregnancies",
+          "uuid" : "bb542b77-2c92-4066-b55a-5775365f8b60",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Foetuses >= 4",
+          "uuid" : "8f35dc05-b54e-402f-9074-d403b7ef6263",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Too much or too little amniotic fluid",
+          "uuid" : "4ada21ba-a388-4fed-8de8-bdc179ff5b83",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 28.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Baby smaller than expected for gestational age",
+          "uuid" : "2a104344-4ca4-439c-9539-9c86d7fd9b24",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Antepartum haemorrhage",
+          "uuid" : "9b7a760c-f332-4117-b177-42f83a29db67",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 31.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Anemia",
+          "uuid" : "268fa632-288e-44ad-ab52-774bbd7a2700",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Height < 145 cms",
+          "uuid" : "a35e3da0-dc75-4e24-9070-41488a7eabf6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Multigravida > 4",
+          "uuid" : "651cb1be-2364-4989-ae90-0c19ad77834b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 17.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Age < 18",
+          "uuid" : "331aee3f-0567-4f75-9efd-722f04606e75",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Triplet",
+          "uuid" : "25c522b8-7f11-4ff0-8096-c7f5ddeba7ab",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 29.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Placenta Previa (placenta covering the cervix)",
+          "uuid" : "2dec6ee9-b9d7-450e-ac59-d3f1bcce70aa",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 21.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.latestValueInPreviousEncounters(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptNameOtherThan(\"ebda5e05-a995-43ca-ad1a-30af3b937539\").matches();\n  \n  visibility = !(condition11 );\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "hideFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "latestInPreviousEncounters",
+                "conceptName" : "Complications in Current Pregnancy",
+                "conceptUuid" : "a4663dce-c750-4367-b673-ebbd9a4482e5",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "None" ],
+                "answerConceptUuids" : [ "ebda5e05-a995-43ca-ad1a-30af3b937539" ]
+              },
+              "operator" : "containsAnswerConceptNameOtherThan"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Other High Risk Condition in current pregnancy",
+      "uuid" : "11ad3e62-6d5c-4800-8896-fc8829b17244",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other High Risk Condition in current pregnancy",
+        "uuid" : "c7ed99a4-9856-4161-b5b8-5a0dab58c541",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptName(\"05ea583c-51d2-412d-ad00-06c432ffe538\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Complications in Current Pregnancy",
+                "conceptUuid" : "a4663dce-c750-4367-b673-ebbd9a4482e5",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "05ea583c-51d2-412d-ad00-06c432ffe538" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "Any medical/ surgical condition?",
+      "uuid" : "36a5e745-3582-422c-9171-d6897f765940",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Medical history",
+        "uuid" : "2991127b-7064-4027-a030-4a3a8d0e8aa7",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "RTI (Reproductive tract syndrome)/STI (Sexually transmitted disease)",
+          "uuid" : "35c6e43d-acc5-4980-93de-ce1cbd6cd402",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Syphilis",
+          "uuid" : "27a7116c-0cd9-40ed-a17a-76462ef78e63",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 17.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HIV/AIDS",
+          "uuid" : "8425af99-4a07-4d99-97b2-cf955713a560",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Epilepsy",
+          "uuid" : "a34bf7a0-4d55-41fa-855a-0b8094f369f7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Renal Disease",
+          "uuid" : "2e86955f-0d81-4e80-a1f4-255b3c186bec",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "TB",
+          "uuid" : "ca8a5f57-c409-47ad-8acf-921cdd0fc191",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 18.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hepatitis B Positive",
+          "uuid" : "f9b654e6-628b-4bbf-b3ee-2adc5ab7ea1c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 20.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Diabetes",
+          "uuid" : "674f348f-5075-4c85-8bc2-9edfdee27505",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Heart-related Diseases",
+          "uuid" : "712e683a-337d-49bd-a3d7-f7b0e1b8e22e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other Medical/ Surgical Condition",
+          "uuid" : "bcf88019-5cf6-44c6-9e13-16c7e93eef4c",
+          "dataType" : "Text",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Asthma",
+          "uuid" : "3d6fcc5e-fb31-4222-aa69-a02d43ff91cf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Thalassemia",
+          "uuid" : "70866aba-d585-48ba-993c-1fa86498751c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 19.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hypothyroidism/ Abnormal Thyroid Function",
+          "uuid" : "d7da8b6c-6728-4aa3-9307-e06acc888aa7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 21.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Anaemia",
+          "uuid" : "43ea47d8-8c92-4564-a9df-eee28191f85c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hypertension",
+          "uuid" : "998d1bae-05d8-47b9-89b8-0254829f238f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sickle Cell Diagnosis",
+          "uuid" : "fa81ebfc-2e4f-4547-b8f7-1a405fe7e401",
+          "dataType" : "Coded",
+          "answers" : [ {
+            "name" : "AS",
+            "uuid" : "77ee8a6a-2a01-421f-85ca-fc0ab39abcdb",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 1.0,
+            "unique" : true,
+            "active" : true,
+            "media" : [ ]
+          }, {
+            "name" : "SS",
+            "uuid" : "3648a650-2f3e-4c2c-a899-c0a8212aace1",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 0.0,
+            "unique" : true,
+            "active" : true,
+            "media" : [ ]
+          }, {
+            "name" : "Negative",
+            "uuid" : "ad1f0481-a8ed-411a-ac00-d0435a670269",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 2.0,
+            "unique" : true,
+            "active" : true,
+            "media" : [ ]
+          } ],
+          "order" : 14.0,
+          "abnormal" : true,
+          "active" : true,
+          "keyValues" : [ ],
+          "media" : [ ]
+        }, {
+          "name" : "Sickle cell disease SS",
+          "uuid" : "705b3ef7-e41a-4954-bc3f-9556eb002f3d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "IVF/ ETC",
+          "uuid" : "9ae40491-2af6-4b6c-9d74-c08b06a54ae8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Nephrotic syndrome",
+          "uuid" : "5a798bac-6417-4b36-98c8-13d4380aa69e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sickle Cell (voided~255694)",
+          "uuid" : "37acc93a-8416-4440-ba68-d61ac4ba4c5f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "MultiSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Other Medical/ Surgical Condition:",
+      "uuid" : "16673cfc-b365-4066-b9e0-cae90184a0e5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other Medical/ Surgical Condition",
+        "uuid" : "bcf88019-5cf6-44c6-9e13-16c7e93eef4c",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"2991127b-7064-4027-a030-4a3a8d0e8aa7\").containsAnswerConceptName(\"05ea583c-51d2-412d-ad00-06c432ffe538\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medical history",
+                "conceptUuid" : "2991127b-7064-4027-a030-4a3a8d0e8aa7",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "05ea583c-51d2-412d-ad00-06c432ffe538" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "or"
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "textColour" : "#f71212",
+    "timed" : false,
+    "display" : "High Risk Enrollment"
+  }, {
+    "uuid" : "a8a98f1a-991f-4a92-bca9-499a345a449d",
+    "name" : "Medical History / Conditions",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Any medical/ surgical condition?",
+      "uuid" : "60e154fd-d1fb-40ef-aa1c-603fd28d1510",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Medical history",
+        "uuid" : "2991127b-7064-4027-a030-4a3a8d0e8aa7",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "RTI (Reproductive tract syndrome)/STI (Sexually transmitted disease)",
+          "uuid" : "35c6e43d-acc5-4980-93de-ce1cbd6cd402",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Syphilis",
+          "uuid" : "27a7116c-0cd9-40ed-a17a-76462ef78e63",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 17.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HIV/AIDS",
+          "uuid" : "8425af99-4a07-4d99-97b2-cf955713a560",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Epilepsy",
+          "uuid" : "a34bf7a0-4d55-41fa-855a-0b8094f369f7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Renal Disease",
+          "uuid" : "2e86955f-0d81-4e80-a1f4-255b3c186bec",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "TB",
+          "uuid" : "ca8a5f57-c409-47ad-8acf-921cdd0fc191",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 18.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hepatitis B Positive",
+          "uuid" : "f9b654e6-628b-4bbf-b3ee-2adc5ab7ea1c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 20.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Diabetes",
+          "uuid" : "674f348f-5075-4c85-8bc2-9edfdee27505",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Heart-related Diseases",
+          "uuid" : "712e683a-337d-49bd-a3d7-f7b0e1b8e22e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other Medical/ Surgical Condition",
+          "uuid" : "bcf88019-5cf6-44c6-9e13-16c7e93eef4c",
+          "dataType" : "Text",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Asthma",
+          "uuid" : "3d6fcc5e-fb31-4222-aa69-a02d43ff91cf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Thalassemia",
+          "uuid" : "70866aba-d585-48ba-993c-1fa86498751c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 19.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hypothyroidism/ Abnormal Thyroid Function",
+          "uuid" : "d7da8b6c-6728-4aa3-9307-e06acc888aa7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 21.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Anaemia",
+          "uuid" : "43ea47d8-8c92-4564-a9df-eee28191f85c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hypertension",
+          "uuid" : "998d1bae-05d8-47b9-89b8-0254829f238f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sickle Cell Diagnosis",
+          "uuid" : "fa81ebfc-2e4f-4547-b8f7-1a405fe7e401",
+          "dataType" : "Coded",
+          "answers" : [ {
+            "name" : "AS",
+            "uuid" : "77ee8a6a-2a01-421f-85ca-fc0ab39abcdb",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 1.0,
+            "unique" : true,
+            "active" : true,
+            "media" : [ ]
+          }, {
+            "name" : "SS",
+            "uuid" : "3648a650-2f3e-4c2c-a899-c0a8212aace1",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 0.0,
+            "unique" : true,
+            "active" : true,
+            "media" : [ ]
+          }, {
+            "name" : "Negative",
+            "uuid" : "ad1f0481-a8ed-411a-ac00-d0435a670269",
+            "dataType" : "NA",
+            "answers" : [ ],
+            "order" : 2.0,
+            "unique" : true,
+            "active" : true,
+            "media" : [ ]
+          } ],
+          "order" : 14.0,
+          "abnormal" : true,
+          "active" : true,
+          "keyValues" : [ ],
+          "media" : [ ]
+        }, {
+          "name" : "Sickle cell disease SS",
+          "uuid" : "705b3ef7-e41a-4954-bc3f-9556eb002f3d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "IVF/ ETC",
+          "uuid" : "9ae40491-2af6-4b6c-9d74-c08b06a54ae8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Nephrotic syndrome",
+          "uuid" : "5a798bac-6417-4b36-98c8-13d4380aa69e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sickle Cell (voided~255694)",
+          "uuid" : "37acc93a-8416-4440-ba68-d61ac4ba4c5f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.latestValueInPreviousEncounters(\"2991127b-7064-4027-a030-4a3a8d0e8aa7\").containsAnswerConceptNameOtherThan(\"ebda5e05-a995-43ca-ad1a-30af3b937539\").matches();\n  \n  visibility = !(condition11 );\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "hideFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "latestInPreviousEncounters",
+                "conceptName" : "Medical history",
+                "conceptUuid" : "2991127b-7064-4027-a030-4a3a8d0e8aa7",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "None" ],
+                "answerConceptUuids" : [ "ebda5e05-a995-43ca-ad1a-30af3b937539" ]
+              },
+              "operator" : "containsAnswerConceptNameOtherThan"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Other Medical/ Surgical Condition",
+      "uuid" : "8d1cfdd2-6c22-41b3-8d22-884ee59d53d5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other Medical/ Surgical Condition",
+        "uuid" : "bcf88019-5cf6-44c6-9e13-16c7e93eef4c",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"2991127b-7064-4027-a030-4a3a8d0e8aa7\").containsAnswerConceptName(\"05ea583c-51d2-412d-ad00-06c432ffe538\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Medical history",
+                "conceptUuid" : "2991127b-7064-4027-a030-4a3a8d0e8aa7",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "05ea583c-51d2-412d-ad00-06c432ffe538" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Lifestyle Factors",
+      "uuid" : "567d7289-bb12-43ba-99b7-ba58fa76c173",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Lifestyle Factors",
+        "uuid" : "3bf58c0e-cee4-49ab-8cfb-219a708b017b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Lack of pre-natal care",
+          "uuid" : "d1283d9c-61e3-47b6-b646-a41c1d2cbd53",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Drug abuse",
+          "uuid" : "fb1aeb5d-df6f-4853-92d8-f521f41b01c3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Dhatura",
+          "uuid" : "eae9267a-217d-4732-9b58-dbeaf4c0a1bf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Obesity",
+          "uuid" : "bc10468a-27ac-4906-8e1f-527783da79e3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other substance abuse",
+          "uuid" : "3e66daa0-b5ce-4f76-9406-b77800515a84",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Smoking",
+          "uuid" : "e89f9c53-177f-436a-9400-969087226df0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Alcohol",
+          "uuid" : "92654fda-d485-4b6d-97c5-8a8fe2a9582a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Poor Nutrition",
+          "uuid" : "1c54a081-3cd3-49f2-b571-44357dc65589",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "All High Risk Pregnancy Conditions from other forms",
+      "uuid" : "508b053e-788a-492e-a183-8473e3fa8cf8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "All High Risk Pregnancy Conditions - Autopopulate",
+        "uuid" : "d8cf1817-7e5f-46e6-af58-c7ab0360505b",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  \n  let visibility = true;\n  let value = \"No Previous High Risk COnditions\";\n  let answersToSkip = [];\n  let validationErrors = [];\n\n  //Conditions from Enrolment, part-2\n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.ageInYears.lessThan(18).matches();\n  \n  const condition12 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.ageInYears.greaterThan(35).matches();\n  \n  const condition13 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.latestValueInPreviousEncounters(\"d883d5fe-e17d-4136-b989-089fa0295e34\").lessThan(145).matches();\n  \n  const condition14 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.latestValueInPreviousEncounters(\"7ac0d759-c50d-4971-88e0-84274224c839\").lessThan(18.5).matches();\n  \n  const condition15 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.latestValueInPreviousEncounters(\"dc2c23e9-19ad-471f-81d1-213069ccc975\").greaterThan(4).matches();  \n  \n  const condition16 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.latestValueInPreviousEncounters(\"38b9986b-76e8-4015-ae51-48152b1cd42c\").greaterThan(0).matches();\n\n  // Conditions from concept \"Complications from past pregnancy\" \n  \n  const condition17 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"35c34397-ebbf-492b-b504-f296836e529d\").containsAnswerConceptName(\"a34bf7a0-4d55-41fa-855a-0b8094f369f7\").matches(); // Epilepsy \n  \n    const condition18 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"35c34397-ebbf-492b-b504-f296836e529d\").containsAnswerConceptName(\"bbcab554-15c0-424f-a86f-e12a9ad38a53\").matches(); // Ante Partum hemorrhage (APH)\n  \n      const condition19 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"35c34397-ebbf-492b-b504-f296836e529d\").containsAnswerConceptName(\"73aafba5-f2ae-4ac7-bb68-4a28f2c5f79f\").matches(); // Blood Group Negative of Child\n  \n      const condition20 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"35c34397-ebbf-492b-b504-f296836e529d\").containsAnswerConceptName(\"f5192c76-f772-4e84-8fea-16d980de15bc\").matches(); //Caesarean Section\n  \n      const condition21 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"35c34397-ebbf-492b-b504-f296836e529d\").containsAnswerConceptName(\"35d4d5db-6715-4ec2-91d8-b483e4c1fd48\").matches(); //Deformities at birth\n  \n      const condition22 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"35c34397-ebbf-492b-b504-f296836e529d\").containsAnswerConceptName(\"f25f4119-e473-4226-8455-3b53cd2581b6\").matches(); // Gestational Diabetes (GDM)\n  \n      const condition23 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"35c34397-ebbf-492b-b504-f296836e529d\").containsAnswerConceptName(\"388b6585-988d-4f36-a937-782012675168\").matches(); // Hypertensive Disease in Pregnancy\n \n      const condition24 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"35c34397-ebbf-492b-b504-f296836e529d\").containsAnswerConceptName(\"1486f5ef-928c-4069-ac10-8e8e1ce904e3\").matches(); // Low Birth Weight Baby\n \n      const condition25 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"35c34397-ebbf-492b-b504-f296836e529d\").containsAnswerConceptName(\"8bb26585-6a85-41c6-ad23-88cca95283be\").matches(); // Multiple abortions\n \n      const condition26 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"35c34397-ebbf-492b-b504-f296836e529d\").containsAnswerConceptName(\"58146bb8-9fbe-439b-a472-08e17a8cd4ba\").matches(); // Neonatal death within first 28 days\n \n      const condition27 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"35c34397-ebbf-492b-b504-f296836e529d\").containsAnswerConceptName(\"3654f7c6-e515-4653-8298-50dfb54d2152\").matches(); // Obstructed Labour\n \n      const condition28 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"35c34397-ebbf-492b-b504-f296836e529d\").containsAnswerConceptName(\"4ed8b24e-e031-4289-9c1e-70bde07a80a4\").matches(); //PPH (postpartum haemorrhage)\n \n      const condition29 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"35c34397-ebbf-492b-b504-f296836e529d\").containsAnswerConceptName(\"937a4d2a-7e38-4ca5-8309-113199d4a27e\").matches(); // Previous Still Birth\n \n      const condition30 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"35c34397-ebbf-492b-b504-f296836e529d\").containsAnswerConceptName(\"a382978b-6ae5-4320-8873-7ee80d8c0657\").matches(); //Preterm (<28 weeks)\n \n      const condition31 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"35c34397-ebbf-492b-b504-f296836e529d\").containsAnswerConceptName(\"d211703c-beab-40f3-9e87-a271759c5ec9\").matches(); // Retained Placenta\n \n      const condition32 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"35c34397-ebbf-492b-b504-f296836e529d\").containsAnswerConceptName(\"f728efe5-6620-424a-ac91-ad3efe43df97\").matches(); // Seizures\n \n      const condition33 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"35c34397-ebbf-492b-b504-f296836e529d\").containsAnswerConceptName(\"1aff631c-e487-4202-a862-122b45168ac6\").matches(); // Severe Anemia\n \n      const condition34 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"35c34397-ebbf-492b-b504-f296836e529d\").containsAnswerConceptName(\"d4943a59-16da-45e1-98c1-354c710fdbc0\").matches(); // Twins\n   \n    // Conditions from concept \"Complications from Current pregnancy\" \n  const condition36 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptName(\"268fa632-288e-44ad-ab52-774bbd7a2700\").matches(); // Anemia\n \n  const condition37 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptName(\"9b7a760c-f332-4117-b177-42f83a29db67\").matches(); // Antepartum haemorrhage\n \n  const condition38 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptName(\"2a104344-4ca4-439c-9539-9c86d7fd9b24\").matches(); // Baby smaller than expected for gestational age\n \n  const condition39 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptName(\"ab6064b2-0640-4037-9238-04efb954aede\").matches(); // BP >=140/90\n \n  const condition40 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptName(\"212d6e68-bae1-4813-9b08-5a62ddb78a34\").matches(); // Cervical Insufficiency\n \n  const condition41 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptName(\"489f07e5-d9e1-478a-969d-3acad587a15e\").matches(); // Eclampsia\n \n  const condition42 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptName(\"cb521247-5499-4925-bedd-a4c5c3ea8f3d\").matches(); // Foul smelling discharge\n \n  const condition43 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptName(\"58ca5422-5a2b-44eb-84c9-4d7e968e38cc\").matches(); // GDM (Gestational Diabetes Mellitus)\n \n  const condition44 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptName(\"32d058a0-5738-4bc8-8c3d-23ce41c2d901\").matches(); // Hepatitis\n \n  const condition45 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptName(\"bb542b77-2c92-4066-b55a-5775365f8b60\").matches(); // Less than 18 months between pregnancies\n \n  const condition46 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptName(\"0dee2973-eebe-4699-b676-b770fdd1c411\").matches(); // Malaria\n \n  const condition47 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptName(\"b4d2080c-c739-4f9a-b7d9-11e3b236fb36\").matches(); // MUAC <23CM\n \n  const condition48 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptName(\"c99f5dc0-7dc7-410c-bb4a-997666ac312b\").matches(); // Multiple foetuses\n \n  const condition49 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptName(\"c2571c63-fc47-476a-9425-1e4d61a66522\").matches(); // Oligohydroamnios\n \n  const condition50 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptName(\"9bc67a6f-71ad-4227-aac5-6dfaa0ec9bf3\").matches(); // PIH (pregnancy induced hypertension)\n \n  const condition51 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptName(\"2dec6ee9-b9d7-450e-ac59-d3f1bcce70aa\").matches(); // Placenta Previa (placenta covering the cervix)\n \n  const condition52 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptName(\"65d315ac-05e2-4254-83c0-b173506995a8\").matches(); // Placental Abruption (premature separation of the placenta)\n \n  const condition53 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptName(\"e2064d83-fdb8-417f-90f8-a26c80666189\").matches(); // Polyhydroamnios\n \n  const condition54 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptName(\"30ab8f94-0f0d-46d4-ad6b-0082d0327db4\").matches(); // Pre Eclampsia\n \n  const condition55 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptName(\"606e74c3-f4bf-4ccb-aee2-b232771403e4\").matches(); // RH Negative Blood Group\n \n  const condition56 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptName(\"bdaf1e3a-ee07-472f-94c5-5d6120395e59\").matches(); // Severe Pre Eclampsia\n \n  const condition57 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"a4663dce-c750-4367-b673-ebbd9a4482e5\").containsAnswerConceptName(\"4ada21ba-a388-4fed-8de8-bdc179ff5b83\").matches(); // Too much or too little amniotic fluid\n\n  // From Concept \"Lifestyle Factors\"\n  const condition58 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"3bf58c0e-cee4-49ab-8cfb-219a708b017b\").containsAnswerConceptName(\"92654fda-d485-4b6d-97c5-8a8fe2a9582a\").matches(); // Alcohol\n  \n  const condition59 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"3bf58c0e-cee4-49ab-8cfb-219a708b017b\").containsAnswerConceptName(\"fb1aeb5d-df6f-4853-92d8-f521f41b01c3\").matches(); // Drug abuse\n  \n  const condition60 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"3bf58c0e-cee4-49ab-8cfb-219a708b017b\").containsAnswerConceptName(\"d1283d9c-61e3-47b6-b646-a41c1d2cbd53\").matches(); // Lack of pre-natal care\n  \n  const condition61 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"3bf58c0e-cee4-49ab-8cfb-219a708b017b\").containsAnswerConceptName(\"bc10468a-27ac-4906-8e1f-527783da79e3\").matches(); // Obesity\n  \n  const condition62 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"3bf58c0e-cee4-49ab-8cfb-219a708b017b\").containsAnswerConceptName(\"1c54a081-3cd3-49f2-b571-44357dc65589\").matches(); // Poor Nutrition\n  \n  const condition63 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"3bf58c0e-cee4-49ab-8cfb-219a708b017b\").containsAnswerConceptName(\"e89f9c53-177f-436a-9400-969087226df0\").matches(); // Smoking\n  \n //From concept \"Medical History\"\n  const condition64 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"2991127b-7064-4027-a030-4a3a8d0e8aa7\").containsAnswerConceptName(\"43ea47d8-8c92-4564-a9df-eee28191f85c\").matches(); // Anaemia\n  \n  const condition65 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"2991127b-7064-4027-a030-4a3a8d0e8aa7\").containsAnswerConceptName(\"3d6fcc5e-fb31-4222-aa69-a02d43ff91cf\").matches(); // Asthma\n  \n  const condition66 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"2991127b-7064-4027-a030-4a3a8d0e8aa7\").containsAnswerConceptName(\"674f348f-5075-4c85-8bc2-9edfdee27505\").matches(); // Diabetes\n  \n  const condition67 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"2991127b-7064-4027-a030-4a3a8d0e8aa7\").containsAnswerConceptName(\"a34bf7a0-4d55-41fa-855a-0b8094f369f7\").matches(); // Epilepsy\n  \n  const condition68 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"2991127b-7064-4027-a030-4a3a8d0e8aa7\").containsAnswerConceptName(\"712e683a-337d-49bd-a3d7-f7b0e1b8e22e\").matches(); // Heart-related Diseases\n\n  const condition69 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"2991127b-7064-4027-a030-4a3a8d0e8aa7\").containsAnswerConceptName(\"f9b654e6-628b-4bbf-b3ee-2adc5ab7ea1c\").matches(); // Hepatitis B Positive\n\n  const condition70 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"2991127b-7064-4027-a030-4a3a8d0e8aa7\").containsAnswerConceptName(\"8425af99-4a07-4d99-97b2-cf955713a560\").matches(); // HIV/AIDS\n\n  const condition71 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"2991127b-7064-4027-a030-4a3a8d0e8aa7\").containsAnswerConceptName(\"998d1bae-05d8-47b9-89b8-0254829f238f\").matches(); // Hypertension\n\n  const condition72 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"2991127b-7064-4027-a030-4a3a8d0e8aa7\").containsAnswerConceptName(\"d7da8b6c-6728-4aa3-9307-e06acc888aa7\").matches(); // Hypothyroidism/ Abnormal Thyroid Function\n\n  const condition73 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"2991127b-7064-4027-a030-4a3a8d0e8aa7\").containsAnswerConceptName(\"9ae40491-2af6-4b6c-9d74-c08b06a54ae8\").matches(); // IVF/ ETC\n\n  const condition74 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"2991127b-7064-4027-a030-4a3a8d0e8aa7\").containsAnswerConceptName(\"5a798bac-6417-4b36-98c8-13d4380aa69e\").matches(); // Nephrotic syndrome\n\n  const condition75 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"2991127b-7064-4027-a030-4a3a8d0e8aa7\").containsAnswerConceptName(\"35c6e43d-acc5-4980-93de-ce1cbd6cd402\").matches(); // RTI (Reproductive tract syndrome)/STI (Sexually transmitted disease)\n\n  const condition76 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"2991127b-7064-4027-a030-4a3a8d0e8aa7\").containsAnswerConceptName(\"2e86955f-0d81-4e80-a1f4-255b3c186bec\").matches(); // Renal Disease\n\n  const condition77 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"2991127b-7064-4027-a030-4a3a8d0e8aa7\").containsAnswerConceptName(\"705b3ef7-e41a-4954-bc3f-9556eb002f3d\").matches(); // Sickle cell disease SS\n\n  const condition78 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"2991127b-7064-4027-a030-4a3a8d0e8aa7\").containsAnswerConceptName(\"27a7116c-0cd9-40ed-a17a-76462ef78e63\").matches(); // Syphilis\n\n  const condition79 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"2991127b-7064-4027-a030-4a3a8d0e8aa7\").containsAnswerConceptName(\"ca8a5f57-c409-47ad-8acf-921cdd0fc191\").matches(); // TB\n  \n  const condition80 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"2991127b-7064-4027-a030-4a3a8d0e8aa7\").containsAnswerConceptName(\"70866aba-d585-48ba-993c-1fa86498751c\").matches(); // Thalassemia\n // const condition80 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.latestValueInPreviousEncounters(\"2991127b-7064-4027-a030-4a3a8d0e8aa7\").containsAnswerConceptName(\"\").matches(); //\n//  const condition81 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.latestValueInPreviousEncounters(\"2991127b-7064-4027-a030-4a3a8d0e8aa7\").containsAnswerConceptName(\"\").matches(); //\n  \n  \n  let matchedValues = [];\n //From enrolment\n  let highRiskInEnrolment =[];\n\n  if(condition11 ) highRiskInEnrolment.push(\"Age < 18 years\");  \n  if(condition12 ) highRiskInEnrolment.push(\"Age > 35 years\");  \n  if(condition13 ) highRiskInEnrolment.push(\"Height < 145 cm\");  \n  if(condition14 ) highRiskInEnrolment.push(\"BMI < 18.5\");\n  if(condition15 ) highRiskInEnrolment.push(\"Multigravida > 4\");  \n  if(condition16 ) highRiskInEnrolment.push(\"Abortions > 0\");  \n  \n  if(highRiskInEnrolment.length>0){\n  matchedValues.push(\"High Risk Conditions based on Enrollment part -2:\");\n  matchedValues.push(...highRiskInEnrolment);\n  }\n  \n //Complication in previous pregnancy\n let highRiskInPastPregnancy = [];\n if(condition17 ) highRiskInPastPregnancy.push(\"Epilespy\");\n if(condition18 ) highRiskInPastPregnancy.push(\"Ante Partum hemorrhage (APH)\");\n if(condition19 ) highRiskInPastPregnancy.push(\"Blood Group Negative of Child\");\n if(condition20 ) highRiskInPastPregnancy.push(\"Caesarean Section\");\n if(condition21 ) highRiskInPastPregnancy.push(\"Deformities at birth\");\n if(condition22 ) highRiskInPastPregnancy.push(\"Gestational Diabetes (GDM)\");\n if(condition23 ) highRiskInPastPregnancy.push(\"Hypertensive Disease in Pregnancy\");\n if(condition24 ) highRiskInPastPregnancy.push(\"Low Birth Weight Baby\");\n if(condition25 ) highRiskInPastPregnancy.push(\"Multiple abortions\");\n if(condition26 ) highRiskInPastPregnancy.push(\"Neonatal death within first 28 days\");\n if(condition27 ) highRiskInPastPregnancy.push(\"Obstructed Labour\");\n if(condition28 ) highRiskInPastPregnancy.push(\"PPH (postpartum haemorrhage)\");\n if(condition29 ) highRiskInPastPregnancy.push(\"Previous Still Birth\");\n if(condition30 ) highRiskInPastPregnancy.push(\"Preterm (<28 weeks)\");\n if(condition31 ) highRiskInPastPregnancy.push(\"Retained Placenta\");\n if(condition32 ) highRiskInPastPregnancy.push(\"Seizures\");\n if(condition33 ) highRiskInPastPregnancy.push(\"Severe Anemia\");\n if(condition34 ) highRiskInPastPregnancy.push(\"Twins\");\n\n if(highRiskInPastPregnancy.length>0){\n  matchedValues.push(\"\\nHigh Risk Conditions in past pregnancy:\");\n  matchedValues.push(...highRiskInPastPregnancy);\n  }\n  \n  // From current pregnancy complications\n  let highRiskInCurrentPreganncy = [];\n  if(condition37 ) highRiskInCurrentPreganncy.push(\"Anemia\");\n  if(condition38 ) highRiskInCurrentPreganncy.push(\"Antepartum haemorrhage\");\n  if(condition39 ) highRiskInCurrentPreganncy.push(\"Baby smaller than expected for gestational age\");\n  if(condition40 ) highRiskInCurrentPreganncy.push(\"BP >=140/90\");\n  if(condition41 ) highRiskInCurrentPreganncy.push(\"Cervical Insufficiency\");\n  if(condition42 ) highRiskInCurrentPreganncy.push(\"Eclampsia\");\n  if(condition43 ) highRiskInCurrentPreganncy.push(\"Foul smelling discharge\");\n  if(condition44 ) highRiskInCurrentPreganncy.push(\"GDM (Gestational Diabetes\");\n  if(condition45 ) highRiskInCurrentPreganncy.push(\"Hepatitis\");\n  if(condition46 ) highRiskInCurrentPreganncy.push(\"Less than 18 months between pregnancies\");\n  if(condition36 ) highRiskInCurrentPreganncy.push(\"Malaria\");\n  if(condition47 ) highRiskInCurrentPreganncy.push(\"MUAC <23CM\");\n  if(condition48 ) highRiskInCurrentPreganncy.push(\"Multiple foetuses\");\n  if(condition49 ) highRiskInCurrentPreganncy.push(\"Oligohydroamnios\");\n  if(condition50 ) highRiskInCurrentPreganncy.push(\"PIH (pregnancy induced hypertension)\");\n  if(condition51 ) highRiskInCurrentPreganncy.push(\"Placenta Previa (placenta covering the cervix)\");\n  if(condition52 ) highRiskInCurrentPreganncy.push(\"Placental Abruption (premature separation of the placenta)\");\n  if(condition53 ) highRiskInCurrentPreganncy.push(\"Polyhydroamnios\");\n  if(condition54 ) highRiskInCurrentPreganncy.push(\"Pre Eclampsia\");\n  if(condition55 ) highRiskInCurrentPreganncy.push(\"RH Negative Blood Group\");\n  if(condition56 ) highRiskInCurrentPreganncy.push(\"Severe Pre Eclampsia\");\n  if(condition57 ) highRiskInCurrentPreganncy.push(\"Too much or too little amniotic fluid\");\n\nif(highRiskInCurrentPreganncy.length>0){\n  matchedValues.push(\"\\nHigh Risk Conditions in Current pregnancy:\");\n  matchedValues.push(...highRiskInCurrentPreganncy);\n  }\n  \n//from concept \"Lifestyle Factors\"\n  let highRiskDueToLifestyle =[];\n  if(condition58 ) highRiskDueToLifestyle.push(\"Alcohol\");\n  if(condition59 ) highRiskDueToLifestyle.push(\"Drug abuse\");\n  if(condition60 ) highRiskDueToLifestyle.push(\"Lack of pre-natal care\");\n  if(condition61 ) highRiskDueToLifestyle.push(\"Obesity\");\n  if(condition62 ) highRiskDueToLifestyle.push(\"Poor Nutrition\");\n  if(condition63 ) highRiskDueToLifestyle.push(\"Smoking\");\n\nif(highRiskDueToLifestyle.length>0){\n  matchedValues.push(\"\\nHigh Risk Conditions due to lifestyle factors:\");\n  matchedValues.push(...highRiskDueToLifestyle);\n  }\n\n//from concept \"Medical Hisotry\"\n  let highRiskMedicalHistory = [];\n  if(condition64 ) highRiskMedicalHistory.push(\"Anaemia\");\n  if(condition65 ) highRiskMedicalHistory.push(\"Asthma\");\n  if(condition66 ) highRiskMedicalHistory.push(\"Diabetes\");\n  if(condition67 ) highRiskMedicalHistory.push(\"Epilepsy\");\n  if(condition68 ) highRiskMedicalHistory.push(\"Heart-related Diseases\");\n  if(condition69 ) highRiskMedicalHistory.push(\"Hepatitis B Positive\");\n  if(condition70 ) highRiskMedicalHistory.push(\"HIV/AIDS\");\n  if(condition71 ) highRiskMedicalHistory.push(\"Hypertension\");\n  if(condition72 ) highRiskMedicalHistory.push(\"Hypothyroidism/ Abnormal Thyroid Function\");\n  if(condition73 ) highRiskMedicalHistory.push(\"IVF/ ETC\");\n  if(condition74 ) highRiskMedicalHistory.push(\"Nephrotic syndrome\");\n  if(condition75 ) highRiskMedicalHistory.push(\"RTI (Reproductive tract syndrome)/STI (Sexually transmitted disease)\");\n  if(condition76 ) highRiskMedicalHistory.push(\"Renal Disease\");\n  if(condition77 ) highRiskMedicalHistory.push(\"Sickle cell disease SS\");\n  if(condition78 ) highRiskMedicalHistory.push(\"Syphilis\");\n  if(condition79 ) highRiskMedicalHistory.push(\"TB\");\n  if(condition80 ) highRiskMedicalHistory.push(\"Thalassemia\");\n  \nif(highRiskMedicalHistory.length>0){\n  matchedValues.push(\"\\nHigh Risk Conditions due to medical history:\");\n  matchedValues.push(...highRiskMedicalHistory);\n  }\n  \n  // Join Matched values into one string\n  if(matchedValues.length > 0) { \n        value = matchedValues.join(\"\\n \");\n        }\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};\n",
+      "mandatory" : true
+    } ],
+    "textColour" : "#f71212",
+    "timed" : false,
+    "display" : "Medical History / Conditions"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({ params, imports }) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({programEncounter});\n  const hasDelivery = programEncounter.programEnrolment.encounters.some(encounter =>\n        encounter.encounterType.name === \"Delivery Encounter\" &&\n        encounter.encounterDateTime &&\n        !encounter.voided &&\n        !encounter.cancelDateTime\n  );\n  const programExited = programEncounter.programEnrolment.programExitDateTime;\n  const hasHighRiskFollowup = programEncounter.programEnrolment.getEncounters().some(enc => enc.name === 'MH High Risk Follow up' && !enc.cancelDateTime);\n  if(!hasDelivery && !programExited && !hasHighRiskFollowup){\n    const earliestDate = moment(programEncounter.encounterDateTime).add(7, 'days').toDate();\n    const maxDate = moment(programEncounter.encounterDateTime).add(14, 'days').toDate();\n    scheduleBuilder.add({name: \"MH High Risk Follow up\", encounterType: \"High Risk Followups\", earliestDate, maxDate});  \n  }\n  \n  return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

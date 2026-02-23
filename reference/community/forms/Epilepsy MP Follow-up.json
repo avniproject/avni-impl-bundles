@@ -1,0 +1,2042 @@
+{
+  "name" : "Epilepsy MP Follow-up",
+  "uuid" : "fa8a7760-2793-42c7-b54b-5d6c122da367",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "3d29222b-7908-4bac-86ea-ad973c102f96",
+    "name" : "Follow up page 1",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "patient follow-up place",
+      "uuid" : "de51dacd-09dd-4d6e-8d05-1963aad16c7d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Data collection place",
+        "uuid" : "fc8f7481-74f2-458d-ade5-9eecc5c875aa",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "PSG Meeting",
+          "uuid" : "6c48db3a-79f9-4392-8fa6-372362a71b4a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Telephonic",
+          "uuid" : "b1ea7fc7-9287-4b72-82b0-4f78f8c5fcab",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "During Hospitalisation",
+          "uuid" : "c195619a-a739-4e9c-ae22-6d3c0ab782cb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Home Visit",
+          "uuid" : "6bb75b38-c869-4802-ac80-9b1c109c34a4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "PSG Meeting District",
+      "uuid" : "44f64eae-c970-4ef3-b115-656f8c15ba15",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "PSG Meeting District",
+        "uuid" : "882d2462-60a6-43db-a886-0999371d27bb",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Mandla",
+          "uuid" : "fa31ff08-c427-47f3-8842-13bfeb2e03e0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Anuppur",
+          "uuid" : "2ea801a4-6c20-4f24-800b-295b0542b511",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Shahdol",
+          "uuid" : "90293e2d-082d-4c2a-9cdb-61b4511c8915",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Dindori",
+          "uuid" : "4b9c3a97-1e6e-437c-87f5-8ef165af918d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Umaria",
+          "uuid" : "38afe746-3b75-44e7-9794-85303445cfa3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"fc8f7481-74f2-458d-ade5-9eecc5c875aa\").containsAnswerConceptName(\"6c48db3a-79f9-4392-8fa6-372362a71b4a\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Data collection place",
+                "conceptUuid" : "fc8f7481-74f2-458d-ade5-9eecc5c875aa",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "PSG Meeting" ],
+                "answerConceptUuids" : [ "6c48db3a-79f9-4392-8fa6-372362a71b4a" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "PSG Meeting Place - Anuppur",
+      "uuid" : "0fac4593-5cf4-4048-a209-653b2ef8a74b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "PSG Meeting Place - Anuppur",
+        "uuid" : "66eef9c1-7453-42d9-b30f-1698ffbf79ac",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "HWC Nagula",
+          "uuid" : "72321c75-bb83-4859-8661-04b509e376ff",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 22.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HWC Amadand, Kotma",
+          "uuid" : "06890947-e648-490f-9b49-ca41f4432629",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 18.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HWC Titahi - Jaithari",
+          "uuid" : "582d0c67-a6d1-4f25-8dc3-6e40131f10ed",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 24.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Funga",
+          "uuid" : "2b00aaf9-de58-49e8-ace0-1ad6a53f971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PHC Damhedi",
+          "uuid" : "1e96ba24-4ee8-4402-be5f-bb248bb6f8b1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HWC Padariya",
+          "uuid" : "d001f170-4af7-42ae-942d-fec479cd2fc9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 23.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Kothi",
+          "uuid" : "669eac9c-ad0c-4c69-9c81-68d7fa1d399b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PHC Nigwani",
+          "uuid" : "398f0e04-b18b-4739-91b8-eaefa3c154d9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Karpa",
+          "uuid" : "a17bad58-3e5c-4692-97ca-d639a268c99c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PHC Khamraudh",
+          "uuid" : "52e39cdf-bce7-48bb-9b2c-c6a8d706f9f0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Parasi",
+          "uuid" : "aa19187d-54d2-4a9f-9cf9-75113e25a116",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "DH Anuppur",
+          "uuid" : "5ae1697e-d67f-4e26-a209-74d4721f2013",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Jaithari",
+          "uuid" : "4c35beb1-ef7d-4515-8aeb-453a91ab5931",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "SHC Alwar",
+          "uuid" : "79ce9808-61bd-4e98-9633-30ce1dfd0e70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 17.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HWC Beed",
+          "uuid" : "0968470c-0cce-4068-8a36-b3f1706206f7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 19.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PHC Parasi",
+          "uuid" : "55c5c25c-fab3-4e36-8a4d-dd6cc95d19a5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 17.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Kotma",
+          "uuid" : "cd056b81-7d9a-4fbd-9bf4-1303a5b4d090",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Venkatnagar",
+          "uuid" : "3f02dc70-39c7-4a07-a0f2-250d77b86f63",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Rajendragram",
+          "uuid" : "fefe8d83-1122-4801-a18a-494d25f04143",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HWC Ledra",
+          "uuid" : "a3eff426-7073-425c-9e40-777d974b3147",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 21.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HWC Dhurvasin, Anuppur",
+          "uuid" : "3e55f50b-a071-4ee6-a987-d6dd45e740eb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 20.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PHC Amarkantak",
+          "uuid" : "8d66349a-d611-4f09-b767-03114e9d5c1a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PHC Khanda",
+          "uuid" : "29c55ebd-7873-4756-9e0f-4f6ce5d57915",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PHC Bijuri",
+          "uuid" : "bc410bbe-186e-4e70-a3de-a6892857e2db",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PHC Benibari",
+          "uuid" : "b02d4675-3003-43e5-9e67-e1b7adc2665e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"882d2462-60a6-43db-a886-0999371d27bb\").containsAnswerConceptName(\"2ea801a4-6c20-4f24-800b-295b0542b511\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "PSG Meeting District",
+                "conceptUuid" : "882d2462-60a6-43db-a886-0999371d27bb",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Anuppur" ],
+                "answerConceptUuids" : [ "2ea801a4-6c20-4f24-800b-295b0542b511" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "PSG Meeting Place - Dindori",
+      "uuid" : "026d4539-8f9f-4e24-b3c6-3f97c91100ae",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "PSG Meeting Place - Dindori",
+        "uuid" : "40e27fa1-a770-4a59-b07a-b646ce57d42e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "PHC Gadasarai",
+          "uuid" : "a465e133-f848-4d5f-9db0-7563b6a4559f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Samnapur",
+          "uuid" : "2a1e23f1-a833-4c4c-b141-5190d8905b6e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PHC Bamhani, Samnapur",
+          "uuid" : "6d3d2422-da64-492c-a7de-6db6baf43697",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HWC Nighori",
+          "uuid" : "ae322c2c-8f29-4d60-96fb-fa504397d886",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 18.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PHC Baharpur, Karanjia",
+          "uuid" : "6f4cade6-034c-4452-abcc-70f5c81524e0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PHC Rai",
+          "uuid" : "191156da-9106-407e-b1fc-ef3e3f48d8b6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PHC Gorakhpur",
+          "uuid" : "43ab8151-b6b9-4f0a-acf3-25ce836a0ca2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "DH Dindori",
+          "uuid" : "02df5519-1496-4ea5-9ae0-4ee150b251c6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HWC Amarpur",
+          "uuid" : "133b4236-ebbe-4837-8b2b-68229e1c4a3e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HWC Jadasurang, Samnapur",
+          "uuid" : "13afad18-7ae5-4ae9-86af-ecb6f9e7f47d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Shahpura",
+          "uuid" : "2f334ad8-f1ab-4c41-b64c-59c16f791871",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Bajag",
+          "uuid" : "a794893e-27f7-4f87-ac3c-a041f5e82fb7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PHC Baharpur",
+          "uuid" : "4a3d1c72-b576-4ea7-9ace-6112e9a88047",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Karanjia",
+          "uuid" : "fe1ba203-5747-43ad-9bbe-92343f4ae65d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HWC Ajhwar",
+          "uuid" : "028d5abd-7e3c-42ae-b85c-9a2b58af4550",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "HWC Newsa, Vikrampur",
+          "uuid" : "615b3d95-bc1e-48a6-b899-e8567e4de0dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 17.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Mehandwani",
+          "uuid" : "ad556c53-814c-408e-95bb-46ef4016e68b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Vikrampur",
+          "uuid" : "adcdbd8f-4189-4706-be75-5027df44717a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Amarpur",
+          "uuid" : "741edec1-eade-4f3f-b417-a8b1b4290c76",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"882d2462-60a6-43db-a886-0999371d27bb\").containsAnswerConceptName(\"4b9c3a97-1e6e-437c-87f5-8ef165af918d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "PSG Meeting District",
+                "conceptUuid" : "882d2462-60a6-43db-a886-0999371d27bb",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Dindori" ],
+                "answerConceptUuids" : [ "4b9c3a97-1e6e-437c-87f5-8ef165af918d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Patient activeness",
+      "uuid" : "ca43baa6-bb21-455f-82bc-41cd8902fb39",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Patient status",
+        "uuid" : "e500ef46-7793-47f5-994a-359fd41948db",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Patient no more traceable",
+          "uuid" : "8382530a-1601-4230-9ec7-a65c200cde2b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Patient Not willing for treatment & follow-up",
+          "uuid" : "6221ded3-145b-44ed-a606-b1396f72be68",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Patient taking AED (Antiepileptic Drugs) regularly in last 1 month (not even a single dose missed)",
+      "uuid" : "4094fe7e-61d5-4b98-8009-e3688ad3aecd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Taking AED",
+        "uuid" : "105d581d-6cca-4c7f-88d4-a5d6fcf674bd",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "If not, What is the reason for irregularity in medicine",
+      "uuid" : "8647fa1d-833d-4bb5-806c-06667a373803",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "AED drug irregular reason",
+        "uuid" : "c3c09a90-f966-447f-880f-6de5552508f2",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Other reasons (text)",
+          "uuid" : "c46d25da-4ed1-4a46-8f3a-de1205943875",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Medicine not available",
+          "uuid" : "f6530db6-4439-4b7c-a844-16768e80f3f4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Forgotten",
+          "uuid" : "bd1231f3-ca96-45e8-900d-2d7269b3abe8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Side-effects",
+          "uuid" : "bd53a257-e972-41c1-a61c-a9e64f7a2722",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"105d581d-6cca-4c7f-88d4-a5d6fcf674bd\").containsAnswerConceptName(\"e7b50c78-3d90-484d-a224-9887887780dc\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Taking AED",
+                "conceptUuid" : "105d581d-6cca-4c7f-88d4-a5d6fcf674bd",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "No" ],
+                "answerConceptUuids" : [ "e7b50c78-3d90-484d-a224-9887887780dc" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Other reason for irregularity of drug",
+      "uuid" : "3d4796df-b305-492a-9805-cdf2eb2b6617",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "other reason for irregularity of AED",
+        "uuid" : "aa0869cc-9f1c-4f53-9211-a523770126e7",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"c3c09a90-f966-447f-880f-6de5552508f2\").containsAnswerConceptName(\"c46d25da-4ed1-4a46-8f3a-de1205943875\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "AED drug irregular reason",
+                "conceptUuid" : "c3c09a90-f966-447f-880f-6de5552508f2",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other reasons (text)" ],
+                "answerConceptUuids" : [ "c46d25da-4ed1-4a46-8f3a-de1205943875" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Patients taking medications from",
+      "uuid" : "3cc4999a-431a-4300-8376-625600041135",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Epilepsy patient taking medicines from",
+        "uuid" : "a735d2a0-646a-4daf-84c4-bb449fd370b5",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Nearest HWC/CHC/DH via OPD",
+          "uuid" : "90b249f2-94c2-4d6f-9639-561855a4f56b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not able to get medicines",
+          "uuid" : "a483dcc8-521a-49d9-a677-c760fad18f22",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Private doctor/pharmacy",
+          "uuid" : "4f2066fa-0ce7-4c56-a6fe-ada3a41962e1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Given at home by ASHA/ANM/JSS team",
+          "uuid" : "846b9bb3-8155-4d32-8242-e1f504c0431e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Nearest HWC/CHC/DH via PSG Meeting",
+          "uuid" : "7d8e9025-eb2d-4e74-8fe7-2a798fd54818",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"105d581d-6cca-4c7f-88d4-a5d6fcf674bd\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").or.when.valueInEncounter(\"c3c09a90-f966-447f-880f-6de5552508f2\").containsAnswerConceptName(\"f6530db6-4439-4b7c-a844-16768e80f3f4\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Taking AED",
+                "conceptUuid" : "105d581d-6cca-4c7f-88d4-a5d6fcf674bd",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            }, {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "AED drug irregular reason",
+                "conceptUuid" : "c3c09a90-f966-447f-880f-6de5552508f2",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Medicine not available" ],
+                "answerConceptUuids" : [ "f6530db6-4439-4b7c-a844-16768e80f3f4" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "or"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Any changes in medications by the doctor (only for Support group Meeting/home visit)",
+      "uuid" : "748275af-9207-4e20-ab1c-710cef15dfcf",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "AED medication changes by doctor",
+        "uuid" : "d0a2adc1-03c9-4040-9e5d-681276216dbb",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Follow up page 1"
+  }, {
+    "uuid" : "1da1c8ca-83c0-43a1-9442-64b6714fbbd2",
+    "name" : "Follow up page 2",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Seizure Diary Maintained",
+      "uuid" : "d78c2100-1ec0-4710-9d34-34649e2e2193",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Seizure Diary Maintained",
+        "uuid" : "931911ab-e5cc-496d-a4ca-37254c8c558c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Started this time",
+          "uuid" : "2fcd6d09-d20c-4aa2-8449-d4cafc4527bd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Seizure during last month",
+      "uuid" : "c2156dd1-b807-426b-becf-1e7827e280a5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Seizure during last month",
+        "uuid" : "79fef883-56ab-4871-b7b7-06418502e42b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "If yes, how many times in last one month",
+      "uuid" : "3fda8f69-5c00-4e26-b03a-1bec64a821b5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of seizures episodes in last month",
+        "uuid" : "d72a2c28-f52d-4454-822a-3cf78c5e1657",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 50.0,
+        "lowNormal" : 0.0,
+        "highNormal" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"79fef883-56ab-4871-b7b7-06418502e42b\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Seizure during last month",
+                "conceptUuid" : "79fef883-56ab-4871-b7b7-06418502e42b",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "If yes, how many times?",
+      "uuid" : "e7275aca-868a-4615-b293-5e7c2e458d51",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Seizure Numbers (voided~250893)",
+        "uuid" : "f036fa65-949f-4cf3-beff-2ccc732e2e29",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 19.0,
+        "lowNormal" : 0.0,
+        "highNormal" : 1.0,
+        "active" : true,
+        "media" : [ ],
+        "voided" : true
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"79fef883-56ab-4871-b7b7-06418502e42b\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Seizure during last month",
+                "conceptUuid" : "79fef883-56ab-4871-b7b7-06418502e42b",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Was there any provocation causing the seizure:",
+      "uuid" : "493f0e74-f9ea-4102-9e28-0634670606fb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Seizure provocations",
+        "uuid" : "188c8fea-811a-47b6-93ba-aba31052187d",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "High Stress situation",
+          "uuid" : "d7472eb9-d072-41b7-87c3-10bbb29fc3fe",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Missed dose",
+          "uuid" : "483dfe29-79f3-416f-9902-da7f39cc1f64",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Inadequate sleep",
+          "uuid" : "b333ed2f-527b-4b08-b7a8-c98a2adb793d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"79fef883-56ab-4871-b7b7-06418502e42b\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Seizure during last month",
+                "conceptUuid" : "79fef883-56ab-4871-b7b7-06418502e42b",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Any Remark",
+      "uuid" : "ab419577-5ec0-4daa-b13b-e3b257dca951",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Any Remark - Epilepsy",
+        "uuid" : "46d3d8d0-32c9-46a7-bde2-5e272edf0ee5",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Any changes in medications by the doctor (only for Support group Meeting/home visit)",
+      "uuid" : "79c447ff-436d-48e1-a98e-7c579047d486",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "AED medication changes by doctor",
+        "uuid" : "d0a2adc1-03c9-4040-9e5d-681276216dbb",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Was there any provocation causing the seizure:",
+      "uuid" : "6f0e3806-cb95-486e-89cc-a4b46cc2bb9c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Seizure provocation (voided~250894)",
+        "uuid" : "73667d03-d18a-426c-bca2-ddab46b7aa8b",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ],
+        "voided" : true
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Follow up page 2"
+  }, {
+    "uuid" : "0fd8fe7c-4c54-4018-a1bc-59c7e2a1e337",
+    "name" : "Drug Follow-up",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Enrolment Number",
+      "uuid" : "9aba2c23-2f10-48c6-8057-70d2595c51fc",
+      "keyValues" : [ {
+        "key" : "IdSourceUUID",
+        "value" : "12b721d3-3baf-422b-b70f-32550aa27092"
+      } ],
+      "concept" : {
+        "name" : "Sickle Enrolment number",
+        "uuid" : "8f852186-ccf1-4898-b581-99b37bcae2f1",
+        "dataType" : "Id",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Enrolment Number",
+      "uuid" : "70829ca4-a44d-4fdf-803e-121a45dc418f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Enrolment Number (text) epilepsy jss",
+        "uuid" : "14347f67-b25f-4fd8-ab38-36af05968310",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Enrolment number",
+      "uuid" : "9976eaf5-2252-48ad-ab15-01b0c75d9e6d",
+      "keyValues" : [ {
+        "key" : "IdSourceUUID",
+        "value" : "12b721d3-3baf-422b-b70f-32550aa27092"
+      } ],
+      "concept" : {
+        "name" : "Enrolment ID Epilepsy",
+        "uuid" : "2ebea042-a683-4d30-8978-fc3e1e3761a8",
+        "dataType" : "Id",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Number of seizure episodes in one month before starting treatment through JSS",
+      "uuid" : "f93ea342-5647-4f4e-a565-0e0873909aa6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of seizure episodes in one month before starting treatment through JSS",
+        "uuid" : "e35508ca-537b-4699-962d-b99ec49e5ae8",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEntireEnrolment(\"e35508ca-537b-4699-962d-b99ec49e5ae8\").defined.matches();\n  \n  visibility = !(condition11 );\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "hideFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "entireEnrolment",
+                "conceptName" : "Number of seizure episodes in one month before starting treatment through JSS",
+                "conceptUuid" : "e35508ca-537b-4699-962d-b99ec49e5ae8",
+                "conceptDataType" : "Numeric"
+              },
+              "rhs" : { },
+              "operator" : "defined"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "Number of seizures episodes in last month (Baseline)",
+      "uuid" : "d151f303-ccfd-4567-a852-67c5ef6b582d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of seizures episodes in last month",
+        "uuid" : "d72a2c28-f52d-4454-822a-3cf78c5e1657",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 50.0,
+        "lowNormal" : 0.0,
+        "highNormal" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Carbmazapine 200mg in Morning",
+      "uuid" : "c9c60e9a-8fe3-452e-ada9-c78cdc2e6da4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Drug dose - Carbmazapine - morning",
+        "uuid" : "2efee2c2-38cf-457e-bc9a-be3e4a485bc7",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "0.5",
+          "uuid" : "5026965d-a34f-45a9-a932-af9e37f0aad3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1.5",
+          "uuid" : "3bf05ae6-e3f6-4aff-8ec6-36495d9ef0c1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1",
+          "uuid" : "9139d435-2178-46d9-aea9-429597e533b2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "0",
+          "uuid" : "34e3cb50-7ae5-4a84-9af8-813d390f76b9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3",
+          "uuid" : "e7668654-1ac7-4b3f-ab8b-8c3011c8146e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.5",
+          "uuid" : "d1951c93-fa7c-4e74-9be7-cf055503064a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "info not available",
+          "uuid" : "5310e8b2-7d43-4a25-ab3d-59c2e5a16801",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2",
+          "uuid" : "4cc96a24-c868-43ae-987b-33db701009e2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Carbmazapine 200mg in Evening",
+      "uuid" : "4596af51-65c2-49d1-8548-1f679aa9abb2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Carbmazapine in Evening",
+        "uuid" : "373c5db2-8ad3-443d-9ee1-ba0535137e7a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "1",
+          "uuid" : "9139d435-2178-46d9-aea9-429597e533b2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2",
+          "uuid" : "4cc96a24-c868-43ae-987b-33db701009e2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "0.5",
+          "uuid" : "5026965d-a34f-45a9-a932-af9e37f0aad3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "info not available",
+          "uuid" : "5310e8b2-7d43-4a25-ab3d-59c2e5a16801",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "0",
+          "uuid" : "34e3cb50-7ae5-4a84-9af8-813d390f76b9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1.5",
+          "uuid" : "3bf05ae6-e3f6-4aff-8ec6-36495d9ef0c1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.5",
+          "uuid" : "d1951c93-fa7c-4e74-9be7-cf055503064a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3",
+          "uuid" : "e7668654-1ac7-4b3f-ab8b-8c3011c8146e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Phenytoin 100mg in Morning",
+      "uuid" : "ccaa5da1-2d10-4e26-8516-40537d981232",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Drug dose - Phenytoin Morning",
+        "uuid" : "e50cfbff-e355-4b95-b355-5752ca4ca5d8",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "1.5",
+          "uuid" : "3bf05ae6-e3f6-4aff-8ec6-36495d9ef0c1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "info not available",
+          "uuid" : "5310e8b2-7d43-4a25-ab3d-59c2e5a16801",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3",
+          "uuid" : "e7668654-1ac7-4b3f-ab8b-8c3011c8146e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "0",
+          "uuid" : "34e3cb50-7ae5-4a84-9af8-813d390f76b9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2",
+          "uuid" : "4cc96a24-c868-43ae-987b-33db701009e2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.5",
+          "uuid" : "d1951c93-fa7c-4e74-9be7-cf055503064a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1",
+          "uuid" : "9139d435-2178-46d9-aea9-429597e533b2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "0.5",
+          "uuid" : "5026965d-a34f-45a9-a932-af9e37f0aad3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Phenytoin 100mg in Evening",
+      "uuid" : "2338dd1c-e3ea-4277-a20e-857d49bce702",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Drug dose - Phenytoin",
+        "uuid" : "8be0426a-72b3-492a-8b04-abc9aef78627",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "0",
+          "uuid" : "34e3cb50-7ae5-4a84-9af8-813d390f76b9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3",
+          "uuid" : "e7668654-1ac7-4b3f-ab8b-8c3011c8146e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1",
+          "uuid" : "9139d435-2178-46d9-aea9-429597e533b2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.5",
+          "uuid" : "d1951c93-fa7c-4e74-9be7-cf055503064a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1.5",
+          "uuid" : "3bf05ae6-e3f6-4aff-8ec6-36495d9ef0c1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "info not available",
+          "uuid" : "5310e8b2-7d43-4a25-ab3d-59c2e5a16801",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "0.5",
+          "uuid" : "5026965d-a34f-45a9-a932-af9e37f0aad3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2",
+          "uuid" : "4cc96a24-c868-43ae-987b-33db701009e2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Sodium Valproate 200mg in Morning",
+      "uuid" : "2f21de4d-6aaf-4d96-a903-e0dad40f100b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Drug dose - Sodium Valproate morning",
+        "uuid" : "00921710-2c21-4791-86f0-e6bfa4a3df65",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "info not available",
+          "uuid" : "5310e8b2-7d43-4a25-ab3d-59c2e5a16801",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3",
+          "uuid" : "e7668654-1ac7-4b3f-ab8b-8c3011c8146e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1",
+          "uuid" : "9139d435-2178-46d9-aea9-429597e533b2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1.5",
+          "uuid" : "3bf05ae6-e3f6-4aff-8ec6-36495d9ef0c1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2",
+          "uuid" : "4cc96a24-c868-43ae-987b-33db701009e2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.5",
+          "uuid" : "d1951c93-fa7c-4e74-9be7-cf055503064a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "0.5",
+          "uuid" : "5026965d-a34f-45a9-a932-af9e37f0aad3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "0",
+          "uuid" : "34e3cb50-7ae5-4a84-9af8-813d390f76b9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Sodium Valproate 200mg in Evening",
+      "uuid" : "649dece4-9471-4c24-aaf3-d86cd67371b5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Drug dose - Sodium Valproate",
+        "uuid" : "fc1a3dfe-5440-4258-b07b-1ac65b9695d3",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "2",
+          "uuid" : "4cc96a24-c868-43ae-987b-33db701009e2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.5",
+          "uuid" : "d1951c93-fa7c-4e74-9be7-cf055503064a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1",
+          "uuid" : "9139d435-2178-46d9-aea9-429597e533b2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "0.5",
+          "uuid" : "5026965d-a34f-45a9-a932-af9e37f0aad3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "0",
+          "uuid" : "34e3cb50-7ae5-4a84-9af8-813d390f76b9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3",
+          "uuid" : "e7668654-1ac7-4b3f-ab8b-8c3011c8146e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Info not available",
+          "uuid" : "657e1326-f34d-4f52-bdff-e3c91d6b22b1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1.5",
+          "uuid" : "3bf05ae6-e3f6-4aff-8ec6-36495d9ef0c1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Clobazam 5mg in Morning",
+      "uuid" : "2146bdc5-7a98-4bd0-b9ca-fd7d2ade9445",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "drug dose Clobazam Morning",
+        "uuid" : "bad4f4f5-8bc5-4c46-8648-85dfe2fd1de7",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "1.5",
+          "uuid" : "3bf05ae6-e3f6-4aff-8ec6-36495d9ef0c1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "info not available",
+          "uuid" : "5310e8b2-7d43-4a25-ab3d-59c2e5a16801",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2",
+          "uuid" : "4cc96a24-c868-43ae-987b-33db701009e2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "0.5",
+          "uuid" : "5026965d-a34f-45a9-a932-af9e37f0aad3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1",
+          "uuid" : "9139d435-2178-46d9-aea9-429597e533b2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.5",
+          "uuid" : "d1951c93-fa7c-4e74-9be7-cf055503064a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "0",
+          "uuid" : "34e3cb50-7ae5-4a84-9af8-813d390f76b9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3",
+          "uuid" : "e7668654-1ac7-4b3f-ab8b-8c3011c8146e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Clobazam 5mg in Evening",
+      "uuid" : "ea576aed-3ea1-42fe-bccc-e3a755c0d6c3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Drug Dose - Clobazam",
+        "uuid" : "562225cc-97cc-4d25-817a-23ac0c49dabf",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "1.5",
+          "uuid" : "3bf05ae6-e3f6-4aff-8ec6-36495d9ef0c1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1",
+          "uuid" : "9139d435-2178-46d9-aea9-429597e533b2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "0.5",
+          "uuid" : "5026965d-a34f-45a9-a932-af9e37f0aad3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2",
+          "uuid" : "4cc96a24-c868-43ae-987b-33db701009e2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3",
+          "uuid" : "e7668654-1ac7-4b3f-ab8b-8c3011c8146e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.5",
+          "uuid" : "d1951c93-fa7c-4e74-9be7-cf055503064a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "0",
+          "uuid" : "34e3cb50-7ae5-4a84-9af8-813d390f76b9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "info not available",
+          "uuid" : "5310e8b2-7d43-4a25-ab3d-59c2e5a16801",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Any Other drug",
+      "uuid" : "5d33c1f5-7e95-4f17-8d66-3487544e3eaa",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other drug",
+        "uuid" : "7b292a91-66aa-4e89-bb4c-9118718415c1",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElementGroup = params.formElementGroup;\n    const _ = imports.lodash;\n    let visibility = true;\n    return formElementGroup.formElements.map((formElement) => {\n        \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.latestValueInPreviousEncounters(\"2efee2c2-38cf-457e-bc9a-be3e4a485bc7\").containsAnswerConceptName(\"5310e8b2-7d43-4a25-ab3d-59c2e5a16801\").or.when.latestValueInAllEncounters(\"d0a2adc1-03c9-4040-9e5d-681276216dbb\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").or.when.latestValueInPreviousEncounters(\"2efee2c2-38cf-457e-bc9a-be3e4a485bc7\").notDefined.matches();\n  \n        visibility = condition11 ;\n  \n        return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, null);\n    });\n};",
+    "declarativeRule" : [ {
+      "actions" : [ {
+        "actionType" : "showFormElementGroup"
+      }, { } ],
+      "conditions" : [ {
+        "compoundRule" : {
+          "rules" : [ {
+            "lhs" : {
+              "type" : "concept",
+              "scope" : "latestInPreviousEncounters",
+              "conceptName" : "Drug dose - Carbmazapine - morning",
+              "conceptUuid" : "2efee2c2-38cf-457e-bc9a-be3e4a485bc7",
+              "conceptDataType" : "Coded"
+            },
+            "rhs" : {
+              "type" : "answerConcept",
+              "answerConceptNames" : [ "info not available" ],
+              "answerConceptUuids" : [ "5310e8b2-7d43-4a25-ab3d-59c2e5a16801" ]
+            },
+            "operator" : "containsAnswerConceptName"
+          }, {
+            "lhs" : {
+              "type" : "concept",
+              "scope" : "latestInAllEncounters",
+              "conceptName" : "AED medication changes by doctor",
+              "conceptUuid" : "d0a2adc1-03c9-4040-9e5d-681276216dbb",
+              "conceptDataType" : "Coded"
+            },
+            "rhs" : {
+              "type" : "answerConcept",
+              "answerConceptNames" : [ "Yes" ],
+              "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+            },
+            "operator" : "containsAnswerConceptName"
+          }, {
+            "lhs" : {
+              "type" : "concept",
+              "scope" : "latestInPreviousEncounters",
+              "conceptName" : "Drug dose - Carbmazapine - morning",
+              "conceptUuid" : "2efee2c2-38cf-457e-bc9a-be3e4a485bc7",
+              "conceptDataType" : "Coded"
+            },
+            "rhs" : { },
+            "operator" : "notDefined"
+          } ],
+          "conjunction" : "or"
+        }
+      } ]
+    } ],
+    "timed" : false,
+    "display" : "Drug Follow-up"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({ params, imports }) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({programEncounter});\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter}).when.valueInEncounter(\"fc8f7481-74f2-458d-ade5-9eecc5c875aa\").defined.matches();\n  \n  if(condition11 ){\n    const earliestDate = moment(programEncounter.encounterDateTime).add(25, 'days').toDate();\n    const maxDate = moment(programEncounter.encounterDateTime).add(35, 'days').toDate();\n    scheduleBuilder.add({name: \"Epilepsy Followup\", encounterType: \"Epilepsy Followup\", earliestDate, maxDate});  \n}\n  \n  return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ],
+  "visitScheduleDeclarativeRule" : [ {
+    "actions" : [ {
+      "details" : {
+        "dateField" : "encounterDateTime",
+        "daysToOverdue" : "35",
+        "encounterName" : "Epilepsy Followup",
+        "encounterType" : "Epilepsy Followup",
+        "daysToSchedule" : "25"
+      },
+      "actionType" : "scheduleVisit"
+    }, { } ],
+    "conditions" : [ {
+      "compoundRule" : {
+        "rules" : [ {
+          "lhs" : {
+            "type" : "concept",
+            "scope" : "encounter",
+            "conceptName" : "Data collection place",
+            "conceptUuid" : "fc8f7481-74f2-458d-ade5-9eecc5c875aa",
+            "conceptDataType" : "Coded"
+          },
+          "rhs" : { },
+          "operator" : "defined"
+        } ],
+        "conjunction" : "and"
+      }
+    } ]
+  } ]
+}

@@ -1,0 +1,499 @@
+{
+  "name" : "CSA Exit",
+  "uuid" : "288a2546-9394-4ff7-a427-f0d39d701edf",
+  "formType" : "ProgramExit",
+  "formElementGroups" : [ {
+    "uuid" : "2f0c6194-16e3-49f5-9805-99533a9e65f6",
+    "name" : "Date of Visit",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Date of Visit",
+      "uuid" : "8b1e27e2-cd57-45f7-8a94-0919e2c07be1",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "calendar"
+      }, {
+        "key" : "durationOptions",
+        "value" : [ "days" ]
+      } ],
+      "concept" : {
+        "name" : "Date of Visit",
+        "uuid" : "7ba30eb7-e2e9-4660-a42d-95a54cfcdcbf",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "voided" : true,
+    "timed" : false,
+    "display" : "Date of Visit"
+  }, {
+    "uuid" : "ea657a4d-a572-4293-adb9-b8b2ccd78aa0",
+    "name" : "Post Harvesting",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Have you adopted any improved practice for Post Harvesting?",
+      "uuid" : "92b5122b-512f-4dfb-9e98-5338ec5d85ef",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Have you adopted any improved practice for Post Harvesting",
+        "uuid" : "403ac9b2-7db3-4146-91da-76caf8db9740",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "no",
+          "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "yes",
+          "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Which of the following practices have been adopted?",
+      "uuid" : "0856d198-c050-499c-8f17-5fd3bc17261c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Which of the following practices have been adopted",
+        "uuid" : "ab31f8bf-3173-4c2f-abd1-a3835bd6187a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Sorting",
+          "uuid" : "f6b115d8-51a5-49a8-b869-337f8ba63e0d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Grading",
+          "uuid" : "b4624d79-8446-4c39-bfde-f4cb443b2169",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Drying",
+          "uuid" : "4160eaee-1e2b-48dc-9859-2087b384fe7e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cleaning",
+          "uuid" : "2ddd24a3-cb5c-44dd-9e3d-b50156abda3a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInExit(\"403ac9b2-7db3-4146-91da-76caf8db9740\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "exit",
+                "conceptName" : "Have you adopted any improved practice for Post Harvesting",
+                "conceptUuid" : "403ac9b2-7db3-4146-91da-76caf8db9740",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Other harvesting practise please specify",
+      "uuid" : "6b34a0fe-8161-4a4d-92be-b89ff67fe78d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other harvesting practise please specify",
+        "uuid" : "67e3e9fe-8efa-433d-b092-d9280edfed60",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInExit(\"ab31f8bf-3173-4c2f-abd1-a3835bd6187a\").containsAnswerConceptName(\"287164fa-3899-485f-9c1f-61401bc6359d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "exit",
+                "conceptName" : "Which of the following practices have been adopted",
+                "conceptUuid" : "ab31f8bf-3173-4c2f-abd1-a3835bd6187a",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "287164fa-3899-485f-9c1f-61401bc6359d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Post Harvesting"
+  }, {
+    "uuid" : "57467bdc-6893-4480-b86a-dc41e95ed425",
+    "name" : "Crop Card Plot Harvesting",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Is this plot part of Crop Cutting experiment?",
+      "uuid" : "bef7ffa3-f976-4d33-96f2-d0db30f405ca",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is this plot part of Crop Cutting experiment",
+        "uuid" : "a604ffa4-39c7-46f1-af8f-c11dcf3291a1",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "What was the total crop yield from 1*1 sq. meter area",
+      "uuid" : "8e6085b0-0a52-44bf-95df-8ccc2813a3cf",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "What was the total crop yield from 1*1 sq. meter area",
+        "uuid" : "40ed8f88-eac6-4b69-ab72-48ed5ebf7023",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInExit(\"a604ffa4-39c7-46f1-af8f-c11dcf3291a1\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "exit",
+                "conceptName" : "Is this plot part of Crop Cutting experiment",
+                "conceptUuid" : "a604ffa4-39c7-46f1-af8f-c11dcf3291a1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Total crop yield from area under Program Area (Calculated)?",
+      "uuid" : "5f58a926-bcd2-4c04-a76f-4ac280b6e91f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total crop yield from area under Program Area (Calculated)",
+        "uuid" : "c9a31205-a82f-4982-a65a-2f73661e9637",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInExit(\"a604ffa4-39c7-46f1-af8f-c11dcf3291a1\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "exit",
+                "conceptName" : "Is this plot part of Crop Cutting experiment",
+                "conceptUuid" : "a604ffa4-39c7-46f1-af8f-c11dcf3291a1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Total crop yield from area under Program Area?",
+      "uuid" : "8c605052-0b7d-44f4-bd8e-9f8a20ab899b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total crop yield from area under Program Area",
+        "uuid" : "ea9cc8db-466c-4854-bb70-39f4259c7dc5",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInExit(\"a604ffa4-39c7-46f1-af8f-c11dcf3291a1\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "exit",
+                "conceptName" : "Is this plot part of Crop Cutting experiment",
+                "conceptUuid" : "a604ffa4-39c7-46f1-af8f-c11dcf3291a1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Production of Intercrop",
+      "uuid" : "04407d93-c78a-44d2-b83f-9852494cbbe1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Production of Intercrop",
+        "uuid" : "a846dc10-fe26-43d4-8c01-4dd92b84fb6f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInExit(\"a604ffa4-39c7-46f1-af8f-c11dcf3291a1\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "exit",
+                "conceptName" : "Is this plot part of Crop Cutting experiment",
+                "conceptUuid" : "a604ffa4-39c7-46f1-af8f-c11dcf3291a1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Production of Border Crop",
+      "uuid" : "5dbb31c1-81b3-4b9b-88ed-fe8abb792698",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Production of Border Crop",
+        "uuid" : "1bd12c69-232d-41b7-ad12-19b8fde53b63",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInExit(\"a604ffa4-39c7-46f1-af8f-c11dcf3291a1\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "exit",
+                "conceptName" : "Is this plot part of Crop Cutting experiment",
+                "conceptUuid" : "a604ffa4-39c7-46f1-af8f-c11dcf3291a1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Cost of Production",
+      "uuid" : "bcfbb36e-d54c-417b-96aa-5eaab6ea8635",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cost of Production",
+        "uuid" : "5dc4905f-4e96-475b-adb8-48cda32ad3e6",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInExit(\"a604ffa4-39c7-46f1-af8f-c11dcf3291a1\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "exit",
+                "conceptName" : "Is this plot part of Crop Cutting experiment",
+                "conceptUuid" : "a604ffa4-39c7-46f1-af8f-c11dcf3291a1",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Crop Card Plot Harvesting"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

@@ -1,0 +1,106 @@
+{
+  "name" : "VHND Supportive Supervision visit Encounter Cancellation",
+  "uuid" : "d92d5bfa-68cb-4197-b62f-150158cf89a4",
+  "formType" : "IndividualEncounterCancellation",
+  "formElementGroups" : [ {
+    "uuid" : "b5c020bb-57bd-43a6-9bc5-edbc4b95b3a5",
+    "name" : "Cancellation Reason",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Reason of Cancel",
+      "uuid" : "7886536e-c8d1-43b3-a8d2-c42e9153cb81",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "VHND visit cancellation reason",
+        "uuid" : "b4845ed9-3099-411d-80c0-967be00b2c0c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "VHND Closed",
+          "uuid" : "50ace658-9270-4dcd-b20c-a7282d6d02d5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Visit not done",
+          "uuid" : "53794dd9-b208-4d67-a517-d6f92c65b923",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other reason",
+          "uuid" : "0f2e0d61-be16-467b-b7f1-3032479bfa76",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Duplicate Visit",
+          "uuid" : "ad046ac1-a7a4-4a18-92ec-97194789e76f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Other reason of cancellation",
+      "uuid" : "baec14a4-d304-4756-aca9-2b976786e4c3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other reason of VHND visit cancellation",
+        "uuid" : "22f71f2f-652d-4f6d-822f-ec1732355e40",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInCancelEncounter(\"b4845ed9-3099-411d-80c0-967be00b2c0c\").containsAnswerConceptName(\"0f2e0d61-be16-467b-b7f1-3032479bfa76\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "cancelEncounter",
+                "conceptName" : "VHND visit cancellation reason",
+                "conceptUuid" : "b4845ed9-3099-411d-80c0-967be00b2c0c",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other reason" ],
+                "answerConceptUuids" : [ "0f2e0d61-be16-467b-b7f1-3032479bfa76" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Cancellation Reason"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

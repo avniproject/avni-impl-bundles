@@ -1,0 +1,7 @@
+{
+  "name" : "Survival Rate Encounter Cancellation",
+  "uuid" : "7060f2e2-8d79-451c-9fad-8e81ef5656ba",
+  "formType" : "ProgramEncounterCancellation",
+  "formElementGroups" : [ ],
+  "decisionConcepts" : [ ]
+}

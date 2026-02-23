@@ -1,0 +1,1709 @@
+{
+  "name" : "Orchard Development",
+  "uuid" : "3a023ba0-f3a3-4207-b00a-24f7fb50aa8f",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "9fcc11f2-24ba-4428-a599-baa105dd83ba",
+    "name" : "Land Preparation",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Please mention the Bio Fertilised Used",
+      "uuid" : "345e3107-7cd4-4fa4-97e6-bc4dd6ad9efb",
+      "keyValues" : [ {
+        "key" : "ExcludedAnswers",
+        "value" : [ "Ghanjeevamrut", "Arendi Cake" ]
+      } ],
+      "concept" : {
+        "name" : "Please mention the Bio Fertilised Used",
+        "uuid" : "b5ea5638-d093-43fb-b71a-e52e800eb338",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Neem Cake",
+          "uuid" : "6522efd2-37ba-4075-aa2f-a72c492d277b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mahua Cake",
+          "uuid" : "194fc53e-c5d3-4277-ac1f-e01f1ce6c0bf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "FYM",
+          "uuid" : "7c54c40b-17f7-4bbc-b3eb-1779470889e3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ghanjeevamrut",
+          "uuid" : "e6892009-e046-4d2a-a508-0a8f8d63a44c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Arendi Cake",
+          "uuid" : "44a33f9f-c6c6-4786-8d2c-defdb7ca0391",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Quantity of FYM Applied",
+      "uuid" : "04cf97ee-9998-44d6-9885-0d55b38afd1e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity of FYM Applied",
+        "uuid" : "82d46243-27a0-42e8-aa87-0d8c7da5a65c",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"b5ea5638-d093-43fb-b71a-e52e800eb338\").containsAnswerConceptName(\"7c54c40b-17f7-4bbc-b3eb-1779470889e3\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Please mention the Bio Fertilised Used",
+                "conceptUuid" : "b5ea5638-d093-43fb-b71a-e52e800eb338",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "FYM" ],
+                "answerConceptUuids" : [ "7c54c40b-17f7-4bbc-b3eb-1779470889e3" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total Cost of the FYM Applied",
+      "uuid" : "ef6cca89-8677-44b3-b1dd-6a3bdbe0015d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total Cost of the FYM Applied",
+        "uuid" : "2a305558-c573-4a66-ae4a-eb4e949f98e4",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"b5ea5638-d093-43fb-b71a-e52e800eb338\").containsAnswerConceptName(\"7c54c40b-17f7-4bbc-b3eb-1779470889e3\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Please mention the Bio Fertilised Used",
+                "conceptUuid" : "b5ea5638-d093-43fb-b71a-e52e800eb338",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "FYM" ],
+                "answerConceptUuids" : [ "7c54c40b-17f7-4bbc-b3eb-1779470889e3" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Quantity of Neem cake Applied",
+      "uuid" : "696c9e50-0aad-47c7-b3e8-7e93f2838eaf",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity of Neem cake Applied",
+        "uuid" : "a31479ba-2709-4e38-9518-4e89f2ba8f8b",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"b5ea5638-d093-43fb-b71a-e52e800eb338\").containsAnswerConceptName(\"6522efd2-37ba-4075-aa2f-a72c492d277b\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Please mention the Bio Fertilised Used",
+                "conceptUuid" : "b5ea5638-d093-43fb-b71a-e52e800eb338",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Neem Cake" ],
+                "answerConceptUuids" : [ "6522efd2-37ba-4075-aa2f-a72c492d277b" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Quantity of Mahua Cake Applied",
+      "uuid" : "1716d68b-5f94-437d-b409-548cb0650919",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity of Mahua Cake Applied",
+        "uuid" : "37f31138-bcdd-418c-893a-21b3de509bee",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"b5ea5638-d093-43fb-b71a-e52e800eb338\").containsAnswerConceptName(\"194fc53e-c5d3-4277-ac1f-e01f1ce6c0bf\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Please mention the Bio Fertilised Used",
+                "conceptUuid" : "b5ea5638-d093-43fb-b71a-e52e800eb338",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Mahua Cake" ],
+                "answerConceptUuids" : [ "194fc53e-c5d3-4277-ac1f-e01f1ce6c0bf" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "voided" : true,
+    "timed" : false,
+    "display" : "Land Preparation"
+  }, {
+    "uuid" : "71af8753-0228-41cd-a291-4a47c70aed25",
+    "name" : "Land Preparation",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Layout date",
+      "uuid" : "ec6b5da4-411d-4141-ba8c-86c71e6deb58",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Layout date",
+        "uuid" : "e0935e96-4164-4161-9f7f-b88681628fa1",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n    const encounterType = programEncounter.encounterType.name;\n    const encounterDateTime = programEncounter.encounterDateTime;\n\n    const previousEncounters = programEncounter.programEnrolment.getEncountersOfType(encounterType)\n        .filter((enc)=>\n            enc.encounterDateTime\n            && enc.uuid != programEncounter.uuid\n            && enc.earliestVisitDateTime\n        )\n\n    if(previousEncounters && previousEncounters.length > 0){\n        const latestEncounter = previousEncounters[0];\n        let layoutDate = latestEncounter.getObservationValue('e0935e96-4164-4161-9f7f-b88681628fa1');\n        let cuurentLayoutDate = programEncounter.getObservationValue('e0935e96-4164-4161-9f7f-b88681628fa1');\n        if(cuurentLayoutDate && layoutDate){\n            layoutDate = moment(layoutDate).startOf('day');\n            cuurentLayoutDate = moment(cuurentLayoutDate).startOf('day');\n            if(!cuurentLayoutDate.isSame(layoutDate)) {\n                validationErrors.push(\"Layout Date should be same through out the Orchard Development\");\n            }\n        }\n    }\n    else {\n        const today = moment().startOf('day');\n        const todayMonth = today.month() + 1;\n\n        const isAprilMay = todayMonth == 4 || todayMonth == 5;\n\n        visibility = isAprilMay;\n\n        let selectedDate = programEncounter.getObservationValue('e0935e96-4164-4161-9f7f-b88681628fa1'); // layoutDate\n\n        if(selectedDate) {\n            selectedDate = moment(selectedDate).startOf('day');\n            if(selectedDate.isAfter(today)) {\n                validationErrors.push(\"Selected Date Should not be in the future.\");\n            }\n        }\n    }\n    \n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Pit digging completion date",
+      "uuid" : "e03c003d-0b7f-4371-b836-0b8f0df92556",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Pit digging completion date",
+        "uuid" : "e7bf01b5-af0c-414a-91d2-da49b3bf9290",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n    \n    const today = moment().startOf('day');\n    const todayMonth = today.month() + 1;\n\n    const isMayJune = todayMonth == 5 || todayMonth == 6;\n\n    visibility = isMayJune;\n\n    let layoutDate = programEncounter.getObservationValue('e0935e96-4164-4161-9f7f-b88681628fa1'); // layoutDate\n    let selectedDate = programEncounter.getObservationValue('e7bf01b5-af0c-414a-91d2-da49b3bf9290'); // Pit digging completion date\n    \n    if(selectedDate && layoutDate) {\n        selectedDate = moment(selectedDate).startOf('day');\n        layoutDate = moment(layoutDate).startOf('day');\n        \n        if(selectedDate.isBefore(layoutDate)) {\n            validationErrors.push(\"Selected Date Should be after Layout Date.\");\n        }\n    }\n    if(selectedDate) {\n        selectedDate = moment(selectedDate).startOf('day');\n        if(selectedDate.isAfter(today)) {\n            validationErrors.push(\"Selected Date Should not be in the future.\");\n        }\n    }\n    \n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Size of Pit",
+      "uuid" : "9a23494b-cb83-4dbd-b5e8-cdb7f07b0e99",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Size of Pit",
+        "uuid" : "b37e20b3-c2d8-40ff-ac7b-2d9e6aa1bf78",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "1x1x1 Feet",
+          "uuid" : "bda14e7d-6233-4ae0-a6ee-b02404b0f0de",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2.5x2.5x2.5 Feet",
+          "uuid" : "fdc4334f-f683-4cd6-93e4-eebc28141d34",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2x2x2 Feet",
+          "uuid" : "526edf50-e6fa-4c8b-a225-e9af3fd43ffa",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1x1x1 Meter",
+          "uuid" : "93023eda-01b3-44dc-b778-bac714d6df14",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3x3x3 Feet",
+          "uuid" : "55fb3ca1-acd3-4666-bfce-d54e37f5fa40",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n    \n    const today = moment().startOf('day');\n    const todayMonth = today.month() + 1;\n\n    const isMayJune = todayMonth == 5 || todayMonth == 6;\n\n    visibility = isMayJune;\n    \n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Other pit size, please specify",
+      "uuid" : "2263748a-1b2e-4d89-b5b0-847e31978384",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other pit size, please specify",
+        "uuid" : "7000ac02-d1c3-4fbe-8cdb-10d344ea7760",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"b37e20b3-c2d8-40ff-ac7b-2d9e6aa1bf78\").containsAnswerConceptName(\"287164fa-3899-485f-9c1f-61401bc6359d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Size of Pit",
+                "conceptUuid" : "b37e20b3-c2d8-40ff-ac7b-2d9e6aa1bf78",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "287164fa-3899-485f-9c1f-61401bc6359d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "validFormat" : {
+        "regex" : "^\\d+(\\.\\d+)?([x*]\\d+(\\.\\d+)?){2,3}\\s*(Feet|feet|Meter|meter)$",
+        "descriptionKey" : "Invalid format. Use values like \"1x1x1 Feet\" or \"2.5x2.5x2.5 Meter\"."
+      },
+      "mandatory" : true
+    }, {
+      "name" : "Pit filling completion date",
+      "uuid" : "2ae34a7f-7008-4d55-8e3a-e5dd19b68501",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Pit filling completion date",
+        "uuid" : "7e830565-5db5-417c-853f-ea5d23d894d2",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n    \n    const today = moment().startOf('day');\n    const todayMonth = today.month() + 1;\n\n    const isJune = todayMonth == 6;\n\n    visibility = isJune;\n\n    let pitDiggingCompletionDate = programEncounter.getObservationValue('e7bf01b5-af0c-414a-91d2-da49b3bf9290'); // Pit digging completion date\n\n    let selectedDate = programEncounter.getObservationValue('7e830565-5db5-417c-853f-ea5d23d894d2'); // Pit filling completion date\n    \n    if(selectedDate && pitDiggingCompletionDate) {\n        selectedDate = moment(selectedDate).startOf('day');\n        pitDiggingCompletionDate = moment(pitDiggingCompletionDate).startOf('day');\n        \n        if(selectedDate.isBefore(pitDiggingCompletionDate)) {\n            validationErrors.push(\"Selected Date Should be after Pit digging completion date.\");\n        }\n    }\n    \n    if(selectedDate) {\n        selectedDate = moment(selectedDate).startOf('day');\n        if(selectedDate.isAfter(today)) {\n            validationErrors.push(\"Selected Date Should not be in the future.\");\n        }\n    }\n    \n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Land Preparation"
+  }, {
+    "uuid" : "be7a122c-dc2d-4c66-8b11-a5803c863a16",
+    "name" : "Inputs Used",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Please mention the name of inputs used",
+      "uuid" : "e2c38ff1-80b1-4c16-8f36-2a7b818010f2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Please mention the name of inputs used",
+        "uuid" : "6399b6bf-3ef1-46f2-90b1-5dbc5e744bca",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "NPK Consortia",
+          "uuid" : "53e47054-b482-49af-a476-e0373d6cfdf3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Arandi Cake",
+          "uuid" : "9602a850-dfd8-4b46-a233-e553a6f36bcd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mahua Cake",
+          "uuid" : "194fc53e-c5d3-4277-ac1f-e01f1ce6c0bf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "FYM",
+          "uuid" : "7c54c40b-17f7-4bbc-b3eb-1779470889e3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ghanjeevamrut",
+          "uuid" : "e6892009-e046-4d2a-a508-0a8f8d63a44c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Neem Cake",
+          "uuid" : "6522efd2-37ba-4075-aa2f-a72c492d277b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Bonemeal",
+          "uuid" : "83637f46-fb10-40a6-9c4f-d10c919cba61",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Gypsum",
+          "uuid" : "8906f8c4-7530-464d-83c9-cbd5f54a53b1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Other inputs used, please specify",
+      "uuid" : "0e859336-3df3-472e-94c2-191a354f2a0b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other inputs used, please specify",
+        "uuid" : "73ed84ca-6626-442d-9236-a792dcff7699",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"6399b6bf-3ef1-46f2-90b1-5dbc5e744bca\").containsAnswerConceptName(\"287164fa-3899-485f-9c1f-61401bc6359d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Please mention the name of inputs used",
+                "conceptUuid" : "6399b6bf-3ef1-46f2-90b1-5dbc5e744bca",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "287164fa-3899-485f-9c1f-61401bc6359d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Quantity of FYM Applied (Quintals)",
+      "uuid" : "da3050ac-3d60-4e15-abdf-bf97b419f6d4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity of FYM Applied (Quintals)",
+        "uuid" : "324a521d-9ddf-4a1b-ac89-c6c78de36e94",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 15.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Total Cost of the FYM Applied",
+      "uuid" : "8092afd0-a054-4872-8fd4-23cd1c36e055",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total Cost of the FYM Applied",
+        "uuid" : "2a305558-c573-4a66-ae4a-eb4e949f98e4",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Quantity of Ghanjeevamrit Applied (Quintals)",
+      "uuid" : "4959d29d-2348-455b-9c52-5450473aab13",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity of Ghanjeevamrit Applied (Quintals)",
+        "uuid" : "cab8bef6-cd60-437a-9174-eaead98cc95b",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 15.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Cost of Ghanjeevamrit Applied",
+      "uuid" : "2b54a1f5-7a22-457f-a2d7-fcfba91e1816",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cost of Ghanjeevamrit Applied",
+        "uuid" : "0b8f62bf-6c80-41be-8551-fb61005f629a",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Quantity of Neem cake Applied (Kg)",
+      "uuid" : "d1c13c7d-b6ec-412b-ac62-889e7b5148c5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity of Neem cake Applied (Kg)",
+        "uuid" : "87cdd19c-bd5d-4774-97e4-c1e28741d821",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 80.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Cost of Neem cake Applied",
+      "uuid" : "a8c1087f-719d-4f1f-a545-ddcfa692b8f3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cost of Neem cake Applied",
+        "uuid" : "0233800c-c0ad-4be7-9325-9b04052ebecd",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Quantity of Mahua cake Applied (Kg)",
+      "uuid" : "21d5ea3a-53ad-4aed-9ac6-d304ca6205ae",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity of Mahua cake Applied (Kg)",
+        "uuid" : "fe63d04f-ad08-4a6b-a55c-2235201c571e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 80.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Cost of Mahua cake Applied",
+      "uuid" : "3de40c97-6799-44ae-bd6c-492422d501eb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cost of Mahua cake Applied",
+        "uuid" : "003bb1b0-bcfc-46e7-bbdd-bca7ff40021e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Quantity of Arandi cake Applied (Kg)",
+      "uuid" : "4ec8fb24-1536-4301-8fc1-073524dd8ec9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity of Arandi cake Applied (Kg)",
+        "uuid" : "9a6ed3dc-71ce-41f1-9d68-28fc09a78d7d",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 80.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Cost of Arandi cake Applied",
+      "uuid" : "a3252b3d-fd95-44e8-9686-276a0adc6723",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cost of Arandi cake Applied",
+        "uuid" : "88948c2b-57e4-4605-8954-d82be8f01967",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Quantity of NPK Consotia (Liters)",
+      "uuid" : "b09edefa-ffd2-416d-9ffb-9a7a2d8d4f99",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity of NPK Consotia (Liters)",
+        "uuid" : "1372a7a1-1767-4aed-a585-42ce051ca1a8",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 2.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Cost of NPK consortia Applied",
+      "uuid" : "0732fe69-a4fb-4e1c-b794-9cc6445bc0ef",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cost of NPK consortia Applied",
+        "uuid" : "4b3f4696-926b-4396-888d-6bf850cacf49",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Quantity of Bonemeal Applied (Kg)",
+      "uuid" : "64c9b141-14b0-4e6e-8576-ea77a2b03258",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity of Bonemeal Applied (Kg)",
+        "uuid" : "f1695b2d-f9b5-4599-9e34-570511c5a9db",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 80.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 15.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Cost of bonemeal applied",
+      "uuid" : "a5001324-888a-4848-8e8f-045e66094b4d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cost of bonemeal applied",
+        "uuid" : "8927eccb-0a36-406b-9f41-56819b6c75bd",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 16.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Quantity of Gypsum applied (Kg)",
+      "uuid" : "3b9a9ae1-c5ab-4428-a6bb-25f1d45e6747",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity of Gypsum applied (Kg)",
+        "uuid" : "5e4ae8f5-0987-48fd-a418-4238da13ce3e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 20.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 17.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Cost of gypsum applied",
+      "uuid" : "7f39e098-4711-49f6-875a-9acd9fcad810",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cost of gypsum applied",
+        "uuid" : "1438e1a1-182b-4357-9400-eac169642b71",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 18.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Name of other materials applied",
+      "uuid" : "1bd586eb-5e6e-429e-91ed-f94e1aebf071",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of other materials applied",
+        "uuid" : "a3830445-4511-454f-9b62-2c851c97527b",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 19.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Quantity of other materials applied",
+      "uuid" : "84c00781-823c-4235-8aa7-77c0c7054fff",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity of other materials applied",
+        "uuid" : "4b632cb6-cf1c-4fdd-bb0f-4da8d0f3a0a5",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 20.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Cost of other materials applied",
+      "uuid" : "95e337f8-c8b0-47a6-9046-46e1c444528e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cost of other materials applied",
+        "uuid" : "a5bc9b01-6ea4-40c8-bb70-e1bc2ec00ce3",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 21.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Total cost of All the inputs",
+      "uuid" : "1865f3f6-c256-485d-8268-6b32e2bf9c74",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Total cost of All the inputs",
+        "uuid" : "61483ed9-af71-429e-b57f-99d31036bff6",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 22.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n    let totalCost = 0;\n\n    const inputUsedCosts = {\n        '2a305558-c573-4a66-ae4a-eb4e949f98e4': \"Total Cost of the FYM Applied\",\n        '0b8f62bf-6c80-41be-8551-fb61005f629a': \"Cost of Ghanjeevamrit Applied\",\n        '0233800c-c0ad-4be7-9325-9b04052ebecd': \"Cost of Neem cake Applied\",\n        '003bb1b0-bcfc-46e7-bbdd-bca7ff40021e': \"Cost of Mahua cake Applied\",\n        '88948c2b-57e4-4605-8954-d82be8f01967': \"Cost of Arandi cake Applied\",\n        '4b3f4696-926b-4396-888d-6bf850cacf49': \"Cost of NPK consortia Applied\",\n        '8927eccb-0a36-406b-9f41-56819b6c75bd': \"Cost of bonemeal applied\",\n        '1438e1a1-182b-4357-9400-eac169642b71': \"Cost of gypsum applied\",\n        'a5bc9b01-6ea4-40c8-bb70-e1bc2ec00ce3': \"Cost of other materials applied\"\n    }\n\n    for (const uuid in inputUsedCosts) {\n        const cost = programEncounter.getObservationValue(uuid);\n        if(cost && cost > 0){\n            totalCost += cost;\n        }   \n    }\n\n    value = totalCost;\n    \n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : false
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElementGroup = params.formElementGroup;\n    const _ = imports.lodash;\n    let visibility = true;\n\n    const today = moment().startOf('day');\n\n    const isJune = today.month() == 5; // June is month 5 (0-indexed)\n\n\n    return formElementGroup.formElements.map((formElement) => {\n        \n        visibility = isJune ;\n  \n        return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, null);\n    });\n};",
+    "timed" : false,
+    "display" : "Inputs Used"
+  }, {
+    "uuid" : "f565f35c-3cc9-4f0f-a739-0eb0202de166",
+    "name" : "Plantation",
+    "displayOrder" : 4.0,
+    "formElements" : [ {
+      "name" : "Date of Transplantation",
+      "uuid" : "958dcb23-69ec-493d-8f1e-91d74826980c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Date of Transplantation",
+        "uuid" : "0026a735-591c-4508-a4b5-d0f84aefa02b",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n    \n    const today = moment().startOf('day');\n\n    let selectedDate = programEncounter.getObservationValue('0026a735-591c-4508-a4b5-d0f84aefa02b'); \n\n    if(selectedDate) {\n        selectedDate = moment(selectedDate).startOf('day');\n        if(selectedDate.isAfter(today)) {\n            validationErrors.push(\"Selected Date Should not be in the future.\");\n        }\n    }\n    \n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Plant to plant spacing",
+      "uuid" : "278f0e92-7d6e-4d77-8e29-814b55fa26dd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Plant to plant spacing",
+        "uuid" : "2fae2ff7-f5cf-4775-9789-53339a3c02e8",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 3.0,
+        "highAbsolute" : 4.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Row to Row spacing",
+      "uuid" : "ad7aec2a-2062-4445-89f5-c03853bfba3c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Row to Row spacing",
+        "uuid" : "2ad1e2d9-db68-4d67-864f-a3611f25015c",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 4.0,
+        "highAbsolute" : 5.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Total number of rows",
+      "uuid" : "05491386-0021-476e-b4e6-be534462bdbd",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total number of rows",
+        "uuid" : "ff8cac94-6d4b-4f32-b351-983ab6ec7b4e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 5.0,
+        "highAbsolute" : 8.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Total Area of the Orchard",
+      "uuid" : "992c40af-634a-4e83-8bbd-836a38633dfb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total Area of the Orchard",
+        "uuid" : "48cb2816-6cf9-415b-b699-69173458084a",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.18,
+        "highAbsolute" : 0.5,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Supported By",
+      "uuid" : "8bde0403-b0ee-49e0-95d2-c95d76f6861e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Supported By",
+        "uuid" : "0123d990-f9fc-485c-b85c-cac52418a8b4",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElementGroup = params.formElementGroup;\n    const _ = imports.lodash;\n    let visibility = true;\n\n    const today = moment().startOf('day');\n\n    const isJune = today.month() == 5; // June is month 5 (0-indexed)\n\n\n    return formElementGroup.formElements.map((formElement) => {\n        \n        visibility = isJune ;\n  \n        return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, null);\n    });\n};",
+    "timed" : false,
+    "display" : "Plantation"
+  }, {
+    "uuid" : "a73dac33-6c0b-4d61-878d-e6b1e7eaba34",
+    "name" : "Fencing",
+    "displayOrder" : 5.0,
+    "formElements" : [ {
+      "name" : "Fencing provided",
+      "uuid" : "35881865-f4d5-45d4-b85e-edab0bcf7cd9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Fencing provided",
+        "uuid" : "9c2745b8-4cf3-4c56-b71e-7e708ba9d759",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Type of fencing",
+      "uuid" : "b05ca3dc-0242-4055-81d5-1fb71dfa05ba",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Type of fencing",
+        "uuid" : "73d64d99-5267-4553-b678-d2e90de4808d",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Razor wire",
+          "uuid" : "c7205d4f-f749-456b-a014-dff5d13a7b04",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Chain link wire",
+          "uuid" : "b754ad54-deca-426f-a978-09a029f9fbc2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Welded wire",
+          "uuid" : "567535b5-3369-468f-a8df-424649f2fa98",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Barbed wire",
+          "uuid" : "a3c64439-1606-46f4-96e2-d26d489f6c0a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"9c2745b8-4cf3-4c56-b71e-7e708ba9d759\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Fencing provided",
+                "conceptUuid" : "9c2745b8-4cf3-4c56-b71e-7e708ba9d759",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Brand/Make of wire",
+      "uuid" : "097d301b-4076-4fd9-b4c7-9fd25998955b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Brand/Make of wire",
+        "uuid" : "9bfcf525-71cb-4009-8b84-75cc1c94532d",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"9c2745b8-4cf3-4c56-b71e-7e708ba9d759\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Fencing provided",
+                "conceptUuid" : "9c2745b8-4cf3-4c56-b71e-7e708ba9d759",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Total cost of wire",
+      "uuid" : "2b6fe94f-f64f-4d1a-a602-b55f4e1bd9ef",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total cost of wire",
+        "uuid" : "813c7d5d-d095-4682-8013-c7d129f14bda",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"9c2745b8-4cf3-4c56-b71e-7e708ba9d759\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Angle/pole provided",
+      "uuid" : "aa5fd535-1146-4cfc-9f57-b460262460d0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Angle/pole provided",
+        "uuid" : "e5511c63-566e-41ed-954d-ce3cda89ca56",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Type of Angle/pole",
+      "uuid" : "3cdc9206-b1e2-440c-93c5-20a1f98e139b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Type of Angle/pole",
+        "uuid" : "730f2fe1-4d6c-4c2c-9952-0a976a936fc0",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Wooden Pole",
+          "uuid" : "902fe806-602f-4804-8b37-4cff2b809303",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Iron Angle",
+          "uuid" : "c99172fe-0f8b-4152-b6f6-90328ae96c40",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cemented Pole",
+          "uuid" : "0309d5ef-b527-4b1a-b9e2-b14f55e0b22b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"e5511c63-566e-41ed-954d-ce3cda89ca56\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Angle/pole provided",
+                "conceptUuid" : "e5511c63-566e-41ed-954d-ce3cda89ca56",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Other type of angle/pole, please specify",
+      "uuid" : "4671f01b-af95-4ed5-9399-16b64fe47365",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other type of angle/pole, please specify",
+        "uuid" : "3b0c4ab5-bc14-435a-a22b-c530209652e4",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"730f2fe1-4d6c-4c2c-9952-0a976a936fc0\").containsAnswerConceptName(\"287164fa-3899-485f-9c1f-61401bc6359d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Type of Angle/pole",
+                "conceptUuid" : "730f2fe1-4d6c-4c2c-9952-0a976a936fc0",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "287164fa-3899-485f-9c1f-61401bc6359d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Quantity of Angles/Poles",
+      "uuid" : "86097b1e-cd44-490d-8e6b-2c35c9f0e17b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quantity of Angles/Poles",
+        "uuid" : "0f520166-c850-4b9e-86dc-b62b2cbcc356",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"e5511c63-566e-41ed-954d-ce3cda89ca56\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Cost of Angles/Poles",
+      "uuid" : "f5d53e16-d354-4b4b-937c-09d93b119825",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cost of Angles/Poles",
+        "uuid" : "566ee119-992b-4ac0-ab6c-49160090134b",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"e5511c63-566e-41ed-954d-ce3cda89ca56\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElementGroup = params.formElementGroup;\n    const _ = imports.lodash;\n    let visibility = true;\n\n    const today = moment().startOf('day');\n\n    const isJune = today.month() == 5; // June is month 5 (0-indexed)\n\n\n    return formElementGroup.formElements.map((formElement) => {\n        \n        visibility = isJune ;\n  \n        return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, null);\n    });\n};",
+    "timed" : false,
+    "display" : "Fencing"
+  }, {
+    "uuid" : "4272a880-c843-49d9-9a0c-f76f0c5ebdf7",
+    "name" : "Tools Provided",
+    "displayOrder" : 6.0,
+    "formElements" : [ {
+      "name" : "Secateur Provided",
+      "uuid" : "97a7ee93-da2b-47f3-ba7d-72708791ecf7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Secateur Provided",
+        "uuid" : "f5a6e016-8f83-4c63-9c24-56d8129a0290",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Make/Brand of secateur",
+      "uuid" : "90fef386-aaa0-4cfc-a61a-c901ae54f86e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Make/Brand of secateur",
+        "uuid" : "90d62dd6-f396-424d-9927-b0e93d52e6d2",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"f5a6e016-8f83-4c63-9c24-56d8129a0290\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Secateur Provided",
+                "conceptUuid" : "f5a6e016-8f83-4c63-9c24-56d8129a0290",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Cost of secateur",
+      "uuid" : "e27d33de-b059-4f37-a437-c0cbcee71648",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cost of secateur",
+        "uuid" : "a20aaf7e-ca15-40ab-a6b2-50cad23ada2e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 300.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"f5a6e016-8f83-4c63-9c24-56d8129a0290\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Plastic Drum",
+      "uuid" : "b2fc8562-b5c9-477f-892b-715ebedef06d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Plastic Drum",
+        "uuid" : "9474170d-cec8-4a20-bb36-d3f959c76ff4",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"9474170d-cec8-4a20-bb36-d3f959c76ff4\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Plastic Drum",
+                "conceptUuid" : "9474170d-cec8-4a20-bb36-d3f959c76ff4",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Capacity of drum",
+      "uuid" : "2c4f0ac1-c56f-4c63-9140-78faf303185b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Capacity of drum",
+        "uuid" : "bce5cf2d-0fce-4710-92b7-795b00db6d8c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "100 Liters",
+          "uuid" : "c9146013-d0d2-42ed-a41d-48046f4559e9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "200 Liters",
+          "uuid" : "7b51a6b2-0417-4797-90f3-5b363ea3bc58",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"9474170d-cec8-4a20-bb36-d3f959c76ff4\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Cost of drum",
+      "uuid" : "e122b014-1ac5-4084-8ef1-b35e6d676396",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cost of drum",
+        "uuid" : "d24c700a-3104-4d67-b28f-3a59f862643f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 1200.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"9474170d-cec8-4a20-bb36-d3f959c76ff4\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Any other tools",
+      "uuid" : "ae62f217-50f2-4920-87e5-ec90b7000b5d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Any other tools",
+        "uuid" : "3aec6d6f-2756-436e-bac4-7c55b6a4abd2",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Name of tools with Make/Brand",
+      "uuid" : "9b6c496f-c795-4dc6-93c3-cd8a524541ec",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of tools with Make/Brand",
+        "uuid" : "9d3f1076-90aa-4907-9c23-90d296e28758",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"3aec6d6f-2756-436e-bac4-7c55b6a4abd2\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Any other tools",
+                "conceptUuid" : "3aec6d6f-2756-436e-bac4-7c55b6a4abd2",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Total cost of other tools",
+      "uuid" : "eb8dc4d4-5f4d-4ee4-b985-0cfb50ff7253",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total cost of other tools",
+        "uuid" : "d5cfeff0-f3f8-49ac-a715-6f8a3dc2ec72",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"3aec6d6f-2756-436e-bac4-7c55b6a4abd2\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElementGroup = params.formElementGroup;\n    const _ = imports.lodash;\n    let visibility = true;\n\n    const today = moment().startOf('day');\n\n    const isJune = today.month() == 5; // June is month 5 (0-indexed)\n\n\n    return formElementGroup.formElements.map((formElement) => {\n        \n        visibility = isJune ;\n  \n        return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, null);\n    });\n};",
+    "timed" : false,
+    "display" : "Tools Provided"
+  }, {
+    "uuid" : "99e14673-cdd1-4aa3-9cb9-3e9535ccef19",
+    "name" : "Plantation",
+    "displayOrder" : 7.0,
+    "formElements" : [ {
+      "name" : "Date of Transplantation",
+      "uuid" : "50ea5ac7-2cb4-4d77-94dd-64d430f042b2",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "calendar"
+      }, {
+        "key" : "durationOptions",
+        "value" : [ "years", "months", "days" ]
+      } ],
+      "concept" : {
+        "name" : "Date of Transplantation",
+        "uuid" : "0026a735-591c-4508-a4b5-d0f84aefa02b",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Plant to plan Line spacing",
+      "uuid" : "859ab20b-5810-4611-86a1-ed81c0fcb0a5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Plant to plan Line spacing",
+        "uuid" : "d511e0c9-529c-40d7-942c-e52db88d0b89",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Plant to plan Row spacing",
+      "uuid" : "f063f225-f89e-4507-9e92-867bb824ccdb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Plant to plan Row spacing",
+        "uuid" : "f7d971fa-2f40-4571-9320-2118b192fd71",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total Area of the Orchrad",
+      "uuid" : "d0abb0e1-3c7d-4575-b870-5359193a7bf8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total Area of the orchard",
+        "uuid" : "fa764ce9-2641-422a-af55-e7d67d5f31f4",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Total Area of the Orchrad",
+      "uuid" : "9ed29947-95be-4fac-a141-c68cbff44241",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total Area of the Orchrad",
+        "uuid" : "2dd66345-2d8a-44f9-838d-d51de78ee96e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "voided" : true,
+    "timed" : false,
+    "display" : "Plantation"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({ params, imports }) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({programEncounter});\n\n    const encounterDateTime = moment(programEncounter.encounterDateTime).startOf('day');\n    const jan1st = moment().startOf('year').startOf('day');\n    const june1st = moment().startOf('year').add(5, 'months').startOf('day');\n    const dec1st = moment().startOf('year').add(11, 'months').startOf('day');\n    const nextYearJune1st = moment().startOf('year').add(1, 'year').add(5, 'months').startOf('day');\n\n    let earliestDate = null;\n    \n    if(encounterDateTime.isBefore(june1st) && encounterDateTime.isSameOrAfter(jan1st)) {\n        earliestDate = june1st;\n    } else if(encounterDateTime.isSameOrAfter(june1st) && encounterDateTime.isBefore(dec1st)) {\n        earliestDate = dec1st;\n    } else if(encounterDateTime.isSameOrAfter(dec1st)) {\n        earliestDate = nextYearJune1st;\n    }\n\n    const isSurvivalRateAlreadyScheduled = programEncounter.programEnrolment.getEncountersOfType(\"Survival Rate\").length > 0;\n\n    const isProgramActive = programEncounter.programEnrolment.programExitDateTime == null;\n\n    if(earliestDate && !isSurvivalRateAlreadyScheduled && isProgramActive){\n        earliestDate = earliestDate.toDate();\n        const maxDate = moment(earliestDate).add(30, 'days').endOf('day').toDate();\n        scheduleBuilder.add({name: \"Survival Rate Follow-up 1\", encounterType: \"Survival Rate\", earliestDate, maxDate});  \n    }\n\n    // Orchard Management Visit Schedule\n    function getNextQuarterDate(currentDate) {\n        const currentYear = currentDate.getFullYear();\n        const currentMonth = currentDate.getMonth(); // 0-based: 0=Jan, 2=Mar, 5=Jun, 8=Sep, 11=Dec\n        \n        const quarters = [\n            { month: 2, day: 1, name: \"March 1st\" },   // Q1\n            { month: 5, day: 1, name: \"June 1st\" },   // Q2\n            { month: 8, day: 1, name: \"September 1st\" }, // Q3\n            { month: 11, day: 1, name: \"December 1st\" }  // Q4\n        ];\n        \n        for (const quarter of quarters) {\n            const quarterDate = new Date(currentYear, quarter.month, quarter.day);\n            \n            if (currentDate < quarterDate) {\n                return quarterDate;\n            }\n        }\n    }\n\n    const nextQuarterDate = getNextQuarterDate(programEncounter.encounterDateTime);\n\n    const isOrchardManagementAlreadyScheduled = programEncounter.programEnrolment.getEncountersOfType(\"Orchard Management\").length > 0;\n\n    earliestDate = null;\n    if(!isOrchardManagementAlreadyScheduled && nextQuarterDate && isProgramActive){\n        earliestDate = moment(nextQuarterDate).startOf('month').toDate();\n        const maxDate = moment(earliestDate).add(30, 'days').endOf('day').toDate();\n        scheduleBuilder.add({name: \"Orchard Management Follow-up 1\", encounterType: \"Orchard Management\", earliestDate, maxDate});  \n    }\n\n    return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

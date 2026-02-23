@@ -1,0 +1,29 @@
+[ {
+  "name" : "CSA",
+  "uuid" : "e4d8c65f-7343-4f66-a1d0-436baa030630",
+  "colour" : "#f74343",
+  "voided" : false,
+  "active" : null,
+  "enrolmentEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n    const individual = params.entity;\n    const moment = imports.moment;\n    let eligibility = true;\n    \n    const ageGreaterThanOrEqualTo18 = new imports.rulesConfig.RuleCondition({individual}).when.ageInYears.greaterThanOrEqualTo(18).matches();\n\n    const isFarmerBaselineDone = individual.encounters.some((enc) => enc.encounterType.name == \"Family Baseline\" && enc.voided == false && enc.encounterDateTime != null)\n    \n    eligibility = ageGreaterThanOrEqualTo18 && isFarmerBaselineDone;\n    \n    return eligibility;\n};",
+  "enrolmentSummaryRule" : "",
+  "enrolmentEligibilityCheckDeclarativeRule" : null,
+  "manualEligibilityCheckRequired" : false,
+  "showGrowthChart" : false,
+  "manualEnrolmentEligibilityCheckRule" : "",
+  "manualEnrolmentEligibilityCheckDeclarativeRule" : null,
+  "allowMultipleEnrolments" : false
+}, {
+  "name" : "Horticulture / Orchard Enrolment",
+  "uuid" : "9d13b117-0d68-44a1-8a9e-b3e173d4b21c",
+  "colour" : "#31a9f5",
+  "voided" : false,
+  "active" : null,
+  "enrolmentEligibilityCheckRule" : "'use strict';\n({params, imports}) => {\n    const individual = params.entity;\n    const moment = imports.moment;\n    let eligibility = true;\n    \n    const ageGreaterThanOrEqualTo18AndLessThanOrEqualTo65 = new imports.rulesConfig.RuleCondition({individual}).when.ageInYears.greaterThanOrEqualTo(18).and.when.ageInYears.lessThanOrEqualTo(65).matches();\n\n    const isFarmerBaselineDone = individual.encounters.some((enc) => enc.encounterType.name == \"Family Baseline\" && enc.voided == false && enc.encounterDateTime != null)\n    \n    eligibility = ageGreaterThanOrEqualTo18AndLessThanOrEqualTo65 && isFarmerBaselineDone;\n    \n    return eligibility;\n};",
+  "enrolmentSummaryRule" : "",
+  "enrolmentEligibilityCheckDeclarativeRule" : null,
+  "manualEligibilityCheckRequired" : false,
+  "showGrowthChart" : false,
+  "manualEnrolmentEligibilityCheckRule" : "",
+  "manualEnrolmentEligibilityCheckDeclarativeRule" : null,
+  "allowMultipleEnrolments" : false
+} ]

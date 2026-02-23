@@ -1,0 +1,54 @@
+[ {
+  "uuid" : "45433d73-d504-432a-866b-1d163652a30d",
+  "id" : 1697,
+  "name" : "State",
+  "level" : 5.0
+}, {
+  "uuid" : "f2271d1a-7ec2-4eae-9147-47d83512934f",
+  "id" : 1698,
+  "name" : "District",
+  "level" : 4.0,
+  "parent" : {
+    "uuid" : "45433d73-d504-432a-866b-1d163652a30d"
+  }
+}, {
+  "uuid" : "cf4a90b7-9b41-4035-9105-0e2212299328",
+  "id" : 1699,
+  "name" : "Taluka",
+  "level" : 3.0,
+  "parent" : {
+    "uuid" : "f2271d1a-7ec2-4eae-9147-47d83512934f"
+  }
+}, {
+  "uuid" : "1fc53f12-2705-4398-b786-a6b9eb4f68cd",
+  "id" : 1700,
+  "name" : "GP/Village",
+  "level" : 2.0,
+  "parent" : {
+    "uuid" : "cf4a90b7-9b41-4035-9105-0e2212299328"
+  }
+}, {
+  "uuid" : "05fa1ebe-ca9d-426b-aa02-020a4f035d1b",
+  "id" : 1701,
+  "name" : "Dam",
+  "level" : 1.0,
+  "parent" : {
+    "uuid" : "1fc53f12-2705-4398-b786-a6b9eb4f68cd"
+  }
+}, {
+  "uuid" : "68c5f6fe-8cea-4cd8-b9d3-9d362283b8c5",
+  "id" : 1702,
+  "name" : "Dam/nalla",
+  "level" : 1.0,
+  "parent" : {
+    "uuid" : "1fc53f12-2705-4398-b786-a6b9eb4f68cd"
+  }
+}, {
+  "uuid" : "2cc432d7-5875-4e82-8e5b-2d90ff066a24",
+  "id" : 1703,
+  "name" : "Nalla",
+  "level" : 1.0,
+  "parent" : {
+    "uuid" : "1fc53f12-2705-4398-b786-a6b9eb4f68cd"
+  }
+} ]

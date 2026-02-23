@@ -1,0 +1,38 @@
+{
+  "operationalPrograms" : [ {
+    "uuid" : "9e28d3d5-d17c-4ffb-b68b-fb191f496a1d",
+    "program" : {
+      "uuid" : "e93303fa-f465-4db7-a945-d4fd6295f2b9",
+      "voided" : false
+    },
+    "name" : "Sickle Cell",
+    "voided" : false
+  }, {
+    "uuid" : "9e52e1c7-d2bf-4d55-8d03-0e27a493b373",
+    "program" : {
+      "uuid" : "69a436a4-e6fb-42ed-a75c-d58d793f693e",
+      "voided" : false
+    },
+    "name" : "Epilepsy MP",
+    "programSubjectLabel" : "Epilepsy Patient ",
+    "voided" : false
+  }, {
+    "uuid" : "d3d6c7d1-f772-4f18-8fdc-acbc0a6c8d9e",
+    "program" : {
+      "uuid" : "707cbfcf-5313-43e5-92d5-e176dacb1504",
+      "voided" : false
+    },
+    "name" : "Mobile Medical Unit",
+    "programSubjectLabel" : "Mobile Medical Unit program",
+    "voided" : false
+  }, {
+    "uuid" : "22611311-8a05-4930-a229-1070bcd234fb",
+    "program" : {
+      "uuid" : "5e927691-06c9-455a-b2fb-c300cea84f2e",
+      "voided" : false
+    },
+    "name" : "Maternal Health",
+    "programSubjectLabel" : "",
+    "voided" : false
+  } ]
+}

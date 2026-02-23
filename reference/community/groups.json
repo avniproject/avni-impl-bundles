@@ -1,0 +1,78 @@
+[ {
+  "uuid" : "4ba008af-9c91-4b63-8aab-ff94af9db909",
+  "id" : 15,
+  "name" : "Everyone",
+  "notEveryoneGroup" : false
+}, {
+  "uuid" : "d576c28f-3574-48dc-974f-9c6580e1a781",
+  "id" : 66,
+  "name" : "Logistic managers"
+}, {
+  "uuid" : "a2fd7479-c122-400a-a3f2-06567bc38093",
+  "id" : 92,
+  "name" : "District Coordinators"
+}, {
+  "uuid" : "9a513240-8a05-4f59-8496-714decdf83cf",
+  "id" : 182,
+  "name" : "DEO"
+}, {
+  "uuid" : "64867bed-6f9d-4666-9785-7b787e4cdc4a",
+  "id" : 353,
+  "name" : "Lab Facility"
+}, {
+  "uuid" : "13aec3e2-31c6-4a09-b213-2dc416ce5535",
+  "id" : 376,
+  "name" : "Screening teams"
+}, {
+  "uuid" : "a042b3f8-f062-4b1b-bf00-1c9a23d8e475",
+  "id" : 352,
+  "name" : "Users"
+}, {
+  "uuid" : "f0bc9cb3-b3dd-49ed-935f-d1f1af9205c8",
+  "id" : 792,
+  "name" : "vivek"
+}, {
+  "uuid" : "30a8992a-b698-408d-9d11-4567230f4b61",
+  "id" : 2185,
+  "name" : "With Subject void permission"
+}, {
+  "uuid" : "98c7e290-fee2-4b49-b1bc-b7220b93122d",
+  "id" : 80,
+  "name" : "Counsellors"
+}, {
+  "uuid" : "c48abb1a-c9c4-4469-a579-5c491ffbd364",
+  "id" : 2360,
+  "name" : "MMU & MH Field users"
+}, {
+  "uuid" : "a5240b64-4807-4dde-add6-66257b67ffff",
+  "id" : 2361,
+  "name" : "Mobile medical Unit (voided~2361)",
+  "voided" : true
+}, {
+  "uuid" : "e0dc262a-06d3-4163-9c2a-44a9a22fe0f8",
+  "id" : 3252,
+  "name" : "Only View access"
+}, {
+  "uuid" : "ce7e0144-dce7-4494-869c-940fa0d3fe5c",
+  "id" : 63,
+  "name" : "Rahul",
+  "hasAllPrivileges" : true
+}, {
+  "uuid" : "8e669b63-51bc-46e7-9eb5-c56b35e6d930",
+  "id" : 2926,
+  "name" : "Metabase Users"
+}, {
+  "uuid" : "d7ac4c6e-8ee2-4666-a56e-665a321caa08",
+  "id" : 354,
+  "name" : "Field Users (voided~2250)",
+  "voided" : true
+}, {
+  "uuid" : "f960f63b-1d73-4886-8b26-9e4fba2a5b2b",
+  "id" : 290,
+  "name" : "Dindori District Screening teams (voided~2251)",
+  "voided" : true
+}, {
+  "uuid" : "1ceec7a8-7ee0-44d4-b82d-92a7461690e1",
+  "id" : 3561,
+  "name" : "CPHC PC"
+} ]

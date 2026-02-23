@@ -1,0 +1,810 @@
+{
+  "name" : "JSS HSS Registration Form",
+  "uuid" : "d8e956f9-c34b-4e38-a50a-786d4ab08737",
+  "formType" : "IndividualProfile",
+  "formElementGroups" : [ {
+    "uuid" : "379d2491-16b9-4599-80d5-a49463e1b4ee",
+    "name" : "Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Other village",
+      "uuid" : "075e5db7-1822-46ae-acd6-df4d045bb49d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other village",
+        "uuid" : "d70c62f2-52c8-4a3a-8c65-c6fc1b84e1fb",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const _ = imports.lodash;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({individual, formElement});\n  const address=individual.lowestAddressLevel.name;\n  \n  statusBuilder.show().whenItem(_.includes(individual.lowestAddressLevel.name, \"Other\")).is.truthy;\n  \n  \n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Registration number",
+      "uuid" : "836394be-d0ed-4a27-bed1-be069826cda0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Registration number",
+        "uuid" : "d695a22f-82b0-4f4f-9227-a4f3344d5dcf",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Address",
+      "uuid" : "ee150b5b-d9f1-4fa4-bab8-c45eb81eb4ad",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Address",
+        "uuid" : "5f28bfdc-b4f4-4560-bafa-66690d9a9dcc",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Caste (Free Text)",
+      "uuid" : "5ad7f235-7c1f-406f-9ec6-abbe387eeafb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Caste (Free Text)",
+        "uuid" : "60c44aa2-3635-487d-8962-43000e77d382",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Socio Economic Status",
+      "uuid" : "69af0305-3f80-4e2c-ac9d-674d5c7dfe29",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Ration Card",
+        "uuid" : "476a0b71-485b-4a0a-ba6f-4f3cf13568ca",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "BPL",
+          "uuid" : "5c9f10e3-3e20-4a3b-a971-f43b40dd017c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "APL",
+          "uuid" : "36008c2c-7748-426d-9784-ffc5a267db07",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ayushman Card",
+          "uuid" : "c0c250eb-fb39-4325-adb8-2aa30e14ebcd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Antyodaya",
+          "uuid" : "eace7aa2-8444-4c43-b5aa-8b5ec0b19a20",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Deen dayal",
+          "uuid" : "d730f9e7-c80c-4989-97a3-33b5e0e911fd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Category",
+      "uuid" : "7331c9f4-1885-470a-8221-f8fd905f3089",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Caste Category",
+        "uuid" : "61ab6413-5c6a-4512-ab6e-7d5cd1439569",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "ST",
+          "uuid" : "dd076e03-68ae-4b53-adf6-641c69b9a518",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "SC",
+          "uuid" : "a3519a96-350e-4da4-90d9-827c0ff15538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "OBC",
+          "uuid" : "e92925ed-4a15-40c0-a0a7-a21c965dad48",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "General",
+          "uuid" : "cae99772-b389-4baf-849b-9c7c2b06c951",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Father/Husband name",
+      "uuid" : "e13b68df-55b2-4d45-b770-5050c6119215",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Father/Husband",
+        "uuid" : "4edb709d-a0ad-44fd-9132-2884054cd114",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Marital Status",
+      "uuid" : "f34c4dd2-65d2-450b-9674-649083041597",
+      "keyValues" : [ {
+        "key" : "ExcludedAnswers",
+        "value" : [ "Remarried", "Currently married", "Separated", "Other", "Divorced", "Widow(er)" ]
+      } ],
+      "concept" : {
+        "name" : "Marital status",
+        "uuid" : "aa6687c9-ba4d-49a3-9b3e-bba266eb6f32",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Widow(er)",
+          "uuid" : "a5e367b3-48c6-4b6e-860c-89a1e4ab4b89",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Currently married",
+          "uuid" : "9832ccec-edd6-4fa2-96b1-f81832df3996",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Divorced",
+          "uuid" : "bad132b2-16d1-4fa5-a396-d864d666ac5d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Married",
+          "uuid" : "4dbfc65e-f3f4-469a-b10d-54b803368e17",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Unmarried",
+          "uuid" : "327563ae-47b5-46bf-9bcb-640ff6cfc52d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Separated",
+          "uuid" : "00f2eb9a-94c6-48eb-bfad-0b93784d3cb9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Remarried",
+          "uuid" : "bbbcef7d-45d4-4dee-b04f-3a954a3bb768",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Contact Number",
+      "uuid" : "aab6de0f-55cc-416c-bb23-f7dd79583e78",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Contact Number",
+        "uuid" : "82fa0dbb-92f9-4ec2-9263-49054e64d909",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "validFormat" : {
+        "regex" : "^[0-9]{10}$",
+        "descriptionKey" : "Required10Digits"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "Your Ayushman Bharat ID Card prepared?",
+      "uuid" : "ac2c4b75-9c2a-44a1-ad0b-c28d81a982d6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Ayushman Card (Yes/No)",
+        "uuid" : "741cc71a-e82e-4774-bd15-2d50c1546390",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Why Ayushman Card not Prepared?",
+      "uuid" : "b991c41a-4f53-4725-859e-4e47f2286e1c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Why Ayushman Card not Prepared?",
+        "uuid" : "c6011553-6bf4-4765-89e9-860340210642",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Lack of documents",
+          "uuid" : "c9c7917d-0819-450a-9e4c-2103063ad4a5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Opportunity to make card not provided",
+          "uuid" : "79948683-2db2-4c85-9e69-b27f4f2931d4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Officials refused to make it",
+          "uuid" : "a30e699d-a9c0-4097-b9ac-d269c9c848b5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Don't have idea about ABHA",
+          "uuid" : "b48d2387-cca5-46e9-8b85-a4d5eb0f0be6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not required yet",
+          "uuid" : "a00e6faf-677a-4687-8338-c8e1fe1c4bc8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration(\"741cc71a-e82e-4774-bd15-2d50c1546390\").containsAnswerConceptName(\"e7b50c78-3d90-484d-a224-9887887780dc\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "registration",
+                "conceptName" : "Ayushman Card (Yes/No)",
+                "conceptUuid" : "741cc71a-e82e-4774-bd15-2d50c1546390",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "No" ],
+                "answerConceptUuids" : [ "e7b50c78-3d90-484d-a224-9887887780dc" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Ayushman Bharat id Number",
+      "uuid" : "976c7af4-7094-4cf8-820a-a7618de03d00",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "ABHA id",
+        "uuid" : "48bbf05e-7e53-4385-9ce5-afb6ea789f77",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({individual, formElement}).when.valueInRegistration(\"741cc71a-e82e-4774-bd15-2d50c1546390\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "registration",
+                "conceptName" : "Ayushman Card (Yes/No)",
+                "conceptUuid" : "741cc71a-e82e-4774-bd15-2d50c1546390",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "Aadhaar Number",
+      "uuid" : "3731a72a-d443-47dd-b1a2-a6690f3ba3e2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Aadhaar ID",
+        "uuid" : "43c4860f-fccf-48c9-818a-191bc0f8d0cf",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "validFormat" : {
+        "regex" : "^[0-9]{12}$",
+        "descriptionKey" : "Required12Digits"
+      },
+      "mandatory" : false
+    }, {
+      "name" : "Is this registration for pregnant woman",
+      "uuid" : "d588032f-24bc-4a0a-8a33-5ca362acbc33",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Whether registration for pregnant woman",
+        "uuid" : "e2c7cacd-03f7-4228-b0ce-4ddb2e220974",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({individual, formElement});\n  statusBuilder.show().whenItem(individual.isFemale()).is.truthy;\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Type of person screened",
+      "uuid" : "0f9484f9-4a1f-4dd2-9869-5851eb301699",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Type of person screened",
+        "uuid" : "c254e204-3a7c-4e13-bac2-abfca94c9528",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Relative",
+          "uuid" : "5dcdbebc-913e-46a5-a254-dd38d2956c80",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "School Children",
+          "uuid" : "4abc45d9-23b2-4388-b6b5-ac5cedafec6b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PNC Woman",
+          "uuid" : "7b57aebb-fcb0-4fb0-94fa-4ca8d11cfa38",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Anganwadi Children",
+          "uuid" : "1c25929d-0539-449d-b6d0-542c8eafb30c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pregnant women",
+          "uuid" : "b86a3c8e-1a51-41dd-a53d-8769302addac",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 15.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Type of person screened",
+      "uuid" : "e22a052f-c3fc-4609-9b6b-154be961d794",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Type of person screened (voided~103250)",
+        "uuid" : "e988e41b-ff70-4094-bafe-39ec04857dc0",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Anganwadi Children( voided ~ 103249)",
+          "uuid" : "e2ed48c6-dadd-4620-bdf7-b6d1bcd6ba87",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "School Children( voided ~ 103248)",
+          "uuid" : "dc526057-b66b-4074-9aca-a56dc81729d1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Relative",
+          "uuid" : "5dcdbebc-913e-46a5-a254-dd38d2956c80",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pregnant women( voided ~ 103247)",
+          "uuid" : "8e770e57-2e76-4f75-9c84-4c909a848991",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ],
+        "voided" : true
+      },
+      "displayOrder" : 16.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Education level of the person",
+      "uuid" : "3546d3c6-12f9-446f-a6da-c4a9938c6a84",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Education level of the person",
+        "uuid" : "b4aef414-6830-4967-8bd1-1cf708c3969e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Primary",
+          "uuid" : "8fd06d73-aba5-40fe-a92d-32b6bba2e1bd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Middle",
+          "uuid" : "78f15554-cbaf-4302-b9b4-e6593b60559d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Secondary",
+          "uuid" : "e117bee2-f823-4e46-803f-1667c4c3e7cf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Higher Secondary",
+          "uuid" : "77f083ea-566d-459f-9c12-b9f74c13a006",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "High School",
+          "uuid" : "40bef883-0613-417c-a086-2acb83b52d40",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Not known",
+          "uuid" : "52910fb2-ec05-4943-8c71-6504d50e9b40",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 17.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({individual, formElement});\n  statusBuilder.show().whenItem(individual.getObservationReadableValue(\"Type of person screened\") === \"School Children\").is.truthy;\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Alternative Contact Number",
+      "uuid" : "610b20dc-fe62-468f-be95-9f8f2c2a2697",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Alternative contact number",
+        "uuid" : "928b4521-98d0-4cb3-a38e-42a775bf814e",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 18.0,
+      "type" : "SingleSelect",
+      "validFormat" : {
+        "regex" : "^[0-9]{10}$",
+        "descriptionKey" : "Required10Digits"
+      },
+      "mandatory" : false
+    }, {
+      "name" : "Full name in hindi",
+      "uuid" : "11dcb3fc-294b-4717-8ab7-f6d1c3d68898",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Full name in hindi",
+        "uuid" : "7ac4f28d-99e9-4645-b80c-4a0c227290ec",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 19.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Father/Husband name in hindi",
+      "uuid" : "52720de8-73b4-453f-8842-fc9ddd65035f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Father/Husband name in hindi",
+        "uuid" : "6b326db4-e039-47bc-8a30-1f8a138fd475",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 20.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Education level of the person",
+      "uuid" : "f9e46743-7422-4065-9970-808cce8d7ce0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Education level of the person (voided~103253)",
+        "uuid" : "5f4106ab-9c15-410d-a762-02be3528ba0c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Primary",
+          "uuid" : "8fd06d73-aba5-40fe-a92d-32b6bba2e1bd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Middle( voided ~ 103251)",
+          "uuid" : "88a2f69e-7f21-4656-9822-84ddc5536d5d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Higher Secondary( voided ~ 103252)",
+          "uuid" : "07640eb1-5fb2-4119-adb6-dddb443e4157",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ],
+          "voided" : true
+        }, {
+          "name" : "Secondary",
+          "uuid" : "e117bee2-f823-4e46-803f-1667c4c3e7cf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ],
+        "voided" : true
+      },
+      "displayOrder" : 21.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({individual, formElement});\n  statusBuilder.show().whenItem(individual.getObservationReadableValue(\"Type of person screened\") === \"School Children\").is.truthy;\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Details"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

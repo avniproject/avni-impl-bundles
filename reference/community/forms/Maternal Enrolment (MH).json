@@ -1,0 +1,599 @@
+{
+  "name" : "Maternal Enrolment (MH)",
+  "uuid" : "d135eaea-2830-4dfc-8174-bf0f15d7bd9d",
+  "formType" : "ProgramEnrolment",
+  "formElementGroups" : [ {
+    "uuid" : "95830d2c-2c59-4fa5-8066-6d062f2c079c",
+    "name" : "Identification Information",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Ayushman Card",
+      "uuid" : "0ba1b79b-5b72-458a-852f-dfcf145da5bf",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Ayushman Card (Yes/No)",
+        "uuid" : "741cc71a-e82e-4774-bd15-2d50c1546390",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Does PW have MCP Card?",
+      "uuid" : "e73e363e-0e55-4b19-8d98-45234c08c90d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Does PW have MCP Card?",
+        "uuid" : "8340c0d9-3ec8-45d3-90c7-17772d35a16d",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "MP ID",
+      "uuid" : "3d54f515-134f-4dfd-9928-c4e8958b88a0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "MP ID",
+        "uuid" : "3a2a0e30-7601-4b08-b20c-f64bacd114c0",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 1.0,
+        "highAbsolute" : 9.9999999999E10,
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "ANC Enrollment ID - numeric",
+      "uuid" : "c0b831a2-e561-4a05-971d-2408383f91e2",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "ANC Enrollment ID - numeric",
+        "uuid" : "6284519f-c807-4d0f-be16-78437f73b1d5",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "ANC Enrolment Number",
+      "uuid" : "b185df74-3dd5-46b6-94be-eb7fcdae9f4a",
+      "keyValues" : [ {
+        "key" : "IdSourceUUID",
+        "value" : "ca9d94c4-4790-403a-afeb-245000dba7c6"
+      } ],
+      "concept" : {
+        "name" : "MH ANC Enrolment Number",
+        "uuid" : "0b3ad5ab-0da2-44f1-8868-4f1a787eb159",
+        "dataType" : "Id",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Samagrah ID",
+      "uuid" : "c995c396-06de-4b37-a65b-e9b8acb3088d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Samagrah ID",
+        "uuid" : "9ffb4dfc-0172-4acd-b894-d7b850302c7e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "<old> Program Name",
+      "uuid" : "bab6c997-b8a7-4e7c-abaa-3d4c9700a358",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Program Name - Maternal Health (For Search)",
+        "uuid" : "5753cc27-b47d-496b-a7d7-4d5e6dcf74e6",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Maternal Health",
+          "uuid" : "0aa0703a-0195-49d2-bc03-162df8793f32",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Program Name",
+      "uuid" : "26bad7ec-bd4b-4845-aea9-95ecf139555a",
+      "keyValues" : [ {
+        "key" : "ExcludedAnswers",
+        "value" : [ "Mobile Medical Unit", "Epilepsy Program" ]
+      } ],
+      "concept" : {
+        "name" : "Program Name - For Search",
+        "uuid" : "b45c153d-3de1-4f5b-8c20-47c5502d5460",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Maternal Health",
+          "uuid" : "0aa0703a-0195-49d2-bc03-162df8793f32",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Epilepsy Program",
+          "uuid" : "4cab64ec-bf5a-46a9-b30a-9f4bdbac0ef2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mobile Medical Unit",
+          "uuid" : "cbc093cf-1688-4530-a6d2-715776240c46",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Identification Information"
+  }, {
+    "uuid" : "54011904-c840-4cfa-967c-30a8018f73cf",
+    "name" : "Marriage Details",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Is the woman married?",
+      "uuid" : "d8f5e9fa-2656-4307-b0d4-2af649cd42a5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Married (Yes/No)",
+        "uuid" : "d38eeba6-2762-4f5b-932d-195b1e20f917",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Name of Husband",
+      "uuid" : "6bf9adc3-f89c-4632-8cf4-a266f55024b5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Husband/Spouse/Guardian Name",
+        "uuid" : "33e4c465-b7ca-45bb-a0be-23bfd656ea74",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInEnrolment(\"d38eeba6-2762-4f5b-932d-195b1e20f917\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "enrolment",
+                "conceptName" : "Married (Yes/No)",
+                "conceptUuid" : "d38eeba6-2762-4f5b-932d-195b1e20f917",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Date of Marriage",
+      "uuid" : "3c4044eb-40d9-4e84-85a0-2139e83ff2c6",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "calendar"
+      }, {
+        "key" : "durationOptions",
+        "value" : [ "years", "months" ]
+      } ],
+      "concept" : {
+        "name" : "Date of marriage",
+        "uuid" : "d685d229-e06e-42f3-90c7-ca06d2fefe17",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInEnrolment(\"d38eeba6-2762-4f5b-932d-195b1e20f917\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "enrolment",
+                "conceptName" : "Married (Yes/No)",
+                "conceptUuid" : "d38eeba6-2762-4f5b-932d-195b1e20f917",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "What is your/ your husband's occupation?",
+      "uuid" : "f646c31a-7f2b-4ca0-b0e3-7fdfac8d1150",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Occupation",
+        "uuid" : "cd83afec-d147-42b2-bd50-0ca460dbd55f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Daily wage labourer",
+          "uuid" : "e3c6b515-b308-4a23-9067-7cd00f27bb29",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Professional/Technical",
+          "uuid" : "aab5a52c-38b9-472b-a90e-3e63022c5a96",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Unemployed",
+          "uuid" : "71137918-fad5-4e42-98b0-c0475e4a8258",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Farmer",
+          "uuid" : "114c7f99-add9-492b-affc-f30265fdc433",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Shopkeeper",
+          "uuid" : "4c4435af-33be-4c9f-b86e-067da3081a06",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Government Job",
+          "uuid" : "95a11c12-8b59-40ff-99c4-e01ad134aa33",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Private Job",
+          "uuid" : "ccb99e5b-d75c-40a3-881d-dc27cdc154ed",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Skilled manual",
+          "uuid" : "06aff130-47ec-48d5-b2b9-b9d6e301c0a6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInEnrolment(\"d38eeba6-2762-4f5b-932d-195b1e20f917\").containsAnswerConceptName(\"04bb1773-c353-44a1-a68c-9b448e07ff70\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "enrolment",
+                "conceptName" : "Married (Yes/No)",
+                "conceptUuid" : "d38eeba6-2762-4f5b-932d-195b1e20f917",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "04bb1773-c353-44a1-a68c-9b448e07ff70" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "If other, please specify:",
+      "uuid" : "1c0007af-9e5b-449a-b168-38aff1cf5f1d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other Medical/ Surgical Condition",
+        "uuid" : "bcf88019-5cf6-44c6-9e13-16c7e93eef4c",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInEnrolment(\"cd83afec-d147-42b2-bd50-0ca460dbd55f\").containsAnswerConceptName(\"05ea583c-51d2-412d-ad00-06c432ffe538\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "enrolment",
+                "conceptName" : "Occupation",
+                "conceptUuid" : "cd83afec-d147-42b2-bd50-0ca460dbd55f",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "05ea583c-51d2-412d-ad00-06c432ffe538" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "voided" : true,
+    "timed" : false,
+    "display" : "Marriage Details"
+  }, {
+    "uuid" : "6f5b695f-1a0c-42f6-acf6-08fca0f435db",
+    "name" : "Pregnancy Details",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "LMP Date (Last Menstrual Period)",
+      "uuid" : "1a01f163-5f00-4c62-971b-e757407a6104",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "calendar"
+      }, {
+        "key" : "durationOptions",
+        "value" : [ "months", "days" ]
+      } ],
+      "concept" : {
+        "name" : "Last menstrual period",
+        "uuid" : "1cc6fd5d-1359-483e-a971-4bf36e34a72d",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  let lmpDate = programEnrolment.getObservationValue(\"1cc6fd5d-1359-483e-a971-4bf36e34a72d\"); \nif ( lmpDate && moment(lmpDate).format('YYYY-MM-DD') > moment().format('YYYY-MM-DD') ) {\n\tvalidationErrors.push(\"Date cannot be in the future\");\n}\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Expected Delivery Date",
+      "uuid" : "3c7e95c5-8878-4eae-a8de-428d47a72c49",
+      "keyValues" : [ {
+        "key" : "datePickerMode",
+        "value" : "calendar"
+      }, {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Expected Delivery Date",
+        "uuid" : "21a09b54-dbd5-4178-9795-52e9386fd128",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInEnrolment(\"1cc6fd5d-1359-483e-a971-4bf36e34a72d\").defined.matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Expected Delivery Date",
+      "uuid" : "bac66648-6715-4d3a-aa9e-bbdc8e21ce69",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Expected Delivery Date",
+        "uuid" : "21a09b54-dbd5-4178-9795-52e9386fd128",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "\"use strict\";\n({params, imports}) => {\n    const programEnrolment = params.entity;\n    const formElement = params.formElement;\n    const lmpDate = programEnrolment.getObservationValue('Last menstrual period');\nconst value = lmpDate == undefined ? 0 : imports.motherCalculations.estimatedDateOfDelivery(programEnrolment);\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, value);\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Estimated date of delivery",
+      "uuid" : "5a7d2dd8-e818-41a2-b4c9-d6a356d785f7",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Estimated Date of Delivery",
+        "uuid" : "dde911fa-15eb-4564-8deb-bba46e9d3744",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Pregnancy Details"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({params, imports}) => {\n    const programEnrolment = params.entity;\n    const moment = imports.moment;\n    const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({programEnrolment});\n    \n    const hasMHEnrollment2 = programEnrolment.getEncounters().some(enc => enc.name === 'MH Enrollment Part - 2' && !enc.cancelDateTime);\n    \n    const hasDelivery = programEnrolment.encounters.some(encounter =>\n        encounter.encounterType === \"Delivery Encounter\" &&\n        encounter.encounterDateTime &&\n        !encounter.voided &&\n        !encounter.cancelDateTime\n    );\n    \n    const programExited = programEnrolment.programExitDateTime;\n    \n    if (!hasMHEnrollment2 && !hasDelivery && !programExited) {\n      const enrolmentScheduledDate = moment(programEnrolment.enrolmentDateTime).toDate();\n      const enrolmentOverdueDate = moment(programEnrolment.enrolmentDateTime).add(1, 'days').toDate();\n      scheduleBuilder.add({\n          name: \"MH Enrollment Part - 2\",\n          encounterType: \"MH Enrollment Part - 2\",\n          earliestDate: enrolmentScheduledDate,\n          maxDate: enrolmentOverdueDate\n      });\n    }\n    return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

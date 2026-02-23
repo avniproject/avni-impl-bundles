@@ -1,0 +1,146 @@
+{
+  "name" : "JSS Sickle Cell Enrolment",
+  "uuid" : "da35a2b3-0d8f-4f12-b6a3-64cf1353284e",
+  "formType" : "ProgramEnrolment",
+  "formElementGroups" : [ {
+    "uuid" : "945c9d0c-8909-4bbf-a1c8-c939271eaf43",
+    "name" : "Enrolment Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Dummy",
+      "uuid" : "e71a009c-457d-415a-91ec-e1a5087eae2e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "None",
+        "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+        "dataType" : "NA",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Enrolment number",
+      "uuid" : "fce77793-8243-4c31-a95b-a626e6d5d2f1",
+      "keyValues" : [ {
+        "key" : "IdSourceUUID",
+        "value" : "12e20f5c-cf7a-42e8-877e-c139c8baa938"
+      } ],
+      "concept" : {
+        "name" : "Sickle Enrolment number",
+        "uuid" : "8f852186-ccf1-4898-b581-99b37bcae2f1",
+        "dataType" : "Id",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Enrolment Details"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "//SAMPLE RULE EXAMPLE\n\"use strict\";\n({ params, imports }) => {\n  const programEnrolment = params.entity;\n  const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({\n    programEnrolment\n  });\n    const labEncounters = _.chain(programEnrolment.getEncounters(true))\n        .filter((enc) => enc.name === 'Base screening')\n        .filter((enc) => imports.moment(enc.earliestVisitDateTime).isSame(programEnrolment.enrolmentDateTime) === true)\n        .value();\n  if(labEncounters.length == 0){\n    scheduleBuilder\n        .add({\n            name: \"Base screening\",\n            encounterType: \"Base screening\",\n            earliestDate: imports.moment(programEnrolment.enrolmentDateTime).toDate(),\n            maxDate: imports.moment(programEnrolment.enrolmentDateTime).add(1, 'days').toDate()\n        });\n    }\n   \n  return scheduleBuilder.getAllUnique(\"encounterType\");\n\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ {
+    "name" : "Hemoglobin genotype",
+    "uuid" : "e19e68fd-97f1-4803-a1b2-bb850836ff54",
+    "dataType" : "Coded",
+    "answers" : [ {
+      "name" : "AA",
+      "uuid" : "daa7c62f-c663-4981-a134-1f662b3036d0",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 2.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Beta Thal",
+      "uuid" : "7f32dd91-78d3-4f5c-b43e-a00bff7d6055",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 3.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "SS",
+      "uuid" : "3648a650-2f3e-4c2c-a899-c0a8212aace1",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 0.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "AS",
+      "uuid" : "77ee8a6a-2a01-421f-85ca-fc0ab39abcdb",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 1.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Beta thal trait",
+      "uuid" : "b07f08a5-4cbd-458b-bf98-171c48a62b4a",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 4.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Data Not Available",
+      "uuid" : "1deacad0-83b7-4f3e-9ae6-3bcb676c92ec",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 9.0,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Other (HPLC)",
+      "uuid" : "7472ce22-441c-4f07-9049-d53c943308e0",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 7.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "S-Beta thal - trait",
+      "uuid" : "e71107e7-56ed-4dcb-9915-5276e8a2df9e",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 6.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "S-Beta thal",
+      "uuid" : "75ea50bb-e64d-4734-af99-38d6945242af",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 5.0,
+      "abnormal" : true,
+      "active" : true,
+      "media" : [ ]
+    }, {
+      "name" : "Test not happened",
+      "uuid" : "13f4f438-efc5-4a79-8c23-23479218a942",
+      "dataType" : "NA",
+      "answers" : [ ],
+      "order" : 8.0,
+      "active" : true,
+      "media" : [ ]
+    } ],
+    "active" : true,
+    "media" : [ ]
+  } ]
+}

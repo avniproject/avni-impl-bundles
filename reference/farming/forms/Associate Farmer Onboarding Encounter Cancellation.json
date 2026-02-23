@@ -1,0 +1,7 @@
+{
+  "name" : "Associate Farmer Onboarding Encounter Cancellation",
+  "uuid" : "16037315-a137-4ec3-82c0-690a25862d81",
+  "formType" : "ProgramEncounterCancellation",
+  "formElementGroups" : [ ],
+  "decisionConcepts" : [ ]
+}

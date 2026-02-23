@@ -1,0 +1,131 @@
+{
+  "name" : "HPLC sample collection",
+  "uuid" : "57ec1309-2048-4df7-ac7c-ff10952ce402",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "8fba88a3-088a-42a6-9fd6-ea7d31ed1aa3",
+    "name" : "Blood Transfusion Check",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "BT check reason",
+      "uuid" : "c49ad32a-2a76-4de2-b5b1-fc45e0571fc4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Placeholder for counselling form element",
+        "uuid" : "b4e5a662-97bf-4846-b9b7-9baeab4d89c4",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "BT done in last 3 months?",
+      "uuid" : "b901f788-de2a-4fc6-ab1d-33e7967f1323",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Whether BT done in last 3 months",
+        "uuid" : "c1a4e2f9-8dbf-431d-bdbb-19644d7f3eba",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "BT date",
+      "uuid" : "28600add-7b08-4f0a-889b-cd7f32099718",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "BT date",
+        "uuid" : "87dbdfc1-2bdf-4a8d-9933-a48b9a40ff8a",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n   statusBuilder.show().when.valueInEncounter(\"Whether BT done in last 3 months\").is.yes;\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Collect sample for HPLC",
+      "uuid" : "e00ba599-0b38-4aad-9078-6ec1315fb33a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Placeholder for counselling form element",
+        "uuid" : "b4e5a662-97bf-4846-b9b7-9baeab4d89c4",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const formElement = params.formElement;\n    const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n    statusBuilder.show().when.valueInEncounter(\"Whether BT done in last 3 months\").is.no\n    .and.latestValueInPreviousEncounters(\"Electrophoresis result\").containsAnswerConceptName(\"Other\")\n    .or.valueInEncounter(\"Result from old sickle cell test report\").containsAnswerConceptName(\"Unconfirmed (Electrophoresis)\");\n       \n    \n return statusBuilder.build();\n    \n};",
+      "mandatory" : false
+    }, {
+      "name" : "BT check failed revisit instruction",
+      "uuid" : "9723e0fe-d20d-4292-8868-67b76c22a135",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Placeholder for counselling form element",
+        "uuid" : "b4e5a662-97bf-4846-b9b7-9baeab4d89c4",
+        "dataType" : "Coded",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n  statusBuilder.show().when.valueInEncounter(\"Whether BT done in last 3 months\").is.yes\n            .and.valueInEncounter(\"BT date\").is.defined;\n  return statusBuilder.build();\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Sample number",
+      "uuid" : "35d2d4aa-ceeb-48df-aa7c-91d85858b098",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Sample number",
+        "uuid" : "b0c9dcc7-2c4c-4fa6-9186-0bc11e753ac1",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "//SAMPLE RULE EXAMPLE\n'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const formElement = params.formElement;\n    const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({programEncounter, formElement});\n    const btDone = programEncounter.getObservationReadableValue(\"Whether BT done in last 3 months\");\n    const oldReport = programEncounter.getObservationReadableValue(\"Whether old report available\");\n\n    const eleResult = programEncounter.programEnrolment.findLatestObservationFromEncounters(\"Electrophoresis result\");\n    const oldScResult = programEncounter.getObservationReadableValue(\"Result from old sickle cell test report\");\n    var value = '';\n\n    var visibility = false;\n    const progName = programEncounter.encounterType.name;\n\n    if ((_.isEqual(progName, 'Base screening') && _.isEqual(btDone, 'no') && _.isEqual(oldReport, 'no')) || (_.isEqual(btDone, 'no') && (_.isEqual(eleResult.getReadableValue(), 'Other') || _.isEqual(oldScResult, 'Unconfirmed (Electrophoresis)')))) {\n\n        value = programEncounter.programEnrolment.getObservationValue(\"Enrolment number\");\n\n    }\n\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value);\n\n};",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Blood Transfusion Check"
+  } ],
+  "decisionRule" : "//SAMPLE RULE EXAMPLE\n  \"use strict\";\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const decisions = params.decisions;\n      const ComplicationsBuilder = new imports.rulesConfig.complicationsBuilder({\n        programEncounter: programEncounter,\n        complicationsConcept: 'BT check status'\n               \n    });\n    \n    let btDoneInLast3Months = programEncounter.getObservationReadableValue('Whether BT done in last 3 months');\n            if (btDoneInLast3Months === 'No') {\n            ComplicationsBuilder\n                .addComplication('Passed.Sample can be collected');\n            \n            } else {\n                 ComplicationsBuilder\n                .addComplication('Failed.Revisit in 3 months from BT date');\n             }\n    \n       \n   \n    \n   \n    decisions.encounterDecisions.push(ComplicationsBuilder.getComplications());\n    return decisions;\n};",
+  "visitScheduleRule" : "//SAMPLE RULE EXAMPLE\n\"use strict\";\n({ params, imports }) => {\n  const programEncounter = params.entity;\n  const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({\n    programEncounter\n  });\n  let btDate = programEncounter.getObservationReadableValue('BT date');\n   const HPLCEncounters = _.chain(programEncounter.programEnrolment.getEncounters(true))\n        .filter((enc) => enc.name === 'HPLC sample collection')\n        .filter((enc) => imports.moment(enc.earliestVisitDateTime).isSame(programEncounter.encounterDateTime) === true)\n        .value();\n  \n  \n  if (!_.isNil(btDate) && HPLCEncounters.length == 0){  \n  const dateAfter3MonthsOfBT = imports.moment(btDate).add(3, 'months').toDate();\n    scheduleBuilder\n        .add({\n            name: \"HPLC sample collection\",\n            encounterType: \"HPLC sample collection\",\n            earliestDate: dateAfter3MonthsOfBT,\n            maxDate: imports.moment(dateAfter3MonthsOfBT).add(3, 'days').toDate()\n        });\n}\n\nlet elecResult = programEncounter.programEnrolment.getObservationReadableValueInEntireEnrolment('Electrophoresis result');\nlet oldScResult = programEncounter.getObservationReadableValue('Solubility result from field');\nlet btResult = programEncounter.getObservationReadableValue('Whether BT done in last 3 months');\n  \n    const sampleShipEncounters = _.chain(programEncounter.programEnrolment.getEncounters(true))\n        .filter((enc) => enc.name === 'Sample shipment')\n        .filter((enc) => imports.moment(enc.earliestVisitDateTime).isSame(programEncounter.encounterDateTime) === true)\n        .value();\n\nif (_.isEqual(btResult, 'No') &&  sampleShipEncounters.length == 0 && (_.isEqual(elecResult, 'Other') || _.isEqual(oldScResult, 'Unconfirmed (Electrophoresis)'))) {\n        scheduleBuilder\n            .add({\n                name: \"Sample shipment\",\n                encounterType: \"Sample shipment\",\n                earliestDate: imports.moment(programEncounter.encounterDateTime).toDate(),\n                maxDate: imports.moment(programEncounter.encounterDateTime).add(3, 'days').toDate()\n            });\n    }\n\n\n\n  return scheduleBuilder.getAllUnique(\"encounterType\");\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

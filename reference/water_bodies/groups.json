@@ -1,0 +1,44 @@
+[ {
+  "uuid" : "3644b511-8f39-4285-ab2b-ab226ef934ce",
+  "id" : 1910,
+  "name" : "API (voided~1910)",
+  "voided" : true
+}, {
+  "uuid" : "bef0419b-47ed-430c-a646-8bd5d30f901f",
+  "id" : 1901,
+  "name" : "Everyone",
+  "notEveryoneGroup" : false
+}, {
+  "uuid" : "944cbe12-5643-45e9-8e97-c7d2f9729272",
+  "id" : 1903,
+  "name" : "Primary Users"
+}, {
+  "uuid" : "f0661aac-03b5-477b-9122-54af5d235475",
+  "id" : 1905,
+  "name" : "Project Supervisors"
+}, {
+  "uuid" : "c8d2396f-a527-49b8-8dbc-5b9a29530849",
+  "id" : 1907,
+  "name" : "Admin (voided~1907)",
+  "voided" : true
+}, {
+  "uuid" : "e13c2526-546d-4a10-8e2a-25f6c9ff0a31",
+  "id" : 1908,
+  "name" : "Only Uploading rights (voided~1908)",
+  "voided" : true
+}, {
+  "uuid" : "5e4a2b89-6f41-4bb0-95f5-3122d83bdec7",
+  "id" : 1906,
+  "name" : "Project Leads (voided~1906)",
+  "voided" : true
+}, {
+  "uuid" : "5e54b959-c4ca-4f66-ad75-519deab88ed5",
+  "id" : 1909,
+  "name" : "Supervisors (voided~1909)",
+  "voided" : true
+}, {
+  "uuid" : "152e8aa7-d378-4c31-a849-a92e30bfb65a",
+  "id" : 1904,
+  "name" : "Auditors (voided~1904)",
+  "voided" : true
+} ]

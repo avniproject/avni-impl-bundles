@@ -1,0 +1,106 @@
+{
+  "name" : "MH program Exit",
+  "uuid" : "0bd9ae08-8a43-4e86-ac1f-81a9c46a267b",
+  "formType" : "ProgramExit",
+  "formElementGroups" : [ {
+    "uuid" : "8b5b8303-0d2f-4d22-9823-39ec988f5af1",
+    "name" : "Reason for exit",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Reason for exit from Pregnancy program",
+      "uuid" : "e34d6b5a-f67e-4d79-ab6f-4b976ea2c6e7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "MH Exit reason",
+        "uuid" : "c9a44296-73f3-4e14-8f53-fba258c8653e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Death",
+          "uuid" : "afff87d7-4c40-4dd4-9bf7-8e5d9adb3b83",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Migration",
+          "uuid" : "229fac5f-468e-46f0-b812-bdcc56840b6c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Completed",
+          "uuid" : "707ce84a-d2ea-4caf-a3d3-315e454515e2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Other reason for Exit",
+      "uuid" : "81eb0f7e-af6a-4b85-9044-a1e40cb708e0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other exit Reason (MH)",
+        "uuid" : "5e6e5790-8a91-4f60-a98d-ac637a2cfe3c",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEnrolment = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEnrolment, formElement}).when.valueInExit(\"c9a44296-73f3-4e14-8f53-fba258c8653e\").containsAnswerConceptName(\"05ea583c-51d2-412d-ad00-06c432ffe538\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "exit",
+                "conceptName" : "MH Exit reason",
+                "conceptUuid" : "c9a44296-73f3-4e14-8f53-fba258c8653e",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "05ea583c-51d2-412d-ad00-06c432ffe538" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Reason for exit"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

@@ -1,0 +1,34 @@
+{
+  "name" : "Target",
+  "uuid" : "fef066f3-683b-4ec4-93bb-047469eae482",
+  "formType" : "IndividualProfile",
+  "formElementGroups" : [ {
+    "uuid" : "a455322f-12f1-47e5-bb68-d0ae2498cf87",
+    "name" : "Target Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Total Number of Safai Sathis Covered Per Month",
+      "uuid" : "a6cb1f5f-991c-4ab9-b980-5f9c81882427",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total number of safai sathis covered per month",
+        "uuid" : "9cecff3b-006c-4ca8-8d31-c9e712394ba4",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 1.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Target Details"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

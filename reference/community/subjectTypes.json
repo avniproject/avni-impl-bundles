@@ -1,0 +1,142 @@
+[ {
+  "name" : "test (voided~58)",
+  "uuid" : "f0c8b0d8-d4cb-469b-9f0d-16b5fd4c04c2",
+  "active" : true,
+  "type" : "Household",
+  "allowEmptyLocation" : false,
+  "allowMiddleName" : false,
+  "lastNameOptional" : false,
+  "allowProfilePicture" : false,
+  "uniqueName" : false,
+  "shouldSyncByLocation" : true,
+  "settings" : {
+    "displayRegistrationDetails" : true,
+    "displayPlannedEncounters" : true
+  },
+  "household" : true,
+  "group" : true,
+  "directlyAssignable" : false,
+  "voided" : true
+}, {
+  "name" : "Daily Plan (voided~99)",
+  "uuid" : "2f12b4df-1603-4896-a637-9c9d62f44326",
+  "active" : false,
+  "type" : "Person",
+  "allowEmptyLocation" : false,
+  "allowMiddleName" : false,
+  "lastNameOptional" : false,
+  "allowProfilePicture" : false,
+  "uniqueName" : false,
+  "shouldSyncByLocation" : true,
+  "settings" : {
+    "displayRegistrationDetails" : true,
+    "displayPlannedEncounters" : true
+  },
+  "household" : false,
+  "group" : false,
+  "directlyAssignable" : false,
+  "voided" : true
+}, {
+  "name" : "Individual",
+  "uuid" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3",
+  "active" : true,
+  "type" : "Person",
+  "allowEmptyLocation" : false,
+  "allowMiddleName" : false,
+  "lastNameOptional" : false,
+  "allowProfilePicture" : false,
+  "uniqueName" : false,
+  "shouldSyncByLocation" : true,
+  "settings" : {
+    "displayRegistrationDetails" : true,
+    "displayPlannedEncounters" : true
+  },
+  "household" : false,
+  "group" : false,
+  "directlyAssignable" : false,
+  "voided" : false
+}, {
+  "name" : "Lab Facility",
+  "uuid" : "eb388475-b88e-4767-8195-1679e5ea7703",
+  "active" : true,
+  "type" : "Individual",
+  "subjectSummaryRule" : "'use strict';\n({params, imports}) => {\n    const {summaries, individual} = params;\n    const _ = imports.lodash;\n    var toalNonPregnantScreened = 0;\n    var totalPregnantScreened = 0;\n    var totalNonPregnantP = 0;\n    var totalPregnantP = 0;\n    var totalNonPregnantAS = 0;\n    var totalPregnantAS = 0;\n    var totalNonPregnantSS = 0;\n    var totalPregnantSS = 0;\n    _.forEach(individual.nonVoidedEncounters(), enc => {\n        toalNonPregnantScreened = toalNonPregnantScreened + _.toNumber((enc.getObservationReadableValue('Number of non pregnant screened cases') || 0));\n        totalPregnantScreened = totalPregnantScreened + _.toNumber((enc.getObservationReadableValue('Number of pregnant screened cases') || 0));\n        totalNonPregnantP = totalNonPregnantP + _.toNumber((enc.getObservationReadableValue('Number of non pregnant solubility positive cases') || 0));\n        totalPregnantP = totalPregnantP + _.toNumber((enc.getObservationReadableValue('Number of pregnant solubility positive cases') || 0));\n        totalNonPregnantAS = totalNonPregnantAS + _.toNumber((enc.getObservationReadableValue('Number of non pregnant AS cases') || 0));\n        totalPregnantAS = totalPregnantAS + _.toNumber((enc.getObservationReadableValue('Number of pregnant AS cases') || 0));\n        totalNonPregnantSS = totalNonPregnantSS + _.toNumber((enc.getObservationReadableValue('Number of non pregnant SS cases') || 0));\n        totalPregnantSS = totalPregnantSS + _.toNumber((enc.getObservationReadableValue('Number of pregnant SS cases') || 0));\n    });\n    summaries.push({name: \"Total non pregnant screened cases\", value: toalNonPregnantScreened});\n    summaries.push({name: \"Total pregnant screened cases\", value: totalPregnantScreened});\n    summaries.push({name: \"Total non pregnant solubility positive cases\", value: totalNonPregnantP});\n    summaries.push({name: \"Total pregnant solubility positive cases\", value: totalPregnantP});\n    summaries.push({name: \"Total non pregnant AS cases\", value: totalNonPregnantAS});\n    summaries.push({name: \"Total pregnant AS cases\", value: totalPregnantAS});\n    summaries.push({name: \"Total non pregnant SS cases\", value: totalNonPregnantSS});\n    summaries.push({name: \"Total pregnant SS cases\", value: totalPregnantSS});\n    summaries.push({name: \"Sum of all samples (PW + NonPW)\", value: toalNonPregnantScreened + totalPregnantScreened});\n    summaries.push({name: \"Sum of all Solubility Positive Cases (PW+NonPW)\", value: totalPregnantP + totalNonPregnantP});\n    summaries.push({name: \"Sum of all AS cases (PW+NonPW)\", value: totalNonPregnantAS + totalPregnantAS});\n    summaries.push({name: \"Sum of all SS cases (PW+NonPW)\", value: totalPregnantSS + totalNonPregnantSS});\n    return summaries;\n};\n",
+  "allowEmptyLocation" : false,
+  "allowMiddleName" : false,
+  "lastNameOptional" : false,
+  "allowProfilePicture" : false,
+  "uniqueName" : false,
+  "shouldSyncByLocation" : true,
+  "settings" : {
+    "displayRegistrationDetails" : true,
+    "displayPlannedEncounters" : true
+  },
+  "household" : false,
+  "group" : false,
+  "directlyAssignable" : false,
+  "voided" : false
+}, {
+  "name" : "PSG meeting",
+  "uuid" : "fdc4f4ab-bf42-40c7-bd07-1c8fe3c4deb5",
+  "active" : true,
+  "type" : "Individual",
+  "subjectSummaryRule" : "",
+  "programEligibilityCheckRule" : "",
+  "allowEmptyLocation" : false,
+  "allowMiddleName" : false,
+  "lastNameOptional" : false,
+  "allowProfilePicture" : true,
+  "uniqueName" : true,
+  "shouldSyncByLocation" : true,
+  "settings" : {
+    "displayRegistrationDetails" : true,
+    "displayPlannedEncounters" : true
+  },
+  "household" : false,
+  "group" : false,
+  "directlyAssignable" : false,
+  "voided" : false
+}, {
+  "name" : "PSG M (voided~1935)",
+  "uuid" : "fc99556e-b594-4dd0-bcda-a0dca8ac55a3",
+  "active" : true,
+  "type" : "Individual",
+  "subjectSummaryRule" : "",
+  "programEligibilityCheckRule" : "",
+  "allowEmptyLocation" : false,
+  "allowMiddleName" : false,
+  "lastNameOptional" : false,
+  "allowProfilePicture" : true,
+  "uniqueName" : true,
+  "shouldSyncByLocation" : true,
+  "settings" : {
+    "displayRegistrationDetails" : true,
+    "displayPlannedEncounters" : true
+  },
+  "household" : false,
+  "group" : false,
+  "directlyAssignable" : false,
+  "voided" : true
+}, {
+  "name" : "VHSND",
+  "uuid" : "87e22c64-1954-4de8-b24d-41bdac3f9e35",
+  "active" : true,
+  "type" : "Individual",
+  "subjectSummaryRule" : "",
+  "programEligibilityCheckRule" : "",
+  "memberAdditionEligibilityCheckRule" : "",
+  "allowEmptyLocation" : false,
+  "allowMiddleName" : false,
+  "lastNameOptional" : false,
+  "allowProfilePicture" : true,
+  "uniqueName" : true,
+  "shouldSyncByLocation" : true,
+  "settings" : {
+    "displayRegistrationDetails" : true,
+    "displayPlannedEncounters" : true
+  },
+  "household" : false,
+  "group" : false,
+  "directlyAssignable" : false,
+  "voided" : false
+} ]

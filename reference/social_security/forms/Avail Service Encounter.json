@@ -1,0 +1,1128 @@
+{
+  "name" : "Avail Service Encounter",
+  "uuid" : "85672a80-001f-4914-9bf6-a77a97a493cb",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "3508e276-ab1e-4117-8dd1-92d8e5d602fe",
+    "name" : "Services",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Services to be availed",
+      "uuid" : "f4d4f019-f8f9-4e72-bca1-776d2b089ca7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Services to be availed",
+        "uuid" : "8730418c-64da-43aa-8d88-62d3ec2b7543",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Training / Programs",
+          "uuid" : "5d9f7695-1bb9-4d12-b381-b27e9b4d2a80",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "General schemes",
+          "uuid" : "bd6c59ff-24a1-404d-ba3e-9bc7cec65470",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "KYC",
+          "uuid" : "16946237-255e-4988-acee-f9a3643b9698",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Services"
+  }, {
+    "uuid" : "cb553bec-3843-4a1d-b250-0a735aec84f3",
+    "name" : "KYC details",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Select the KYC service to be availed",
+      "uuid" : "0bce3afb-c17c-4931-9955-f30de6211d17",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Select the KYC service to be availed",
+        "uuid" : "ef0e90e6-a22d-49ca-9e7f-8343b876dbaa",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Aadhaar card",
+          "uuid" : "944f37b6-9148-4cd3-8b2f-3c475c0aeab3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Caste",
+          "uuid" : "cdb601de-e7b4-468f-b91f-39b76eed9627",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "PAN card",
+          "uuid" : "62bea48b-aa09-4914-bd9a-ebc97b80a05e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Waste picker ID card",
+          "uuid" : "7c729d82-9afa-4431-8d4a-9f6b4b129117",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Voter ID",
+          "uuid" : "971cedcb-3c82-4d8b-8109-f8f4d059f8e2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Aadhaar Card Correction",
+          "uuid" : "a48091a0-5739-439d-a2d1-26b16763da3c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Bank A/C",
+          "uuid" : "a9c6a4a1-e4dc-46bc-b36f-20044ba80cb7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Birth certificate",
+          "uuid" : "bcb0e99f-1a89-4872-84b7-b6875b499b70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Senior Citizen Card",
+          "uuid" : "2b680cbc-0e96-42f5-997c-80bea04d8ace",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Passport",
+          "uuid" : "4b0522f7-e4a0-4887-916a-6a9d30e19d13",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Residential Certificate",
+          "uuid" : "bb5e10b4-76e8-4043-80e5-f314bceea2f8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Waste Picker/Labour Union ID",
+          "uuid" : "99d11618-7930-4386-8ed6-5aeec30e4120",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "",
+      "mandatory" : true
+    }, {
+      "name" : "Open date",
+      "uuid" : "33b795bc-1479-4f5e-ad21-36294ccfdf7d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "KYC open date",
+        "uuid" : "b3d409f9-2da1-435b-9fe6-48c4e2fddf18",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Is application submitted",
+      "uuid" : "3a33b58c-39f5-4204-81f6-6fc3b9c4adb3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is kyc application submitted",
+        "uuid" : "d7fd672c-b079-4aea-8e68-d41e18095b47",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Application date",
+      "uuid" : "0b5f4be5-3d6c-49a0-abf3-91365759119f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "KYC application date",
+        "uuid" : "164d4167-1da5-4b45-a14d-f918d501139e",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"d7fd672c-b079-4aea-8e68-d41e18095b47\").containsAnswerConceptName(\"0c1e923f-3c3b-4905-930d-3afd41ebfc18\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Is kyc application submitted",
+                "conceptUuid" : "d7fd672c-b079-4aea-8e68-d41e18095b47",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "0c1e923f-3c3b-4905-930d-3afd41ebfc18" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Application ID",
+      "uuid" : "f1ebfef8-62ed-4b3d-bdc6-4be9e53a4e27",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "KYC application id",
+        "uuid" : "637d35b1-aa74-4ce3-ab38-bc1928ffe995",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"d7fd672c-b079-4aea-8e68-d41e18095b47\").containsAnswerConceptName(\"0c1e923f-3c3b-4905-930d-3afd41ebfc18\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Is kyc application submitted",
+                "conceptUuid" : "d7fd672c-b079-4aea-8e68-d41e18095b47",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "0c1e923f-3c3b-4905-930d-3afd41ebfc18" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "KYC received",
+      "uuid" : "0a12aa9e-f83b-4e5b-9fb8-a5ff26df7d72",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "KYC received",
+        "uuid" : "500fba31-8424-4996-8035-14e0a625f715",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"d7fd672c-b079-4aea-8e68-d41e18095b47\").containsAnswerConceptName(\"0c1e923f-3c3b-4905-930d-3afd41ebfc18\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Is kyc application submitted",
+                "conceptUuid" : "d7fd672c-b079-4aea-8e68-d41e18095b47",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "0c1e923f-3c3b-4905-930d-3afd41ebfc18" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "KYC received on",
+      "uuid" : "328acdfc-163d-4482-bb43-6cc3119e6b72",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "KYC received on",
+        "uuid" : "fee74853-e32e-446c-a766-14c2614e28c0",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"500fba31-8424-4996-8035-14e0a625f715\").containsAnswerConceptName(\"0c1e923f-3c3b-4905-930d-3afd41ebfc18\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "KYC received",
+                "conceptUuid" : "500fba31-8424-4996-8035-14e0a625f715",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "0c1e923f-3c3b-4905-930d-3afd41ebfc18" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "KYC image",
+      "uuid" : "0331d633-df02-4e8f-bb7b-d8273ce7d903",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "KYC image",
+        "uuid" : "fee98763-2143-42cb-8c0a-7e553a0d39eb",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"500fba31-8424-4996-8035-14e0a625f715\").containsAnswerConceptName(\"0c1e923f-3c3b-4905-930d-3afd41ebfc18\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "KYC received",
+                "conceptUuid" : "500fba31-8424-4996-8035-14e0a625f715",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "0c1e923f-3c3b-4905-930d-3afd41ebfc18" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElementGroup = params.formElementGroup;\n    const _ = imports.lodash;\n    let visibility = true;\n    return formElementGroup.formElements.map((formElement) => {\n        \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"8730418c-64da-43aa-8d88-62d3ec2b7543\").containsAnswerConceptName(\"16946237-255e-4988-acee-f9a3643b9698\").matches();\n  \n        visibility = condition11 ;\n  \n        return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, null);\n    });\n};",
+    "declarativeRule" : [ {
+      "actions" : [ {
+        "actionType" : "showFormElementGroup"
+      }, { } ],
+      "conditions" : [ {
+        "compoundRule" : {
+          "rules" : [ {
+            "lhs" : {
+              "type" : "concept",
+              "scope" : "encounter",
+              "conceptName" : "Services to be availed",
+              "conceptUuid" : "8730418c-64da-43aa-8d88-62d3ec2b7543",
+              "conceptDataType" : "Coded"
+            },
+            "rhs" : {
+              "type" : "answerConcept",
+              "answerConceptNames" : [ "KYC" ],
+              "answerConceptUuids" : [ "16946237-255e-4988-acee-f9a3643b9698" ]
+            },
+            "operator" : "containsAnswerConceptName"
+          } ]
+        }
+      } ]
+    } ],
+    "timed" : false,
+    "display" : "KYC details"
+  }, {
+    "uuid" : "f1715932-5d1a-49bb-9f07-93964b13e887",
+    "name" : "General schemes",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Select schemes to be availed",
+      "uuid" : "b63e5c30-2a62-4d06-8e53-728b19a98488",
+      "keyValues" : [ {
+        "key" : "ExcludedAnswers",
+        "value" : [ "Widow Re-marriage", "House Renovation", "Scholarship for High School Girls", "Vamsha Vriksha", "Post Metric Scholarship for Backward Class", "Kousalya Skill Development Training for Unemployment Youths", "SHG Micro Loan with Subsidy", "Houses for homeless", "Rechargeable LED bulb", "Vidhyasiri", "Free Exam Training for SC/ST and Backward", "Disable Scholarship", "Thayi Bhagya plus", "Single parent scholarship", "Prize Money for SSLC", "Post Metric Scholarship", "Hostel Admission", "Thayi Bhagya" ]
+      } ],
+      "concept" : {
+        "name" : "Select schemes to be availed",
+        "uuid" : "150ed276-043a-429c-a467-c04338d7b246",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Widow Re-marriage",
+          "uuid" : "49dc4c56-293e-41e1-bc20-d9422431cbd9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 43.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "House Renovation",
+          "uuid" : "c921ef01-2b38-4a9f-89be-a01683351f7f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 21.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Disable Pension",
+          "uuid" : "259c08e2-92fe-4107-ac6f-5a8fe7df15a0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Physically challenged Pension",
+          "uuid" : "a84dc57b-413a-477e-8aeb-d1adfc77686a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Suvidha Sanitary Pad",
+          "uuid" : "b205203e-3375-4719-bea3-1e0b28de2cb3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 37.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Scholarship for High School Girls",
+          "uuid" : "126db527-0dac-43b4-a2db-772b5f500315",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 33.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Prasuthi Aarike Scheme",
+          "uuid" : "9cce610a-6691-4e17-9cbc-f3423ddef8c4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 27.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sandhya Suraksha",
+          "uuid" : "615e7010-71c4-4896-bd89-6948d3a45b77",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 31.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Widow Pension",
+          "uuid" : "a4e5ccdf-61d6-4bfc-8093-4d09db462ca5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Post Office Bank A/C",
+          "uuid" : "f8667290-a866-47a1-884b-d7555eda5db2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Vamsha Vriksha",
+          "uuid" : "ddfc2599-21aa-47ff-a5b9-15baf7d15f6b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 41.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Udaan",
+          "uuid" : "bb0f2054-ca69-4c72-9fbd-0aa0fd2df461",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 40.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Arogya Karnataka & Ayushmanbhava",
+          "uuid" : "e9a6f24b-059f-4fd8-bec6-d1b176150ef1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Scholarship",
+          "uuid" : "eacc5033-60b9-4af2-8ba5-b9ba35204f78",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Free LPG connections",
+          "uuid" : "67e38c44-98e9-477e-bc53-7895b3b291e4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Laptop Bhagya",
+          "uuid" : "221d8dc9-a051-41d0-a28a-f9e0a04a6c0e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 25.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "RTE",
+          "uuid" : "32a46958-4629-4651-a59a-9230aacd6acc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Post Metric Scholarship for Backward Class",
+          "uuid" : "9933a95f-1275-40c9-9a94-7e8ed4b8facd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 26.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Devaraju URS Post metric courses",
+          "uuid" : "eb3a09e4-9e64-447c-b71e-8e8bda3227ad",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Kousalya Skill Development Training for Unemployment Youths",
+          "uuid" : "b858d36b-c7fb-4143-9839-b165cb60c8c2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 24.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "SHG Micro Loan with Subsidy",
+          "uuid" : "71d1e16b-5de5-4235-8066-c4805a172871",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 34.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Houses for homeless",
+          "uuid" : "4df7adf6-34d4-44ba-a3b8-6ec4f951b038",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 22.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Rechargeable LED bulb",
+          "uuid" : "87489a10-155f-468e-9f4b-a681d70ea39f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 30.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Vidhyasiri",
+          "uuid" : "b63206e3-c8ab-4e04-b83a-154afef67129",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 42.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Prize Money for post metric",
+          "uuid" : "078dbb26-3861-4a56-84a7-747ac51d8e0f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 28.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Free Exam Training for SC/ST and Backward",
+          "uuid" : "9414d55f-8afe-4594-a37e-78319014fd37",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 19.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Disable Scholarship",
+          "uuid" : "2638fdde-d623-4f12-a9c3-4d860bbb454f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 17.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Thayi Bhagya plus",
+          "uuid" : "81d84538-2a81-4f2c-bb49-bc7e07615f59",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 39.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sukanya Samrudhi Yojana",
+          "uuid" : "9380b908-811b-40c8-a891-8c646de0ce6b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Single parent scholarship",
+          "uuid" : "2fdb0d0e-c172-454f-85cd-a9b382a7ca37",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 36.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Death Certificate",
+          "uuid" : "f415585d-4ba3-4eab-9f4a-c4dd53fe3b04",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Prize Money for SSLC",
+          "uuid" : "204d5909-c367-4976-8631-3bbcb660efd4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 29.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "E Shram",
+          "uuid" : "29044121-0664-41f3-b99d-a51087f9593d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 18.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ration Card/Anthya Annodhaya Yojane AAY",
+          "uuid" : "bd76897c-f3df-48ca-b1c8-c30c86a37413",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Aadhar card and Aadhar seeding",
+          "uuid" : "e69cce91-8e68-42b8-bdbe-1a15c6c5a4aa",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Post Metric Scholarship",
+          "uuid" : "a23b832d-3e52-4a75-91ec-15fdf9216ff2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hostel Admission",
+          "uuid" : "663c9de8-c010-422f-843c-38801deb4a42",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 20.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Janani Shishu Suraksha Yojana",
+          "uuid" : "bc9e4aee-afd4-4dc7-a5dc-9fdb496402b3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 23.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Old Age Pension",
+          "uuid" : "7dd46c98-734c-4ff3-b2fa-c4fbee4d79c4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Thayi Bhagya",
+          "uuid" : "4a9ea619-43f3-438c-8e22-dffb29d3b18a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 38.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Simple Marriage for SC/ST",
+          "uuid" : "8f81651d-8c57-42df-b43a-3fcace6c751f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 35.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Scholorship for Higher Education for girls (PUC)",
+          "uuid" : "48d23bd9-f2aa-4402-bf4e-66c4fd7f2d11",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 32.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Arogya Karnataka (Ayushman Bharath)",
+          "uuid" : "e5212a2f-8800-4711-8398-17e605269426",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Housing",
+          "uuid" : "c3b9c5f6-67a5-4906-ad41-6e283ad93185",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Open date",
+      "uuid" : "ed72b988-3af2-499b-a9cf-01c5edd5ba96",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "General scheme open date",
+        "uuid" : "f57ba9ac-493e-49d4-85dd-03af3c1e0cfe",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Is application submitted",
+      "uuid" : "1c90a705-e3ed-452c-b839-8152da4bc1d2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is general scheme application submitted",
+        "uuid" : "16985f7c-1f02-43a5-838e-b9555b035b56",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Application date",
+      "uuid" : "f410bc3e-361a-4506-991b-01892abfaf3a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "General scheme application date",
+        "uuid" : "ebbb0b17-a0ef-4c22-8758-12fec0abb4cd",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"16985f7c-1f02-43a5-838e-b9555b035b56\").containsAnswerConceptName(\"0c1e923f-3c3b-4905-930d-3afd41ebfc18\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Is general scheme application submitted",
+                "conceptUuid" : "16985f7c-1f02-43a5-838e-b9555b035b56",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "0c1e923f-3c3b-4905-930d-3afd41ebfc18" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Application ID",
+      "uuid" : "31fc3a9f-415b-40cf-8841-5a6d68951863",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "General scheme application id",
+        "uuid" : "fc6cb2af-8905-493e-9c4c-618a4e61043a",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"16985f7c-1f02-43a5-838e-b9555b035b56\").containsAnswerConceptName(\"0c1e923f-3c3b-4905-930d-3afd41ebfc18\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Is general scheme application submitted",
+                "conceptUuid" : "16985f7c-1f02-43a5-838e-b9555b035b56",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "0c1e923f-3c3b-4905-930d-3afd41ebfc18" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "Scheme received",
+      "uuid" : "0b0ce42d-190e-4391-95dc-b9f7fc90d969",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "General scheme received",
+        "uuid" : "e49e413f-bdcb-477f-bf79-bbeaf61d3fd3",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "204364bb-42e0-40b9-bd16-253af94550ee",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "0c1e923f-3c3b-4905-930d-3afd41ebfc18",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"16985f7c-1f02-43a5-838e-b9555b035b56\").containsAnswerConceptName(\"0c1e923f-3c3b-4905-930d-3afd41ebfc18\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Is general scheme application submitted",
+                "conceptUuid" : "16985f7c-1f02-43a5-838e-b9555b035b56",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "0c1e923f-3c3b-4905-930d-3afd41ebfc18" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Scheme received on",
+      "uuid" : "f36651bc-3941-4119-91fc-107f1c70e497",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "General scheme received on",
+        "uuid" : "8e203a16-b090-44bc-96b4-fe9c8e0219b4",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"e49e413f-bdcb-477f-bf79-bbeaf61d3fd3\").containsAnswerConceptName(\"0c1e923f-3c3b-4905-930d-3afd41ebfc18\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "General scheme received",
+                "conceptUuid" : "e49e413f-bdcb-477f-bf79-bbeaf61d3fd3",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "0c1e923f-3c3b-4905-930d-3afd41ebfc18" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Scheme image",
+      "uuid" : "ec8ff7a4-e945-4c9f-9f45-40d6796ecdbb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "General scheme image",
+        "uuid" : "1ca24356-a513-4e0e-920f-4e1a95c0215f",
+        "dataType" : "Image",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"e49e413f-bdcb-477f-bf79-bbeaf61d3fd3\").containsAnswerConceptName(\"0c1e923f-3c3b-4905-930d-3afd41ebfc18\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "General scheme received",
+                "conceptUuid" : "e49e413f-bdcb-477f-bf79-bbeaf61d3fd3",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "0c1e923f-3c3b-4905-930d-3afd41ebfc18" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElementGroup = params.formElementGroup;\n    const _ = imports.lodash;\n    let visibility = true;\n    return formElementGroup.formElements.map((formElement) => {\n        \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"8730418c-64da-43aa-8d88-62d3ec2b7543\").containsAnswerConceptName(\"bd6c59ff-24a1-404d-ba3e-9bc7cec65470\").matches();\n  \n        visibility = condition11 ;\n  \n        return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, null);\n    });\n};",
+    "declarativeRule" : [ {
+      "actions" : [ {
+        "actionType" : "showFormElementGroup"
+      }, { } ],
+      "conditions" : [ {
+        "compoundRule" : {
+          "rules" : [ {
+            "lhs" : {
+              "type" : "concept",
+              "scope" : "encounter",
+              "conceptName" : "Services to be availed",
+              "conceptUuid" : "8730418c-64da-43aa-8d88-62d3ec2b7543",
+              "conceptDataType" : "Coded"
+            },
+            "rhs" : {
+              "type" : "answerConcept",
+              "answerConceptNames" : [ "General schemes" ],
+              "answerConceptUuids" : [ "bd6c59ff-24a1-404d-ba3e-9bc7cec65470" ]
+            },
+            "operator" : "containsAnswerConceptName"
+          } ]
+        }
+      } ]
+    } ],
+    "timed" : false,
+    "display" : "General schemes"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

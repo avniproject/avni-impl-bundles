@@ -1,0 +1,179 @@
+{
+  "name" : "Family Registration (voided~11556)",
+  "uuid" : "4c536e7d-be88-4cc8-8aaa-34a11fbf024c",
+  "formType" : "IndividualProfile",
+  "formElementGroups" : [ {
+    "uuid" : "984a69cb-fbea-4049-b59d-d51786af0356",
+    "name" : "Other Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Family Status",
+      "uuid" : "4ee27c4a-fd68-44d8-84e6-864c9b5ed63d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Family status",
+        "uuid" : "e63889e0-34b2-4862-80a8-aa1750c27a5b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "APL",
+          "uuid" : "2799fdc8-3173-426d-b782-1730ff877a42",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "BPL",
+          "uuid" : "d3d48146-840d-446c-8e07-a0b34289380a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Adult Male (above 18 years)",
+      "uuid" : "e3a5c989-6dc0-47af-996d-c479c5bfa6c6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Adult-Male (above 18 years)",
+        "uuid" : "3eccfd4c-0ef1-4b8b-9d87-c33c8039c039",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Adult Female (above 18 years)",
+      "uuid" : "e732f0e6-c554-4181-ac82-9b8a43dbc78a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Adult Female (above 18 years)",
+        "uuid" : "c821f7bc-8930-4045-a3ab-95c6d93dc7a7",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Male children (under 18 years)",
+      "uuid" : "029e0060-00bd-44b8-ab93-d165dde71573",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Male children (under 18 years)",
+        "uuid" : "d53c2b7c-3d24-4a1c-8668-f57bedd81ddd",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 18.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Female children (under 18 years)",
+      "uuid" : "b9710312-b41e-4481-8738-ba794d84f6d2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Female children (under 18 years)",
+        "uuid" : "5f69f540-dccd-4c1d-b428-283ea8b01203",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 18.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Total Own Land Holding",
+      "uuid" : "1e876f69-8c88-47ea-b6bc-a10be3118f81",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total Own Land Holding",
+        "uuid" : "47e59d01-9e20-416c-b3b3-ba33de28b5f6",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Total Leased in Land",
+      "uuid" : "64ae2838-9fcc-4c36-be87-be6959ac2dc5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total Leased in Land",
+        "uuid" : "19b5f559-c81a-446c-9e5c-661edc315295",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Total Land",
+      "uuid" : "d8465bcf-5ba1-4527-a520-4a07fb99fff6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total Land",
+        "uuid" : "446a3f3b-eb22-4a81-a08a-080b5440727f",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Adult Male (above 18 years)",
+      "uuid" : "6af19712-83f2-4a73-9a07-9d96cac645e3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Adult male (above 18 years)",
+        "uuid" : "3981d7e1-9511-40a1-9745-f2ad933fdcc1",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Other Details"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ],
+  "voided" : true
+}

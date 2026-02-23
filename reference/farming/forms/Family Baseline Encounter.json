@@ -1,0 +1,3933 @@
+{
+  "name" : "Family Baseline Encounter",
+  "uuid" : "5aeb5b2e-2e80-436c-9893-10c7d24a71de",
+  "formType" : "Encounter",
+  "formElementGroups" : [ {
+    "uuid" : "44b49bea-6cbf-4d04-866f-f97cd4b2b1d0",
+    "name" : "Family Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Marital Status",
+      "uuid" : "2accb893-1bc2-41d3-a80f-573615911af5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Marital Status",
+        "uuid" : "7fa6d933-6f58-4e89-ae57-e9ad718ebedd",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Unmarried",
+          "uuid" : "7ba29635-a2fe-4029-b3da-97a75f2a699d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Widow",
+          "uuid" : "178ca8f5-6f8b-4fc3-aab3-e588cf6f08be",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Married",
+          "uuid" : "f032d77c-cefc-4e4b-b83e-863d6274909f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Do you have drinking water sources connection at home",
+      "uuid" : "bc3990c5-9c79-433a-8da8-1da9465db7cb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Do you have drinking water sources connection at home",
+        "uuid" : "5ef14b08-c277-4652-a529-747d3913a57e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "yes",
+          "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "no",
+          "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "House type",
+      "uuid" : "2a3dc3a9-6675-4278-aaa1-6018ac55f237",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "House type",
+        "uuid" : "5f75b641-545f-4570-a13c-aa31a40df6d1",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Pakka",
+          "uuid" : "675ba2b2-27d9-4962-8992-34071b4ad7d2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Semi - Pakka",
+          "uuid" : "055c9962-1400-4451-9ca4-b1ee7e4a10c4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Kaccha",
+          "uuid" : "32071d3a-1a82-4415-ba0f-800ab06d15fe",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Electricity Connection of the House",
+      "uuid" : "61ed14da-2412-4659-b8a0-a3c876d189d6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Electricity Connection of the House",
+        "uuid" : "917631c3-32e0-4638-a3f5-e36e2462a629",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "no",
+          "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "yes",
+          "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Have a toilet?",
+      "uuid" : "3dedc23a-8e4f-4401-89f5-3239a1f86bd0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Have a toilet",
+        "uuid" : "bf4e1add-e2c2-462b-95f6-36744333b64e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "no",
+          "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "yes",
+          "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Beneficiary have a bank account?",
+      "uuid" : "7e5fe8e2-d5c0-4b04-893d-db01c1fa5272",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Beneficiary have a bank account",
+        "uuid" : "10e8be0a-783c-4049-92ec-e0e24b32264c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Husband/Father's Name",
+      "uuid" : "42407863-3fb9-4a99-8195-9ed5f940d772",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Husband/Father's Name",
+        "uuid" : "e189734f-9397-4a9a-9365-d0643929216e",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Family Details"
+  }, {
+    "uuid" : "f3f7a72f-939d-41d0-ab0e-d50fa1160a27",
+    "name" : "Disability",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Do any of your family members have disability?",
+      "uuid" : "87a94b24-214f-4d5d-8acf-0bbba523d70c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Do any of your family members have disability",
+        "uuid" : "c6d6380a-4eae-4954-817c-c2a208f67e4f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "yes",
+          "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "no",
+          "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "How many of your family members are disable?",
+      "uuid" : "e28a35cd-3557-4b2b-a0dc-a9f38566d325",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "How many of your family members are disable",
+        "uuid" : "fb2233bf-e085-477c-8782-462837848da6",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"c6d6380a-4eae-4954-817c-c2a208f67e4f\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Do any of your family members have disability",
+                "conceptUuid" : "c6d6380a-4eae-4954-817c-c2a208f67e4f",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Type of disability",
+      "uuid" : "18128198-210b-4360-929d-a88a1765e2b1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Type of disability",
+        "uuid" : "a0d93e11-d4df-4be1-b89d-525479ea6bb4",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Others",
+          "uuid" : "41af5b53-1c4a-49d5-96b0-a5e2051f691b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mental Illness",
+          "uuid" : "ce7eab16-285e-4055-bf8d-a3eb673274d0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Locomotor Disability",
+          "uuid" : "795095c6-43cf-40cd-9867-9fdd1aef9a67",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hearing and Speech Impairment",
+          "uuid" : "c72b08c1-2070-4c84-8d2c-f84115e2e85b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Blindness",
+          "uuid" : "e15cafd9-4f3b-4630-8a44-30140544f4ff",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"c6d6380a-4eae-4954-817c-c2a208f67e4f\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Do any of your family members have disability",
+                "conceptUuid" : "c6d6380a-4eae-4954-817c-c2a208f67e4f",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "If other disability, please specify",
+      "uuid" : "026984e0-d61b-45d8-a831-3caf28dfa560",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other disability",
+        "uuid" : "262ff584-e3bc-4e23-a65e-23a3c1eba9d6",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"a0d93e11-d4df-4be1-b89d-525479ea6bb4\").containsAnswerConceptName(\"287164fa-3899-485f-9c1f-61401bc6359d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Type of disability",
+                "conceptUuid" : "a0d93e11-d4df-4be1-b89d-525479ea6bb4",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "287164fa-3899-485f-9c1f-61401bc6359d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Disability"
+  }, {
+    "uuid" : "c340563b-f69a-4de3-9628-2020bc6963a9",
+    "name" : "Migration Details",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Did any of your family members migrate?",
+      "uuid" : "3a4b28f5-8c45-431f-9573-dc8ff5f8c395",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Did any of your family members migrate",
+        "uuid" : "a82b20ce-80a6-4d61-9d52-faa10dd08799",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "yes",
+          "uuid" : "8cdd8e1a-ead4-4bc6-8ba8-ba4ba1ce7f9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "no",
+          "uuid" : "149e3620-0482-4422-b267-d1c353701bfc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Number of days migrated?",
+      "uuid" : "f8d5f4f0-8ee3-4709-84d1-014b57320caa",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number of days migrated",
+        "uuid" : "739647eb-4031-45e7-9114-bb53dfd5d3ff",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"a82b20ce-80a6-4d61-9d52-faa10dd08799\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Did any of your family members migrate",
+                "conceptUuid" : "a82b20ce-80a6-4d61-9d52-faa10dd08799",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Type of Work Engaged",
+      "uuid" : "7e27c123-a577-4bee-ae94-42157bebacb1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Type of Work Engaged",
+        "uuid" : "4aef8d53-ab31-493e-9993-2d90a55593bf",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Skilled",
+          "uuid" : "2f59d2d7-2a93-4a92-869c-8d9ca0d6e75d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Unskilled",
+          "uuid" : "72952dbb-ad69-49fb-88f8-9bd643af58a0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"a82b20ce-80a6-4d61-9d52-faa10dd08799\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Did any of your family members migrate",
+                "conceptUuid" : "a82b20ce-80a6-4d61-9d52-faa10dd08799",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Migration Details"
+  }, {
+    "uuid" : "e6ed31c2-a169-41a9-bfa3-7b8d988e01c1",
+    "name" : "Agriculture Properties ",
+    "displayOrder" : 4.0,
+    "formElements" : [ {
+      "name" : "Name of Agriculture Properties",
+      "uuid" : "19c1edf8-922a-46da-a3a8-6899ff95acce",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of Agriculture Properties",
+        "uuid" : "94085723-00ab-4700-9990-5068fe565ad3",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Drip Set Power Tiller",
+          "uuid" : "592f4a03-f03d-477b-8419-7227d839d75e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pump Set",
+          "uuid" : "dd869f1f-a55d-4e26-87fa-9b487d1bbcfe",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sprinkler Set",
+          "uuid" : "dcb13bc0-0f46-4ebf-af71-482de1341952",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tractor Trolley",
+          "uuid" : "d9b8416f-9a4a-4ff0-8e48-d97bec56ef76",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Irrigarion Source",
+          "uuid" : "27de2dd1-6065-4e71-b8b3-874e3dbdeb41",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Other agriculture properties, please specify",
+      "uuid" : "7541bb50-41b0-446b-9085-aa9f993b0919",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other agriculture properties",
+        "uuid" : "c8937586-b960-4da3-99dd-c5f31ac689ae",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"94085723-00ab-4700-9990-5068fe565ad3\").containsAnswerConceptName(\"287164fa-3899-485f-9c1f-61401bc6359d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Name of Agriculture Properties",
+                "conceptUuid" : "94085723-00ab-4700-9990-5068fe565ad3",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "287164fa-3899-485f-9c1f-61401bc6359d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Irrigation source, please mention type of irrigation source",
+      "uuid" : "390c753b-eecc-480e-938b-a189a2e452a4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Irrigation source, please mention type of irrigation source",
+        "uuid" : "80aa797f-b528-4ea7-89e8-45dbba6f2570",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Bore well",
+          "uuid" : "3076897a-645b-4162-a278-60567e227500",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Stopdam",
+          "uuid" : "cbb6b4a6-8c34-423d-8925-b28c0b0ef200",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Well",
+          "uuid" : "a4f2d759-2cb0-4f7c-b0b0-28e498732c77",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Canal",
+          "uuid" : "4316e651-2d81-44c2-a7d1-53b6819e11f3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Farm Pond",
+          "uuid" : "27809eb9-5175-4b4e-9fca-ef5b62be3daa",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Community Pond",
+          "uuid" : "1079da6a-6891-4d3f-864e-c87420796c28",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"94085723-00ab-4700-9990-5068fe565ad3\").containsAnswerConceptName(\"27de2dd1-6065-4e71-b8b3-874e3dbdeb41\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Name of Agriculture Properties",
+                "conceptUuid" : "94085723-00ab-4700-9990-5068fe565ad3",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Irrigarion Source" ],
+                "answerConceptUuids" : [ "27de2dd1-6065-4e71-b8b3-874e3dbdeb41" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Other Irrigation source, please specify",
+      "uuid" : "82358a6a-26b2-4a7e-ab85-d8ebdc1f92a4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other Irrigation source",
+        "uuid" : "9d66ee03-f0a7-413d-976f-94fe96684c5c",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"80aa797f-b528-4ea7-89e8-45dbba6f2570\").containsAnswerConceptName(\"287164fa-3899-485f-9c1f-61401bc6359d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Irrigation source, please mention type of irrigation source",
+                "conceptUuid" : "80aa797f-b528-4ea7-89e8-45dbba6f2570",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "287164fa-3899-485f-9c1f-61401bc6359d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Up to which months it will provide you irrigation water",
+      "uuid" : "4c0ea1ef-d30e-482b-9fee-a4405439f9d2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Up to which months it will provide you irrigation water",
+        "uuid" : "15edc29d-d30f-42b4-a919-50b5082df67b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "December",
+          "uuid" : "be86f3b3-16bb-4871-a104-49cf3a4ba811",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "March",
+          "uuid" : "69704338-2832-4d5a-b636-31c98c114d54",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "February",
+          "uuid" : "2b0b70bc-94fb-4a96-9f84-74fa0e409193",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "January",
+          "uuid" : "6bf021f9-626d-4986-9322-1e4b4c6cb3fe",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "April",
+          "uuid" : "c47e708b-8834-4a8f-8d38-4a0a58d1a06c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "June",
+          "uuid" : "f2691d3b-4a6f-4d1a-a67b-6e5e605d25fb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "May",
+          "uuid" : "d2ee97ce-b5d7-47d9-8e81-3fd4641d7fcb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"94085723-00ab-4700-9990-5068fe565ad3\").containsAnswerConceptName(\"27de2dd1-6065-4e71-b8b3-874e3dbdeb41\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Name of Agriculture Properties",
+                "conceptUuid" : "94085723-00ab-4700-9990-5068fe565ad3",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Irrigarion Source" ],
+                "answerConceptUuids" : [ "27de2dd1-6065-4e71-b8b3-874e3dbdeb41" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Other month it will provide irrigation water, please mention",
+      "uuid" : "8925fe15-ebab-4ae3-95e4-aa78f8a24da4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other month it will provide irrigation water",
+        "uuid" : "1193d58f-7481-48e1-9eed-34148e228424",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"15edc29d-d30f-42b4-a919-50b5082df67b\").containsAnswerConceptName(\"287164fa-3899-485f-9c1f-61401bc6359d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Up to which months it will provide you irrigation water",
+                "conceptUuid" : "15edc29d-d30f-42b4-a919-50b5082df67b",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "287164fa-3899-485f-9c1f-61401bc6359d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : " Animal Husbandry ",
+      "uuid" : "a0f5791e-bd08-497c-9631-34026eea9244",
+      "keyValues" : [ {
+        "key" : "repeatable",
+        "value" : true
+      } ],
+      "concept" : {
+        "name" : " Animal Husbandry ",
+        "uuid" : "e4359a89-b4e7-46a1-95a9-33185629031b",
+        "dataType" : "QuestionGroup",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : " Animal Husbandry In?",
+      "uuid" : "4d8bb5b9-a6f1-432c-a4ed-cc21f8d9ce04",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : " Animal Husbandry In",
+        "uuid" : "a7c4a5cc-897f-4ba8-aab3-f41feed86e3e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Cow",
+          "uuid" : "cc239258-f666-4ec3-bcb2-6d9e9801f7ad",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sheep",
+          "uuid" : "d2d26422-ec2d-4cdd-ad75-ba2c09f097ec",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Goat",
+          "uuid" : "71977069-06d8-42b1-bc70-829512ca710a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Poultry",
+          "uuid" : "0d78dbb1-8b33-4365-ae67-2a6718f1c549",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Buffalo",
+          "uuid" : "0df92c7b-336e-4e90-81b0-9a1855b6729d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "a0f5791e-bd08-497c-9631-34026eea9244",
+      "mandatory" : true
+    }, {
+      "name" : "Number Animal",
+      "uuid" : "2eea173e-d9dc-4f42-b562-c4642d859129",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Number Animal",
+        "uuid" : "5f6291ec-0799-4dfb-ac87-2d223a73f6ad",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "a0f5791e-bd08-497c-9631-34026eea9244",
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Agriculture Properties "
+  }, {
+    "uuid" : "487cceef-00ee-4532-a06c-9c421209f495",
+    "name" : "Non Agriculture Assets",
+    "displayOrder" : 5.0,
+    "formElements" : [ {
+      "name" : "Motorcycle/Scooter",
+      "uuid" : "d713f841-5b5f-4461-b803-2103ae53e056",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Motorcycle/Scooter",
+        "uuid" : "aa2fed36-ca3f-4647-9625-f956f2a9226a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Tempo/Truck ",
+      "uuid" : "5966a581-71f2-433f-bae1-1a7458dabe26",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Tempo/Truck ",
+        "uuid" : "34bac86a-ba3a-41b7-8814-cdc7085948ea",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Television",
+      "uuid" : "64c758f7-5b2c-483a-ac99-44453a168189",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Television",
+        "uuid" : "2db19a73-e051-4fb0-82eb-a0bedc4bf048",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Sewing Machine",
+      "uuid" : "b7c815b7-aa5b-40e6-aa64-225e5e5c053e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Sewing Machine",
+        "uuid" : "5cfb6bd0-848a-4787-ac2f-8fccde4c7aaf",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Non Agriculture Assets"
+  }, {
+    "uuid" : "cb0b942b-800b-47b3-bcf5-3f0c97c9c7d8",
+    "name" : "Family Annual Income",
+    "displayOrder" : 6.0,
+    "formElements" : [ {
+      "name" : "Agriculture",
+      "uuid" : "bbff2217-8bfb-4d66-98cb-448d651632fb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Agriculture",
+        "uuid" : "49da1c77-726d-49c2-ab4f-07fbb9e85602",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Livestock ",
+      "uuid" : "91d865e2-3ead-489b-b625-f061b7aa3cf0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Livestock",
+        "uuid" : "37a577ef-21de-4453-afe9-e3ce05ea8bbb",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Labour",
+      "uuid" : "1af0beb9-eed2-437d-b965-440ac5cd8ffc",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Labour",
+        "uuid" : "dd532c14-fab6-4740-99e1-e3d51ba4267e",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "NTFP",
+      "uuid" : "bd8a4265-8d3c-4869-95aa-9112aebd5e68",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "NTFP",
+        "uuid" : "99b4addf-57da-4d0d-a4ae-91866943dbae",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Microenterprise",
+      "uuid" : "e8213f8e-e0d1-4077-b1b4-eac078962506",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Microenterprise",
+        "uuid" : "83080a21-9aff-49ed-a124-51e7c4212859",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Social security scheme",
+      "uuid" : "1e335ec9-f894-4904-a99e-2499062b3f9c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Social security scheme",
+        "uuid" : "7b9d258a-d313-43fb-9793-c37414af1cf1",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Others Family Annual Income, please specify",
+      "uuid" : "6fdc11da-7445-4d09-91f0-bef5c58b33d5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Others Family Annual Income, please specify",
+        "uuid" : "04dbcb5e-a7f9-4fd3-bf63-1c01eee4310b",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Total Family Income",
+      "uuid" : "a694d0ab-b49b-41fd-9af1-05ae48a6f840",
+      "keyValues" : [ {
+        "key" : "editable",
+        "value" : false
+      } ],
+      "concept" : {
+        "name" : "Total Family Income",
+        "uuid" : "bd67fb64-e452-41a2-ac2e-467552c338c0",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n\n    const observations = {\n        '49da1c77-726d-49c2-ab4f-07fbb9e85602': 'Agriculture',\n        '37a577ef-21de-4453-afe9-e3ce05ea8bbb': 'Livestock',\n        'dd532c14-fab6-4740-99e1-e3d51ba4267e': 'Labour',\n        '99b4addf-57da-4d0d-a4ae-91866943dbae': 'NTFP',\n        '83080a21-9aff-49ed-a124-51e7c4212859': 'Microenterprise',\n        '7b9d258a-d313-43fb-9793-c37414af1cf1': 'Social security scheme',\n        '04dbcb5e-a7f9-4fd3-bf63-1c01eee4310b': 'Other'\n    }\n    \n    function getIncome(observationUUID) {\n        const observationValue = programEncounter.getObservationValue(observationUUID);\n        if(observationValue) return observationValue;\n        return 0;\n    }\n\n    let totalIncome = 0;\n\n    _.forEach(_.keys(observations), (observationUUID) => {\n        totalIncome += getIncome(observationUUID);\n    });\n\n    value = totalIncome;\n        \n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Family Annual Income"
+  }, {
+    "uuid" : "30481259-4487-456f-8cea-0a57b5a3697c",
+    "name" : "Insurance Details",
+    "displayOrder" : 7.0,
+    "formElements" : [ {
+      "name" : " Crop",
+      "uuid" : "413c3da6-836f-436d-b1ee-f6b6edba9191",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : " Crop",
+        "uuid" : "e3375924-1804-4da0-bb24-8a83f1c95541",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Animal",
+      "uuid" : "1bd1d821-bd77-4b3b-9031-358a6216f7d3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Animal",
+        "uuid" : "582253e1-58b9-4bb2-bf6c-8e497936e6a5",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Life Insurance",
+      "uuid" : "73609530-31bb-41c2-99e9-1659954ae49a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Life Insurance",
+        "uuid" : "dae94730-b7b2-4d85-97b0-65344cf75791",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Health",
+      "uuid" : "0a6c9121-f7ec-4158-966a-5df21eb633d2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Health",
+        "uuid" : "1461d238-8e3a-41d5-9644-80593e9647bb",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Insurance Details"
+  }, {
+    "uuid" : "863940f7-8a2e-4423-8c3a-640217a25a18",
+    "name" : "Group Details",
+    "displayOrder" : 8.0,
+    "formElements" : [ {
+      "name" : "Self Help Group (SHG) ",
+      "uuid" : "d712d1b9-0a9e-480b-ba46-aa603bcfa1f6",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Self Help Group (SHG) ",
+        "uuid" : "209ad86d-f08a-4863-9607-776f94799e5d",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Producer Group / WPG",
+      "uuid" : "33341b3e-dd0e-492a-9f97-8d0341a69a8d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Producer Group / WPG",
+        "uuid" : "f7ce7317-a97e-4e76-9f0d-f63a75cccf30",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "FPO (Shareholders)",
+      "uuid" : "7346ef93-c1ac-4620-b1d5-4b4fac641308",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "FPO (Shareholders)",
+        "uuid" : "f5450b93-225b-4807-b31a-0026dcfb4b3c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "VDC (Membership)",
+      "uuid" : "01f57a98-65bd-4cbc-91d7-732551813893",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "VDC (Membership)",
+        "uuid" : "b70448aa-9927-4ce0-8757-7b18412b64ab",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Any other type of group",
+      "uuid" : "75c24bc2-368e-495f-9ec4-b5691ae926d8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Any other type of group",
+        "uuid" : "936151c3-11ad-4d84-a25f-cc32654d46b2",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Group Details"
+  }, {
+    "uuid" : "16d4aa44-d506-4093-bb5e-1e354f26f9d8",
+    "name" : "Loan Details",
+    "displayOrder" : 9.0,
+    "formElements" : [ {
+      "name" : "Self Help Group (SHG) ",
+      "uuid" : "ed7116f1-96a6-4d25-b5fd-3515e2ee369e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Self Help Group Loan",
+        "uuid" : "149740ad-829b-4185-842d-e3a0cca1d5e5",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Purposes",
+      "uuid" : "de7b4bc4-1712-472f-af1a-7c34079a6d2b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Purposes",
+        "uuid" : "95e63f7d-e66f-44cd-b931-f8a94bf2a8db",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Productive (crops, livestock)",
+          "uuid" : "342b1c4b-d915-4ddb-a792-0f1e63979e4c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Consumption (house, education, health, ceremony)",
+          "uuid" : "01951d67-e901-4e0b-bef9-412a1e8e7ce2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"149740ad-829b-4185-842d-e3a0cca1d5e5\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Self Help Group Loan",
+                "conceptUuid" : "149740ad-829b-4185-842d-e3a0cca1d5e5",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "Loan Amount",
+      "uuid" : "f8cbff3c-ac49-47dd-b20d-46bc5a78eda7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Loan Amount",
+        "uuid" : "3f96e1d6-14b8-47dc-b04e-036612befa3b",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"149740ad-829b-4185-842d-e3a0cca1d5e5\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Self Help Group Loan",
+                "conceptUuid" : "149740ad-829b-4185-842d-e3a0cca1d5e5",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Loan Interest",
+      "uuid" : "75584121-d1cf-42f3-b9fe-fc19d75cdca5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Loan Interest",
+        "uuid" : "bdaceadc-082c-4b4b-871d-564437b47b9a",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"149740ad-829b-4185-842d-e3a0cca1d5e5\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Self Help Group Loan",
+                "conceptUuid" : "149740ad-829b-4185-842d-e3a0cca1d5e5",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Bank Loan?",
+      "uuid" : "684f2891-41af-4abd-a844-7a93e4d4e343",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Bank Loan",
+        "uuid" : "ce7f3a96-d1de-409d-9855-b6fb66f3a355",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Banks",
+      "uuid" : "b31989f1-8396-4a33-8f90-2c7b0505cf29",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Banks",
+        "uuid" : "a8a113bb-7565-4492-83b7-13062f9a0965",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Gramin Bank",
+          "uuid" : "662cf0ac-3c44-4e33-a6fe-e844d3012933",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Private Bank",
+          "uuid" : "b7b7222f-ef57-42f4-bbf0-1b1cfd4e4cc5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Nationalized Bank",
+          "uuid" : "fde3bba4-4ee0-42a9-8909-067e83b3c868",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cooperative Society",
+          "uuid" : "9749406e-bd72-4579-8405-c465166a5e2d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"ce7f3a96-d1de-409d-9855-b6fb66f3a355\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Bank Loan",
+                "conceptUuid" : "ce7f3a96-d1de-409d-9855-b6fb66f3a355",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Purposes",
+      "uuid" : "0c248524-8794-4df8-b05d-1b7037de3f21",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Bank Loan Purpose",
+        "uuid" : "c81ea7aa-9fc0-49d1-89ab-dde229438688",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Productive (crops, livestock)",
+          "uuid" : "342b1c4b-d915-4ddb-a792-0f1e63979e4c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Consumption (house, education, health, ceremony)",
+          "uuid" : "01951d67-e901-4e0b-bef9-412a1e8e7ce2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"ce7f3a96-d1de-409d-9855-b6fb66f3a355\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Bank Loan",
+                "conceptUuid" : "ce7f3a96-d1de-409d-9855-b6fb66f3a355",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Loan Amount",
+      "uuid" : "a7b04c12-7cd2-4b61-9fcd-aaeb475ca592",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Bank Loan Amount",
+        "uuid" : "ab95173a-8963-44b9-bcb8-7629b0de3312",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"ce7f3a96-d1de-409d-9855-b6fb66f3a355\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Bank Loan",
+                "conceptUuid" : "ce7f3a96-d1de-409d-9855-b6fb66f3a355",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Loan Interest",
+      "uuid" : "1a4bf13d-c326-4ad3-aad4-32f02133c838",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Bank Loan Interest",
+        "uuid" : "93e3d382-a4b7-49b7-9af6-88ee0b0fd876",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"ce7f3a96-d1de-409d-9855-b6fb66f3a355\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Bank Loan",
+                "conceptUuid" : "ce7f3a96-d1de-409d-9855-b6fb66f3a355",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "Relatives/Friends ",
+      "uuid" : "7f27df86-fb58-4839-a240-5a3797a0c85a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Relatives/Friends ",
+        "uuid" : "dd3a024b-42e2-4739-8723-c1907e1c913b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Purposes",
+      "uuid" : "f6690044-2c6c-4f6f-b8fa-d4b25f218056",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Purposes of loan from Relatives/Friends ",
+        "uuid" : "ccb3b749-5fba-4827-80bb-02e80e0eec15",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Productive (crops, livestock)",
+          "uuid" : "342b1c4b-d915-4ddb-a792-0f1e63979e4c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Consumption (house, education, health, ceremony)",
+          "uuid" : "01951d67-e901-4e0b-bef9-412a1e8e7ce2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"dd3a024b-42e2-4739-8723-c1907e1c913b\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Relatives/Friends ",
+                "conceptUuid" : "dd3a024b-42e2-4739-8723-c1907e1c913b",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Loan Amount",
+      "uuid" : "8c802410-a2a5-4000-9e91-02b64fb6bcae",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Relatives/Friends Loan Amount",
+        "uuid" : "e39b55fc-35ae-4f66-b995-46e45c7ec340",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"dd3a024b-42e2-4739-8723-c1907e1c913b\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Relatives/Friends ",
+                "conceptUuid" : "dd3a024b-42e2-4739-8723-c1907e1c913b",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Loan Interest",
+      "uuid" : "1b67a265-687d-43e7-b6bd-b9395420866a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Relatives/Friends Loan Interest",
+        "uuid" : "9c4338b3-20bf-47c8-a65e-d847f4ef9fab",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"dd3a024b-42e2-4739-8723-c1907e1c913b\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Relatives/Friends ",
+                "conceptUuid" : "dd3a024b-42e2-4739-8723-c1907e1c913b",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Money lenders",
+      "uuid" : "dfb03f9f-347c-4897-bb17-cf48b02d0f85",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Money lenders",
+        "uuid" : "17ad8957-4405-419c-acc7-80ecd3b95dac",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Purposes",
+      "uuid" : "0a703417-55fd-4784-8c99-1c4c3aa710be",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Purposes of Money lenders Loan",
+        "uuid" : "66d6be36-1bd2-4a1f-908e-999abe978e79",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Productive (crops, livestock)",
+          "uuid" : "342b1c4b-d915-4ddb-a792-0f1e63979e4c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Consumption (house, education, health, ceremony)",
+          "uuid" : "01951d67-e901-4e0b-bef9-412a1e8e7ce2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 15.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"17ad8957-4405-419c-acc7-80ecd3b95dac\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Money lenders",
+                "conceptUuid" : "17ad8957-4405-419c-acc7-80ecd3b95dac",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Loan Amount",
+      "uuid" : "04e4d267-8a4b-42ca-96c3-31a06cae01b7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Money lenders Loan Amount",
+        "uuid" : "40a13514-ecbd-471a-b767-5d13a1b941ec",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 16.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"17ad8957-4405-419c-acc7-80ecd3b95dac\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Money lenders",
+                "conceptUuid" : "17ad8957-4405-419c-acc7-80ecd3b95dac",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Loan Interest",
+      "uuid" : "05bac4a7-1a63-46e7-87d7-8ce14958c2da",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Money lenders Loan Interest",
+        "uuid" : "c2863222-fa56-4965-9c59-1581dfa71eb6",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 17.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"17ad8957-4405-419c-acc7-80ecd3b95dac\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Money lenders",
+                "conceptUuid" : "17ad8957-4405-419c-acc7-80ecd3b95dac",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Traders/Shopkeepers ",
+      "uuid" : "fc18d9a3-eb5b-40a9-b899-ea80333eb4f5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Traders/Shopkeepers ",
+        "uuid" : "37a96748-98b9-4c0b-9578-771ed08948e2",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 18.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Purposes",
+      "uuid" : "d4b980ab-73b5-437a-9013-484cc9ec7eee",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Purposes of Loan Traders/Shopkeepers",
+        "uuid" : "f21e5442-1c48-45a3-9907-73e0c5cf3a79",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Consumption (house, education, health, ceremony)",
+          "uuid" : "01951d67-e901-4e0b-bef9-412a1e8e7ce2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Productive (crops, livestock)",
+          "uuid" : "342b1c4b-d915-4ddb-a792-0f1e63979e4c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 19.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"37a96748-98b9-4c0b-9578-771ed08948e2\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Traders/Shopkeepers ",
+                "conceptUuid" : "37a96748-98b9-4c0b-9578-771ed08948e2",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Loan Amount",
+      "uuid" : "ac852c62-3ddc-4c3a-9bb0-29e6df5de3d8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Traders/Shopkeepers Loan Amount",
+        "uuid" : "af08c632-51c9-4f22-a3ed-ec4ba60a3ea7",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 20.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"37a96748-98b9-4c0b-9578-771ed08948e2\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Traders/Shopkeepers ",
+                "conceptUuid" : "37a96748-98b9-4c0b-9578-771ed08948e2",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    }, {
+      "name" : "Loan Interest",
+      "uuid" : "3e8d2865-f4a1-44bd-b847-f6ec06941281",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Traders/Shopkeepers Loan Interest",
+        "uuid" : "d65a4f7b-916f-467c-b174-c33ce72f738a",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 21.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"37a96748-98b9-4c0b-9578-771ed08948e2\").containsAnswerConceptName(\"dfe050a6-dc17-42f3-b440-fdc529f9779d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Traders/Shopkeepers ",
+                "conceptUuid" : "37a96748-98b9-4c0b-9578-771ed08948e2",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Yes" ],
+                "answerConceptUuids" : [ "dfe050a6-dc17-42f3-b440-fdc529f9779d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Loan Details"
+  }, {
+    "uuid" : "83d1780b-daef-44dd-a032-dee7782014d7",
+    "name" : "Household benefitted under govt schemes",
+    "displayOrder" : 10.0,
+    "formElements" : [ {
+      "name" : "PDS",
+      "uuid" : "00313317-a4ac-4dab-981a-bc7f14d8ec45",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "PDS",
+        "uuid" : "c5295795-8bcc-4fb7-a4ad-a49a30682112",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Ujjawala Yojana",
+      "uuid" : "8420c824-f618-45ed-9e3f-6f8a5009d66a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Ujjawala Yojana",
+        "uuid" : "ce1f69c6-72b5-48c2-84bc-d978539d6d1d",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "PM Jyotibimayojana",
+      "uuid" : "57b63822-94d4-4677-b0a0-f25a98c8568f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "PM Jyotibimayojana",
+        "uuid" : "f971c3f0-728f-4a65-b656-5b187e5e4501",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Kisan Samman Nidhi",
+      "uuid" : "a29adc54-57aa-462a-b3d7-19e95a8733ac",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Kisan Samman Nidhi",
+        "uuid" : "c695b536-fdc8-47c1-87ed-78b3291688ef",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Ayushman Bharat",
+      "uuid" : "978e20be-1c59-4c73-9819-eb9efb0981f8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Ayushman Bharat",
+        "uuid" : "80bcd4af-420c-42cf-8aa7-b231aea3a89e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "MGNREGA",
+      "uuid" : "5b032548-8f59-446b-9a93-94bc981c28dc",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "MGNREGA",
+        "uuid" : "28a8ab07-54c4-4105-a250-e8f5057768a7",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "dfe050a6-dc17-42f3-b440-fdc529f9779d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "218ea852-6768-4064-8865-c7f7790a971e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Household benefitted under govt schemes"
+  }, {
+    "uuid" : "37353ed2-26a9-4972-8890-160e173be606",
+    "name" : "Land Holding Details",
+    "displayOrder" : 11.0,
+    "formElements" : [ {
+      "name" : "Total Farm Land",
+      "uuid" : "230aab06-4c52-412d-9f17-160ddd76ec8c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Total Farm Land",
+        "uuid" : "ada72f51-7b48-4b0b-b698-4b7a5548bb06",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Irrigated Area",
+      "uuid" : "c6eb1f10-4435-4580-a208-9f2f137f3a2f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Irrigated Area",
+        "uuid" : "14deb862-68c8-4b1e-911c-84daecd2ed72",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  let totalFarmLandObservation = encounter.findObservation('ada72f51-7b48-4b0b-b698-4b7a5548bb06');\n  let totalFarmLandValue = _.isEmpty(totalFarmLandObservation) ? totalFarmLandObservation : totalFarmLandObservation.getReadableValue();\n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"14deb862-68c8-4b1e-911c-84daecd2ed72\").greaterThan(totalFarmLandValue).matches();\n  \n  if(condition11 ){\n    validationErrors.push(\"Irrigated Area should be less than or equal to Total Farm Land\");  \n}\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "details" : {
+            "validationError" : "Irrigated Area should be less than or equal to Total Farm Land"
+          },
+          "actionType" : "validationError"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Irrigated Area",
+                "conceptUuid" : "14deb862-68c8-4b1e-911c-84daecd2ed72",
+                "conceptDataType" : "Numeric"
+              },
+              "rhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Total Farm Land",
+                "conceptUuid" : "ada72f51-7b48-4b0b-b698-4b7a5548bb06"
+              },
+              "operator" : "greaterThan"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    }, {
+      "name" : "Type of Irrigation",
+      "uuid" : "8c4aa908-48cb-451c-bb92-a75820cda66e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Type of Irrigation",
+        "uuid" : "9970b9ee-e1eb-472d-8ddd-9785de42983a",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Perennial",
+          "uuid" : "6b30369a-f44b-4349-97fd-1278cf60e636",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Seasonal",
+          "uuid" : "05eebb38-7b18-407f-bc39-8853694498d7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Source of Irrigation",
+      "uuid" : "6d5129a2-324f-40ce-99f4-d2b798b98de1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Source of Irrigation",
+        "uuid" : "b3b32419-eef8-479d-a871-d8084337c11e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "River",
+          "uuid" : "5286228f-af90-48e7-a4cc-af9c2d09d336",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Checkdam",
+          "uuid" : "6e98d32d-614f-4683-8cec-2607b1a661c6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pond",
+          "uuid" : "2b5ab50b-a01e-4410-8b7b-a7fca9efdd3e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "287164fa-3899-485f-9c1f-61401bc6359d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Doha",
+          "uuid" : "ffba7129-03c5-46f4-8c30-201ad015ff76",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tubewell",
+          "uuid" : "3c54766c-a8a5-4ba9-9b1f-20327ae61cc3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Well",
+          "uuid" : "a4f2d759-2cb0-4f7c-b0b0-28e498732c77",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Cannal",
+          "uuid" : "18d8a37c-040b-49c0-b11d-8023859a5631",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Other source of irrigation, please specify",
+      "uuid" : "1011834d-2184-411c-b89a-fae4b9a12ade",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other source of irrigation please specify",
+        "uuid" : "5ff598a9-1695-4e61-b393-0b2468f1ebb3",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter, formElement}).when.valueInEncounter(\"b3b32419-eef8-479d-a871-d8084337c11e\").containsAnswerConceptName(\"287164fa-3899-485f-9c1f-61401bc6359d\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Source of Irrigation",
+                "conceptUuid" : "b3b32419-eef8-479d-a871-d8084337c11e",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Other" ],
+                "answerConceptUuids" : [ "287164fa-3899-485f-9c1f-61401bc6359d" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ]
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Land Holding Details"
+  }, {
+    "uuid" : "7119c8f4-646d-4e5b-ac73-4b3ff9370e4c",
+    "name" : "Cropping Details",
+    "displayOrder" : 12.0,
+    "formElements" : [ {
+      "name" : "3 Major crop Grown In Kharif",
+      "uuid" : "63ebbccc-bdc3-4859-b126-bad514d01635",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "3 Major crop Grown In Kharif",
+        "uuid" : "3f115c4f-d0e8-48e2-bc60-d6b0debb524d",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Mung",
+          "uuid" : "4fe97af9-ceff-4682-bce7-9415537f21f1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Urd",
+          "uuid" : "97daf09f-6280-484a-a755-4c27582f11eb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Bajra",
+          "uuid" : "ce13022f-b13f-47b9-a127-dbdf1b693472",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Groundnut",
+          "uuid" : "269cffa8-a20a-4ea7-8f27-3eec75bbf3d1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Paddy",
+          "uuid" : "a508740e-7b71-4bb0-850e-3e48ccf0848f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Til",
+          "uuid" : "89c1d036-8cf2-4efa-bd36-8707022e5aba",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Arhar",
+          "uuid" : "d15ddc07-be40-4797-b670-f99b37919cad",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Maize",
+          "uuid" : "53a54144-0738-417e-a26c-b6989b55206e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jowar",
+          "uuid" : "0f2905e4-98b9-4a16-a1b6-60c52f5e3c61",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n\n    const selectedOptions = programEncounter.getObservationValue('3f115c4f-d0e8-48e2-bc60-d6b0debb524d') || []\n\n    if(selectedOptions && selectedOptions.length > 3) {\n        validationErrors.push('Maximum only 3 options are allowed to select.');\n    }\n    \n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Cropping Details - Kharif",
+      "uuid" : "caa32ef6-1909-41cd-a5f2-de90f43220ce",
+      "keyValues" : [ {
+        "key" : "repeatable",
+        "value" : true
+      } ],
+      "concept" : {
+        "name" : "Cropping Details - Kharif",
+        "uuid" : "899b8a9a-5591-493f-a6e9-532b15158804",
+        "dataType" : "QuestionGroup",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const encounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n    \n    const CONCEPT_CROPPING_DETAILS = \"899b8a9a-5591-493f-a6e9-532b15158804\";\n    \n    const croppingDetails = encounter.getObservationValue(CONCEPT_CROPPING_DETAILS);\n\n    if(croppingDetails && croppingDetails.length > 3){\n        validationErrors.push(\"Cropping details should not be more than 3\");\n    }\n  \n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Cropping Details - Rabi",
+      "uuid" : "ad7b2f05-fa02-4e14-b9f1-942be04d39b1",
+      "keyValues" : [ {
+        "key" : "repeatable",
+        "value" : true
+      } ],
+      "concept" : {
+        "name" : "Cropping Details - Rabi",
+        "uuid" : "18d9bfe0-3972-49bb-b3ef-abfdd44532f0",
+        "dataType" : "QuestionGroup",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const encounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n    \n    const CONCEPT_CROPPING_DETAILS = \"18d9bfe0-3972-49bb-b3ef-abfdd44532f0\";\n    \n    const croppingDetails = encounter.getObservationValue(CONCEPT_CROPPING_DETAILS);\n\n    if(croppingDetails && croppingDetails.length > 3){\n        validationErrors.push(\"Cropping details should not be more than 3\");\n    }\n  \n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Cropping Details - Zaid",
+      "uuid" : "d2abcf17-187f-41b6-993d-4617ae7427d4",
+      "keyValues" : [ {
+        "key" : "repeatable",
+        "value" : true
+      } ],
+      "concept" : {
+        "name" : "Cropping Details - Zaid",
+        "uuid" : "7d99e6ef-1125-4b95-91f4-b2a49f301181",
+        "dataType" : "QuestionGroup",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const encounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n    \n    const CONCEPT_CROPPING_DETAILS = \"7d99e6ef-1125-4b95-91f4-b2a49f301181\";\n    \n    const croppingDetails = encounter.getObservationValue(CONCEPT_CROPPING_DETAILS);\n\n    if(croppingDetails && croppingDetails.length > 3){\n        validationErrors.push(\"Cropping details should not be more than 3\");\n    }\n  \n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Area",
+      "uuid" : "019bd041-36dc-4bd2-b642-2980cc31bdc8",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Area",
+        "uuid" : "9a24afc8-287e-4cfc-ad70-7d12b9bc9318",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "d2abcf17-187f-41b6-993d-4617ae7427d4",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "3 Major crop Grown In Zaid",
+      "uuid" : "16b7b6ba-685f-4ea2-aa40-9687faf23253",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "3 Major crop Grown In Zaid",
+        "uuid" : "b65a99e1-2cde-4d8a-8fed-dc11e697cdb6",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Guar",
+          "uuid" : "daae1abd-d083-428b-8173-62ca039f2950",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mung",
+          "uuid" : "4fe97af9-ceff-4682-bce7-9415537f21f1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Urd",
+          "uuid" : "97daf09f-6280-484a-a755-4c27582f11eb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Chari",
+          "uuid" : "e7c998b1-14f0-4b0a-b004-83ae1dc25c55",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const encounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n    const questionGroupIndex = params.questionGroupIndex;\n    const CONCEPT_CROPPING_DETAILS = \"7d99e6ef-1125-4b95-91f4-b2a49f301181\";\n    const CONCEPT_ZAID_CROPS = \"b65a99e1-2cde-4d8a-8fed-dc11e697cdb6\";\n    let previousAnswers = [];\n    \n    const croppingDetails = encounter.getObservationValue(CONCEPT_CROPPING_DETAILS);\n\n    if(croppingDetails && croppingDetails.length > 0){\n        croppingDetails.forEach((croppingDetail, index) => {\n            if(index != questionGroupIndex) {\n                const answer = croppingDetail.findObservationByConceptUUID(CONCEPT_ZAID_CROPS)\n                if(answer) {\n                    previousAnswers.push(answer.getValue());\n                }\n            }\n        });\n    }\n\n    if(previousAnswers && previousAnswers.length > 0) {\n        previousAnswers = _.uniq(previousAnswers);\n        _.forEach(previousAnswers, (answer) => {\n            const answerToSkip = formElement.getAnswerWithConceptUuid(answer);\n            if (answerToSkip) answersToSkip.push(answerToSkip);\n        });\n    }\n\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "parentFormElementUuid" : "d2abcf17-187f-41b6-993d-4617ae7427d4",
+      "mandatory" : true
+    }, {
+      "name" : "Area",
+      "uuid" : "1d95029b-8adc-4e13-919c-81187a03a033",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Area",
+        "uuid" : "9a24afc8-287e-4cfc-ad70-7d12b9bc9318",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "d2abcf17-187f-41b6-993d-4617ae7427d4",
+      "mandatory" : true
+    }, {
+      "name" : "Average Production per Acre",
+      "uuid" : "e12d3ceb-7de9-439f-8cb1-5f9107ebcc1d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Average Production per Acre",
+        "uuid" : "72496de8-7239-4488-adb7-e1a22a1d2d31",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "d2abcf17-187f-41b6-993d-4617ae7427d4",
+      "mandatory" : true
+    }, {
+      "name" : "Area",
+      "uuid" : "9035ae76-4671-432c-a76f-741a80d60569",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Area",
+        "uuid" : "9a24afc8-287e-4cfc-ad70-7d12b9bc9318",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "ad7b2f05-fa02-4e14-b9f1-942be04d39b1",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "3 Major crop Grown in Rabi",
+      "uuid" : "d3c0c5a6-554c-4ea8-a6d4-615d45ee488e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "3 Major crop Grown in Rabi",
+        "uuid" : "671800cf-8e5d-4da7-b5cb-771756937646",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Wheat",
+          "uuid" : "5dc3df97-005d-4b88-b8af-9010f07af467",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Gram",
+          "uuid" : "6a40bace-73b7-4ddc-8483-a8081e637604",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lentil",
+          "uuid" : "c50830b0-3009-49f9-897b-8b96a6113ccb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mustard",
+          "uuid" : "dd8309bc-2927-491e-9cf6-c2b853328c12",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Barley",
+          "uuid" : "9376024c-780c-49f8-9f70-b43cb3e4afd6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pea",
+          "uuid" : "b90777e7-fa0a-4d13-95ef-76076509c377",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Linseed",
+          "uuid" : "e58d8cb4-0a91-46fd-b603-5f82307f3eb4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const encounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n    const questionGroupIndex = params.questionGroupIndex;\n    const CONCEPT_CROPPING_DETAILS = \"18d9bfe0-3972-49bb-b3ef-abfdd44532f0\";\n    const CONCEPT_RABI_CROPS = \"671800cf-8e5d-4da7-b5cb-771756937646\";\n    let previousAnswers = [];\n    \n    const croppingDetails = encounter.getObservationValue(CONCEPT_CROPPING_DETAILS);\n\n    if(croppingDetails && croppingDetails.length > 0){\n        croppingDetails.forEach((croppingDetail, index) => {\n            if(index != questionGroupIndex) {\n                const answer = croppingDetail.findObservationByConceptUUID(CONCEPT_RABI_CROPS)\n                if(answer) {\n                    previousAnswers.push(answer.getValue());\n                }\n            }\n        });\n    }\n\n    if(previousAnswers && previousAnswers.length > 0) {\n        previousAnswers = _.uniq(previousAnswers);\n        _.forEach(previousAnswers, (answer) => {\n            const answerToSkip = formElement.getAnswerWithConceptUuid(answer);\n            if (answerToSkip) answersToSkip.push(answerToSkip);\n        });\n    }\n\n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "parentFormElementUuid" : "ad7b2f05-fa02-4e14-b9f1-942be04d39b1",
+      "mandatory" : true
+    }, {
+      "name" : "Area",
+      "uuid" : "48faf9b9-0187-4e04-bfaf-6e93b9030c51",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Area",
+        "uuid" : "9a24afc8-287e-4cfc-ad70-7d12b9bc9318",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "ad7b2f05-fa02-4e14-b9f1-942be04d39b1",
+      "mandatory" : true
+    }, {
+      "name" : "Average Production per Acre",
+      "uuid" : "dc30b88f-f630-45bf-b828-5f2f17f30917",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Average Production per Acre",
+        "uuid" : "72496de8-7239-4488-adb7-e1a22a1d2d31",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "ad7b2f05-fa02-4e14-b9f1-942be04d39b1",
+      "mandatory" : true
+    }, {
+      "name" : "3 Major crop Grown In Kharif",
+      "uuid" : "30d5b7fa-1671-4b34-a943-9cacc800e041",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "3 Major crop Grown In Kharif",
+        "uuid" : "3f115c4f-d0e8-48e2-bc60-d6b0debb524d",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Mung",
+          "uuid" : "4fe97af9-ceff-4682-bce7-9415537f21f1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Urd",
+          "uuid" : "97daf09f-6280-484a-a755-4c27582f11eb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Bajra",
+          "uuid" : "ce13022f-b13f-47b9-a127-dbdf1b693472",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Groundnut",
+          "uuid" : "269cffa8-a20a-4ea7-8f27-3eec75bbf3d1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Paddy",
+          "uuid" : "a508740e-7b71-4bb0-850e-3e48ccf0848f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Til",
+          "uuid" : "89c1d036-8cf2-4efa-bd36-8707022e5aba",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Arhar",
+          "uuid" : "d15ddc07-be40-4797-b670-f99b37919cad",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Maize",
+          "uuid" : "53a54144-0738-417e-a26c-b6989b55206e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jowar",
+          "uuid" : "0f2905e4-98b9-4a16-a1b6-60c52f5e3c61",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const encounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n    const questionGroupIndex = params.questionGroupIndex;\n    const CONCEPT_CROPPING_DETAILS = \"899b8a9a-5591-493f-a6e9-532b15158804\";\n    const CONCEPT_KHARIF_CROPS = \"3f115c4f-d0e8-48e2-bc60-d6b0debb524d\";\n    let previousAnswers = [];\n\n    const croppingDetails = encounter.getObservationValue(CONCEPT_CROPPING_DETAILS);\n\n    if(croppingDetails && croppingDetails.length > 0){\n        croppingDetails.forEach((croppingDetail, index) => {\n            if(index != questionGroupIndex) {\n                const answer = croppingDetail.findObservationByConceptUUID(CONCEPT_KHARIF_CROPS)\n                if(answer) {\n                    previousAnswers.push(answer.getValue());\n                }\n            }\n        });\n    }\n\n    if(previousAnswers && previousAnswers.length > 0) {\n        previousAnswers = _.uniq(previousAnswers);\n        _.forEach(previousAnswers, (answer) => {\n            const answerToSkip = formElement.getAnswerWithConceptUuid(answer);\n            if (answerToSkip) answersToSkip.push(answerToSkip);\n        });\n    }\n  \n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "parentFormElementUuid" : "caa32ef6-1909-41cd-a5f2-de90f43220ce",
+      "mandatory" : true
+    }, {
+      "name" : "Area",
+      "uuid" : "6a6c692a-8d22-4edb-9551-fafff6627198",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Area",
+        "uuid" : "9a24afc8-287e-4cfc-ad70-7d12b9bc9318",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "caa32ef6-1909-41cd-a5f2-de90f43220ce",
+      "mandatory" : true
+    }, {
+      "name" : "Average Production per Acre",
+      "uuid" : "da20e6ce-bf60-41c6-9a30-701a8c57934b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Average Production per Acre",
+        "uuid" : "72496de8-7239-4488-adb7-e1a22a1d2d31",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "keyValues" : [ ],
+        "media" : [ ]
+      },
+      "displayOrder" : 15.0,
+      "type" : "SingleSelect",
+      "parentFormElementUuid" : "caa32ef6-1909-41cd-a5f2-de90f43220ce",
+      "mandatory" : true
+    }, {
+      "name" : "Area",
+      "uuid" : "16bbe185-5406-478d-a65a-31e08b40b369",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Kharif Area",
+        "uuid" : "edf62721-c124-45bc-bae3-a862ff50274c",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 16.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Average Production per Acre",
+      "uuid" : "317fc678-0c0e-4550-8231-9c42675cc66a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Average Production per Acre - Kharif",
+        "uuid" : "1a34fe4a-4628-48c5-a70f-37cea81aa6cc",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 17.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "3 Major crop Grown in Rabi",
+      "uuid" : "6dd4ef94-bdbb-45db-914b-acbbfa8402eb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "3 Major crop Grown in Rabi",
+        "uuid" : "671800cf-8e5d-4da7-b5cb-771756937646",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Wheat",
+          "uuid" : "5dc3df97-005d-4b88-b8af-9010f07af467",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Gram",
+          "uuid" : "6a40bace-73b7-4ddc-8483-a8081e637604",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lentil",
+          "uuid" : "c50830b0-3009-49f9-897b-8b96a6113ccb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mustard",
+          "uuid" : "dd8309bc-2927-491e-9cf6-c2b853328c12",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Barley",
+          "uuid" : "9376024c-780c-49f8-9f70-b43cb3e4afd6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pea",
+          "uuid" : "b90777e7-fa0a-4d13-95ef-76076509c377",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Linseed",
+          "uuid" : "e58d8cb4-0a91-46fd-b603-5f82307f3eb4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 18.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n\n    const selectedOptions = programEncounter.getObservationValue('671800cf-8e5d-4da7-b5cb-771756937646') || []\n\n    if(selectedOptions && selectedOptions.length > 3) {\n        validationErrors.push('Maximum only 3 options are allowed to select.');\n    }\n    \n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Rabi crop name",
+      "uuid" : "53a51480-75d4-4f9c-8e62-e0bf5c98106e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Rabi crop name",
+        "uuid" : "e37f4ae5-2b26-457e-b39a-1f65058c044e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Mustard",
+          "uuid" : "dd8309bc-2927-491e-9cf6-c2b853328c12",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Barley",
+          "uuid" : "9376024c-780c-49f8-9f70-b43cb3e4afd6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Gram",
+          "uuid" : "6a40bace-73b7-4ddc-8483-a8081e637604",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Lentil",
+          "uuid" : "c50830b0-3009-49f9-897b-8b96a6113ccb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Linseed",
+          "uuid" : "e58d8cb4-0a91-46fd-b603-5f82307f3eb4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pea",
+          "uuid" : "b90777e7-fa0a-4d13-95ef-76076509c377",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Wheat",
+          "uuid" : "5dc3df97-005d-4b88-b8af-9010f07af467",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 19.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Area",
+      "uuid" : "583cc50d-d7aa-4305-bcb8-e549270bc02c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Rabi Area",
+        "uuid" : "ab31f8d6-24af-44ac-a345-1d35f1ca5853",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 20.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Average Production per Acre",
+      "uuid" : "c1ceaec5-8d73-4edb-9dbe-770b187e826b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Average Production per Acre - Rabi",
+        "uuid" : "d1838848-0200-495d-9727-861e6d7f80a2",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 21.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "3 Major crop Grown In Zaid",
+      "uuid" : "d07cc9f2-8b91-490f-afd0-4b781b9006c7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "3 Major crop Grown In Zaid",
+        "uuid" : "b65a99e1-2cde-4d8a-8fed-dc11e697cdb6",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Guar",
+          "uuid" : "daae1abd-d083-428b-8173-62ca039f2950",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mung",
+          "uuid" : "4fe97af9-ceff-4682-bce7-9415537f21f1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Urd",
+          "uuid" : "97daf09f-6280-484a-a755-4c27582f11eb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Chari",
+          "uuid" : "e7c998b1-14f0-4b0a-b004-83ae1dc25c55",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 22.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    let visibility = true;\n    let value = null;\n    let answersToSkip = [];\n    let validationErrors = [];\n\n    const selectedOptions = programEncounter.getObservationValue('b65a99e1-2cde-4d8a-8fed-dc11e697cdb6') || []\n\n    if(selectedOptions && selectedOptions.length > 3) {\n        validationErrors.push('Maximum only 3 options are allowed to select.');\n    }\n    \n    return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Zaid crop Name",
+      "uuid" : "09812593-5476-4534-aad1-868548be6807",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Zaid crop Name",
+        "uuid" : "fb758a14-cd9f-4a99-8934-e2caf3475a82",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Guar",
+          "uuid" : "daae1abd-d083-428b-8173-62ca039f2950",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Urd",
+          "uuid" : "97daf09f-6280-484a-a755-4c27582f11eb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Chari",
+          "uuid" : "e7c998b1-14f0-4b0a-b004-83ae1dc25c55",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Mung",
+          "uuid" : "4fe97af9-ceff-4682-bce7-9415537f21f1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 23.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Area",
+      "uuid" : "590e52ca-baad-40e8-bfdf-26ddf0215ea5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Zaid - Area",
+        "uuid" : "3fefe6f2-6a71-4098-886d-0ef91bdf1502",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 24.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Average Production per Acre",
+      "uuid" : "06a9d35a-b3a7-4e87-a8d2-48c0bddeafdb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Average Production per Acre - Zaid",
+        "uuid" : "ca9ec90e-06e9-49c5-af73-ec3ced44f194",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 25.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Cropping Details"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({ params, imports }) => {\n  const encounter = params.entity;\n  const moment = imports.moment;\n  const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({encounter});\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({encounter}).when.valueInEncounter(\"97f801a6-343b-4d03-a1d5-fc80c4e01035\").containsAnswerConceptName(\"87c7e983-93c8-4efe-be44-8a57534fce53\").matches();\n    \n  const condition12 = new imports.rulesConfig.RuleCondition({encounter}).when.valueInEncounter(\"97f801a6-343b-4d03-a1d5-fc80c4e01035\").containsAnswerConceptName(\"4110d321-2979-4f5f-8b85-e9da731cde35\").matches();\n  \n  if(condition11 ){\n    const earliestDate = moment(encounter.encounterDateTime).add(0, 'days').toDate();\n    const maxDate = moment(encounter.encounterDateTime).add(3, 'days').toDate();\n    scheduleBuilder.add({name: \"Lead Farmer Onboarding\", encounterType: \"Lead Farmer Onboarding\", earliestDate, maxDate});  \n}\n    if(condition12 ){\n    const earliestDate = moment(encounter.encounterDateTime).add(0, 'days').toDate();\n    const maxDate = moment(encounter.encounterDateTime).add(3, 'days').toDate();\n    scheduleBuilder.add({name: \"Associate Farmer Onboarding\", encounterType: \"Associate Farmer Onboarding\", earliestDate, maxDate});  \n}\n  \n  return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ],
+  "visitScheduleDeclarativeRule" : [ {
+    "actions" : [ {
+      "details" : {
+        "dateField" : "encounterDateTime",
+        "daysToOverdue" : "3",
+        "encounterName" : "Lead Farmer Onboarding",
+        "encounterType" : "Lead Farmer Onboarding",
+        "daysToSchedule" : "0"
+      },
+      "actionType" : "scheduleVisit"
+    }, { } ],
+    "conditions" : [ {
+      "compoundRule" : {
+        "rules" : [ {
+          "lhs" : {
+            "type" : "concept",
+            "scope" : "encounter",
+            "conceptName" : "Farmer Type",
+            "conceptUuid" : "97f801a6-343b-4d03-a1d5-fc80c4e01035",
+            "conceptDataType" : "Coded"
+          },
+          "rhs" : {
+            "type" : "answerConcept",
+            "answerConceptNames" : [ "Lead Farmer" ],
+            "answerConceptUuids" : [ "87c7e983-93c8-4efe-be44-8a57534fce53" ]
+          },
+          "operator" : "containsAnswerConceptName"
+        } ],
+        "conjunction" : "and"
+      }
+    } ]
+  }, {
+    "actions" : [ {
+      "details" : {
+        "dateField" : "encounterDateTime",
+        "daysToOverdue" : "3",
+        "encounterName" : "Associate Farmer Onboarding",
+        "encounterType" : "Associate Farmer Onboarding",
+        "daysToSchedule" : "0"
+      },
+      "actionType" : "scheduleVisit"
+    } ],
+    "conditions" : [ {
+      "compoundRule" : {
+        "rules" : [ {
+          "lhs" : {
+            "type" : "concept",
+            "scope" : "encounter",
+            "conceptName" : "Farmer Type",
+            "conceptUuid" : "97f801a6-343b-4d03-a1d5-fc80c4e01035",
+            "conceptDataType" : "Coded"
+          },
+          "rhs" : {
+            "type" : "answerConcept",
+            "answerConceptNames" : [ "Associate Farmer" ],
+            "answerConceptUuids" : [ "4110d321-2979-4f5f-8b85-e9da731cde35" ]
+          },
+          "operator" : "containsAnswerConceptName"
+        } ],
+        "conjunction" : "and"
+      }
+    } ]
+  } ]
+}

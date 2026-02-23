@@ -1,0 +1,385 @@
+{
+  "name" : "SCD Hospitalization support Encounter",
+  "uuid" : "7413f6a1-b598-4e7a-ae35-f3a37f868205",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "92bbb873-04d1-4818-894a-1127e127101c",
+    "name" : "Hospitalization support",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Have you supported patient during hospitalisation?",
+      "uuid" : "79e4c009-5d2f-4905-9378-7170f9602128",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Mode of Support during Hospitalization ?",
+        "uuid" : "96aebf67-3202-48db-b666-e75f5d54ab05",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "By Visiting facility",
+          "uuid" : "741a5da5-4885-476d-aea6-57dee8a829d8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Telephonic",
+          "uuid" : "b1ea7fc7-9287-4b72-82b0-4f78f8c5fcab",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Name of facility where patient hospitalised",
+      "uuid" : "4d0788b7-41ea-48c6-8033-c44bff0ef276",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of facility",
+        "uuid" : "7d19aa9e-bcad-458d-87fc-f13a90be1263",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "CHC Bajag",
+          "uuid" : "a794893e-27f7-4f87-ac3c-a041f5e82fb7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Karanjia",
+          "uuid" : "fe1ba203-5747-43ad-9bbe-92343f4ae65d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Vikrampur",
+          "uuid" : "adcdbd8f-4189-4706-be75-5027df44717a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "DH Shahdol",
+          "uuid" : "8e36a4dc-be50-4e6f-92e9-d76fc819ce2d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Samnapur",
+          "uuid" : "2a1e23f1-a833-4c4c-b141-5190d8905b6e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Funaga",
+          "uuid" : "2b00aaf9-de58-49e8-ace0-1ad6a53f971",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Mehandwani",
+          "uuid" : "ad556c53-814c-408e-95bb-46ef4016e68b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Rajendragram",
+          "uuid" : "fefe8d83-1122-4801-a18a-494d25f04143",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Amarpur",
+          "uuid" : "741edec1-eade-4f3f-b417-a8b1b4290c76",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Jaithari",
+          "uuid" : "4c35beb1-ef7d-4515-8aeb-453a91ab5931",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "DH Anuppur",
+          "uuid" : "5ae1697e-d67f-4e26-a209-74d4721f2013",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Kotma",
+          "uuid" : "cd056b81-7d9a-4fbd-9bf4-1303a5b4d090",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "JSS Ganiyari",
+          "uuid" : "d7d3bf68-7134-4153-86e1-bb0e4966440c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Shahpura",
+          "uuid" : "2f334ad8-f1ab-4c41-b64c-59c16f791871",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "CHC Karpa",
+          "uuid" : "a17bad58-3e5c-4692-97ca-d639a268c99c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "DH Dindori",
+          "uuid" : "02df5519-1496-4ea5-9ae0-4ee150b251c6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"96aebf67-3202-48db-b666-e75f5d54ab05\").containsAnswerConceptName(\"741a5da5-4885-476d-aea6-57dee8a829d8\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Mode of Support during Hospitalization ?",
+                "conceptUuid" : "96aebf67-3202-48db-b666-e75f5d54ab05",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "By Visiting facility" ],
+                "answerConceptUuids" : [ "741a5da5-4885-476d-aea6-57dee8a829d8" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "and"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Hospitalization support"
+  }, {
+    "uuid" : "457556e3-6e9a-4385-8dac-4f4cf06b83d0",
+    "name" : "Referral",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Need Referral ?",
+      "uuid" : "4736da5d-749f-4474-9e9c-35060698afd5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Whether the patient required referral",
+        "uuid" : "bc4933fc-818e-42fa-a47c-67d327485536",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Urgent",
+          "uuid" : "c453cc0e-44db-49e6-af27-f69c8f646f35",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Semi - Urgent",
+          "uuid" : "a7b825b5-3c4d-4c9e-95a8-ab197806efe7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "abnormal" : true,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Name of Referral Location",
+      "uuid" : "7c6aa27c-42f4-41d7-9b11-f31ae8fdcafb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of Referral Location",
+        "uuid" : "474289b2-67c2-4eb3-bb2f-06ead2e8618f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Nearest CHC",
+          "uuid" : "9464d42c-492e-4839-9deb-493d28fee54b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "DH Dindori",
+          "uuid" : "02df5519-1496-4ea5-9ae0-4ee150b251c6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "JSS Ganiyari",
+          "uuid" : "d7d3bf68-7134-4153-86e1-bb0e4966440c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "DH Mandla",
+          "uuid" : "3c0223d1-874a-499d-9a22-218093776995",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Place not decided but need referral to any higher facility",
+          "uuid" : "55c8d3aa-577d-46e4-8c18-dbeee64af75b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "DH Anuppur",
+          "uuid" : "5ae1697e-d67f-4e26-a209-74d4721f2013",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Medical College",
+          "uuid" : "9579ae7a-3c37-41c1-a378-738e551c28cb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "DH Shahdol",
+          "uuid" : "8e36a4dc-be50-4e6f-92e9-d76fc819ce2d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const moment = imports.moment;\n  const formElement = params.formElement;\n  const _ = imports.lodash;\n  let visibility = true;\n  let value = null;\n  let answersToSkip = [];\n  let validationErrors = [];\n  \n  const condition11 = new imports.rulesConfig.RuleCondition({programEncounter, formElement}).when.valueInEncounter(\"bc4933fc-818e-42fa-a47c-67d327485536\").containsAnswerConceptName(\"c453cc0e-44db-49e6-af27-f69c8f646f35\").or.when.valueInEncounter(\"bc4933fc-818e-42fa-a47c-67d327485536\").containsAnswerConceptName(\"a7b825b5-3c4d-4c9e-95a8-ab197806efe7\").matches();\n  \n  visibility = condition11 ;\n  \n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);\n};",
+      "declarativeRule" : [ {
+        "actions" : [ {
+          "actionType" : "showFormElement"
+        }, { } ],
+        "conditions" : [ {
+          "compoundRule" : {
+            "rules" : [ {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Whether the patient required referral",
+                "conceptUuid" : "bc4933fc-818e-42fa-a47c-67d327485536",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Urgent" ],
+                "answerConceptUuids" : [ "c453cc0e-44db-49e6-af27-f69c8f646f35" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            }, {
+              "lhs" : {
+                "type" : "concept",
+                "scope" : "encounter",
+                "conceptName" : "Whether the patient required referral",
+                "conceptUuid" : "bc4933fc-818e-42fa-a47c-67d327485536",
+                "conceptDataType" : "Coded"
+              },
+              "rhs" : {
+                "type" : "answerConcept",
+                "answerConceptNames" : [ "Semi - Urgent" ],
+                "answerConceptUuids" : [ "a7b825b5-3c4d-4c9e-95a8-ab197806efe7" ]
+              },
+              "operator" : "containsAnswerConceptName"
+            } ],
+            "conjunction" : "or"
+          }
+        } ]
+      } ],
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Referral"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

@@ -1,0 +1,253 @@
+[ {
+  "uuid" : "ad815bc3-87a2-4a0e-a3a5-83941b1acdfc",
+  "id" : 484,
+  "name" : "Home",
+  "description" : "",
+  "sections" : [ {
+    "uuid" : "e6d88506-ee7a-4cd8-a685-11fbcf6d5280",
+    "id" : 785,
+    "name" : "Status",
+    "description" : "",
+    "viewType" : "Tile",
+    "displayOrder" : 2.0,
+    "dashboardUUID" : "ad815bc3-87a2-4a0e-a3a5-83941b1acdfc",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "e5905474-9fb4-4f8f-98c8-d604d1abdec6",
+      "displayOrder" : 4.0,
+      "dashboardSectionUUID" : "e6d88506-ee7a-4cd8-a685-11fbcf6d5280",
+      "reportCardUUID" : "b966ef0a-9b95-4bb1-90a8-f490364ab93e",
+      "voided" : false
+    }, {
+      "uuid" : "e3b2c9be-2f96-48db-97a7-32efa9ec0744",
+      "displayOrder" : 5.0,
+      "dashboardSectionUUID" : "e6d88506-ee7a-4cd8-a685-11fbcf6d5280",
+      "reportCardUUID" : "402a1af8-019e-4cd1-98b8-48bc211d06f3",
+      "voided" : false
+    }, {
+      "uuid" : "ef633b82-49f1-488f-8196-aa97841e0018",
+      "displayOrder" : 2.0,
+      "dashboardSectionUUID" : "e6d88506-ee7a-4cd8-a685-11fbcf6d5280",
+      "reportCardUUID" : "bcb068b3-6c21-4f4e-80d9-f806568e843b",
+      "voided" : false
+    }, {
+      "uuid" : "8e1b6db0-089d-4df1-a199-9a0ccbfbc0f8",
+      "displayOrder" : 3.0,
+      "dashboardSectionUUID" : "e6d88506-ee7a-4cd8-a685-11fbcf6d5280",
+      "reportCardUUID" : "daab8aa5-de0b-47b9-9426-4641afb13c21",
+      "voided" : false
+    }, {
+      "uuid" : "9c2f8169-9eb1-48e2-93b1-6e7d83b9d5b9",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "e6d88506-ee7a-4cd8-a685-11fbcf6d5280",
+      "reportCardUUID" : "6c98beee-bf34-42e5-87f6-d6ea7e77409e",
+      "voided" : false
+    } ],
+    "voided" : false
+  }, {
+    "uuid" : "fcd01e9d-7011-43cf-9704-f28743d870e2",
+    "id" : 784,
+    "name" : "Individuals",
+    "description" : "",
+    "viewType" : "Tile",
+    "displayOrder" : 1.0,
+    "dashboardUUID" : "ad815bc3-87a2-4a0e-a3a5-83941b1acdfc",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "dbf20c2a-0666-40ff-a1c3-4146f4cbd249",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "fcd01e9d-7011-43cf-9704-f28743d870e2",
+      "reportCardUUID" : "be2d25b2-7bfa-41ec-8c3a-2fed529adf35",
+      "voided" : false
+    }, {
+      "uuid" : "7e5be446-0bbb-4523-b151-6e7517abf3e2",
+      "displayOrder" : 2.0,
+      "dashboardSectionUUID" : "fcd01e9d-7011-43cf-9704-f28743d870e2",
+      "reportCardUUID" : "c7746dbb-7ce0-42ae-9c7c-ed3afd24d5fe",
+      "voided" : false
+    }, {
+      "uuid" : "0e0d42e5-d8c9-4320-aa27-59ec1989dde6",
+      "displayOrder" : 4.0,
+      "dashboardSectionUUID" : "fcd01e9d-7011-43cf-9704-f28743d870e2",
+      "reportCardUUID" : "d86fb8e7-cc63-4df3-8183-ac4341018cca",
+      "voided" : false
+    }, {
+      "uuid" : "3272d63a-631c-498e-b196-cd0c2f7cb40d",
+      "displayOrder" : 3.0,
+      "dashboardSectionUUID" : "fcd01e9d-7011-43cf-9704-f28743d870e2",
+      "reportCardUUID" : "d3c88594-8911-4aac-9e15-26404d3d8d29",
+      "voided" : false
+    } ],
+    "voided" : false
+  } ],
+  "filters" : [ ],
+  "voided" : false
+}, {
+  "uuid" : "95f3a6c9-b984-4059-bfd4-5bbdbfb80d2e",
+  "id" : 486,
+  "name" : "Status",
+  "description" : "",
+  "sections" : [ {
+    "uuid" : "bb32ce7e-217c-4f69-ba51-e4b794409211",
+    "id" : 789,
+    "name" : "",
+    "description" : "",
+    "viewType" : "Tile",
+    "displayOrder" : 1.0,
+    "dashboardUUID" : "95f3a6c9-b984-4059-bfd4-5bbdbfb80d2e",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "6a37ce71-c267-4a60-b84e-1e6a0f9ace1c",
+      "displayOrder" : 2.0,
+      "dashboardSectionUUID" : "bb32ce7e-217c-4f69-ba51-e4b794409211",
+      "reportCardUUID" : "6c98beee-bf34-42e5-87f6-d6ea7e77409e",
+      "voided" : false
+    }, {
+      "uuid" : "29b3682a-59b0-48a1-9929-bdee32c51404",
+      "displayOrder" : 5.0,
+      "dashboardSectionUUID" : "bb32ce7e-217c-4f69-ba51-e4b794409211",
+      "reportCardUUID" : "b966ef0a-9b95-4bb1-90a8-f490364ab93e",
+      "voided" : false
+    }, {
+      "uuid" : "a3966732-16c6-479c-8b7b-bdcd48ee6093",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "bb32ce7e-217c-4f69-ba51-e4b794409211",
+      "reportCardUUID" : "402a1af8-019e-4cd1-98b8-48bc211d06f3",
+      "voided" : false
+    }, {
+      "uuid" : "a20a1b3e-2964-4c1c-b18a-f6fa14f627d5",
+      "displayOrder" : 3.0,
+      "dashboardSectionUUID" : "bb32ce7e-217c-4f69-ba51-e4b794409211",
+      "reportCardUUID" : "bcb068b3-6c21-4f4e-80d9-f806568e843b",
+      "voided" : false
+    }, {
+      "uuid" : "53e4c1ac-1359-4925-97d4-cdc8ede1b064",
+      "displayOrder" : 4.0,
+      "dashboardSectionUUID" : "bb32ce7e-217c-4f69-ba51-e4b794409211",
+      "reportCardUUID" : "daab8aa5-de0b-47b9-9426-4641afb13c21",
+      "voided" : false
+    } ],
+    "voided" : false
+  } ],
+  "filters" : [ ],
+  "voided" : true
+}, {
+  "uuid" : "55736e55-7add-419f-888e-ba7126feae2f",
+  "id" : 485,
+  "name" : "Monthly achievement",
+  "description" : "",
+  "sections" : [ {
+    "uuid" : "ad7913a7-e40e-42c3-aa43-8d47f01764d7",
+    "id" : 787,
+    "name" : "Enumerations",
+    "description" : "",
+    "viewType" : "Tile",
+    "displayOrder" : 1.0,
+    "dashboardUUID" : "55736e55-7add-419f-888e-ba7126feae2f",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "f11f1cd8-e73f-4a12-bbdf-aa2270a6a7aa",
+      "displayOrder" : 8.0,
+      "dashboardSectionUUID" : "ad7913a7-e40e-42c3-aa43-8d47f01764d7",
+      "reportCardUUID" : "f7e82800-f4e5-4a55-a468-74044a0e9f44",
+      "voided" : true
+    }, {
+      "uuid" : "019b5a2e-0145-48e3-940a-8a144c626e6f",
+      "displayOrder" : 6.0,
+      "dashboardSectionUUID" : "ad7913a7-e40e-42c3-aa43-8d47f01764d7",
+      "reportCardUUID" : "071ffccf-09a8-4866-a400-1457caa9cea0",
+      "voided" : true
+    }, {
+      "uuid" : "2bd8cbdc-4f19-4250-9900-615941ac53f1",
+      "displayOrder" : 2.0,
+      "dashboardSectionUUID" : "ad7913a7-e40e-42c3-aa43-8d47f01764d7",
+      "reportCardUUID" : "318e1134-69be-4fd8-b5d0-5d32943b41c1",
+      "voided" : false
+    }, {
+      "uuid" : "b21a98ee-bf8d-4f26-a851-10c5035de96c",
+      "displayOrder" : 5.0,
+      "dashboardSectionUUID" : "ad7913a7-e40e-42c3-aa43-8d47f01764d7",
+      "reportCardUUID" : "ac2cfc27-e673-4d3d-a4cc-7511f854050a",
+      "voided" : true
+    }, {
+      "uuid" : "dda58a67-afc0-4404-ab09-9ba09adbf0bb",
+      "displayOrder" : 4.0,
+      "dashboardSectionUUID" : "ad7913a7-e40e-42c3-aa43-8d47f01764d7",
+      "reportCardUUID" : "24a05c91-dc83-45c0-846d-9f4b802a0828",
+      "voided" : true
+    }, {
+      "uuid" : "4bacc8d5-2c8c-4a85-9271-89d735909738",
+      "displayOrder" : 3.0,
+      "dashboardSectionUUID" : "ad7913a7-e40e-42c3-aa43-8d47f01764d7",
+      "reportCardUUID" : "786054ee-f695-453d-bdab-c10a55afe8d4",
+      "voided" : true
+    }, {
+      "uuid" : "c12d7826-0218-4806-872b-64a5ec845517",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "ad7913a7-e40e-42c3-aa43-8d47f01764d7",
+      "reportCardUUID" : "1c1a79e7-b94f-472f-a861-a7a0e2f1b79f",
+      "voided" : false
+    }, {
+      "uuid" : "ea70bddb-801c-4f2e-96cb-b21c03a8c1f8",
+      "displayOrder" : 7.0,
+      "dashboardSectionUUID" : "ad7913a7-e40e-42c3-aa43-8d47f01764d7",
+      "reportCardUUID" : "40f38f47-7542-4504-89f5-e51196d3e9a5",
+      "voided" : true
+    } ],
+    "voided" : false
+  }, {
+    "uuid" : "1b0ee4a0-b086-47c6-b2ab-a5b47ffe3a83",
+    "id" : 786,
+    "name" : "Scheme",
+    "description" : "",
+    "viewType" : "Tile",
+    "displayOrder" : 3.0,
+    "dashboardUUID" : "55736e55-7add-419f-888e-ba7126feae2f",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "e7ef621d-b230-47e1-bb0a-14d1006efcef",
+      "displayOrder" : 2.0,
+      "dashboardSectionUUID" : "1b0ee4a0-b086-47c6-b2ab-a5b47ffe3a83",
+      "reportCardUUID" : "40f38f47-7542-4504-89f5-e51196d3e9a5",
+      "voided" : false
+    }, {
+      "uuid" : "d30fbab9-ef59-42c8-ba9d-555dba7adbe0",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "1b0ee4a0-b086-47c6-b2ab-a5b47ffe3a83",
+      "reportCardUUID" : "071ffccf-09a8-4866-a400-1457caa9cea0",
+      "voided" : false
+    }, {
+      "uuid" : "28659df6-93e6-4aaf-a87d-9b9bed199b1d",
+      "displayOrder" : 3.0,
+      "dashboardSectionUUID" : "1b0ee4a0-b086-47c6-b2ab-a5b47ffe3a83",
+      "reportCardUUID" : "f7e82800-f4e5-4a55-a468-74044a0e9f44",
+      "voided" : false
+    } ],
+    "voided" : false
+  }, {
+    "uuid" : "bf6ce827-d607-4076-b46f-e2339359c7aa",
+    "id" : 788,
+    "name" : "KYC",
+    "description" : "",
+    "viewType" : "Tile",
+    "displayOrder" : 2.0,
+    "dashboardUUID" : "55736e55-7add-419f-888e-ba7126feae2f",
+    "dashboardSectionCardMappings" : [ {
+      "uuid" : "d2f6e557-3f5d-486f-b268-2ef8244defc7",
+      "displayOrder" : 3.0,
+      "dashboardSectionUUID" : "bf6ce827-d607-4076-b46f-e2339359c7aa",
+      "reportCardUUID" : "ac2cfc27-e673-4d3d-a4cc-7511f854050a",
+      "voided" : false
+    }, {
+      "uuid" : "318652ea-af69-472b-8c2a-063c4f3ddca7",
+      "displayOrder" : 1.0,
+      "dashboardSectionUUID" : "bf6ce827-d607-4076-b46f-e2339359c7aa",
+      "reportCardUUID" : "786054ee-f695-453d-bdab-c10a55afe8d4",
+      "voided" : false
+    }, {
+      "uuid" : "5c5468a5-0341-46fe-868c-49a0de14f1f8",
+      "displayOrder" : 2.0,
+      "dashboardSectionUUID" : "bf6ce827-d607-4076-b46f-e2339359c7aa",
+      "reportCardUUID" : "24a05c91-dc83-45c0-846d-9f4b802a0828",
+      "voided" : false
+    } ],
+    "voided" : false
+  } ],
+  "filters" : [ ],
+  "voided" : true
+} ]
