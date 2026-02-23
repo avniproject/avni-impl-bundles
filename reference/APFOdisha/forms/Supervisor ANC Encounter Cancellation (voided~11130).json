@@ -1,8 +1,0 @@
-{
-  "name" : "Supervisor ANC Encounter Cancellation (voided~11130)",
-  "uuid" : "0dfb63f5-5b72-4fc2-8063-01a507876bfa",
-  "formType" : "ProgramEncounterCancellation",
-  "formElementGroups" : [ ],
-  "decisionConcepts" : [ ],
-  "voided" : true
-}

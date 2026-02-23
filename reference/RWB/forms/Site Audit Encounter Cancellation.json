@@ -1,7 +1,0 @@
-{
-  "name" : "Site Audit Encounter Cancellation",
-  "uuid" : "8ec9b1b1-f428-4ad2-a77b-bf5b8751e791",
-  "formType" : "IndividualEncounterCancellation",
-  "formElementGroups" : [ ],
-  "decisionConcepts" : [ ]
-}

@@ -1,0 +1,97 @@
+{
+  "name" : "Default Program Encounter Cancellation Form",
+  "uuid" : "aac5c57a-aa01-49bb-ad20-70536dd2907f",
+  "formType" : "ProgramEncounterCancellation",
+  "formElementGroups" : [ {
+    "uuid" : "32fb721e-a825-4f94-97af-27894bd39720",
+    "name" : "Cancel Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Cancel reason",
+      "uuid" : "1cbcd6a6-1ef1-410b-926e-754011d22a58",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Visit cancel reason",
+        "uuid" : "739f9a56-c02c-4f81-927b-69842d78c1e8",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "In village but not coming to phulwari",
+          "uuid" : "3a9184e7-bc15-4646-8048-9503b3d5a10d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Absent",
+          "uuid" : "10885638-561a-42b6-8b24-8daa01864c89",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Program exit",
+          "uuid" : "51dfd71b-1b06-4477-9ca3-f88acbafc0db",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sick",
+          "uuid" : "64f8a277-cd87-4e98-8667-c40f54c76cf6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Away from village",
+          "uuid" : "72fd70f8-65ae-4ac4-8339-6faf455e04f5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Other reason",
+      "uuid" : "1a04eae4-cb00-4cf9-ae7a-fd080ad637f9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other reason for cancelling",
+        "uuid" : "f23251e2-68c6-447b-84c2-285d61e95f0f",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const programEncounter = params.entity;\n  const formElement = params.formElement;\n  const cancelReasonObs = programEncounter.findCancelEncounterObservation('Visit cancel reason');\n  const answer = cancelReasonObs && cancelReasonObs.getReadableValue();\n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, answer === 'Other');\n};",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Cancel Details"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({params, imports}) => {\n    const programEncounter = params.entity;\n    let visitCancelReason = programEncounter.findCancelEncounterObservationReadableValue('Visit cancel reason');\n    if (visitCancelReason === 'Program exit') {\n        return [];\n    }\n    \n    const encounterTypeName = programEncounter.encounterType.name;\n    const moment = imports.moment;\n    const _ = imports.lodash;\n    if (encounterTypeName === 'Anthropometry Assessment') {\n        const myGroups = programEncounter.programEnrolment.individual.groups;\n        if (!programEncounter.programEnrolment.isActive || _.isEmpty(myGroups)) {\n            return [];\n        }\n        const groupSubject = _.get(_.find(myGroups, g => !g.voided && g.groupSubject.subjectType.name === 'Phulwari'), 'groupSubject');\n        const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({\n            programEnrolment: programEncounter.programEnrolment\n        });\n        const scheduledDateTime = programEncounter.earliestVisitDateTime;\n        const scheduledDate = moment(scheduledDateTime).date();\n        const dayOfMonth = groupSubject.getObservationReadableValue(\"Day of month for growth monitoring visit\");\n        var monthForNextVisit = moment(scheduledDateTime).month() != 11 ? moment(scheduledDateTime).month() + 1 : 0;\n    \n        //const monthForNextVisit = scheduledDate < dayOfMonth ? moment(scheduledDateTime).month() : moment(scheduledDateTime).month() + 1;\n        var earliestDate = moment(scheduledDateTime).month(monthForNextVisit).date(dayOfMonth).toDate();\n        if (moment(earliestDate).month() !== monthForNextVisit) {\n        earliestDate = moment(scheduledDateTime).add(1, 'M').endOf('month').toDate();\n        }else {\n        earliestDate = moment(scheduledDateTime).add(1, 'M').date(dayOfMonth).toDate();\n        }\n        const maxDate = moment(scheduledDateTime).month(monthForNextVisit).date(dayOfMonth).add(3, 'days').toDate();\n        \n        scheduleBuilder.add({\n                name: \"Growth Monitoring Visit\",\n                encounterType: \"Anthropometry Assessment\",\n                earliestDate: earliestDate,\n                maxDate: maxDate\n            }\n        );\n        return scheduleBuilder.getAllUnique(\"encounterType\");\n    } else if (encounterTypeName === 'Albendazole') {\n        const FEB = 1;\n        const AUG = 7;\n        const findSlot = (anyDate) => {\n            anyDate = moment(anyDate).startOf('day').toDate();\n            if (moment(anyDate).month() < FEB) {\n                return moment(anyDate).startOf('month').month(FEB).toDate();\n            }\n            if (moment(anyDate).month() === FEB) {\n                return anyDate;\n            }\n            if (moment(anyDate).month() < AUG) {\n                return moment(anyDate).startOf('month').month(AUG).toDate();\n            }\n            if (moment(anyDate).month() === AUG) {\n                return anyDate;\n            }\n            return moment(anyDate).add(1, 'year').month(FEB).startOf('month').toDate();\n        };\n\n        const getVisitSchedule = (_earliestDate) => {\n            let earliestDate = moment(_earliestDate).startOf('day').toDate();\n            let maxDate = moment(earliestDate).endOf('month').toDate();\n            if (moment(_earliestDate).month() === FEB) {\n                return {\n                    name: 'Albendazole FEB',\n                    encounterType: 'Albendazole',\n                    earliestDate,\n                    maxDate,\n                }\n            }\n            return {\n                name: 'Albendazole AUG',\n                encounterType: 'Albendazole',\n                earliestDate,\n                maxDate,\n            }\n        };\n\n        const findNextSlot = (currentVisitScheduledDate) => {\n            let guessedDate = moment(currentVisitScheduledDate).startOf('month').add(1, 'months').startOf('day').toDate();\n            return findSlot(guessedDate);\n        };\n\n        const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({\n            programEncounter,\n            programEnrolment: programEncounter.programEnrolment\n        });\n        const visitSchedule = getVisitSchedule(findNextSlot(programEncounter.earliestVisitDateTime));\n        if (moment().isSameOrBefore(visitSchedule.maxDate, 'day')) {\n            scheduleBuilder.add(visitSchedule);\n        }\n        return scheduleBuilder.getAllUnique(\"encounterType\");\n    }\n    return [];\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

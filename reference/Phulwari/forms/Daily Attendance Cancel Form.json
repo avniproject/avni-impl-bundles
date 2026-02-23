@@ -1,0 +1,65 @@
+{
+  "name" : "Daily Attendance Cancel Form",
+  "uuid" : "f1d8716c-2f3e-41bf-8f09-f6f234017898",
+  "formType" : "IndividualEncounterCancellation",
+  "formElementGroups" : [ {
+    "uuid" : "4be784ee-9d3a-4cbf-b7b2-3744999782e7",
+    "name" : "Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Reason for cancelling Phulwari Attendance",
+      "uuid" : "2ae820d3-3a8f-4b7a-85a6-28f5c8e7c518",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Reason for cancelling Phulwari Attendance",
+        "uuid" : "b1abaaa9-3808-464f-8cec-2c5e17493419",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Phulwari is closed",
+          "uuid" : "44ad0c12-3fd4-4cb3-aa73-a382b3263442",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Other reason for cancelling Phulwari Attendance",
+      "uuid" : "e51ba2d6-838f-4677-9aa8-15175ce11502",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other reason for cancelling Phulwari Attendance",
+        "uuid" : "e8068409-a8cd-4ea5-9a6b-63accfc8a53a",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  const reason=encounter.findCancelEncounterObservationReadableValue('Reason for cancelling Phulwari Attendance');\n  var check=_.isEqual(reason,'Other');\n  statusBuilder.show().whenItem(check).is.truthy;\n return statusBuilder.build();\n};",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Details"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "\"use strict\";\n({ params, imports }) => {\n  const encounter = params.entity;\n  const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({\n    encounter\n  });\n  \n let earliestVisitDate = imports.moment(encounter.earliestVisitDateTime).add(1, 'days').toDate();\n let weekDayName =  imports.moment(earliestVisitDate).format('ddd');\n  \n  if(_.isEqual(weekDayName,'Sun')){\n   earliestVisitDate = imports.moment(encounter.earliestVisitDateTime).add(2, 'days').toDate();\n     weekDayName =  imports.moment(earliestVisitDate).format('ddd');\n   }\n  \n  scheduleBuilder.add({\n                name: \"Daily Attendance\" +' -'+weekDayName,\n                encounterType: \"Daily Attendance Form\",\n                earliestDate: earliestVisitDate,\n                maxDate: earliestVisitDate\n            }\n        );\n        \n  return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

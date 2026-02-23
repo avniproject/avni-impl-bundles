@@ -1,7 +1,0 @@
-{
-  "name" : "Work order endline Encounter Cancellation",
-  "uuid" : "a15cc00d-6d02-4bb6-b0e8-d3bad95c085f",
-  "formType" : "IndividualEncounterCancellation",
-  "formElementGroups" : [ ],
-  "decisionConcepts" : [ ]
-}

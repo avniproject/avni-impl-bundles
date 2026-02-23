@@ -1,0 +1,15 @@
+[ {
+  "name" : "Phulwari",
+  "uuid" : "352d906c-b386-496c-ba23-91b1468a5613",
+  "colour" : "darkorange",
+  "voided" : false,
+  "active" : null,
+  "enrolmentEligibilityCheckRule" : null,
+  "enrolmentSummaryRule" : "'use strict';\n({params, imports}) =>  {\n    const summary = [];\n    const _ = imports.lodash;\n    const summaryForObservation = function (conceptName, programEnrolment, summary) {\n        let observationValue = programEnrolment.findLatestObservationInEntireEnrolment(conceptName);\n        if (!_.isNil(observationValue)) {\n            summary.push({name: conceptName, value: observationValue.getValue()});\n        }\n    };\n    const programEnrolment = params.programEnrolment;\n    summaryForObservation(\"Weight for age z-score\", programEnrolment, summary);\n    summaryForObservation(\"Weight for age Grade\", programEnrolment, summary);\n    summaryForObservation(\"Weight for age Status\", programEnrolment, summary);\n\n    summaryForObservation(\"Height for age z-score\", programEnrolment, summary);\n    summaryForObservation(\"Height for age Grade\", programEnrolment, summary);\n    summaryForObservation(\"Height for age Status\", programEnrolment, summary);\n\n    summaryForObservation(\"Weight for height z-score\", programEnrolment, summary);\n    summaryForObservation(\"Weight for Height Status\", programEnrolment, summary);\n    return summary;\n};",
+  "enrolmentEligibilityCheckDeclarativeRule" : null,
+  "manualEligibilityCheckRequired" : false,
+  "showGrowthChart" : true,
+  "manualEnrolmentEligibilityCheckRule" : null,
+  "manualEnrolmentEligibilityCheckDeclarativeRule" : null,
+  "allowMultipleEnrolments" : false
+} ]

@@ -1,8 +1,0 @@
-{
-  "name" : "Immunization Encounter Cancellation (voided~3243)",
-  "uuid" : "67e7b033-f9ac-41ea-8911-58d5ac12d558",
-  "formType" : "ProgramEncounterCancellation",
-  "formElementGroups" : [ ],
-  "decisionConcepts" : [ ],
-  "voided" : true
-}

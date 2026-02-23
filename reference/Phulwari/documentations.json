@@ -1,0 +1,11 @@
+[ {
+  "uuid" : "9268da09-7a8d-4bac-904a-a3b46c5f5211",
+  "name" : "Reason for being absent",
+  "documentationItems" : [ {
+    "uuid" : "402e2230-7bd3-417f-9ebf-aad579984775",
+    "content" : "{\"blocks\":[{\"key\":\"b19vj\",\"text\":\"Please give a detailed explaination of the reason for absent\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+    "contentHtml" : "<p>Please give a detailed explaination of the reason for absent</p>\n",
+    "language" : "en",
+    "documentationUUID" : "9268da09-7a8d-4bac-904a-a3b46c5f5211"
+  } ]
+} ]

@@ -1,7 +1,0 @@
-{
-  "name" : "Endline Encounter Cancellation",
-  "uuid" : "20280eac-9812-4813-8e3b-e5b6f0368e04",
-  "formType" : "IndividualEncounterCancellation",
-  "formElementGroups" : [ ],
-  "decisionConcepts" : [ ]
-}

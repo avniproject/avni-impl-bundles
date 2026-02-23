@@ -1,0 +1,14 @@
+[ {
+  "uuid" : "2c2ad998-9b55-4294-86d7-0dbe1ae9511e",
+  "id" : 3359,
+  "name" : "Everyone",
+  "notEveryoneGroup" : false
+}, {
+  "uuid" : "5a61f909-b715-46a2-a1e9-358c0613845f",
+  "id" : 3361,
+  "name" : "Coordinators"
+}, {
+  "uuid" : "25b2fb25-242a-4e70-b301-a4629df2ccce",
+  "id" : 3838,
+  "name" : "Metabase Users"
+} ]

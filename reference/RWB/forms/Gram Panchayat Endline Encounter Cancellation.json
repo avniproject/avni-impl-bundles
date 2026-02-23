@@ -1,7 +1,0 @@
-{
-  "name" : "Gram Panchayat Endline Encounter Cancellation",
-  "uuid" : "3d322016-2d78-4751-9b84-b4b11ecda053",
-  "formType" : "IndividualEncounterCancellation",
-  "formElementGroups" : [ ],
-  "decisionConcepts" : [ ]
-}

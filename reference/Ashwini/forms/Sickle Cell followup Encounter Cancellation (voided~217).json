@@ -1,8 +1,0 @@
-{
-  "name" : "Sickle Cell followup Encounter Cancellation (voided~217)",
-  "uuid" : "6affc23b-156f-4762-a578-1d142f23d088",
-  "formType" : "ProgramEncounterCancellation",
-  "formElementGroups" : [ ],
-  "decisionConcepts" : [ ],
-  "voided" : true
-}

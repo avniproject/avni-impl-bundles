@@ -1,7 +1,0 @@
-{
-  "name" : "Medical Facilitation for QRT Encounter Cancellation",
-  "uuid" : "b2cdb6fd-70ff-47e3-8835-df6757a7d7cd",
-  "formType" : "ProgramEncounterCancellation",
-  "formElementGroups" : [ ],
-  "decisionConcepts" : [ ]
-}

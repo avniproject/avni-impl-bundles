@@ -1,8 +1,0 @@
-{
-  "name" : "TB followup Encounter Cancellation (voided~223)",
-  "uuid" : "e67a89ed-ad17-47b4-81f8-9ddf3e7f50b2",
-  "formType" : "ProgramEncounterCancellation",
-  "formElementGroups" : [ ],
-  "decisionConcepts" : [ ],
-  "voided" : true
-}

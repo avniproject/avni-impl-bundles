@@ -1,7 +1,0 @@
-{
-  "name" : "Farmer Endline Encounter Cancellation",
-  "uuid" : "f6320a85-a287-46a6-b8ef-b510e3cb9271",
-  "formType" : "IndividualEncounterCancellation",
-  "formElementGroups" : [ ],
-  "decisionConcepts" : [ ]
-}

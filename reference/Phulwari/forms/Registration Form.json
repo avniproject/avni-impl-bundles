@@ -1,0 +1,1231 @@
+{
+  "name" : "Registration Form",
+  "uuid" : "e0b78ca2-1205-4e84-9f9b-d97c9b78a917",
+  "formType" : "IndividualProfile",
+  "formElementGroups" : [ {
+    "uuid" : "81c6d146-9904-42e5-bf35-d6ec9614b2c0",
+    "name" : "Address Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Mohalla",
+      "uuid" : "1b2af780-1b37-4d92-9851-735a7a038204",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Mohalla",
+        "uuid" : "3d95a3b6-b6a2-4335-a680-e14095cd9dfb",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Gram Panchayat",
+      "uuid" : "539a94bd-8cd0-4c5f-a8a3-94a62c29e17e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Gram Panchayat",
+        "uuid" : "9a598e4d-0be1-47e4-a5a8-a4b66f373fd1",
+        "dataType" : "Location",
+        "answers" : [ ],
+        "active" : true,
+        "keyValues" : [ {
+          "key" : "isWithinCatchment",
+          "value" : true
+        }, {
+          "key" : "lowestAddressLevelTypeUUIDs",
+          "value" : [ "29fc16df-778a-4181-874e-2b91e40191a5" ]
+        }, {
+          "key" : "highestAddressLevelTypeUUID",
+          "value" : "27659508-6e8b-4552-b8ee-044093209413"
+        } ],
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const formElement = params.formElement;\n  return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, individual.lowestAddressLevel.uuid);\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Gram Panchayat",
+      "uuid" : "d95addb4-137d-4181-8b49-a5fb46f8a66f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Gram panchayat",
+        "uuid" : "d6bb1543-0c1c-4c01-bd47-3883701d945b",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Duradhar",
+          "uuid" : "01c7a2b5-2325-476b-a161-11c9832b48a6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "Batiya,Duradhar,Thunguni"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Tarang",
+          "uuid" : "86652a24-9064-40ae-9a3b-890ad8af13bd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 25.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "Payari,Tarang"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Badi Tumi",
+          "uuid" : "d487c162-d25e-4c8b-a047-eab51629d06c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "Dabhaniya,Badi Tumi,Chirpani"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Khamroud",
+          "uuid" : "593dd7ac-c9ca-493d-a4fe-5fdc84c84dfb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 14.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "Piparaha (Near Chaura Dadar),Chatua (Anuppur),Tankitola,Katurdona,Khalebhanvar,Khamroud Village"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Gijri",
+          "uuid" : "d8cf2f07-65c0-45dc-b0c9-6f8fc90851a2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 27.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "Gijri,Amoda,Bijora"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 32.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Medakhar",
+          "uuid" : "842951a2-95df-4edc-a850-ba0480721322",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 32.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "Uprikhurd"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Ahirgawan",
+          "uuid" : "c6e3c748-a2c2-4663-af41-48bdb9e7fa12",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "Ahirgawan,Tarera,Sital pani,Daldali"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Karoundapani",
+          "uuid" : "079eb40b-8c22-4ee4-99c3-6dcd0336fd25",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 31.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "Debridadar,Doomartola,Navatola"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Gondi",
+          "uuid" : "dbdf5abf-fda2-4d59-9d21-42a2c6efeb9b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 31.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "Pakripani,Pakhatola"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Mithu mahua",
+          "uuid" : "dc42945d-90f4-4160-9f28-c99399481c84",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 18.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "Dona,Jaithari,Mithu mahua,Tithi"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Karpa",
+          "uuid" : "073ff2ed-1474-462d-a9c3-0d2a6581f441",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 12.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "temp8,Konhatola"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Ufrikala",
+          "uuid" : "98a3d527-7d39-45a8-b81d-a080f93e23e9",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 26.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "temp14,Bhuratola,Bartola,Ufrikala"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Salar Gondi",
+          "uuid" : "5d3f7b1c-c769-4c39-87e9-2cbd645ce3b0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 30.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "Salar Gondi,Sarai Paterra"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Gonda",
+          "uuid" : "7c6c2d06-e426-403d-a590-7988f59cc997",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 11.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "temp7"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Kodar",
+          "uuid" : "eab32ed0-6e08-48fe-b987-106f0d11cdfa",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 15.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "Udal,Kodar Village,Dadra Silvari,Neeche Silvari"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Nogawan",
+          "uuid" : "47016656-fde5-4910-b9e5-0f51d82d69c3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 20.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "temp11"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Ledra",
+          "uuid" : "efa85385-38a5-4ee8-8d71-7445513abbe3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 17.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "temp9"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Salargondi",
+          "uuid" : "1ce44b9d-bd19-4039-b645-ab24130a7b9e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 35.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "Salargondi,Harradadar"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Ledhra",
+          "uuid" : "f6079f20-d647-4e5f-a7bf-829ed80eacd4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 33.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "Ledhra"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Padmania",
+          "uuid" : "624666b1-9b1d-4512-9930-e5cbc9f38ded",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 21.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "Kui,Padmania Village"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Sarai",
+          "uuid" : "da30db67-8777-4e8b-9009-190d947db4f0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 23.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "Sarai (Near Tarang),Khosurgod"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Sarfa",
+          "uuid" : "fa729199-f789-4939-826d-36c7a5aa7124",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 24.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "Sarfa,Khirni"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Khumni",
+          "uuid" : "5ab7807d-f295-41e3-8b5a-094006b5b103",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 16.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "Khumni,BulhuPani"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Bijapuri No.2",
+          "uuid" : "f1405014-08cf-4a1f-a8e1-e586a213b0b3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 29.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "Bijapuri No.2,Jarhi (near Godhantola)"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Dhanpuri",
+          "uuid" : "43e95843-d1b7-42cf-bc04-be0f68cd2d01",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "temp5"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Lamsarai",
+          "uuid" : "618212a2-bbc3-484b-8bd9-48f851baa642",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 29.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "Ghurritola,Karoundi,Lamsarai (Near Ahirwar),Lamsarai (Near Keshwani)"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Bijapuri 2",
+          "uuid" : "a83983d1-3fe0-4d50-98f3-3d5f767ca9f3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 28.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "Adwar,Hathbandha,Jairhi"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Dudhmania",
+          "uuid" : "b2a0f857-82f0-4e1f-b0f0-08917107aca8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 10.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "temp6,Dudhmania,Jarwahi"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Bijouri",
+          "uuid" : "0237e91a-d8ee-4ed4-9459-f29aa5b197df",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "temp2"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Kharsol",
+          "uuid" : "1d94d868-4093-489f-889b-a9b6c8f51cd4",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 13.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "Kharsol,Majhauli"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Ataria",
+          "uuid" : "d88638b9-2048-4b68-8998-17a5330a1457",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "temp1"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Nagula",
+          "uuid" : "63879021-7aad-45b7-83fe-7c4b89acb617",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 19.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "temp10,Bicharpur,Manjhetola"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Padri",
+          "uuid" : "55d10b93-0d65-4fc9-b127-a82223fb20e1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 22.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "temp12,temp13,Padri (near Chaura Dadar),Bakantola"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Chiliamar",
+          "uuid" : "50b881db-ba95-463d-b80f-0556387fa227",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "temp4,Belapani"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Alwar",
+          "uuid" : "026756a0-87b1-4aff-b10d-48ecf5144613",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "Ghata,Chottibairagi,Badibairagi,Alwar Village"
+          } ],
+          "media" : [ ]
+        }, {
+          "name" : "Chandania",
+          "uuid" : "72754013-a45d-496c-bd55-07d8f110b779",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "temp3,Picharwahi"
+          } ],
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const individual = params.entity;\n    const formElement = params.formElement;\n    const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({individual, formElement});\n    var allGrampanchayat = formElement.concept.getAnswers();\n    const village = individual.lowestAddressLevel.name;\n    const grampanchayatToRemove = [];\n    const _ = imports.lodash;\n    _.forEach(allGrampanchayat, grampanchayat => {\n        const grampanchayatVillage = grampanchayat.concept.recordValueByKey('village');\n        if (grampanchayatVillage && !_.includes(grampanchayatVillage.split(','), village)) {\n            grampanchayatToRemove.push(grampanchayat)\n        }\n    });\n    statusBuilder.skipAnswers.apply(statusBuilder, grampanchayatToRemove);\n    return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Other Gram panchayat (Please specify)",
+      "uuid" : "4bca7345-4676-402b-91e4-0cd9e483050c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other Gram panchayat",
+        "uuid" : "d7e88b8c-77c0-4643-a852-4398d681d37f",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({individual, formElement});\n  statusBuilder.show().when.valueInRegistration(\"Gram panchayat\").containsAnswerConceptName(\"Other\");\n  return statusBuilder.build();\n};",
+      "voided" : true,
+      "mandatory" : true
+    } ],
+    "voided" : true,
+    "timed" : false,
+    "display" : "Address Details"
+  }, {
+    "uuid" : "a3a20e49-ef6c-4748-9cf3-c01ed9c8bdd8",
+    "name" : "Personal Details",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Birth Order",
+      "uuid" : "a98eafb0-3a88-493e-87e2-25718d24dd54",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Birth Order",
+        "uuid" : "c218b516-a47f-411a-ad82-c3f1f446d9b0",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Father's Name",
+      "uuid" : "45668f20-0429-4869-a97f-e3be3b1e7c3e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Father's Name",
+        "uuid" : "cc4e6c8f-99ea-4d47-a672-a6e5b513806d",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Mother's Name",
+      "uuid" : "07bacf0e-206b-4bdb-ba29-179e95380c3f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Mother's Name",
+        "uuid" : "36525e7b-575f-4b34-aae8-9a031adb84eb",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Father's Occupation",
+      "uuid" : "d3748d28-5e95-49e5-8743-cfefb5fb4cd4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Father's Occupation",
+        "uuid" : "fb3214f4-d040-40bc-bd38-883ad5e0cae7",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Business",
+          "uuid" : "945dc6ea-f049-484a-b333-14acfe1de7e6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Farming",
+          "uuid" : "3767fd62-be7e-4d39-b3ae-05e88d4f5c21",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Don't know",
+          "uuid" : "a032ffce-c9f5-46f8-b89d-f82d5e91fc45",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Job",
+          "uuid" : "4416a93c-38e8-4bc9-b440-00fa79d04914",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Labour",
+          "uuid" : "54eb4ba3-e940-4d36-ba56-d303f066c088",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Mother's Occupation",
+      "uuid" : "e4b88091-20af-4438-9632-1a25cc1142b2",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Mother's Occupation",
+        "uuid" : "dc9882a4-ceff-4dc9-b6fc-3e2ba7e9b197",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Job",
+          "uuid" : "4416a93c-38e8-4bc9-b440-00fa79d04914",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Labour",
+          "uuid" : "54eb4ba3-e940-4d36-ba56-d303f066c088",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Business",
+          "uuid" : "945dc6ea-f049-484a-b333-14acfe1de7e6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Don't know",
+          "uuid" : "a032ffce-c9f5-46f8-b89d-f82d5e91fc45",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Housework",
+          "uuid" : "3e7e80cc-1744-4292-a34f-1beff9dd2316",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Farming",
+          "uuid" : "3767fd62-be7e-4d39-b3ae-05e88d4f5c21",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Mother's Education",
+      "uuid" : "930668c9-73b9-4dbe-b2cf-5f4f8ef9a223",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Mother's education Level",
+        "uuid" : "ffd6b888-b2b5-4fcb-82fc-1f81c4c5e620",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Post Graduate",
+          "uuid" : "b54ddb89-e686-4576-a5e2-5ac2999cd2c7",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Literate",
+          "uuid" : "13ca5a58-9aa3-4c84-a0f5-1cae268fa4bd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Graduate",
+          "uuid" : "ca03f17e-07bb-440b-a9e3-f8fdfe0b9389",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Primary",
+          "uuid" : "8fd06d73-aba5-40fe-a92d-32b6bba2e1bd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Secondary",
+          "uuid" : "e117bee2-f823-4e46-803f-1667c4c3e7cf",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Uneducated",
+          "uuid" : "516640f1-df7f-4746-b71a-0698e8ac29e3",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Caste",
+      "uuid" : "3d02f8f9-fae1-4d80-8f48-1d8bf3c5ab3e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Caste Category",
+        "uuid" : "61ab6413-5c6a-4512-ab6e-7d5cd1439569",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "SC",
+          "uuid" : "a3519a96-350e-4da4-90d9-827c0ff15538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "ST",
+          "uuid" : "dd076e03-68ae-4b53-adf6-641c69b9a518",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "General",
+          "uuid" : "cae99772-b389-4baf-849b-9c7c2b06c951",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "OBC",
+          "uuid" : "e92925ed-4a15-40c0-a0a7-a21c965dad48",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Sub caste",
+      "uuid" : "6a13af65-96c1-4387-9872-1f80cead9ddb",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Sub Caste",
+        "uuid" : "00c7aa50-aabb-465f-be09-408c94734004",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Baiga",
+          "uuid" : "2265b559-682f-427b-9b32-7039995f3b4e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Gond",
+          "uuid" : "9fad61f4-56b4-4ae8-8500-1012fe26eefd",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yadav",
+          "uuid" : "7d571208-03b8-4eac-9ff8-cd9b3db2070a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Nayak",
+          "uuid" : "9dd331a7-568f-43f4-9884-0258ed94c346",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Ahirwar",
+          "uuid" : "2e889b9c-c0ff-4076-a74a-4d84fa20fbdb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Vishwakarma",
+          "uuid" : "5d3c258a-05a5-4fff-b87a-081591012375",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Panika",
+          "uuid" : "301e4561-261a-4b55-bc2e-3a969bf5d0a5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "keyValues" : [ {
+            "key" : "village",
+            "value" : "Ahirgawan"
+          } ],
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Other sub caste (please specify)",
+      "uuid" : "f8f87b7c-8b62-4e5d-867f-c0b34b6074c4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other sub caste",
+        "uuid" : "1f605949-1359-49aa-8d04-ac5f653864c7",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({individual, formElement});\n  statusBuilder.show().when.valueInRegistration(\"Sub Caste\").containsAnswerConceptName(\"Other\");\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Personal Details"
+  }, {
+    "uuid" : "600d3e05-756b-4bf4-803c-004fac749531",
+    "name" : "Socio-Economic Details",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Any owned land?",
+      "uuid" : "6d8cfcad-2bd6-45c8-9950-8ff039567e2d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Land possession",
+        "uuid" : "6a0d80bf-e271-4012-a8e1-9d9c91b18a14",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Land area",
+      "uuid" : "5e2e1ec2-75b7-4b99-80d7-14353f796305",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Land Area",
+        "uuid" : "6a6b6d30-45f3-4076-a108-0514aabe3886",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({individual, formElement});\n  statusBuilder.show().when.valueInRegistration(\"Land possession\").containsAnswerConceptName(\"Yes\");\n  return statusBuilder.build();\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Type of residence",
+      "uuid" : "4fe4bfde-8968-40bf-8f29-87021c68f3c7",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Type of residence",
+        "uuid" : "f1aec43b-c985-442a-97dd-70cbe00e3643",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Aadha kacha pakka",
+          "uuid" : "8e7eee58-19a7-4189-a29b-a90c801765ba",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Kaccha",
+          "uuid" : "a7466416-d7e5-491a-b980-2526e09dac17",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Pakka",
+          "uuid" : "b808c44a-a417-4816-ad0b-cde680f2124a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Religion",
+      "uuid" : "8b119d96-5978-4e0c-98bd-cc1ca7696357",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Religion",
+        "uuid" : "c922c13c-1fa2-42dd-a7e8-d234b0324870",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Sikh",
+          "uuid" : "9e791139-2d68-45b3-81b6-78e8c3ba9662",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Hindu",
+          "uuid" : "5f1f8a86-478b-4e7b-ae5e-ac7b207e65b8",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Muslim",
+          "uuid" : "2e41ff7c-13ad-4bb3-964a-29f098691a7d",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Jain",
+          "uuid" : "1819bf5a-775c-4f28-af9e-650dbc5e0570",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Christian",
+          "uuid" : "48daa405-dcdb-4706-9dbd-a54562012331",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Economic Status",
+      "uuid" : "91f28fbd-e096-4c3b-98f4-a29325031b91",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Ration Card",
+        "uuid" : "476a0b71-485b-4a0a-ba6f-4f3cf13568ca",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Antyodaya",
+          "uuid" : "eace7aa2-8444-4c43-b5aa-8b5ec0b19a20",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "BPL",
+          "uuid" : "5c9f10e3-3e20-4a3b-a971-f43b40dd017c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "APL",
+          "uuid" : "36008c2c-7748-426d-9784-ffc5a267db07",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Any property?",
+      "uuid" : "424b7436-4eaa-400b-9c64-52a5603878a1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Property",
+        "uuid" : "beef9533-cfa1-4efa-bed3-d14169468c1c",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Cycle",
+          "uuid" : "2ecc9fee-493c-4ce5-bd5d-c3139a2fa48f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Tractor",
+          "uuid" : "f9648a00-6ba1-4b87-b08f-f527ddd8d1cb",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2 Wheeler",
+          "uuid" : "3769e0c6-ea4f-4836-b6c4-6603b27b5f91",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "None",
+          "uuid" : "ebda5e05-a995-43ca-ad1a-30af3b937539",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "unique" : true,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "4 Wheeler",
+          "uuid" : "58cc3e54-5a82-48e1-91bf-c1c0dd26a2e0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Generator",
+          "uuid" : "c89c34a0-41f4-4dfc-9d5f-872a1812aa31",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Fridge",
+          "uuid" : "705f8530-6d93-4460-ac6b-36e5647efc31",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "MultiSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Other property (please specify)",
+      "uuid" : "58f1fdac-adec-4f6f-8360-529e605e564a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other property",
+        "uuid" : "84d72d0d-20d6-471b-9d76-c139f9eccc55",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const individual = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({individual, formElement});\n  statusBuilder.show().when.valueInRegistration(\"Property\").containsAnswerConceptName(\"Other\");\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Socio-Economic Details"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

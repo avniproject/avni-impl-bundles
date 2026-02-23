@@ -1,7 +1,0 @@
-{
-  "name" : "Work order daily Recording - Machine Encounter Cancellation",
-  "uuid" : "cf04e4be-5e9d-4a78-a8d1-b0f411b49094",
-  "formType" : "IndividualEncounterCancellation",
-  "formElementGroups" : [ ],
-  "decisionConcepts" : [ ]
-}

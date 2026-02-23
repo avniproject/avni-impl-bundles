@@ -1,0 +1,930 @@
+{
+  "name" : "Observation Checklist Encounter",
+  "uuid" : "89485d60-cbd1-49d5-ba02-d6213ca2ef60",
+  "formType" : "Encounter",
+  "formElementGroups" : [ {
+    "uuid" : "f07cd384-0ef1-4844-b687-f9b489dd2a0f",
+    "name" : "General",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Name of Phulwari Worker",
+      "uuid" : "b708a62c-8f4d-4d86-8aac-f1c3e049e544",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Name of Phulwari Worker",
+        "uuid" : "e6049748-7bef-4e2c-9721-55f8d178be3e",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "General"
+  }, {
+    "uuid" : "7d8b2362-094f-4a67-a454-c3ccbd51d5d2",
+    "name" : "Cleanliness Rating",
+    "displayOrder" : 2.0,
+    "formElements" : [ {
+      "name" : "Cleanliness of Phulwari",
+      "uuid" : "5befd886-3b9a-4490-a7fa-40776e0e716b",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cleanliness of Phulwari",
+        "uuid" : "1b07a54f-80af-44fa-a171-fb4ef0f2d221",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "10",
+          "uuid" : "7f0e1fbd-a1b9-4121-b630-dfec36a2dfd0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "8",
+          "uuid" : "d7443a73-80b7-4320-9c45-6558595be70a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1",
+          "uuid" : "9139d435-2178-46d9-aea9-429597e533b2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "5",
+          "uuid" : "98408506-1159-4245-ba94-5834be1ccd2e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "7",
+          "uuid" : "aafae271-765c-4347-be3b-3fc1e00e63a1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2",
+          "uuid" : "0dc335ea-663d-4b81-b0b4-153d098a5839",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3",
+          "uuid" : "9f2ddb48-9c8c-435b-b986-6fff8ab6a6e6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "6",
+          "uuid" : "e9ce8718-ef32-4870-b3cb-b5e733fc115a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "9",
+          "uuid" : "29d29318-6b0c-4a2b-85e3-5392bd5a668f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "4",
+          "uuid" : "3721e294-6f2a-410f-9741-c33079f80d0b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Cleanliness of Children",
+      "uuid" : "1d492137-350f-4641-a27f-b631f84529fc",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cleanliness of Children",
+        "uuid" : "abac946e-7dff-4f18-922e-8f492e2daef7",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "3",
+          "uuid" : "9f2ddb48-9c8c-435b-b986-6fff8ab6a6e6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "6",
+          "uuid" : "e9ce8718-ef32-4870-b3cb-b5e733fc115a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "10",
+          "uuid" : "7f0e1fbd-a1b9-4121-b630-dfec36a2dfd0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1",
+          "uuid" : "9139d435-2178-46d9-aea9-429597e533b2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "4",
+          "uuid" : "3721e294-6f2a-410f-9741-c33079f80d0b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "7",
+          "uuid" : "aafae271-765c-4347-be3b-3fc1e00e63a1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "8",
+          "uuid" : "d7443a73-80b7-4320-9c45-6558595be70a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "9",
+          "uuid" : "29d29318-6b0c-4a2b-85e3-5392bd5a668f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "5",
+          "uuid" : "98408506-1159-4245-ba94-5834be1ccd2e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2",
+          "uuid" : "0dc335ea-663d-4b81-b0b4-153d098a5839",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Quality of Khichdi and other food",
+      "uuid" : "ae171dcb-8605-4b9d-b71d-dcc2ddc26674",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Quality of Khichdi and other food",
+        "uuid" : "763c03ed-0642-4e38-a17d-4558460eab79",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "2",
+          "uuid" : "0dc335ea-663d-4b81-b0b4-153d098a5839",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "10",
+          "uuid" : "7f0e1fbd-a1b9-4121-b630-dfec36a2dfd0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "6",
+          "uuid" : "e9ce8718-ef32-4870-b3cb-b5e733fc115a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "9",
+          "uuid" : "29d29318-6b0c-4a2b-85e3-5392bd5a668f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "8",
+          "uuid" : "d7443a73-80b7-4320-9c45-6558595be70a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1",
+          "uuid" : "9139d435-2178-46d9-aea9-429597e533b2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "7",
+          "uuid" : "aafae271-765c-4347-be3b-3fc1e00e63a1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3",
+          "uuid" : "9f2ddb48-9c8c-435b-b986-6fff8ab6a6e6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "4",
+          "uuid" : "3721e294-6f2a-410f-9741-c33079f80d0b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "5",
+          "uuid" : "98408506-1159-4245-ba94-5834be1ccd2e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Cleanliness of Vessels",
+      "uuid" : "cb9fb936-0820-4ed6-86bf-8dfbf2f70ef4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cleanliness of Vessels",
+        "uuid" : "f3390dd6-0bde-4941-8b07-1a1859c6795e",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "7",
+          "uuid" : "aafae271-765c-4347-be3b-3fc1e00e63a1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3",
+          "uuid" : "9f2ddb48-9c8c-435b-b986-6fff8ab6a6e6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "9",
+          "uuid" : "29d29318-6b0c-4a2b-85e3-5392bd5a668f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "10",
+          "uuid" : "7f0e1fbd-a1b9-4121-b630-dfec36a2dfd0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2",
+          "uuid" : "0dc335ea-663d-4b81-b0b4-153d098a5839",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "6",
+          "uuid" : "e9ce8718-ef32-4870-b3cb-b5e733fc115a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "8",
+          "uuid" : "d7443a73-80b7-4320-9c45-6558595be70a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "5",
+          "uuid" : "98408506-1159-4245-ba94-5834be1ccd2e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "4",
+          "uuid" : "3721e294-6f2a-410f-9741-c33079f80d0b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1",
+          "uuid" : "9139d435-2178-46d9-aea9-429597e533b2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Cleanliness of Toys",
+      "uuid" : "21690dd8-c271-413f-b529-1456a5dfe04f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Cleanliness of Toys",
+        "uuid" : "09b7b38a-311c-4fc1-ab3d-ef670243eadc",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "7",
+          "uuid" : "aafae271-765c-4347-be3b-3fc1e00e63a1",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "6",
+          "uuid" : "e9ce8718-ef32-4870-b3cb-b5e733fc115a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "10",
+          "uuid" : "7f0e1fbd-a1b9-4121-b630-dfec36a2dfd0",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 9.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "4",
+          "uuid" : "3721e294-6f2a-410f-9741-c33079f80d0b",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "2",
+          "uuid" : "0dc335ea-663d-4b81-b0b4-153d098a5839",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "1",
+          "uuid" : "9139d435-2178-46d9-aea9-429597e533b2",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "8",
+          "uuid" : "d7443a73-80b7-4320-9c45-6558595be70a",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 7.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "9",
+          "uuid" : "29d29318-6b0c-4a2b-85e3-5392bd5a668f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 8.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "3",
+          "uuid" : "9f2ddb48-9c8c-435b-b986-6fff8ab6a6e6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "5",
+          "uuid" : "98408506-1159-4245-ba94-5834be1ccd2e",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Cleanliness Rating"
+  }, {
+    "uuid" : "a018759c-2b4f-4d71-810b-3da860ffd03e",
+    "name" : "Checklist",
+    "displayOrder" : 3.0,
+    "formElements" : [ {
+      "name" : "Is attendance register filled?",
+      "uuid" : "efca374c-b0b8-47e8-abc7-d01446de7b35",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is attendance register filled",
+        "uuid" : "cc94bdb8-262a-4dee-a2be-81d97ea652fc",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Specify Other",
+      "uuid" : "d1b51714-59ef-4759-9aeb-78b152e533f1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Specify Other (attendance not filled)",
+        "uuid" : "efac8ff2-f0a8-4e1f-96f7-c21612b718f9",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n   statusBuilder.show().when.valueInEncounter('Is attendance register filled').containsAnswerConceptName(\"Other\");\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Is consumption register filled?",
+      "uuid" : "61113724-3eba-41e2-91f1-f90b173a22ed",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is consumption register filled",
+        "uuid" : "97613bbe-8a90-4b35-9ac2-d2fc6dad06a2",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Specify Other",
+      "uuid" : "cbb4a374-d5fc-462e-b1ed-fca84c55df6c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Specify Other (consumption not filled)",
+        "uuid" : "433345f2-16b9-4bd5-bc4c-707d9d894c58",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n   statusBuilder.show().when.valueInEncounter('Is consumption register filled').containsAnswerConceptName(\"Other\");\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Is ration available in sufficient amount?",
+      "uuid" : "6bbc9212-cbba-4415-9b79-bfdaec7ef48c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is ration available in sufficient amount",
+        "uuid" : "741255f7-ccc8-4be6-bc0e-0dda398b8726",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 5.0,
+      "type" : "SingleSelect",
+      "rule" : "",
+      "mandatory" : true
+    }, {
+      "name" : "Specify Other",
+      "uuid" : "630f36cb-776a-4777-b5d6-963b00f6106e",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Specify Other (ration availability)",
+        "uuid" : "8b56bc22-9004-4d05-9b32-62be23d1c75c",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 6.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n   statusBuilder.show().when.valueInEncounter('Is ration available in sufficient amount').containsAnswerConceptName(\"Other\");\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Is chlorine solution available in sufficient amount?",
+      "uuid" : "306f911f-9294-439d-974f-744c4d0eaab5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is chlorine solution available in sufficient amount",
+        "uuid" : "eb382946-2878-41d9-8ddc-52f313809ac1",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other",
+          "uuid" : "05ea583c-51d2-412d-ad00-06c432ffe538",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 7.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Specify Other",
+      "uuid" : "6b958417-9035-416f-9079-7cf65e94efd5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Specify Other (availability of chlorine solution)",
+        "uuid" : "c796c798-d4ec-48b0-ba40-bb29112d9944",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 8.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n   statusBuilder.show().when.valueInEncounter('Is chlorine solution available in sufficient amount').containsAnswerConceptName(\"Other\");\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Does any child need a health checkup?",
+      "uuid" : "0a1012cc-dab6-420c-b8b6-66cb42b236e9",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Does any child need a health checkup",
+        "uuid" : "3b19d1ff-61ad-4bff-92fe-604595855017",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 9.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Please provide name of child and information about suffering.",
+      "uuid" : "082b86fc-4db0-41fa-b506-b068087d414a",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Please provide name of child and information about suffering.",
+        "uuid" : "fcd955af-6488-4f62-bfe3-4fc0e2975eb0",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 10.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n   statusBuilder.show().when.valueInEncounter('Does any child need a health checkup').containsAnswerConceptName(\"Yes\");\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Is worker wearing a Mask?",
+      "uuid" : "35109b09-0a13-45bd-9860-3dae96144f42",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is worker wearing a Mask",
+        "uuid" : "97d8f8d8-ca79-41d0-9332-8c5521dd3ded",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 11.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Are children wearing Mask?",
+      "uuid" : "b8a9b0cc-45c7-4f52-8280-dbd2d11445ed",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Are children wearing Mask",
+        "uuid" : "491f7970-8137-4f61-84e6-32de51937728",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 12.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Is today egg distribution day?",
+      "uuid" : "83183f37-dac5-4252-ae05-6c955cb44bc3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Is today egg distribution day?",
+        "uuid" : "accfb46d-509d-43df-ade8-eb0cccf6391f",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 13.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    }, {
+      "name" : "Are enough eggs boiled today?",
+      "uuid" : "881862a4-3d56-4d70-b8b8-db6a402e6665",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Are enough eggs boiled today?",
+        "uuid" : "dbeb3b10-79dc-487e-962c-956496df1634",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "No",
+          "uuid" : "e7b50c78-3d90-484d-a224-9887887780dc",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 14.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n   statusBuilder.show().when.valueInEncounter('Is today egg distribution day?').containsAnswerConceptName(\"Yes\");\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Please provide any other comment or observation",
+      "uuid" : "30f7e932-52b4-4aa8-bad5-bf43279a7513",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Please provide any other comment or observation",
+        "uuid" : "ba45e400-ac7d-475b-93ba-e70dc8295c6e",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 15.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ],
+    "timed" : false,
+    "display" : "Checklist"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

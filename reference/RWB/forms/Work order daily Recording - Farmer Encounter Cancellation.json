@@ -1,7 +1,0 @@
-{
-  "name" : "Work order daily Recording - Farmer Encounter Cancellation",
-  "uuid" : "51582183-af6e-440a-bd2c-f02b05cbff12",
-  "formType" : "IndividualEncounterCancellation",
-  "formElementGroups" : [ ],
-  "decisionConcepts" : [ ]
-}

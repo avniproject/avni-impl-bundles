@@ -1,0 +1,124 @@
+{
+  "name" : "Child Absent followup Form",
+  "uuid" : "6c899d6c-4e1f-412b-ba80-336f71bcb13c",
+  "formType" : "Encounter",
+  "formElementGroups" : [ {
+    "uuid" : "443c5bf2-b4d3-49f4-92fe-e8a210e3379c",
+    "name" : "Details",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Reason for being absent",
+      "uuid" : "8517eea9-052d-4b6d-a83d-ce6a7145932c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Reason for being absent",
+        "uuid" : "54f745f1-8d3b-4081-b8eb-196a4969db32",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Away from village",
+          "uuid" : "72fd70f8-65ae-4ac4-8339-6faf455e04f5",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 2.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Sick",
+          "uuid" : "64f8a277-cd87-4e98-8667-c40f54c76cf6",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Exit",
+          "uuid" : "9913a5eb-b571-4a61-b6b8-d9b644422fff",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 5.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Migration",
+          "uuid" : "229fac5f-468e-46f0-b812-bdcc56840b6c",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 0.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Death",
+          "uuid" : "afff87d7-4c40-4dd4-9bf7-8e5d9adb3b83",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 4.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other reason for remaining absent",
+          "uuid" : "1ff8f092-dc61-4c99-8d19-779a47af9429",
+          "dataType" : "Text",
+          "answers" : [ ],
+          "order" : 6.0,
+          "active" : true,
+          "media" : [ ]
+        }, {
+          "name" : "Other reason for being absent",
+          "uuid" : "290f9aeb-ef7d-4748-8ca8-baaf3495e39f",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 3.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "documentation" : {
+        "label" : "Reason for being absent",
+        "value" : "9268da09-7a8d-4bac-904a-a3b46c5f5211"
+      },
+      "mandatory" : true
+    }, {
+      "name" : "Other reason for remaining absent",
+      "uuid" : "21271da5-ba13-4a1f-95e0-2a458e0132db",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Other reason for remaining absent",
+        "uuid" : "1ff8f092-dc61-4c99-8d19-779a47af9429",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n   statusBuilder.show().when.valueInEncounter('Reason for being absent').containsAnswerConceptName(\"Other\");\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Date of phulwari resume",
+      "uuid" : "6aa7ba8a-0f2b-4a28-972e-96be0bd9d58c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Date of phulwari resume",
+        "uuid" : "19fea5db-c219-405b-ab6e-664ef6befbfd",
+        "dataType" : "Date",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Details"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

@@ -1,8 +1,0 @@
-{
-  "name" : "Supervisor VHSND Visit Encounter Cancellation (voided~11225)",
-  "uuid" : "655fb1aa-8158-4093-be74-cf89494a6f70",
-  "formType" : "ProgramEncounterCancellation",
-  "formElementGroups" : [ ],
-  "decisionConcepts" : [ ],
-  "voided" : true
-}

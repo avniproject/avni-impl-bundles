@@ -1,0 +1,10 @@
+{
+  "catchments" : [ {
+    "name" : "Ganiyari",
+    "uuid" : "180f737f-c371-457e-8e55-8b5a41d927fd",
+    "locations" : [ {
+      "uuid" : "18d40946-464c-4df7-96e6-fb6dd9a1f53d"
+    } ],
+    "voided" : false
+  } ]
+}

@@ -1,0 +1,95 @@
+{
+  "uuid" : "388e741b-f028-4350-ba1b-435db423caea",
+  "settings" : {
+    "languages" : [ "en", "hi_IN" ],
+    "customRegistrationLocations" : [ ],
+    "saveDrafts" : true,
+    "showHierarchicalLocation" : false,
+    "metabaseSetupEnabled" : true,
+    "lowestAddressLevelType" : [ ],
+    "searchFilters" : [ {
+      "type" : "Name",
+      "widget" : "Default",
+      "titleKey" : "Name",
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3"
+    }, {
+      "type" : "Age",
+      "widget" : "Default",
+      "titleKey" : "Age",
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3"
+    }, {
+      "type" : "Address",
+      "widget" : "Default",
+      "titleKey" : "Address",
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3"
+    }, {
+      "type" : "SearchAll",
+      "widget" : "Default",
+      "titleKey" : "SearchAll",
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3"
+    }, {
+      "type" : "Name",
+      "widget" : "Default",
+      "titleKey" : "Name",
+      "subjectTypeUUID" : "ea7e5c94-5e90-4288-803d-6a1aa9d80acd"
+    }, {
+      "type" : "Address",
+      "widget" : "Default",
+      "titleKey" : "Address",
+      "subjectTypeUUID" : "ea7e5c94-5e90-4288-803d-6a1aa9d80acd"
+    }, {
+      "type" : "Address",
+      "widget" : "Default",
+      "titleKey" : "Address",
+      "subjectTypeUUID" : "ea7e5c94-5e90-4288-803d-6a1aa9d80acd"
+    }, {
+      "type" : "GroupSubject",
+      "widget" : "Default",
+      "titleKey" : "Phulwari",
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3",
+      "groupSubjectTypeUUID" : "ea7e5c94-5e90-4288-803d-6a1aa9d80acd"
+    }, {
+      "type" : "Concept",
+      "scope" : "programEncounter",
+      "titleKey" : "Growth Faltering",
+      "conceptName" : "Growth Faltering Status",
+      "conceptUUID" : "a5067bcc-d333-4c80-a0f2-d61df9d210d3",
+      "conceptDataType" : "Coded",
+      "scopeParameters" : {
+        "programUUIDs" : [ "352d906c-b386-496c-ba23-91b1468a5613" ],
+        "encounterTypeUUIDs" : [ "02c72b2b-19f0-4f75-b734-dcad5601881b" ]
+      },
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3"
+    } ],
+    "myDashboardFilters" : [ {
+      "type" : "Address",
+      "widget" : "Default",
+      "titleKey" : "Address",
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3"
+    }, {
+      "type" : "Address",
+      "widget" : "Default",
+      "titleKey" : "Address",
+      "subjectTypeUUID" : "ea7e5c94-5e90-4288-803d-6a1aa9d80acd"
+    }, {
+      "type" : "GroupSubject",
+      "widget" : "Default",
+      "titleKey" : "Phulwari",
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3",
+      "groupSubjectTypeUUID" : "ea7e5c94-5e90-4288-803d-6a1aa9d80acd"
+    }, {
+      "type" : "Concept",
+      "scope" : "programEncounter",
+      "titleKey" : "Growth Faltering",
+      "conceptName" : "Growth Faltering Status",
+      "conceptUUID" : "a5067bcc-d333-4c80-a0f2-d61df9d210d3",
+      "conceptDataType" : "Coded",
+      "scopeParameters" : {
+        "programUUIDs" : [ "352d906c-b386-496c-ba23-91b1468a5613" ],
+        "encounterTypeUUIDs" : [ "02c72b2b-19f0-4f75-b734-dcad5601881b" ]
+      },
+      "subjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3"
+    } ]
+  },
+  "worklistUpdationRule" : ""
+}

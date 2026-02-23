@@ -1,8 +1,0 @@
-{
-  "name" : "Death  Encounter (voided~395)",
-  "uuid" : "854532db-d25f-4ce7-86a2-d296d8135ccd",
-  "formType" : "Encounter",
-  "formElementGroups" : [ ],
-  "decisionConcepts" : [ ],
-  "voided" : true
-}

@@ -1,7 +1,0 @@
-{
-  "name" : "Case Status Details Encounter",
-  "uuid" : "f8284373-9c11-4358-b763-fa2ce9a047b3",
-  "formType" : "Encounter",
-  "formElementGroups" : [ ],
-  "decisionConcepts" : [ ]
-}

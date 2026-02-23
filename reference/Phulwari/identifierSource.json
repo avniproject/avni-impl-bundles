@@ -1,0 +1,14 @@
+[ {
+  "uuid" : "e06c6c42-26e0-46c8-bbc4-19146fdb720c",
+  "id" : 213,
+  "batchGenerationSize" : 100,
+  "minimumBalance" : 10,
+  "name" : "Phulwari enrolment id source",
+  "options" : {
+    "prefix" : "PH"
+  },
+  "type" : "userPoolBasedIdentifierGenerator",
+  "minLength" : 5,
+  "maxLength" : 6,
+  "voided" : true
+} ]

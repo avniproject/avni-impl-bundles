@@ -1,0 +1,29 @@
+[ {
+  "name" : "Daily Attendance Form",
+  "uuid" : "90e67bad-f6b0-4fe6-b74a-3478d4c95881",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Observation Checklist",
+  "uuid" : "65750b7f-9992-4aa8-a60b-3a0561d3ed62",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Anthropometry Assessment",
+  "uuid" : "02c72b2b-19f0-4f75-b734-dcad5601881b",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Albendazole",
+  "uuid" : "117f454b-1526-4b52-a611-c557268aa33e",
+  "active" : true,
+  "immutable" : false
+}, {
+  "name" : "Child Absent followup Form",
+  "uuid" : "90f9f802-65c4-4807-bc26-8b9ebdda94ad",
+  "entityEligibilityCheckRule" : "",
+  "active" : true,
+  "immutable" : false
+} ]

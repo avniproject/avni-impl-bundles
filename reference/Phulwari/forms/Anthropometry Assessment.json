@@ -1,0 +1,105 @@
+{
+  "name" : "Anthropometry Assessment",
+  "uuid" : "d062907a-690c-44ca-b699-f8b2f688b075",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "124d7b8b-0baf-4bdf-8f8a-5de8a4c95218",
+    "name" : "Anthropometry",
+    "displayOrder" : 1.0,
+    "formElements" : [ {
+      "name" : "Skip capturing height",
+      "uuid" : "4f6e842e-8556-448b-9ebf-93ad06a333a5",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Skip capturing height",
+        "uuid" : "b26ab849-6550-4245-8637-a9fc7fb4eb60",
+        "dataType" : "Coded",
+        "answers" : [ {
+          "name" : "Yes",
+          "uuid" : "04bb1773-c353-44a1-a68c-9b448e07ff70",
+          "dataType" : "NA",
+          "answers" : [ ],
+          "order" : 1.0,
+          "active" : true,
+          "media" : [ ]
+        } ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : false
+    }, {
+      "name" : "Reason for skipping height capture.",
+      "uuid" : "9ef90251-e2b8-411b-845c-f980d2ca1427",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Reason for skipping height capture.",
+        "uuid" : "8d378a39-2030-4cfe-ac4d-c8e97f718b23",
+        "dataType" : "Text",
+        "answers" : [ ],
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "voided" : true,
+      "mandatory" : true
+    }, {
+      "name" : "Height",
+      "uuid" : "219bfbb0-03ff-4be4-a8c1-5eb98ab6fe6c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Height",
+        "uuid" : "d883d5fe-e17d-4136-b989-089fa0295e34",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 20.0,
+        "highAbsolute" : 300.0,
+        "lowNormal" : 30.0,
+        "highNormal" : 200.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const formElement = params.formElement;\n    const _ = imports.lodash;\n    const moment = imports.moment;\n    if (!_.isNil(programEncounter.earliestVisitDateTime)) {\n        const lastEncounterWithHeight = programEncounter.programEnrolment.findLatestPreviousEncounterWithObservationForConcept(programEncounter, \"Height\");\n        const heightNeverCapturedBefore = _.isNil(lastEncounterWithHeight);\n        const ageInMonths = programEncounter.programEnrolment.individual.getAgeInMonths(\n            moment(programEncounter.earliestVisitDateTime).endOf('month').toDate(), false);\n        const ageInMonthMultipleOf6 = ((ageInMonths % 6) === 0);\n        const endDate = programEncounter.earliestVisitDateTime;\n        const startDate = moment(programEncounter.earliestVisitDateTime).subtract((ageInMonths % 6), 'months').startOf('month').toDate();\n        const encBetweenDatesWithHeight = _.chain(programEncounter.programEnrolment.encounters)\n            .filter((enc) => (enc.encounterDateTime <= endDate && enc.encounterDateTime >= startDate)\n                && !_.isNil(enc.findObservation(\"Height\")));\n        const heightToBeCapturedThisTime = (heightNeverCapturedBefore || (ageInMonthMultipleOf6 && encBetweenDatesWithHeight.value().length === 0) || encBetweenDatesWithHeight.value().length === 0);\n        return new imports.rulesConfig.FormElementStatus(formElement.uuid, heightToBeCapturedThisTime);\n    }\n};",
+      "mandatory" : true
+    }, {
+      "name" : "Weight",
+      "uuid" : "e6e54c47-290c-4c8b-a2b3-dd30c39a361f",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Weight",
+        "uuid" : "75b1656e-2777-4753-9612-ce03a766a5e1",
+        "dataType" : "Numeric",
+        "answers" : [ ],
+        "lowAbsolute" : 0.0,
+        "highAbsolute" : 300.0,
+        "lowNormal" : 1.0,
+        "highNormal" : 100.0,
+        "active" : true,
+        "media" : [ ]
+      },
+      "displayOrder" : 4.0,
+      "type" : "SingleSelect",
+      "mandatory" : true
+    } ],
+    "timed" : false,
+    "display" : "Anthropometry"
+  }, {
+    "uuid" : "720fe449-7cff-4617-bf9b-62925c7d0e6c",
+    "name" : "GMP Details",
+    "displayOrder" : 2.0,
+    "formElements" : [ ],
+    "voided" : true,
+    "timed" : false,
+    "display" : "GMP Details"
+  } ],
+  "decisionRule" : "\"use strict\";\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const decisions = params.decisions;\n    const _ = imports.lodash;\n    const weight = programEncounter.getObservationValue(\"Weight\");\n    const height = programEncounter.getObservationValue(\"Height\");\n    const asOnDate = programEncounter.encounterDateTime;\n    const individual = programEncounter.programEnrolment.individual;\n\n    const zScoreGradeStatusMappingWeightForAge = {\n        '1': 'Normal',\n        '2': 'Moderately Underweight',\n        '3': 'Severely Underweight'\n    };\n\n    const zScoreGradeStatusMappingHeightForAge = {\n        '1': 'Normal',\n        '2': 'Stunted',\n        '3': 'Severely stunted'\n    };\n\n    const zScoreGradeStatusMappingWeightForHeight = [\n        [\"Severely wasted\", -3],\n        [\"Wasted\", -2],\n        [\"Normal\", 1],\n        [\"Possible risk of overweight\", 2],\n        [\"Overweight\", 3],\n        [\"Obese\", Infinity],\n    ];\n\n    const weightForHeightStatus = function (zScore) {\n        let found = _.find(zScoreGradeStatusMappingWeightForHeight, function (currentStatus) {\n            return zScore <= currentStatus[1];\n        });\n        return found && found[0];\n    };\n\n    const getGradeforZscore = (zScore) => {\n        let grade;\n        if (zScore <= -3) {\n            grade = 3;\n        } else if (zScore > -3 && zScore < -2) {\n            grade = 2;\n        } else if (zScore >= -2) {\n            grade = 1;\n        }\n\n        return grade;\n\n    };\n\n    const addIfRequired = (decisions, name, value) => {\n        if (value === -0) value = 0;\n        if (value !== undefined) decisions.push({name: name, value: value});\n    };\n\n    const zScoresForChild = ruleServiceLibraryInterfaceForSharingModules.common.getZScore(individual, asOnDate, weight, height);\n\n    const wfaGrade = getGradeforZscore(zScoresForChild.wfa);\n    const wfaStatus = zScoreGradeStatusMappingWeightForAge[wfaGrade];\n    const hfaGrade = getGradeforZscore(zScoresForChild.hfa);\n    const hfaStatus = zScoreGradeStatusMappingHeightForAge[hfaGrade];\n    const wfhStatus = weightForHeightStatus(zScoresForChild.wfh);\n\n    addIfRequired(decisions.encounterDecisions, \"Weight for age z-score\", zScoresForChild.wfa);\n    addIfRequired(decisions.encounterDecisions, \"Weight for age Grade\", wfaGrade);\n    addIfRequired(decisions.encounterDecisions, \"Weight for age Status\", wfaStatus ? [wfaStatus] : []);\n\n    addIfRequired(decisions.encounterDecisions, \"Height for age z-score\", zScoresForChild.hfa);\n    addIfRequired(decisions.encounterDecisions, \"Height for age Grade\", hfaGrade);\n    addIfRequired(decisions.encounterDecisions, \"Height for age Status\", hfaStatus ? [hfaStatus] : []);\n\n    addIfRequired(decisions.encounterDecisions, \"Weight for height z-score\", zScoresForChild.wfh);\n    addIfRequired(decisions.encounterDecisions, \"Weight for Height Status\", wfhStatus ? [wfhStatus] : []);\n\n    return decisions;\n};",
+  "visitScheduleRule" : "\"use strict\";\n({params, imports}) => {\n    const programEncounter = params.entity;\n    const moment = imports.moment;\n    const _ = imports.lodash;\n    const myGroups = programEncounter.programEnrolment.individual.groups;\n    if (_.isNil(programEncounter.earliestVisitDateTime)) {\n        return [];\n    }\n    const groupSubject = _.get(_.find(myGroups, g => !g.voided && g.groupSubject.subjectType.name === 'Phulwari'), 'groupSubject');\n    const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({\n        programEncounter\n    });\n    const scheduledDateTime = programEncounter.earliestVisitDateTime;\n    const dayOfMonth = groupSubject.getObservationReadableValue(\"Day of month for growth monitoring visit\");\n    var monthForNextVisit = moment(scheduledDateTime).month() != 11 ? moment(scheduledDateTime).month() + 1 : 0;\n    var earliestDate = moment(scheduledDateTime).month(monthForNextVisit).date(dayOfMonth).toDate();\n    if (moment(earliestDate).month() !== monthForNextVisit) {\n        earliestDate = moment(scheduledDateTime).add(1, 'M').endOf('month').toDate();\n    }else {\n        earliestDate = moment(scheduledDateTime).add(1, 'M').date(dayOfMonth).toDate();\n    }\n    const maxDate = moment(earliestDate).add(3, 'days').toDate();\n    scheduleBuilder.add({\n            name: \"Growth Monitoring Visit\",\n            encounterType: \"Anthropometry Assessment\",\n            earliestDate: earliestDate,\n            maxDate: maxDate\n        }\n    );\n    \n    return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : "",
+  "decisionConcepts" : [ ]
+}

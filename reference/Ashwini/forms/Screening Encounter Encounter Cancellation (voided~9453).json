@@ -1,8 +1,0 @@
-{
-  "name" : "Screening Encounter Encounter Cancellation (voided~9453)",
-  "uuid" : "d05d9aef-1dbb-4c46-ab94-d5c22f7623b3",
-  "formType" : "ProgramEncounterCancellation",
-  "formElementGroups" : [ ],
-  "decisionConcepts" : [ ],
-  "voided" : true
-}

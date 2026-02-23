@@ -1,0 +1,43 @@
+{
+  "operationalEncounterTypes" : [ {
+    "uuid" : "f74e74a9-550f-4328-9721-705a24692ae3",
+    "encounterType" : {
+      "uuid" : "117f454b-1526-4b52-a611-c557268aa33e",
+      "voided" : false
+    },
+    "name" : "Albendazole",
+    "voided" : false
+  }, {
+    "uuid" : "2f41e4d0-7332-471b-8a3d-430411f9a482",
+    "encounterType" : {
+      "uuid" : "90e67bad-f6b0-4fe6-b74a-3478d4c95881",
+      "voided" : false
+    },
+    "name" : "Daily Attendance Form",
+    "voided" : false
+  }, {
+    "uuid" : "8e79c686-2b05-425c-b375-d8eb824290fd",
+    "encounterType" : {
+      "uuid" : "90f9f802-65c4-4807-bc26-8b9ebdda94ad",
+      "voided" : false
+    },
+    "name" : "Child Absent followup Form",
+    "voided" : false
+  }, {
+    "uuid" : "cca93d75-b74d-48bf-925b-13ebf556ae62",
+    "encounterType" : {
+      "uuid" : "65750b7f-9992-4aa8-a60b-3a0561d3ed62",
+      "voided" : false
+    },
+    "name" : "Observation Checklist",
+    "voided" : false
+  }, {
+    "uuid" : "5246fe29-bb51-4ae2-afab-9247a6595b9f",
+    "encounterType" : {
+      "uuid" : "02c72b2b-19f0-4f75-b734-dcad5601881b",
+      "voided" : false
+    },
+    "name" : "Growth Monitoring",
+    "voided" : false
+  } ]
+}

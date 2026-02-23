@@ -1,0 +1,12 @@
+[ {
+  "uuid" : "d90c6d0e-028a-4d1a-a2c8-4aa8545ddc20",
+  "groupSubjectTypeUUID" : "ea7e5c94-5e90-4288-803d-6a1aa9d80acd",
+  "memberSubjectTypeUUID" : "9f2af1f9-e150-4f8e-aad3-40bb7eb05aa3",
+  "role" : "Phulwari Child",
+  "subjectMemberName" : "Child",
+  "groupRoleUUID" : "d90c6d0e-028a-4d1a-a2c8-4aa8545ddc20",
+  "maximumNumberOfMembers" : 25,
+  "minimumNumberOfMembers" : 1,
+  "primary" : false,
+  "voided" : false
+} ]
